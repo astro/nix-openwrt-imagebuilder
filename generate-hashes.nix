@@ -47,7 +47,7 @@ PATH=${lib.makeBinPath [ jq curl nix ]}:$PATH
 hash() {
   TARGET=$1
   SUBTARGET=$2
-  BASEURL=https://downloads.openwrt.org/releases/${release}/targets/$TARGET/generic
+  BASEURL=https://downloads.openwrt.org/releases/${release}/targets/$TARGET/$SUBTARGET
   SUM=$(nix-prefetch-url --type sha256 $BASEURL/sha256sums 2>/dev/null)
   if [ -n "$SUM" ]; then
     echo "  \"$TARGET\".\"$SUBTARGET\" = {"
@@ -55,7 +55,7 @@ hash() {
     ARCH=$(curl -s $BASEURL/profiles.json | jq -r .arch_packages)
     if [ -n "$ARCH" ]; then
       for FEED in ${lib.escapeShellArgs defaultFeeds}; do
-        PACKAGES=$(nix-prefetch-url --type sha256 https://downloads.openwrt.org/releases/${release}/packages/$ARCH/$FEED/Packages)
+        PACKAGES=$(nix-prefetch-url --type sha256 https://downloads.openwrt.org/releases/${release}/packages/$ARCH/$FEED/Packages 2>/dev/null)
         echo "    feedsSha256.$FEED = \"$PACKAGES\";"
       done
     fi
