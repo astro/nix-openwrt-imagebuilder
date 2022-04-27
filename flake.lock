@@ -1,0 +1,42 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1651024496,
+        "narHash": "sha256-uKSrrw/neSkxX6TXPSaMyfu7iKzFrK7F6HOt6vQefGY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "d9e593ed5889f3906dc72811c45bf684be8865cf",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "openwrt": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1651013664,
+        "narHash": "sha256-efpsYc8KfjIbcD0vdE+VC9tWS471NFAxUB884kJhUEE=",
+        "ref": "master",
+        "rev": "f757a8a09885e3c8bb76371e037b8c0731111980",
+        "revCount": 53988,
+        "type": "git",
+        "url": "https://git.openwrt.org/openwrt/openwrt.git?tag=v21.02.3"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.openwrt.org/openwrt/openwrt.git?tag=v21.02.3"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "openwrt": "openwrt"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

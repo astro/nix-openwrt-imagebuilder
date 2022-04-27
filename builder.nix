@@ -7,9 +7,15 @@
 , profile
 , variant ? "generic"
 # Checksum of the `sha256sums` file
-, sha256
+, sha256 ?
+  (
+    import ./hashes/${release}.nix
+  ).${target}.${variant}.sha256
 # Checksum of a feed's `Packages` file
-, feedsSha256
+, feedsSha256 ?
+  (
+    import ./hashes/${release}.nix
+  ).${target}.${variant}.feedsSha256
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
 # Include extra files
