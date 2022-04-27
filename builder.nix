@@ -181,7 +181,7 @@ stdenv.mkDerivation {
       PROFILE="${profile}" \
       PACKAGES="${lib.concatStringsSep " " packages}" \
       ${lib.optionalString (files != null)
-        ''FILES="${lib.concatStringsSep " " files}"''
+        ''FILES="${files}"''
       } \
       DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
       EXTRA_IMAGE_NAME="${extraImageName}"
