@@ -8,7 +8,16 @@
 , variant ? "generic"
 # Checksum of the `sha256sums` file
 , sha256
+# Checksum of a feed's `Packages` file
 , feedsSha256
+# Extra OpenWRT packages (can be prefixed with "-")
+, packages ? []
+# Include extra files
+, files ? null
+# Which services in /etc/init.d/ should be disabled
+, disabledServices ? []
+# Add to output name
+, extraImageName ? "nix"
 }:
 with pkgs;
 let
@@ -131,7 +140,11 @@ let
 in
 
 stdenv.mkDerivation {
-  name = "openwrt-${release}-${target}-${variant}-${profile}";
+  name = lib.concatStringsSep "-" ([
+    "openwrt" release
+  ] ++
+  lib.optional (extraImageName != null) extraImageName ++
+  [ target variant profile ]);
 
   src = variantFiles."openwrt-imagebuilder-${release}-${target}-${variant}.${hostPlatform.uname.system}-${hostPlatform.uname.processor}.tar.xz";
 
@@ -159,7 +172,13 @@ stdenv.mkDerivation {
   ];
   buildPhase = ''
     make image SHELL=${runtimeShell} \
-      PROFILE="${profile}"
+      PROFILE="${profile}" \
+      PACKAGES="${lib.concatStringsSep " " packages}" \
+      ${lib.optionalString (files != null)
+        ''FILES="${lib.concatStringsSep " " files}"''
+      } \
+      DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
+      EXTRA_IMAGE_NAME="${extraImageName}"
   '';
 
   installPhase = ''
