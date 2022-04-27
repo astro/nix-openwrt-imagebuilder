@@ -46,11 +46,11 @@ PATH=${lib.makeBinPath [ jq curl nix ]}:$PATH
 
 hash() {
   TARGET=$1
-  SUBTARGET=$2
-  BASEURL=https://downloads.openwrt.org/releases/${release}/targets/$TARGET/$SUBTARGET
+  VARIANT=$2
+  BASEURL=https://downloads.openwrt.org/releases/${release}/targets/$TARGET/$VARIANT
   SUM=$(nix-prefetch-url --type sha256 $BASEURL/sha256sums 2>/dev/null)
   if [ -n "$SUM" ]; then
-    echo "  \"$TARGET\".\"$SUBTARGET\" = {"
+    echo "  \"$TARGET\".\"$VARIANT\" = {"
     echo "    sha256 = \"$SUM\";"
     ARCH=$(curl -s $BASEURL/profiles.json | jq -r .arch_packages)
     if [ -n "$ARCH" ]; then
@@ -68,8 +68,8 @@ mkdir -p hashes
 (
   echo "{"
   ${lib.concatMapStrings (target:
-    lib.concatMapStrings (subtarget: ''
-      hash ${target} ${subtarget}
+    lib.concatMapStrings (variant: ''
+      hash ${target} ${variant}
     '')
       (lib.splitString " " (linuxTargetDefs.${target}.SUBTARGETS or "generic"))
   ) linuxTargets}
