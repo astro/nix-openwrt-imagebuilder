@@ -20,5 +20,14 @@
       inherit openwrt;
     };
 
+    packages.x86_64-linux.example-image = import ./example.nix {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    };
+
+    checks = self.packages;
+
+    hydraJobs = {
+      example-image = nixpkgs.lib.hydraJob self.packages.x86_64-linux.example-image;
+    };
   };
 }
