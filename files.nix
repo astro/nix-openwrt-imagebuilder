@@ -99,12 +99,18 @@ let
     ''
   ) feedsFiles;
 
-  arch = (builtins.fromJSON (
-    builtins.readFile (
-      variantFiles."profiles.json"
+  profiles =
+    if variantFiles ? "profiles.json"
+    then builtins.fromJSON (
+      builtins.readFile (
+        variantFiles."profiles.json"
+      )
     )
-  )).arch_packages;
+    else null;
+
+  arch = profiles.arch_packages;
 
 in {
   inherit variantFiles variantPackages feedsFiles feedsPackages;
+  inherit profiles arch;
 }
