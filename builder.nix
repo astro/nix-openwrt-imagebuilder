@@ -105,7 +105,6 @@ let
     src = variantFiles."openwrt-imagebuilder-${release}-${target}-${variant}.${hostPlatform.uname.system}-${hostPlatform.uname.processor}.tar.xz";
     phases = [ "unpackPhase" "installPhase" ];
     installPhase = ''
-      cat .config
       cp .config $out
     '';
   };
