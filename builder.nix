@@ -166,4 +166,5 @@ stdenv.mkDerivation {
   installPhase = ''
     cp -ar bin/targets/${target}/${variant} $out
   '';
+  dontFixup = true;
 }
