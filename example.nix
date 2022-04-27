@@ -4,7 +4,9 @@ let
   profiles = import ./profiles.nix { inherit pkgs; };
 in
 import ./builder.nix (
-  builtins.head (profiles.identifyProfile "avm_fritz7412") // {
+  profiles.identifyProfile "avm_fritz7412"
+  //
+  {
     packages = [
       "tcpdump"
       "vxlan" "kmod-vxlan"
