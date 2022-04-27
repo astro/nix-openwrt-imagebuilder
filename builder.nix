@@ -130,6 +130,7 @@ let
 
   arch = openwrtConfig.CONFIG_TARGET_ARCH_PACKAGES;
 in
+
 stdenv.mkDerivation {
   name = "openwrt-${release}-${target}-${variant}-${profile}";
 
@@ -163,6 +164,6 @@ stdenv.mkDerivation {
   '';
 
   installPhase = ''
-    cp -ar bin $out
+    cp -ar bin/targets/${target}/${variant} $out
   '';
 }
