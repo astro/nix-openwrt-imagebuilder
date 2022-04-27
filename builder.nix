@@ -70,6 +70,15 @@ let
 
   variantFiles = fetchSums "${baseUrl}/targets/${target}/${variant}" sha256;
 
+  variantPackages = runCommandNoCC "openwrt-${release}-${target}-${variant}-packages" {} ''
+    mkdir packages
+    ${lib.concatMapStrings (file:
+      lib.optionalString (lib.hasPrefix "packages/" file) ''
+        ln -s ${variantFiles.${file}} ${file}
+      '') (builtins.attrNames variantFiles)}
+    mv packages $out
+  '';
+
   feedsPackagesFile = builtins.mapAttrs (feed: sha256:
     fetchurl {
       url = "${baseUrl}/packages/${arch}/${feed}/Packages";
@@ -82,7 +91,7 @@ let
   ) feedsPackagesFile;
 
   feedsPackages = builtins.mapAttrs (feed: files:
-    runCommandNoCC "openwrt-${feed}-packages" {} ''
+    runCommandNoCC "openwrt-${release}-${arch}-${feed}-packages" {} ''
       mkdir $out
       ln -s ${feedsPackagesFile.${feed}} $out/Packages
       ${lib.concatMapStrings (file: ''
@@ -135,7 +144,7 @@ stdenv.mkDerivation {
 
   configurePhase = ''
     cat >repositories.conf <<EOF
-    src imagebuilder file:packages
+    src imagebuilder file:${variantPackages}
     ${lib.concatMapStrings (feed: ''
       src openwrt_${feed} file:${feedsPackages.${feed}}
     '') (builtins.attrNames feedsPackages)}
@@ -148,23 +157,10 @@ stdenv.mkDerivation {
     ncurses which rsync git file getopt wget
     bash perl python3
   ];
-  buildPhase =
-    let
-      packagesDir = runCommandNoCC "openwrt-${release}-${target}-${variant}-packages" {} ''
-        mkdir packages
-        ${lib.concatMapStrings (file:
-          lib.optionalString (lib.hasPrefix "packages/" file) ''
-            ln -s ${variantFiles.${file}} ${file}
-          '') (builtins.attrNames variantFiles)}
-        mv packages $out
-      '';
-    in ''
-      rm -r packages
-      cp -r ${packagesDir} packages
-      chmod u+w -R packages
-
-      make image SHELL=${runtimeShell} PROFILE="${profile}"
-    '';
+  buildPhase = ''
+    make image SHELL=${runtimeShell} \
+      PROFILE="${profile}"
+  '';
 
   installPhase = ''
     cp -ar bin $out
