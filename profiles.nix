@@ -21,19 +21,21 @@ in rec {
     ) hashes;
 
   # filters hardware profiles from all boards.json files
+  identifyProfiles = profile:
+    builtins.concatMap (target:
+      map (variant: {
+        # match return value
+        inherit pkgs release target variant profile;
+      }) (
+        builtins.filter (variant:
+          allProfiles.${target}.${variant}.profiles ? ${profile}
+        ) (builtins.attrNames allProfiles.${target})
+      )
+    ) (builtins.attrNames allProfiles);
+
   identifyProfile = profile:
     let
-      matches =
-        builtins.concatMap (target:
-          map (variant: {
-            # match return value
-            inherit pkgs release target variant profile;
-          }) (
-            builtins.filter (variant:
-              allProfiles.${target}.${variant}.profiles ? ${profile}
-            ) (builtins.attrNames allProfiles.${target})
-          )
-        ) (builtins.attrNames allProfiles);
+      matches = identifyProfiles profile;
     in
       if builtins.length matches == 1
       then builtins.head matches
