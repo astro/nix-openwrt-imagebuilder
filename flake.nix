@@ -8,13 +8,21 @@
 
   outputs = { self, nixpkgs, openwrt }: {
 
-    lib.build = args:
-      import ./builder.nix (args // {
-        pkgs = if args ? pkgs then args.pkgs else nixpkgs.legacyPackages.x86_64-linux;
-        openwrt = if args ? openwrt then args.openwrt else openwrt;
-      });
+    lib.build =
+      { pkgs ? nixpkgs.legacyPackages.x86_64-linux
+      , openwrt ? openwrt
+      }:
+      import ./builder.nix {
+        inherit pkgs openwrt;
+      };
 
-    lib.profiles = import ./profiles.nix;
+    lib.profiles =
+      { pkgs ? nixpkgs.legacyPackages.x86_64-linux
+      , release ? "21.02.3"
+      }:
+      import ./profile.nix {
+        inherit pkgs release;
+      };
 
     packages.x86_64-linux.profiles-list = import ./profiles-list.nix {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
