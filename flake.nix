@@ -16,6 +16,10 @@
 
     lib.profiles = import ./profiles.nix;
 
+    packages.x86_64-linux.profiles-list = import ./profiles-list.nix {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    };
+
     # `nix run .#generate-hashes`
     packages.x86_64-linux.generate-hashes = import ./generate-hashes.nix {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
