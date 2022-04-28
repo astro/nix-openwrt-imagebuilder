@@ -58,11 +58,14 @@ stdenv.mkDerivation {
     cat repositories.conf
   '';
 
-  nativeBuildInputs = [
-    zlib unzip bzip2
-    ncurses which rsync git file getopt wget
-    bash perl python3
-  ];
+  nativeBuildInputs =
+    [
+      zlib unzip bzip2
+      ncurses which rsync git file getopt wget
+      bash perl python3
+    ] ++
+    lib.optional (!lib.versionAtLeast release "21") python2;
+
   buildPhase = ''
     make image SHELL=${runtimeShell} \
       PROFILE="${profile}" \
