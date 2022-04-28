@@ -6,15 +6,14 @@
     flake = false;
   };
 
-  outputs = { self, nixpkgs, openwrt }: {
+  outputs = { self, nixpkgs, openwrt }@inputs: {
 
     lib.build =
       { pkgs ? nixpkgs.legacyPackages.x86_64-linux
-      , openwrt ? openwrt
       , ...
       }@args:
       import ./builder.nix (args // {
-        inherit pkgs openwrt;
+        inherit pkgs;
       });
 
     lib.profiles =
