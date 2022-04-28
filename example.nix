@@ -1,9 +1,8 @@
 { pkgs ? import <nixpkgs> {}
+, profiles ? import ./profiles.nix { inherit pkgs; }
+, build ? import ./builder.nix
 }:
-let
-  profiles = import ./profiles.nix { inherit pkgs; };
-in
-import ./builder.nix (
+build (
   profiles.identifyProfile "avm_fritz7412"
   //
   {

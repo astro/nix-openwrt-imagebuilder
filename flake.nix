@@ -37,6 +37,10 @@
 
     packages.x86_64-linux.example-image = import ./example.nix {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      profiles = self.lib.profiles {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+      };
+      build = self.lib.build;
     };
 
     checks = self.packages;
