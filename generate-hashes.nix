@@ -35,8 +35,7 @@ let
     }
   ) {} linuxTargets;
 
-  # Expand this for more packages and also more to download
-  defaultFeeds = [ "base" ];
+  defaultFeeds = [ "base" "packages" "routing" "telephony" ];
 in
 
 writeScriptBin "generate-hashes" ''
