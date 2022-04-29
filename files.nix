@@ -9,11 +9,14 @@
 # Checksum of a feed's `Packages` file
 , feedsSha256
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
-, packagesArch
+, packagesArch ? null
 }:
 with pkgs;
 let
-  sanitizeFilename = builtins.replaceStrings [ "~" ] [ "-" ];
+  sanitizeFilename = fileName:
+    builtins.replaceStrings [ "~" ] [ "-" ] (
+      builtins.baseNameOf fileName
+    );
 
   fetchSums = url: sha256:
     let
