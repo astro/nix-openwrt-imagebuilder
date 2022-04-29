@@ -8,6 +8,8 @@
 , sha256
 # Checksum of a feed's `Packages` file
 , feedsSha256
+# Manually specify packages' arch for OpenWRT<19 releases without profiles.json
+, packagesArch
 }:
 with pkgs;
 let
@@ -108,7 +110,9 @@ let
     )
     else null;
 
-  arch = profiles.arch_packages;
+  arch = if packagesArch == null
+         then profiles.arch_packages
+         else packagesArch;
 
 in {
   inherit variantFiles variantPackages feedsFiles feedsPackages;
