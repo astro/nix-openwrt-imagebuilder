@@ -69,6 +69,10 @@ stdenv.mkDerivation {
     lib.optional (!lib.versionAtLeast release "21") python2;
 
   buildPhase = ''
+    ${lib.optionalString (!lib.versionAtLeast release "19") ''
+      # Hack around broken check for gcc
+      touch staging_dir/host/.prereq-build
+    ''}
     make image SHELL=${runtimeShell} \
       PROFILE="${profile}" \
       PACKAGES="${lib.concatStringsSep " " packages}" \
