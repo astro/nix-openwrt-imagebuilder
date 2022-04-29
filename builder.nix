@@ -16,6 +16,8 @@
   (
     import ./hashes/${release}.nix
   ).${target}.${variant}.feedsSha256
+# Manually specify packages' arch for OpenWRT<19 releases without profiles.json
+, packagesArch ? null
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
 # Include extra files
@@ -28,7 +30,7 @@
 with pkgs;
 let
   inherit (import ./files.nix {
-    inherit pkgs release target variant sha256 feedsSha256;
+    inherit pkgs release target variant sha256 feedsSha256 packagesArch;
   }) arch variantPackages variantFiles feedsPackages;
 in
 
