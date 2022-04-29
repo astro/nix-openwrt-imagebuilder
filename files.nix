@@ -13,6 +13,8 @@
 }:
 with pkgs;
 let
+  sanitizeFilename = builtins.replaceStrings [ "~" ] [ "-" ];
+
   fetchSums = url: sha256:
     let
       sumsFile = fetchurl {
@@ -35,6 +37,7 @@ let
       builtins.mapAttrs (file: sha256:
         fetchurl {
           url = "${url}/${file}";
+          name = sanitizeFilename file;
           inherit sha256;
         }
       ) filesSha256;
@@ -60,6 +63,7 @@ let
           variantFiles // {
             ${parsed.Filename} = fetchurl {
               url = "${url}/${parsed.Filename}";
+              name = sanitizeFilename parsed.Filename;
               sha256 = parsed.SHA256sum;
             };
           }
