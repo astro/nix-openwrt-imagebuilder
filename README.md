@@ -70,7 +70,7 @@ in
       let
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-        profiles = openwrt-imagebuilder.lib.profiles { inherit pkgs };
+        profiles = openwrt-imagebuilder.lib.profiles { inherit pkgs; };
 
         config = profiles.identifyProfile "avm_fritz7412" // {
           # add package to include in the image, ie. packages that you don't
