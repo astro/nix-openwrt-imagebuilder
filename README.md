@@ -39,18 +39,8 @@ let
 
     disabledServices = [ "dnsmasq" ];
 
-    # include files in the images.
-    # to set UCI configuration, create a uci-defauts scripts as per
-    # official OpenWRT ImageBuilder recommendation.
-    files = pkgs.runCommandNoCC "image-files" {} ''
-      mkdir -p $out/etc/uci-defaults
-      cat > $out/etc/uci-defaults/99-custom <<EOF
-      uci -q batch << EOI
-      set system.@system[0].hostname='testap'
-      commit
-      EOI
-      EOF
-    '';
+    # set UCI configuration
+    uci.system."@system[0]".hostname = "testap";
   };
 
 in
@@ -79,18 +69,8 @@ in
 
           disabledServices = [ "dnsmasq" ];
 
-          # include files in the images.
-          # to set UCI configuration, create a uci-defauts scripts as per
-          # official OpenWRT ImageBuilder recommendation.
-          files = pkgs.runCommandNoCC "image-files" {} ''
-            mkdir -p $out/etc/uci-defaults
-            cat > $out/etc/uci-defaults/99-custom <<EOF
-            uci -q batch << EOI
-            set system.@system[0].hostname='testap'
-            commit
-            EOI
-            EOF
-          '';
+          # set UCI configuration
+          uci.system."@system[0]".hostname = "testap";
         };
 
       in

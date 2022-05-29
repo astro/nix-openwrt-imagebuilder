@@ -20,12 +20,16 @@
 , packagesArch ? null
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
-# Include extra files
-, files ? null
 # Which services in /etc/init.d/ should be disabled
 , disabledServices ? []
 # Add to output name
 , extraImageName ? "nix"
+# uci settings
+, uci ? { }
+# extra files to create on the target. an attrset of paths that
+# map to attrsets containing either a "source" or a "text",
+# respectively a path to a file to copy or a text to inject
+, extraFiles ? { }
 }:
 with pkgs;
 let
@@ -43,9 +47,47 @@ let
     done
   '';
 
-in
+  renderUci = path:
+    lib.attrsets.mapAttrsToList (name: value:
+      let path' = path ++ [ name ]; in
+      if lib.isAttrs value then
+        renderUci path' value
+      else
+        "set ${lib.strings.concatStringsSep "." path'}='${toString value}'");
 
-stdenv.mkDerivation {
+  customUciFile = {
+    text = ''
+      uci -q batch << EOI
+      ${lib.strings.concatStringsSep "\n"
+      (lib.lists.flatten (renderUci [ ] uci))}
+      commit
+      EOI
+    '';
+  };
+
+  customUciFilePath = n:
+    let p = "/etc/uci-defaults/${toString n}-custom";
+    in if builtins.hasAttr p extraFiles then customUciFilePath (n + 1) else p;
+
+  extraFiles' = extraFiles // lib.attrsets.optionalAttrs (uci != { })
+    { "${customUciFilePath 99}" = customUciFile; };
+
+  renderFile = name:
+    { source ? null, text ? null }:
+    assert source == null || text == null;
+    (lib.optionalString (source != null) ("install -D ${source} $out/${name}"))
+    + (lib.optionalString (text != null) ''
+      mkdir -p $(dirname "$out/${name}")
+      cat > $out/${name} << EOF
+      ${text}
+      EOF
+    '');
+
+  files = pkgs.runCommandNoCC "image-files" { }
+    (lib.strings.concatStringsSep "\n"
+      (lib.attrsets.mapAttrsToList renderFile extraFiles'));
+
+in stdenv.mkDerivation {
   name = lib.concatStringsSep "-" ([
     "openwrt" release
   ]
@@ -84,7 +126,7 @@ stdenv.mkDerivation {
     make image SHELL=${runtimeShell} \
       PROFILE="${profile}" \
       PACKAGES="${lib.concatStringsSep " " packages}" \
-      ${lib.optionalString (files != null)
+      ${lib.optionalString (extraFiles' != { })
         ''FILES="${files}"''
       } \
       DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
