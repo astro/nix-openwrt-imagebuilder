@@ -92,7 +92,18 @@ stdenv.mkDerivation {
   '';
 
   installPhase = ''
-    cp -ar bin/targets/${target}/${variant} $out
+    mkdir -p $out/nix-support
+    pushd bin/targets/${target}/${variant}
+    for src in *; do
+      dst="$out/$src"
+      cp -ar "$src" "$dst"
+      if [ -f "$dst" ]; then
+        filename=$(basename "$dst")
+        echo "file ''${filename##*.} $dst" >> $out/nix-support/hydra-build-products
+      fi
+    done
+    popd
   '';
+
   dontFixup = true;
 }
