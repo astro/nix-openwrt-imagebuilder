@@ -52,6 +52,7 @@ hash() {
     echo "  \"$TARGET\".\"$VARIANT\" = {"
     echo "    sha256 = \"$SUM\";"
     ARCH=$(curl -s $BASEURL/profiles.json | jq -r .arch_packages)
+    [ $? -ne 0 ] && echo "failed to fetch or parse $BASEURL/profiles.json" > /dev/stderr
     if [ -n "$ARCH" ]; then
       for FEED in ${lib.escapeShellArgs defaultFeeds}; do
         PACKAGES=$(nix-prefetch-url --type sha256 https://downloads.openwrt.org/releases/${release}/packages/$ARCH/$FEED/Packages 2>/dev/null)
