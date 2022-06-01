@@ -1,186 +1,186 @@
 {
   "apm821xx"."nand" = {
     sha256 = "1i0f66yaypb2anbgjl8crvq3g4r3icc8zyvq2j5nqx722b7bg96h";
-    feedsSha256.base = "0lfwl14bgai1cgmlsk4slzs9ardx49r5zz879jr773lhz3mdqiaf";
-    feedsSha256.packages = "0n5scm7p6kg49lc3gf1yj9mlfm59bj2w7vzh33sj5biphljnxdym";
-    feedsSha256.routing = "1qqqziagcmn3d7xrvki2v1sni0sh8i9m0h39hgz0sacn2kpp69vg";
-    feedsSha256.telephony = "1wrys6s4hihrikgbhshd6253sivbiffzvj11qkyi40w9cl76abzk";
+    feedsSha256.base = "04d85kcn4p24wrj3rja1dysawfqavhrp8lf4cy5ha29x1qs149vc";
+    feedsSha256.packages = "0jqr23nayl4ryfwyhn49rprxb8gs1gxxlh1jyd8q18ws2prjys3l";
+    feedsSha256.routing = "1dzzkqvmi314klyn3wnfcy2n9pvqzmqi7065pykxs9j67qgj4p9d";
+    feedsSha256.telephony = "02vm355ll36d4p1xah5wl93dknvir200kkkv8k6v3li921yqmxwq";
   };
   "apm821xx"."sata" = {
     sha256 = "087vdmqc4qafydwwywbk1vlbb0v9xka2l8fm4g9vrc7vjx80s629";
-    feedsSha256.base = "0lfwl14bgai1cgmlsk4slzs9ardx49r5zz879jr773lhz3mdqiaf";
-    feedsSha256.packages = "0n5scm7p6kg49lc3gf1yj9mlfm59bj2w7vzh33sj5biphljnxdym";
-    feedsSha256.routing = "1qqqziagcmn3d7xrvki2v1sni0sh8i9m0h39hgz0sacn2kpp69vg";
-    feedsSha256.telephony = "1wrys6s4hihrikgbhshd6253sivbiffzvj11qkyi40w9cl76abzk";
+    feedsSha256.base = "04d85kcn4p24wrj3rja1dysawfqavhrp8lf4cy5ha29x1qs149vc";
+    feedsSha256.packages = "0jqr23nayl4ryfwyhn49rprxb8gs1gxxlh1jyd8q18ws2prjys3l";
+    feedsSha256.routing = "1dzzkqvmi314klyn3wnfcy2n9pvqzmqi7065pykxs9j67qgj4p9d";
+    feedsSha256.telephony = "02vm355ll36d4p1xah5wl93dknvir200kkkv8k6v3li921yqmxwq";
   };
   "archs38"."generic" = {
     sha256 = "1v5k983mhgvxw325mkp71vjgwdif4lijr1xv86k4r26rrpgmn4sx";
   };
   "ath25"."generic" = {
     sha256 = "0nhdq0y2pc254yf6v5h7k70lsp8s2dy6isa57bgyj03ndk6ky6sp";
-    feedsSha256.base = "1kwxmg7m2qxcjqfsmzfisrm6jyfi7rjk13vkpg7cf6qkyskiqw2b";
-    feedsSha256.packages = "0z69fm2xamdqfbb4j16yafx3nbsgw03f2nlkxl1bhnn025faa6yg";
-    feedsSha256.routing = "1c4w12zna77dwhwwxs8i1wsap31iih6lhzjqgy6whpl4rfbl8fx3";
-    feedsSha256.telephony = "17j34jbrqc1yqb53bschnyq6sz3zflk25gjlmqqhmv0sbczfqs54";
+    feedsSha256.base = "1phmwlw5y74h4sa89cnb6g8glfiwc8xf1alc0v59c4wpkd9qx6gm";
+    feedsSha256.packages = "0lb0p08n844ibck0mv66n0cjhwrp0shri4wk944a4c65f6i57d1x";
+    feedsSha256.routing = "0q4kmvqys9w5gzsgdi6vd6sja93l0mfr85dd027lv1sgziy67hxb";
+    feedsSha256.telephony = "13nc7bfyvs1likq9wz0g6y2hzp5yiiish3zccpr3rngdvmlfn0mb";
   };
   "ath79"."generic" = {
     sha256 = "08mjlccahl25fxygryv2v83l1y25znvg7raw9nk4xsg7c49bpyjw";
-    feedsSha256.base = "0a3xpnrrsh4q89gfhglfg1ljjy3b164244118xsz275pwhxg7dxv";
-    feedsSha256.packages = "1jz73kav8vd9flb0dy9x66p2rv5pmcflyjqxsv302wqjpf4lqiwg";
-    feedsSha256.routing = "04ic84zihhdwj19h38y04c865522d245q6plsrcq0dyrblxqd1m3";
-    feedsSha256.telephony = "15hlxl0p3l3fdp5qdgbv3qx3kvzzsg3xvllp0a8zwdgrxw2m09zy";
+    feedsSha256.base = "01pn8zaqwgsg2xwslj92zs895xh94h88h8akz4cc13gzqdrig93q";
+    feedsSha256.packages = "0rhw3qsv7a7264nx161k02316c5c6m51mvk6xpvlmghcrq3vcckc";
+    feedsSha256.routing = "0ky2vyw86w3v5am1ii5hgcj0zgdpsk5nzhcxk17pm91jacvhhqpd";
+    feedsSha256.telephony = "0aqq4zgw5d9s7d4vr3zkmsdqpwya3rhrli6v7ng8q1qjmvzlycgf";
   };
   "ath79"."nand" = {
     sha256 = "144akwf8g5511sgsmh610wxzz99cpg3phdqmbqz24idy1mb4ilpq";
   };
   "ath79"."tiny" = {
     sha256 = "1611vxw7dwmv67jjy3zycwq2y24lv741jw9vyy41ibgmf7nnndx0";
-    feedsSha256.base = "0a3xpnrrsh4q89gfhglfg1ljjy3b164244118xsz275pwhxg7dxv";
-    feedsSha256.packages = "1jz73kav8vd9flb0dy9x66p2rv5pmcflyjqxsv302wqjpf4lqiwg";
-    feedsSha256.routing = "04ic84zihhdwj19h38y04c865522d245q6plsrcq0dyrblxqd1m3";
-    feedsSha256.telephony = "15hlxl0p3l3fdp5qdgbv3qx3kvzzsg3xvllp0a8zwdgrxw2m09zy";
+    feedsSha256.base = "01pn8zaqwgsg2xwslj92zs895xh94h88h8akz4cc13gzqdrig93q";
+    feedsSha256.packages = "0rhw3qsv7a7264nx161k02316c5c6m51mvk6xpvlmghcrq3vcckc";
+    feedsSha256.routing = "0ky2vyw86w3v5am1ii5hgcj0zgdpsk5nzhcxk17pm91jacvhhqpd";
+    feedsSha256.telephony = "0aqq4zgw5d9s7d4vr3zkmsdqpwya3rhrli6v7ng8q1qjmvzlycgf";
   };
   "bcm53xx"."generic" = {
     sha256 = "0r3yk744vcbgdpf4a8gi03azp6bq85c9lapxcs3hpskbdl6h2sqr";
-    feedsSha256.base = "00dgrq1sybgmlqq48alqm2zik5acicyfy8p6hqgblkdqrlanz5c6";
-    feedsSha256.packages = "08lrya4v36lrm4dca3i0g1nnx0xgmfrv1s18wig3fx2vrxlqk0l5";
-    feedsSha256.routing = "0cp8zcnnf52x6lrz6fy9zfyybn1da2dq1yimb19sxy1ykjzs2n3p";
-    feedsSha256.telephony = "0xz3f24kqd3qyj7mqam1fia2k5dzrvbj8zirsvpnnyycb8pzny54";
+    feedsSha256.base = "1b6gc97l4yn4h2xgmi2d65siksb51g5gi5h6146l45xvp4hg5407";
+    feedsSha256.packages = "1w38md4kzjqvdy6bpy3v8z9giv89xhjv779jla931l54la7fb8r7";
+    feedsSha256.routing = "0q7p6l1pglbphppx07wb1hrgkjcnfvm1q214s10swivyqjb6nrfb";
+    feedsSha256.telephony = "06rn9r3pjk8mx1qj330nbmzz3d5f93h2mcn1mlcs66r2vkvmzn6j";
   };
   "gemini"."generic" = {
     sha256 = "0z7jfaqgpmw9m6ifc04l5v8y7rsq22wp4fjx4jnrqw282nrfxwi2";
-    feedsSha256.base = "0c9b4j70rqk5ls9dnjn1fpjwjj4bfm0lh459iyhy6bzdis3bd1vj";
-    feedsSha256.packages = "15iynkrkhvfh7m0qzyzmqiagcxk9b6zamp1lbscd68z75lnfpw96";
-    feedsSha256.routing = "0knls8cpj20yzximfxhqbgqciwkwnxsnqrrqc254m52anm5xsnjq";
-    feedsSha256.telephony = "0zs2q1bdymig60myn8nwq9qc20x5n68f9kv96xj0n1mvcgfvkw40";
+    feedsSha256.base = "0ywsr2x6ppmyddnrfy18xb1gzflxyj142m182i7sgq9l6bkyfbd1";
+    feedsSha256.packages = "18hq3qr3d7hwkpyh7pbm4hk4sxgp9pxs3r4hr9idacajxk2n2lrw";
+    feedsSha256.routing = "1xk598131shr00q2b8ilv6shpmlsaqrsgayhivp6l249304c2slx";
+    feedsSha256.telephony = "0xf7k3a0npf5k65dcv3yd4aj7xfk5kmjbhrxmz32mn6j1spdkafx";
   };
   "ipq40xx"."generic" = {
     sha256 = "1q41yzzdrpjal711rlrxf707brsv4628k3ymc06ycldq64gv2z97";
-    feedsSha256.base = "1flhi5sd2r5qnagv701zsy2jc7jplh9hkzmgf7naaryi2v3lgd0q";
-    feedsSha256.packages = "0y33jja7mnd29nbll9bhc1m45j8gvcqb0mdzgxzbw0v0g3rh5p4s";
-    feedsSha256.routing = "0li58w07afyzak307vxv0l64qc63bcazzzm9rd9yawji2ckakwi8";
-    feedsSha256.telephony = "0zv6d6575s7dajsvn4ypnl4cl8wl435zq0pk4iwalgc1kb2z8xvn";
+    feedsSha256.base = "1md09pb4mmkamm9g4js4gaqpikyv01zx3w2dnhr1q6mh80qvrnag";
+    feedsSha256.packages = "0yamr6hj3cgzzszaj33asfl184h6rgmzvgqk7qgh7fvki7zaqnna";
+    feedsSha256.routing = "11m7gmrs2rxkh3b14z60y29lfv811z29iifzfpvwp4i3fqg6j8pd";
+    feedsSha256.telephony = "009c9jbppapa5k49s7p6wbc6wjy0x2g3g3wd76rkzyiriid40jcl";
   };
   "ipq806x"."generic" = {
     sha256 = "1z6vqrphdhs11lbrh9kcnjmragygz8dng6qinpgrxcml0gipn8mc";
     feedsSha256.base = "19x4sh06n0sfzqgxm8mqvv87s5nvg0xccn2lc7ffj738xsd7piay";
-    feedsSha256.packages = "111np08q3b5xzmsw0igxc2kyq4frcwklrf4g6j1zrxyi2iihwz35";
-    feedsSha256.routing = "0zkqv53xjp9mjdllp1yd9c5ja75qibzfdpqfpad154mdipsswh9l";
-    feedsSha256.telephony = "00p1hqrfngg2w3c421iqf3nggz4dh9qjzxy6pl9i0ar8hb89g3lf";
+    feedsSha256.packages = "19b8cjmdm8nvl2zyj14r18a9fl7l3rxvr7pslzxa941gan6n2g56";
+    feedsSha256.routing = "1z68hhr9qhsaamxjpy6wwh297v1whq80l3vaj373ivmm3qm1cq1h";
+    feedsSha256.telephony = "1nffg0ny3j8g3sl1vnqcqmk7i5hwcszxikyxxhi8f30nqr20fvqr";
   };
   "kirkwood"."generic" = {
     sha256 = "0lcjzz77rmm7bln08q97xp3d08a34zjqkl3bcjll49b40fzw614y";
-    feedsSha256.base = "1vmqg9j2ad5imnxyz01x8agjgkm5nqz5f8y8wc2sind0zkpp2897";
-    feedsSha256.packages = "0jqv1zsqrlsjrbhm228jpvdffbzkw2z912kya2l06d153kx5727m";
-    feedsSha256.routing = "0faqb1047rhpbvgby2v82w4sy738hp39pp3nfgyaf0pxc4qk1znk";
-    feedsSha256.telephony = "0hx9iyl2kk8xznvsd8hdz95qrh0mc6l4rwkfgaxr7awyzz0y1ij2";
+    feedsSha256.base = "1d6k0xqxr9160bqj2im9c600ff0pivc3lynbaj98303v86i47cvf";
+    feedsSha256.packages = "0pygz27vkmjz6xqi8skvhldqfpv984vjws9vs2fcjnvh5w0qfrsa";
+    feedsSha256.routing = "15hzzvc2l6v0wb3fl37qhfd4lk6f002jf4xry2rsvjq3gjgfrm9d";
+    feedsSha256.telephony = "1qial6zyymzjxlpc79lbsfi2ykxa9ky3ans137cjj0d4xyxgd0sc";
   };
   "lantiq"."xrx200" = {
     sha256 = "0ys23c6hw8xld1vz81niwn35w15inxg84j3zzmask5hpf6nr897s";
-    feedsSha256.base = "0a3xpnrrsh4q89gfhglfg1ljjy3b164244118xsz275pwhxg7dxv";
-    feedsSha256.packages = "1jz73kav8vd9flb0dy9x66p2rv5pmcflyjqxsv302wqjpf4lqiwg";
-    feedsSha256.routing = "04ic84zihhdwj19h38y04c865522d245q6plsrcq0dyrblxqd1m3";
-    feedsSha256.telephony = "15hlxl0p3l3fdp5qdgbv3qx3kvzzsg3xvllp0a8zwdgrxw2m09zy";
+    feedsSha256.base = "01pn8zaqwgsg2xwslj92zs895xh94h88h8akz4cc13gzqdrig93q";
+    feedsSha256.packages = "0rhw3qsv7a7264nx161k02316c5c6m51mvk6xpvlmghcrq3vcckc";
+    feedsSha256.routing = "0ky2vyw86w3v5am1ii5hgcj0zgdpsk5nzhcxk17pm91jacvhhqpd";
+    feedsSha256.telephony = "0aqq4zgw5d9s7d4vr3zkmsdqpwya3rhrli6v7ng8q1qjmvzlycgf";
   };
   "lantiq"."xway" = {
     sha256 = "0f876pgc02dniyykpyb0rpf9rk20ax66mg576n4bf8nr2d775vxh";
-    feedsSha256.base = "0a3xpnrrsh4q89gfhglfg1ljjy3b164244118xsz275pwhxg7dxv";
-    feedsSha256.packages = "1jz73kav8vd9flb0dy9x66p2rv5pmcflyjqxsv302wqjpf4lqiwg";
-    feedsSha256.routing = "04ic84zihhdwj19h38y04c865522d245q6plsrcq0dyrblxqd1m3";
-    feedsSha256.telephony = "15hlxl0p3l3fdp5qdgbv3qx3kvzzsg3xvllp0a8zwdgrxw2m09zy";
+    feedsSha256.base = "01pn8zaqwgsg2xwslj92zs895xh94h88h8akz4cc13gzqdrig93q";
+    feedsSha256.packages = "0rhw3qsv7a7264nx161k02316c5c6m51mvk6xpvlmghcrq3vcckc";
+    feedsSha256.routing = "0ky2vyw86w3v5am1ii5hgcj0zgdpsk5nzhcxk17pm91jacvhhqpd";
+    feedsSha256.telephony = "0aqq4zgw5d9s7d4vr3zkmsdqpwya3rhrli6v7ng8q1qjmvzlycgf";
   };
   "lantiq"."xway_legacy" = {
     sha256 = "1qv3100xsz0bhsdw7bnch88376gbs0m37sjr38fy3kgvpw7i06x4";
   };
   "lantiq"."falcon" = {
     sha256 = "1458la3mkh01p7rhlkb5j08a2a9bfp3x2r339f4f8cihgfk89b9d";
-    feedsSha256.base = "0a3xpnrrsh4q89gfhglfg1ljjy3b164244118xsz275pwhxg7dxv";
-    feedsSha256.packages = "1jz73kav8vd9flb0dy9x66p2rv5pmcflyjqxsv302wqjpf4lqiwg";
-    feedsSha256.routing = "04ic84zihhdwj19h38y04c865522d245q6plsrcq0dyrblxqd1m3";
-    feedsSha256.telephony = "15hlxl0p3l3fdp5qdgbv3qx3kvzzsg3xvllp0a8zwdgrxw2m09zy";
+    feedsSha256.base = "01pn8zaqwgsg2xwslj92zs895xh94h88h8akz4cc13gzqdrig93q";
+    feedsSha256.packages = "0rhw3qsv7a7264nx161k02316c5c6m51mvk6xpvlmghcrq3vcckc";
+    feedsSha256.routing = "0ky2vyw86w3v5am1ii5hgcj0zgdpsk5nzhcxk17pm91jacvhhqpd";
+    feedsSha256.telephony = "0aqq4zgw5d9s7d4vr3zkmsdqpwya3rhrli6v7ng8q1qjmvzlycgf";
   };
   "lantiq"."ase" = {
     sha256 = "0s6j4z27kjsm4dh1i9ma3j565asxcvdjk5ck75gnw43j3n8wy1d0";
-    feedsSha256.base = "1kwxmg7m2qxcjqfsmzfisrm6jyfi7rjk13vkpg7cf6qkyskiqw2b";
-    feedsSha256.packages = "0z69fm2xamdqfbb4j16yafx3nbsgw03f2nlkxl1bhnn025faa6yg";
-    feedsSha256.routing = "1c4w12zna77dwhwwxs8i1wsap31iih6lhzjqgy6whpl4rfbl8fx3";
-    feedsSha256.telephony = "17j34jbrqc1yqb53bschnyq6sz3zflk25gjlmqqhmv0sbczfqs54";
+    feedsSha256.base = "1phmwlw5y74h4sa89cnb6g8glfiwc8xf1alc0v59c4wpkd9qx6gm";
+    feedsSha256.packages = "0lb0p08n844ibck0mv66n0cjhwrp0shri4wk944a4c65f6i57d1x";
+    feedsSha256.routing = "0q4kmvqys9w5gzsgdi6vd6sja93l0mfr85dd027lv1sgziy67hxb";
+    feedsSha256.telephony = "13nc7bfyvs1likq9wz0g6y2hzp5yiiish3zccpr3rngdvmlfn0mb";
   };
   "layerscape"."armv8_64b" = {
     sha256 = "02z1brqp2kxzn9bw8aam81m1n868cmpadc9733zdm6c2qdhiyg0f";
-    feedsSha256.base = "0cf673r3xx6h2kcflypdmvp06z4mvcr2lqdw6y2grzcns60aclsy";
-    feedsSha256.packages = "0rbi0gl15kgllw6815a0j07l4dvhdn1ljk3rl7y1ybvlgxbksq73";
-    feedsSha256.routing = "1s7x0z908ygijngb4azb7ifgzsjx9gjsj5ix0w04mssyyg8rik2g";
-    feedsSha256.telephony = "07r8mril4i4pwlrzrzibc0lqdrx0vinb58j7pgrbph3pg2wc06h3";
+    feedsSha256.base = "0j45nw97bi34yxlmfvykg6f57q6wa8pc2mg8yx5ada85qxqxch2n";
+    feedsSha256.packages = "1s10jghdd6hanmkpwz4akx14j3757x31pa75vwjinn1ksz2i4bcz";
+    feedsSha256.routing = "0msimsv4f5s3xrfv7ck6b1an4ywxdji7nfn6ngisb69q3yala7c5";
+    feedsSha256.telephony = "1l79q46cv0ryrgf87m4d7hnvbxcmn2kmk9l2j65x7zhaq461gvjp";
   };
   "layerscape"."armv7" = {
     sha256 = "18knavha0smq7xfz5m4r73m139vdnna56pnbvffx8azzd76dmw5n";
-    feedsSha256.base = "1flhi5sd2r5qnagv701zsy2jc7jplh9hkzmgf7naaryi2v3lgd0q";
-    feedsSha256.packages = "0y33jja7mnd29nbll9bhc1m45j8gvcqb0mdzgxzbw0v0g3rh5p4s";
-    feedsSha256.routing = "0li58w07afyzak307vxv0l64qc63bcazzzm9rd9yawji2ckakwi8";
-    feedsSha256.telephony = "0zv6d6575s7dajsvn4ypnl4cl8wl435zq0pk4iwalgc1kb2z8xvn";
+    feedsSha256.base = "1md09pb4mmkamm9g4js4gaqpikyv01zx3w2dnhr1q6mh80qvrnag";
+    feedsSha256.packages = "0yamr6hj3cgzzszaj33asfl184h6rgmzvgqk7qgh7fvki7zaqnna";
+    feedsSha256.routing = "11m7gmrs2rxkh3b14z60y29lfv811z29iifzfpvwp4i3fqg6j8pd";
+    feedsSha256.telephony = "009c9jbppapa5k49s7p6wbc6wjy0x2g3g3wd76rkzyiriid40jcl";
   };
   "malta"."be" = {
     sha256 = "15ik8kns1l1y926blvc6wlp9fzrpn93fvrrjny0fpvk25q00539d";
   };
   "mediatek"."mt7622" = {
     sha256 = "0cgq57cf39isrhkmkpxwyr8zc5p99j9w5p8dvqrwvkpab9szmb1j";
-    feedsSha256.base = "10hc6377d2k2qhcva9snqn25m3mkbvx1j94501id989v7pqpg7nm";
-    feedsSha256.packages = "0sjrnj65x2km1gwd2z3l7zsh1amcfwiflr790b5nrxh7ys7yzgy0";
-    feedsSha256.routing = "0xjw4mjk0pz7wc5ai8f67r348dsvpl08ymzwxvjy7sn2lq7bkqmh";
-    feedsSha256.telephony = "075wy2a05in6b5153p1bz5wnnzbr7gdjrpi7dsrznrs3zgr3zwq5";
+    feedsSha256.base = "1rj0xm9dn7hggz8qkcv9l92zc6yz4y8zw1b3xc6ia53vs49c9cx8";
+    feedsSha256.packages = "1dc2kyjcjv1dfk404yjsyv7w5cxghvvm3yh78nbps652r8hpkkgj";
+    feedsSha256.routing = "0y502fark7an3lnnprz91mvzfd854m3lahpb5knfc17j9369179h";
+    feedsSha256.telephony = "1bh1b6p8y2ipmfv01ck2wgij9375rvzaz24k09h86d92hpfqzlm5";
   };
   "mediatek"."mt7623" = {
     sha256 = "1c6vkinjwl7rr76hdlvbdh0p4yzwcxaac6q75mi3icqzgaycz877";
-    feedsSha256.base = "1flhi5sd2r5qnagv701zsy2jc7jplh9hkzmgf7naaryi2v3lgd0q";
-    feedsSha256.packages = "0y33jja7mnd29nbll9bhc1m45j8gvcqb0mdzgxzbw0v0g3rh5p4s";
-    feedsSha256.routing = "0li58w07afyzak307vxv0l64qc63bcazzzm9rd9yawji2ckakwi8";
-    feedsSha256.telephony = "0zv6d6575s7dajsvn4ypnl4cl8wl435zq0pk4iwalgc1kb2z8xvn";
+    feedsSha256.base = "1md09pb4mmkamm9g4js4gaqpikyv01zx3w2dnhr1q6mh80qvrnag";
+    feedsSha256.packages = "0yamr6hj3cgzzszaj33asfl184h6rgmzvgqk7qgh7fvki7zaqnna";
+    feedsSha256.routing = "11m7gmrs2rxkh3b14z60y29lfv811z29iifzfpvwp4i3fqg6j8pd";
+    feedsSha256.telephony = "009c9jbppapa5k49s7p6wbc6wjy0x2g3g3wd76rkzyiriid40jcl";
   };
   "mpc85xx"."p1020" = {
     sha256 = "10igk5wrgwhxdfbfz86l5cg6agy08k1jdzhdsdifshcr4y3kzv5m";
     feedsSha256.base = "0izpyladlmlid1lpg6ajvxgzcqpav22xyxpqhkrgrgmwvr0f6zhw";
-    feedsSha256.packages = "1r233fr55nbiqxzmb9rwrwmdppfz614s2ps669yv8z9ls8iwxgd0";
-    feedsSha256.routing = "1hvyifsv3wx52gv7y0bxnl6c3vsj0434si81jbvli8zvi8cac6x8";
-    feedsSha256.telephony = "03wym3dd0kaaa32p02h2bfqjaw654by1b44hq49jmylm1rcinzdf";
+    feedsSha256.packages = "063w22d2nlkic1rqrfks3gq68z1fyx32whhrxhxizb0f7rd15mz5";
+    feedsSha256.routing = "03b2br4qwlms3skxfs42kn2gwvf43phl79bxhlchjzbvflmnp7y2";
+    feedsSha256.telephony = "1vd5rr31p8wmm3lfrmk4l5jr6l20l2ms7dka87kd8f2ma389mng7";
   };
   "mpc85xx"."p2020" = {
     sha256 = "1ff1vg5zj1kdfxwc2rgs05fj0c72hixidck0h755phml04hsv8vp";
     feedsSha256.base = "0izpyladlmlid1lpg6ajvxgzcqpav22xyxpqhkrgrgmwvr0f6zhw";
-    feedsSha256.packages = "1r233fr55nbiqxzmb9rwrwmdppfz614s2ps669yv8z9ls8iwxgd0";
-    feedsSha256.routing = "1hvyifsv3wx52gv7y0bxnl6c3vsj0434si81jbvli8zvi8cac6x8";
-    feedsSha256.telephony = "03wym3dd0kaaa32p02h2bfqjaw654by1b44hq49jmylm1rcinzdf";
+    feedsSha256.packages = "063w22d2nlkic1rqrfks3gq68z1fyx32whhrxhxizb0f7rd15mz5";
+    feedsSha256.routing = "03b2br4qwlms3skxfs42kn2gwvf43phl79bxhlchjzbvflmnp7y2";
+    feedsSha256.telephony = "1vd5rr31p8wmm3lfrmk4l5jr6l20l2ms7dka87kd8f2ma389mng7";
   };
   "mvebu"."cortexa9" = {
     sha256 = "1vrfvz9dmfmr4mq5rrl2sxx4j6bb092hnvidicg3hw5vv4b281n6";
     feedsSha256.base = "1fbyhbmmh9pxki3ghhw7j3is89niz7wqafl4djiyqs72lnqiqly6";
-    feedsSha256.packages = "0mbqrrb9am3ls6jfbckq30nab41xkvxpzgbdbvshw5phq1dh3y35";
-    feedsSha256.routing = "0cg50yfygh9d7dcrhrxn1lxcnl02jv3xzayn4xfa538yxa1zvlsh";
-    feedsSha256.telephony = "1gx1r1xskhxs157vs140v2ik7qsz8skqh5712d8arcd1wn9lfnrb";
+    feedsSha256.packages = "0dqlz0qkqpyf2pkngimp09zzkrn6lllpzb18gnrshg1mhlxi1ljs";
+    feedsSha256.routing = "0wajdfwvysbkcvj3s3ix5ad6c1nzzxjvx5mlbz66vwidjay9wbbm";
+    feedsSha256.telephony = "0js5valjgj3lz4bzshmgp7v9cq46iky680dmv43hwh9622yhqa59";
   };
   "mvebu"."cortexa53" = {
     sha256 = "1iblpw3b40p9y7z9knfxmq4fdi1azxfvdgzqfsmvdxmbmp1k5zah";
-    feedsSha256.base = "10hc6377d2k2qhcva9snqn25m3mkbvx1j94501id989v7pqpg7nm";
-    feedsSha256.packages = "0sjrnj65x2km1gwd2z3l7zsh1amcfwiflr790b5nrxh7ys7yzgy0";
-    feedsSha256.routing = "0xjw4mjk0pz7wc5ai8f67r348dsvpl08ymzwxvjy7sn2lq7bkqmh";
-    feedsSha256.telephony = "075wy2a05in6b5153p1bz5wnnzbr7gdjrpi7dsrznrs3zgr3zwq5";
+    feedsSha256.base = "1rj0xm9dn7hggz8qkcv9l92zc6yz4y8zw1b3xc6ia53vs49c9cx8";
+    feedsSha256.packages = "1dc2kyjcjv1dfk404yjsyv7w5cxghvvm3yh78nbps652r8hpkkgj";
+    feedsSha256.routing = "0y502fark7an3lnnprz91mvzfd854m3lahpb5knfc17j9369179h";
+    feedsSha256.telephony = "1bh1b6p8y2ipmfv01ck2wgij9375rvzaz24k09h86d92hpfqzlm5";
   };
   "mvebu"."cortexa72" = {
     sha256 = "0p8912g3cnl29dqc529idl88bi4dfqm9bajb7hw6i65zf9s3db7z";
-    feedsSha256.base = "0ch61y6hng8v8rfxgsd2y9hmrjywid3nnbyvz8f9ynbwh6fag3gy";
-    feedsSha256.packages = "1d8h4vyydyj1i0k1j4zd4rnwl99c2941zxx9m0dq9h5xbmzam7m0";
-    feedsSha256.routing = "08x07q0bsj463s0kn3vcm0s2k6q1p1wp8n95z8l8p2x6b8hzlpvk";
-    feedsSha256.telephony = "048xg5bipvv306crcqr16311bgdagyibizra9xwg2a2ipq4kbls4";
+    feedsSha256.base = "0k1ilpvhir0l91g0xdaz42vx47p331rf069abvbpdr04wlm4f2hm";
+    feedsSha256.packages = "1zbavx2gjzwcz6ynjzbdjq2xcqr78hch3rwn9ag7xghvdxhdzalq";
+    feedsSha256.routing = "0vq64xnad75fi6p933x8sm24s0zkq9imigppsyic6r0ydfinxwgk";
+    feedsSha256.telephony = "0nfpydivhi8lgl88rbgcgf0ml3wnm3av7s436f2na685baa7cbvf";
   };
   "mxs"."generic" = {
     sha256 = "1gralvca539pd1r1ri6w4gdxbvjbrswkwpfpb6y39y9wacy79jgk";
   };
   "octeon"."generic" = {
     sha256 = "08cql9qins72vb2xjn5904ihmvaizd4ilfrws7702nv9r4b3zvfj";
-    feedsSha256.base = "1bfckf2kifxib7a6q4lmms1xdhgk70w5zvqhrcg4lqwdyzf5vlha";
-    feedsSha256.packages = "1im1p1r594291d2d5xxs5k8kjrj8yr194xivr53y8l0vv0vm169w";
-    feedsSha256.routing = "1q8bkg8mhvvakhh59rh961srh8x9djgwc0ckdv9p4j4sw98i6jpl";
-    feedsSha256.telephony = "0lm4kib4k3j9z85rrxd7gcmdpvmn4l7zd1iw7bhwrcys4jzgnbsg";
+    feedsSha256.base = "1ha62zd9xvbfazzqrv48ybzp16d57gk89zqmyibzzqq68x9nmwz8";
+    feedsSha256.packages = "00p262jg1xlsqvijkc8312v1fyk1lvsy4wc9rcwrpg824m62cihx";
+    feedsSha256.routing = "1avh2nxawxrkqdlkiw22h49x49b6xmyggs3p3zm6qyk6p4159mbc";
+    feedsSha256.telephony = "1a73fvlr6ir1dkv5rd8whn0m5cdi4bm2k6kvm10v3k8gj8ihfxdk";
   };
   "octeontx"."generic" = {
     sha256 = "1h6lnix8a6v8yvd0chzgabqm2svgs2zf4is4ajnzmj075hfdmgcv";
@@ -188,86 +188,86 @@
   "omap"."generic" = {
     sha256 = "18xnxy0y6yxh50k2r66xv6fiw6vjafgjjnq8kcc4wf31v5wj5pyi";
     feedsSha256.base = "0qx4kmnwnyqhlz5mb0mjayzlkzwq7k5cxvkr9zfjixphnim191q1";
-    feedsSha256.packages = "0k0sf9dahcjbj44xgxpmz0pr4h61lkdr2vx6hmyp9i0cw243wfqs";
-    feedsSha256.routing = "1hbb1axni8qmdcf1z3dxip5wzz33d5cksqfrmlyi3fjxvdqn736x";
-    feedsSha256.telephony = "0r81xz2l2yn2hgx46kwk86k188hbiahblb8wjwgcn93c10nvhxky";
+    feedsSha256.packages = "1lyr7knvpjrjj3m58ag8n90fnwv73hb7apwv32qp1cqh854bnnbr";
+    feedsSha256.routing = "1mjnnmn3d2nbn1w76wwi2qvy8bdx6yf4b6vlh49lmmbbb1a11ifk";
+    feedsSha256.telephony = "0dl07g6ixxmm4ghs9268cls1fjfyjfk7jqqvqmxn7ciw38b7k7xg";
   };
   "pistachio"."generic" = {
     sha256 = "1f067i9dwfd5fazhqpnzvs3j1lw30yccldiyjrbp0p2wj1sl4s59";
     feedsSha256.base = "16ck8p0yydx1h80h4g2bvjmq3gvq3sbjx5mcf281cmwd5a780d1w";
-    feedsSha256.packages = "1mw4ly0ibb4bgvigjb4qb4fc35vcy9d36wkg9j9nkd6ijy5kahp0";
-    feedsSha256.routing = "0h6yh7vyhhv3pjcpbb7qf2ji4r3wxmf7fwmx1xi3gjf3s3lrppj5";
-    feedsSha256.telephony = "0imz02n5n1kp2dxgc3w40f5ify2q2pcg2nda1q8d4l7lv9ggk7m1";
+    feedsSha256.packages = "0xh6bivv0vyibiijmb4lfclqrbdf273l4r6vz6w341508qpb79qb";
+    feedsSha256.routing = "19l8y32si9l8q8arsc5g02c3j7kna27ai5grsws8m7d3slfjxx80";
+    feedsSha256.telephony = "0lcbacb786l8yg31da08vxlqy234ch8v4a0b2bk1vhil7ay3k7kb";
   };
   "ramips"."mt7620" = {
     sha256 = "1w89kys892iv2kxyw5hiahpyqjyn5w9p9wbf38nkh6yfwcs4hpzd";
-    feedsSha256.base = "1qqm4v87w9wm53ga7jh2z1j69jsqq7phs43d8hm1rmn7pzwpx15y";
-    feedsSha256.packages = "1ksg689j02hsrqyxzxlhhd9k5dpkl08p3sk0fgjz7ikpafb0wh2w";
-    feedsSha256.routing = "162v2yla2wzqm2k4bq8ipljynsc7q7vvxkwdwsn16b4b1blhdnrg";
-    feedsSha256.telephony = "0zn9sawpb2i8zc2pxx1kjzxcabsxmql911yqgbvbq5ch2z3v5ba4";
+    feedsSha256.base = "1ibgc3sa482i91g3szsyvkjk8mm394yvdad0nykcjspivdb69fph";
+    feedsSha256.packages = "1nbf3v7swnkqwq684g8v20nv5jydsqf6z3p4kz6vxv14dxajs2r0";
+    feedsSha256.routing = "1n4j832hssvk9pqc53kmdyfnx18b84zf4z9ggslxdyvdv9zpdh6f";
+    feedsSha256.telephony = "160853183sx5xvar5nhkgxpj7hxdwckzp7jjiskf9vl6j75r1jm9";
   };
   "ramips"."mt7621" = {
     sha256 = "19pjzjgnnjiay5aw09dz5vzs6sv5hm6yl4zrhql18vr93km0vcfs";
-    feedsSha256.base = "1qqm4v87w9wm53ga7jh2z1j69jsqq7phs43d8hm1rmn7pzwpx15y";
-    feedsSha256.packages = "1ksg689j02hsrqyxzxlhhd9k5dpkl08p3sk0fgjz7ikpafb0wh2w";
-    feedsSha256.routing = "162v2yla2wzqm2k4bq8ipljynsc7q7vvxkwdwsn16b4b1blhdnrg";
-    feedsSha256.telephony = "0zn9sawpb2i8zc2pxx1kjzxcabsxmql911yqgbvbq5ch2z3v5ba4";
+    feedsSha256.base = "1ibgc3sa482i91g3szsyvkjk8mm394yvdad0nykcjspivdb69fph";
+    feedsSha256.packages = "1nbf3v7swnkqwq684g8v20nv5jydsqf6z3p4kz6vxv14dxajs2r0";
+    feedsSha256.routing = "1n4j832hssvk9pqc53kmdyfnx18b84zf4z9ggslxdyvdv9zpdh6f";
+    feedsSha256.telephony = "160853183sx5xvar5nhkgxpj7hxdwckzp7jjiskf9vl6j75r1jm9";
   };
   "ramips"."mt76x8" = {
     sha256 = "1wd05kj3wqqfxhqc7vzcam77r8lws6nkjd36dnmgcmsmpvas80jx";
-    feedsSha256.base = "1qqm4v87w9wm53ga7jh2z1j69jsqq7phs43d8hm1rmn7pzwpx15y";
-    feedsSha256.packages = "1ksg689j02hsrqyxzxlhhd9k5dpkl08p3sk0fgjz7ikpafb0wh2w";
-    feedsSha256.routing = "162v2yla2wzqm2k4bq8ipljynsc7q7vvxkwdwsn16b4b1blhdnrg";
-    feedsSha256.telephony = "0zn9sawpb2i8zc2pxx1kjzxcabsxmql911yqgbvbq5ch2z3v5ba4";
+    feedsSha256.base = "1ibgc3sa482i91g3szsyvkjk8mm394yvdad0nykcjspivdb69fph";
+    feedsSha256.packages = "1nbf3v7swnkqwq684g8v20nv5jydsqf6z3p4kz6vxv14dxajs2r0";
+    feedsSha256.routing = "1n4j832hssvk9pqc53kmdyfnx18b84zf4z9ggslxdyvdv9zpdh6f";
+    feedsSha256.telephony = "160853183sx5xvar5nhkgxpj7hxdwckzp7jjiskf9vl6j75r1jm9";
   };
   "ramips"."rt288x" = {
     sha256 = "1q84b8dzd1ybazh6n412avp21hhjizvzcm5rqmmzzswdkshclvb7";
-    feedsSha256.base = "1qqm4v87w9wm53ga7jh2z1j69jsqq7phs43d8hm1rmn7pzwpx15y";
-    feedsSha256.packages = "1ksg689j02hsrqyxzxlhhd9k5dpkl08p3sk0fgjz7ikpafb0wh2w";
-    feedsSha256.routing = "162v2yla2wzqm2k4bq8ipljynsc7q7vvxkwdwsn16b4b1blhdnrg";
-    feedsSha256.telephony = "0zn9sawpb2i8zc2pxx1kjzxcabsxmql911yqgbvbq5ch2z3v5ba4";
+    feedsSha256.base = "1ibgc3sa482i91g3szsyvkjk8mm394yvdad0nykcjspivdb69fph";
+    feedsSha256.packages = "1nbf3v7swnkqwq684g8v20nv5jydsqf6z3p4kz6vxv14dxajs2r0";
+    feedsSha256.routing = "1n4j832hssvk9pqc53kmdyfnx18b84zf4z9ggslxdyvdv9zpdh6f";
+    feedsSha256.telephony = "160853183sx5xvar5nhkgxpj7hxdwckzp7jjiskf9vl6j75r1jm9";
   };
   "ramips"."rt305x" = {
     sha256 = "116c5f59zyinq3an103gkq9wj2lk6nxg13n90xd6h9b6fyb2jr7x";
-    feedsSha256.base = "1qqm4v87w9wm53ga7jh2z1j69jsqq7phs43d8hm1rmn7pzwpx15y";
-    feedsSha256.packages = "1ksg689j02hsrqyxzxlhhd9k5dpkl08p3sk0fgjz7ikpafb0wh2w";
-    feedsSha256.routing = "162v2yla2wzqm2k4bq8ipljynsc7q7vvxkwdwsn16b4b1blhdnrg";
-    feedsSha256.telephony = "0zn9sawpb2i8zc2pxx1kjzxcabsxmql911yqgbvbq5ch2z3v5ba4";
+    feedsSha256.base = "1ibgc3sa482i91g3szsyvkjk8mm394yvdad0nykcjspivdb69fph";
+    feedsSha256.packages = "1nbf3v7swnkqwq684g8v20nv5jydsqf6z3p4kz6vxv14dxajs2r0";
+    feedsSha256.routing = "1n4j832hssvk9pqc53kmdyfnx18b84zf4z9ggslxdyvdv9zpdh6f";
+    feedsSha256.telephony = "160853183sx5xvar5nhkgxpj7hxdwckzp7jjiskf9vl6j75r1jm9";
   };
   "ramips"."rt3883" = {
     sha256 = "0rxv4q10pr9qdqnnnp7zxh7qhgm6b6x44nnhs5jg4l000kxy7sx8";
-    feedsSha256.base = "0wq17bqpgjlssirq0kgspnddixr1lhsgwa4wik4fqn8pg795nmlq";
-    feedsSha256.packages = "1p5xdq5c47kvbz6fjj1f1k0m6k4hv648xmg46z5dhwhg25f203zl";
-    feedsSha256.routing = "064gfvq7dh0al9x1glakkn0cy9cw02hzf4zk9mw3my468kxjplv9";
-    feedsSha256.telephony = "1r5xi4msx9nmi84hmb16lsi5v5908lz1nxs8mmgrlsnvp8523phm";
+    feedsSha256.base = "0zh6sm38ainxy43ss31h6cy41vq4g3f8mfv3l2cmr9g7zz4yrrpj";
+    feedsSha256.packages = "1csx2hjy4j3jnck7nl4cyn6gk0aivfga72p266xn0mk6xl66spny";
+    feedsSha256.routing = "0kjxp4gyvcnb77k8nfav6h7q4ng6f54alp7209xb9nnk3nb7p0p1";
+    feedsSha256.telephony = "1jcd01885pjn72nm7agvarznq1f4z0496ddx9bn6dr9jf9i03bz7";
   };
   "sunxi"."cortexa8" = {
     sha256 = "0d9v64anbdrdcq7x82yakclpzcv2cjv6ny8wmv3j35zxz7aas3cs";
     feedsSha256.base = "0qx4kmnwnyqhlz5mb0mjayzlkzwq7k5cxvkr9zfjixphnim191q1";
-    feedsSha256.packages = "0k0sf9dahcjbj44xgxpmz0pr4h61lkdr2vx6hmyp9i0cw243wfqs";
-    feedsSha256.routing = "1hbb1axni8qmdcf1z3dxip5wzz33d5cksqfrmlyi3fjxvdqn736x";
-    feedsSha256.telephony = "0r81xz2l2yn2hgx46kwk86k188hbiahblb8wjwgcn93c10nvhxky";
+    feedsSha256.packages = "1lyr7knvpjrjj3m58ag8n90fnwv73hb7apwv32qp1cqh854bnnbr";
+    feedsSha256.routing = "1mjnnmn3d2nbn1w76wwi2qvy8bdx6yf4b6vlh49lmmbbb1a11ifk";
+    feedsSha256.telephony = "0dl07g6ixxmm4ghs9268cls1fjfyjfk7jqqvqmxn7ciw38b7k7xg";
   };
   "sunxi"."cortexa7" = {
     sha256 = "0x621w16lhagw7ksf4j4lfayjzyy15qcf2f7j894za7bh7pyqmns";
-    feedsSha256.base = "1flhi5sd2r5qnagv701zsy2jc7jplh9hkzmgf7naaryi2v3lgd0q";
-    feedsSha256.packages = "0y33jja7mnd29nbll9bhc1m45j8gvcqb0mdzgxzbw0v0g3rh5p4s";
-    feedsSha256.routing = "0li58w07afyzak307vxv0l64qc63bcazzzm9rd9yawji2ckakwi8";
-    feedsSha256.telephony = "0zv6d6575s7dajsvn4ypnl4cl8wl435zq0pk4iwalgc1kb2z8xvn";
+    feedsSha256.base = "1md09pb4mmkamm9g4js4gaqpikyv01zx3w2dnhr1q6mh80qvrnag";
+    feedsSha256.packages = "0yamr6hj3cgzzszaj33asfl184h6rgmzvgqk7qgh7fvki7zaqnna";
+    feedsSha256.routing = "11m7gmrs2rxkh3b14z60y29lfv811z29iifzfpvwp4i3fqg6j8pd";
+    feedsSha256.telephony = "009c9jbppapa5k49s7p6wbc6wjy0x2g3g3wd76rkzyiriid40jcl";
   };
   "sunxi"."cortexa53" = {
     sha256 = "1nb24167wh8m1qq9dw5wms8m4aq3pk6mshbr62bll4lvy8ic0m5j";
-    feedsSha256.base = "10hc6377d2k2qhcva9snqn25m3mkbvx1j94501id989v7pqpg7nm";
-    feedsSha256.packages = "0sjrnj65x2km1gwd2z3l7zsh1amcfwiflr790b5nrxh7ys7yzgy0";
-    feedsSha256.routing = "0xjw4mjk0pz7wc5ai8f67r348dsvpl08ymzwxvjy7sn2lq7bkqmh";
-    feedsSha256.telephony = "075wy2a05in6b5153p1bz5wnnzbr7gdjrpi7dsrznrs3zgr3zwq5";
+    feedsSha256.base = "1rj0xm9dn7hggz8qkcv9l92zc6yz4y8zw1b3xc6ia53vs49c9cx8";
+    feedsSha256.packages = "1dc2kyjcjv1dfk404yjsyv7w5cxghvvm3yh78nbps652r8hpkkgj";
+    feedsSha256.routing = "0y502fark7an3lnnprz91mvzfd854m3lahpb5knfc17j9369179h";
+    feedsSha256.telephony = "1bh1b6p8y2ipmfv01ck2wgij9375rvzaz24k09h86d92hpfqzlm5";
   };
   "tegra"."generic" = {
     sha256 = "1mjv972bi921m54d4mj5s7j552l82zn4gg1lk3rb55i4ah0c63v1";
     feedsSha256.base = "1fbyhbmmh9pxki3ghhw7j3is89niz7wqafl4djiyqs72lnqiqly6";
-    feedsSha256.packages = "0mbqrrb9am3ls6jfbckq30nab41xkvxpzgbdbvshw5phq1dh3y35";
-    feedsSha256.routing = "0cg50yfygh9d7dcrhrxn1lxcnl02jv3xzayn4xfa538yxa1zvlsh";
-    feedsSha256.telephony = "1gx1r1xskhxs157vs140v2ik7qsz8skqh5712d8arcd1wn9lfnrb";
+    feedsSha256.packages = "0dqlz0qkqpyf2pkngimp09zzkrn6lllpzb18gnrshg1mhlxi1ljs";
+    feedsSha256.routing = "0wajdfwvysbkcvj3s3ix5ad6c1nzzxjvx5mlbz66vwidjay9wbbm";
+    feedsSha256.telephony = "0js5valjgj3lz4bzshmgp7v9cq46iky680dmv43hwh9622yhqa59";
   };
   "x86"."generic" = {
     sha256 = "1i5gk90glh9hm81zi4c0q1n3vb22ksw0bda6ysvdsyasz99xsqy4";
@@ -283,9 +283,9 @@
   };
   "zynq"."generic" = {
     sha256 = "1709nsvq4chn3q6llghs0yf4r59yv3b143z6s4nqffffvx70ywhn";
-    feedsSha256.base = "1wilck4pdrh837fa9y01wx8jqvlv1sbdlaqj0a6km74x7xbm6sxj";
-    feedsSha256.packages = "1jdx24g9cbc99858c3ds0qpl8l5d9ilf8lxi7x3azmbm9wgxr53l";
-    feedsSha256.routing = "1m5ckhs1yikpkfhjjmy6q95zqyham5n94zdnvn040svbwngvsyha";
-    feedsSha256.telephony = "04aazhl5i1qbra44phxi82jbwk121yaq5idsv3hgxkmd2z34685q";
+    feedsSha256.base = "0nra855i1k6m73q2lihljmj23kbz8h72dxmwwrg75abjzqwylsr8";
+    feedsSha256.packages = "1zp9r2jbnfbk2hz4sj9ygiyav8a2a3xk7ilckdq2indizfgnaigm";
+    feedsSha256.routing = "0z03p9aw68f9pi7s3qgw32k3p99i6g5d5bmnwnqvwi1ap0274bf0";
+    feedsSha256.telephony = "01cd0amhjlqpnmw0a1pxadig89ghqggqkx5swn07pf0xxqvk4576";
   };
 }
