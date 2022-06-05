@@ -73,11 +73,15 @@ stdenv.mkDerivation {
       # Hack around broken check for gcc
       touch staging_dir/host/.prereq-build
     ''}
+    ${lib.optionalString (files != null)
+      # copy files to avoid making etc read-only
+      "cp -r --no-preserve=all ${files} files"
+    }
     make image SHELL=${runtimeShell} \
       PROFILE="${profile}" \
       PACKAGES="${lib.concatStringsSep " " packages}" \
       ${lib.optionalString (files != null)
-        ''FILES="${files}"''
+        ''FILES=./files''
       } \
       DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
       EXTRA_IMAGE_NAME="${extraImageName}"
