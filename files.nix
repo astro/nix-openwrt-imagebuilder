@@ -11,8 +11,9 @@
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? null
 }:
-with pkgs;
 let
+  inherit (pkgs) lib fetchurl;
+
   sanitizeFilename = fileName:
     builtins.replaceStrings [ "~" ] [ "-" ] (
       builtins.baseNameOf fileName
