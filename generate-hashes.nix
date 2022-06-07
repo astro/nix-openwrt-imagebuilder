@@ -1,52 +1,24 @@
-{ pkgs ? import <nixpkgs> {}
-, openwrt
-}:
-
+{ pkgs ? import <nixpkgs> {} }:
 with pkgs;
-
-let
-  release = "21.02.3";
-  
-  linuxTargets = builtins.attrNames (
-    lib.filterAttrs (name: type: type == "directory" && name != "generic") (
-      builtins.readDir (openwrt + "/target/linux")
-    )
-  );
-
-  linuxTargetDefs = builtins.foldl' (linuxTargetDefs: target:
-    linuxTargetDefs // {
-      "${target}" =
-        builtins.foldl' (targetDefs: line:
-          let
-            m = builtins.match "([[:upper:]]+)[[:space:]]*:=[[:space:]]*(.+)" line;
-          in
-            if builtins.isList m && builtins.length m == 2
-            then targetDefs // {
-              ${builtins.elemAt m 0} = builtins.elemAt m 1;
-            }
-            else targetDefs
-        ) {} (
-          lib.splitString "\n" (
-            builtins.replaceStrings [ "\\\n" ] [ "" ] (
-              builtins.readFile (openwrt + "/target/linux/${target}/Makefile")
-            )
-          )
-        );
-    }
-  ) {} linuxTargets;
-
-  defaultFeeds = [ "base" "packages" "routing" "telephony" ];
-in
-
 writeScriptBin "generate-hashes" ''
 #! ${runtimeShell}
 
 PATH=${lib.makeBinPath [ jq curl nix ]}:$PATH
 
+RELEASE=21.02.3
+FEEDS="base packages routing telephony"
+
+if [ $# -gt 0 ]; then
+  RELEASE=$1
+fi
+
+UPSTREAM_URL=https://downloads.openwrt.org
+RELEASE_URL=$UPSTREAM_URL/releases/$RELEASE
+
 hash() {
   TARGET=$1
   VARIANT=$2
-  BASEURL=https://downloads.openwrt.org/releases/${release}/targets/$TARGET/$VARIANT
+  BASEURL=$RELEASE_URL/targets/$TARGET/$VARIANT
   SUM=$(nix-prefetch-url --type sha256 $BASEURL/sha256sums 2>/dev/null)
   if [ -n "$SUM" ]; then
     echo "  \"$TARGET\".\"$VARIANT\" = {"
@@ -54,8 +26,8 @@ hash() {
     ARCH=$(curl -s $BASEURL/profiles.json | jq -r .arch_packages)
     [ $? -ne 0 ] && echo "failed to fetch or parse $BASEURL/profiles.json" > /dev/stderr
     if [ -n "$ARCH" ]; then
-      for FEED in ${lib.escapeShellArgs defaultFeeds}; do
-        PACKAGES=$(nix-prefetch-url --type sha256 https://downloads.openwrt.org/releases/${release}/packages/$ARCH/$FEED/Packages 2>/dev/null)
+      for FEED in $FEEDS; do
+        PACKAGES=$(nix-prefetch-url --type sha256 $RELEASE_URL/packages/$ARCH/$FEED/Packages 2>/dev/null)
         echo "    feedsSha256.$FEED = \"$PACKAGES\";"
       done
     fi
@@ -67,12 +39,9 @@ mkdir -p hashes
 
 (
   echo "{"
-  ${lib.concatMapStrings (target:
-    lib.concatMapStrings (variant: ''
-      hash ${target} ${variant}
-    '')
-      (lib.splitString " " (linuxTargetDefs.${target}.SUBTARGETS or "generic"))
-  ) linuxTargets}
+  curl -s $RELEASE_URL/targets/?json-targets | jq -r .[] | while IFS=/ read TARGET VARIANT; do
+    hash $TARGET $VARIANT
+  done
   echo "}"
-) > hashes/${release}.nix
+) > hashes/$RELEASE.nix
 ''

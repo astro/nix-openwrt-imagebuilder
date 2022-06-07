@@ -32,7 +32,6 @@
     # `nix run .#generate-hashes`
     packages.x86_64-linux.generate-hashes = import ./generate-hashes.nix {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      inherit openwrt;
     };
 
     packages.x86_64-linux.example-image = import ./example.nix {

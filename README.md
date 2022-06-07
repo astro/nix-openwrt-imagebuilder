@@ -101,12 +101,11 @@ in
 
 ## Refreshing hashes
 
-Checksums of the `sha256sums` files on downloads.openwrt.org are add
-to this repository for a few recent releases. For updating, modify
-`release` in `generate-hashes.nix`, then run:
+Checksums of the `sha256sums` files on downloads.openwrt.org are added
+to this repository for a few recent releases. To update them, run:
 
 ```bash
 nix-shell -p nixFlakes
-nix run .#generate-hashes
+nix run .#generate-hashes 21.02.3 # for example
 git add hashes/*.nix
 ```
