@@ -11,8 +11,9 @@
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? null
 }:
-with pkgs;
 let
+  inherit (pkgs) lib fetchurl;
+
   sanitizeFilename = fileName:
     builtins.replaceStrings [ "~" ] [ "-" ] (
       builtins.baseNameOf fileName
@@ -45,9 +46,9 @@ let
         }
       ) filesSha256;
 
-  fetchPackages = url: packagesContent:
+  parsePackages = url: packagesContent:
     let
-      parsedPackages = map (section:
+      parsedRaw = map (section:
         builtins.foldl' (data: line:
           let
             m = builtins.match "(.+): (.+)" line;
@@ -59,33 +60,34 @@ let
         ) {} (lib.splitString "\n" section)
       ) (lib.splitString "\n\n" packagesContent);
 
+      parseDepends = depStr:
+        map (dep: builtins.elemAt (lib.splitString " " dep) 0)
+          (lib.splitString ", " depStr);
     in
-      builtins.foldl' (variantFiles: parsed:
+    builtins.foldl'
+      (variantFiles: parsed:
         if parsed ? Filename && parsed ? SHA256sum
         then
           variantFiles // {
-            ${parsed.Filename} = fetchurl {
-              url = "${url}/${parsed.Filename}";
-              name = sanitizeFilename parsed.Filename;
-              sha256 = parsed.SHA256sum;
+            ${parsed.Package} = {
+              filename = parsed.Filename;
+              file = fetchurl {
+                url = "${url}/${parsed.Filename}";
+                sha256 = parsed.SHA256sum;
+                name = sanitizeFilename parsed.Filename;
+              };
+              depends = if parsed ? Depends then parseDepends parsed.Depends else [];
+              provides = if parsed ? Provides then parsed.Provides else null;
+              type = "real";
             };
           }
         else
           variantFiles
-      ) {} parsedPackages;
+      ) {} parsedRaw;
 
   baseUrl = "https://downloads.openwrt.org/releases/${release}";
 
   variantFiles = fetchSums "${baseUrl}/targets/${target}/${variant}" sha256;
-
-  variantPackages = runCommandNoCC "openwrt-${release}-${target}-${variant}-packages" {} ''
-    mkdir packages
-    ${lib.concatMapStrings (file:
-      lib.optionalString (lib.hasPrefix "packages/" file) ''
-        ln -s ${variantFiles.${file}} ${file}
-      '') (builtins.attrNames variantFiles)}
-    mv packages $out
-  '';
 
   feedsPackagesFile = builtins.mapAttrs (feed: sha256:
     fetchurl {
@@ -94,19 +96,92 @@ let
     }
   ) feedsSha256;
 
-  feedsFiles = builtins.mapAttrs (feed: packagesFile:
-    fetchPackages "${baseUrl}/packages/${arch}/${feed}" (builtins.readFile packagesFile)
+  packagesByFeed = builtins.mapAttrs (feed: packagesFile:
+    parsePackages "${baseUrl}/packages/${arch}/${feed}" (builtins.readFile packagesFile)
   ) feedsPackagesFile;
 
-  feedsPackages = builtins.mapAttrs (feed: files:
-    runCommandNoCC "openwrt-${release}-${arch}-${feed}-packages" {} ''
-      mkdir $out
-      ln -s ${feedsPackagesFile.${feed}} $out/Packages
-      ${lib.concatMapStrings (file: ''
-        ln -s ${files.${file}} $out/${file}
-      '') (builtins.attrNames files)}
-    ''
-  ) feedsFiles;
+  corePackages =
+    parsePackages
+      "${baseUrl}/targets/${target}/${variant}/packages"
+      (builtins.readFile variantFiles."packages/Packages");
+
+  realPackages =
+    (builtins.foldl' (a: b: a // b) { } (builtins.attrValues packagesByFeed))
+    // corePackages;
+
+  # for each package that 'provides' something, register that package as a
+  # dependency of the provided package. if there is no real package with that
+  # name, then a 'virtual' one is created.  Using this, when a real package
+  # depends on something provided by several real packages, all possible
+  # providers will be downloaded
+  addVirtual = packages:
+    builtins.foldl'
+      (packages: pn:
+        let
+          p = packages.${pn};
+        in
+        if p.provides != null
+        then
+          let
+            vp = if packages ? ${p.provides} then packages.${p.provides} else {
+              type = "virtual";
+              depends = [ ];
+            };
+          in
+          packages // {
+            ${p.provides} = vp // { depends = vp.depends ++ [ pn ]; };
+          }
+        else
+          packages
+      )
+      packages
+      (builtins.attrNames packages);
+
+  # packages which aren't available in feeds but are provided by imagebuilders
+  dummyPackages =
+    let
+      dummyPackage = { depends = [ ]; provides = null; type = "dummy"; };
+    in
+    {
+      libc = dummyPackage;
+      kernel = dummyPackage;
+    };
+
+  # all packages, including dummy and virtual
+  allPackages = addVirtual (realPackages // dummyPackages);
+
+  # remove package names starting with '-' from deps
+  #
+  # this should be used on the dependencies before expanding their
+  # requirements, and assumes that '-' deps come after the non-'-' version in
+  # the list
+  applyMinusDeps = deps:
+    builtins.foldl'
+      (deps: dep:
+        if lib.hasPrefix "-" dep
+        then
+          lib.remove (lib.removePrefix "-" dep) deps
+        else
+          deps ++ [ dep ]
+      ) [ ]
+      deps;
+
+  # given a package set and a list of package names to install (including names
+  # starting with - to be removed), find all possible required package names
+  expandDeps = packages:
+    let
+      addDep = current_deps: new_dep:
+        if builtins.hasAttr new_dep current_deps
+        then
+          current_deps
+        else
+          let
+            with_new_dep = current_deps // { ${new_dep} = true; };
+            deps = packages.${new_dep}.depends;
+          in
+          builtins.foldl' addDep with_new_dep deps;
+    in
+    deps: builtins.attrNames (builtins.foldl' addDep { } (applyMinusDeps deps));
 
   profiles =
     if variantFiles ? "profiles.json"
@@ -122,6 +197,8 @@ let
          else packagesArch;
 
 in {
-  inherit variantFiles variantPackages feedsFiles feedsPackages;
+  inherit allPackages;
+  inherit expandDeps;
+  inherit variantFiles;
   inherit profiles arch;
 }

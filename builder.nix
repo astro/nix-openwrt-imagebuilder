@@ -31,7 +31,13 @@ with pkgs;
 let
   inherit (import ./files.nix {
     inherit pkgs release target variant sha256 feedsSha256 packagesArch;
-  }) arch variantPackages variantFiles feedsPackages;
+  }) arch variantFiles profiles expandDeps allPackages;
+
+  requiredPackages = (
+    profiles.default_packages
+    ++ profiles.profiles.${profile}.device_packages
+    ++ packages);
+  allRequiredPackages = expandDeps allPackages requiredPackages;
 in
 
 stdenv.mkDerivation {
@@ -51,13 +57,17 @@ stdenv.mkDerivation {
   '';
 
   configurePhase = ''
-    cat >repositories.conf <<EOF
-    src imagebuilder file:${variantPackages}
-    ${lib.concatMapStrings (feed: ''
-      src openwrt_${feed} file:${feedsPackages.${feed}}
-    '') (builtins.attrNames feedsPackages)}
-    EOF
-    cat repositories.conf
+    ${lib.concatMapStrings (pname:
+      let
+        package = allPackages.${pname};
+      in
+        lib.optionalString
+          (package.type == "real")
+          "ln -s ${package.file} packages/${package.filename}\n"
+        )
+      allRequiredPackages}
+
+    echo "src imagebuilder file:packages" > repositories.conf
   '';
 
   nativeBuildInputs =
