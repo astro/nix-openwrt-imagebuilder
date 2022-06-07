@@ -1,12 +1,7 @@
 {
   description = "A very basic flake";
 
-  inputs.openwrt = {
-    url = "git+https://git.openwrt.org/openwrt/openwrt.git?tag=v21.02.3";
-    flake = false;
-  };
-
-  outputs = { self, nixpkgs, openwrt }@inputs: {
+  outputs = { self, nixpkgs }@inputs: {
 
     lib.build =
       { pkgs ? nixpkgs.legacyPackages.x86_64-linux
