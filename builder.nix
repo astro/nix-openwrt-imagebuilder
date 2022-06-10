@@ -34,9 +34,12 @@ let
   }) arch variantFiles profiles expandDeps allPackages;
 
   requiredPackages = (
-    profiles.default_packages
-    ++ profiles.profiles.${profile}.device_packages
-    ++ packages);
+    profiles.default_packages or []
+    ++
+    profiles.profiles.${profile}.device_packages or []
+    ++
+    packages
+  );
   allRequiredPackages = expandDeps allPackages requiredPackages;
 in
 
