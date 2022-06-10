@@ -31,14 +31,15 @@ with pkgs;
 let
   inherit (import ./files.nix {
     inherit pkgs release target variant sha256 feedsSha256 packagesArch;
-  }) arch variantFiles profiles expandDeps allPackages;
+  }) arch variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
 
   requiredPackages = (
-    profiles.default_packages or []
-    ++
-    profiles.profiles.${profile}.device_packages or []
-    ++
-    packages
+    profiles.default_packages or (
+      builtins.attrNames packagesByFeed.base
+      ++ builtins.attrNames corePackages
+    )
+    ++ profiles.profiles.${profile}.device_packages or []
+    ++ packages
   );
   allRequiredPackages = expandDeps allPackages requiredPackages;
 in
@@ -59,19 +60,23 @@ stdenv.mkDerivation {
     grep -r usr/bin/env
   '';
 
-  configurePhase = ''
-    ${lib.concatMapStrings (pname:
-      let
-        package = allPackages.${pname};
-      in
-        lib.optionalString
-          (package.type == "real")
-          "[ -e packages/${package.filename} ] || ln -s ${package.file} packages/${package.filename}\n"
-        )
-      allRequiredPackages}
+  configurePhase =
+    let
+      installPackages = writeScript "install-openwrt-packages" (
+        lib.concatMapStrings (pname:
+          let
+            package = allPackages.${pname};
+          in
+            lib.optionalString
+              (package.type == "real")
+              "[ -e packages/${package.filename} ] || ln -s ${package.file} packages/${package.filename}\n"
+        ) allRequiredPackages
+      );
+    in ''
+      ${installPackages}
 
-    echo "src imagebuilder file:packages" > repositories.conf
-  '';
+      echo "src imagebuilder file:packages" > repositories.conf
+    '';
 
   nativeBuildInputs =
     [

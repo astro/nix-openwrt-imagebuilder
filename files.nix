@@ -198,6 +198,7 @@ let
 
 in {
   inherit allPackages;
+  inherit corePackages packagesByFeed;
   inherit expandDeps;
   inherit variantFiles;
   inherit profiles arch;
