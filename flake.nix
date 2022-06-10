@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "Build OpenWRT images in Nix derivations";
 
   outputs = { self, nixpkgs }@inputs: {
 
