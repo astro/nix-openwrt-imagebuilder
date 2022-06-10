@@ -52,7 +52,7 @@ stdenv.mkDerivation {
 
   src = variantFiles."openwrt-imagebuilder-${release}-${target}-${variant}.${hostPlatform.uname.system}-${hostPlatform.uname.processor}.tar.xz";
 
-  patchPhase = ''
+  postPatch = ''
     patchShebangs scripts staging_dir/host/bin
     substituteInPlace rules.mk \
       --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}"
