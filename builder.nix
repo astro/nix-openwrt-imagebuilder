@@ -63,7 +63,7 @@ stdenv.mkDerivation {
       in
         lib.optionalString
           (package.type == "real")
-          "ln -s ${package.file} packages/${package.filename}\n"
+          "[ -e packages/${package.filename} ] || ln -s ${package.file} packages/${package.filename}\n"
         )
       allRequiredPackages}
 
