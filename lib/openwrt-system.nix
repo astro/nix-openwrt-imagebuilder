@@ -9,7 +9,7 @@ let
           inherit pkgs;
           profiles = import ../profiles.nix {
             inherit pkgs;
-            inherit (config.system) release;
+            inherit (config.build) release;
           };
         };
       })

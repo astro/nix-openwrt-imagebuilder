@@ -1,7 +1,12 @@
 { pkgs, ... }:
 
 {
-  system.profile = "avm_fritz7412";
+  build.profile = "avm_fritz7412";
+
+  system.settings = {
+    description = "nix-openwrt-imagebuilder example";
+    timezone = "CET-1CEST,M3.5.0,M10.5.0/3";
+  };
 
   packages.include = [ "tcpdump" "vxlan" "kmod-vxlan" ];
 

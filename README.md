@@ -34,7 +34,12 @@ let
       ({ pkgs, ... }: {
 
         # find target/variant for an old Fritzbox
-        system.profile = "avm_fritz7412";
+        build.profile = "avm_fritz7412";
+
+        system.settings = {
+          hostname = "testrouter";
+          description = "nix-openwrt-imagebuilder example";
+        };
 
         # add package to include in the image, ie. packages that you don't
         # want to install manually later
@@ -76,7 +81,12 @@ in sys.config.system.build.image
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           ({ pkgs, ... }: {
-            system.profile = "avm_fritz7412";
+            build.profile = "avm_fritz7412";
+
+            system.settings = {
+              hostname = "testrouter";
+              description = "nix-openwrt-imagebuilder example";
+            };
 
             # add package to include in the image, ie. packages that you don't
             # want to install manually later
