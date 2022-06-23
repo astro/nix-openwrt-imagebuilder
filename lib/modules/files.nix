@@ -4,7 +4,7 @@
   options = with lib; {
 
     files = mkOption {
-      type = types.path;
+      type = with types; nullOr path;
       default = null;
       example = literalExample ''
         pkgs.runCommandNoCC "image-files" { } '''

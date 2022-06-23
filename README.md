@@ -47,18 +47,12 @@ let
 
         services.disabled = [ "dnsmasq" ];
 
-        # include files in the images.
-        # to set UCI configuration, create a uci-defauts scripts as per
-        # official OpenWRT ImageBuilder recommendation.
-        files = pkgs.runCommandNoCC "image-files" { } ''
-          mkdir -p $out/etc/uci-defaults
-          cat > $out/etc/uci-defaults/99-custom <<EOF
-          uci -q batch << EOI
-          set system.@system[0].hostname='testap'
-          commit
-          EOI
-          EOF
-        '';
+        wireless.interfaces.ap0 = {
+          device = "radio0";
+          network = "lan";
+          mode = "ap";
+          ssid = "Test AP";
+        };
 
       })
     ];
@@ -94,18 +88,12 @@ in sys.config.system.build.image
 
             services.disabled = [ "dnsmasq" ];
 
-            # include files in the images.
-            # to set UCI configuration, create a uci-defauts scripts as per
-            # official OpenWRT ImageBuilder recommendation.
-            files = pkgs.runCommandNoCC "image-files" { } ''
-              mkdir -p $out/etc/uci-defaults
-              cat > $out/etc/uci-defaults/99-custom <<EOF
-              uci -q batch << EOI
-              set system.@system[0].hostname='testap'
-              commit
-              EOI
-              EOF
-            '';
+            wireless.interfaces.ap0 = {
+              device = "radio0";
+              network = "lan";
+              mode = "ap";
+              ssid = "Test AP";
+            };
 
           })
         ];

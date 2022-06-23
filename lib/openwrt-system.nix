@@ -20,6 +20,7 @@ let
       ./modules/services.nix
       ./modules/system.nix
       ./modules/uci.nix
+      ./modules/wireless.nix
     ] ++ modules;
   };
 in { inherit (result) config options; }
