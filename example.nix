@@ -5,6 +5,10 @@
 
   packages.include = [ "tcpdump" "vxlan" "kmod-vxlan" ];
 
+  dropbear.settings = {
+    PasswordAuth = false;
+  };
+
   files = pkgs.runCommandNoCC "image-files" { } ''
        mkdir -p $out/etc/uci-defaults
        cat > $out/etc/uci-defaults/99-custom <<EOF

@@ -1,7 +1,8 @@
 { pkgs ? import <nixpkgs> { }, modules }:
 
 let
-  result = pkgs.lib.evalModules {
+  lib' = pkgs.lib.extend (import ./uci.nix);
+  result = lib'.evalModules {
     modules = [
       ({ config, ... }: {
         config._module.args = {
@@ -12,11 +13,13 @@ let
           };
         };
       })
-      ./modules/system.nix
+      ./modules/build.nix
+      ./modules/dropbear.nix
       ./modules/files.nix
       ./modules/packages.nix
       ./modules/services.nix
-      ./modules/build.nix
+      ./modules/system.nix
+      ./modules/uci.nix
     ] ++ modules;
   };
 in { inherit (result) config options; }
