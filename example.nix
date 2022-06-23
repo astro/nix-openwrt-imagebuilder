@@ -3,7 +3,7 @@
 {
   system.profile = "avm_fritz7412";
 
-  packages = [ "tcpdump" "vxlan" "kmod-vxlan" ];
+  packages.include = [ "tcpdump" "vxlan" "kmod-vxlan" ];
 
   files = pkgs.runCommandNoCC "image-files" { } ''
        mkdir -p $out/etc/uci-defaults

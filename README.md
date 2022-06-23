@@ -38,7 +38,7 @@ let
 
         # add package to include in the image, ie. packages that you don't
         # want to install manually later
-        packages = [ "tcpdump" ];
+        packages.include = [ "tcpdump" ];
 
         services.disabled = [ "dnsmasq" ];
 
@@ -80,7 +80,7 @@ in sys.config.system.build.image
 
             # add package to include in the image, ie. packages that you don't
             # want to install manually later
-            packages = [ "tcpdump" ];
+            packages.include = [ "tcpdump" ];
 
             services.disabled = [ "dnsmasq" ];
 

@@ -4,7 +4,9 @@
   system.build.image = import ../../builder.nix {
     inherit pkgs;
     inherit (config.system) release target variant profile;
-    inherit (config) packages files;
+    inherit (config) files;
+    packages = config.packages.include
+      ++ map (x: "-${x}") config.packages.exclude;
     disabledServices = config.services.disabled;
   };
 }
