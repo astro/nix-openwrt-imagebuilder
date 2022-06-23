@@ -24,38 +24,43 @@ firmware.
 
 ```nix
 let
-  pkgs = import <nixpkgs> {};
-
-  # use fetchurl, Hydra inputs, or something else to refer to this project
   openwrt-imagebuilder = ../nix-openwrt-imagebuilder;
 
-  profiles = import (openwrt-imagebuilder + "/profiles.nix") { inherit pkgs; };
+  openwrtSystem = import (openwrt-imagebuilder + "/lib/openwrt-system.nix");
 
-  # example: find target/variant for an old Fritzbox
-  config = profiles.identifyProfile "avm_fritz7412" // {
-    # add package to include in the image, ie. packages that you don't
-    # want to install manually later
-    packages = [ "tcpdump" ];
+  sys = openwrtSystem {
+    pkgs = import <nixpkgs> { };
+    modules = [
+      ({ pkgs, ... }: {
 
-    disabledServices = [ "dnsmasq" ];
+        # find target/variant for an old Fritzbox
+        system.profile = "avm_fritz7412";
 
-    # include files in the images.
-    # to set UCI configuration, create a uci-defauts scripts as per
-    # official OpenWRT ImageBuilder recommendation.
-    files = pkgs.runCommandNoCC "image-files" {} ''
-      mkdir -p $out/etc/uci-defaults
-      cat > $out/etc/uci-defaults/99-custom <<EOF
-      uci -q batch << EOI
-      set system.@system[0].hostname='testap'
-      commit
-      EOI
-      EOF
-    '';
+        # add package to include in the image, ie. packages that you don't
+        # want to install manually later
+        packages = [ "tcpdump" ];
+
+        services.disabled = [ "dnsmasq" ];
+
+        # include files in the images.
+        # to set UCI configuration, create a uci-defauts scripts as per
+        # official OpenWRT ImageBuilder recommendation.
+        files = pkgs.runCommandNoCC "image-files" { } ''
+          mkdir -p $out/etc/uci-defaults
+          cat > $out/etc/uci-defaults/99-custom <<EOF
+          uci -q batch << EOI
+          set system.@system[0].hostname='testap'
+          commit
+          EOI
+          EOF
+        '';
+
+      })
+    ];
   };
 
-in
   # actually build the image
-  import (openwrt-imagebuilder + "/builder.nix") config
+in sys.config.system.build.image
 ```
 
 ## Usage with Nix Flakes
@@ -66,35 +71,36 @@ in
     openwrt-imagebuilder.url = "github:astro/nix-openwrt-imagebuilder";
   };
   outputs = { self, nixpkgs, openwrt-imagebuilder }: {
-    packages.x86_64-linux.my-router =
-      let
+    packages.x86_64-linux.my-router = let
+      sys = openwrt-imagebuilder.lib.openwrtSystem {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        modules = [
+          ({ pkgs, ... }: {
+            system.profile = "avm_fritz7412";
 
-        profiles = openwrt-imagebuilder.lib.profiles { inherit pkgs; };
+            # add package to include in the image, ie. packages that you don't
+            # want to install manually later
+            packages = [ "tcpdump" ];
 
-        config = profiles.identifyProfile "avm_fritz7412" // {
-          # add package to include in the image, ie. packages that you don't
-          # want to install manually later
-          packages = [ "tcpdump" ];
+            services.disabled = [ "dnsmasq" ];
 
-          disabledServices = [ "dnsmasq" ];
+            # include files in the images.
+            # to set UCI configuration, create a uci-defauts scripts as per
+            # official OpenWRT ImageBuilder recommendation.
+            files = pkgs.runCommandNoCC "image-files" { } ''
+              mkdir -p $out/etc/uci-defaults
+              cat > $out/etc/uci-defaults/99-custom <<EOF
+              uci -q batch << EOI
+              set system.@system[0].hostname='testap'
+              commit
+              EOI
+              EOF
+            '';
 
-          # include files in the images.
-          # to set UCI configuration, create a uci-defauts scripts as per
-          # official OpenWRT ImageBuilder recommendation.
-          files = pkgs.runCommandNoCC "image-files" {} ''
-            mkdir -p $out/etc/uci-defaults
-            cat > $out/etc/uci-defaults/99-custom <<EOF
-            uci -q batch << EOI
-            set system.@system[0].hostname='testap'
-            commit
-            EOI
-            EOF
-          '';
-        };
-
-      in
-        openwrt-imagebuilder.lib.build config;
+          })
+        ];
+      };
+    in sys.config.system.build.image;
   };
 }
 ```

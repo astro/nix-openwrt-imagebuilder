@@ -1,46 +1,39 @@
 {
   description = "Build OpenWRT images in Nix derivations";
 
-  outputs = { self, nixpkgs }@inputs: {
+  outputs = { self, nixpkgs }@inputs:
+    let pkgs' = nixpkgs.legacyPackages.x86_64-linux;
+    in {
 
-    lib.build =
-      { pkgs ? nixpkgs.legacyPackages.x86_64-linux
-      , ...
-      }@args:
-      import ./builder.nix (args // {
-        inherit pkgs;
-      });
+      lib = {
+        build = { pkgs ? pkgs', ... }@args:
+          import ./builder.nix (args // { inherit pkgs; });
 
-    lib.profiles =
-      { pkgs ? nixpkgs.legacyPackages.x86_64-linux
-      , release ? "21.02.3"
-      , ...
-      }@args:
-      import ./profiles.nix (args // {
-        inherit pkgs release;
-      });
+        profiles = { pkgs ? pkgs', release ? "21.02.3", ... }@args:
+          import ./profiles.nix (args // { inherit pkgs release; });
 
-    packages.x86_64-linux.profiles-list = import ./profiles-list.nix {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    };
-
-    # `nix run .#generate-hashes`
-    packages.x86_64-linux.generate-hashes = import ./generate-hashes.nix {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-    };
-
-    packages.x86_64-linux.example-image = import ./example.nix {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      profiles = self.lib.profiles {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        openwrtSystem = import ./lib/openwrt-system.nix;
       };
-      build = self.lib.build;
-    };
 
-    checks = self.packages;
+      packages.x86_64-linux.profiles-list = import ./profiles-list.nix {
+        pkgs = pkgs';
+      };
 
-    hydraJobs = {
-      example-image = nixpkgs.lib.hydraJob self.packages.x86_64-linux.example-image;
+      # `nix run .#generate-hashes`
+      packages.x86_64-linux.generate-hashes = import ./generate-hashes.nix {
+        pkgs = pkgs';
+      };
+
+      packages.x86_64-linux.example-image = self.lib.openwrtSystem {
+        pkgs = pkgs';
+        modules = [ ./example.nix ];
+      };
+
+      checks = self.packages;
+
+      hydraJobs = {
+        example-image =
+          nixpkgs.lib.hydraJob self.packages.x86_64-linux.example-image;
+      };
     };
-  };
 }
