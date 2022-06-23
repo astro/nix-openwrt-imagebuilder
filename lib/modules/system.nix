@@ -24,9 +24,9 @@ in {
 
   };
 
-  config.uci.batch = lib.toUciBatch {
-    config = "system";
+  config.uci.settings.system."" = {
     type = "system";
-  } cfg.settings;
+    inherit (cfg) settings;
+  };
 
 }

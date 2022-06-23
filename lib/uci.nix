@@ -2,17 +2,25 @@ final: prev:
 let lib = prev;
 in {
 
-  types = lib.types
-    // (with lib.types; { uciSection = attrsOf (oneOf [ bool int str ]); });
+  types = lib.types // (with lib.types; {
+    uciSection = let atom = oneOf [ bool int str ];
+    in attrsOf (either atom (listOf atom));
+  });
 
-  toUciBatch = with builtins;
-    let toAtom = v: if isBool v then (if v then "0" else "1") else (toString v);
-    in { config, type, section ? "@${type}[0]" }:
-    attrs:
+  toUciBatch = { config, type, section, settings }:
+    with builtins;
     let
-      cmds = [ "set ${config}.${section}=${type}" ]
-        ++ (lib.attrsets.mapAttrsToList (option: value:
-          "set ${config}.${section}.${option}='${toAtom value}'") attrs);
+      section' = if section == "" then "@${type}[0]" else section;
+      toAtom = v: if isBool v then (if v then "1" else "0") else (toString v);
+      toCmd = option: value:
+        if isList value then
+          map
+          (elem: "add_list '${config}.${section'}.${option}'='${toAtom elem}'")
+          value
+        else
+          "set '${config}.${section'}.${option}'='${toAtom value}'";
+      cmds = [ "set '${config}.${section'}'='${type}'" ]
+        ++ (lib.attrsets.mapAttrsToList toCmd settings);
 
-    in lib.strings.concatStringsSep "\n" cmds;
+    in lib.strings.concatStringsSep "\n" (lib.lists.flatten cmds);
 }

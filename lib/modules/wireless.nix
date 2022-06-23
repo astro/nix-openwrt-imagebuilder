@@ -36,16 +36,12 @@ in {
       };
     };
 
+    # TODO: assert that device and interfaces name are mutually unique.
   };
 
-  config.uci.batch = let
+  config.uci.settings.wireless = let
     toUci' = type:
-      (lib.attrsets.mapAttrsToList (section: settings:
-        lib.toUciBatch {
-          config = "wireless";
-          inherit section type;
-        } settings));
-  in lib.strings.concatStringsSep "\n"
-  ((toUci' "wifi-device" cfg.devices) ++ (toUci' "wifi-iface" cfg.interfaces));
+      lib.attrsets.mapAttrs (_: settings: { inherit type settings; });
+  in (toUci' "wifi-device" cfg.devices) // (toUci' "wifi-iface" cfg.interfaces);
 
 }

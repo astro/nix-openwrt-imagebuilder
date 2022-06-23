@@ -9,8 +9,8 @@ in {
         See <link xlink:href="https://openwrt.org/docs/guide-user/base-system/dropbear"/>'';
     };
 
-  config.uci.batch = lib.toUciBatch {
-    config = "dropbear";
+  config.uci.settings.dropbear."" = {
     type = "dropbear";
-  } cfg.settings;
+    inherit (cfg) settings;
+  };
 }
