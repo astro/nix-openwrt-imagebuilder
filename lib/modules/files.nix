@@ -1,8 +1,9 @@
 { lib, ... }:
 
 {
-  options.files = with lib;
-    mkOption {
+  options = with lib; {
+
+    files = mkOption {
       type = types.path;
       default = null;
       example = literalExample ''
@@ -18,4 +19,28 @@
       '';
       description = "Directory of files to included in images.";
     };
+
+    extraFiles = mkOption {
+      default = { };
+      description = ''
+        Set of files to build into the image.
+      '';
+      type = with types;
+        attrsOf (submodule {
+          options = {
+            source = mkOption {
+              default = null;
+              type = types.path;
+              description = "Path of the source file.";
+            };
+            text = mkOption {
+              default = null;
+              type = types.nullOr types.lines;
+              description = "Text of the file.";
+            };
+          };
+        });
+    };
+
+  };
 }

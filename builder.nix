@@ -20,8 +20,10 @@
 , packagesArch ? null
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
-# Include extra files
+# Directory of extra files to include
 , files ? null
+# Attrset of files to include
+, extraFiles ? { }
 # Which services in /etc/init.d/ should be disabled
 , disabledServices ? []
 # Add to output name
@@ -95,10 +97,23 @@ stdenv.mkDerivation {
       # copy files to avoid making etc read-only
       "cp -r --no-preserve=all ${files} files"
     }
+    ${lib.strings.concatStringsSep "\n" (
+      lib.attrsets.mapAttrsToList (
+        path: { source, text }: ''
+          mkdir -p $(dirname ./files/${path})
+          ${
+          if text != null then ''
+          cat << NIX_EOF > ./files/${path}
+          ${text}
+          NIX_EOF
+        '' else "cat < ${source} > ./files/${path}"}
+        ''
+      ) extraFiles)
+    }
     make image SHELL=${runtimeShell} \
       PROFILE="${profile}" \
       PACKAGES="${lib.concatStringsSep " " packages}" \
-      ${lib.optionalString (files != null)
+      ${lib.optionalString (files != null || extraFiles != { })
         ''FILES=./files''
       } \
       DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
