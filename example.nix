@@ -13,6 +13,13 @@
 
   dropbear.settings = { PasswordAuth = false; };
 
+  network.interface.loopback = {
+    device = "lo";
+    proto = "static";
+    ipaddr = "127.0.0.1";
+    netmask = "255.0.0.0";
+  };
+
   wireless.interfaces.ap0 = {
     device = "radio0";
     network = "lan";

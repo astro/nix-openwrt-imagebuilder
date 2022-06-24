@@ -16,6 +16,7 @@ let
       ./modules/build.nix
       ./modules/dropbear.nix
       ./modules/files.nix
+      ./modules/network.nix
       ./modules/packages.nix
       ./modules/services.nix
       ./modules/system.nix
