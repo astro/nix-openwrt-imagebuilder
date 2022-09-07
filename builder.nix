@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {}
 # OpenWRT release
-, release ? "21.02.3"
+, release ? "22.03.0"
 # OpenWRT target
 , target
 # Hardware model
