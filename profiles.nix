@@ -18,7 +18,7 @@ in rec {
           }).profiles
         ) variants
       )
-    ) hashes;
+    ) hashes.targets;
 
   # filters hardware profiles from all boards.json files
   identifyProfiles = profile:

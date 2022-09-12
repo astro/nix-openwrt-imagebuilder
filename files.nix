@@ -89,7 +89,7 @@ let
 
   variantFiles = fetchSums "${baseUrl}/targets/${target}/${variant}" sha256;
 
-  feedsPackagesFile = builtins.mapAttrs (feed: sha256:
+  feedsPackagesFile = builtins.mapAttrs (feed: { sha256 }:
     fetchurl {
       url = "${baseUrl}/packages/${arch}/${feed}/Packages";
       inherit sha256;

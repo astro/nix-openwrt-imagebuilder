@@ -10,14 +10,17 @@
 , sha256 ?
   (
     import ./hashes/${release}.nix
-  ).${target}.${variant}.sha256
+  ).targets.${target}.${variant}.sha256
+# Manually specify packages' arch for OpenWRT<19 releases without profiles.json
+, packagesArch ?
+  (
+    import ./hashes/${release}.nix
+  ).targets.${target}.${variant}.packagesArch
 # Checksum of a feed's `Packages` file
 , feedsSha256 ?
   (
     import ./hashes/${release}.nix
-  ).${target}.${variant}.feedsSha256
-# Manually specify packages' arch for OpenWRT<19 releases without profiles.json
-, packagesArch ? null
+  ).packages.${packagesArch}
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
 # Include extra files
