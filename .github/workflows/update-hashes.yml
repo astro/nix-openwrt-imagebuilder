@@ -35,6 +35,6 @@ jobs:
           committer: ${{ env.GIT_COMMITTER_NAME }} ${{ env.GIT_COMMITTER_EMAIL }}
           author: ${{ env.GIT_AUTHOR_NAME }} ${{ env.GIT_AUTHOR_EMAIL }}
           title: "Update OpenWrt download hashes"
-          token: ${{ inputs.token }}
+          token: ${{ secrets.PERSONAL_TOKEN }}
           labels: update
           body: ${{ steps.pr_body.outputs.contents }}
