@@ -1,0 +1,40 @@
+name: update-hashes
+on:
+  workflow_dispatch: # allows manual triggering
+  schedule:
+    - cron: '0 12 * * *' # runs daily at 12:00
+
+jobs:
+  lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install Nix
+        uses: cachix/install-nix-action@v17
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - name: Set environment variables
+        shell: bash
+        run: |
+          echo "GIT_AUTHOR_NAME=github-actions[bot]" >> $GITHUB_ENV
+          echo "GIT_AUTHOR_EMAIL=<github-actions[bot]@users.noreply.github.com>" >> $GITHUB_ENV
+          echo "GIT_COMMITTER_NAME=github-actions[bot]" >> $GITHUB_ENV
+          echo "GIT_COMMITTER_EMAIL=<github-actions[bot]@users.noreply.github.com>" >> $GITHUB_ENV
+      - name: Update all hashes
+        shell: bash
+        run: |
+          nix run .#generate-all-hashes
+      - name: Create PR
+        id: create-pr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: ${{ inputs.branch }}
+          delete-branch: true
+          committer: ${{ env.GIT_COMMITTER_NAME }} ${{ env.GIT_COMMITTER_EMAIL }}
+          author: ${{ env.GIT_AUTHOR_NAME }} ${{ env.GIT_AUTHOR_EMAIL }}
+          title: "Update OpenWrt download hashes"
+          token: ${{ inputs.token }}
+          labels: [ update ]
+          body: ${{ steps.pr_body.outputs.contents }}
