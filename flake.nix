@@ -29,6 +29,11 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     };
 
+    packages.x86_64-linux.generate-all-hashes = import ./generate-all-hashes.nix {
+      inherit self;
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    };
+
     packages.x86_64-linux.example-image = import ./example.nix {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
       profiles = self.lib.profiles {
