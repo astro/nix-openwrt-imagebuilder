@@ -38,3 +38,5 @@ jobs:
           title: "Update OpenWrt download hashes"
           token: ${{ secrets.GITHUB_TOKEN }}
           labels: update
+          commit-message: |
+            Regular update of OpenWrt release hashes
