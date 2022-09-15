@@ -40,3 +40,5 @@ jobs:
           labels: update
           commit-message: |
             Regular update of OpenWrt release hashes
+
+            https://github.com/astro/nix-openwrt-imagebuilder/actions/workflows/update-hashes.yml
