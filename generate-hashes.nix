@@ -50,4 +50,9 @@ mkdir -p hashes
   done
   echo "}"
 ) > hashes/$RELEASE.nix
+
+if [ $(stat -c %s hashes/$RELEASE.nix) -le 10 ] ; then
+  # Too small, no entries, discard.
+  rm -v hashes/$RELEASE.nix
+fi
 ''
