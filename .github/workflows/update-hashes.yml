@@ -2,7 +2,7 @@ name: Update hashes
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '0 12 * * *' # runs daily at 12:00
+    - cron: '15 2 * * *' # runs daily at 2:15
 
 jobs:
   update-hashes:
