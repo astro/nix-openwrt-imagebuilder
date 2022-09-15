@@ -7,8 +7,6 @@ writeScriptBin "generate-all-hashes" ''
 
   PATH=${lib.makeBinPath [ self.packages.${system}.generate-hashes git ]}:$PATH
 
-  git rm hashes/*.nix
-
   RELEASES=$(curl -s https://downloads.openwrt.org |
     grep -oP "OpenWrt [1-9][0-9\.\-a-zA-Z]+" |
     sed -e 's/OpenWrt //'
@@ -17,7 +15,4 @@ writeScriptBin "generate-all-hashes" ''
     echo "# Fetching hashes for OpenWrt $RELEASE"
     generate-hashes $RELEASE
   done
-
-  git add hashes/*.nix
-  git commit -m "hashes: update"
 ''

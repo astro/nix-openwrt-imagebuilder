@@ -28,7 +28,10 @@ jobs:
       - name: Update all hashes
         shell: bash
         run: |
+          git rm hashes/*.nix
           nix run .#generate-all-hashes
+          git add hashes/*.nix
+          git commit -m "hashes: update"
       - name: Create PR
         id: create-pr
         uses: peter-evans/create-pull-request@v3
