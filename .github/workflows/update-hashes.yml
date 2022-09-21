@@ -2,7 +2,7 @@ name: Update hashes
 on:
   workflow_dispatch: # allows manual triggering
   schedule:
-    - cron: '15 2 * * *' # runs daily at 2:15
+    - cron: '02 19 * * *' # runs daily at 19:02
 
 jobs:
   update-hashes:
@@ -32,16 +32,8 @@ jobs:
           nix run .#generate-all-hashes
           git add hashes/*.nix
           git commit -m "hashes: update"
-      - name: Create PR
-        id: create-pr
-        uses: peter-evans/create-pull-request@v3
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          branch: update-hashes
-          delete-branch: true
-          title: "Update OpenWrt download hashes"
-          token: ${{ secrets.GITHUB_TOKEN }}
-          labels: update
-          commit-message: |
-            Regular update of OpenWrt release hashes
-
-            https://github.com/astro/nix-openwrt-imagebuilder/actions/workflows/update-hashes.yml
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
