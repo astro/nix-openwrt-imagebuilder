@@ -16,9 +16,7 @@ included in every OpenWRT release. They are only available for
 x86_64-linux hosts.
 
 The ImageBuilder can generate new *sysupgrade* images with a
-customized set of packages and included files. **Caveat:** It cannot
-build *factory* images for a first-time installation on the vendor
-firmware.
+customized set of packages and included files.
 
 ## Usage with vanilla Nix
 
