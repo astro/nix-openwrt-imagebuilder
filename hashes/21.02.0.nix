@@ -144,10 +144,10 @@
   packages."i386_pentium4"."telephony".sha256 = "0fcrngkdbqx81pa7n338wclbb7avz93xdl9qr0pwvx4kld2gjxsf";
   targets."x86"."legacy".sha256 = "1cwavi7jc4v6hiwp196z0rg21xq67s2fahjr2na0jq0wnwiphh6z";
   targets."x86"."legacy".packagesArch = "i386_pentium-mmx";
-  packages."i386_pentium-mmx"."base".sha256 = "0zrrcz2qvwhs332lnyrwgz3jb8dgnq5bys82ajp90xwh42drliiz";
-  packages."i386_pentium-mmx"."packages".sha256 = "1v6fn987qxnhryp97rv8l2aar0jjnxi9nddj3xm7n72i3w72g2mg";
-  packages."i386_pentium-mmx"."routing".sha256 = "1l5cfgi4f8p7qxllc0aq900j51flrqar5bc7d74q1dvfkyszr5w9";
-  packages."i386_pentium-mmx"."telephony".sha256 = "0h9i3rcz21q32cvinxfjqrzbhj8r8nn12gifg0r8cjkxy28d8974";
+  packages."i386_pentium-mmx"."base".sha256 = "0dnszlxsjsadb22xq49kf720r6y0mnhlyjh1g92rzsyhb85qrixk";
+  packages."i386_pentium-mmx"."packages".sha256 = "1jmhmpkn5n5jbjb8qi14m6wz654p4qnh8vwsmvc3fdy70s6xy2m2";
+  packages."i386_pentium-mmx"."routing".sha256 = "0z2kc4d4ki7c7ds8amb79c5y32hxk5gl1d9rdplr3zjnirjwq9qa";
+  packages."i386_pentium-mmx"."telephony".sha256 = "0w7zkg8j4qr6xcsn8j94x7ifn7awk6mqh9hwv70xb22zxpfazkc4";
   targets."x86"."geode".sha256 = "0yrjj54cxxlx6is8bh3mj1qs6lk7s2nwqdfrazfbm4w0jy1hs4bg";
   targets."x86"."geode".packagesArch = "i386_pentium-mmx";
   targets."x86"."64".sha256 = "08nl9r2aqgbh89wfixdhin5wna4bcs1ra1n1q2yj8b0ifhk3205m";
