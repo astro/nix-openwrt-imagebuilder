@@ -40,7 +40,7 @@ let
     # include files in the images.
     # to set UCI configuration, create a uci-defauts scripts as per
     # official OpenWRT ImageBuilder recommendation.
-    files = pkgs.runCommandNoCC "image-files" {} ''
+    files = pkgs.runCommand "image-files" {} ''
       mkdir -p $out/etc/uci-defaults
       cat > $out/etc/uci-defaults/99-custom <<EOF
       uci -q batch << EOI
@@ -80,7 +80,7 @@ in
           # include files in the images.
           # to set UCI configuration, create a uci-defauts scripts as per
           # official OpenWRT ImageBuilder recommendation.
-          files = pkgs.runCommandNoCC "image-files" {} ''
+          files = pkgs.runCommand "image-files" {} ''
             mkdir -p $out/etc/uci-defaults
             cat > $out/etc/uci-defaults/99-custom <<EOF
             uci -q batch << EOI

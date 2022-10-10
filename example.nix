@@ -10,7 +10,7 @@ build (
       "tcpdump"
       "vxlan" "kmod-vxlan"
     ];
-    files = pkgs.runCommandNoCC "image-files" {} ''
+    files = pkgs.runCommand "image-files" {} ''
       mkdir -p $out/etc/uci-defaults
       cat > $out/etc/uci-defaults/99-custom <<EOF
       uci -q batch << EOI

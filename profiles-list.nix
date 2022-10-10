@@ -29,7 +29,7 @@ let
       ) (builtins.attrNames allProfiles)}
     '';
 in
-runCommandNoCC "openwrt-profiles" {} ''
+runCommand "openwrt-profiles" {} ''
   mkdir $out
   ${lib.concatMapStrings (release: ''
     ln -s ${list release} $out/${release}.md

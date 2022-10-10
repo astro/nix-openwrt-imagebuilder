@@ -13,7 +13,7 @@ build {
     "-kmod-pppoa"
     "collectd" "collectd-mod-iwinfo" "collectd-mod-ping"
   ];
-  files = pkgs.runCommandNoCC "image-files" {} ''
+  files = pkgs.runCommand "image-files" {} ''
     mkdir -p $out/etc/uci-defaults
     cat > $out/etc/uci-defaults/99-custom <<EOF
     uci -q batch << EOI
