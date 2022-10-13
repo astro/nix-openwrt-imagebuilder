@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {}
 # OpenWRT release
-, release ? "22.03.0"
+, release ? import ./latest-release.nix
 }:
 with pkgs;
 let

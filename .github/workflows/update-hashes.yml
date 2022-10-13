@@ -32,6 +32,12 @@ jobs:
           nix run .#generate-all-hashes
           git add hashes/*.nix
           git commit -m "hashes: update"
+      - name: Update latest release
+        shell: bash
+        run: |
+          nix eval -f generate-latest-release.nix > latest-release.nix
+          git add latest-release.nix
+          git commit -m "latest-release: update"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

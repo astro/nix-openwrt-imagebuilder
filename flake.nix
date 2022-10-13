@@ -13,7 +13,7 @@
 
     lib.profiles =
       { pkgs ? nixpkgs.legacyPackages.x86_64-linux
-      , release ? "22.03.0"
+      , release ? import ./latest-release.nix
       , ...
       }@args:
       import ./profiles.nix (args // {
