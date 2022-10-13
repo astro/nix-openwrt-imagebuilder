@@ -12,7 +12,7 @@ jobs:
       - name: example.nix
         run: nix-build example.nix
 
-  example-19.07:
+  example-19_07:
     name: Build example-19.07.nix
     runs-on: ubuntu-latest
     steps:
