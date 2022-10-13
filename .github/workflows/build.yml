@@ -1,0 +1,22 @@
+on: [push]
+
+name: Build
+
+jobs:
+  example:
+    name: Build example.nix
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v17
+      - name: example.nix
+        run: nix-build example.nix
+
+  example-19.07:
+    name: Build example-19.07.nix
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cachix/install-nix-action@v17
+      - name: example-19.07.nix
+        run: nix-build example-19.07.nix
