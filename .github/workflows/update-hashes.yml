@@ -37,7 +37,7 @@ jobs:
         run: |
           nix eval -f generate-latest-release.nix > latest-release.nix
           git add latest-release.nix
-          git commit -m "latest-release: update"
+          git commit -m "latest-release: update" || true
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
