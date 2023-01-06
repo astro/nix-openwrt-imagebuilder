@@ -85,24 +85,24 @@ let
           variantFiles
       ) {} parsedRaw;
 
-  baseUrl = "https://downloads.openwrt.org/releases/${release}";
-
-  variantFiles = fetchSums "${baseUrl}/targets/${target}/${variant}" sha256;
+  baseUrl = "https://downloads.openwrt.org";
+  releaseUrl = if release == "snapshot" then "${baseUrl}/snapshots" else "${baseUrl}/releases/${release}";
+  variantFiles = fetchSums "${releaseUrl}/targets/${target}/${variant}" sha256;
 
   feedsPackagesFile = builtins.mapAttrs (feed: { sha256 }:
     fetchurl {
-      url = "${baseUrl}/packages/${arch}/${feed}/Packages";
+      url = "${releaseUrl}/packages/${arch}/${feed}/Packages";
       inherit sha256;
     }
   ) feedsSha256;
 
   packagesByFeed = builtins.mapAttrs (feed: packagesFile:
-    parsePackages "${baseUrl}/packages/${arch}/${feed}" (builtins.readFile packagesFile)
+    parsePackages "${releaseUrl}/packages/${arch}/${feed}" (builtins.readFile packagesFile)
   ) feedsPackagesFile;
 
   corePackages =
     parsePackages
-      "${baseUrl}/targets/${target}/${variant}/packages"
+      "${releaseUrl}/targets/${target}/${variant}/packages"
       (builtins.readFile variantFiles."packages/Packages");
 
   realPackages =
