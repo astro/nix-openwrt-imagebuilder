@@ -15,6 +15,10 @@ fi
 UPSTREAM_URL=https://downloads.openwrt.org
 RELEASE_URL=$UPSTREAM_URL/releases/$RELEASE
 
+if [ $RELEASE == "snapshot" ]; then 
+  RELEASE_URL=$UPSTREAM_URL/snapshots;
+fi
+
 declare -A arches_fetched
 
 hash() {

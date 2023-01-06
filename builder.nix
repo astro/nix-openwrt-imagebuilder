@@ -45,6 +45,7 @@ let
     ++ packages
   );
   allRequiredPackages = expandDeps allPackages requiredPackages;
+  imageBuilderPrefix  = "openwrt-imagebuilder-${if release == "snapshot" then "" else "${release}-"}";
 in
 
 stdenv.mkDerivation {
@@ -54,7 +55,7 @@ stdenv.mkDerivation {
   lib.optional (extraImageName != null) extraImageName ++
   [ target variant profile ]);
 
-  src = variantFiles."openwrt-imagebuilder-${release}-${target}-${variant}.${hostPlatform.uname.system}-${hostPlatform.uname.processor}.tar.xz";
+  src = variantFiles."${imageBuilderPrefix}${target}-${variant}.${hostPlatform.uname.system}-${hostPlatform.uname.processor}.tar.xz";
 
   postPatch = ''
     patchShebangs scripts staging_dir/host/bin
