@@ -1,7 +1,9 @@
 {
   description = "Build OpenWRT images in Nix derivations";
 
-  outputs = { self, nixpkgs }@inputs: {
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+  outputs = { self, nixpkgs }: {
 
     lib.build =
       { pkgs ? nixpkgs.legacyPackages.x86_64-linux
