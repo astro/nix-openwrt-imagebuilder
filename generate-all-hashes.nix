@@ -11,7 +11,7 @@ writeScriptBin "generate-all-hashes" ''
     grep -oP "OpenWrt [1-9][0-9\.\-a-zA-Z]+" |
     sed -e 's/OpenWrt //'
   )
-  for RELEASE in $RELEASES ; do
+  for RELEASE in $RELEASES snapshot ; do
     echo "# Fetching hashes for OpenWrt $RELEASE"
     generate-hashes $RELEASE
   done
