@@ -1,10 +1,10 @@
 {
   targets."arc770"."generic".sha256 = "1gysy0s8bqh1dgbbn88fbwplcr006m4g775m4iwi4nwk9mw2wq9j";
   targets."arc770"."generic".packagesArch = "arc_arc700";
-  packages."arc_arc700"."base".sha256 = "0yc3pi2i45c3imsyy3hf7d5qm59b5b9lrdwwggq57cmg6zga00rn";
-  packages."arc_arc700"."packages".sha256 = "0p9jhmvc71vjg9l6413nzxkqd5hj3cdlq0jqdzsyi3yiakxhss6l";
-  packages."arc_arc700"."routing".sha256 = "1nihgj9q3jgwkm6w5mfqpmk685yr7mx8pqy6x8bmwnqqpld5i4h3";
-  packages."arc_arc700"."telephony".sha256 = "08241g54ala26xk45pqwjb5p05y6vq5p2ffi8q6as6mswrgl2sr5";
+  packages."arc_arc700"."base".sha256 = "1dbyynspvws1j65ghz7zhaz7w1140y1m1s3gs69145lfrbk8zh27";
+  packages."arc_arc700"."packages".sha256 = "0y2xxp60szsdf7hgf68slmah55lix8n84z1mp3qsnq8cc9vszp7d";
+  packages."arc_arc700"."routing".sha256 = "1rc8h07kaxkh0fdkrgpikc9wn04wzr0l33p8nh2sw2zhgib7dqpg";
+  packages."arc_arc700"."telephony".sha256 = "0n7anbcpdawl1imb95w9514n2i9sacqcljnpjp4v5hyil6328mqg";
   targets."imx6"."generic".sha256 = "1qr7hx6zr9360jpr04s9900rqymk7bw8d804qlv8b042qg84xgdg";
   targets."imx6"."generic".packagesArch = "arm_cortex-a9_neon";
   packages."arm_cortex-a9_neon"."base".sha256 = "176wys4rcg1cjj6z4w6h0x9nq37ldldc8aqf3v7a4jsxaianbsq4";
@@ -50,10 +50,10 @@
   packages."aarch64_cortex-a72"."telephony".sha256 = "0mg7f7nnjhrkqx54lfvaxdbd1n784chpcblwdb029vz2gwhgbf9j";
   targets."bcm27xx"."bcm2708".sha256 = "0szsb72ggf88sfhgjmrkp5wb40ylmgqh02axv68dpmiwsaz2rzz2";
   targets."bcm27xx"."bcm2708".packagesArch = "arm_arm1176jzf-s_vfp";
-  packages."arm_arm1176jzf-s_vfp"."base".sha256 = "0mhrbvjyya07yhhl25sivq4y5as8h82q7pfpdpsimpr4mvr5c4lx";
-  packages."arm_arm1176jzf-s_vfp"."packages".sha256 = "08ch7ymyxqnpbj7kfijzifi2r8v0dcfa62zdwbfmvnlsyqza40sw";
-  packages."arm_arm1176jzf-s_vfp"."routing".sha256 = "1qaf5hp6fxvxx4y5a2gf3gyxg4z0f3frlvf1bdy3f8m27sshir37";
-  packages."arm_arm1176jzf-s_vfp"."telephony".sha256 = "0l2whr5ldy7hia598jk69sfpl9vbbny5illh18mi1l0pgqrrd0i6";
+  packages."arm_arm1176jzf-s_vfp"."base".sha256 = "1abimgq898g1aizrnlanwcgkz1j8gl2hybk4p2c79c46kvpjvml5";
+  packages."arm_arm1176jzf-s_vfp"."packages".sha256 = "1snq5gx9d34rrzih0mj3j00bp4pqh9cfa4sxqvrv52qxwvgck69r";
+  packages."arm_arm1176jzf-s_vfp"."routing".sha256 = "1b7p5qsxm60zbdh1qmfi0qk97wv2qm9nmxy4w0f6ip583ig95jzr";
+  packages."arm_arm1176jzf-s_vfp"."telephony".sha256 = "0sdr7gz4r28b4xiwwxci104ncbvd3mab05m4yb7zkyc8yh8761cz";
   targets."bcm27xx"."bcm2709".sha256 = "0kpry9bh43522smljq387r9y6rajzjm8dcizvx3p5nr8j0mli9r4";
   targets."bcm27xx"."bcm2709".packagesArch = "arm_cortex-a7_neon-vfpv4";
   packages."arm_cortex-a7_neon-vfpv4"."base".sha256 = "12zz1xiq1r42f1pyhzkwvbkawspmiy7gifm0chp9gqzqddxvdlic";
@@ -124,10 +124,10 @@
   packages."arm_cortex-a15_neon-vfpv4"."telephony".sha256 = "17n38g2q5naqr93nb5pwgr9v4wdpz4zicynyzjpb6wjiskxxpzf1";
   targets."sunxi"."cortexa8".sha256 = "0ibw60gln8wsggz3schjzl0gw0m4vmrck50nh24qlgkra1nnl7ks";
   targets."sunxi"."cortexa8".packagesArch = "arm_cortex-a8_vfpv3";
-  packages."arm_cortex-a8_vfpv3"."base".sha256 = "1695yzrp0ig2h909m7pyhib8ymk5j87s23iphg71ackwavxyl9wv";
-  packages."arm_cortex-a8_vfpv3"."packages".sha256 = "0mhfnsagbfgjnasmq246rvms5fl9akkgrjdxcrc5ywz1g7ad8y7b";
-  packages."arm_cortex-a8_vfpv3"."routing".sha256 = "1cbq5b01qj94az1nys7h4b7yngbjp6mnwjlc8jsbnazk4axfnhns";
-  packages."arm_cortex-a8_vfpv3"."telephony".sha256 = "0wlzpkg520an5zaqdddqn91g83zvyljaxmhjgpx2s6f45fqgz4zs";
+  packages."arm_cortex-a8_vfpv3"."base".sha256 = "0s96ir3psh4x5sk07b4y5whcbxk5ry461yahcws9lcn137rs434h";
+  packages."arm_cortex-a8_vfpv3"."packages".sha256 = "1g9380qvn51acz9znpiy9bxbmfahd4hdsm5n7i54q8nc1fs4nr00";
+  packages."arm_cortex-a8_vfpv3"."routing".sha256 = "1wcrkrma024ypjdl1f945nf50psz36bqh0pwh0v0dq6xmk6hcg4g";
+  packages."arm_cortex-a8_vfpv3"."telephony".sha256 = "0iqinsf9vibf7pc4gljwk6xw4g2m8n2y387c8pcb7dyd9wxx08za";
   targets."sunxi"."cortexa53".sha256 = "1mcx8wgpcxmpxjjk8v6i5lqk7bj4bdjyj8six6jfnrf047g1w5ia";
   targets."sunxi"."cortexa53".packagesArch = "aarch64_cortex-a53";
   targets."sunxi"."cortexa7".sha256 = "0kyd0qxijgxnkqyz81mbx1g0a5q5g2wk83lxrz69jvpqgfdlhhwd";
