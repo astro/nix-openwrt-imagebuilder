@@ -128,10 +128,10 @@
   targets."sunxi"."cortexa7".packagesArch = "arm_cortex-a7_neon-vfpv4";
   targets."mpc85xx"."p1010".sha256 = "0127xllb995rvy39636amp8jxqvv9a7yypczjpbr9v5ai0xbz202";
   targets."mpc85xx"."p1010".packagesArch = "powerpc_8540";
-  packages."powerpc_8540"."base".sha256 = "075yzkgjp22ypddz11dsv4zfn81cj0a4nw6cqqa5a2plz2ijbby2";
-  packages."powerpc_8540"."packages".sha256 = "1lr10gigff3pd8hidhbzl9s6nlg0k621sb39s01p735gvjlcxbc5";
-  packages."powerpc_8540"."routing".sha256 = "0r657qaym9qcj26ixc1rgl4ardlp68w7ir55r72ry7f02wsv3z14";
-  packages."powerpc_8540"."telephony".sha256 = "1116r45gsaysqxcrrg2gsszzllmic6cdqqvmhyin79sfxkinwzhv";
+  packages."powerpc_8540"."base".sha256 = "03fbk55rpjxa0bs3lk3ls55s8d2a63h8k0z17g3arq9w3gjphchv";
+  packages."powerpc_8540"."packages".sha256 = "01rwk8x14vm7sdivp96ljw31j4yliy6p2sx07ys49w0rm92x15i6";
+  packages."powerpc_8540"."routing".sha256 = "0w6q34spadkhg4i5ibpkjv8zw4dg15dd9bnqki2dkkcr3d37q7bc";
+  packages."powerpc_8540"."telephony".sha256 = "1dwgwyf4xk7qifaw1ni8k4hviff23qsrlx2mydyal8di48gllr4k";
   targets."mpc85xx"."p2020".sha256 = "1y7rjsp5iy5w9g37wwwgp2v5lwj5nidc0sy746dl3qlsglwps36g";
   targets."mpc85xx"."p2020".packagesArch = "powerpc_8540";
   targets."mpc85xx"."p1020".sha256 = "04ml3gqrhcklcavlim235mba3k0avazc7g8kpjkkvpcg7dis65cz";
@@ -153,9 +153,9 @@
   targets."x86"."64".sha256 = "08nl9r2aqgbh89wfixdhin5wna4bcs1ra1n1q2yj8b0ifhk3205m";
   targets."x86"."64".packagesArch = "x86_64";
   packages."x86_64"."base".sha256 = "0qddnhys6ya1v6pppl7rsbczalj9ia58dj1n3qga6dhlqxfdb6ym";
-  packages."x86_64"."packages".sha256 = "02c1nmpipgpgxxr81bnd7lwrazaym11914bkqp2gb7wm7gb8dygn";
-  packages."x86_64"."routing".sha256 = "1vf821g01blyippdl1v020g5rd8zlyflac6rb023ikjrhh42sfip";
-  packages."x86_64"."telephony".sha256 = "0n7zzxgh4lzbdy3m39dx50hhf8nhyfn15q9wbbxf4v3n64xv71ls";
+  packages."x86_64"."packages".sha256 = "02zrg0hfsh97dydhlll0dn7r5qvldi7cvpapbbns33sxx65lhvyp";
+  packages."x86_64"."routing".sha256 = "1dbry87n281ysadhljx3cbxac2wnckqzdyf3sjbc18pb5a4kvcwl";
+  packages."x86_64"."telephony".sha256 = "0d2rw22f3q80f23xdz01lrbwxcw3vs9ccfjcrzdblk1sldlm1qi8";
   targets."realtek"."generic".sha256 = "09glf07ap3c1c8s1gmmj5lhazzp8pf8jlryqbg1lvmsp14qjd4s2";
   targets."realtek"."generic".packagesArch = "mips_4kec";
   packages."mips_4kec"."base".sha256 = "1018y5wlr193cs0zkm9fck3v423ljrvp3arw73hwbs9aml3nj7hf";
