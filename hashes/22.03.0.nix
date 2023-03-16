@@ -2,9 +2,9 @@
   targets."oxnas"."ox820".sha256 = "0afpgvq6iz0qbinck0q881c98wxgvy5bg8j75cqgq8mh225gcdhp";
   targets."oxnas"."ox820".packagesArch = "arm_mpcore";
   packages."arm_mpcore"."base".sha256 = "1hbmvjb3dkldmdxdd570n9cgi3af3zvfbafmbmim8m9ih4qr7rwl";
-  packages."arm_mpcore"."packages".sha256 = "0kgl6fk6fk2asm16ss8cxrz5138ryciy3jw5kbm4zj96gfyc9273";
-  packages."arm_mpcore"."routing".sha256 = "0mqpydb8qz39m87607xl3h47yx2kfz3783z860vrwv9scsav2vxk";
-  packages."arm_mpcore"."telephony".sha256 = "12v9a8rra51aavzcb48dcvz5lbh475qbras6lh1fj5iix32cljii";
+  packages."arm_mpcore"."packages".sha256 = "0g3hvjicgczfdrc0bx9k68hcm2mvghjwbq5v6nv4z8kfhj5pyzyg";
+  packages."arm_mpcore"."routing".sha256 = "1i26lp5ys9irrxpn8i27kisbf0yrsz4fcz2db0xwrxvx1jwxd5fr";
+  packages."arm_mpcore"."telephony".sha256 = "0nmlvxki3lrqlrpy8zrm8bv5y0amnxkx7hklvvswd826v346p5iy";
   targets."mxs"."generic".sha256 = "1ai9axsycdcld8ap8iv6z33qrgm3k32193rdqdpk1v39lysynnkv";
   targets."zynq"."generic".sha256 = "0cgzm2fl74dr84c921z65mh6igfw163k41l7bwa5v0z4s9j5b32d";
   targets."zynq"."generic".packagesArch = "arm_cortex-a9_neon";
@@ -205,9 +205,9 @@
   targets."apm821xx"."nand".sha256 = "1mivimpsz981mk0iz5zxi12nmwci76z0bj365s4qy10pcyvaw10f";
   targets."apm821xx"."nand".packagesArch = "powerpc_464fp";
   packages."powerpc_464fp"."base".sha256 = "1y78vjgxi3kdcjjvwlh5azwnflyrbg6zrm2v93drpdxg2afa1akx";
-  packages."powerpc_464fp"."packages".sha256 = "0jcs2nwqjdvagcklffgv96phvx739izkbxp3bkdfzs0px3hf0069";
-  packages."powerpc_464fp"."routing".sha256 = "0kjckvksi05i10ivzllc08q4szh5dh7d43gipv9j4l1zbgrb06jv";
-  packages."powerpc_464fp"."telephony".sha256 = "17ylkk0crzfcybyfv8319wsanp21784kfn1g9szlpbjm0642z5cq";
+  packages."powerpc_464fp"."packages".sha256 = "0g93y9zzqq1izqng6wi2mxji394966a032iwv1bclmsvn4ily2f8";
+  packages."powerpc_464fp"."routing".sha256 = "1qh8x53k2s824i7g1cfy4538d0b8hbxanfv0k5857ngg5h4vqpbz";
+  packages."powerpc_464fp"."telephony".sha256 = "0bilbykpd0ndrh67ahxns1c0gc5jjbzm0zkhm1sp4wr31mg6llhs";
   targets."apm821xx"."sata".sha256 = "0if98b67c9xz6lbjcszrhmavmccwijx3k45k4x1kq457pnxv5zrh";
   targets."apm821xx"."sata".packagesArch = "powerpc_464fp";
   targets."bcm53xx"."generic".sha256 = "1h0r7dczspypk1219c8i26zq9kfp16aryiyv7xmknqrq54x0wzxx";
