@@ -1,11 +1,12 @@
 { pkgs ? import <nixpkgs> {} }:
+
 with pkgs;
 writeScriptBin "generate-hashes" ''
 #! ${runtimeShell}
 
 PATH=${lib.makeBinPath [ jq curl nix ]}:$PATH
 
-RELEASE=22.03.0
+RELEASE="${import ./latest-release.nix}"
 FEEDS="base packages routing telephony"
 
 if [ $# -gt 0 ]; then
@@ -15,7 +16,7 @@ fi
 UPSTREAM_URL=https://downloads.openwrt.org
 RELEASE_URL=$UPSTREAM_URL/releases/$RELEASE
 
-if [ $RELEASE == "snapshot" ]; then 
+if [ $RELEASE == "snapshot" ]; then
   RELEASE_URL=$UPSTREAM_URL/snapshots;
 fi
 
