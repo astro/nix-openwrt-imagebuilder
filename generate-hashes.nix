@@ -7,7 +7,7 @@ writeScriptBin "generate-hashes" ''
 PATH=${lib.makeBinPath [ jq curl nix ]}:$PATH
 
 RELEASE="${import ./latest-release.nix}"
-FEEDS="base packages routing telephony"
+FEEDS="base luci packages routing telephony"
 
 if [ $# -gt 0 ]; then
   RELEASE=$1
