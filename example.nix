@@ -3,7 +3,7 @@
 , build ? import ./builder.nix
 }:
 build (
-  profiles.identifyProfile "avm_fritz7412"
+  profiles.identifyProfile "tplink_archer-c7-v2"
   //
   {
     packages = [
