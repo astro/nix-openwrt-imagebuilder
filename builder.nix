@@ -89,7 +89,7 @@ stdenv.mkDerivation {
     [
       zlib unzip bzip2
       ncurses which rsync git file getopt wget
-      bash perl python3
+      bash perl python3 dtc
     ] ++
     lib.optional (!lib.versionAtLeast release "21") python2;
 
