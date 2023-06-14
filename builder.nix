@@ -61,7 +61,10 @@ stdenv.mkDerivation {
     patchShebangs scripts staging_dir/host/bin
     substituteInPlace rules.mk \
       --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}"
-    grep -r usr/bin/env
+    substituteInPlace rules.mk \
+      --replace "/usr/bin/env true" "${coreutils}/bin/true"
+    substituteInPlace rules.mk \
+      --replace "/usr/bin/env false" "${coreutils}/bin/false"
   '';
 
   configurePhase =
