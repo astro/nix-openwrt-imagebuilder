@@ -99,11 +99,17 @@ in
 
 ## Refreshing hashes
 
-Checksums of the `sha256sums` files on downloads.openwrt.org are added
-to this repository for a few recent releases. To update them, run:
+**downloads.openwrt.org** appears to be never at rest. That's why we
+update the [hashes subdirectory](./hashes/) daily with [a Github
+action.](https://github.com/astro/nix-openwrt-imagebuilder/actions/workflows/update-hashes.yml)
+
+If you still encounter `hash mismatch in fixed-output derivation` in
+between these updates, update them yourself:
 
 ```bash
-nix-shell -p nixFlakes
-nix run .#generate-hashes 21.02.3 # for example
-git add hashes/*.nix
+nix run .#generate-hashes $(sed -e 's/"//g' latest-release.nix)
 ```
+
+If your `flake.nix` has this project in its `inputs`, then you can
+build with your local working copy using
+`nix build --override-input openwrt-imagebuilder git+file:///... .#...`
