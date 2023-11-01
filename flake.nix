@@ -43,7 +43,7 @@
           profiles = self.lib.profiles {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;
           };
-          build = self.lib.build;
+          inherit (self.lib) build;
         };
       in
       # Wrap `image` once to avoid `nix flake show` breaking on IFD

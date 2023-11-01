@@ -2,8 +2,9 @@
 # OpenWRT release
 , release ? import ./latest-release.nix
 }:
-with pkgs;
+
 let
+  inherit (pkgs) lib;
   hashes = import ./hashes/${release}.nix;
 in rec {
   allProfiles =

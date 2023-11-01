@@ -3,9 +3,7 @@
 , build ? import ./builder.nix
 }:
 build (
-  profiles.identifyProfile "tplink_archer-c7-v2"
-  //
-  {
+  profiles.identifyProfile "tplink_archer-c7-v2" // {
     packages = [
       "tcpdump"
       "vxlan" "kmod-vxlan"
