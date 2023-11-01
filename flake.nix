@@ -9,7 +9,7 @@
       { pkgs ? nixpkgs.legacyPackages.x86_64-linux
       , ...
       }@args:
-      import ./builder.nix (args // {
+      import ./image-builder.nix (args // {
         inherit pkgs;
       });
 
@@ -38,7 +38,7 @@
 
     packages.x86_64-linux.example-image =
       let
-        image = import ./example.nix {
+        image = import ./builder-example.nix {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           profiles = self.lib.profiles {
             pkgs = nixpkgs.legacyPackages.x86_64-linux;

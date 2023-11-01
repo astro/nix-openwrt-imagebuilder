@@ -1,6 +1,7 @@
 { pkgs ? import <nixpkgs> {}
-, build ? import ./builder.nix
+, build ? import ./image-builder.nix
 }:
+
 build {
   release = "19.07.10";
   target = "ar71xx";
