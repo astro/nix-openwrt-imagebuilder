@@ -83,6 +83,7 @@ pkgs.stdenv.mkDerivation {
     '';
 
   nativeBuildInputs = with pkgs; [
+    # TODO: can zlib, bzip2 and file be removed?
     zlib unzip bzip2
     ncurses which rsync git file getopt wget
     bash perl python3 dtc
