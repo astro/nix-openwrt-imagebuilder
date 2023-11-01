@@ -28,7 +28,7 @@
 # Which services in /etc/init.d/ should be disabled
 , disabledServices ? []
 # Add to output name
-, extraImageName ? "nix"
+, extraImageName ? null
 }:
 
 let
@@ -100,7 +100,7 @@ pkgs.stdenv.mkDerivation {
       PACKAGES="${lib.concatStringsSep " " packages}" \
       ${lib.optionalString (files != null) "FILES=./files"} \
       DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
-      EXTRA_IMAGE_NAME="${extraImageName}"
+      ${lib.optionalString (extraImageName != null) ''EXTRA_IMAGE_NAME="${extraImageName}"''}
   '';
 
   installPhase = ''
