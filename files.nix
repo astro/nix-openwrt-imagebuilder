@@ -77,7 +77,7 @@ let
                 name = sanitizeFilename parsed.Filename;
               };
               depends = if parsed ? Depends then parseDepends parsed.Depends else [];
-              provides = if parsed ? Provides then parsed.Provides else null;
+              provides = parsed.Provides or null;
               type = "real";
             };
           }
@@ -123,7 +123,7 @@ let
         if p.provides != null
         then
           let
-            vp = if packages ? ${p.provides} then packages.${p.provides} else {
+            vp = packages.${p.provides} or {
               type = "virtual";
               depends = [ ];
             };
@@ -185,11 +185,7 @@ let
 
   profiles =
     if variantFiles ? "profiles.json"
-    then builtins.fromJSON (
-      builtins.readFile (
-        variantFiles."profiles.json"
-      )
-    )
+    then lib.importJSON variantFiles."profiles.json"
     else null;
 
   arch = if packagesArch == null
@@ -197,9 +193,5 @@ let
          else packagesArch;
 
 in {
-  inherit allPackages;
-  inherit corePackages packagesByFeed;
-  inherit expandDeps;
-  inherit variantFiles;
-  inherit profiles arch;
+  inherit allPackages corePackages packagesByFeed expandDeps variantFiles profiles arch;
 }

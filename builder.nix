@@ -28,48 +28,45 @@
 # Which services in /etc/init.d/ should be disabled
 , disabledServices ? []
 # Add to output name
-, extraImageName ? "nix"
+, extraImageName ? null
 }:
-with pkgs;
+
 let
+  inherit (pkgs) lib;
   inherit (import ./files.nix {
     inherit pkgs release target variant sha256 feedsSha256 packagesArch;
-  }) arch variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
+  }) variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
 
-  requiredPackages = (
-    profiles.default_packages or (
-      builtins.attrNames packagesByFeed.base
-      ++ builtins.attrNames corePackages
-    )
-    ++ profiles.profiles.${profile}.device_packages or []
-    ++ packages
-  );
+  requiredPackages = profiles.default_packages or (
+    builtins.attrNames packagesByFeed.base
+    ++ builtins.attrNames corePackages
+  ) ++ profiles.profiles.${profile}.device_packages or []
+    ++ packages;
   allRequiredPackages = expandDeps allPackages requiredPackages;
   imageBuilderPrefix  = "openwrt-imagebuilder-${if release == "snapshot" then "" else "${release}-"}";
 in
 
-stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation {
   name = lib.concatStringsSep "-" ([
     "openwrt" release
-  ] ++
-  lib.optional (extraImageName != null) extraImageName ++
-  [ target variant profile ]);
+  ] ++ lib.optional (extraImageName != null) extraImageName
+  ++ [ target variant profile ]);
 
-  src = variantFiles."${imageBuilderPrefix}${target}-${variant}.${hostPlatform.uname.system}-${hostPlatform.uname.processor}.tar.xz";
+  src = let
+    inherit (pkgs.stdenv.hostPlatform) uname;
+  in variantFiles."${imageBuilderPrefix}${target}-${variant}.${uname.system}-${uname.processor}.tar.xz";
 
-  postPatch = ''
+  postPatch = with pkgs; ''
     patchShebangs scripts staging_dir/host/bin
     substituteInPlace rules.mk \
-      --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}"
-    substituteInPlace rules.mk \
-      --replace "/usr/bin/env true" "${coreutils}/bin/true"
-    substituteInPlace rules.mk \
+      --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}" \
+      --replace "/usr/bin/env true" "${coreutils}/bin/true" \
       --replace "/usr/bin/env false" "${coreutils}/bin/false"
   '';
 
   configurePhase =
     let
-      installPackages = writeScript "install-openwrt-packages" (
+      installPackages = pkgs.writeScript "install-openwrt-packages" (
         lib.concatMapStrings (pname:
           let
             package = allPackages.${pname};
@@ -83,33 +80,36 @@ stdenv.mkDerivation {
       ${installPackages}
 
       echo "src imagebuilder file:packages" > repositories.conf
+
+      # if the user provided key-build, key-build.pub and key-build.ucert in /run/openwrt use it
+      # NOTE: they need to be owned by group nixbld and have permission 440
+      # NOTE2: auto-allocate-uids must be disabled because of bug https://github.com/NixOS/nix/issues/9276
+      if [[ -d /run/openwrt ]]; then
+        for file in /run/openwrt/*; do
+          ln -s $file $(basename $file)
+        done
+      fi
     '';
 
-  nativeBuildInputs =
-    [
-      zlib unzip bzip2
-      ncurses which rsync git file getopt wget
-      bash perl python3 dtc
-    ] ++
-    lib.optional (!lib.versionAtLeast release "21") python2;
+  nativeBuildInputs = with pkgs; [
+    zlib unzip bzip2
+    ncurses which rsync git file getopt wget
+    bash perl python3 dtc
+  ] ++ lib.optional (!lib.versionAtLeast release "21") python2;
 
-  buildPhase = ''
-    ${lib.optionalString (!lib.versionAtLeast release "19") ''
-      # Hack around broken check for gcc
-      touch staging_dir/host/.prereq-build
-    ''}
-    ${lib.optionalString (files != null)
+  buildPhase = lib.optionalString (lib.versionOlder release "19") ''
+    # Hack around broken check for gcc
+    touch staging_dir/host/.prereq-build
+  '' + lib.optionalString (files != null) ''
       # copy files to avoid making etc read-only
-      "cp -r --no-preserve=all ${files} files"
-    }
-    make image SHELL=${runtimeShell} \
+      cp -r --no-preserve=all ${files} files
+  '' + ''
+    make image SHELL=${pkgs.runtimeShell} -j$NIX_BUILD_CORES \
       PROFILE="${profile}" \
       PACKAGES="${lib.concatStringsSep " " packages}" \
-      ${lib.optionalString (files != null)
-        ''FILES=./files''
-      } \
+      ${lib.optionalString (files != null) "FILES=./files"} \
       DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
-      EXTRA_IMAGE_NAME="${extraImageName}"
+      ${lib.optionalString (extraImageName != null) ''EXTRA_IMAGE_NAME="${extraImageName}"''}
   '';
 
   installPhase = ''
