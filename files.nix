@@ -137,14 +137,17 @@ let
       packages
       (builtins.attrNames packages);
 
-  # packages which aren't available in feeds but are provided by imagebuilders
+  # packages which aren't available in feeds but are provided by imagebuilders/sdk
   dummyPackages =
     let
       dummyPackage = { depends = [ ]; provides = null; type = "dummy"; };
     in
     {
+      # imagebuilders
       libc = dummyPackage;
       kernel = dummyPackage;
+      # sdk packages provided by host
+      libncursesw6 = dummyPackage;
     };
 
   # all packages, including dummy and virtual
