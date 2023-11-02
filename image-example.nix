@@ -1,11 +1,10 @@
 { pkgs ? import <nixpkgs> {}
 , profiles ? import ./profiles.nix { inherit pkgs; }
-, build ? import ./builder.nix
+, build ? import ./image-builder.nix
 }:
+
 build (
-  profiles.identifyProfile "tplink_archer-c7-v2"
-  //
-  {
+  profiles.identifyProfile "tplink_archer-c7-v2" // {
     packages = [
       "tcpdump"
       "vxlan" "kmod-vxlan"

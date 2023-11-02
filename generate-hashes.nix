@@ -1,10 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
-with pkgs;
-writeScriptBin "generate-hashes" ''
-#! ${runtimeShell}
-
-PATH=${lib.makeBinPath [ jq curl nix ]}:$PATH
+pkgs.writeScriptBin "generate-hashes" ''
+PATH=${pkgs.lib.makeBinPath (with pkgs; [ jq curl nix ])}:$PATH
 
 RELEASE="${import ./latest-release.nix}"
 FEEDS="base luci packages routing telephony"

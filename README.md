@@ -53,7 +53,7 @@ let
 
 in
   # actually build the image
-  import (openwrt-imagebuilder + "/builder.nix") config
+  import (openwrt-imagebuilder + "/image-builder.nix") config
 ```
 
 ## Usage with Nix Flakes

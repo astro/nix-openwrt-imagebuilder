@@ -1,11 +1,9 @@
 { self
 , pkgs
 }:
-with pkgs;
-writeScriptBin "generate-all-hashes" ''
-  #! ${runtimeShell}
 
-  PATH=${lib.makeBinPath [ self.packages.${system}.generate-hashes git ]}:$PATH
+pkgs.writeScriptBin "generate-all-hashes" ''
+  PATH=${pkgs.lib.makeBinPath (with pkgs; [ self.packages.${pkgs.system}.generate-hashes git ])}:$PATH
 
   RELEASES=$(curl -s https://downloads.openwrt.org |
     grep -oP "OpenWrt [1-9][0-9\.]+<" |

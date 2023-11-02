@@ -1,7 +1,8 @@
 { pkgs ? import <nixpkgs> {}
 }:
-with pkgs;
+
 let
+  inherit (pkgs) lib;
   releases =
     map (builtins.replaceStrings [ ".nix" ] [ "" ]) (
       builtins.filter (lib.hasSuffix ".nix") (
@@ -14,7 +15,7 @@ let
       inherit (import ./profiles.nix {
         inherit pkgs release;
       }) allProfiles;
-    in writeText "openwrt-${release}-profiles-list.md" ''
+    in pkgs.writeText "openwrt-${release}-profiles-list.md" ''
       # OpenWRT ${release} profiles
 
       ${lib.concatMapStrings (target:
@@ -29,7 +30,7 @@ let
       ) (builtins.attrNames allProfiles)}
     '';
 in
-runCommand "openwrt-profiles" {} ''
+pkgs.runCommand "openwrt-profiles" {} ''
   mkdir $out
   ${lib.concatMapStrings (release: ''
     ln -s ${list release} $out/${release}.md
