@@ -80,6 +80,15 @@ pkgs.stdenv.mkDerivation {
       ${installPackages}
 
       echo "src imagebuilder file:packages" > repositories.conf
+
+      # if the user provided key-build, key-build.pub and key-build.ucert in /run/openwrt use it
+      # NOTE: they need to be owned by group nixbld and have permission 440
+      # NOTE2: auto-allocate-uids must be disabled because of bug https://github.com/NixOS/nix/issues/9276
+      if [[ -d /run/openwrt ]]; then
+        for file in /run/openwrt/*; do
+          ln -s $file $(basename $file)
+        done
+      fi
     '';
 
   nativeBuildInputs = with pkgs; [
