@@ -5,6 +5,7 @@ on:
       - "main"
 jobs:
   flakehub-publish:
+    if: github.repository_owner == 'astro'
     runs-on: "ubuntu-latest"
     permissions:
       id-token: "write"
