@@ -2,7 +2,7 @@
 , pkgs
 }:
 
-pkgs.writeScriptBin "generate-all-hashes" ''
+pkgs.writeShellScriptBin "generate-all-hashes" ''
   PATH=${pkgs.lib.makeBinPath (with pkgs; [ self.packages.${pkgs.system}.generate-hashes git ])}:$PATH
 
   RELEASES=$(curl -s https://downloads.openwrt.org |
