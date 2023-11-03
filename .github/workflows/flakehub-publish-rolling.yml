@@ -5,12 +5,13 @@ on:
       - "main"
 jobs:
   flakehub-publish:
+    if: github.repository_owner == 'astro'
     runs-on: "ubuntu-latest"
     permissions:
       id-token: "write"
       contents: "read"
     steps:
-      - uses: "actions/checkout@v3"
+      - uses: "actions/checkout@v4"
       - uses: "DeterminateSystems/nix-installer-action@main"
       - uses: "DeterminateSystems/flakehub-push@main"
         with:

@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {} }:
 
-pkgs.writeScriptBin "generate-hashes" ''
+pkgs.writeShellScriptBin "generate-hashes" ''
 PATH=${pkgs.lib.makeBinPath (with pkgs; [ jq curl nix ])}:$PATH
 
 RELEASE="${import ./latest-release.nix}"
