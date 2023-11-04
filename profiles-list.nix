@@ -29,8 +29,14 @@ let
         '') (builtins.attrNames allProfiles.${target})
       ) (builtins.attrNames allProfiles)}
     '';
+
 in
-pkgs.runCommand "openwrt-profiles" {} ''
+pkgs.runCommand "openwrt-profiles" {
+  passthru = lib.listToAttrs (map (release: {
+    name = builtins.replaceStrings [ "." ] [ "_" ] release;
+    value = list release;
+  }) releases);
+} ''
   mkdir $out
   ${lib.concatMapStrings (release: ''
     ln -s ${list release} $out/${release}.md
