@@ -36,6 +36,10 @@
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
     };
 
+    packages.x86_64-linux.cached-profiles = import ./cached-profiles.nix {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    };
+
     packages.x86_64-linux.example-image =
       let
         image = import ./example.nix {

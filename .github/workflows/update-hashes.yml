@@ -39,6 +39,14 @@ jobs:
           nix eval -f generate-latest-release.nix > latest-release.nix
           git add latest-release.nix
           git commit -m "latest-release: update" || true
+      - name: Cache OpenWrt profile information
+        shell: bash
+        run: |
+          git rm cached-profiles/*
+          nix build -vL .#cached-profiles
+          cp -L result/*.nix cached-profiles/
+          git add cached-profiles
+          git commit -m "cached-profiles: update" || true
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:

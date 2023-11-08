@@ -7,19 +7,7 @@ let
   inherit (pkgs) lib;
   hashes = import ./hashes/${release}.nix;
 in rec {
-  allProfiles =
-    builtins.mapAttrs (target: variants:
-      lib.filterAttrs (_: profiles:
-        profiles != null
-      ) (
-        builtins.mapAttrs (variant: h:
-          (import ./files.nix {
-            inherit pkgs release target variant;
-            inherit (h) sha256 feedsSha256;
-          }).profiles
-        ) variants
-      )
-    ) hashes.targets;
+  allProfiles = import ./cached-profiles/${release}.nix;
 
   # filters hardware profiles from all boards.json files
   identifyProfiles = profile:
