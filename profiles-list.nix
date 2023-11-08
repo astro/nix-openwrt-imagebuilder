@@ -3,10 +3,15 @@
 
 let
   inherit (pkgs) lib;
+  # Only OpenWrt >= 19.07.4 contains profiles.json files
   releases =
-    map (builtins.replaceStrings [ ".nix" ] [ "" ]) (
-      builtins.filter (lib.hasSuffix ".nix") (
-        builtins.attrNames (builtins.readDir ./hashes)
+    builtins.filter (release:
+      builtins.compareVersions release "19.07.4" >= 0
+    ) (
+      map (builtins.replaceStrings [ ".nix" ] [ "" ]) (
+        builtins.filter (lib.hasSuffix ".nix") (
+          builtins.attrNames (builtins.readDir ./hashes)
+        )
       )
     );
 
