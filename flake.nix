@@ -58,7 +58,7 @@
     checks = self.packages;
 
     hydraJobs = {
-      example-image = self.packages.x86_64-linux.example-image;
+      inherit (self.packages.x86_64-linux) example-image;
     };
   };
 }

@@ -5,7 +5,6 @@
 
 let
   inherit (pkgs) lib;
-  hashes = import ./hashes/${release}.nix;
 in rec {
   allProfiles = import ./cached-profiles/${release}.nix;
 
