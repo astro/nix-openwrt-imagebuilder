@@ -119,8 +119,9 @@ let
       (packages: pn:
         let
           p = packages.${pn};
+          trimSpaces = builtins.replaceStrings [ " " ] [ "" ];
         in
-        if p.provides != null
+        if p.provides or null != null
         then
           let
             vp = packages.${p.provides} or {
@@ -128,9 +129,11 @@ let
               depends = [ ];
             };
           in
-          packages // {
-            ${p.provides} = vp // { depends = vp.depends ++ [ pn ]; };
-          }
+            builtins.foldl' (packages: provide:
+              packages // {
+                ${provide} = vp // { depends = vp.depends ++ [ pn ]; };
+              }
+            ) packages (map trimSpaces (lib.splitString "," p.provides))
         else
           packages
       )
