@@ -95,7 +95,7 @@ pkgs.stdenv.mkDerivation {
     zlib unzip bzip2
     ncurses which rsync git file getopt wget
     bash perl python3 dtc
-  ] ++ lib.optional (!lib.versionAtLeast release "21") python2;
+  ] ++ lib.optional (!lib.versionAtLeast release "21" && release != "snapshot") python2;
 
   buildPhase = lib.optionalString (lib.versionOlder release "19") ''
     # Hack around broken check for gcc
