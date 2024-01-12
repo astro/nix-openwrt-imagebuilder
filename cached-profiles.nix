@@ -7,7 +7,11 @@
 let
   inherit (pkgs) lib;
 
-  inherit (import ./releases.nix { inherit pkgs; }) releases;
+  releases =
+    (import ./releases.nix { inherit pkgs; }).releases
+    ++ [
+      "snapshot"
+    ];
 
   writeProfiles = release:
     let
