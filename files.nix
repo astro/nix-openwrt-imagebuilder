@@ -110,7 +110,7 @@ let
     // corePackages;
 
   # for each package that 'provides' something, register that package as a
-  # dependency of the provided package. if there is no real package with that
+  # dependency of the provided package. Only if there is no real package with that
   # name, then a 'virtual' one is created.  Using this, when a real package
   # depends on something provided by several real packages, all possible
   # providers will be downloaded
@@ -130,9 +130,13 @@ let
             };
           in
             builtins.foldl' (packages: provide:
-              packages // {
-                ${provide} = vp // { depends = vp.depends ++ [ pn ]; };
-              }
+              if ! packages ? ${provide}
+              then
+                packages // {
+                  ${provide} = vp // { depends = vp.depends ++ [ pn ]; };
+                }
+              else
+                packages
             ) packages (map trimSpaces (lib.splitString "," p.provides))
         else
           packages
