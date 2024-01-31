@@ -24,7 +24,7 @@ hash() {
   VARIANT=$2
   echo "- $TARGET/$VARIANT" >&2
   BASEURL=$RELEASE_URL/targets/$TARGET/$VARIANT
-  SUM=$(nix-prefetch-url --type sha256 $BASEURL/sha256sums 2>/dev/null)
+  SUM=$(nix store prefetch-file --json $BASEURL/sha256sums 2>/dev/null | jq -r .hash)
   if [ -n "$SUM" ]; then
     echo "  targets.\"$TARGET\".\"$VARIANT\".sha256 = \"$SUM\";"
     ARCH=$(curl -s $BASEURL/profiles.json | jq -r .arch_packages)
@@ -34,7 +34,7 @@ hash() {
       if [ -z "''${arches_fetched[$ARCH]}" ]; then
         for FEED in $FEEDS; do
           echo "  - $FEED" >&2
-          SUM=$(nix-prefetch-url --type sha256 $RELEASE_URL/packages/$ARCH/$FEED/Packages 2>/dev/null)
+          SUM=$(nix store prefetch-file --json $RELEASE_URL/packages/$ARCH/$FEED/Packages 2>/dev/null | jq -r .hash)
           echo "  packages.\"$ARCH\".\"$FEED\".sha256 = \"$SUM\";"
         done
         arches_fetched[$ARCH]="done"
