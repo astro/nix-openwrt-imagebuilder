@@ -15681,15 +15681,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-493g-squashfs-sysupgrade.bin";
-              sha256 = "63d1a01d2b29b15348d8adc908319ecd8d8873bf5e83f10ae7fa9667979cb682";
-              sha256_unsigned = "765607d535b96af49e29c1e8267c57a554f6a1392efe8c5a4c5f4b2ca85a0abb";
+              sha256 = "2f68e2251945a18dc1e3c3b3745bef0cb793f1f77be5961229dc8359676fb3cf";
+              sha256_unsigned = "50dafb536ec324b6d06d2b516828ace05cb70e643db3e9db8c86c6828fd3ce39";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-493g-initramfs-kernel.bin";
-              sha256 = "7280f649ac4ed23b5bc6bd33469a40f2d0a28a589910edae6768264ad5adb7ea";
-              sha256_unsigned = "7280f649ac4ed23b5bc6bd33469a40f2d0a28a589910edae6768264ad5adb7ea";
+              sha256 = "3c90b447cd1c8600d8fab11b96497fe47ca2d63ac9fd8def07a2832a835ce9f1";
+              sha256_unsigned = "3c90b447cd1c8600d8fab11b96497fe47ca2d63ac9fd8def07a2832a835ce9f1";
               type = "kernel";
             }
           ];
@@ -15711,18 +15711,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-750-r2";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-750-r2-squashfs-sysupgrade.bin";
-              sha256 = "90aa0a8586db6c1fcfea35bbb8ede479cde0520a5108867ae1d8af9be1f5b5a3";
-              sha256_unsigned = "5202d55258bf9f00bb6840f083ba302c38a14ce4f069a532f7a5bc82cb9abd5a";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-750-r2-initramfs-kernel.bin";
-              sha256 = "2fac8fe1bfca7bc866e17d41cb3c7cec27e89b066082abe7bf127a6dd13892b6";
-              sha256_unsigned = "2fac8fe1bfca7bc866e17d41cb3c7cec27e89b066082abe7bf127a6dd13892b6";
+              sha256 = "8fe5df9488c0d64634f7a213dc208152ee84004af9c228b70aa252ef819c837b";
+              sha256_unsigned = "8fe5df9488c0d64634f7a213dc208152ee84004af9c228b70aa252ef819c837b";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-750-r2-squashfs-sysupgrade.bin";
+              sha256 = "28aa9e6d4bd688a18d1174cd0aa30568cb29b5d0cd9b8391bf10d361aa6359fc";
+              sha256_unsigned = "9b5d3a9e89e18039d346603b029aa0af4d431cff0b9fd01c8d1639e70b365c3e";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -15744,18 +15744,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-911-lite";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911-lite-initramfs-kernel.bin";
-              sha256 = "f01220c7c2001bef560b586891d187892e717e08ed551d5ba1932789d67164bd";
-              sha256_unsigned = "f01220c7c2001bef560b586891d187892e717e08ed551d5ba1932789d67164bd";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911-lite-squashfs-sysupgrade.bin";
-              sha256 = "beee2724b5edb8b46da2271711f3bd74dbe4595d8e7c296165293f4602cd6228";
-              sha256_unsigned = "03ce00c397679842be55a35a9e1917f8c6d2b5d500026c65358634c1a769ad69";
+              sha256 = "4ea933b2d130bb52efe2685cab96807106b23ace82eb823c1566eda4520c180f";
+              sha256_unsigned = "8243fea9e6103d86b0df771745f6c00d1eb9c71bb3cd4988670bf453bb5486a1";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911-lite-initramfs-kernel.bin";
+              sha256 = "453c4b481e0dd50517a2936d6de764aecedf83d88ef73f8cf5d01096cae5fb7b";
+              sha256_unsigned = "453c4b481e0dd50517a2936d6de764aecedf83d88ef73f8cf5d01096cae5fb7b";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -15778,18 +15778,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-911g-5hpacd";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911g-5hpacd-initramfs-kernel.bin";
-              sha256 = "5d8f34198a3c89ba6f90769bc71254ab7fd23edc245033ec0e2b4f1a247c0636";
-              sha256_unsigned = "5d8f34198a3c89ba6f90769bc71254ab7fd23edc245033ec0e2b4f1a247c0636";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911g-5hpacd-squashfs-sysupgrade.bin";
-              sha256 = "2a068e4a49820a088d87085b8c1915085a399542efc50e6b9c92d7a62a53542b";
-              sha256_unsigned = "74e8f85f45daa12ad766d5fb15c8862bdd55f68d46c2031ae08e4950d8080400";
+              sha256 = "9bba8c73a513c17f4c2c267c7adc3ee31b3d0fd4941ca545a58f141231f47657";
+              sha256_unsigned = "fb95e8b867533006acc344fe0438b2bf30865d82e5ef465ddb7dab66b44e155e";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911g-5hpacd-initramfs-kernel.bin";
+              sha256 = "8acc33a477ac74e80e235604b0b611203e99cb1f7c92e6a558076209aeea5010";
+              sha256_unsigned = "8acc33a477ac74e80e235604b0b611203e99cb1f7c92e6a558076209aeea5010";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -15812,15 +15812,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911g-xhpnd-initramfs-kernel.bin";
-              sha256 = "cfa6d094034c176c80b283672ba7699c847f5a695130c997ef90f42992885bd7";
-              sha256_unsigned = "cfa6d094034c176c80b283672ba7699c847f5a695130c997ef90f42992885bd7";
+              sha256 = "16136de2f9ffdadb248da1b13d8fd0f1629ac5b9cc0d992dc01404e1dbc155ac";
+              sha256_unsigned = "16136de2f9ffdadb248da1b13d8fd0f1629ac5b9cc0d992dc01404e1dbc155ac";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-911g-xhpnd-squashfs-sysupgrade.bin";
-              sha256 = "2d66e7857cecdf2d9debd6bc387886821de3be6867a02ff9108ea0e11f414d5a";
-              sha256_unsigned = "022728efa2746f063080fb4f9158b243b835451282041aa7f2cbfe8174e89535";
+              sha256 = "acd8c06cfebe4552938fc4f92000494de32bc77b5952a0b15586138e3b86b1fe";
+              sha256_unsigned = "3dfc3ba5e4f51639e7f01a7e4b625f3f6bc7bb410e5a4d2c0cf9a280c9bca71c";
               type = "sysupgrade";
             }
           ];
@@ -15850,15 +15850,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-912uag-2hpnd-squashfs-sysupgrade.bin";
-              sha256 = "2ea8d9137e76deec258fa84527fe6dd95438d3f14bcc5ee0c387518f30e4b5c7";
-              sha256_unsigned = "c2ce6b2eda7f357b6cc940397c32112ef8a67e2248719fcc94ec53b689d28ca0";
+              sha256 = "bdc83c4778b356f06c602e49724e436723fd96e38452ba132931086e8df15a79";
+              sha256_unsigned = "21d7ea4731dd2a3cbeef16893bd15686579513fa583bb71c7719a2a2fd4de2c9";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-912uag-2hpnd-initramfs-kernel.bin";
-              sha256 = "8dfbee106b98b8dc11c40a272d367f2c6ce50af85c3abffeca66c71659be30c3";
-              sha256_unsigned = "8dfbee106b98b8dc11c40a272d367f2c6ce50af85c3abffeca66c71659be30c3";
+              sha256 = "87014ac85f195db0110939d9a93d62784c005d426c4cff60a61636e9e58abb7b";
+              sha256_unsigned = "87014ac85f195db0110939d9a93d62784c005d426c4cff60a61636e9e58abb7b";
               type = "kernel";
             }
           ];
@@ -15889,15 +15889,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-921gs-5hpacd-15s-initramfs-kernel.bin";
-              sha256 = "8ed164ea2f6c2a2acfdb80f60797a77ff175899c806eec0cec34a62ea4df56dd";
-              sha256_unsigned = "8ed164ea2f6c2a2acfdb80f60797a77ff175899c806eec0cec34a62ea4df56dd";
+              sha256 = "fa1fed07d71fd0fba42103f52f800fcbe5bf838ea21e73fb3ea46fcaaad2de54";
+              sha256_unsigned = "fa1fed07d71fd0fba42103f52f800fcbe5bf838ea21e73fb3ea46fcaaad2de54";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-921gs-5hpacd-15s-squashfs-sysupgrade.bin";
-              sha256 = "bccf3a2d01e32a87bfb61337e011ee2971c214689f52f8451fbe70b803299e4e";
-              sha256_unsigned = "bb5019fab5e8dccc2d847dd587df4c1b05b9a378994100cce68743eb97e3b160";
+              sha256 = "c964ee92cbd2cf061dc768ad0fa810fa91d2fbafd426f3f000c9178e0f3c19e4";
+              sha256_unsigned = "2cc35936a5e36212878ea8ebc54683e6444de2c8cdf6eba49b54056f09e98d4a";
               type = "sysupgrade";
             }
           ];
@@ -15923,18 +15923,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-922uags-5hpacd";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-922uags-5hpacd-squashfs-sysupgrade.bin";
-              sha256 = "e4c18d4a6f6c8a29f0ee8add8af75c9d2fc41cb87c4f542b5e3647b8ff8a9572";
-              sha256_unsigned = "93d9c94bde0afb572d6134ed3827176c0f748c762e433ca7d64adff3122111a0";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-922uags-5hpacd-initramfs-kernel.bin";
-              sha256 = "c5602d108f331808bff192811fa3980756568fff7c49c4bbcfca8e367f335d37";
-              sha256_unsigned = "c5602d108f331808bff192811fa3980756568fff7c49c4bbcfca8e367f335d37";
+              sha256 = "7e8a0870f8516bb624f990ead052686e7409a83e9975841518d0fde7354e6681";
+              sha256_unsigned = "7e8a0870f8516bb624f990ead052686e7409a83e9975841518d0fde7354e6681";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-922uags-5hpacd-squashfs-sysupgrade.bin";
+              sha256 = "06f05cbbd61273ed484301ef2e247dcb6facaffd88c4d2b917c7010df99990c6";
+              sha256_unsigned = "c29978e36b23f104b14892661f99231f72ec06ff660e5cdc5768d2e9580ba1e9";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -15958,15 +15958,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951g-2hnd-initramfs-kernel.bin";
-              sha256 = "d33ef0b13cfb9ed23322e503e62e474819bfac724362cdb3a564bb7a14f72381";
-              sha256_unsigned = "d33ef0b13cfb9ed23322e503e62e474819bfac724362cdb3a564bb7a14f72381";
+              sha256 = "d4e179160377d270362f2a5890baa6fe55055611113bc211febd454fa6314859";
+              sha256_unsigned = "d4e179160377d270362f2a5890baa6fe55055611113bc211febd454fa6314859";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951g-2hnd-squashfs-sysupgrade.bin";
-              sha256 = "136df576b08510b702699518482be83fa056b064322019ffbbb8d589acda00f6";
-              sha256_unsigned = "20ce7e0a5068b37a32db7a4c6869e9a5ef1a10d5deaa7579c44d704992b609fe";
+              sha256 = "7d0493e747f4613e3bece9bd0ef2b48ac180347a40d5ecc167690b2620f553ca";
+              sha256_unsigned = "bd0f6f27b7bc8fa2eee4dbe21e112d812c47393b186597a02db27811c8eadf06";
               type = "sysupgrade";
             }
           ];
@@ -15989,18 +15989,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2hnd";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2hnd-squashfs-sysupgrade.bin";
-              sha256 = "d0b16db15e60e2c7cd06bf31a25d6e761548bcd1455c188d0501b49512066a69";
-              sha256_unsigned = "fc57fa24b1321f30c1266c240f0e1b751f1cbd0d739ba74cb66792327a5c8931";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2hnd-initramfs-kernel.bin";
-              sha256 = "4e2f9d32d29ac0aa1aefe89acca475cb39be0256faf3e440fb2e70fb3bf1c8b5";
-              sha256_unsigned = "4e2f9d32d29ac0aa1aefe89acca475cb39be0256faf3e440fb2e70fb3bf1c8b5";
+              sha256 = "37b85c6a2545a8d0b53b00a7d3a879ea2f3c8b03c286cd091d844981af3165e2";
+              sha256_unsigned = "37b85c6a2545a8d0b53b00a7d3a879ea2f3c8b03c286cd091d844981af3165e2";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2hnd-squashfs-sysupgrade.bin";
+              sha256 = "87cfcadf9912cce7bfc6f0ddc5344cfa274738cd6967fd71a341c3944661b30e";
+              sha256_unsigned = "fab8bc7e5ef7000da9a9a2cfd6a32b4f6c6a504939d0410711a1ad6ae4f7277e";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -16021,18 +16021,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2nd";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2nd-squashfs-sysupgrade.bin";
-              sha256 = "06c8b56e38a0de2257defee34db6fc059a221af900db29b91ab31052a330f922";
-              sha256_unsigned = "767a26cc61a18311565f5f4b610f4599a28c65899052036a696a2cb447525698";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2nd-initramfs-kernel.bin";
-              sha256 = "58278ce8e6014e0c4d1eee2acc461f9f041f88394c667deddaab95929915044d";
-              sha256_unsigned = "58278ce8e6014e0c4d1eee2acc461f9f041f88394c667deddaab95929915044d";
+              sha256 = "21e5b7d83bc7219bb48b8fdac82c562e8d0fdf5c7735626797675e6235b64e7e";
+              sha256_unsigned = "21e5b7d83bc7219bb48b8fdac82c562e8d0fdf5c7735626797675e6235b64e7e";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-951ui-2nd-squashfs-sysupgrade.bin";
+              sha256 = "62c732a5d79d1afb0e22762b96d0ca3a3c6da997fd7c2d599cc30fcd58f8331f";
+              sha256_unsigned = "eb02ea3a1f0441198ec73b5971e6817026ce3b30e8e1a7d50e29bed721e76cb6";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -16055,18 +16055,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-952ui-5ac2nd";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-952ui-5ac2nd-squashfs-sysupgrade.bin";
-              sha256 = "daea36ffd115e81625cfc2c52eb8dc416653b7f6c7dc957a4ff805872935e8e5";
-              sha256_unsigned = "13904eb52e98336d65d94c0380a7c190ddebc74b3b79ec434021a89300450e5d";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-952ui-5ac2nd-initramfs-kernel.bin";
-              sha256 = "f1a47673e791794fd8abd12366bb64c52e97dd961db7e2cbe2d111330451c9b2";
-              sha256_unsigned = "f1a47673e791794fd8abd12366bb64c52e97dd961db7e2cbe2d111330451c9b2";
+              sha256 = "95c1b9c868590c4ef30c2212c047241184ea2c7f7eb693d8eabd47a4b46228b0";
+              sha256_unsigned = "95c1b9c868590c4ef30c2212c047241184ea2c7f7eb693d8eabd47a4b46228b0";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-952ui-5ac2nd-squashfs-sysupgrade.bin";
+              sha256 = "dd18ea087690603aad92225907e9bbecd24a1931077ac9cf2b04b6375c4e2aae";
+              sha256_unsigned = "e24794e5554e9d954d7d2f271f63d14cbace052346c9c62b2a35e6bea8432259";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -16094,15 +16094,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-962uigs-5hact2hnt-initramfs-kernel.bin";
-              sha256 = "9ba352db53d2c0b72952f212087095b4a3119dd33e12ca996ed7611585fe30a3";
-              sha256_unsigned = "9ba352db53d2c0b72952f212087095b4a3119dd33e12ca996ed7611585fe30a3";
+              sha256 = "4c96efe30c17b96b2d7d62d29e254e98d1eef431ee7eb6a159d76ed21730f16e";
+              sha256_unsigned = "4c96efe30c17b96b2d7d62d29e254e98d1eef431ee7eb6a159d76ed21730f16e";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-962uigs-5hact2hnt-squashfs-sysupgrade.bin";
-              sha256 = "e55d71088ffd2cc8b488116def05d32535335e53f29167c5dba9f99a7aa4a4fb";
-              sha256_unsigned = "937c389c007b44c13949c47fda1cc1d8a44d22cb1e833ca76bada09fb206d12e";
+              sha256 = "aef171bae7569d2575d05f69c990e6c8576ddc6870d5d74ed8ef5e443cfb618b";
+              sha256_unsigned = "8f51763d61b7709aa13bf87f9c4b88b431ee149ac8ec8064b6d98769f77960eb";
               type = "sysupgrade";
             }
           ];
@@ -16124,18 +16124,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-lhg-2nd";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-lhg-2nd-initramfs-kernel.bin";
-              sha256 = "bea849ba7442a99232ea4addca2a4427c60cf70ff5cc558a6efcf8bcaa86b3f6";
-              sha256_unsigned = "bea849ba7442a99232ea4addca2a4427c60cf70ff5cc558a6efcf8bcaa86b3f6";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-lhg-2nd-squashfs-sysupgrade.bin";
-              sha256 = "0fb34e43730bfb022678a7ba250e0d84cbfdd4f5b9e409728ef6eb7f3c74c0ed";
-              sha256_unsigned = "39e696b2910799547c0eef170f4bd1d7bd80a045bb240cdd283c89f05c35dea5";
+              sha256 = "e9a91f07c5d03df28318fe7023bf3640ca2e9844e6e80fd1020fd81b86d9c193";
+              sha256_unsigned = "4e03788b115146faa74a4b7903f1303692e409342ab59424437a3a1be1c77673";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-lhg-2nd-initramfs-kernel.bin";
+              sha256 = "74a3ecb5c90a30295230042e01a1bad229994527e54605f724993d6248ec455c";
+              sha256_unsigned = "74a3ecb5c90a30295230042e01a1bad229994527e54605f724993d6248ec455c";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -16158,15 +16158,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-lhg-5nd-squashfs-sysupgrade.bin";
-              sha256 = "7cac43c997e2bef1fc20f37b18b0f0c68d21e61c6f0524233549a44ff3ab94c9";
-              sha256_unsigned = "190330f626fd166cb43f344ee97106353e3496f7f5079d85fe72bc7f8a9b70f7";
+              sha256 = "06e64607b174b19a78f24edd4db4b3c11308184a94b3014602ce10d8d013bc46";
+              sha256_unsigned = "a080828d9dfaa3a7c31a08e22f20a90e3939b77884724e2806420d13f4ff09ec";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-lhg-5nd-initramfs-kernel.bin";
-              sha256 = "ea9fa29317e2d525f06f5ff9c10672c29159e4a5440f5e947757e6179e102e0a";
-              sha256_unsigned = "ea9fa29317e2d525f06f5ff9c10672c29159e4a5440f5e947757e6179e102e0a";
+              sha256 = "efe50fdb4f9cce6c05a8793294a1fba58ef0ea39da326d8300edb113eab60d79";
+              sha256_unsigned = "efe50fdb4f9cce6c05a8793294a1fba58ef0ea39da326d8300edb113eab60d79";
               type = "kernel";
             }
           ];
@@ -16191,15 +16191,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-map-2nd-squashfs-sysupgrade.bin";
-              sha256 = "ead839a93cf5efc19320635ee5ce8b0050e8de8d2009e3e243eee7a370ea6bf1";
-              sha256_unsigned = "74bac33fa2924a3b1ee3e97ba80ac16723b2b876c25b17dbb2f923f8e55bd8aa";
+              sha256 = "da52657dc0a30a75fa5a3286758d2a9518116ff53fe7b46ae4afc404bf06d719";
+              sha256_unsigned = "c9519294181cd54298276e22e4488669ef53ff2d193725664c9b9e26200a99ae";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-map-2nd-initramfs-kernel.bin";
-              sha256 = "3808e8fead3a335154ca56a297c4a40aabc492863a63ec09405055bd563c22dc";
-              sha256_unsigned = "3808e8fead3a335154ca56a297c4a40aabc492863a63ec09405055bd563c22dc";
+              sha256 = "c4ed83c5d6b384add7b74918d777ab526b7b3ea76df89262f3ab562e84a49de8";
+              sha256_unsigned = "c4ed83c5d6b384add7b74918d777ab526b7b3ea76df89262f3ab562e84a49de8";
               type = "kernel";
             }
           ];
@@ -16222,15 +16222,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-squashfs-sysupgrade.bin";
-              sha256 = "c7df5c68d93471a7c1dcf2a40ea68df73932160b3b6953f06f34f7f7449d8b32";
-              sha256_unsigned = "9399e30b6210c7bc179d6fe417920233987b1ea8e6e89ed662aaaffb06078d9b";
+              sha256 = "04751d5307185eab0609c007f7de8b06071640efa2468f9088760cacdf5c9a1e";
+              sha256_unsigned = "ffad58ae28c340c8c38342fcc683b1376fea42a99ed8238370c9735614f52cc5";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-mapl-2nd-initramfs-kernel.bin";
-              sha256 = "e37d8f73f2a786b51426204122d7fb98c2a9821fc487d654157a4663ee2bf897";
-              sha256_unsigned = "e37d8f73f2a786b51426204122d7fb98c2a9821fc487d654157a4663ee2bf897";
+              sha256 = "21a1c18c308a16c299e9e8d00bb804e5e1b13ba14b08dd0687fd400ba8ec959d";
+              sha256_unsigned = "21a1c18c308a16c299e9e8d00bb804e5e1b13ba14b08dd0687fd400ba8ec959d";
               type = "kernel";
             }
           ];
@@ -16254,15 +16254,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-sxt-5nd-r2-initramfs-kernel.bin";
-              sha256 = "474568b972bfc7b99bf72e5f1629a52ec10afa8741bbb08fbecdf40f3b94afad";
-              sha256_unsigned = "474568b972bfc7b99bf72e5f1629a52ec10afa8741bbb08fbecdf40f3b94afad";
+              sha256 = "03e865dfa64e8e96d5cb89c3cfc6604ed33bbdcd4358da3d8e28609a2c1d03bf";
+              sha256_unsigned = "03e865dfa64e8e96d5cb89c3cfc6604ed33bbdcd4358da3d8e28609a2c1d03bf";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-sxt-5nd-r2-squashfs-sysupgrade.bin";
-              sha256 = "14b36c1616a7344150dd6b96e5ccfe5d9274c43c95e53f51ee2862ec074959a3";
-              sha256_unsigned = "041b1e3e5ecb3dcf856369e668d43f4bf0e3fb5b333a1ce2cf64e2cfc860093e";
+              sha256 = "c84dfd1c10f9a62ef8a69da4a480a0aba751f740e37c8f988255463777bd0e81";
+              sha256_unsigned = "36c2d2d33857b0725beb149ed3ef868cc77f291c2e484bf6d38a2f0931af5a9b";
               type = "sysupgrade";
             }
           ];
@@ -16284,18 +16284,18 @@
           image_prefix = "openwrt-ath79-mikrotik-mikrotik_routerboard-wap-2nd";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wap-2nd-squashfs-sysupgrade.bin";
-              sha256 = "eed90435ea02c4d8d8aa279e90777cfaf86c70eb43848be4ec18bab4cba74b54";
-              sha256_unsigned = "6f886bca0b09963f5fa84cb7e304c9849e9b3a98e8abb3cc85e701e29528ca2d";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wap-2nd-initramfs-kernel.bin";
-              sha256 = "9d88d233edccd937ee34146cff03e5339d0a552196ca6b24fbdbbcde3cb8f92a";
-              sha256_unsigned = "9d88d233edccd937ee34146cff03e5339d0a552196ca6b24fbdbbcde3cb8f92a";
+              sha256 = "b7a1f4915de40a67fc8821b1370b373feb7c1fa60b05184659df62c9dbdcfa50";
+              sha256_unsigned = "b7a1f4915de40a67fc8821b1370b373feb7c1fa60b05184659df62c9dbdcfa50";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wap-2nd-squashfs-sysupgrade.bin";
+              sha256 = "5a395ee3aa50f9e05a26f8a43f9cece7371aa05de5da8a82684f4419770f132d";
+              sha256_unsigned = "85de71c66870004954225189e0f3db967de0f5ee8470fab9b1caf9e41356dc4e";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -16319,15 +16319,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wap-g-5hact2hnd-initramfs-kernel.bin";
-              sha256 = "321645d43daa62aa4791e53d0a3114df1264c8f3f0af485c4098cec950b4fc2c";
-              sha256_unsigned = "321645d43daa62aa4791e53d0a3114df1264c8f3f0af485c4098cec950b4fc2c";
+              sha256 = "04610fa01a203f212f393cc482f848dc3743306090932b1a9776b9a97fc148f4";
+              sha256_unsigned = "04610fa01a203f212f393cc482f848dc3743306090932b1a9776b9a97fc148f4";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wap-g-5hact2hnd-squashfs-sysupgrade.bin";
-              sha256 = "8ba0e0cef9791fb556ecd94312b0223e130048f8d679e971b37af1dd11b9f6bb";
-              sha256_unsigned = "a3a8dc0805819841d379fd0f606636fdd85ef059e4295c7406feda307b21abbe";
+              sha256 = "ee450239db12b0ab037ee1cd70520201a0204fbe071583a0ae346c944942280f";
+              sha256_unsigned = "ac0e2fbd8032d6ff73288037b99f925e7ceed1204e11c610d412c304365ad964";
               type = "sysupgrade";
             }
           ];
@@ -16353,15 +16353,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wapr-2nd-initramfs-kernel.bin";
-              sha256 = "5c68fdb9b6dfc8606c622f2ecfea870dfbd06ba52c02bd80e954ff2a29e4c2b5";
-              sha256_unsigned = "5c68fdb9b6dfc8606c622f2ecfea870dfbd06ba52c02bd80e954ff2a29e4c2b5";
+              sha256 = "46b23b2c8066297bfb8d12816e595c93af4fc46678fca19dc2fe92bb3bfc5546";
+              sha256_unsigned = "46b23b2c8066297bfb8d12816e595c93af4fc46678fca19dc2fe92bb3bfc5546";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ath79-mikrotik-mikrotik_routerboard-wapr-2nd-squashfs-sysupgrade.bin";
-              sha256 = "9e35e85192111523c373ebebcdcb512162adf784305e3c9fedb133486090893f";
-              sha256_unsigned = "7167bca5577aebf89925ea93e38bea469610f904ee9d378666c4a027d21306fd";
+              sha256 = "fc17df3ae768a88e6025bfbf319d1b2ef917da5a1d966cec92676519690e4936";
+              sha256_unsigned = "b53296adf46a8f0047126f162cb4c0d084b4af3e28b402d68e232f6d1c32887b";
               type = "sysupgrade";
             }
           ];
@@ -16376,9 +16376,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "ath79/mikrotik";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
     nand = {
@@ -23336,17 +23336,17 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-comtrend_vg-8050-squashfs-cfe.bin";
-              sha256 = "f1de8be45bd61d935bd698729311e2d2e4ce0bcbd6f34aa7e0f433f59de957a8";
-              sha256_unsigned = "f1de8be45bd61d935bd698729311e2d2e4ce0bcbd6f34aa7e0f433f59de957a8";
-              type = "cfe";
+              name = "openwrt-bmips-bcm63268-comtrend_vg-8050-squashfs-sysupgrade.bin";
+              sha256 = "5f882bb41119295fa541e672e0db02f18e334ebe70b92dc007ff3e6cb2a48997";
+              sha256_unsigned = "8a17316d0f5bd2f32293d6341474a2e2ce08262f787e5668030799beb9b14c93";
+              type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-comtrend_vg-8050-squashfs-sysupgrade.bin";
-              sha256 = "478d02aac4554fd6cd44bfd6d89f55a8c9834dc125670604073a4db97b378e88";
-              sha256_unsigned = "8a68a2e28537fd3ec9c1cdabe686ca75e4515d7e4a54ab82f6abfef4028077ea";
-              type = "sysupgrade";
+              name = "openwrt-bmips-bcm63268-comtrend_vg-8050-squashfs-cfe.bin";
+              sha256 = "86a1feab8dc3ed535b715ce1d233a32157c9f752136e7676e1fff1d7d1c6e65f";
+              sha256_unsigned = "86a1feab8dc3ed535b715ce1d233a32157c9f752136e7676e1fff1d7d1c6e65f";
+              type = "cfe";
             }
           ];
           supported_devices = [
@@ -23372,15 +23372,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-bmips-bcm63268-comtrend_vr-3032u-squashfs-sysupgrade.bin";
-              sha256 = "83252a050d36526560f7d9992b5857a7ab1eb023124f71d21515ea263ee6ca33";
-              sha256_unsigned = "bb949b325ccd901c0f7e64327276de33ce84cb5da61d4fcca4c061ada171b2bb";
+              sha256 = "0c84406e4770e01d896737f4501cc54abb98254c3383ed7ff6d69a50aa412388";
+              sha256_unsigned = "068942fef4353d5f58255424738d30a513c850543dcef8f9cf1981ab880a9f6f";
               type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-bmips-bcm63268-comtrend_vr-3032u-squashfs-cfe.bin";
-              sha256 = "b297f606d09d724833b3f49678191ba9aacd389419b75937ce5dedabd1c6448c";
-              sha256_unsigned = "b297f606d09d724833b3f49678191ba9aacd389419b75937ce5dedabd1c6448c";
+              sha256 = "ebf94a1179a1119ea44c9f7d7687128aff60f09739f982c1dd9853fb38193863";
+              sha256_unsigned = "ebf94a1179a1119ea44c9f7d7687128aff60f09739f982c1dd9853fb38193863";
               type = "cfe";
             }
           ];
@@ -23406,17 +23406,17 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-sercomm_h500-s-lowi-squashfs-sysupgrade.bin";
-              sha256 = "d9099abfc0af5f45c1586c131bbdc3c9b525dbfb401df61123bf9f9d4c15959f";
-              sha256_unsigned = "87b95106486c2593865fe5348cc8bf7dc7d70137972f0f823570e09d257c5a73";
-              type = "sysupgrade";
+              name = "openwrt-bmips-bcm63268-sercomm_h500-s-lowi-squashfs-factory.img";
+              sha256 = "a77013c62b25a2457b1896119811e08100cea8d7273867a38d8ef865bffa23c4";
+              sha256_unsigned = "a77013c62b25a2457b1896119811e08100cea8d7273867a38d8ef865bffa23c4";
+              type = "factory";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-sercomm_h500-s-lowi-squashfs-factory.img";
-              sha256 = "6e080f464c5d01c24483acfe6fcbb4d51823e01a974cccfe477d5f6c44f8e91b";
-              sha256_unsigned = "6e080f464c5d01c24483acfe6fcbb4d51823e01a974cccfe477d5f6c44f8e91b";
-              type = "factory";
+              name = "openwrt-bmips-bcm63268-sercomm_h500-s-lowi-squashfs-sysupgrade.bin";
+              sha256 = "a3e985b5b96f995f3b6344ee5a6868c5021a21861257f5551c4e0c665c303f7f";
+              sha256_unsigned = "d6940dd61a2f5ebb80f9c70f05deb31fd1efc69d570153a6614f890d859210ca";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -23442,17 +23442,17 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-sercomm_h500-s-vfes-squashfs-factory.img";
-              sha256 = "c25fb035f58eab43dca943855d8ef16e098a59c9a42a4b9bece359c72bb96dbd";
-              sha256_unsigned = "c25fb035f58eab43dca943855d8ef16e098a59c9a42a4b9bece359c72bb96dbd";
-              type = "factory";
+              name = "openwrt-bmips-bcm63268-sercomm_h500-s-vfes-squashfs-sysupgrade.bin";
+              sha256 = "3b192fb8937605671d62572b6745365dfc25bb48b682ff9436d0cabde6993255";
+              sha256_unsigned = "4e3d32fd24f9ec81fe75f7f298fc96c8032c21e5a17579f971b308ed81992425";
+              type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-sercomm_h500-s-vfes-squashfs-sysupgrade.bin";
-              sha256 = "c64aa93c90fe10019f53ec86520713f3dd86c4eef711666b3c311bc2952617f5";
-              sha256_unsigned = "c78eeaeb2d78654dcf732dfb095b58a26b4577bc5a4f48739c756add5a6167d5";
-              type = "sysupgrade";
+              name = "openwrt-bmips-bcm63268-sercomm_h500-s-vfes-squashfs-factory.img";
+              sha256 = "8dc31e6339e187a1214e63efeecd9d399eed519c03f5007ccd8db43c397ec2d1";
+              sha256_unsigned = "8dc31e6339e187a1214e63efeecd9d399eed519c03f5007ccd8db43c397ec2d1";
+              type = "factory";
             }
           ];
           supported_devices = [
@@ -23480,17 +23480,17 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-sercomm_shg2500-squashfs-sysupgrade.bin";
-              sha256 = "4d8c140e3c89777231bdadfb036cb677025e8405f06ecb5503daf5357faf29d6";
-              sha256_unsigned = "837305024c3fe3d4606949e8b4ccf48610b071d7564f534fc2981c9259d83a46";
-              type = "sysupgrade";
+              name = "openwrt-bmips-bcm63268-sercomm_shg2500-squashfs-factory.img";
+              sha256 = "3b7d77934bd2527c148487c7be75173b1bbb806184a031567f54defb9e2ea287";
+              sha256_unsigned = "3b7d77934bd2527c148487c7be75173b1bbb806184a031567f54defb9e2ea287";
+              type = "factory";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-bmips-bcm63268-sercomm_shg2500-squashfs-factory.img";
-              sha256 = "a21023df8eaadac781131f5dbe2ac3e59adc2edf7ba52db0ed03a8c9f6acb814";
-              sha256_unsigned = "a21023df8eaadac781131f5dbe2ac3e59adc2edf7ba52db0ed03a8c9f6acb814";
-              type = "factory";
+              name = "openwrt-bmips-bcm63268-sercomm_shg2500-squashfs-sysupgrade.bin";
+              sha256 = "320ceb2401e5abdbd0c434ec17cf707a8f17f13c4f1770cd55d1f72d3087a69d";
+              sha256_unsigned = "551ec57ec2a4c1a9de95d7537d52bc6e09fbb95c940cf9b1d7241819502e3f2f";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -23504,9 +23504,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "bmips/bcm63268";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
     bcm6328 = {
@@ -27416,15 +27416,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_cap-ac-initramfs-kernel.bin";
-              sha256 = "b1c90c6efebfd68c734e2272ad5fc33f7d076129ed61da475247b162ec741ab6";
-              sha256_unsigned = "b1c90c6efebfd68c734e2272ad5fc33f7d076129ed61da475247b162ec741ab6";
+              sha256 = "9087e5b02cf15a914c311bba7ddac17195d55890bde4eb6fac95f4902c10fa60";
+              sha256_unsigned = "9087e5b02cf15a914c311bba7ddac17195d55890bde4eb6fac95f4902c10fa60";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_cap-ac-squashfs-sysupgrade.bin";
-              sha256 = "8dc383a995902b63e71d7c2f90eb0294618caff1d364809497606a3110f48810";
-              sha256_unsigned = "364773e28043c110dd4bbcba05fee787d2ecba57ea0f0106e7f63fabc9aae9d1";
+              sha256 = "42be12f1bca463c6071586bf28c01973bfbebe48bb73761abc303eed5f8bd2df";
+              sha256_unsigned = "d4f1dd9d3ac4c7d827a8e6ad5a729e3bc3209d96c4b57d982e545fa1c32dc877";
               type = "sysupgrade";
             }
           ];
@@ -27448,15 +27448,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac2-squashfs-sysupgrade.bin";
-              sha256 = "f918e0cb1664a14ba339b26e2f4c191b4da58d638de616b23424673332004144";
-              sha256_unsigned = "0b9ea581525ae0ed7760a4b430714efa11f28dab5c8c1c4230a5fea643bb4b5a";
+              sha256 = "e35ead78eb2a189d97ff41f784c254b883861171e6a4638c1e3be4ece47dc7df";
+              sha256_unsigned = "f0be1e43651d8a47703dddaaded47f3edcf40e9c16d9ac965ad3448d024d33e8";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac2-initramfs-kernel.bin";
-              sha256 = "d7441bcd5c3469758cc9194527c356f5a487290b237959f46eab029e220b9acd";
-              sha256_unsigned = "d7441bcd5c3469758cc9194527c356f5a487290b237959f46eab029e220b9acd";
+              sha256 = "1d267d6a53b5502e34a07a1d9c1a004c767223156616ad44229e3cd4a9a93d98";
+              sha256_unsigned = "1d267d6a53b5502e34a07a1d9c1a004c767223156616ad44229e3cd4a9a93d98";
               type = "kernel";
             }
           ];
@@ -27477,18 +27477,18 @@
           image_prefix = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-squashfs-sysupgrade.bin";
-              sha256 = "dec10f698b1456c3831bc493b9e8aee59852483d3397b7deee67f4c0d38b1f1a";
-              sha256_unsigned = "df164b93a60cfbd2a8c8918d0895fc316ef8f79aea2a7deee5b6f70dd4653aaf";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-initramfs-kernel.bin";
-              sha256 = "208e025f37be087f637ff31888262c1a83f01d7b6cf5ff8ccb71ecb3cfe7a3e2";
-              sha256_unsigned = "208e025f37be087f637ff31888262c1a83f01d7b6cf5ff8ccb71ecb3cfe7a3e2";
+              sha256 = "00a86339f9ce297da08193bdd779195d1b53c321d4d098393e3d1299f4c1e16c";
+              sha256_unsigned = "00a86339f9ce297da08193bdd779195d1b53c321d4d098393e3d1299f4c1e16c";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-squashfs-sysupgrade.bin";
+              sha256 = "f32197b8074ee02511131ed84894b7b3012555ccd3c0863d33deebcc97bb4175";
+              sha256_unsigned = "9edfc95783c5a58b9f61ba252f33688d3b6b2efcf432c68a2a900746d8b11786";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -27510,18 +27510,18 @@
           image_prefix = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-lte6-kit";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-lte6-kit-squashfs-sysupgrade.bin";
-              sha256 = "e07ebafd7eadc38f124ff1769ca8274c08f4731ce332c0a7c2258366f2d7a900";
-              sha256_unsigned = "77b5d1569b0eef4a804cfb1b3199ba5012430cf671e9ee0ee2209843ed36cabb";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-lte6-kit-initramfs-kernel.bin";
-              sha256 = "4fef114bdc0710deb871e0d2c6d730671e7a393c2c79f7752480bf08537e645a";
-              sha256_unsigned = "4fef114bdc0710deb871e0d2c6d730671e7a393c2c79f7752480bf08537e645a";
+              sha256 = "12be522355e3ccadfda570463fc50b3249f39c7580cc938cae074b745d11d017";
+              sha256_unsigned = "12be522355e3ccadfda570463fc50b3249f39c7580cc938cae074b745d11d017";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac3-lte6-kit-squashfs-sysupgrade.bin";
+              sha256 = "a28bc8b12527f5ff74df47a93a86355d17f336002da516fb11420d7447215975";
+              sha256_unsigned = "15d7da07e6a78e3a607dfa6ed08990ee424cd3cc8c5db536bf10b168eebe5e88";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -27545,15 +27545,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_lhgg-60ad-squashfs-sysupgrade.bin";
-              sha256 = "ac411820a6726f5630e345470f3099d8057687a869d8ab618b891bc268044f63";
-              sha256_unsigned = "24b642154dad3e1fcf5154b90d98da47271e676b8b3e26d7427bde4065db44e7";
+              sha256 = "69aaf7cec3ad5a68b7f0a12fc423aa72b019e0c89be2b4c1eab14bcc156914cc";
+              sha256_unsigned = "d802b2c8bfe1e1e7d97d99d615931aaba398beac493a5b4be348573be0bea2df";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_lhgg-60ad-initramfs-kernel.bin";
-              sha256 = "ecafedbf6a70ce58596b5e5467ce9655e2d5d20299ccee86a485698ab0fe7ced";
-              sha256_unsigned = "ecafedbf6a70ce58596b5e5467ce9655e2d5d20299ccee86a485698ab0fe7ced";
+              sha256 = "529936633cf00cec6e41fe53215b096dee9f0bcc5bb67ca37f818e30d124a992";
+              sha256_unsigned = "529936633cf00cec6e41fe53215b096dee9f0bcc5bb67ca37f818e30d124a992";
               type = "kernel";
             }
           ];
@@ -27574,18 +27574,18 @@
           image_prefix = "openwrt-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac-squashfs-sysupgrade.bin";
-              sha256 = "0c5ecccbcdcb398629c3a53332e2d8bebbf99a1579c5198afe259a6ff5bb0b5a";
-              sha256_unsigned = "9fbcddc1c978d44b6453eaa524654a90a3190ee46af0195e16a3f4fe80edb73c";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac-initramfs-kernel.bin";
-              sha256 = "7f0e9d5a74a03856aaa999e5164d6056aa87685a31f2173a346687d99a6c29f8";
-              sha256_unsigned = "7f0e9d5a74a03856aaa999e5164d6056aa87685a31f2173a346687d99a6c29f8";
+              sha256 = "f3275b88b3d91a9358cca5dccaa261700fd2c96d4e9a2b1fb3a239df0958c7f3";
+              sha256_unsigned = "f3275b88b3d91a9358cca5dccaa261700fd2c96d4e9a2b1fb3a239df0958c7f3";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac-squashfs-sysupgrade.bin";
+              sha256 = "c300bbb34e369d2625aae833d43705ea24aa4efee92ab9ccb9145d786db71095";
+              sha256_unsigned = "9aba0a9c289306934e3a99670cafa288e4e75aead943d4ef63b2c4c01962b9c5";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -27606,18 +27606,18 @@
           image_prefix = "openwrt-ipq40xx-mikrotik-mikrotik_wap-ac";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-ac-initramfs-kernel.bin";
-              sha256 = "dea701ffb8d3dc8e36dcb220fe4d8875ed50e979fa005431a78f063b2bed543f";
-              sha256_unsigned = "dea701ffb8d3dc8e36dcb220fe4d8875ed50e979fa005431a78f063b2bed543f";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-ac-squashfs-sysupgrade.bin";
-              sha256 = "3ff73ac5823a1099a2ad84b6a43f8480558eb7d437759faac76804bb475c84ac";
-              sha256_unsigned = "4e95f7fb797590919e08bb46bf1b7e1d48144aab0705e4dc0f7a17e27b75ff9f";
+              sha256 = "1b9142b56493accd539f63ead88dd3ef1f23ef4f70b65e78fbeb33530355dca8";
+              sha256_unsigned = "5822532a3b07669c89c598010ac796af5cb43526930b4db8cf124f47a9f1962d";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-ac-initramfs-kernel.bin";
+              sha256 = "06a862346c45de5ee155b90a8d4c262f11495791015ea1580963ff2d687bcf25";
+              sha256_unsigned = "06a862346c45de5ee155b90a8d4c262f11495791015ea1580963ff2d687bcf25";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -27643,15 +27643,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-ac-lte-initramfs-kernel.bin";
-              sha256 = "091ae90e54166175ff93c23e575d86a58307bd127532343c35e46d4add500301";
-              sha256_unsigned = "091ae90e54166175ff93c23e575d86a58307bd127532343c35e46d4add500301";
+              sha256 = "2c5f15f480cc5a0d22be244ce5847557f244aa703e0d6b81029bd94c58003685";
+              sha256_unsigned = "2c5f15f480cc5a0d22be244ce5847557f244aa703e0d6b81029bd94c58003685";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-ac-lte-squashfs-sysupgrade.bin";
-              sha256 = "1cd044cd9d1548cb133cd4ae4d60dd7a39817c5c75f8e32a6bb5b3ba839bc9d1";
-              sha256_unsigned = "bf42357fa1efe88a2ce38ca4a6665d3a0a864de3f44275354aeed8ba175452bd";
+              sha256 = "9ea0c3dc9f842bddb3e94526cf91aa7d0ab7673265a1f9bfa81e5ee6534c13c6";
+              sha256_unsigned = "cb6e0a05ad2eb88c88d340f1b3769baba4b9c35ce467b0410d098a8d314f0557";
               type = "sysupgrade";
             }
           ];
@@ -27680,18 +27680,18 @@
           image_prefix = "openwrt-ipq40xx-mikrotik-mikrotik_wap-r-ac";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-r-ac-squashfs-sysupgrade.bin";
-              sha256 = "68ca9da3408336ff08466160e2270626c2843145447e0031bf1c775b3fa5f8c3";
-              sha256_unsigned = "937b82299b699dd80d648b61531f11b61113e8e9b303890619116f5ae8cbddae";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-r-ac-initramfs-kernel.bin";
-              sha256 = "e82b817c92afc57b3a148a9f816480bb9ec28723107df773d844c199c9082225";
-              sha256_unsigned = "e82b817c92afc57b3a148a9f816480bb9ec28723107df773d844c199c9082225";
+              sha256 = "af2b0984046f322dc00e6ceae4d6976d7144ceadad72877d45a9beb31da83d37";
+              sha256_unsigned = "af2b0984046f322dc00e6ceae4d6976d7144ceadad72877d45a9beb31da83d37";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-ipq40xx-mikrotik-mikrotik_wap-r-ac-squashfs-sysupgrade.bin";
+              sha256 = "47bf72817a1e2d18ef51303709a0f88c270cdecf30cf4452834c52c5ee0de5b1";
+              sha256_unsigned = "a780518dc5404ac3ba1c46aecf748714b52072965b9ec553943c7ee35dd7973e";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -27705,9 +27705,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "ipq40xx/mikrotik";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
   };
@@ -29789,15 +29789,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-checkpoint_l-50-initramfs-uImage";
-              sha256 = "730541e952d635f99cdf0d3078485ed361c1aff86bf127546709f6be962f618e";
-              sha256_unsigned = "730541e952d635f99cdf0d3078485ed361c1aff86bf127546709f6be962f618e";
+              sha256 = "b1a6f6c755f3302b7763cdebd9b29520eb022d27cbd1803bc047cf588df20aaa";
+              sha256_unsigned = "b1a6f6c755f3302b7763cdebd9b29520eb022d27cbd1803bc047cf588df20aaa";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-checkpoint_l-50-squashfs-sysupgrade.bin";
-              sha256 = "d85d05f9e2d0e3da0b6736432ff58f45b4d61c889653b54d396e0f58a8662bb3";
-              sha256_unsigned = "4927fbaceacb9e4d680ec0a503bfaada8e3c39901d4e63cf7d1e9846be8833c6";
+              sha256 = "edccd6ccff135f3490074a18d04c202e9966f1e685836814534acf775e6fb5d0";
+              sha256_unsigned = "6221e16e411029977a13c29e89d622d3924dba7cf85a468c00bdfae10781c8bd";
               type = "sysupgrade";
             }
           ];
@@ -29820,22 +29820,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-cisco_on100-initramfs-uImage";
-              sha256 = "2344d1d303240eb498b5a1204e0a52c6df1fb62cafaf584c0e8fd0875f7026a0";
-              sha256_unsigned = "2344d1d303240eb498b5a1204e0a52c6df1fb62cafaf584c0e8fd0875f7026a0";
+              sha256 = "f3e37d11a9bd4c1a43d776ba1c6fc5a3d5c57e8362a4056e27aa7494f807f2b1";
+              sha256_unsigned = "f3e37d11a9bd4c1a43d776ba1c6fc5a3d5c57e8362a4056e27aa7494f807f2b1";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-cisco_on100-squashfs-factory.bin";
-              sha256 = "c3450436b3d3dd5b19b6d01c9751e10e9d61a6c5677def1bba6e3ac15e0eb96b";
-              sha256_unsigned = "c3450436b3d3dd5b19b6d01c9751e10e9d61a6c5677def1bba6e3ac15e0eb96b";
+              sha256 = "ef7980abb16e1be9569074c4275512d6f62566cff68f3cccffc32eaa99f20757";
+              sha256_unsigned = "ef7980abb16e1be9569074c4275512d6f62566cff68f3cccffc32eaa99f20757";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-cisco_on100-squashfs-sysupgrade.bin";
-              sha256 = "e7f505145941bcf06811da8bb3e6cd26b16a43be2641a55274c06e5da145d2ac";
-              sha256_unsigned = "44ad23044daf58af70426eed6dc27999415db6a458d3c3dad843dd170fe5dcd2";
+              sha256 = "d0b5ec8462c16578a62dbe1f8b89abc00a0534ecc26641afd8b214322a47731b";
+              sha256_unsigned = "245d587834b19b5e28df93c88e79c83a8ffbd7347b57868038c363256c93c4dc";
               type = "sysupgrade";
             }
           ];
@@ -29857,22 +29857,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-cloudengines_pogoe02-squashfs-sysupgrade.bin";
-              sha256 = "967f5ec10bf11654b6b27ccf7770479f77c919f1dbdb250ab86bbd2ff38c4b14";
-              sha256_unsigned = "74ebb56da0de8ec5fa8143f75ba4ee99bdd1f1ad7c5cf54fd5e10af2ef1fef61";
+              sha256 = "1cea7f89e47aa051024b230f68956c3dd774841ee3a85177035a255c5924b717";
+              sha256_unsigned = "1725092f5ff9b0fa1dcf9f9dce9f7ff97ad6c3219c19bc0eb400784b8ac80df4";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-cloudengines_pogoe02-initramfs-uImage";
-              sha256 = "d572742499a2e558762fdbd559d8a43c6a64845bf039e958ed1f4d5dbdb59d2c";
-              sha256_unsigned = "d572742499a2e558762fdbd559d8a43c6a64845bf039e958ed1f4d5dbdb59d2c";
+              sha256 = "29aaa2ec5df9402e99900007663eba825fb7104b4b3215d13b35e784b60b2057";
+              sha256_unsigned = "29aaa2ec5df9402e99900007663eba825fb7104b4b3215d13b35e784b60b2057";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-cloudengines_pogoe02-squashfs-factory.bin";
-              sha256 = "bac7387df548ba02d7eb9bbc6a37d9159ee96f1496f58b24baea62184678951b";
-              sha256_unsigned = "bac7387df548ba02d7eb9bbc6a37d9159ee96f1496f58b24baea62184678951b";
+              sha256 = "c905507c3fb5d9d2c1ea50d7489f75121c2c3d5d6b7cf26a82b29738eb485e4f";
+              sha256_unsigned = "c905507c3fb5d9d2c1ea50d7489f75121c2c3d5d6b7cf26a82b29738eb485e4f";
               type = "factory";
             }
           ];
@@ -29900,22 +29900,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-cloudengines_pogoplugv4-squashfs-sysupgrade.bin";
-              sha256 = "e4d157d89361ad1801a15f578da914b164f8fde31b1e9c762b8a2c321652b479";
-              sha256_unsigned = "dcd0be8b4bfa599b28defe2bf4b9628c0d1b534791b7767a634105db9958d284";
+              sha256 = "7aae7c78867034a7d09735f10ceadea1b220f2f0cf0f10984e1aec05fb53a155";
+              sha256_unsigned = "9939b01e72ef1897070a79a831fb452f508dc9de46aa5aa4032e773f11aae3ed";
               type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-cloudengines_pogoplugv4-squashfs-factory.bin";
-              sha256 = "5670efe9eba5327dfdee9f84ee505f0b2cef6dd02de0401884572c514f2101dc";
-              sha256_unsigned = "5670efe9eba5327dfdee9f84ee505f0b2cef6dd02de0401884572c514f2101dc";
+              sha256 = "7ee98509fee171aeeac9e302f6fcdb7f844a8424bd947bcb211f367092bbd300";
+              sha256_unsigned = "7ee98509fee171aeeac9e302f6fcdb7f844a8424bd947bcb211f367092bbd300";
               type = "factory";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-cloudengines_pogoplugv4-initramfs-uImage";
-              sha256 = "90fa1498c423b6808e5b4bb6d42b970d6d4a9c1e305210ca295ad4fd87db17a8";
-              sha256_unsigned = "90fa1498c423b6808e5b4bb6d42b970d6d4a9c1e305210ca295ad4fd87db17a8";
+              sha256 = "1dab9d1c0f4a5af51215ae3c8264eeab2eab4481aa1ca20617a782a92a42a55d";
+              sha256_unsigned = "1dab9d1c0f4a5af51215ae3c8264eeab2eab4481aa1ca20617a782a92a42a55d";
               type = "kernel";
             }
           ];
@@ -29942,15 +29942,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-ctera_c200-v1-squashfs-sysupgrade.bin";
-              sha256 = "4fb3514bb4843a63656a11660ac9fac7e4c7e0f30e9d7f21f9ad1f8c3f28148b";
-              sha256_unsigned = "e4eb9cd924aa9c63adc4a1e1a09d14eb0f49d00a9c68c765a6830502a030d190";
+              sha256 = "2095af0a503adbb3af890ef97244d19b7490d5caff987cce748bec2ea1eb3672";
+              sha256_unsigned = "1a01180fcba32c84f55e0f141b78c5f7f4d0ad7916372042ac0d8463203fd6b6";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-ctera_c200-v1-initramfs-factory.firm";
-              sha256 = "1237b7167c51cebe73b83e8ceac51b5e6398196fd146afc41350cde505a00cbe";
-              sha256_unsigned = "1237b7167c51cebe73b83e8ceac51b5e6398196fd146afc41350cde505a00cbe";
+              sha256 = "6f1d0daf2cb0dd565076fe76e89f6ef0df2d656c24bdb0e0f353fabed6d911de";
+              sha256_unsigned = "6f1d0daf2cb0dd565076fe76e89f6ef0df2d656c24bdb0e0f353fabed6d911de";
               type = "kernel";
             }
           ];
@@ -29977,15 +29977,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-endian_4i-edge-200-squashfs-sysupgrade.bin";
-              sha256 = "63c47fde112b23bf59472fe36144a9afc243d35290e3bbd49dd691b3e6bb48d2";
-              sha256_unsigned = "a3809be7c37f289a03df6f1f48035a5995cde0c56ec864b99544692a8eeaaef0";
+              sha256 = "563f38e2b7f1827f4591f43c78a7b61177fdb28f38519a7a0e69b048d58f43f1";
+              sha256_unsigned = "4539ddc2afde494331f37e2106a805b1caa9a9c84988822a9253d24386d9a31d";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-endian_4i-edge-200-initramfs-uImage";
-              sha256 = "63965642ae24810ecc765f757f044fd95945811068e9078a0b892e11fcb10a5b";
-              sha256_unsigned = "63965642ae24810ecc765f757f044fd95945811068e9078a0b892e11fcb10a5b";
+              sha256 = "94189f93c66ce141e08363b7e4c3383fb74bb2438f22c3f015e61d46cdeff820";
+              sha256_unsigned = "94189f93c66ce141e08363b7e4c3383fb74bb2438f22c3f015e61d46cdeff820";
               type = "kernel";
             }
           ];
@@ -30012,22 +30012,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-globalscale_sheevaplug-initramfs-uImage";
-              sha256 = "e08a0245ceb5a5e0f19607bbccd00ad4fbe5cfdb26d755f7c64e1803a62dcb9d";
-              sha256_unsigned = "e08a0245ceb5a5e0f19607bbccd00ad4fbe5cfdb26d755f7c64e1803a62dcb9d";
+              sha256 = "3f206ed10f7afecbc68233385b8690368bcea95256483f7efcd03f882035075a";
+              sha256_unsigned = "3f206ed10f7afecbc68233385b8690368bcea95256483f7efcd03f882035075a";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-globalscale_sheevaplug-squashfs-factory.bin";
-              sha256 = "df34ffa9701ed1bea69196f9097fc02bfa7af6eb2681b3935628ba01c124e477";
-              sha256_unsigned = "df34ffa9701ed1bea69196f9097fc02bfa7af6eb2681b3935628ba01c124e477";
+              sha256 = "452d97422c8a680a291f2e2fcee4123fd17a7c3d68d72591799cec3b4b50fde0";
+              sha256_unsigned = "452d97422c8a680a291f2e2fcee4123fd17a7c3d68d72591799cec3b4b50fde0";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-globalscale_sheevaplug-squashfs-sysupgrade.bin";
-              sha256 = "ce7e862da0b53893fa8a971a07a9453c6cc9bbed17779a5c6de70520cf38e971";
-              sha256_unsigned = "09feb7f8c0e82fece8f9ee73d8569fd46b1c2828811b16506f337e5dd638acfd";
+              sha256 = "92fb95c9a8752c18f491168d37126c0fc707b2677e739a17019499465fbbdb25";
+              sha256_unsigned = "44596d020c27a67c2f20d45afa77a825953d8f32e01a30af57ff88aa7c9396b0";
               type = "sysupgrade";
             }
           ];
@@ -30048,22 +30048,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-iom_iconnect-1.1-initramfs-uImage";
-              sha256 = "f9bd3854cf2ca8f17152144f6e4b0ab7d6790ba34b3aaaae9baea4e5f095ea20";
-              sha256_unsigned = "f9bd3854cf2ca8f17152144f6e4b0ab7d6790ba34b3aaaae9baea4e5f095ea20";
+              sha256 = "24c89a67532b1c647bc073758cd7b9097edf1482620850d565b256c8b910dd8f";
+              sha256_unsigned = "24c89a67532b1c647bc073758cd7b9097edf1482620850d565b256c8b910dd8f";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iom_iconnect-1.1-squashfs-sysupgrade.bin";
-              sha256 = "c494e6025ee6a3872506834bae66d302f7a5be2d61340b4af33bc6eb416a3544";
-              sha256_unsigned = "7678317c305473084edff903b8bf1b01db695702164e430a32847c5c0429fb59";
+              sha256 = "eb7caa63bdfe4d4dade6bbdfcc74b5085b1a8bc2f9c8fd3492903caeaf81c963";
+              sha256_unsigned = "5ecfc2332fff27bc7dd1379704788ddcc6f5e25bd2c8b89aa3ee7063c4509087";
               type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iom_iconnect-1.1-squashfs-factory.bin";
-              sha256 = "5c6ce7402f9b990cf3d1ee52c89c66191ca731fe868670b100a8d131b3e2cdeb";
-              sha256_unsigned = "5c6ce7402f9b990cf3d1ee52c89c66191ca731fe868670b100a8d131b3e2cdeb";
+              sha256 = "bbc1a9d181f85cbc647e21c8f0b58baf9b7c2e6de3c6a2ff99903606650688a6";
+              sha256_unsigned = "bbc1a9d181f85cbc647e21c8f0b58baf9b7c2e6de3c6a2ff99903606650688a6";
               type = "factory";
             }
           ];
@@ -30090,22 +30090,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iom_ix2-200-squashfs-sysupgrade.bin";
-              sha256 = "5723f4652c8062ec1b430819a0c204984c93c760dadb669e2f30ffb87b11b7ad";
-              sha256_unsigned = "cbdfcc7351cb34a4755ebeec754d3787d366a5ed044a552177417c731b449c64";
+              sha256 = "046723e9533ea295d65d034a1d0924b66fcc5a6732f91606d23f7ab299997015";
+              sha256_unsigned = "8ef3ca91c07bfa167e40972add623ee781791a7bf68f3120d6d1962e0a4319d3";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-iom_ix2-200-initramfs-uImage";
-              sha256 = "5c9c39fee6ac53ac6cf33e3d8f5407bb388e9dfe82914e9a529d9a6aa3c2ed01";
-              sha256_unsigned = "5c9c39fee6ac53ac6cf33e3d8f5407bb388e9dfe82914e9a529d9a6aa3c2ed01";
+              sha256 = "af4458e7ce5303def35c6b1774e3fc64c55e56b8b96f68c0c07bfffebd7d2617";
+              sha256_unsigned = "af4458e7ce5303def35c6b1774e3fc64c55e56b8b96f68c0c07bfffebd7d2617";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iom_ix2-200-squashfs-factory.bin";
-              sha256 = "4500daf0414faac36ef4d3c56e5316d06ece8dbe0ba5c1bb84edf980aa2ae005";
-              sha256_unsigned = "4500daf0414faac36ef4d3c56e5316d06ece8dbe0ba5c1bb84edf980aa2ae005";
+              sha256 = "d308042718db959a70698fd4825ee222d2c529e341e4ab3e6911ae6b82da0559";
+              sha256_unsigned = "d308042718db959a70698fd4825ee222d2c529e341e4ab3e6911ae6b82da0559";
               type = "factory";
             }
           ];
@@ -30134,22 +30134,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iom_ix4-200d-squashfs-factory.bin";
-              sha256 = "2c07b4e0a39a05e4319ae47307e42c09c8e8a7eb00a544f268e995f5548e7f08";
-              sha256_unsigned = "2c07b4e0a39a05e4319ae47307e42c09c8e8a7eb00a544f268e995f5548e7f08";
+              sha256 = "64f16b5c7d2dae4f439851ce9102db246288543f3672ad239ce5a32ffd5e3738";
+              sha256_unsigned = "64f16b5c7d2dae4f439851ce9102db246288543f3672ad239ce5a32ffd5e3738";
               type = "factory";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-iom_ix4-200d-initramfs-uImage";
-              sha256 = "40230a2fe4463593855676c3df7a266d592bbeb9f9e5ca41c8ea6e40a2c566c2";
-              sha256_unsigned = "40230a2fe4463593855676c3df7a266d592bbeb9f9e5ca41c8ea6e40a2c566c2";
+              sha256 = "f202a56bc3e4814277064d85c57366714ec7d76681bac728fe5554c208c0ba8f";
+              sha256_unsigned = "f202a56bc3e4814277064d85c57366714ec7d76681bac728fe5554c208c0ba8f";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iom_ix4-200d-squashfs-sysupgrade.bin";
-              sha256 = "70953be54467c17535fbb5cbd83822fa4524c2a7239834d5e0fc8f62bbbc6e1d";
-              sha256_unsigned = "a3c8450b06f75bd34836fab4c53a840f6614e4e857605473551a077f334a2489";
+              sha256 = "2f6cf47a8c4ef74a541a50ea17dc4d08c6a96c773b0f3f0c703217abffeceb97";
+              sha256_unsigned = "6d999f103f96ef242c7c19de4c81da419ac1a3a424c12be2fa711d04c4dbde87";
               type = "sysupgrade";
             }
           ];
@@ -30179,15 +30179,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-iptime_nas1-squashfs-sysupgrade.bin";
-              sha256 = "04a6e9ea68e1568e50b475bcf23c693e90711b6e5d9a9785c85d29e3f9fe8536";
-              sha256_unsigned = "a42114b17193383935dcab5ed3ac3cc5302572dad9504b9ab0642178ccf1326e";
+              sha256 = "149371867c5b03614bdb8ff27574c05acbd557a3439092951f82610debac934c";
+              sha256_unsigned = "550e4f0c786c43ae588e99b9a83bc2b1beb876318995124a04d9874d9cd44eb9";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-iptime_nas1-initramfs-uImage";
-              sha256 = "fdd238fbe780f18a5ccbd963a6d15e7e8e0e640f1a31faf0632a6505630d342a";
-              sha256_unsigned = "fdd238fbe780f18a5ccbd963a6d15e7e8e0e640f1a31faf0632a6505630d342a";
+              sha256 = "0e0a68c9a7d73dd758dbc2f58c6ac5ac9cb7255cfe0e74c0914625142738aa27";
+              sha256_unsigned = "0e0a68c9a7d73dd758dbc2f58c6ac5ac9cb7255cfe0e74c0914625142738aa27";
               type = "kernel";
             }
           ];
@@ -30213,22 +30213,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-linksys_e4200-v2-squashfs-factory.bin";
-              sha256 = "59da681dfebe3c76b7c075cfe080ded5b496c36aa65a113906f99db1fef939f1";
-              sha256_unsigned = "59da681dfebe3c76b7c075cfe080ded5b496c36aa65a113906f99db1fef939f1";
+              sha256 = "637206278e11a0341d3d63439b96d14070c153ff778ea95fce286502fc14b39b";
+              sha256_unsigned = "637206278e11a0341d3d63439b96d14070c153ff778ea95fce286502fc14b39b";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-linksys_e4200-v2-squashfs-sysupgrade.bin";
-              sha256 = "fe6db64bcd7dcfea002c51c3a8e1daa9a55ae093010c2f3d6d1cb7d15cd66e59";
-              sha256_unsigned = "d3d373f34b890be3726c862fc1e2bb60ab54a96af03b1cef357c805c648d6709";
+              sha256 = "b9c8240659116796078084e1cb93b54d08e55bbce02a65ad61cfb07028920d4b";
+              sha256_unsigned = "fbe2c2693ccff7262b32a5bdc47342f7d61d80e02f8d7d0a89e427b5aa41d034";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-linksys_e4200-v2-initramfs-uImage";
-              sha256 = "648ccb76445d46cf681195564ac7f0ef83a1308d9af60166ff9e2941fd446b71";
-              sha256_unsigned = "648ccb76445d46cf681195564ac7f0ef83a1308d9af60166ff9e2941fd446b71";
+              sha256 = "b7b16f9505c4b0dd03e2626bd9e29f0441d9a77043980c386b170d8747e69606";
+              sha256_unsigned = "b7b16f9505c4b0dd03e2626bd9e29f0441d9a77043980c386b170d8747e69606";
               type = "kernel";
             }
           ];
@@ -30257,22 +30257,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-linksys_ea3500-initramfs-uImage";
-              sha256 = "239ff0dbe25040d65646fd7a2fd2dd343036f5c7d06c3ea235b8986a2e368d14";
-              sha256_unsigned = "239ff0dbe25040d65646fd7a2fd2dd343036f5c7d06c3ea235b8986a2e368d14";
+              sha256 = "449b95379c8966935469010acb157da9607b31d50f483f76a14ccc42ac1f4c29";
+              sha256_unsigned = "449b95379c8966935469010acb157da9607b31d50f483f76a14ccc42ac1f4c29";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-linksys_ea3500-squashfs-factory.bin";
-              sha256 = "564d407130f55005b7fb517bd2bf5c870d88ef3c9214bfe2fd4270e21536e7dc";
-              sha256_unsigned = "564d407130f55005b7fb517bd2bf5c870d88ef3c9214bfe2fd4270e21536e7dc";
+              sha256 = "a71bd3c38540c05424a9794fb4a4a2b771811c6efc2176a4d17645302eb5a3ec";
+              sha256_unsigned = "a71bd3c38540c05424a9794fb4a4a2b771811c6efc2176a4d17645302eb5a3ec";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-linksys_ea3500-squashfs-sysupgrade.bin";
-              sha256 = "3a9c386649a5d82e75043eb78c4ba344ea405f1b601d19ee57cfa4e6ee15546b";
-              sha256_unsigned = "d1f2d514bcd6a2426956a0e8efe9d49f826d4343c6fc9451ce93d1793e4596c5";
+              sha256 = "108d626e7971769046eb620b5722c4e01946e197e2e55903422214278ae6e53e";
+              sha256_unsigned = "b94213df57755523cd76440cf20dd412233210b0d5b49da366693765588886e3";
               type = "sysupgrade";
             }
           ];
@@ -30300,22 +30300,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-linksys_ea4500-initramfs-uImage";
-              sha256 = "1161d3abf13fa4fccb06e1d648621da17d4f2a1940b13faeb2ce6b92238e711a";
-              sha256_unsigned = "1161d3abf13fa4fccb06e1d648621da17d4f2a1940b13faeb2ce6b92238e711a";
+              sha256 = "51a563d398f6aca7d479189f6156b49538ee77414bccb401cac7731cceb56113";
+              sha256_unsigned = "51a563d398f6aca7d479189f6156b49538ee77414bccb401cac7731cceb56113";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-linksys_ea4500-squashfs-factory.bin";
-              sha256 = "1925b98a17a62bf60fa00cd5c618989ce02f7b4927f46fbb6c5ff58e2d906a1c";
-              sha256_unsigned = "1925b98a17a62bf60fa00cd5c618989ce02f7b4927f46fbb6c5ff58e2d906a1c";
+              sha256 = "9c9db0e7aa4803c63e206b26a53131b36dd1490c000ceb5c612ce9b49cb1a949";
+              sha256_unsigned = "9c9db0e7aa4803c63e206b26a53131b36dd1490c000ceb5c612ce9b49cb1a949";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-linksys_ea4500-squashfs-sysupgrade.bin";
-              sha256 = "4d1cbef4321b2f12f618f1045ca09d52b1a3a6183a1a4348863c580e0faf527e";
-              sha256_unsigned = "235050a9c5536ddf306760b44755f2cee02552e8fc05afd55c7f28e0d624d1f4";
+              sha256 = "cfbdc6b38f73fb1fd6922e9a820e7dd2367122c651b3cbb3953052c61b728e73";
+              sha256_unsigned = "fa966984af245561380917aa5faee84d62ac2a47968e48be164140b1b1287fd5";
               type = "sysupgrade";
             }
           ];
@@ -30345,15 +30345,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-netgear_readynas-duo-v2-squashfs-sysupgrade.bin";
-              sha256 = "254b84a67eddb562b8106c2005532811fbb829707666325a8651b2b4b1e35328";
-              sha256_unsigned = "33787dbe0fbcaa3f57e606a9a398ed038f74a3ce3e34a139ea400fbea6424424";
+              sha256 = "003460656d20582164459a599c01630c9b1ef05a694e9d1848d0c867f320a46e";
+              sha256_unsigned = "e5c907e73441feb42813d904033689ac50c134e3cf36e037cde52309b781b2cf";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-netgear_readynas-duo-v2-initramfs-uImage";
-              sha256 = "488bc8db2e7fb3ffbe8a32723a9ae0820f7b1dcd8b1f3339302223edd3569162";
-              sha256_unsigned = "488bc8db2e7fb3ffbe8a32723a9ae0820f7b1dcd8b1f3339302223edd3569162";
+              sha256 = "5d16ea9001347813f9ded6db6bfc2e35522551fed0853abf9d547e3a711423a9";
+              sha256_unsigned = "5d16ea9001347813f9ded6db6bfc2e35522551fed0853abf9d547e3a711423a9";
               type = "kernel";
             }
           ];
@@ -30378,22 +30378,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-raidsonic_ib-nas62x0-initramfs-uImage";
-              sha256 = "7bc2ea9900913c4524300a66eaa94fbebfdd6bf29146b6deb9dc7cd2c5a7fe84";
-              sha256_unsigned = "7bc2ea9900913c4524300a66eaa94fbebfdd6bf29146b6deb9dc7cd2c5a7fe84";
+              sha256 = "29e40758246277f59cb4288cf9b530dfb8da1f0db16444908fee08bbb47b874d";
+              sha256_unsigned = "29e40758246277f59cb4288cf9b530dfb8da1f0db16444908fee08bbb47b874d";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-raidsonic_ib-nas62x0-squashfs-factory.bin";
-              sha256 = "847808ecff98a6b0b39d32a85762921eb224300490f0cc54d3732cdc2b972173";
-              sha256_unsigned = "847808ecff98a6b0b39d32a85762921eb224300490f0cc54d3732cdc2b972173";
+              sha256 = "e9f2c2eec39e49a2ee7c727a66d98de150f69a9dd840a09e4112b2afea59c1ef";
+              sha256_unsigned = "e9f2c2eec39e49a2ee7c727a66d98de150f69a9dd840a09e4112b2afea59c1ef";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-raidsonic_ib-nas62x0-squashfs-sysupgrade.bin";
-              sha256 = "5814e9609cf7921823e8c3c2fdddc06a5f21a5129cb0780f9ac08aac1e28afbb";
-              sha256_unsigned = "7328b221b3c2cb131fa54d8a3a6ff1125454c5e6921f8fa717ccad10d68f33db";
+              sha256 = "50f6ab030192332c9e696dde46dcf4634898a2f5564ad45f9bffa3dc6dd9bd9e";
+              sha256_unsigned = "b6436665211794bf47630597378f3d6442dc3c5a9e9bb1b8584f0b1b6c562366";
               type = "sysupgrade";
             }
           ];
@@ -30421,22 +30421,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_blackarmor-nas220-squashfs-factory.bin";
-              sha256 = "6d0b20d042f38fe7b0c943122289cfee86f222a2dad5925d1e9db0c100a00150";
-              sha256_unsigned = "6d0b20d042f38fe7b0c943122289cfee86f222a2dad5925d1e9db0c100a00150";
+              sha256 = "61c6ba6179fc06d39a4aafc02536d0cf1b5f784411366685b3da169158d663f5";
+              sha256_unsigned = "61c6ba6179fc06d39a4aafc02536d0cf1b5f784411366685b3da169158d663f5";
               type = "factory";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-seagate_blackarmor-nas220-initramfs-uImage";
-              sha256 = "694d42eb4b77123ebabe15029b6f223c9026405121de09c3269ec16255f26b1a";
-              sha256_unsigned = "694d42eb4b77123ebabe15029b6f223c9026405121de09c3269ec16255f26b1a";
+              sha256 = "a7a3369306069a21ca0d73b66df26351fb703bd4744d2fa0a71fdf4e09d503fd";
+              sha256_unsigned = "a7a3369306069a21ca0d73b66df26351fb703bd4744d2fa0a71fdf4e09d503fd";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_blackarmor-nas220-squashfs-sysupgrade.bin";
-              sha256 = "969b82dc56ed9c89a9cd9c1ec06de9fba13c5b574816d34a41b3bd8fff5dbfa8";
-              sha256_unsigned = "e276107eed8b9b3445d50395863c238ba0a14b9ac915bf8fc13cf547d804f290";
+              sha256 = "fe920ef1027d0b501b346d66b16653123e46b306e47721b90e0d5069a4e343b5";
+              sha256_unsigned = "4cac5682c8186fa15e97ea8fb678fe07c00cfa2b66e41f65d9711a8593996b70";
               type = "sysupgrade";
             }
           ];
@@ -30457,22 +30457,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-seagate_dockstar-initramfs-uImage";
-              sha256 = "a18b3da61da0e1cbb6550b889cef273052e4f28ec1d6da4b8b50f7737681a256";
-              sha256_unsigned = "a18b3da61da0e1cbb6550b889cef273052e4f28ec1d6da4b8b50f7737681a256";
+              sha256 = "23f654c928afa616fe9378734830d576b04d9a4a6aa136a4d404c44ba41704e7";
+              sha256_unsigned = "23f654c928afa616fe9378734830d576b04d9a4a6aa136a4d404c44ba41704e7";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_dockstar-squashfs-factory.bin";
-              sha256 = "dd2fb11572139909163914a57f8b4f6df7dc7a0bed7e384473ba8f44c6fdafc0";
-              sha256_unsigned = "dd2fb11572139909163914a57f8b4f6df7dc7a0bed7e384473ba8f44c6fdafc0";
+              sha256 = "1887bb43c03384714ec9dd421a585d101c4f3d388a748794d8404ae9f0980ae9";
+              sha256_unsigned = "1887bb43c03384714ec9dd421a585d101c4f3d388a748794d8404ae9f0980ae9";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_dockstar-squashfs-sysupgrade.bin";
-              sha256 = "df0eba9bcce23a73c41c22e939eec592e2ea345f0ba69210267302c8c7d67d1e";
-              sha256_unsigned = "89a11f7b64c7c2f21335af87637f4c919705e6f426bd9c7f66dfbd5888a0be82";
+              sha256 = "6277b724ef3b54ae3235e1ba83ce47679a6e9311f003d8955a71865683dfba4e";
+              sha256_unsigned = "74092d1f5729b279ef95f7c4b5bbcc65c7a22e461baefc66c1240d518153b2d5";
               type = "sysupgrade";
             }
           ];
@@ -30497,22 +30497,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_goflexhome-squashfs-sysupgrade.bin";
-              sha256 = "92759db1e4eb77130e2a2cb6a8ba48a19f1e3e680fccccff1c542bc6f62f28ba";
-              sha256_unsigned = "088a9443b97388bbec34997119c238861067e6c414c0d4e0c59a532ac900be3c";
+              sha256 = "dc4941cc9014447b44be1ab3ba603537624d6b9d1886513817199c9190e82f5b";
+              sha256_unsigned = "ee37713c65d96186275197145049155adda0e563b4a1a533290141dcbcd473fe";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-seagate_goflexhome-initramfs-uImage";
-              sha256 = "f848b49a1817fbb0fd964dcaf570b6aa7ea728342ecb042d95add37b538b9628";
-              sha256_unsigned = "f848b49a1817fbb0fd964dcaf570b6aa7ea728342ecb042d95add37b538b9628";
+              sha256 = "0347b1a0ad459494ca3d9d3094ac8a33f124a8e7d9020598e3ef24b75ef4759c";
+              sha256_unsigned = "0347b1a0ad459494ca3d9d3094ac8a33f124a8e7d9020598e3ef24b75ef4759c";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_goflexhome-squashfs-factory.bin";
-              sha256 = "c30577250c69523dfb1b7c64ccac91af534cb29576a8473a85a059354807fd2e";
-              sha256_unsigned = "c30577250c69523dfb1b7c64ccac91af534cb29576a8473a85a059354807fd2e";
+              sha256 = "80ad39aef0eb1f6f01e711ecc21ee3af35e5fafe340fe93392492e4164a1cf4a";
+              sha256_unsigned = "80ad39aef0eb1f6f01e711ecc21ee3af35e5fafe340fe93392492e4164a1cf4a";
               type = "factory";
             }
           ];
@@ -30537,22 +30537,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-seagate_goflexnet-initramfs-uImage";
-              sha256 = "2d91e2a79c5d131e17a0ace3b19a351189f9f14e7ee4d572ff5f91edcb55537d";
-              sha256_unsigned = "2d91e2a79c5d131e17a0ace3b19a351189f9f14e7ee4d572ff5f91edcb55537d";
+              sha256 = "b3ae454078156e22192f36d2d65b789481c4740224ab8b85c2a102597b3ec21c";
+              sha256_unsigned = "b3ae454078156e22192f36d2d65b789481c4740224ab8b85c2a102597b3ec21c";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_goflexnet-squashfs-factory.bin";
-              sha256 = "eb5deae04e1343a9ca5771ac9c3c8a77abd450ef00121972c04dc5ba8ae44e94";
-              sha256_unsigned = "eb5deae04e1343a9ca5771ac9c3c8a77abd450ef00121972c04dc5ba8ae44e94";
+              sha256 = "c7de523c571723d4849da11cdb22ebb32a8513b25e5294ea245314ad88c57c5d";
+              sha256_unsigned = "c7de523c571723d4849da11cdb22ebb32a8513b25e5294ea245314ad88c57c5d";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-seagate_goflexnet-squashfs-sysupgrade.bin";
-              sha256 = "f22430c58077f751cdfa0c906ac7aa38b8973462ef0212b0e60bf1a3573562d3";
-              sha256_unsigned = "2f440325a1dc383a974910725750ff1d040063d955263eb40438dd0ff3f01687";
+              sha256 = "b8e31174c0a83eb4dadb98af87e9423505b53b9edce97d244e2e0ebd6482db14";
+              sha256_unsigned = "ab6803b6657dd727234c35a6aeff557fa41544e7997ca31cec230ef6daab83ac";
               type = "sysupgrade";
             }
           ];
@@ -30580,22 +30580,22 @@
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa310b-initramfs-uImage";
-              sha256 = "493d05aec2a155446064cfe832627b64502862b47aa04a47e16db7b83ef0b611";
-              sha256_unsigned = "493d05aec2a155446064cfe832627b64502862b47aa04a47e16db7b83ef0b611";
+              sha256 = "fe1984b68ab75b195bb95915332944e7da3cd1789bb9afdbce358a3f3ae6b7ae";
+              sha256_unsigned = "fe1984b68ab75b195bb95915332944e7da3cd1789bb9afdbce358a3f3ae6b7ae";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa310b-squashfs-sysupgrade.bin";
-              sha256 = "63daf7be261ede0cc40dd75647a8e0c942f4ea0665045a4830869438bc15e074";
-              sha256_unsigned = "7fb1971d89b8849726391dd2e9a75fb7d6a2aefba49f60e629fd9d2089cb5423";
+              sha256 = "4b23250484d7f29feee9b665d97dc138e0ee1316f6b41a4b66b605dbf8d1ca6d";
+              sha256_unsigned = "7975389c3e2e48c2592573e9a0b5c26d679c124ac830dcf9f5163936030605ff";
               type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa310b-squashfs-factory.bin";
-              sha256 = "451b119cfffbbcc1caa4414563e237eb5d79439cf0430fb3097de9885b2e99ca";
-              sha256_unsigned = "451b119cfffbbcc1caa4414563e237eb5d79439cf0430fb3097de9885b2e99ca";
+              sha256 = "f54fb1595450ad7a1848830ab0c4e70c7c00e72f82a50f4821d0116f521e9f05";
+              sha256_unsigned = "f54fb1595450ad7a1848830ab0c4e70c7c00e72f82a50f4821d0116f521e9f05";
               type = "factory";
             }
           ];
@@ -30621,22 +30621,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa310s-squashfs-factory.bin";
-              sha256 = "d51bc64a6330fa540f526685b4a4fc41a8111906ad4bb0dbbcf9f349e34279e6";
-              sha256_unsigned = "d51bc64a6330fa540f526685b4a4fc41a8111906ad4bb0dbbcf9f349e34279e6";
+              sha256 = "088686f917699f59ba8fff9e856bfe3cebe324e345dbc8de4e59f447d69acba4";
+              sha256_unsigned = "088686f917699f59ba8fff9e856bfe3cebe324e345dbc8de4e59f447d69acba4";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa310s-squashfs-sysupgrade.bin";
-              sha256 = "2f827aa7bd04762da2baf2470ff5067040904d66bf7a8d037511282e6808faf8";
-              sha256_unsigned = "7a5ce81aa7c2387a8f4ec3bc5c7aa38191133339328538497d3ef9ac2a8040d8";
+              sha256 = "0589862aa49bf79bd2bf1a186826fef77c32180b4ad5cbbe506be167f8727400";
+              sha256_unsigned = "459d0e6b860743c488656a925ef53dccfb0e767aa30ba3ed7672cae9f4da0461";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa310s-initramfs-uImage";
-              sha256 = "1883288498a972de40403b3518b43ae5881db666adda10e57d6b4ff7881e760f";
-              sha256_unsigned = "1883288498a972de40403b3518b43ae5881db666adda10e57d6b4ff7881e760f";
+              sha256 = "b63754acce30a6267c5ebb8c5b4e420079eb0d85abc0f125d7d56b79e048a08b";
+              sha256_unsigned = "b63754acce30a6267c5ebb8c5b4e420079eb0d85abc0f125d7d56b79e048a08b";
               type = "kernel";
             }
           ];
@@ -30663,22 +30663,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa325-squashfs-sysupgrade.bin";
-              sha256 = "0aa98ae8011c419bb2e390efabfca25a0ecfa773736fa37e05f7c3147f36242d";
-              sha256_unsigned = "7d2038efec7acdfef91ca52fba0354a0fa29df3348c8e5993408367eead7acb2";
+              sha256 = "7757f8aaa599cb264b934e41b0279aa156a69961c2dba12b28a054325e818e36";
+              sha256_unsigned = "243140e4a8419851fccf0bc186ddd7378fc8fc025ac0641862f7fc337b56386e";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa325-initramfs-uImage";
-              sha256 = "207c3f93300649a10001fc0c239240496d15cee29e6a7fb5641d9a97dd6ff34b";
-              sha256_unsigned = "207c3f93300649a10001fc0c239240496d15cee29e6a7fb5641d9a97dd6ff34b";
+              sha256 = "02a1b56a2cdba828139056091eb4d95594b1bcf1030a256b8cd9df943c887ab8";
+              sha256_unsigned = "02a1b56a2cdba828139056091eb4d95594b1bcf1030a256b8cd9df943c887ab8";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-kirkwood-generic-zyxel_nsa325-squashfs-factory.bin";
-              sha256 = "29084e95ea395d7bef4617501cfe108f06fb20d0699ec74e630497f32c5e5fd2";
-              sha256_unsigned = "29084e95ea395d7bef4617501cfe108f06fb20d0699ec74e630497f32c5e5fd2";
+              sha256 = "3c1fed77bcc102b6dcf86d4baca40fa03f01d0041a7703553add5bfe6de333dc";
+              sha256_unsigned = "3c1fed77bcc102b6dcf86d4baca40fa03f01d0041a7703553add5bfe6de333dc";
               type = "factory";
             }
           ];
@@ -30695,9 +30695,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "kirkwood/generic";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
   };
@@ -35484,48 +35484,48 @@
           image_prefix = "openwrt-mediatek-mt7622-bananapi_bpi-r64";
           images = [
             {
+              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-emmc-bl31-uboot.fip";
+              sha256 = "18733349df86276372fbd85faef592a6f056777e9e94292d606c1eddb0029e1d";
+              sha256_unsigned = "18733349df86276372fbd85faef592a6f056777e9e94292d606c1eddb0029e1d";
+              type = "emmc-bl31-uboot.fip";
+            }
+            {
               name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-emmc-preloader.bin";
-              sha256 = "ac7ee6e9f8426665a44a322f4e589df23d2c00a3e37462a0344cbb9425e5e74f";
-              sha256_unsigned = "ac7ee6e9f8426665a44a322f4e589df23d2c00a3e37462a0344cbb9425e5e74f";
+              sha256 = "37d096bf7c4cacd9b85819e7dd1bdada011e2368d9e74ac4887b52accb34285d";
+              sha256_unsigned = "37d096bf7c4cacd9b85819e7dd1bdada011e2368d9e74ac4887b52accb34285d";
               type = "emmc-preloader.bin";
             }
             {
-              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-snand-preloader.bin";
-              sha256 = "a8f4cd2411a10f4ca1bf5485b255e40fb0947537daf4511d5aec167d2ed0f1e1";
-              sha256_unsigned = "a8f4cd2411a10f4ca1bf5485b255e40fb0947537daf4511d5aec167d2ed0f1e1";
-              type = "snand-preloader.bin";
+              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-snand-bl31-uboot.fip";
+              sha256 = "0c69e474fa3dcb223920fe6d2686643bd267bb6fa01f3079f40367dd553a1d95";
+              sha256_unsigned = "0c69e474fa3dcb223920fe6d2686643bd267bb6fa01f3079f40367dd553a1d95";
+              type = "snand-bl31-uboot.fip";
             }
             {
               name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-sdcard.img.gz";
-              sha256 = "b7926a64a50db027067ab89bcd4d9c8fedbbe469fcfdf51b8375bc8973712829";
-              sha256_unsigned = "b7926a64a50db027067ab89bcd4d9c8fedbbe469fcfdf51b8375bc8973712829";
+              sha256 = "3434d0573cbfbcafcf18fcfcc99cf766b6d8bc4604448bda29742b63c4a4c392";
+              sha256_unsigned = "3434d0573cbfbcafcf18fcfcc99cf766b6d8bc4604448bda29742b63c4a4c392";
               type = "sdcard.img.gz";
             }
             {
-              filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-squashfs-sysupgrade.itb";
-              sha256 = "02f4161e9ef283662baed2ee437ea8bfbb5547f75174a7dbe3f62e4d1af2269e";
-              sha256_unsigned = "21ed85f1bf37c37678ee094a702596521e26d578a68501a4f2c6f7d56c1371b0";
-              type = "sysupgrade";
+              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-snand-preloader.bin";
+              sha256 = "e04891487a4fdb108943480c6633e10166e70d4272885972ff926f2dbcaed442";
+              sha256_unsigned = "e04891487a4fdb108943480c6633e10166e70d4272885972ff926f2dbcaed442";
+              type = "snand-preloader.bin";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-initramfs-recovery.itb";
-              sha256 = "c3a2d0f148593bca6788c56004ae53355ae3d12c3e753fb8bfa9081f8044d996";
-              sha256_unsigned = "c3a2d0f148593bca6788c56004ae53355ae3d12c3e753fb8bfa9081f8044d996";
+              sha256 = "30bf3989ba50d9b4dfd26ab99453ea44d0dd68a65ede6d952fff93e14c7ffce9";
+              sha256_unsigned = "30bf3989ba50d9b4dfd26ab99453ea44d0dd68a65ede6d952fff93e14c7ffce9";
               type = "kernel";
             }
             {
-              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-emmc-bl31-uboot.fip";
-              sha256 = "b7d9195e4f0d2de251ae02a9fe0f1b61d38e97a781cdf3294958bd528a3cad7c";
-              sha256_unsigned = "b7d9195e4f0d2de251ae02a9fe0f1b61d38e97a781cdf3294958bd528a3cad7c";
-              type = "emmc-bl31-uboot.fip";
-            }
-            {
-              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-snand-bl31-uboot.fip";
-              sha256 = "da29d943ee918033945959008a0d0459a6f06f7161d8c19ffbc592eeb834540c";
-              sha256_unsigned = "da29d943ee918033945959008a0d0459a6f06f7161d8c19ffbc592eeb834540c";
-              type = "snand-bl31-uboot.fip";
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-bananapi_bpi-r64-squashfs-sysupgrade.itb";
+              sha256 = "3ac1bda71e6c0686640f9da837a387635e365cb8031297652658ba5991eeb7ee";
+              sha256_unsigned = "7058eefefbb3515468ddbcfc4a58b5692d9e110dadb44bf60e41af67fb2a6dc5";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -35546,31 +35546,31 @@
           image_prefix = "openwrt-mediatek-mt7622-buffalo_wsr-2533dhp2";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-buffalo_wsr-2533dhp2-squashfs-factory-uboot.bin";
-              sha256 = "0721a1092c730e1efd5624e92349e4cb830e11b89eedd2acc714aa4f929bea6f";
-              sha256_unsigned = "0721a1092c730e1efd5624e92349e4cb830e11b89eedd2acc714aa4f929bea6f";
-              type = "factory-uboot";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-buffalo_wsr-2533dhp2-initramfs-kernel.bin";
-              sha256 = "4160b9030a9f33a62e81632640003ee9085a3f035175e4c6efa5964257a2ea56";
-              sha256_unsigned = "4160b9030a9f33a62e81632640003ee9085a3f035175e4c6efa5964257a2ea56";
+              sha256 = "826a62818d1dbd4d94be296fa8b0c5bc6747bc4e1db2ab259282bd54774bb335";
+              sha256_unsigned = "826a62818d1dbd4d94be296fa8b0c5bc6747bc4e1db2ab259282bd54774bb335";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-buffalo_wsr-2533dhp2-squashfs-factory.bin";
-              sha256 = "0ba88a940fe244788beea646360526c67f0f21d5e8847d53a15cfa7c895912ae";
-              sha256_unsigned = "0ba88a940fe244788beea646360526c67f0f21d5e8847d53a15cfa7c895912ae";
+              sha256 = "f0106f17c7deae66f0c0276130b2a5705b3c0b32ad9b8bb44847b5b9c699e87f";
+              sha256_unsigned = "f0106f17c7deae66f0c0276130b2a5705b3c0b32ad9b8bb44847b5b9c699e87f";
               type = "factory";
             }
             {
               filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-buffalo_wsr-2533dhp2-squashfs-factory-uboot.bin";
+              sha256 = "00f024ce3217b2b6efa6247b13ba0515478aeec306c74d49541553c68d9d52ab";
+              sha256_unsigned = "00f024ce3217b2b6efa6247b13ba0515478aeec306c74d49541553c68d9d52ab";
+              type = "factory-uboot";
+            }
+            {
+              filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-buffalo_wsr-2533dhp2-squashfs-sysupgrade.bin";
-              sha256 = "e5a3e2b063829ff9071613817d936f027d34972f1c5790d4220bba75044e150b";
-              sha256_unsigned = "f4c75315085d06afd7178b93c401a6b4b0a27cfa4aa605f21a81ab45587682a5";
+              sha256 = "91d6257ee174ad97cd7c8efe3cba14a441142e0de2f7aafd8010261067f62071";
+              sha256_unsigned = "550e5e341bc14736f4de2856e6c79f292128ba31e7b12babd0c50d94ff4d31e6";
               type = "sysupgrade";
             }
           ];
@@ -35592,31 +35592,31 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-buffalo_wsr-3200ax4s-squashfs-factory.bin";
-              sha256 = "0f6e3cefad542af1afff7d592099bd70b0104ff5116c7fa942b4e2e7da104f67";
-              sha256_unsigned = "0f6e3cefad542af1afff7d592099bd70b0104ff5116c7fa942b4e2e7da104f67";
-              type = "factory";
-            }
-            {
-              filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-buffalo_wsr-3200ax4s-squashfs-factory-uboot.bin";
-              sha256 = "82b889a05ca6872b5edc428481a58c1472ba3c8e77377b304e7933969aea700d";
-              sha256_unsigned = "82b889a05ca6872b5edc428481a58c1472ba3c8e77377b304e7933969aea700d";
+              sha256 = "e6639d62b3298a746f5ab34c773798941333dc07583c6f1c1ca12c46870e04c5";
+              sha256_unsigned = "e6639d62b3298a746f5ab34c773798941333dc07583c6f1c1ca12c46870e04c5";
               type = "factory-uboot";
-            }
-            {
-              filesystem = "initramfs";
-              name = "openwrt-mediatek-mt7622-buffalo_wsr-3200ax4s-initramfs-kernel.bin";
-              sha256 = "d6e6a6caa513583924febb30f1c400475c4d01213cbc8dd620ff2385a093d5c6";
-              sha256_unsigned = "d6e6a6caa513583924febb30f1c400475c4d01213cbc8dd620ff2385a093d5c6";
-              type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-buffalo_wsr-3200ax4s-squashfs-sysupgrade.bin";
-              sha256 = "ee74102c2c661898e4266f06f5e83dd0dab02017db8e1a49adff9503b7ae417c";
-              sha256_unsigned = "be1b2239ff66bc1f8a26099fac85a2846509b75572068cc75746ebd66dc323a2";
+              sha256 = "a7cecae1db612c228f4f0cc23014358b3891dc345ce25bb4552c6451e3e08557";
+              sha256_unsigned = "290d781a750c386aaf7eee2880fdf139f9dff96f52c107aec4f89c488173bdfb";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-mediatek-mt7622-buffalo_wsr-3200ax4s-initramfs-kernel.bin";
+              sha256 = "241a925c78285ffa8ac4ae50da11f1fc8a53c4d98e4a2c1b7d4f26baddf0ba79";
+              sha256_unsigned = "241a925c78285ffa8ac4ae50da11f1fc8a53c4d98e4a2c1b7d4f26baddf0ba79";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-buffalo_wsr-3200ax4s-squashfs-factory.bin";
+              sha256 = "bfdb66c492ff4c22cfd5e5b1e1eadde3fae5b160271a439c8fd43483bef71928";
+              sha256_unsigned = "bfdb66c492ff4c22cfd5e5b1e1eadde3fae5b160271a439c8fd43483bef71928";
+              type = "factory";
             }
           ];
           supported_devices = [
@@ -35638,29 +35638,29 @@
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-m32-a1-squashfs-sysupgrade.bin";
-              sha256 = "4d5ed22244198a076988f54461f8c469cf3a4d5367b83e829f721b96436645ad";
-              sha256_unsigned = "928b62d5ccbf3b32c205bc61145a1297beea22a3acc6637fc06cc607291cd72c";
+              sha256 = "a214369cc083f305203949add1c23748ddc8924887bc9c11eb508caca39fe51e";
+              sha256_unsigned = "c73a6cceb4600c6aeaed7942ad06622476a6e94e844c678ffb50b43e1cb17c88";
               type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-m32-a1-squashfs-tftp.bin";
-              sha256 = "5037b78013c954928807046f7eff560bea11eeac238d66df8db75351fbf091c3";
-              sha256_unsigned = "5037b78013c954928807046f7eff560bea11eeac238d66df8db75351fbf091c3";
+              sha256 = "23de8696e79005013b4a965cb7a18594a6043a6986e8882a0432b63894192c05";
+              sha256_unsigned = "23de8696e79005013b4a965cb7a18594a6043a6986e8882a0432b63894192c05";
               type = "tftp";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-m32-a1-initramfs-kernel.bin";
-              sha256 = "f1bbe67a9e8fcec9b5468ac304d4f5c11db7ede3b65653b595a3acf5024ded1e";
-              sha256_unsigned = "f1bbe67a9e8fcec9b5468ac304d4f5c11db7ede3b65653b595a3acf5024ded1e";
+              sha256 = "366d845d244129cc4689d9e11b6c5657ee55ddfafb9303e8b1c5ed64ba0c6e25";
+              sha256_unsigned = "366d845d244129cc4689d9e11b6c5657ee55ddfafb9303e8b1c5ed64ba0c6e25";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-m32-a1-squashfs-recovery.bin";
-              sha256 = "d5f2c977f1fb93e0ad04fd53930a13a7bcc0c488618706b4034e5007974737de";
-              sha256_unsigned = "d5f2c977f1fb93e0ad04fd53930a13a7bcc0c488618706b4034e5007974737de";
+              sha256 = "be42e394dbdd68257cafc82144df3fe8e339c7ed70a5896475dc9f7377e83e05";
+              sha256_unsigned = "be42e394dbdd68257cafc82144df3fe8e339c7ed70a5896475dc9f7377e83e05";
               type = "recovery";
             }
           ];
@@ -35683,31 +35683,31 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-r32-a1-squashfs-sysupgrade.bin";
-              sha256 = "23fcfac397647f99b21e613c23e5a385de04081cb0f62638d8256e155343c6a5";
-              sha256_unsigned = "c088ace4f88a597116fc323cc690ba68814f862c43778a2e44ff7bc5b1e4f30b";
-              type = "sysupgrade";
-            }
-            {
-              filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-r32-a1-squashfs-tftp.bin";
-              sha256 = "3081e4ce1df6a53562ca09730ee8cb9c63a1669e6654926b8f9666ccd23c35dc";
-              sha256_unsigned = "3081e4ce1df6a53562ca09730ee8cb9c63a1669e6654926b8f9666ccd23c35dc";
-              type = "tftp";
-            }
-            {
-              filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-r32-a1-squashfs-recovery.bin";
-              sha256 = "9cfe897b14dd1485e6e9444f2492a570460295e2d5be4294da81aa0c41d79038";
-              sha256_unsigned = "9cfe897b14dd1485e6e9444f2492a570460295e2d5be4294da81aa0c41d79038";
+              sha256 = "760403d0bc6c8d4fc52ead9510c0beb9d09756f0a125db8741fdd73af6ba1735";
+              sha256_unsigned = "760403d0bc6c8d4fc52ead9510c0beb9d09756f0a125db8741fdd73af6ba1735";
               type = "recovery";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-r32-a1-initramfs-kernel.bin";
-              sha256 = "c14fba0b56b8841503b0e3cc184c7b8a8ed3b26512f0703a3caeffc4f6c73d99";
-              sha256_unsigned = "c14fba0b56b8841503b0e3cc184c7b8a8ed3b26512f0703a3caeffc4f6c73d99";
+              sha256 = "82a3220d825756030f1ad7a2c2e0712ff98abed59dc5600417cafc8d95c98a01";
+              sha256_unsigned = "82a3220d825756030f1ad7a2c2e0712ff98abed59dc5600417cafc8d95c98a01";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-r32-a1-squashfs-tftp.bin";
+              sha256 = "f4818607de5e02791cdf40d4f762da6081aaf09d3de94486827751188066dff5";
+              sha256_unsigned = "f4818607de5e02791cdf40d4f762da6081aaf09d3de94486827751188066dff5";
+              type = "tftp";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-dlink_eagle-pro-ai-r32-a1-squashfs-sysupgrade.bin";
+              sha256 = "769ef12b65e02a955a8b62b19f3b0dc1bef3f4a1058187ac123c160e7c74f150";
+              sha256_unsigned = "284145c8d362b36de7ed590def2654577f4962c3e111514eb16d2a3439b6bfd7";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -35733,15 +35733,15 @@
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-elecom_wrc-2533gent-initramfs-kernel.bin";
-              sha256 = "6273c974e619741e33122e7e7e04df77d3972db2c385a753570070b4270312df";
-              sha256_unsigned = "6273c974e619741e33122e7e7e04df77d3972db2c385a753570070b4270312df";
+              sha256 = "080a9bc4c2285aca3a87979171744f7bf0d8708e9ea961a9887145b5b4defa3a";
+              sha256_unsigned = "080a9bc4c2285aca3a87979171744f7bf0d8708e9ea961a9887145b5b4defa3a";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-elecom_wrc-2533gent-squashfs-sysupgrade.bin";
-              sha256 = "80cf0e88ed2f859d4f2f8877ab150bdb74579563f024e649a0955e56cd743c51";
-              sha256_unsigned = "f9cf2a53956b8e3619fda45190cbb97817e4a565ccf0949a77774f2037ec4025";
+              sha256 = "bf0fc1504267463e780e348169a51bf5af04a91f20298d26f38c7855d9c20387";
+              sha256_unsigned = "4c407b460fa4ec6b616a7c5601cdc38dcbb775a16d6140049e57d367943de209";
               type = "sysupgrade";
             }
           ];
@@ -35764,23 +35764,23 @@
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-elecom_wrc-x3200gst3-initramfs-kernel.bin";
-              sha256 = "c073c8bb2fa5b13fa8571eb246f46ee6b854f2472b6f4bc05cd3014e27b0d4e7";
-              sha256_unsigned = "c073c8bb2fa5b13fa8571eb246f46ee6b854f2472b6f4bc05cd3014e27b0d4e7";
+              sha256 = "42186ea83502d0f7cab753b028b59c1abeb59a394de0ad056b19996fb5cd52db";
+              sha256_unsigned = "42186ea83502d0f7cab753b028b59c1abeb59a394de0ad056b19996fb5cd52db";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-elecom_wrc-x3200gst3-squashfs-sysupgrade.bin";
-              sha256 = "9106ce0b97bf0738849bd295f0bb23a10e25947f4b803159d3f03abb3ed7c67b";
-              sha256_unsigned = "99788bdf4d73dbe6fd0934810fadbf7845f91caaf66bf69038f2b14ed3871d00";
-              type = "sysupgrade";
+              name = "openwrt-mediatek-mt7622-elecom_wrc-x3200gst3-squashfs-factory.bin";
+              sha256 = "d5d6e69aea5dbe309bb218f78c090a76750e170c08fffed45071c00558799915";
+              sha256_unsigned = "d5d6e69aea5dbe309bb218f78c090a76750e170c08fffed45071c00558799915";
+              type = "factory";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-elecom_wrc-x3200gst3-squashfs-factory.bin";
-              sha256 = "5234bd75d92ed5d95b1748f97fb3d2cf50a4005a2fdf1a40957acc3d830bba5e";
-              sha256_unsigned = "5234bd75d92ed5d95b1748f97fb3d2cf50a4005a2fdf1a40957acc3d830bba5e";
-              type = "factory";
+              name = "openwrt-mediatek-mt7622-elecom_wrc-x3200gst3-squashfs-sysupgrade.bin";
+              sha256 = "40819c6722143475da3145d6a3ebe12d8ee2c60ab4d9668420f4c7175e011905";
+              sha256_unsigned = "cdb0e49cacf39ae9bcd23c7a16a4bf1a3f7f2b2168e61352953f7968c7dd8e80";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -35801,18 +35801,18 @@
           image_prefix = "openwrt-mediatek-mt7622-linksys_e8450";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-linksys_e8450-squashfs-sysupgrade.bin";
-              sha256 = "04cdeac77dfe6a4b9f6e65287710ce4305ba4e54ae2cc4bb6e886c7aeb987db0";
-              sha256_unsigned = "5b9a88477d232f6939c7a06460f488392b586a0de7434d88756c617515075bc6";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-linksys_e8450-initramfs-kernel.bin";
-              sha256 = "d0283c5275efa28ccc5cc05b847ba71fd9bdda44c2096a6617e9a7a4906816f8";
-              sha256_unsigned = "d0283c5275efa28ccc5cc05b847ba71fd9bdda44c2096a6617e9a7a4906816f8";
+              sha256 = "2db6aa4eba5ee52db8505b9c36e99234cbb6d7063a58b6f8c551a29654feed2b";
+              sha256_unsigned = "2db6aa4eba5ee52db8505b9c36e99234cbb6d7063a58b6f8c551a29654feed2b";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-linksys_e8450-squashfs-sysupgrade.bin";
+              sha256 = "bc326856d187e564e86fa78c0cebe48fc713a3ca63308075c13bb63f240e4db4";
+              sha256_unsigned = "9369793f95ac5f38cfc8e232fde9fb2b56542291ec3703577fc307c896121096";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -35837,30 +35837,30 @@
           image_prefix = "openwrt-mediatek-mt7622-linksys_e8450-ubi";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-linksys_e8450-ubi-squashfs-sysupgrade.itb";
-              sha256 = "84553755968563b86645112c502a0fe24eaf0a1d57a743a98242014dffd3f0f5";
-              sha256_unsigned = "93d51b4b446c3b6c382b22550074da9035075eaab981505bfa0cbff94e54b15c";
-              type = "sysupgrade";
-            }
-            {
               name = "openwrt-mediatek-mt7622-linksys_e8450-ubi-bl31-uboot.fip";
-              sha256 = "e0bfe76b439ad8c181354f0c75e5146c90ee3b9c5653562d29ca43b5f80c3bd2";
-              sha256_unsigned = "e0bfe76b439ad8c181354f0c75e5146c90ee3b9c5653562d29ca43b5f80c3bd2";
+              sha256 = "5d75a0e5087f4547db1fe020205bd3b894c888b1618b2126aae06f0dd5228a55";
+              sha256_unsigned = "5d75a0e5087f4547db1fe020205bd3b894c888b1618b2126aae06f0dd5228a55";
               type = "bl31-uboot.fip";
             }
             {
-              name = "openwrt-mediatek-mt7622-linksys_e8450-ubi-preloader.bin";
-              sha256 = "73a212e0853ab220a5015704a3dec877184da2b57ba268d2746591e42d4c3988";
-              sha256_unsigned = "73a212e0853ab220a5015704a3dec877184da2b57ba268d2746591e42d4c3988";
-              type = "preloader.bin";
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-linksys_e8450-ubi-squashfs-sysupgrade.itb";
+              sha256 = "6d953a9d5630f1bbe90b079bd5ebc8cae467a7b9c38d94423105448034be719e";
+              sha256_unsigned = "fed54142272d35ab7d0bdbef3b51119d5271f8e88555e09e1cd5b8d7199a891c";
+              type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-linksys_e8450-ubi-initramfs-recovery.itb";
-              sha256 = "782d4094f16aa02b4fbaf633bb02c0182124eb7484cb674d11a85f6e88e89d37";
-              sha256_unsigned = "782d4094f16aa02b4fbaf633bb02c0182124eb7484cb674d11a85f6e88e89d37";
+              sha256 = "6cb328fe6135d7108469803983dc8594005813171ece5aa9b0f4d471cbe0d331";
+              sha256_unsigned = "6cb328fe6135d7108469803983dc8594005813171ece5aa9b0f4d471cbe0d331";
               type = "kernel";
+            }
+            {
+              name = "openwrt-mediatek-mt7622-linksys_e8450-ubi-preloader.bin";
+              sha256 = "58ddf52f0baa9a0c7d92281ae65ed12ecad6f67161379765f63b23f06e8eb89d";
+              sha256_unsigned = "58ddf52f0baa9a0c7d92281ae65ed12ecad6f67161379765f63b23f06e8eb89d";
+              type = "preloader.bin";
             }
           ];
           supported_devices = [
@@ -35888,18 +35888,18 @@
           image_prefix = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-initramfs-kernel.bin";
-              sha256 = "9bbb5f4bbabbbf0d40b75e0f8b1556adfee02ce5e0b735c2b74f21e7d1410b29";
-              sha256_unsigned = "9bbb5f4bbabbbf0d40b75e0f8b1556adfee02ce5e0b735c2b74f21e7d1410b29";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-squashfs-sysupgrade.bin";
-              sha256 = "abd06fe9ad399f0108f8a83153ab0397099e61042cf6228c2853056973255209";
-              sha256_unsigned = "8b5559422d2176ce821f97c5d5493088fb1565a6d3b4eec17db64069dc95797c";
+              sha256 = "ae7adc336c9553133fd1269d87cee3c6cefa92f85f19a8635b8dca88eb54562e";
+              sha256_unsigned = "6bf9a0a7eee9c0fc46f112ea5b99adcc7607aba7a20eaec555b5eccf19030a67";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-initramfs-kernel.bin";
+              sha256 = "000833b6bf89029f2914b426d99f636cf2a3d791117ab11f09d5cde41efe8bc7";
+              sha256_unsigned = "000833b6bf89029f2914b426d99f636cf2a3d791117ab11f09d5cde41efe8bc7";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -35923,23 +35923,23 @@
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-ubi-initramfs-kernel.bin";
-              sha256 = "32724bca1232a6ef42e91b6fb9e7537204d476571556f542d356d03636b11c5b";
-              sha256_unsigned = "32724bca1232a6ef42e91b6fb9e7537204d476571556f542d356d03636b11c5b";
+              sha256 = "ce2ae2e45641e51d280bb25eb02154d22499b5db1f0295456306f6d1fa9d70e9";
+              sha256_unsigned = "ce2ae2e45641e51d280bb25eb02154d22499b5db1f0295456306f6d1fa9d70e9";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-ubi-squashfs-sysupgrade.bin";
-              sha256 = "641e98f254b4a738ecd95fccf1d52a68e378de48f482e67f6ae7e93fde57eb9f";
-              sha256_unsigned = "873fd53b0c6d4a3dd6ca389464531f91f12e995079af80d73172e764a25ae25b";
-              type = "sysupgrade";
+              name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-ubi-squashfs-factory.bin";
+              sha256 = "3347494b77a628cff52eb387885aa996f205d65f6e76a826f439e82de67e801f";
+              sha256_unsigned = "3347494b77a628cff52eb387885aa996f205d65f6e76a826f439e82de67e801f";
+              type = "factory";
             }
             {
               filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-ubi-squashfs-factory.bin";
-              sha256 = "315416e86b7decbd3a43bf6c941f59bae2887d86cbfd094c7edd5f1e44592106";
-              sha256_unsigned = "315416e86b7decbd3a43bf6c941f59bae2887d86cbfd094c7edd5f1e44592106";
-              type = "factory";
+              name = "openwrt-mediatek-mt7622-mediatek_mt7622-rfb1-ubi-squashfs-sysupgrade.bin";
+              sha256 = "dbf6093b74430f622286e7b23543d71c2266d8ef35679def880e63d0b6f5c5ce";
+              sha256_unsigned = "9d681dfb5ecf4784c0af1e6cef046395b23db6ec510bee84f496d26b251cac70";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -35961,22 +35961,22 @@
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-netgear_wax206-squashfs-sysupgrade.bin";
-              sha256 = "f2dd7f35f295ac7aed65ba571a9975fa471dfadbdf73e25ad416dc4a0c155eba";
-              sha256_unsigned = "2826ebaac6989557562707be0e5369e75ebe23d305208f667c61779d48acc52e";
+              sha256 = "e072247a573d1508d490dbcfb6f8b939afc091417403f35014d94ab3dda42b74";
+              sha256_unsigned = "1372894269f9dba0b17d4e79c19412ad28a0ec0b2535fa5f84424eb473f9fff6";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-netgear_wax206-initramfs-recovery.itb";
-              sha256 = "92be20aa046d9d1337241be24e1a87ed08786877956c4e4dc06276ae1c2a4399";
-              sha256_unsigned = "92be20aa046d9d1337241be24e1a87ed08786877956c4e4dc06276ae1c2a4399";
+              sha256 = "af96b348c9322ff8d311212c048b339ce7a1270e0c646881575c3e97253894a2";
+              sha256_unsigned = "af96b348c9322ff8d311212c048b339ce7a1270e0c646881575c3e97253894a2";
               type = "kernel";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-netgear_wax206-squashfs-factory.img";
-              sha256 = "fed35bc3eccdf84e1ecd99cd45899adacca4861fc07c3594035dbb537e3a976a";
-              sha256_unsigned = "fed35bc3eccdf84e1ecd99cd45899adacca4861fc07c3594035dbb537e3a976a";
+              sha256 = "2a3cd2d13b214d0fb09deca94709b322d4aafa4800334f72d1dbc02de4680915";
+              sha256_unsigned = "2a3cd2d13b214d0fb09deca94709b322d4aafa4800334f72d1dbc02de4680915";
               type = "factory";
             }
           ];
@@ -35997,18 +35997,18 @@
           image_prefix = "openwrt-mediatek-mt7622-reyee_ax3200-e5";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-mediatek-mt7622-reyee_ax3200-e5-initramfs-kernel.bin";
-              sha256 = "be040ab800ccddd6f64dfd8c4a135d2f84e8446b3cf344c1e4cf15ec31db1d84";
-              sha256_unsigned = "be040ab800ccddd6f64dfd8c4a135d2f84e8446b3cf344c1e4cf15ec31db1d84";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-reyee_ax3200-e5-squashfs-sysupgrade.bin";
-              sha256 = "1ac773bd41726821a7d19df37ae617776d5c5b4707a71f2fa57da73b90e3ce1b";
-              sha256_unsigned = "83f5e3e5db3518d79ce975bdca2b2b4191bb200dc6e1c44a340fbfe09354c255";
+              sha256 = "50156e434844fd9f4d48d4ad27403c0f85c7aab51bae6381d86e6a73963b4999";
+              sha256_unsigned = "43281179031035165fbd8c51544592142b228b1c8a535313eec2bc5cefc97d65";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-mediatek-mt7622-reyee_ax3200-e5-initramfs-kernel.bin";
+              sha256 = "3e8dda8105f6f44a3925719abd3385a593bc29eaeaf92daacb042f36e2906344";
+              sha256_unsigned = "3e8dda8105f6f44a3925719abd3385a593bc29eaeaf92daacb042f36e2906344";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -36028,18 +36028,18 @@
           image_prefix = "openwrt-mediatek-mt7622-ruijie_rg-ew3200gx-pro";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-mediatek-mt7622-ruijie_rg-ew3200gx-pro-squashfs-sysupgrade.bin";
-              sha256 = "fd22096b94c0525e925cee18f0c1b3ba0d6c53091f3effb06b5bda8cd2b7a7ef";
-              sha256_unsigned = "421a7c457a33cfee211c7d3663fa10c42e7caa56a11bc38f2eaf281b65e74d72";
-              type = "sysupgrade";
-            }
-            {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-ruijie_rg-ew3200gx-pro-initramfs-kernel.bin";
-              sha256 = "fc40b2f47862a832ea1b1064875f7d846bbbf19b114058d79d3d3c919b4aa06f";
-              sha256_unsigned = "fc40b2f47862a832ea1b1064875f7d846bbbf19b114058d79d3d3c919b4aa06f";
+              sha256 = "20468fb18a740ced55f166645941322818c023098d00c27401dc7b280cd46d25";
+              sha256_unsigned = "20468fb18a740ced55f166645941322818c023098d00c27401dc7b280cd46d25";
               type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-mediatek-mt7622-ruijie_rg-ew3200gx-pro-squashfs-sysupgrade.bin";
+              sha256 = "5079b9c40f192b07a1697039afc4e1f75fb7ef388bc6b7e31fa816de05215718";
+              sha256_unsigned = "a0af78e153d611b4f3fabe03bf3aec0ac54a03c600ce1da9aa8025379a77935e";
+              type = "sysupgrade";
             }
           ];
           supported_devices = [
@@ -36063,15 +36063,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-totolink_a8000ru-squashfs-sysupgrade.bin";
-              sha256 = "0f6e90b014a1849785e359fd25eb6f4bf9fe8568770a7ea02db53d3419980c12";
-              sha256_unsigned = "cb5b5615c6fa86cae3a7bdfbb56660744a54dd0a69d5ac8410df6f65922bde01";
+              sha256 = "7ee2968d853a29bdfda19dfa9f2d1f7cb14a473fc1973b1354186b82f40dfa67";
+              sha256_unsigned = "52c94c929b7b48943e08939e61284a03ce5a285f0aecdde7d9f22e71981b0563";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-totolink_a8000ru-initramfs-kernel.bin";
-              sha256 = "a943a7af9e82ab617c5f79e5f83578e9950904c39c1f07f81c4494ef3115a5b9";
-              sha256_unsigned = "a943a7af9e82ab617c5f79e5f83578e9950904c39c1f07f81c4494ef3115a5b9";
+              sha256 = "78be7b061a440937e62a3be70b0462c1462120d36a7dc30d2f4829fab0a6dfbb";
+              sha256_unsigned = "78be7b061a440937e62a3be70b0462c1462120d36a7dc30d2f4829fab0a6dfbb";
               type = "kernel";
             }
           ];
@@ -36095,15 +36095,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-squashfs-sysupgrade.bin";
-              sha256 = "f8e57c29ba48a3aaf56a06e1151b57c3a1c26220c32d20fc29bf36660a4f30d1";
-              sha256_unsigned = "c9bb689652b5e0a9180fabeab96363b7bf0192eb18bdd5b105d2ff5a12ebe88e";
+              sha256 = "be7927f1d57056896c1587a24e44a3de99ad98399df6ae7707d1494598905833";
+              sha256_unsigned = "9b20ced02eb6ff4749b5174a230e9d860d36f616efe95bd19d3bc3814ce53fdc";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-initramfs-kernel.bin";
-              sha256 = "6b7905cf1628afe35817d8e72ddf2ea93023e1fb1ac4fc881dd6c03909c76c27";
-              sha256_unsigned = "6b7905cf1628afe35817d8e72ddf2ea93023e1fb1ac4fc881dd6c03909c76c27";
+              sha256 = "79763f3729e64ef9d0959c0f8d75952dba575a58c479307c8eb81e56d68c8df5";
+              sha256_unsigned = "79763f3729e64ef9d0959c0f8d75952dba575a58c479307c8eb81e56d68c8df5";
               type = "kernel";
             }
           ];
@@ -36129,28 +36129,28 @@
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-ubootmod-initramfs-recovery.itb";
-              sha256 = "b5434ab63db643a6c3721ffb3ea0e93a057494b13b799f876e6432d765b44543";
-              sha256_unsigned = "b5434ab63db643a6c3721ffb3ea0e93a057494b13b799f876e6432d765b44543";
+              sha256 = "dea449cb5e2415eee74f77f3c19f7de1265997aef9798bdfa05e237c99ac186b";
+              sha256_unsigned = "dea449cb5e2415eee74f77f3c19f7de1265997aef9798bdfa05e237c99ac186b";
               type = "kernel";
             }
             {
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-ubootmod-preloader.bin";
-              sha256 = "25bfd7c9f359b5b565dea2e2809ab6dd4161d66886aa2d528504f995ff51109c";
-              sha256_unsigned = "25bfd7c9f359b5b565dea2e2809ab6dd4161d66886aa2d528504f995ff51109c";
+              sha256 = "65e335c16b07fe9654eb0ef2488553f139a6ae7658cb7a136cf82bdb0f375552";
+              sha256_unsigned = "65e335c16b07fe9654eb0ef2488553f139a6ae7658cb7a136cf82bdb0f375552";
               type = "preloader.bin";
-            }
-            {
-              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-ubootmod-bl31-uboot.fip";
-              sha256 = "86da6d5f89a6d7a7fbb78a8686297c48d2663e3413e098014722193a23f718a6";
-              sha256_unsigned = "86da6d5f89a6d7a7fbb78a8686297c48d2663e3413e098014722193a23f718a6";
-              type = "bl31-uboot.fip";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-ubootmod-squashfs-sysupgrade.itb";
-              sha256 = "b9c5d3ef41f72338bbfadb7ad9b5168c9ff1bef31b7766ac0819485a128ee3cf";
-              sha256_unsigned = "e22ebcdeeff84b13fa395d182d2d73185e13693fc5a96fcd7d17d941d1a94927";
+              sha256 = "a1e2a6d6afe241bdc5a8a4c4609fc0297dbe1d7868ed1c47e0d80019cbaae606";
+              sha256_unsigned = "86ed7214880ab44bc31e26e9c993131d9005fbf61cdc4706e7cc930b2c638832";
               type = "sysupgrade";
+            }
+            {
+              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v1-ubootmod-bl31-uboot.fip";
+              sha256 = "e3e649a63a9b8905afd62cb79650133222d319a61976b38e75b0074d96360a9e";
+              sha256_unsigned = "e3e649a63a9b8905afd62cb79650133222d319a61976b38e75b0074d96360a9e";
+              type = "bl31-uboot.fip";
             }
           ];
           supported_devices = [
@@ -36174,15 +36174,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-squashfs-sysupgrade.bin";
-              sha256 = "c0504dcd065ac65b2498085c709b5f46b4df57f2a558c45c38b1e30a9f672425";
-              sha256_unsigned = "e08600e05f84d32f8ec226bc493f2207727cfbe183cdab6c958ed7b65fbb21b8";
+              sha256 = "211ae9d2d3b211e05d473b7411cef89ed494808f606806ecc4df4085a6d0fb52";
+              sha256_unsigned = "6d833b36ac98fd8fd1cf70cbadfb4e8b85d3edd202a42b9c405fb58bc7aac469";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-initramfs-kernel.bin";
-              sha256 = "ea836823371d0dd64fb4646e123f6d49a692ae2eee8e738c22922bdccf65139f";
-              sha256_unsigned = "ea836823371d0dd64fb4646e123f6d49a692ae2eee8e738c22922bdccf65139f";
+              sha256 = "8af08f13d2be45b035ea1fbc78fe5a6b05661415eab6d9628e2afb07f0788c96";
+              sha256_unsigned = "8af08f13d2be45b035ea1fbc78fe5a6b05661415eab6d9628e2afb07f0788c96";
               type = "kernel";
             }
           ];
@@ -36206,28 +36206,28 @@
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-ubootmod-squashfs-sysupgrade.itb";
-              sha256 = "d6a9c8c17038f118bf8ed65038c77b32fa3f813f717d884fb33a1cba84f51d5e";
-              sha256_unsigned = "1fa2ec439191e1964ba486fdae603e44d73802391b12280fb0365ef8340596fe";
+              sha256 = "07e36c6385b11ac0d6611ce336e1f4c6e6405acd7b7f7f7893defce55bc65f91";
+              sha256_unsigned = "87621b59c5c146378ca05c09d9c2fa0dbc93543d7bc0c677569740bb6e1c6863";
               type = "sysupgrade";
-            }
-            {
-              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-ubootmod-preloader.bin";
-              sha256 = "25bfd7c9f359b5b565dea2e2809ab6dd4161d66886aa2d528504f995ff51109c";
-              sha256_unsigned = "25bfd7c9f359b5b565dea2e2809ab6dd4161d66886aa2d528504f995ff51109c";
-              type = "preloader.bin";
-            }
-            {
-              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-ubootmod-bl31-uboot.fip";
-              sha256 = "9516af0f47f85218c5cf34c28c1af2c5a4f29b90ed93a5e6e7aa8729ff0ef6e0";
-              sha256_unsigned = "9516af0f47f85218c5cf34c28c1af2c5a4f29b90ed93a5e6e7aa8729ff0ef6e0";
-              type = "bl31-uboot.fip";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-ubootmod-initramfs-recovery.itb";
-              sha256 = "834094e032391e61ab467fc90dea19019cae22620725f8898a3b77117d2df344";
-              sha256_unsigned = "834094e032391e61ab467fc90dea19019cae22620725f8898a3b77117d2df344";
+              sha256 = "8c66f6c0d63c5387f9da9107c71d5dc2246f8a944b19518290df4070271159cb";
+              sha256_unsigned = "8c66f6c0d63c5387f9da9107c71d5dc2246f8a944b19518290df4070271159cb";
               type = "kernel";
+            }
+            {
+              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-ubootmod-bl31-uboot.fip";
+              sha256 = "55147890a875db937a9f69981c99940b3cade485c32f6fd779fe551fbec42bcb";
+              sha256_unsigned = "55147890a875db937a9f69981c99940b3cade485c32f6fd779fe551fbec42bcb";
+              type = "bl31-uboot.fip";
+            }
+            {
+              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v2-ubootmod-preloader.bin";
+              sha256 = "65e335c16b07fe9654eb0ef2488553f139a6ae7658cb7a136cf82bdb0f375552";
+              sha256_unsigned = "65e335c16b07fe9654eb0ef2488553f139a6ae7658cb7a136cf82bdb0f375552";
+              type = "preloader.bin";
             }
           ];
           supported_devices = [
@@ -36248,18 +36248,18 @@
           image_prefix = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-initramfs-kernel.bin";
-              sha256 = "22b77cb1c41aa475fc8acecb5575c385c3dd60ea9c58bf8b7579a699457583bf";
-              sha256_unsigned = "22b77cb1c41aa475fc8acecb5575c385c3dd60ea9c58bf8b7579a699457583bf";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-squashfs-sysupgrade.bin";
-              sha256 = "8470c5d05e73ce0d5cc9ff5c9c0fc7a66b77e733dfeba36bf77dead0e091b371";
-              sha256_unsigned = "7a848856f92dc8c0f7bae09567e0ef8214899d7ad0cdba92beda79f617cc69ab";
+              sha256 = "7b486d00300bb4e08b41a3e5e1dbb9278833e108d89a2758514bd09faf3da975";
+              sha256_unsigned = "6f42ef42aaf1dfcba5de00c03931d1631b4bb71349fb24fef04c7e8f7649efb9";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-initramfs-kernel.bin";
+              sha256 = "5e4d0906a2c20fd67ce3c75369cddff0342a1f348d2527bb35fc793c41f42e3f";
+              sha256_unsigned = "5e4d0906a2c20fd67ce3c75369cddff0342a1f348d2527bb35fc793c41f42e3f";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -36281,28 +36281,28 @@
           images = [
             {
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-ubootmod-bl31-uboot.fip";
-              sha256 = "1a3c791b8a5486e6e4f48949a588979cc2e7ba5c09ee6c93956fcdb661f56dc3";
-              sha256_unsigned = "1a3c791b8a5486e6e4f48949a588979cc2e7ba5c09ee6c93956fcdb661f56dc3";
+              sha256 = "077b3e4aac2cfb4c592326f7e0dfb2404652b3879c9f4bee39c7fddd58656b83";
+              sha256_unsigned = "077b3e4aac2cfb4c592326f7e0dfb2404652b3879c9f4bee39c7fddd58656b83";
               type = "bl31-uboot.fip";
             }
             {
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-ubootmod-preloader.bin";
-              sha256 = "25bfd7c9f359b5b565dea2e2809ab6dd4161d66886aa2d528504f995ff51109c";
-              sha256_unsigned = "25bfd7c9f359b5b565dea2e2809ab6dd4161d66886aa2d528504f995ff51109c";
+              sha256 = "65e335c16b07fe9654eb0ef2488553f139a6ae7658cb7a136cf82bdb0f375552";
+              sha256_unsigned = "65e335c16b07fe9654eb0ef2488553f139a6ae7658cb7a136cf82bdb0f375552";
               type = "preloader.bin";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-ubootmod-squashfs-sysupgrade.itb";
-              sha256 = "c7c1cc499fe8f79209356d9743305673929cbef0d08088a8d273c19de2d12ef7";
-              sha256_unsigned = "0a736b42f59263ace44ab6da013937a97dd07933bbcd1c63cef847f377c3699f";
+              sha256 = "4a81f96db4c429c34e99c3b6396ec48a8e816166926d3cf0bbab07e501322673";
+              sha256_unsigned = "de368bdd650e806049a9d82f8aab44a83fde43d62ad012f029b893bba21e1b72";
               type = "sysupgrade";
             }
             {
               filesystem = "initramfs";
               name = "openwrt-mediatek-mt7622-ubnt_unifi-6-lr-v3-ubootmod-initramfs-recovery.itb";
-              sha256 = "017fc2895c75a76fb6093c5dd2b0cbd104dd020be611f64e2ce0d8136010e845";
-              sha256_unsigned = "017fc2895c75a76fb6093c5dd2b0cbd104dd020be611f64e2ce0d8136010e845";
+              sha256 = "9ac7b4ca2f86bf514acd9d5eb60e3936242da9897e0b8da02642ebee5230ff8d";
+              sha256_unsigned = "9ac7b4ca2f86bf514acd9d5eb60e3936242da9897e0b8da02642ebee5230ff8d";
               type = "kernel";
             }
           ];
@@ -36324,25 +36324,25 @@
           image_prefix = "openwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s-initramfs-recovery.itb";
-              sha256 = "912f91e3988a09a870ef88e8e05eb9b31e08717c701ed0a8144660818e3ed287";
-              sha256_unsigned = "912f91e3988a09a870ef88e8e05eb9b31e08717c701ed0a8144660818e3ed287";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s-squashfs-factory.bin";
-              sha256 = "2b61ad27772472ef814edc37007e1c59853f4f6a04e2aaec792dca0308a8bf4f";
-              sha256_unsigned = "2b61ad27772472ef814edc37007e1c59853f4f6a04e2aaec792dca0308a8bf4f";
+              sha256 = "f780a5d77646972aa32fa5da3341c08ae76d6adbf5f046d29cf3f572414d2471";
+              sha256_unsigned = "f780a5d77646972aa32fa5da3341c08ae76d6adbf5f046d29cf3f572414d2471";
               type = "factory";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s-squashfs-sysupgrade.bin";
-              sha256 = "79ce0e5acfef9fc31b668af28b812cc1c217756bd635ab30d42a84266ac228f1";
-              sha256_unsigned = "1cd97cc6b8ff20ea7a990a51e31fffce8672b68e736dfc38f775be4f92a46154";
+              sha256 = "b6f87701d29c59bfd9819bfac645dbfb4387e9095999ade57c945f071cc02e63";
+              sha256_unsigned = "618f21dacf6bcab779032ee8c5993bd2015990685ca8a10027482a12a24834a5";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-mediatek-mt7622-xiaomi_redmi-router-ax6s-initramfs-recovery.itb";
+              sha256 = "4c0495348930ac2cbf4545a1a34126f5a90274c59769a9d7fc99c579a599502c";
+              sha256_unsigned = "4c0495348930ac2cbf4545a1a34126f5a90274c59769a9d7fc99c579a599502c";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -36360,9 +36360,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "mediatek/mt7622";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
     mt7623 = {
@@ -39998,15 +39998,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-pistachio-generic-img_creator-ci40-squashfs-sysupgrade.tar";
-              sha256 = "17ce8be57c12d9d5b63ecd71519fff87ac505516f695d29231f4ea7d633cbfc5";
-              sha256_unsigned = "17ce8be57c12d9d5b63ecd71519fff87ac505516f695d29231f4ea7d633cbfc5";
+              sha256 = "2cf0fed399859427fbae51e0b32b811ec5d80910884d5290e600c582a4c07021";
+              sha256_unsigned = "2cf0fed399859427fbae51e0b32b811ec5d80910884d5290e600c582a4c07021";
               type = "sysupgrade";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-pistachio-generic-img_creator-ci40-squashfs-factory.ubi";
-              sha256 = "7a9a49bb8888246989e645a054d6e202afeb2d54e900c185c65d0527d0d2b5d5";
-              sha256_unsigned = "7a9a49bb8888246989e645a054d6e202afeb2d54e900c185c65d0527d0d2b5d5";
+              sha256 = "7a5d45526b677c900320b196dc89d248f3eec759de0682bdcd972e615c8a1c63";
+              sha256_unsigned = "7a5d45526b677c900320b196dc89d248f3eec759de0682bdcd972e615c8a1c63";
               type = "factory";
             }
           ];
@@ -40025,9 +40025,9 @@
           ];
         };
       };
-      source_date_epoch = 1706624857;
+      source_date_epoch = 1706749304;
       target = "pistachio/generic";
-      version_code = "r24944-906595c262";
+      version_code = "r24947-4ae2f43b3a";
       version_number = "SNAPSHOT";
     };
   };
@@ -60253,18 +60253,18 @@
           image_prefix = "openwrt-realtek-rtl930x-zyxel_xgs1250-12";
           images = [
             {
-              filesystem = "initramfs";
-              name = "openwrt-realtek-rtl930x-zyxel_xgs1250-12-initramfs-kernel.bin";
-              sha256 = "0d67f9e359657ae7e3639c66e3e4044e8df11b8efece2e58e43d11e1f0f2857f";
-              sha256_unsigned = "0d67f9e359657ae7e3639c66e3e4044e8df11b8efece2e58e43d11e1f0f2857f";
-              type = "kernel";
-            }
-            {
               filesystem = "squashfs";
               name = "openwrt-realtek-rtl930x-zyxel_xgs1250-12-squashfs-sysupgrade.bin";
-              sha256 = "1a111a4efc2e5e1f89052d256fb49c7c3aa48c1796bfa1b2d42ee5c4f611eb7e";
-              sha256_unsigned = "3d24a8c6ed59d02f5394d37dd9574c063df84d1cf254fedc4f92f18588771c60";
+              sha256 = "6d67166dbaf4212a2ef56006e7c7ac88583a5157f152d928225f63f83a3a12e6";
+              sha256_unsigned = "4dba1d6173ea4bd8a2ab1ff13e3b379b014c3b8f5d0295661f29096846354704";
               type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-realtek-rtl930x-zyxel_xgs1250-12-initramfs-kernel.bin";
+              sha256 = "e5e435e99cb00fe24cd13915b3b75bd871fbc94e4596ebd4ce17d63860318c48";
+              sha256_unsigned = "e5e435e99cb00fe24cd13915b3b75bd871fbc94e4596ebd4ce17d63860318c48";
+              type = "kernel";
             }
           ];
           supported_devices = [
@@ -60278,9 +60278,9 @@
           ];
         };
       };
-      source_date_epoch = 1706624857;
+      source_date_epoch = 1706749304;
       target = "realtek/rtl930x";
-      version_code = "r24944-906595c262";
+      version_code = "r24947-4ae2f43b3a";
       version_number = "SNAPSHOT";
     };
   };
@@ -62281,15 +62281,15 @@
             {
               filesystem = "ext4";
               name = "openwrt-sunxi-cortexa8-cubietech_a10-cubieboard-ext4-sdcard.img.gz";
-              sha256 = "6a147d8dc2a36d7b497c74053226023ea6d1fc258b6b4238102253f7b61f6966";
-              sha256_unsigned = "3acd7485bbaaf854ea54fd4eb9a888f5b075a927644f527bc311499b5bdc0da3";
+              sha256 = "c25f148d9bc4c570fb4ce7ce28e81f044e01834c421cc7fef27eaf381e134adf";
+              sha256_unsigned = "e57769a971913892a2322f2e495f4d9c3e8ba3fd6ffec31567b4d8247209f650";
               type = "sdcard";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-sunxi-cortexa8-cubietech_a10-cubieboard-squashfs-sdcard.img.gz";
-              sha256 = "b3cf53a425b1aef80afb9752591d3eb6daef29fb0c80702939ab217c84827f78";
-              sha256_unsigned = "3f15e13242146ad6b6d36fc42ecd529ab262ee319b8369126697d8264572a138";
+              sha256 = "0a1f8c2c9d532f22f7cd2a52c9ff34a609fa185e7097557ba611d9ba85cd609d";
+              sha256_unsigned = "be1bdbc82189ee0992a5ba10478975ae00851054dd088231e94909ad809006f3";
               type = "sdcard";
             }
           ];
@@ -62317,15 +62317,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-sunxi-cortexa8-haoyu_a10-marsboard-squashfs-sdcard.img.gz";
-              sha256 = "b564f9a9cb3002e1f386933d178a52eadbc436f2a819edbc581e30c45908b3f9";
-              sha256_unsigned = "091afdab54260186b3d9e5fc4a8165263fd19309f295cfdb4e01a8c3d32ad715";
+              sha256 = "c13dcdb63c6538307040c60ebaebbf2b9877ffb67453fe6242758eb73736c7d0";
+              sha256_unsigned = "920f7772ae94ae5e5248aff58651c4950ea6dbed64975ab2dbf159c5edbe30e6";
               type = "sdcard";
             }
             {
               filesystem = "ext4";
               name = "openwrt-sunxi-cortexa8-haoyu_a10-marsboard-ext4-sdcard.img.gz";
-              sha256 = "d486637c12930d41fcf9bb578019940148d2fb2bb267703847c0d3761003e56c";
-              sha256_unsigned = "417da34d55e3d935c9cab4859711da5c94d40e28c3bb6edf6e28a0331252665a";
+              sha256 = "b20bfe81cb8c0779b2a77058ff3429309099ef9eae1fc1a052b55bc92cc609e8";
+              sha256_unsigned = "1c5c6401c51da969425347d8486e30d39b0ecb4535dd5a6b72f32cd317d86d52";
               type = "sdcard";
             }
           ];
@@ -62349,17 +62349,17 @@
           image_prefix = "openwrt-sunxi-cortexa8-linksprite_a10-pcduino";
           images = [
             {
-              filesystem = "squashfs";
-              name = "openwrt-sunxi-cortexa8-linksprite_a10-pcduino-squashfs-sdcard.img.gz";
-              sha256 = "2ab7633963026fa1af8b05057f24b778614f28958d3c287fff78988970d096b6";
-              sha256_unsigned = "4f25b0245a9154145a6d740cde8d485f96fa84973adb41014ae262f223311111";
+              filesystem = "ext4";
+              name = "openwrt-sunxi-cortexa8-linksprite_a10-pcduino-ext4-sdcard.img.gz";
+              sha256 = "595f9d63219811ab4f6c52a56a841c3d6e4f9c95b18ecbfc75de878fbbcd3a46";
+              sha256_unsigned = "d74201729b6c44f69e51ef372e75a2f0e2355731d3084cfe8dae6d9a544bfd49";
               type = "sdcard";
             }
             {
-              filesystem = "ext4";
-              name = "openwrt-sunxi-cortexa8-linksprite_a10-pcduino-ext4-sdcard.img.gz";
-              sha256 = "e6b43fc4fc4f89eec511f84932b1306cb1893c68f537510f8c045ad25b0c0cb7";
-              sha256_unsigned = "91007a54324498cfcee7f700c07a2ed7e0a333fe07ce88b898d285ba3eeec390";
+              filesystem = "squashfs";
+              name = "openwrt-sunxi-cortexa8-linksprite_a10-pcduino-squashfs-sdcard.img.gz";
+              sha256 = "5649252757d18a2e8861fc6f7f1cf6d5c9b67b3d112c0f5a0c2dbb3832ac21c6";
+              sha256_unsigned = "efdea39fcae90f286b295224f8789d0a5e01a772bc74e96638a1e9e26839207f";
               type = "sdcard";
             }
           ];
@@ -62384,15 +62384,15 @@
             {
               filesystem = "ext4";
               name = "openwrt-sunxi-cortexa8-olimex_a10-olinuxino-lime-ext4-sdcard.img.gz";
-              sha256 = "81f9ec039f283e00a68fb910be7b64b330aa5ce255ebc1a0c83a2808f474a666";
-              sha256_unsigned = "d09ca13134ae7a911e37317c74ce43de9c6557ef66220e6653d6bbe613b2075b";
+              sha256 = "d99a421e263c700a46c43086fe3557a355f52cd8796f2f9cacfff77abc28d2c2";
+              sha256_unsigned = "a9643308c8a81b7cfe4b78d1f1feaed739aa5628dda52c8dc355b2d8ec6b6421";
               type = "sdcard";
             }
             {
               filesystem = "squashfs";
               name = "openwrt-sunxi-cortexa8-olimex_a10-olinuxino-lime-squashfs-sdcard.img.gz";
-              sha256 = "1354536bca26c2130084ad7c7ded0b5f1227c80226db154eef76ccc4f9a918dc";
-              sha256_unsigned = "03fc2f9cacd32df14daebbcd3284fe992f6b44737054934ffd1720a269dfb2f0";
+              sha256 = "4f8899a7d5a5ebd599757c7139f6682bdd57b82293e273c29756e8c87fa0e6e8";
+              sha256_unsigned = "daf5b3a62c4d3d9a111c557a6c6cf28beef66629d07ff379f487478bf09ef542";
               type = "sdcard";
             }
           ];
@@ -62415,15 +62415,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-sunxi-cortexa8-olimex_a13-olimex-som-squashfs-sdcard.img.gz";
-              sha256 = "003d30b30605289886c315a701d29276d07df028ecc24ece92b4673a96cab2de";
-              sha256_unsigned = "161990cd50fbe6d8c86ad5c9de0f2e779c6f07e8fd4fde753124c45699b06d73";
+              sha256 = "219f1d6c3d286f7451cf7e6606a326a987a4bec190d3a5f69288e61e0e83b96d";
+              sha256_unsigned = "84de626e42e3d8d956632a4427e7fd6cefb56a8b6d31af5693a41a4dbb32fcab";
               type = "sdcard";
             }
             {
               filesystem = "ext4";
               name = "openwrt-sunxi-cortexa8-olimex_a13-olimex-som-ext4-sdcard.img.gz";
-              sha256 = "5414e8c74a46da900922d1c77c2dd290637d39272a5cfe4c82f91d39ee9631ed";
-              sha256_unsigned = "5dad0e151793f241e49b0b2b7eb0e87888f4004d6034f9bbd7eb60dd6d46ebfa";
+              sha256 = "b1c12fec19754ca973a2d84f37b1edceec743198fa04c1c3b7b9e54e8964a7dc";
+              sha256_unsigned = "f5aa214617e9bbe5d63a5a241396512cd99b4b1652d35e9b9a90b9005384c270";
               type = "sdcard";
             }
           ];
@@ -62446,15 +62446,15 @@
             {
               filesystem = "squashfs";
               name = "openwrt-sunxi-cortexa8-olimex_a13-olinuxino-squashfs-sdcard.img.gz";
-              sha256 = "9e86166f85974ace3e708c05b5f1b3de149e6e9331b2be2c91c6df4cc0d43455";
-              sha256_unsigned = "760734798c235553268cdcf475158a4bf89d0d7de0a5057201b018d63cb300df";
+              sha256 = "77b041bb8fbbd3567a57d7665726245f06cfc212cf284d876b924a6f2bf441b3";
+              sha256_unsigned = "a4e8d88e82db748330a3f7bff90c7ecee66c309066e2041c66ac8e95bf2083d1";
               type = "sdcard";
             }
             {
               filesystem = "ext4";
               name = "openwrt-sunxi-cortexa8-olimex_a13-olinuxino-ext4-sdcard.img.gz";
-              sha256 = "cbff5837e8f6b2accb36305bc0ef541c55a4e2ec9c345aeefe2090670cc3a989";
-              sha256_unsigned = "5ec6bc9fe56e8fb51f30bb35b88f92bfb5619289503c3adf86acfbdde03c325c";
+              sha256 = "e7612d3821d7f7770da9f51871db565324df61b2f351f5738baee647b8bed6b6";
+              sha256_unsigned = "52088c0a5fe30516078b5615af714c074a72ceec7ec7e3fe5a77585111ac3652";
               type = "sdcard";
             }
           ];
@@ -62469,9 +62469,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "sunxi/cortexa8";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
   };
@@ -62728,45 +62728,45 @@
           images = [
             {
               filesystem = "squashfs";
-              name = "openwrt-x86-generic-generic-squashfs-rootfs.img.gz";
-              sha256 = "3d95c605d77c5921dd65f7fb8c5fb6d16d28668c92083163e1421aaddba0d0a3";
-              sha256_unsigned = "3d95c605d77c5921dd65f7fb8c5fb6d16d28668c92083163e1421aaddba0d0a3";
-              type = "rootfs";
+              name = "openwrt-x86-generic-generic-squashfs-combined-efi.img.gz";
+              sha256 = "305a5a61e69e43557b338171db19ec0d8865b0108b2a0fedc90bfee740cdf360";
+              sha256_unsigned = "8f4ee437867e03d8051be6c68c4514738af4293ddc7c78e69878b1e8926db1de";
+              type = "combined-efi";
             }
             {
               filesystem = "ext4";
               name = "openwrt-x86-generic-generic-ext4-combined-efi.img.gz";
-              sha256 = "d58ea2c1aab231221fa4187155bac6bd1e8ee7cfdc95f58115a11a5278d7a3d5";
-              sha256_unsigned = "f30bbba747eae6e7fad4d3a56fb8fdf47077025b3bd7618f0fc2da3d447e0405";
+              sha256 = "8b68a1676199a4bbc4274c9621f7c584972059991465420f1ce22a095bbb2c43";
+              sha256_unsigned = "b469a51bb785f0b80afca0137b37e509577e04d63054bb8b1b128cfc1132f588";
               type = "combined-efi";
-            }
-            {
-              filesystem = "ext4";
-              name = "openwrt-x86-generic-generic-ext4-combined.img.gz";
-              sha256 = "bb0dabe04a13c2719909b4136d3df9f8841d7c500a979952ecef13e4b20718cf";
-              sha256_unsigned = "5baf409bb6c7b8ca847ab328df1d6eb72401e3ceed213e05a6dd134cf5b425b1";
-              type = "combined";
-            }
-            {
-              filesystem = "squashfs";
-              name = "openwrt-x86-generic-generic-squashfs-combined-efi.img.gz";
-              sha256 = "35d09d243697c074a72d26d722ac0a3510988c3cba951139eb26b55678a29308";
-              sha256_unsigned = "43afd9b6ee4fdc6ea558679f4e04f043972082a7a161f71950290eb8968901be";
-              type = "combined-efi";
-            }
-            {
-              filesystem = "squashfs";
-              name = "openwrt-x86-generic-generic-squashfs-combined.img.gz";
-              sha256 = "a1107cb94f7dc6f776e42247057b5e0d551c885ac1a9e44a53d1a633ca92d761";
-              sha256_unsigned = "f755f34a53925532f0636d27726951f61c24642c24cba3f7b7a9b56f92e4da10";
-              type = "combined";
             }
             {
               filesystem = "ext4";
               name = "openwrt-x86-generic-generic-ext4-rootfs.img.gz";
-              sha256 = "d700216f91a64ba3d937f64338c36aa0d7b052d089edaef3a0cd527d3abc675e";
-              sha256_unsigned = "d700216f91a64ba3d937f64338c36aa0d7b052d089edaef3a0cd527d3abc675e";
+              sha256 = "6c13d0352446d3d67a03e0ae705790c2e89b089aa8ba60af4f74f0c4f483cd8a";
+              sha256_unsigned = "6c13d0352446d3d67a03e0ae705790c2e89b089aa8ba60af4f74f0c4f483cd8a";
               type = "rootfs";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-x86-generic-generic-ext4-combined.img.gz";
+              sha256 = "aab8eda2bd6df1a804b144b9769d68491ab9cfc597deb5ee773f87b3a94d6543";
+              sha256_unsigned = "5a393080303343e3bb9be2ec4dd219d7b0987756289b1a59cc4e866e0276cf8e";
+              type = "combined";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-x86-generic-generic-squashfs-rootfs.img.gz";
+              sha256 = "a4f3508363b8ab373d269d3499b58dd08dfb6c9f8befe38171de2577b9a13063";
+              sha256_unsigned = "a4f3508363b8ab373d269d3499b58dd08dfb6c9f8befe38171de2577b9a13063";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-x86-generic-generic-squashfs-combined.img.gz";
+              sha256 = "9a1c307f79943df36e49d631967e4fe2145b955d7c0ee575baadb942d1b5f3a1";
+              sha256_unsigned = "c9c50316c92e70d60450fef772b66d291b64c49a6345f90c99d948d6fd72516c";
+              type = "combined";
             }
           ];
           supported_devices = [ ];
@@ -62778,9 +62778,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "x86/generic";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
     geode = {
@@ -63119,8 +63119,8 @@
             {
               filesystem = "squashfs";
               name = "openwrt-zynq-generic-avnet_zynq-zed-squashfs-sdcard.img.gz";
-              sha256 = "2e1a8dff521204565d8625e1ca0107be5c1ec3e53ef949f225a7a5baf4a82b46";
-              sha256_unsigned = "2e1a8dff521204565d8625e1ca0107be5c1ec3e53ef949f225a7a5baf4a82b46";
+              sha256 = "a41586eb3d2c4fa7fa9f8a3632ff309f9a425927b12315a347938aa5291b6040";
+              sha256_unsigned = "a41586eb3d2c4fa7fa9f8a3632ff309f9a425927b12315a347938aa5291b6040";
               type = "sdcard";
             }
           ];
@@ -63141,8 +63141,8 @@
             {
               filesystem = "squashfs";
               name = "openwrt-zynq-generic-digilent_zynq-zybo-squashfs-sdcard.img.gz";
-              sha256 = "e7acbbcfc6abd356b34767ff5bdb7c5ac8c2d4580ce5d2795a9068aaa807830f";
-              sha256_unsigned = "e7acbbcfc6abd356b34767ff5bdb7c5ac8c2d4580ce5d2795a9068aaa807830f";
+              sha256 = "00926eee9d158b3cc576d442e831d4d48397dd94dd8f897d8e9d93cb1a6dc972";
+              sha256_unsigned = "00926eee9d158b3cc576d442e831d4d48397dd94dd8f897d8e9d93cb1a6dc972";
               type = "sdcard";
             }
           ];
@@ -63163,8 +63163,8 @@
             {
               filesystem = "squashfs";
               name = "openwrt-zynq-generic-digilent_zynq-zybo-z7-squashfs-sdcard.img.gz";
-              sha256 = "008ea8c7aadade33f9d270e4faee5d9a0a371d2fb55f8274417cb506db43032e";
-              sha256_unsigned = "008ea8c7aadade33f9d270e4faee5d9a0a371d2fb55f8274417cb506db43032e";
+              sha256 = "051637a22c2eedb941a98f9ae7b9fbeac3a9d62e5419225164d0a6ad996ad38a";
+              sha256_unsigned = "051637a22c2eedb941a98f9ae7b9fbeac3a9d62e5419225164d0a6ad996ad38a";
               type = "sdcard";
             }
           ];
@@ -63188,8 +63188,8 @@
             {
               filesystem = "squashfs";
               name = "openwrt-zynq-generic-xlnx_zynq-zc702-squashfs-sdcard.img.gz";
-              sha256 = "a870831f586b748fa08356a0486335003c3637c9b6695e189d9f9a5d1e1a1e78";
-              sha256_unsigned = "a870831f586b748fa08356a0486335003c3637c9b6695e189d9f9a5d1e1a1e78";
+              sha256 = "793554ac52062f74e38a93fd7c13999e2a4fc198a14a819733fc56383ee20760";
+              sha256_unsigned = "793554ac52062f74e38a93fd7c13999e2a4fc198a14a819733fc56383ee20760";
               type = "sdcard";
             }
           ];
@@ -63204,9 +63204,9 @@
           ];
         };
       };
-      source_date_epoch = 1706621668;
+      source_date_epoch = 1706624857;
       target = "zynq/generic";
-      version_code = "r24943-3a073a0212";
+      version_code = "r24944-906595c262";
       version_number = "SNAPSHOT";
     };
   };
