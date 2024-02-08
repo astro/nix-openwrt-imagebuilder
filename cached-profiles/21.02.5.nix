@@ -21822,6 +21822,115 @@
       version_code = "r16688-fa9a932fdb";
       version_number = "21.02.5";
     };
+    mikrotik = {
+      arch_packages = "arm_cortex-a7_neon-vfpv4";
+      default_packages = [
+        "ath10k-firmware-qca4019-ct"
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall"
+        "fstools"
+        "ip6tables"
+        "iptables"
+        "kmod-ath10k-ct"
+        "kmod-gpio-button-hotplug"
+        "kmod-ipt-offload"
+        "kmod-leds-gpio"
+        "kmod-usb-dwc3"
+        "kmod-usb-dwc3-qcom"
+        "kmod-usb3"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mtd"
+        "netifd"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "swconfig"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+        "wpad-basic-wolfssl"
+      ];
+      metadata_version = 1;
+      profiles = {
+        mikrotik_hap-ac2 = {
+          device_packages = [
+            "ipq-wifi-mikrotik_hap-ac2"
+            "-kmod-ath10k-ct"
+            "kmod-ath10k-ct-smallbuffers"
+          ];
+          image_prefix = "openwrt-21.02.5-ipq40xx-mikrotik-mikrotik_hap-ac2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-ipq40xx-mikrotik-mikrotik_hap-ac2-initramfs-kernel.bin";
+              sha256 = "7b87f784b092c0057220f95ccd7935c310f4ab03592fbcad5bb7328fdaacdec9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-ipq40xx-mikrotik-mikrotik_hap-ac2-squashfs-sysupgrade.bin";
+              sha256 = "dff760ddd7ea82630d82d69f0b064f2615d1ed9f7827ea53e27306af02c70a7e";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,hap-ac2"
+          ];
+          titles = [
+            {
+              model = "hAP ac2";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+        mikrotik_sxtsq-5-ac = {
+          device_packages = [
+            "ipq-wifi-mikrotik_sxtsq-5-ac"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-21.02.5-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac-squashfs-sysupgrade.bin";
+              sha256 = "ef972995f30aaac7903d95013eeab5b8ea9e80bf52c138faf4efa37eb254517b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-ipq40xx-mikrotik-mikrotik_sxtsq-5-ac-initramfs-kernel.bin";
+              sha256 = "c9c2b12b9624a059ebf232e9f9568f6df5f5af59cbf65f1256132caca8a0cda6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,sxtsq-5-ac"
+          ];
+          titles = [
+            {
+              model = "SXTsq 5 ac (RBSXTsqG-5acD)";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+      };
+      source_date_epoch = "1665688598";
+      target = "ipq40xx/mikrotik";
+      version_code = "r16688-fa9a932fdb";
+      version_number = "21.02.5";
+    };
   };
   ipq806x = {
     generic = {
@@ -23297,6 +23406,898 @@
     };
   };
   lantiq = {
+    xrx200 = {
+      arch_packages = "mips_24kc";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "dsl-vrx200-firmware-xdsl-a"
+        "dsl-vrx200-firmware-xdsl-b-patch"
+        "firewall"
+        "fstools"
+        "ip6tables"
+        "iptables"
+        "kmod-gpio-button-hotplug"
+        "kmod-ipt-offload"
+        "kmod-leds-gpio"
+        "kmod-ltq-atm-vr9"
+        "kmod-ltq-ptm-vr9"
+        "kmod-ltq-vdsl-vr9"
+        "kmod-ltq-vdsl-vr9-mei"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "ltq-vdsl-app"
+        "ltq-vdsl-vr9-vectoring-fw-installer"
+        "mtd"
+        "netifd"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoa"
+        "ppp-mod-pppoe"
+        "procd"
+        "swconfig"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        alphanetworks_asl56026 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-alphanetworks_asl56026";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-alphanetworks_asl56026-squashfs-sysupgrade.bin";
+              sha256 = "013071897c0bd70bb9adf23e364b2941abdf6e5fb9af8e4554b4993403a5b918";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-alphanetworks_asl56026-initramfs-kernel.bin";
+              sha256 = "1f9e5369b0ed94a8ced92cb43651f07aba95dabc04167bf862b7da2c386172af";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "alphanetworks,asl56026"
+          ];
+          titles = [
+            {
+              model = "ASL56026";
+              vendor = "Alpha";
+            }
+            {
+              model = "ECI VDSL Modem V-2FUb/I";
+              vendor = "BT Openreach";
+            }
+          ];
+        };
+        arcadyan_vg3503j = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vg3503j";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vg3503j-squashfs-sysupgrade.bin";
+              sha256 = "cace6327c43af9c93de878eeccf68d760f85f5653099e5cbae63f6527ec696ef";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vg3503j-initramfs-kernel.bin";
+              sha256 = "0e9fe5dd9fd2bbc91780cc0143392c61452f4d32d778b9f81a9f7af95644c901";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,vg3503j"
+            "VG3503J"
+          ];
+          titles = [
+            {
+              model = "ECI VDSL Modem V-2FUb/R";
+              vendor = "BT Openreach";
+            }
+          ];
+        };
+        arcadyan_vgv7510kw22-brn = {
+          device_packages = [
+            "kmod-rt2800-pci"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7510kw22-brn";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7510kw22-brn-squashfs-factory.bin";
+              sha256 = "b0b3b91c548463300fb9edf765209af1e1e8cabd1e6ddfb3f8ef0f5bdd62a312";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7510kw22-brn-initramfs-kernel.bin";
+              sha256 = "555284353b1c0d14fa82f3bd7eb27c52b7b361741ca323c3d5a9864dddd96784";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,vgv7510kw22-brn"
+            "VGV7510KW22BRN"
+          ];
+          titles = [
+            {
+              model = "VGV7510KW22";
+              variant = "BRN";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Box 6431";
+              variant = "BRN";
+              vendor = "o2";
+            }
+          ];
+        };
+        arcadyan_vgv7510kw22-nor = {
+          device_packages = [
+            "kmod-rt2800-pci"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7510kw22-nor";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7510kw22-nor-initramfs-kernel.bin";
+              sha256 = "15655edd227d66c769ab13062af74b06c3b5b0e308663a5ac7533bbc10c2307c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7510kw22-nor-squashfs-sysupgrade.bin";
+              sha256 = "36db68128cc85dd723dcedccfddc29770214ac4ef9f8178f433e162c6d6275e7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,vgv7510kw22-nor"
+            "VGV7510KW22NOR"
+          ];
+          titles = [
+            {
+              model = "VGV7510KW22";
+              variant = "NOR";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Box 6431";
+              variant = "NOR";
+              vendor = "o2";
+            }
+          ];
+        };
+        arcadyan_vgv7519-brn = {
+          device_packages = [
+            "kmod-rt2800-pci"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7519-brn";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7519-brn-initramfs-kernel.bin";
+              sha256 = "306656768f2e3f702e3d2c8f24d1c8e188088c41b96606724026e6691bd5127c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7519-brn-squashfs-factory.bin";
+              sha256 = "72d622a5eee66aff30ec857358394193a7ff2888a6b8ec27b40df8be7e4ebb05";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,vgv7519-brn"
+            "VGV7519BRN"
+          ];
+          titles = [
+            {
+              model = "VGV7519";
+              variant = "BRN";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Experiabox 8";
+              variant = "BRN";
+              vendor = "KPN";
+            }
+          ];
+        };
+        arcadyan_vgv7519-nor = {
+          device_packages = [
+            "kmod-rt2800-pci"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7519-nor";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7519-nor-squashfs-sysupgrade.bin";
+              sha256 = "7c9fdf78de99866a4b4d20db4d0785debd0fd2f87605e0d1ccaa9222540c4d5c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-arcadyan_vgv7519-nor-initramfs-kernel.bin";
+              sha256 = "3770dd0e0370dfb0445199d19b0c154c3d7febad9361484798ff99b42a7d1530";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,vgv7519-nor"
+            "VGV7519NOR"
+          ];
+          titles = [
+            {
+              model = "VGV7519";
+              variant = "NOR";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Experiabox 8";
+              variant = "NOR";
+              vendor = "KPN";
+            }
+          ];
+        };
+        avm_fritz3370-rev2-hynix = {
+          device_packages = [
+            "kmod-ath9k"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "fritz-tffs"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-hynix";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-hynix-squashfs-sysupgrade.bin";
+              sha256 = "9abefccc193d328f11ee785970626c05ea28f360644ea20004d94f9d7f995d6e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-hynix-squashfs-eva-kernel.bin";
+              sha256 = "30aa0ea5d233e47b632b6331fdb084bbaafeb702f891c0258229abcea8ebed50";
+              type = "eva-kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-hynix-squashfs-eva-filesystem.bin";
+              sha256 = "95ef3e9d4c4b856fb63ed741557baf4312875653ad91c232954987818730c222";
+              type = "eva-filesystem";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-hynix-initramfs-kernel.bin";
+              sha256 = "f2fc38f22a25d7c0c6f7cd5569f3d71b92535e120f0c47bb953ec04832492a7b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz3370-rev2-hynix"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 3370";
+              variant = "Rev. 2 (Hynix NAND)";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz3370-rev2-micron = {
+          device_packages = [
+            "kmod-ath9k"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "fritz-tffs"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-micron";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-micron-initramfs-kernel.bin";
+              sha256 = "ae1134eb12506310d5e27088d9e84e11489f816909879711cf1afa21fb9f374e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-micron-squashfs-eva-kernel.bin";
+              sha256 = "169fd5b7dac506d628d6c7637ee6cd2fd154887f9ad475ff778bfd6b201060b0";
+              type = "eva-kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-micron-squashfs-eva-filesystem.bin";
+              sha256 = "95ef3e9d4c4b856fb63ed741557baf4312875653ad91c232954987818730c222";
+              type = "eva-filesystem";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz3370-rev2-micron-squashfs-sysupgrade.bin";
+              sha256 = "fb10330f8d2236d0f5429d7070db86769f18c8651a3bd7bbca704484f1d76c91";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz3370-rev2-micron"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 3370";
+              variant = "Rev. 2 (Micron NAND)";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz7360-v2 = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7360-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7360-v2-squashfs-sysupgrade.bin";
+              sha256 = "afebfccfcbafa6c027a9a503ae3115b3193efff5a3ae923e70b76bdd429c0088";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7360-v2-initramfs-kernel.bin";
+              sha256 = "a38e6cf468b842734eaa9060bfb7369f9651530ed7404fb5f79548d0e0b3d04e";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7360-v2"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7360";
+              variant = "v2";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz7360sl = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7360sl";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7360sl-initramfs-kernel.bin";
+              sha256 = "06fa8c7385fbbbe1657d4f1271736115613013f5ff822c449daa9116df2320ff";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7360sl-squashfs-sysupgrade.bin";
+              sha256 = "f59ce6a7298f4cebb3369b8fd910816c968392f243cc3d7fee34b082a57df8ef";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7360sl"
+            "FRITZ7360SL"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7360 SL";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz7362sl = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "fritz-tffs"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7362sl";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7362sl-initramfs-kernel.bin";
+              sha256 = "5a56161d21eebb0f98df5e7b8067e01838e7ba121464fe59018c8dbc6107e17c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7362sl-squashfs-sysupgrade.bin";
+              sha256 = "4f24c38b15a430bd1d1943750b77b3d44b1f3ac11c3bb88a498ad3aec0a8d1d2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7362sl"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7362 SL";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz7412 = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "fritz-tffs-nand"
+            "fritz-caldata"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7412";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7412-initramfs-kernel.bin";
+              sha256 = "27bd51ac6fe63dffbd69aec6c6fdd168300b0976c4b1ec5978cd5782f76119f3";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7412-squashfs-sysupgrade.bin";
+              sha256 = "40508af8e253cf49a5c762cfbd6011d1a40b4b4a5f377acd9d5571b8dd123adc";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7412"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7412";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz7430 = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "fritz-tffs-nand"
+            "fritz-caldata"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7430";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7430-initramfs-kernel.bin";
+              sha256 = "bd961a82cd45b884c4c01cc1b6224ea5b03fd80174874aa5c6cbbb6d9c5a02f1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-avm_fritz7430-squashfs-sysupgrade.bin";
+              sha256 = "08765f747ebc27f69c5d4ef30cde24f2386b8c4eb3dd312ee278ff2bda9ce4ea";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7430"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7430";
+              vendor = "AVM";
+            }
+          ];
+        };
+        bt_homehub-v5a = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-bt_homehub-v5a";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-bt_homehub-v5a-initramfs-kernel.bin";
+              sha256 = "6b76bb5963eefd5b3baed6c76e25537e29d88162ab57e2e15a3fe0d656a15f2e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-bt_homehub-v5a-squashfs-sysupgrade.bin";
+              sha256 = "5e6f8c7c63023fcc46c8f1b763e262ea6ce585e97f299e1b9fe7a1222f6dd7a9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "bt,homehub-v5a"
+            "BTHOMEHUBV5A"
+          ];
+          titles = [
+            {
+              model = "Home Hub 5";
+              variant = "Type A";
+              vendor = "British Telecom";
+            }
+          ];
+        };
+        buffalo_wbmr-300hpd = {
+          device_packages = [
+            "kmod-mt7603"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-buffalo_wbmr-300hpd";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-buffalo_wbmr-300hpd-initramfs-kernel.bin";
+              sha256 = "d5e556b638f83e1e1bc0dbf885617a9f0900fbeda5e0705cc59fc461fa836e7c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-buffalo_wbmr-300hpd-squashfs-sysupgrade.bin";
+              sha256 = "5c6edeb18b95c65fa3c0016364b5ab25f460b55c8a36c796a7407a89df19f542";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wbmr-300hpd"
+            "WBMR300"
+          ];
+          titles = [
+            {
+              model = "WBMR-300HPD";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        lantiq_easy80920-nand = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nand";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nand-initramfs-kernel.bin";
+              sha256 = "359cd94646a6262a6cf9405c37dc9ee8259793cc66ab77a551d7680dd52c6521";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nand-squashfs-fullimage.bin";
+              sha256 = "23b2c66cf9cc156e84a71f49edb436eeb0ebd468595d02ebf7e5c43dc39536c5";
+              type = "fullimage";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nand-squashfs-sysupgrade.bin";
+              sha256 = "609b872a133232ce48cf52383d075d0aeccd3508444ef5ef30887be50f9a94b4";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "lantiq,easy80920-nand"
+          ];
+          titles = [
+            {
+              model = "VR9 EASY80920";
+              variant = "NAND";
+              vendor = "Lantiq";
+            }
+          ];
+        };
+        lantiq_easy80920-nor = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nor";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nor-initramfs-kernel.bin";
+              sha256 = "f0be0e7d0ca58f701db86f5ee67b69b610aa2b4e0742b20ac32d88ee1f5886cc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-lantiq_easy80920-nor-squashfs-sysupgrade.bin";
+              sha256 = "344aa0d887cf8d43794a015b6d444c2eeca426fe028d22eebd4c8f28c4f5e664";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "lantiq,easy80920-nor"
+          ];
+          titles = [
+            {
+              model = "VR9 EASY80920";
+              variant = "NOR";
+              vendor = "Lantiq";
+            }
+          ];
+        };
+        netgear_dm200 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-netgear_dm200";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-netgear_dm200-initramfs-kernel.bin";
+              sha256 = "e5e833d2b091e662d9104065ecb079e64008d16277d4e20704e4d9b8cd1f0fe5";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-netgear_dm200-squashfs-factory.img";
+              sha256 = "373d66fc24daa999dbb07c58f6330a668f678bc28b8a28ec25537355b5c95e44";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-netgear_dm200-squashfs-sysupgrade.bin";
+              sha256 = "57440123cf071cf412d4f9ff8a144caa2e7ae0f3f376a1ad808b4a99201fe9f5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,dm200"
+          ];
+          titles = [
+            {
+              model = "DM200";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        tplink_tdw8970 = {
+          device_packages = [
+            "kmod-ath9k"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-tplink_tdw8970";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_tdw8970-squashfs-sysupgrade.bin";
+              sha256 = "53f3a8f1f98a8f22439ac51a2a81c04667b7e166e48735863baea8b105fd07dc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_tdw8970-initramfs-kernel.bin";
+              sha256 = "b7d2614ea41f1addb4d4e2f5586c634ad1e816d368d7ba92519b10e997f61f9f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tdw8970"
+            "TDW8970"
+          ];
+          titles = [
+            {
+              model = "TD-W8970";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tdw8980 = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-tplink_tdw8980";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_tdw8980-initramfs-kernel.bin";
+              sha256 = "5ccf50e0b0fe511f1bd20af4e43ee8301989c5ca0fa81123bf5029e687e37a11";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_tdw8980-squashfs-sysupgrade.bin";
+              sha256 = "d987c967e004fd61dccdd8a1cffcdeb7446e7468b717af174a2299e236a9cbfb";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tdw8980"
+            "TDW8980"
+          ];
+          titles = [
+            {
+              model = "TD-W8980";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_vr200 = {
+          device_packages = [
+            "kmod-mt76x0e"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-tplink_vr200";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_vr200-initramfs-kernel.bin";
+              sha256 = "1ff7f9d814ac439180bb0fdd3f82a0765aa75334c37c32bbff845290bb60c091";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_vr200-squashfs-sysupgrade.bin";
+              sha256 = "fde3aa5ef1343857fcad9f9f9f576cfc84754d4acfcba10565e582efcdaa6cd5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,vr200"
+            "VR200"
+          ];
+          titles = [
+            {
+              model = "Archer VR200";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_vr200v = {
+          device_packages = [
+            "kmod-mt76x0e"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-tplink_vr200v";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_vr200v-initramfs-kernel.bin";
+              sha256 = "dac9e2c92c9f23cff97da661a0c449ccd42fa1a04661bf04e6a55348196d5db2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-tplink_vr200v-squashfs-sysupgrade.bin";
+              sha256 = "a58c14d8a301a3f6c66768782dc9c9f3749fbc87d6b0910fe3288ec15d9f75ed";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,vr200v"
+            "VR200v"
+          ];
+          titles = [
+            {
+              model = "Archer VR200v";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        zyxel_p-2812hnu-f1 = {
+          device_packages = [
+            "kmod-rt2800-pci"
+            "wpad-basic-wolfssl"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-21.02.5-lantiq-xrx200-zyxel_p-2812hnu-f1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-zyxel_p-2812hnu-f1-squashfs-sysupgrade.bin";
+              sha256 = "d9410405cff532dda34b21a89d5998575e6f5684b0e28549f5fdfc21bc51e240";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-21.02.5-lantiq-xrx200-zyxel_p-2812hnu-f1-initramfs-kernel.bin";
+              sha256 = "71e4dc2513c32be01f26a42cf574e1d63f3f2055a8b9173dc2f6644e3a7a3e34";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zyxel,p-2812hnu-f1"
+            "P2812HNUF1"
+          ];
+          titles = [
+            {
+              model = "P-2812HNU";
+              variant = "F1";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+      };
+      source_date_epoch = "1665688598";
+      target = "lantiq/xrx200";
+      version_code = "r16688-fa9a932fdb";
+      version_number = "21.02.5";
+    };
     xway = {
       arch_packages = "mips_24kc";
       default_packages = [
@@ -41167,6 +42168,299 @@
     };
   };
   sunxi = {
+    cortexa53 = {
+      arch_packages = "aarch64_cortex-a53";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall"
+        "fstools"
+        "ip6tables"
+        "iptables"
+        "kmod-ipt-offload"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "partx-utils"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        friendlyarm_nanopi-neo-plus2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-friendlyarm_nanopi-neo-plus2";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-friendlyarm_nanopi-neo-plus2-ext4-sdcard.img.gz";
+              sha256 = "1c8f4fd10d60c29f2c68e814e981838e342fc2e01cf88de5de7ea9b31199448a";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-friendlyarm_nanopi-neo-plus2-squashfs-sdcard.img.gz";
+              sha256 = "0daad27467053774ac5035e9eda883c83d3187f5e63cc2298c76586c145b2f9e";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "nanopi-neo-plus2"
+          ];
+          titles = [
+            {
+              model = "NanoPi NEO Plus2";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_nanopi-neo2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-friendlyarm_nanopi-neo2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-friendlyarm_nanopi-neo2-squashfs-sdcard.img.gz";
+              sha256 = "e42cb7513b362b901d330625736528bb58be5cb9cb54d4d467ad0acfedc061aa";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-friendlyarm_nanopi-neo2-ext4-sdcard.img.gz";
+              sha256 = "42d088e7e6300dce7a3f7a346b1a29ef347f15be98bebc8f6eb224f486d57200";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "nanopi-neo2"
+          ];
+          titles = [
+            {
+              model = "NanoPi NEO2";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        libretech_all-h3-cc-h5 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-libretech_all-h3-cc-h5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-libretech_all-h3-cc-h5-squashfs-sdcard.img.gz";
+              sha256 = "9b00e7b36d39172e5d6f1def245fe403f7a91f83917da4a20c0a0bda09cd3ef1";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-libretech_all-h3-cc-h5-ext4-sdcard.img.gz";
+              sha256 = "00d4da302836b306778b9f8301b16eeca7dbceba68844717671574e629e8e6fb";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "libretech,all-h3-cc-h5"
+          ];
+          titles = [
+            {
+              model = "ALL-H3-CC";
+              variant = "H5";
+              vendor = "Libre Computer";
+            }
+          ];
+        };
+        olimex_a64-olinuxino = {
+          device_packages = [
+            "kmod-rtl8723bs"
+            "rtl8723bs-firmware"
+          ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-olimex_a64-olinuxino";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-olimex_a64-olinuxino-ext4-sdcard.img.gz";
+              sha256 = "c0b4072ec6626a598e5817ad7fa9ba62073716d660a72a3ee55d93ae51f745f0";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-olimex_a64-olinuxino-squashfs-sdcard.img.gz";
+              sha256 = "16019a3c683d43082ea00633050137cbe9f869286f6fb39282ae9a6ab3de257e";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a64-olinuxino"
+          ];
+          titles = [
+            {
+              model = "A64-Olinuxino";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        olimex_a64-olinuxino-emmc = {
+          device_packages = [
+            "kmod-rtl8723bs"
+            "rtl8723bs-firmware"
+          ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-olimex_a64-olinuxino-emmc";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-olimex_a64-olinuxino-emmc-ext4-sdcard.img.gz";
+              sha256 = "4bd3ab6a9bf418dc7b8d1b772865076efaffea1d7c7ab3e126c6b92544363683";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-olimex_a64-olinuxino-emmc-squashfs-sdcard.img.gz";
+              sha256 = "9a833557a7b8bd0b4552fe55c686695fc90cad9ad27c2cdbcae85ab2a7866e95";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a64-olinuxino-emmc"
+          ];
+          titles = [
+            {
+              model = "A64-Olinuxino";
+              variant = "eMMC";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        pine64_pine64-plus = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-pine64_pine64-plus";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-pine64_pine64-plus-ext4-sdcard.img.gz";
+              sha256 = "9dc71cc268b8477e62904aa920b275a0ba02794607caa87c837967cac1ad3bf7";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-pine64_pine64-plus-squashfs-sdcard.img.gz";
+              sha256 = "d8e67b6e076d6f04cf46e54acb02f9aa5fc9369164d782d4b60aab72df5440f3";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "pine64,pine64-plus"
+          ];
+          titles = [
+            {
+              model = "Pine64+";
+              vendor = "Pine64";
+            }
+          ];
+        };
+        pine64_sopine-baseboard = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-pine64_sopine-baseboard";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-pine64_sopine-baseboard-squashfs-sdcard.img.gz";
+              sha256 = "495547b9f93405dcd53d04dc7014a91c1b8d9fe5562167409bdd5988a9e9434e";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-pine64_sopine-baseboard-ext4-sdcard.img.gz";
+              sha256 = "dc1a1d1f758b4c9ae0d7518e3166128cbcd3338208b50e859fb93f5dec3f2423";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "pine64,sopine-baseboard"
+          ];
+          titles = [
+            {
+              model = "SoPine";
+              vendor = "Pine64";
+            }
+          ];
+        };
+        xunlong_orangepi-pc2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-xunlong_orangepi-pc2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-xunlong_orangepi-pc2-squashfs-sdcard.img.gz";
+              sha256 = "bbbc060299a4786ac735509d7ede00018da7cb38bd6a52d103050771c14fac2b";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-xunlong_orangepi-pc2-ext4-sdcard.img.gz";
+              sha256 = "792586ddc4f81dd80fa57f237da0539720ea057180bb80c9846f4a44643a1607";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-pc2"
+          ];
+          titles = [
+            {
+              model = "Orange Pi PC 2";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-zero-plus = {
+          device_packages = [ ];
+          image_prefix = "openwrt-21.02.5-sunxi-cortexa53-xunlong_orangepi-zero-plus";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-21.02.5-sunxi-cortexa53-xunlong_orangepi-zero-plus-ext4-sdcard.img.gz";
+              sha256 = "aad54df32a490df1ab09c3045df0824650a53f1101c9e3dcc29059d5b97f38bf";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-21.02.5-sunxi-cortexa53-xunlong_orangepi-zero-plus-squashfs-sdcard.img.gz";
+              sha256 = "db7816cd95df5ea4aa09caee10ec17b15463cfa549db15a64b40c1b866cb6d6a";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-zero-plus"
+          ];
+          titles = [
+            {
+              model = "Orange Pi Zero Plus";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+      };
+      source_date_epoch = "1665688598";
+      target = "sunxi/cortexa53";
+      version_code = "r16688-fa9a932fdb";
+      version_number = "21.02.5";
+    };
     cortexa7 = {
       arch_packages = "arm_cortex-a7_neon-vfpv4";
       default_packages = [
