@@ -1,0 +1,15 @@
+name: "Publish a flake to flakestry"
+on:
+    push:
+        branches:
+          - main
+jobs:
+    publish-flake:
+        runs-on: ubuntu-latest
+        permissions:
+            id-token: "write"
+            contents: "read"
+        steps:
+            - uses: flakestry/flakestry-publish@main
+              with:
+                version: "main"
