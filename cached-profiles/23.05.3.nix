@@ -35111,6 +35111,399 @@
     };
   };
   mvebu = {
+    cortexa53 = {
+      arch_packages = "aarch64_cortex-a53";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "ethtool"
+        "firewall4"
+        "fstools"
+        "kmod-gpio-button-hotplug"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-mbedtls"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "partx-utils"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        glinet_gl-mv1000 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-glinet_gl-mv1000";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-glinet_gl-mv1000-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-glinet_gl-mv1000-squashfs-sdcard.img.gz";
+              sha256 = "b596f1b6beae5c59218e45039fec1772de586dae063e5a380fc37b4db5817273";
+              sha256_unsigned = "eac8a46be4720bb6319bfe6648e52ebdb915c0bf98b97aa5134b89908fdbc6e0";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-glinet_gl-mv1000-ext4-sdcard.img.gz";
+              sha256 = "4ce14db8fb35209de2b974da7924c3741b9a584385b458929724a3cf6ec70352";
+              sha256_unsigned = "ffbf04995171e4b1be08a58cbddaa2d74f9b8f38515d8c84524207be5006b4f1";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-mv1000"
+          ];
+          titles = [
+            {
+              model = "GL-MV1000";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        globalscale_espressobin = {
+          device_packages = [ ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-ext4-sdcard.img.gz";
+              sha256 = "a1079993722c3ef7cf932feec83b4cf22865adf746ad222e47fc6a7b05810cdb";
+              sha256_unsigned = "d205b4b85f79df66bd9efc3ad24e928718184d0b83e5a4ca7254ee6d948b4866";
+              type = "sdcard";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-squashfs-sdcard.img.gz";
+              sha256 = "cab91b314f36217f7bc47b768e54340e3cc972294120dc293a21877d2c8a0f64";
+              sha256_unsigned = "ee4146c2d1315b2ea376325470bdd290c7a9e6f2647ed9e09655463a51f9f5d5";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "globalscale,espressobin"
+          ];
+          titles = [
+            {
+              model = "ESPRESSObin";
+              variant = "Non-eMMC";
+              vendor = "Marvell";
+            }
+            {
+              model = "Armada 3700 Community Board";
+              variant = "Non-eMMC";
+              vendor = "Marvell";
+            }
+          ];
+        };
+        globalscale_espressobin-emmc = {
+          device_packages = [ ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-emmc";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-emmc-ext4-sdcard.img.gz";
+              sha256 = "43e51474a3c1cb3d29b6a2ccef40fa05cfba3d66b7ede37cf25296e2b2bd95ac";
+              sha256_unsigned = "1c5ff74f9218c751460937a9fba3d83a7858f10e2ba0aa8162d487e66b9b3f3c";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-emmc-squashfs-sdcard.img.gz";
+              sha256 = "14d3d5c530f5ec8c1b3a247ca61787a8cbd363705f5a18b13afa43efb17408b0";
+              sha256_unsigned = "3cb926b56188fdf8351c80f283a70aa334c1fd1e45eabff1345bb7c590d4ab7c";
+              type = "sdcard";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-emmc-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "globalscale,espressobin-emmc"
+          ];
+          titles = [
+            {
+              model = "ESPRESSObin";
+              variant = "eMMC";
+              vendor = "Marvell";
+            }
+            {
+              model = "Armada 3700 Community Board";
+              variant = "eMMC";
+              vendor = "Marvell";
+            }
+          ];
+        };
+        globalscale_espressobin-ultra = {
+          device_packages = [
+            "kmod-i2c-pxa"
+            "kmod-rtc-pcf8563"
+          ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-ultra";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-ultra-ext4-sdcard.img.gz";
+              sha256 = "98d2c38eda53fd9efa60f2907623fbe57ecc79bd60dbcc8c21975b2f9a919f1b";
+              sha256_unsigned = "dba1d1f7554898b26ea729c3a781eb589d6c0fc63b0f284ba09e4355e3c4db09";
+              type = "sdcard";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-ultra-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-ultra-squashfs-sdcard.img.gz";
+              sha256 = "8a260ff34cf337d25a92eff84d2bc994515066c4550ae410d631099f9d350761";
+              sha256_unsigned = "073b8656d4fa148244c1be7d36ba7bf198cb7d520797e9e2c8286fc21bf227d0";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "globalscale,espressobin-ultra"
+          ];
+          titles = [
+            {
+              model = "ESPRESSObin";
+              variant = "Ultra";
+              vendor = "Marvell";
+            }
+          ];
+        };
+        globalscale_espressobin-v7 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-squashfs-sdcard.img.gz";
+              sha256 = "39f9784350482a394b6aa7f35e3395cf04b4aa5e0b7d91e35bc4eaa74f5030e1";
+              sha256_unsigned = "753e1d3576d228ddf391129d28b80b5c0dd443a42833887cb400c9d9d56df05b";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-ext4-sdcard.img.gz";
+              sha256 = "2fdf71bddaf69af216394a219635be64a56c1346b750df5ebad154e0d24c82ec";
+              sha256_unsigned = "b6b9cd18fbb6d9578b5c2574b47dbbfa6c24562c482a9b7b9c4da4c8504052d6";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "globalscale,espressobin-v7"
+          ];
+          titles = [
+            {
+              model = "ESPRESSObin";
+              variant = "V7 Non-eMMC";
+              vendor = "Marvell";
+            }
+            {
+              model = "Armada 3700 Community Board";
+              variant = "V7 Non-eMMC";
+              vendor = "Marvell";
+            }
+          ];
+        };
+        globalscale_espressobin-v7-emmc = {
+          device_packages = [ ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-emmc";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-emmc-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-emmc-ext4-sdcard.img.gz";
+              sha256 = "86a3e4540849827d7a582f104af76cc60c22ea4c5716099ac12a85335ed6ac99";
+              sha256_unsigned = "74ca7bcb0553d2f4c0a7a8c23494b84ba170c4afd9f6b3e280c3ad8dc8f00495";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-globalscale_espressobin-v7-emmc-squashfs-sdcard.img.gz";
+              sha256 = "8a9b11db271d60bf6fd4afc564a52e3fe145850e5cb072747ef73702361665f2";
+              sha256_unsigned = "e747a150a43f912f0cd308eb51f63f574e12ad4e660a53881712820d4002e747";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "globalscale,espressobin-v7-emmc"
+          ];
+          titles = [
+            {
+              model = "ESPRESSObin";
+              variant = "V7 eMMC";
+              vendor = "Marvell";
+            }
+            {
+              model = "Armada 3700 Community Board";
+              variant = "V7 eMMC";
+              vendor = "Marvell";
+            }
+          ];
+        };
+        marvell_armada-3720-db = {
+          device_packages = [ ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-marvell_armada-3720-db";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-marvell_armada-3720-db-initramfs-kernel.bin";
+              sha256 = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              sha256_unsigned = "6cfd2ed29d38b5f7a3ae4f70ede30199d4f898e32b1081fa8a928fce248f6765";
+              type = "kernel";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-marvell_armada-3720-db-ext4-sdcard.img.gz";
+              sha256 = "41f21ce21ddedd160d7a954de26851e82a59a8e2735acfea8a59980d441e172f";
+              sha256_unsigned = "e51391806fbd50e2590c93f7af3c91ffd62c5c1bd2ff1b102b2e6403be26b748";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-marvell_armada-3720-db-squashfs-sdcard.img.gz";
+              sha256 = "33f0627b3254e346c0445f3c0222d98d13e7790eb6e52455c8f5afac159ef0fa";
+              sha256_unsigned = "bc0224b44fcf1c22b8fd4b8c003688304990afde65f285581f3f9e5524642fd3";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "marvell,armada-3720-db"
+          ];
+          titles = [
+            {
+              model = "Armada 3720 Development Board (DB-88F3720-DDR3)";
+              vendor = "Marvell";
+            }
+          ];
+        };
+        methode_edpu = {
+          device_packages = [
+            "f2fs-tools"
+            "fdisk"
+            "kmod-i2c-pxa"
+            "kmod-hwmon-lm75"
+          ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-methode_edpu";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-methode_edpu-firmware.tgz";
+              sha256 = "6f2c484132aa547d91fb9e8d876e71bc429a2041861ecb4581f45b680b7cf3a0";
+              sha256_unsigned = "8b97d4b5da92960008e641efe302f7bd115bcace035f7f2f55a118341f073083";
+              type = "firmware";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-methode_edpu-initramfs.itb";
+              sha256 = "3baae186c29ad8f867fbef4e64d5a6a1c48337fc5a1b796891acfccf2552876b";
+              sha256_unsigned = "3baae186c29ad8f867fbef4e64d5a6a1c48337fc5a1b796891acfccf2552876b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "methode,edpu"
+          ];
+          titles = [
+            {
+              model = "eDPU";
+              vendor = "Methode";
+            }
+          ];
+        };
+        methode_udpu = {
+          device_packages = [
+            "f2fs-tools"
+            "fdisk"
+            "kmod-i2c-pxa"
+            "kmod-hwmon-lm75"
+          ];
+          image_prefix = "openwrt-23.05.3-mvebu-cortexa53-methode_udpu";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.3-mvebu-cortexa53-methode_udpu-initramfs.itb";
+              sha256 = "247d4a60246c6170b11178b5e2a34e9923ffb207433195c49eb2b5e98900ebc1";
+              sha256_unsigned = "247d4a60246c6170b11178b5e2a34e9923ffb207433195c49eb2b5e98900ebc1";
+              type = "kernel";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.3-mvebu-cortexa53-methode_udpu-firmware.tgz";
+              sha256 = "0b277a3915e3ba7f29a532edea97ed79109f43e127009d1da65c4e71d116a31a";
+              sha256_unsigned = "82de68969a0c1a94b8549e96e4fa56d9e9533a6b19a6bc56a62a512079dfee37";
+              type = "firmware";
+            }
+          ];
+          supported_devices = [
+            "methode,udpu"
+          ];
+          titles = [
+            {
+              model = "micro-DPU (uDPU)";
+              vendor = "Methode";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1711145382;
+      target = "mvebu/cortexa53";
+      version_code = "r23809-234f1a2efa";
+      version_number = "23.05.3";
+    };
     cortexa72 = {
       arch_packages = "aarch64_cortex-a72";
       default_packages = [
