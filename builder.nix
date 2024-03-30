@@ -29,6 +29,8 @@
 , disabledServices ? []
 # Add to output name
 , extraImageName ? null
+# Provide option to pass custom value for "CONFIG_TARGET_ROOTFS_PARTSIZE"
+, rootFsPartSize ? null
 }:
 
 let
@@ -97,19 +99,26 @@ pkgs.stdenv.mkDerivation {
     bash perl python3 dtc
   ] ++ lib.optional (!lib.versionAtLeast release "21" && release != "snapshot") python2;
 
-  buildPhase = lib.optionalString (lib.versionOlder release "19") ''
+  buildPhase = let
+    makeArgs = lib.concatStringsSep " " [
+      "-j$NIX_BUILD_CORES"
+      "DISABLED_SERVICES='${lib.concatStringsSep " " disabledServices}'"
+      "PACKAGES='${lib.concatStringsSep " " packages}'"
+      "PROFILE='${profile}'"
+      "SHELL='${pkgs.runtimeShell}'"
+      (lib.optionalString (files != null) "FILES='./files'")
+      (lib.optionalString (rootFsPartSize != null) "ROOTFS_PARTSIZE=${toString rootFsPartSize}")
+      (lib.optionalString (extraImageName != null) "EXTRA_IMAGE_NAME='${extraImageName}'")
+    ];
+
+  in lib.optionalString (lib.versionOlder release "19") ''
     # Hack around broken check for gcc
     touch staging_dir/host/.prereq-build
   '' + lib.optionalString (files != null) ''
       # copy files to avoid making etc read-only
       cp -r --no-preserve=all ${files} files
   '' + ''
-    make image SHELL=${pkgs.runtimeShell} -j$NIX_BUILD_CORES \
-      PROFILE="${profile}" \
-      PACKAGES="${lib.concatStringsSep " " packages}" \
-      ${lib.optionalString (files != null) "FILES=./files"} \
-      DISABLED_SERVICES="${lib.concatStringsSep " " disabledServices}" \
-      ${lib.optionalString (extraImageName != null) ''EXTRA_IMAGE_NAME="${extraImageName}"''}
+    make image ${makeArgs}
   '';
 
   installPhase = ''
