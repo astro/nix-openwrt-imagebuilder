@@ -268,7 +268,7 @@
   packages."arm_mpcore"."base".sha256 = "sha256-d1C0S6PtuusvkAqoITEwsf3Dj5ENHWutzm7G++fRnU8=";
   packages."arm_mpcore"."luci".sha256 = "sha256-dUCUu/TxSR//zQTW98ZZrZA4OC6ouDWlV0tZMoSDi7M=";
   packages."arm_mpcore"."packages".sha256 = "sha256-WVUv1GzCEI/mXcSsDOSkxIcwoQeGLnFlERBGQI4YcKM=";
-  packages."arm_mpcore"."routing".sha256 = "sha256-8J4qwZ/xIA+Vbx7MOzGCkALgD8/FICcebdh+xfLOXjA=";
+  packages."arm_mpcore"."routing".sha256 = "sha256-L4nkztwo1PvlfBh+ttwjg413ZpvOd76qrTOjtxCO5Ck=";
   packages."arm_mpcore"."telephony".sha256 = "sha256-MH2Bj5pB1Cot+facEqSf3cDRpB8RrfoxHRL1+lgvwdI=";
   targets."gemini"."generic".sha256 = "sha256-bnBclnaBv/FR6z+KU9epxWEIjM8DNcrcfZwrIF6rycE=";
   targets."gemini"."generic".packagesArch = "arm_fa526";
