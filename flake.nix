@@ -42,16 +42,31 @@
 
     packages.x86_64-linux.example-image =
       let
-        image = import ./example.nix {
+        image = import ./example.nix rec {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           profiles = self.lib.profiles {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux;
+            inherit pkgs;
           };
           inherit (self.lib) build;
         };
       in
       # Wrap `image` once to avoid `nix flake show` breaking on IFD
       nixpkgs.legacyPackages.x86_64-linux.runCommand "example-image" {} ''
+        ln -s ${image} $out
+      '';
+
+    packages.x86_64-linux.example-x86-64-image =
+      let
+        image = import ./example-x86-64.nix rec {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          profiles = self.lib.profiles {
+            inherit pkgs;
+          };
+          inherit (self.lib) build;
+        };
+      in
+      # Wrap `image` once to avoid `nix flake show` breaking on IFD
+      nixpkgs.legacyPackages.x86_64-linux.runCommand "example-x86-64-image" {} ''
         ln -s ${image} $out
       '';
 
