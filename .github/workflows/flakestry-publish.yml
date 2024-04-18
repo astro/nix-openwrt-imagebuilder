@@ -10,8 +10,7 @@ jobs:
             id-token: "write"
             contents: "read"
         steps:
-            - uses: pnmadelaine/flakestry-publish@fix
-              #uses: flakestry/flakestry-publish@main
+            - uses: flakestry/flakestry-publish@main
               with:
                 ref: "refs/heads/main"
                 ignoreConflicts: true
