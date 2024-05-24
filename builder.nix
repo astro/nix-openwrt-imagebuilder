@@ -54,9 +54,15 @@ pkgs.stdenv.mkDerivation {
   ] ++ lib.optional (extraImageName != null) extraImageName
   ++ [ target variant profile ]);
 
-  src = let
-    inherit (pkgs.stdenv.hostPlatform) uname;
-  in variantFiles."${imageBuilderPrefix}${target}-${variant}.${uname.system}-${uname.processor}.tar.xz";
+  src =
+    let
+      inherit (pkgs.stdenv.hostPlatform) uname;
+      baseFileName = "${imageBuilderPrefix}${target}-${variant}.${uname.system}-${uname.processor}";
+      possibleFileNames = builtins.map (extension: "${baseFileName}${extension}") [ ".tar.zst" ".tar.xz" ];
+      matches = builtins.filter (fileName: builtins.hasAttr fileName variantFiles) possibleFileNames;
+    in
+    if (builtins.length matches > 0) then builtins.getAttr (builtins.elemAt matches 0) variantFiles
+    else throw "No valid image builder found!";
 
   postPatch = with pkgs; ''
     patchShebangs scripts staging_dir/host/bin
@@ -94,7 +100,7 @@ pkgs.stdenv.mkDerivation {
     '';
 
   nativeBuildInputs = with pkgs; [
-    zlib unzip bzip2
+    zlib unzip bzip2 zstd
     ncurses which rsync git file getopt wget
     bash perl python3 dtc
   ] ++ lib.optional (!lib.versionAtLeast release "21" && release != "snapshot") python2;
