@@ -61,8 +61,9 @@ pkgs.stdenv.mkDerivation {
       possibleFileNames = builtins.map (extension: "${baseFileName}${extension}") [ ".tar.zst" ".tar.xz" ];
       matches = builtins.filter (fileName: builtins.hasAttr fileName variantFiles) possibleFileNames;
     in
-    if (builtins.length matches > 0) then builtins.getAttr (builtins.elemAt matches 0) variantFiles
-    else throw "No valid image builder found!";
+      if matches != []
+      then builtins.getAttr (builtins.elemAt matches 0) variantFiles
+      else throw "No valid image builder found!";
 
   postPatch = with pkgs; ''
     patchShebangs scripts staging_dir/host/bin
