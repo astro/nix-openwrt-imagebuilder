@@ -103,7 +103,7 @@ pkgs.stdenv.mkDerivation {
     '' + lib.optionalString (files != null) ''
       # copy files to avoid making etc read-only
       cp -r --no-preserve=all ${files} files
-    '' + lib.optionalString (lib.versionOlder release "19") ''
+    '' + lib.optionalString (lib.versionOlder release "19" && release != "snapshot") ''
       # Hack around broken check for gcc
       touch staging_dir/host/.prereq-build
     '' + ''
@@ -115,7 +115,7 @@ pkgs.stdenv.mkDerivation {
     zlib unzip bzip2 zstd
     ncurses which rsync git file getopt wget
     bash perl python3 dtc
-  ] ++ lib.optional (!lib.versionAtLeast release "21" && release != "snapshot") python2;
+  ] ++ lib.optional (lib.versionOlder release "21" && release != "snapshot") python2;
 
 
   buildFlags = [
