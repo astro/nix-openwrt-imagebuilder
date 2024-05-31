@@ -31,7 +31,8 @@
 , extraImageName ? null
 # Provide option to pass custom value for "CONFIG_TARGET_ROOTFS_PARTSIZE"
 , rootFsPartSize ? null
-}:
+, ...
+} @ args:
 
 let
   inherit (pkgs) lib;
@@ -46,9 +47,25 @@ let
     ++ packages;
   allRequiredPackages = expandDeps allPackages requiredPackages;
   imageBuilderPrefix  = "openwrt-imagebuilder-${if release == "snapshot" then "" else "${release}-"}";
+
+  extraArgs = builtins.removeAttrs args [
+    "pkgs"
+    "release"
+    "target"
+    "profile"
+    "variant"
+    "sha256"
+    "packagesArch"
+    "feedsSha256"
+    "packages"
+    "files"
+    "disabledServices"
+    "extraImageName"
+    "rootFsPartSize"
+  ];
 in
 
-pkgs.stdenv.mkDerivation {
+pkgs.stdenv.mkDerivation ({
   name = lib.concatStringsSep "-" ([
     "openwrt" release
   ] ++ lib.optional (extraImageName != null) extraImageName
@@ -144,6 +161,8 @@ pkgs.stdenv.mkDerivation {
     '';
     
   installPhase = ''
+    runHook preInstall
+
     mkdir -p $out/nix-support
     pushd bin/targets/${target}/${variant}
     for src in *; do
@@ -155,7 +174,9 @@ pkgs.stdenv.mkDerivation {
       fi
     done
     popd
+
+    runHook postInstall
   '';
 
   dontFixup = true;
-}
+} // extraArgs)
