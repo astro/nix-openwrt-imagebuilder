@@ -1,5 +1,263 @@
 {
   apm821xx = {
+    nand = {
+      arch_packages = "powerpc_464fp";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall4"
+        "fstools"
+        "kmod-ath9k"
+        "kmod-gpio-button-hotplug"
+        "kmod-i2c-core"
+        "kmod-leds-gpio"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "swconfig"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+        "wpad-basic-wolfssl"
+      ];
+      metadata_version = 1;
+      profiles = {
+        meraki_mr24 = {
+          device_packages = [
+            "kmod-spi-gpio"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-apm821xx-nand-meraki_mr24";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-apm821xx-nand-meraki_mr24-initramfs-kernel.bin";
+              sha256 = "03fe8e5f1fd7de7a9b2c7142121ac3d9b3c99d9835a96600d03049fc459ed511";
+              sha256_unsigned = "03fe8e5f1fd7de7a9b2c7142121ac3d9b3c99d9835a96600d03049fc459ed511";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-meraki_mr24-squashfs-sysupgrade.bin";
+              sha256 = "b896e946f67c0ff55148e42a82d9251a8ff0e1faae902bb77b2df9d02a9091cb";
+              sha256_unsigned = "9649ef84017b4c8352621514885f1f6f5ddbfd4d7935ee3ba83784664f3e6e8b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "meraki,mr24"
+            "mr24"
+          ];
+          titles = [
+            {
+              model = "MR24";
+              vendor = "Cisco Meraki";
+            }
+          ];
+        };
+        meraki_mx60 = {
+          device_packages = [
+            "kmod-spi-gpio"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-usb-dwc2"
+            "kmod-usb-storage"
+            "block-mount"
+          ];
+          image_prefix = "openwrt-22.03.7-apm821xx-nand-meraki_mx60";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-meraki_mx60-squashfs-sysupgrade.bin";
+              sha256 = "0f6b46b840c6c2c1df1ba5859eafbae1f851d68c081be9b02d0fb58269f9dc7f";
+              sha256_unsigned = "65690357647fe5d457a6d87b922a1b796a5d112ad1768a4e1960cfebdab702b5";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-apm821xx-nand-meraki_mx60-initramfs-kernel.bin";
+              sha256 = "9ae79ed9cedcb0229396e1bcee2c4057e35aa51f3a441671fc439e282ba9e62e";
+              sha256_unsigned = "9ae79ed9cedcb0229396e1bcee2c4057e35aa51f3a441671fc439e282ba9e62e";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "meraki,mx60"
+          ];
+          titles = [
+            {
+              model = "MX60";
+              vendor = "Cisco Meraki";
+            }
+            {
+              model = "MX60W";
+              vendor = "Cisco Meraki";
+            }
+          ];
+        };
+        netgear_wndap620 = {
+          device_packages = [
+            "kmod-eeprom-at24"
+          ];
+          image_prefix = "openwrt-22.03.7-apm821xx-nand-netgear_wndap620";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndap620-squashfs-factory.img";
+              sha256 = "9c41a052ac1621f33e6965cacd7b69060c60d294c72e24c446216914b4290bfc";
+              sha256_unsigned = "9c41a052ac1621f33e6965cacd7b69060c60d294c72e24c446216914b4290bfc";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndap620-initramfs-kernel.bin";
+              sha256 = "1a97561664aeebb4a329963844f2f21856f36f0e38b0c5c59bea295bd6f14e29";
+              sha256_unsigned = "1a97561664aeebb4a329963844f2f21856f36f0e38b0c5c59bea295bd6f14e29";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndap620-squashfs-sysupgrade.bin";
+              sha256 = "31ffa4286bd6592f59bfa949f44004559afa43dfdf2e4b6640f0ee88739cbfa0";
+              sha256_unsigned = "29c88199cbc316c15ad5f7aca15ed9277c0fb81b42058e2926bcc1ae7f0ab2f9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndap620"
+          ];
+          titles = [
+            {
+              model = "WNDAP620 (Premium Wireless-N)";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndap660 = {
+          device_packages = [
+            "kmod-eeprom-at24"
+          ];
+          image_prefix = "openwrt-22.03.7-apm821xx-nand-netgear_wndap660";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndap660-squashfs-factory.img";
+              sha256 = "884b42e40bef40ff5094630092cb0e7c7d79743072be06fe9f05c294cc69e3a9";
+              sha256_unsigned = "884b42e40bef40ff5094630092cb0e7c7d79743072be06fe9f05c294cc69e3a9";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndap660-initramfs-kernel.bin";
+              sha256 = "e1a1a87e59d2a4a05693d688647f17116827e84666cfb4d455d5ea6b4fa00d18";
+              sha256_unsigned = "e1a1a87e59d2a4a05693d688647f17116827e84666cfb4d455d5ea6b4fa00d18";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndap660-squashfs-sysupgrade.bin";
+              sha256 = "10a96be6c7b96cdcf0784ad40aabec653a8cf84764c4c7e160a75c7924116dc5";
+              sha256_unsigned = "5dec64115e62c95ac5ef9709a79047470f773ca3d9585906a18801f744252d98";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndap660"
+          ];
+          titles = [
+            {
+              model = "WNDAP660 (Dual Radio Dual Band Wireless-N)";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndr4700 = {
+          device_packages = [
+            "badblocks"
+            "block-mount"
+            "e2fsprogs"
+            "kmod-hwmon-drivetemp"
+            "kmod-dm"
+            "kmod-fs-ext4"
+            "kmod-fs-vfat"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-md-mod"
+            "kmod-nls-cp437"
+            "kmod-nls-iso8859-1"
+            "kmod-nls-iso8859-15"
+            "kmod-nls-utf8"
+            "kmod-usb3"
+            "kmod-usb-dwc2"
+            "kmod-usb-storage"
+            "partx-utils"
+          ];
+          image_prefix = "openwrt-22.03.7-apm821xx-nand-netgear_wndr4700";
+          images = [
+            {
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndr4700-device-tree.dtb";
+              sha256 = "779cc9197621b4cae330bd341be328163bb6f53fda3f2b71da1b73364d1d0616";
+              sha256_unsigned = "779cc9197621b4cae330bd341be328163bb6f53fda3f2b71da1b73364d1d0616";
+              type = "device-tree.dtb";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndr4700-initramfs-kernel.bin";
+              sha256 = "3991ab8c530c915221f8f68dfebed14584ef0e7d6c5ecc668332230e258265c8";
+              sha256_unsigned = "3991ab8c530c915221f8f68dfebed14584ef0e7d6c5ecc668332230e258265c8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndr4700-squashfs-factory.img";
+              sha256 = "ccd5d34868bc24db4d3d55f8850ce15ae68edaa97a70dd68568645d90cec92c3";
+              sha256_unsigned = "ccd5d34868bc24db4d3d55f8850ce15ae68edaa97a70dd68568645d90cec92c3";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-apm821xx-nand-netgear_wndr4700-squashfs-sysupgrade.bin";
+              sha256 = "99805125abe9133e4bcb63f558cdb7beddf56f703077c58b589352d5302f38e2";
+              sha256_unsigned = "2b62207ccea18e9254d683b897d08bac9e2aa9700b56952f543b6bf193c5fb36";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndr4700"
+            "wndr4700"
+          ];
+          titles = [
+            {
+              model = "Centria N900 WNDR4700";
+              vendor = "NETGEAR";
+            }
+            {
+              model = "Centria N900 WNDR4720";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "apm821xx/nand";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
     sata = {
       arch_packages = "powerpc_464fp";
       default_packages = [
@@ -1279,6 +1537,91 @@
       version_code = "r20341-591b7e93d3";
       version_number = "22.03.7";
     };
+    sama7 = {
+      arch_packages = "arm_cortex-a7_vfpv4";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall4"
+        "fstools"
+        "kmod-at91-udc"
+        "kmod-nft-offload"
+        "kmod-usb-gadget-eth"
+        "kmod-usb-ohci"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        microchip_sama7g5-ek = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-at91-sama7-microchip_sama7g5-ek";
+          images = [
+            {
+              filesystem = "ubifs";
+              name = "openwrt-22.03.7-at91-sama7-microchip_sama7g5-ek-ubifs-root.ubi";
+              sha256 = "41ba8709c204ad4590c4d73bd17b5b64b431f7eabe283fe500320bd36c1052c4";
+              sha256_unsigned = "41ba8709c204ad4590c4d73bd17b5b64b431f7eabe283fe500320bd36c1052c4";
+              type = "root";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-at91-sama7-microchip_sama7g5-ek-squashfs-root.ubi";
+              sha256 = "9a1cd0a663826d9d607b01d2eda7f62f6159a8bd0f661645ba55af5210df10a8";
+              sha256_unsigned = "9a1cd0a663826d9d607b01d2eda7f62f6159a8bd0f661645ba55af5210df10a8";
+              type = "root";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-at91-sama7-microchip_sama7g5-ek-ext4-sdcard.img.gz";
+              sha256 = "546f85f8377cfa85779927a359d185cfc96ec9c9f39d4b1597491fb72e149240";
+              sha256_unsigned = "546f85f8377cfa85779927a359d185cfc96ec9c9f39d4b1597491fb72e149240";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-at91-sama7-microchip_sama7g5-ek-ext4-root.ubi";
+              sha256 = "763b12cc64a6b5777338b31d3bced654964f73cad2d8a2c6b77ad31caa4b23cf";
+              sha256_unsigned = "763b12cc64a6b5777338b31d3bced654964f73cad2d8a2c6b77ad31caa4b23cf";
+              type = "root";
+            }
+          ];
+          supported_devices = [
+            "microchip,sama7g5ek"
+          ];
+          titles = [
+            {
+              model = "SAMA7G5-EK";
+              vendor = "Microchip";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "at91/sama7";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
   };
   ath25 = {
     generic = {
@@ -1397,6 +1740,12101 @@
     };
   };
   ath79 = {
+    generic = {
+      arch_packages = "mips_24kc";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall4"
+        "fstools"
+        "kmod-ath9k"
+        "kmod-gpio-button-hotplug"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "swconfig"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+        "wpad-basic-wolfssl"
+      ];
+      metadata_version = 1;
+      profiles = {
+        "8dev_carambola2" = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-8dev_carambola2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-8dev_carambola2-squashfs-sysupgrade.bin";
+              sha256 = "1b788f13057e1bffa7d01bafcaf1b19a45ec92bce9dcc22a8d711e57a1a5df93";
+              sha256_unsigned = "c00142d25e04dce86e4f2eb9f5acb2e36357a8add4701775a95e0f0212f266c0";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-8dev_carambola2-initramfs-kernel.bin";
+              sha256 = "dec605dad4ebc97deb22d8d784ee107dabb9ff6a90e8ce6b9def74069d1d6f24";
+              sha256_unsigned = "dec605dad4ebc97deb22d8d784ee107dabb9ff6a90e8ce6b9def74069d1d6f24";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "8dev,carambola2"
+            "carambola2"
+          ];
+          titles = [
+            {
+              model = "Carambola2";
+              vendor = "8devices";
+            }
+          ];
+        };
+        "8dev_lima" = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-8dev_lima";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-8dev_lima-squashfs-sysupgrade.bin";
+              sha256 = "ffb0d4ae675f1250469f2e32e9b1dfc2979bf4d07bb18ae0dbd4b9e33b6d853e";
+              sha256_unsigned = "d1960bc12f6484382f650996203fabb78e4881e5949152f6dccea3ff49321a6e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-8dev_lima-initramfs-kernel.bin";
+              sha256 = "506817fb161d9f53b8c9ee6f2430e91f33df08b3cb81f5376e6ae55b947882bb";
+              sha256_unsigned = "506817fb161d9f53b8c9ee6f2430e91f33df08b3cb81f5376e6ae55b947882bb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "8dev,lima"
+            "lima"
+          ];
+          titles = [
+            {
+              model = "Lima";
+              vendor = "8devices";
+            }
+          ];
+        };
+        adtran_bsap1800-v2 = {
+          device_packages = [
+            "-swconfig"
+            "-uboot-envtools"
+            "fconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-adtran_bsap1800-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1800-v2-squashfs-rootfs.bin";
+              sha256 = "ad150b633b79b18185bdbd086aa8d5b8fae5a1c9bdccbd53d2351bb33185ed61";
+              sha256_unsigned = "ad150b633b79b18185bdbd086aa8d5b8fae5a1c9bdccbd53d2351bb33185ed61";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1800-v2-squashfs-sysupgrade.bin";
+              sha256 = "a095d9e5814f672a5b7384c26775203e6efb0fac130fe887080f00854bc8416e";
+              sha256_unsigned = "8d268bb3f56f33c4a6eaade1834086e77ca9e5ada7bc798f444b6275ac9a14be";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1800-v2-squashfs-kernel.bin";
+              sha256 = "c8a0e5b2c2374ee9055a301f7f7e5ab2aecad22fe25929d4dde4c86b5b969a00";
+              sha256_unsigned = "c8a0e5b2c2374ee9055a301f7f7e5ab2aecad22fe25929d4dde4c86b5b969a00";
+              type = "kernel";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1800-v2-initramfs-kernel.bin";
+              sha256 = "78f9a308c5fdb43c7dcfc43157181fb72fa7aa411e37b6f9f61a2d83901dcd1f";
+              sha256_unsigned = "78f9a308c5fdb43c7dcfc43157181fb72fa7aa411e37b6f9f61a2d83901dcd1f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "adtran,bsap1800-v2"
+          ];
+          titles = [
+            {
+              model = "BSAP-1800";
+              variant = "v2";
+              vendor = "Adtran/Bluesocket";
+            }
+          ];
+        };
+        adtran_bsap1840 = {
+          device_packages = [
+            "-swconfig"
+            "-uboot-envtools"
+            "fconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-adtran_bsap1840";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1840-initramfs-kernel.bin";
+              sha256 = "36f613a706cc26338f8e2963d678716738400d080f8189410a3e4a1b29d0df53";
+              sha256_unsigned = "36f613a706cc26338f8e2963d678716738400d080f8189410a3e4a1b29d0df53";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1840-squashfs-rootfs.bin";
+              sha256 = "ad150b633b79b18185bdbd086aa8d5b8fae5a1c9bdccbd53d2351bb33185ed61";
+              sha256_unsigned = "ad150b633b79b18185bdbd086aa8d5b8fae5a1c9bdccbd53d2351bb33185ed61";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1840-squashfs-sysupgrade.bin";
+              sha256 = "ef24f445541e572bf84272b160242e85bcaed6745a31ccf7bd59050ae2d90570";
+              sha256_unsigned = "91cc380aa7acd1d9ad828f13ece249d24d78035effb97d0b8e5e1a138b4016f8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-adtran_bsap1840-squashfs-kernel.bin";
+              sha256 = "c74291bb37a4a5c04d065ae0ff437d27b4dd6da145305cb3d5a1c69cf655f375";
+              sha256_unsigned = "c74291bb37a4a5c04d065ae0ff437d27b4dd6da145305cb3d5a1c69cf655f375";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "adtran,bsap1840"
+          ];
+          titles = [
+            {
+              model = "BSAP-1840";
+              vendor = "Adtran/Bluesocket";
+            }
+          ];
+        };
+        airtight_c-75 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-airtight_c-75";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-airtight_c-75-initramfs-kernel.bin";
+              sha256 = "c3e0203edf25460a20c5898a2cc0c8f0cb2e63da63832059f1bc1c9fe8b730c4";
+              sha256_unsigned = "c3e0203edf25460a20c5898a2cc0c8f0cb2e63da63832059f1bc1c9fe8b730c4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-airtight_c-75-squashfs-sysupgrade.bin";
+              sha256 = "d402d36aa0bb2f4650846e82935f5fd606729902eca6908a93daadd34d1e7ffe";
+              sha256_unsigned = "eb9a5f59f4353b4e8f00846e3a5acd471f3f6a4421d3424c928c853d92c41281";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "airtight,c-75"
+          ];
+          titles = [
+            {
+              model = "C-75";
+              vendor = "AirTight Networks";
+            }
+            {
+              model = "C-75";
+              vendor = "Mojo Networks";
+            }
+            {
+              model = "AP320";
+              vendor = "WatchGuard";
+            }
+          ];
+        };
+        alfa-network_ap121f = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-usb-storage"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_ap121f";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_ap121f-initramfs-kernel.bin";
+              sha256 = "b1149fb8c734f6593f5951b781627771969066350c30d19a521f1ebdd6533994";
+              sha256_unsigned = "b1149fb8c734f6593f5951b781627771969066350c30d19a521f1ebdd6533994";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_ap121f-squashfs-sysupgrade.bin";
+              sha256 = "7d742b444df191b94cb8c0057f30f3b3efdb0c2b1705f72446019554e1c154c4";
+              sha256_unsigned = "e808aa284074f1a3668de1f7aa3bcf3b5dab93c773886f3e06c5d70a68fd5a1d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,ap121f"
+            "ap121f"
+          ];
+          titles = [
+            {
+              model = "AP121F";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_ap121fe = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-usb-gadget-eth"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_ap121fe";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_ap121fe-initramfs-kernel.bin";
+              sha256 = "34c12d1bfcaa2b1bf5ae2bec771b93dac16462c22de51b97ff758d6b1f8f6af9";
+              sha256_unsigned = "34c12d1bfcaa2b1bf5ae2bec771b93dac16462c22de51b97ff758d6b1f8f6af9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_ap121fe-squashfs-sysupgrade.bin";
+              sha256 = "c79c8d7a05c98fbbf0286f4908a1c2e1c4400d148c438efc05ce5af81eaa7c7b";
+              sha256_unsigned = "5956a42ae8c36704d005047013ae14fe76930c0f0ec84825dec7d23d5950c705";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,ap121fe"
+          ];
+          titles = [
+            {
+              model = "AP121FE";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_n2q = {
+          device_packages = [
+            "kmod-i2c-gpio"
+            "kmod-gpio-pcf857x"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_n2q";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_n2q-initramfs-kernel.bin";
+              sha256 = "aa41435c79603181e912f1514dd98f986dce4914f82ef51041fe408a34f207fe";
+              sha256_unsigned = "aa41435c79603181e912f1514dd98f986dce4914f82ef51041fe408a34f207fe";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_n2q-squashfs-sysupgrade.bin";
+              sha256 = "825fee8c9ad76af65c5246a1d1a6be6492fdb14aa1bd5623b3faf7e7a89035bb";
+              sha256_unsigned = "0e7fa0f3fcd3b128e908d6e40401caed0acedfdd5eaa1e706433f0df93eeacdf";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,n2q"
+          ];
+          titles = [
+            {
+              model = "N2Q";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_n5q = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_n5q";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_n5q-squashfs-sysupgrade.bin";
+              sha256 = "071c6921eefccee340b3b787065dc3f2437f424f7d5fd9cbe10e2f428790f2bf";
+              sha256_unsigned = "3f53e3c264fc9cc99c119c2f4b001453b6fd2d1c3ce16d799fdc52e95485a855";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_n5q-initramfs-kernel.bin";
+              sha256 = "e375e1cd7892f974fcf0b93c5cc7622fc366e8374c9895a46a3ffc894a77a606";
+              sha256_unsigned = "e375e1cd7892f974fcf0b93c5cc7622fc366e8374c9895a46a3ffc894a77a606";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,n5q"
+            "n5q"
+          ];
+          titles = [
+            {
+              model = "N5Q";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_pi-wifi4 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_pi-wifi4";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_pi-wifi4-squashfs-sysupgrade.bin";
+              sha256 = "5121a9915fa548992566f06f9231625dc32d281013a7906a08086f2960e30272";
+              sha256_unsigned = "3be0926a0370795f9830acde820df7a778794c53c1030652f676cc9d87ebdfa6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_pi-wifi4-initramfs-kernel.bin";
+              sha256 = "19b591cbaef7bf23fcfb086217eeca7f4795f531ce1ea634ac8e533bae01c67f";
+              sha256_unsigned = "19b591cbaef7bf23fcfb086217eeca7f4795f531ce1ea634ac8e533bae01c67f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,pi-wifi4"
+          ];
+          titles = [
+            {
+              model = "Pi-WiFi4";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_r36a = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_r36a";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_r36a-squashfs-sysupgrade.bin";
+              sha256 = "b41892433f00c2d47c0412c2b1986b794cf74c3356fd634a4532575fe6f4def5";
+              sha256_unsigned = "4bd59390c0a3b1653a483ce0eaf6f97545a1417f27c3eb30da4b6f022ff85c23";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_r36a-initramfs-kernel.bin";
+              sha256 = "fc102bd5478fce21c3b78a590e5144b9a3b5dd680c19a7532d9485557fb63356";
+              sha256_unsigned = "fc102bd5478fce21c3b78a590e5144b9a3b5dd680c19a7532d9485557fb63356";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,r36a"
+            "r36a"
+          ];
+          titles = [
+            {
+              model = "R36A";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_tube-2hq = {
+          device_packages = [
+            "rssileds"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-alfa-network_tube-2hq";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_tube-2hq-initramfs-kernel.bin";
+              sha256 = "fe641bd7381139c6b1ff8ebfa976e5ad48423d53bf53edb1a7d129304cad83d8";
+              sha256_unsigned = "fe641bd7381139c6b1ff8ebfa976e5ad48423d53bf53edb1a7d129304cad83d8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-alfa-network_tube-2hq-squashfs-sysupgrade.bin";
+              sha256 = "ca95b9854f8ccfc61efca5755a31d698a48ca8366cb09d9a9444df6b90b5ca6f";
+              sha256_unsigned = "47a7dd8bdd4667716c00e1ac4d1efac6e8cadc173c6eeaeef40760ff8a0b762d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,tube-2hq"
+            "tube-2hq"
+          ];
+          titles = [
+            {
+              model = "Tube-2HQ";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        allnet_all-wap02860ac = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-allnet_all-wap02860ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-allnet_all-wap02860ac-squashfs-sysupgrade.bin";
+              sha256 = "1f8aafa23042aab3603201e17fa3254a7017a7573d82c67e4645af0f39504828";
+              sha256_unsigned = "76a357ba4f4e2ec2bce11ea421281d72c1a5e28a04128003da1ced960cec3d15";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-allnet_all-wap02860ac-squashfs-factory.bin";
+              sha256 = "010a850d668c9ff4955109f50f86a641d278f828fffdaddc5d05cc1fd084f050";
+              sha256_unsigned = "010a850d668c9ff4955109f50f86a641d278f828fffdaddc5d05cc1fd084f050";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-allnet_all-wap02860ac-initramfs-kernel.bin";
+              sha256 = "235a91a6113c89bc3eeb68b4c6441de9d7dc248bbb0431c4a7c0151b7d1d0380";
+              sha256_unsigned = "235a91a6113c89bc3eeb68b4c6441de9d7dc248bbb0431c4a7c0151b7d1d0380";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "allnet,all-wap02860ac"
+          ];
+          titles = [
+            {
+              model = "ALL-WAP02860AC";
+              vendor = "ALLNET";
+            }
+          ];
+        };
+        araknis_an-300-ap-i-n = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-araknis_an-300-ap-i-n";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-300-ap-i-n-squashfs-factory.bin";
+              sha256 = "7cc79081c1ee4afc19b1f2fa65ec3b656fad9843763ea11e4b3e057443ff71c3";
+              sha256_unsigned = "7cc79081c1ee4afc19b1f2fa65ec3b656fad9843763ea11e4b3e057443ff71c3";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-300-ap-i-n-initramfs-kernel.bin";
+              sha256 = "3477f88fca1de1556fee7a976107f097fc7ec34f3ed45522e5997bd77251f080";
+              sha256_unsigned = "3477f88fca1de1556fee7a976107f097fc7ec34f3ed45522e5997bd77251f080";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-300-ap-i-n-squashfs-sysupgrade.bin";
+              sha256 = "36bb1c4ecc01c066e0cb9a9ea97ab6bb0d1ce953346a39c1dd30e6e9b7bf2f07";
+              sha256_unsigned = "8f11f65469ebaac3588317c73136ee196e636effeb178248dedb1fbd8fc1224c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "araknis,an-300-ap-i-n"
+          ];
+          titles = [
+            {
+              model = "AN-300-AP-I-N";
+              vendor = "Araknis";
+            }
+          ];
+        };
+        araknis_an-500-ap-i-ac = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-araknis_an-500-ap-i-ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-500-ap-i-ac-squashfs-sysupgrade.bin";
+              sha256 = "3d02891e7bbb1d3e836af5753955884b0fa44e1b7402f33fd7b149307962b71b";
+              sha256_unsigned = "e306a43ad8bc19e771325bb5666860a766e75e7e8137e30347e2e7253c477db1";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-500-ap-i-ac-squashfs-factory.bin";
+              sha256 = "c7c605f411e5ccf66810ff57919d021c0140c562e1d32d0f89ab9f912764aab8";
+              sha256_unsigned = "c7c605f411e5ccf66810ff57919d021c0140c562e1d32d0f89ab9f912764aab8";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-500-ap-i-ac-initramfs-kernel.bin";
+              sha256 = "581421cd61e6a4af4f66e19b573251559e87cee99b5f673d02fff7d99087ae47";
+              sha256_unsigned = "581421cd61e6a4af4f66e19b573251559e87cee99b5f673d02fff7d99087ae47";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "araknis,an-500-ap-i-ac"
+          ];
+          titles = [
+            {
+              model = "AN-500-AP-I-AC";
+              vendor = "Araknis";
+            }
+          ];
+        };
+        araknis_an-700-ap-i-ac = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-araknis_an-700-ap-i-ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-700-ap-i-ac-squashfs-sysupgrade.bin";
+              sha256 = "232a87344ba6f18b740d9b54c41f42e09ef69465cbc4f704a879a835e47dea61";
+              sha256_unsigned = "54e4cdb3ce676355f5d2219ad3e47e7d8765f24f281e9f712d19acaf5192594d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-700-ap-i-ac-squashfs-factory.bin";
+              sha256 = "c53ff2589cec3a6f63202278271b011d10a1cff353794d6f3660cd08e9996d7d";
+              sha256_unsigned = "c53ff2589cec3a6f63202278271b011d10a1cff353794d6f3660cd08e9996d7d";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-araknis_an-700-ap-i-ac-initramfs-kernel.bin";
+              sha256 = "649bcbe919e77bdcc9292451c3dddd1554c7d8b0e85726b38f5b4519dc78bf89";
+              sha256_unsigned = "649bcbe919e77bdcc9292451c3dddd1554c7d8b0e85726b38f5b4519dc78bf89";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "araknis,an-700-ap-i-ac"
+          ];
+          titles = [
+            {
+              model = "AN-700-AP-I-AC";
+              vendor = "Araknis";
+            }
+          ];
+        };
+        arduino_yun = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-usb-storage"
+            "block-mount"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-arduino_yun";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-arduino_yun-squashfs-sysupgrade.bin";
+              sha256 = "a2ea12087866fd8173da2b1154b52ff42cbe4e46cb971120892810b9d7165b3a";
+              sha256_unsigned = "18a2d81d61249606347a6d870fe5ce3b49e0f5c702035653349e99f6fbc3cb3a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-arduino_yun-initramfs-kernel.bin";
+              sha256 = "60aebee7223a3a337881b3cdab758fb6742deed26afec4d8b8d170cb70b2d249";
+              sha256_unsigned = "60aebee7223a3a337881b3cdab758fb6742deed26afec4d8b8d170cb70b2d249";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arduino,yun"
+            "arduino-yun"
+          ];
+          titles = [
+            {
+              model = "Yun";
+              vendor = "Arduino";
+            }
+          ];
+        };
+        aruba_ap-105 = {
+          device_packages = [
+            "kmod-i2c-gpio"
+            "kmod-tpm-i2c-atmel"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-aruba_ap-105";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-aruba_ap-105-initramfs-kernel.bin";
+              sha256 = "1995408b5102e0d4aeadf24de0bcb053fdfeea99d6e9a5cd8ea2b9693e7b42f7";
+              sha256_unsigned = "1995408b5102e0d4aeadf24de0bcb053fdfeea99d6e9a5cd8ea2b9693e7b42f7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-aruba_ap-105-squashfs-sysupgrade.bin";
+              sha256 = "f66b5e8a153bcd66bac5ef10d35ceb8caafc671741f4fd6d86c14715e0a44618";
+              sha256_unsigned = "aa39ef89961011b8ed1dabbf69b37f50e2ddad08c6d2e44db292650f2c589fab";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "aruba,ap-105"
+          ];
+          titles = [
+            {
+              model = "AP-105";
+              vendor = "Aruba";
+            }
+          ];
+        };
+        asus_rp-ac66 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-asus_rp-ac66";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-asus_rp-ac66-initramfs-kernel.bin";
+              sha256 = "af8f483b70347485ab80957b402c35a834f03b9abf58da4e4764585f89cbfc9a";
+              sha256_unsigned = "af8f483b70347485ab80957b402c35a834f03b9abf58da4e4764585f89cbfc9a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-asus_rp-ac66-squashfs-factory.bin";
+              sha256 = "871c23f8a187a9f070cc6a579f468c7b0b16f0e9475ace615b227a9496b21a60";
+              sha256_unsigned = "871c23f8a187a9f070cc6a579f468c7b0b16f0e9475ace615b227a9496b21a60";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-asus_rp-ac66-squashfs-sysupgrade.bin";
+              sha256 = "1174ef2da8fca4ccfb3ab43198c12c0afc7c99f0a499ba948564f4d2dd6ac0c4";
+              sha256_unsigned = "52e0829695c1db8988a204984c760f8a0586221139c906b11080107298e6411a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "asus,rp-ac66"
+          ];
+          titles = [
+            {
+              model = "RP-AC66";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        atheros_db120 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-atheros_db120";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-atheros_db120-squashfs-sysupgrade.bin";
+              sha256 = "2144bd0ba60a5c46c0977551f87633fe8966bd97783f512dce3be91cdf952794";
+              sha256_unsigned = "1f67933eb69440a121e0234628c06e6cfa8b227a0e328c8482d0839d8de5a7e7";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-atheros_db120-initramfs-kernel.bin";
+              sha256 = "d3c88165499d2ed8fe8a569c7cf770da5208819e1c466209999a14e11cfed64f";
+              sha256_unsigned = "d3c88165499d2ed8fe8a569c7cf770da5208819e1c466209999a14e11cfed64f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-atheros_db120-squashfs-factory.bin";
+              sha256 = "0df83dc8722645ff2c883e2868ed5fc97972c6fd803317a0318c390b618a13da";
+              sha256_unsigned = "0df83dc8722645ff2c883e2868ed5fc97972c6fd803317a0318c390b618a13da";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "atheros,db120"
+            "db120"
+          ];
+          titles = [
+            {
+              model = "DB120";
+              vendor = "Atheros";
+            }
+          ];
+        };
+        avm_fritz1750e = {
+          device_packages = [
+            "fritz-tffs"
+            "rssileds"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-avm_fritz1750e";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz1750e-initramfs-kernel.bin";
+              sha256 = "6589a06493a69d30ed2b1472df1b6edf68f9fc30d50b8f6ef4206d6d6139e29f";
+              sha256_unsigned = "6589a06493a69d30ed2b1472df1b6edf68f9fc30d50b8f6ef4206d6d6139e29f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz1750e-squashfs-sysupgrade.bin";
+              sha256 = "68e8eafa7819e09f4d1f5a269314ca40c43e98058095a1c1ca8678d7a0a12fba";
+              sha256_unsigned = "4683e968fbb2a19b141b6b2ec09cc6a7697db77474369eb3fc057540354ce256";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz1750e"
+          ];
+          titles = [
+            {
+              model = "FRITZ!WLAN Repeater 1750E";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz300e = {
+          device_packages = [
+            "fritz-tffs"
+            "rssileds"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-avm_fritz300e";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz300e-initramfs-kernel.bin";
+              sha256 = "af6bb5d4569600a13a95c04005daf947e25a74e05b2e406f6a63de1c6f29cedf";
+              sha256_unsigned = "af6bb5d4569600a13a95c04005daf947e25a74e05b2e406f6a63de1c6f29cedf";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz300e-squashfs-sysupgrade.bin";
+              sha256 = "c21090fbd343d7797f3487f56a99368a2aa681339f1ca98b278626747b5d75de";
+              sha256_unsigned = "5837562be17c54276ae794a755a6166e9afbcae7bc5da43aad6611a2dd8cf9b7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz300e"
+            "fritz300e"
+          ];
+          titles = [
+            {
+              model = "FRITZ!WLAN Repeater 300E";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz4020 = {
+          device_packages = [
+            "fritz-tffs"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-avm_fritz4020";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz4020-initramfs-kernel.bin";
+              sha256 = "89d2dee6513a0af78b30e3dc647430ee084e912d5fd7453e2ad339a6308a9e8a";
+              sha256_unsigned = "89d2dee6513a0af78b30e3dc647430ee084e912d5fd7453e2ad339a6308a9e8a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz4020-squashfs-sysupgrade.bin";
+              sha256 = "6dd28ddfb88de42856cffa1c38c0931a704a05c22bd1b84c63bd504eeb603810";
+              sha256_unsigned = "0ceb2fd074ef2f5f54ce3f11f5c9ece1420927868f6cf30a0d3c8d4024730b41";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz4020"
+            "fritz4020"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 4020";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz450e = {
+          device_packages = [
+            "fritz-tffs"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-avm_fritz450e";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz450e-initramfs-kernel.bin";
+              sha256 = "70a64ffc54eb6f2eb08569250be45ac5e99acbfa1a618c7465d0423a51e4fbd8";
+              sha256_unsigned = "70a64ffc54eb6f2eb08569250be45ac5e99acbfa1a618c7465d0423a51e4fbd8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritz450e-squashfs-sysupgrade.bin";
+              sha256 = "cb5d76be842cbffa59f89d54bec779b79e811ca834b54ee88ac2b4ff9261180c";
+              sha256_unsigned = "d9e1efe2b37e41937cc01d3bafd07e99b83fbba61a2a6e39cda9d8202945d7f9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz450e"
+            "fritz450e"
+          ];
+          titles = [
+            {
+              model = "FRITZ!WLAN Repeater 450E";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritzdvbc = {
+          device_packages = [
+            "fritz-tffs"
+            "rssileds"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-avm_fritzdvbc";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritzdvbc-squashfs-sysupgrade.bin";
+              sha256 = "8876166d8b0f61a1268ae308150f6f12d1124c5573d3fea51f3caa276a45ed2f";
+              sha256_unsigned = "306d883c2ee8b79f8f8d1f59621c975441ef29c1d00cc5fa980825bde9556569";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-avm_fritzdvbc-initramfs-kernel.bin";
+              sha256 = "29353326bbfd08435164ad3471c7f2c64a491344fab6e67b05ad0a018fd770f1";
+              sha256_unsigned = "29353326bbfd08435164ad3471c7f2c64a491344fab6e67b05ad0a018fd770f1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "avm,fritzdvbc"
+          ];
+          titles = [
+            {
+              model = "FRITZ!WLAN Repeater DVB-C";
+              vendor = "AVM";
+            }
+          ];
+        };
+        belkin_f9j1108-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-belkin_f9j1108-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-belkin_f9j1108-v2-squashfs-sysupgrade.bin";
+              sha256 = "3fe795734ffde3b2d5d4b40579fc30f43dda4675e1e61ea100284a387154c42f";
+              sha256_unsigned = "7a2815293a5c8ed35e11311eed8af203f5a83ae98fc984b1a7795a2d3dfabae4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-belkin_f9j1108-v2-squashfs-factory.bin";
+              sha256 = "dfe29d377fee3a3c1c7a138cd43c74f9d73320d2289a38f34d949d876d84acf1";
+              sha256_unsigned = "dfe29d377fee3a3c1c7a138cd43c74f9d73320d2289a38f34d949d876d84acf1";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-belkin_f9j1108-v2-initramfs-kernel.bin";
+              sha256 = "3a7cb350af48db729a2d0d7dd9f6b1749bfdb5dbad6fbaa7afa3f608612f67c8";
+              sha256_unsigned = "3a7cb350af48db729a2d0d7dd9f6b1749bfdb5dbad6fbaa7afa3f608612f67c8";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "belkin,f9j1108-v2"
+          ];
+          titles = [
+            {
+              model = "F9J1108 v2 (AC1750 DB Wi-Fi)";
+              vendor = "Belkin";
+            }
+          ];
+        };
+        belkin_f9k1115-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-belkin_f9k1115-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-belkin_f9k1115-v2-squashfs-factory.bin";
+              sha256 = "98e45938da0ab4a3798816ccade4d2cec058b248d2d2ebda698152ece494565d";
+              sha256_unsigned = "98e45938da0ab4a3798816ccade4d2cec058b248d2d2ebda698152ece494565d";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-belkin_f9k1115-v2-initramfs-kernel.bin";
+              sha256 = "e4396f83c5e1258568cd85dacaecae10ac0c82e847bf92dca419ec5a6adf3d3e";
+              sha256_unsigned = "e4396f83c5e1258568cd85dacaecae10ac0c82e847bf92dca419ec5a6adf3d3e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-belkin_f9k1115-v2-squashfs-sysupgrade.bin";
+              sha256 = "0dcbd6a34e3a8b08e38e4a9c037fbc0f06800ffe089a84dc5a9736b2265bb510";
+              sha256_unsigned = "f6e55b625baee02a07ea0e66a86534ca52c90f4871a1e3728e151c254f66aaa4";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "belkin,f9k1115-v2"
+          ];
+          titles = [
+            {
+              model = "F9K1115 v2 (AC1750 DB Wi-Fi)";
+              vendor = "Belkin";
+            }
+          ];
+        };
+        buffalo_bhr-4grv = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv-squashfs-sysupgrade.bin";
+              sha256 = "47ef41a32e5959b49677817052368f22d93567b7c979d0fe5c79ba752a3232a9";
+              sha256_unsigned = "62612e6f61404c3f2d0295b7fade070c97998542241683e88949140adec5815c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv-squashfs-factory.bin";
+              sha256 = "de56f961bcd630f71fec02fc667cf43b16ceaa46ff309a73a1d2005cab68449e";
+              sha256_unsigned = "de56f961bcd630f71fec02fc667cf43b16ceaa46ff309a73a1d2005cab68449e";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv-initramfs-kernel.bin";
+              sha256 = "d4dc318b7572f1a11671cc4e88f39671df45f1a7a60721d07946a8fc1d54b423";
+              sha256_unsigned = "d4dc318b7572f1a11671cc4e88f39671df45f1a7a60721d07946a8fc1d54b423";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv-squashfs-tftp.bin";
+              sha256 = "cebf9b9827a459cfe0fe4ae593c29a6c7ff1e334a50ad6da199f2e3f3a9a52c3";
+              sha256_unsigned = "cebf9b9827a459cfe0fe4ae593c29a6c7ff1e334a50ad6da199f2e3f3a9a52c3";
+              type = "tftp";
+            }
+          ];
+          supported_devices = [
+            "buffalo,bhr-4grv"
+            "wzr-hp-g450h"
+          ];
+          titles = [
+            {
+              model = "BHR-4GRV";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_bhr-4grv2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv2-initramfs-kernel.bin";
+              sha256 = "6f9a774b00b82d5c82546f9802fdae7e66d95924293827311bf681b83ab38b63";
+              sha256_unsigned = "6f9a774b00b82d5c82546f9802fdae7e66d95924293827311bf681b83ab38b63";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_bhr-4grv2-squashfs-sysupgrade.bin";
+              sha256 = "df5bbfbac8375069abb7b4b4aac96cad0e0edbc4b8236e7cacf617a5507c3ee9";
+              sha256_unsigned = "662bb313112638ad965016c04ed71cf7d33646eeb4eeb73bc3394f6a707f88c9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "buffalo,bhr-4grv2"
+          ];
+          titles = [
+            {
+              model = "BHR-4GRV2";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wzr-600dhp = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_wzr-600dhp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-600dhp-squashfs-factory.bin";
+              sha256 = "3ba899bd42a8c36a8a3da55e1d6a3fe73df31fd4bc787a5b20678dcf121958e3";
+              sha256_unsigned = "3ba899bd42a8c36a8a3da55e1d6a3fe73df31fd4bc787a5b20678dcf121958e3";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-600dhp-squashfs-tftp.bin";
+              sha256 = "de176f252643776f76bbf1e1a0370b61d4633682c9e01f30fe9e38877d3a8330";
+              sha256_unsigned = "de176f252643776f76bbf1e1a0370b61d4633682c9e01f30fe9e38877d3a8330";
+              type = "tftp";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-600dhp-initramfs-kernel.bin";
+              sha256 = "4292fcbf786524baaa56874177df5eb176f839b70f25b8f0c366ce7ae4d24881";
+              sha256_unsigned = "4292fcbf786524baaa56874177df5eb176f839b70f25b8f0c366ce7ae4d24881";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-600dhp-squashfs-sysupgrade.bin";
+              sha256 = "ce0ebf1caaf5f5965f6efcfab136c807a8e3237b5f9a180d377fd4f0293094e5";
+              sha256_unsigned = "3f0f350f11c1ff602f20812e3a41bf8ea7ff9bb3203b13123d4826a99f6fb200";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wzr-600dhp"
+            "wzr-hp-ag300h"
+          ];
+          titles = [
+            {
+              model = "WZR-600DHP";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wzr-hp-ag300h = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-ag300h";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-ag300h-squashfs-tftp.bin";
+              sha256 = "82cd51ec77395f11188e967e21c2d655fb8c4ea0cf52e41b21f83d3e573ae7fd";
+              sha256_unsigned = "82cd51ec77395f11188e967e21c2d655fb8c4ea0cf52e41b21f83d3e573ae7fd";
+              type = "tftp";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-ag300h-squashfs-sysupgrade.bin";
+              sha256 = "a9e44213730ad5807bf7b8076fc43dec5c94343552c7ba04e7fbed9aff8307a9";
+              sha256_unsigned = "7b428ef28f356db9941d9de18cd9bec3e7e51f0ed1b2399ebcc2f4e33a5b2096";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-ag300h-squashfs-factory.bin";
+              sha256 = "7edb109cde4403e10265146af2880e5826a786cedcab88351a3adc7e4ea438d7";
+              sha256_unsigned = "7edb109cde4403e10265146af2880e5826a786cedcab88351a3adc7e4ea438d7";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-ag300h-initramfs-kernel.bin";
+              sha256 = "4545c925371123cbefa5ab376f8ea993807db34477aff57362e25e0018a8cb34";
+              sha256_unsigned = "4545c925371123cbefa5ab376f8ea993807db34477aff57362e25e0018a8cb34";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wzr-hp-ag300h"
+            "wzr-hp-ag300h"
+          ];
+          titles = [
+            {
+              model = "WZR-HP-AG300H";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wzr-hp-g300nh-rb = {
+          device_packages = [
+            "kmod-gpio-cascade"
+            "kmod-mux-gpio"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-rb";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-rb-squashfs-tftp.bin";
+              sha256 = "6f528e45add16fe387b1c62790275127d502214791b9517ce9973dc3f8ab5d98";
+              sha256_unsigned = "6f528e45add16fe387b1c62790275127d502214791b9517ce9973dc3f8ab5d98";
+              type = "tftp";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-rb-initramfs-kernel.bin";
+              sha256 = "38d56bc82f9487a4b73f463fbc42805745c1d9ab6da8b3c210a73ada93c76a0c";
+              sha256_unsigned = "38d56bc82f9487a4b73f463fbc42805745c1d9ab6da8b3c210a73ada93c76a0c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-rb-squashfs-factory.bin";
+              sha256 = "594d96284bcf3cb23ee2e6d0e5922cebca36f74866e14558b02b4ac97fa774a9";
+              sha256_unsigned = "594d96284bcf3cb23ee2e6d0e5922cebca36f74866e14558b02b4ac97fa774a9";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-rb-squashfs-sysupgrade.bin";
+              sha256 = "6763e9f41f706fe1e65b3f80e73da9945896f1bc0080697c1b57e306eb11e1cb";
+              sha256_unsigned = "27ce7bd2cb1bc136fac491e64ccbeebb9d83761c65bfbecb5373c60241b9f9c9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wzr-hp-g300nh-rb"
+            "wzr-hp-g300nh"
+          ];
+          titles = [
+            {
+              model = "WZR-HP-G300NH (RTL8366RB switch)";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wzr-hp-g300nh-s = {
+          device_packages = [
+            "kmod-gpio-cascade"
+            "kmod-mux-gpio"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-s";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-s-initramfs-kernel.bin";
+              sha256 = "998eaca5176c2202921dada021176a15ca975efa307ab12626e8d773bfc50246";
+              sha256_unsigned = "998eaca5176c2202921dada021176a15ca975efa307ab12626e8d773bfc50246";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-s-squashfs-factory.bin";
+              sha256 = "227e0226d448ef246524a6cd27ab1268a192041cc7d611800ade7f7d3add317b";
+              sha256_unsigned = "227e0226d448ef246524a6cd27ab1268a192041cc7d611800ade7f7d3add317b";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-s-squashfs-tftp.bin";
+              sha256 = "64957151f78a51a93a442f5267b39510b7dd980d18b2c538bf3a16e8a106f929";
+              sha256_unsigned = "64957151f78a51a93a442f5267b39510b7dd980d18b2c538bf3a16e8a106f929";
+              type = "tftp";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g300nh-s-squashfs-sysupgrade.bin";
+              sha256 = "0c7d337208946ce88ad21855f7b16d825e747b8d22d8727e571263d8949d7b67";
+              sha256_unsigned = "7a579b396cd499d42017eb56a15438fc654ae03f7449f1fe9bc434c24fa5a027";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wzr-hp-g300nh-s"
+            "wzr-hp-g300nh"
+          ];
+          titles = [
+            {
+              model = "WZR-HP-G300NH (RTL8366S switch)";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wzr-hp-g302h-a1a0 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g302h-a1a0";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g302h-a1a0-initramfs-kernel.bin";
+              sha256 = "8d4e730e50e8b59b93738e4f2b1975d22603b2857610ce38e0964349aabe9c96";
+              sha256_unsigned = "8d4e730e50e8b59b93738e4f2b1975d22603b2857610ce38e0964349aabe9c96";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g302h-a1a0-squashfs-factory.bin";
+              sha256 = "e935c2ce771e80b9e3006278ef5b5fad20281b00e7fbfd66b473d681c1a98d17";
+              sha256_unsigned = "e935c2ce771e80b9e3006278ef5b5fad20281b00e7fbfd66b473d681c1a98d17";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g302h-a1a0-squashfs-sysupgrade.bin";
+              sha256 = "3a413009f5f7f1b373ef86f59c55fba56a8177e42e7929a5e986ecf46d34ab15";
+              sha256_unsigned = "f7c50df08411b1ecb90c995a95dac5ac0af140414a9b93af76be462a57735413";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g302h-a1a0-squashfs-tftp.bin";
+              sha256 = "46c8519307ab5a6ebd582ea9629387cb73c841462ada9c4216a639094bd193c3";
+              sha256_unsigned = "46c8519307ab5a6ebd582ea9629387cb73c841462ada9c4216a639094bd193c3";
+              type = "tftp";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wzr-hp-g302h-a1a0"
+            "wzr-hp-g300nh2"
+          ];
+          titles = [
+            {
+              model = "WZR-HP-G302H";
+              variant = "A1A0";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wzr-hp-g450h = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g450h";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g450h-squashfs-factory.bin";
+              sha256 = "89b4b64d8707aaf19687f4877f234127793e186db0d01436bbfd68353113e2f3";
+              sha256_unsigned = "89b4b64d8707aaf19687f4877f234127793e186db0d01436bbfd68353113e2f3";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g450h-squashfs-tftp.bin";
+              sha256 = "854420f633a7eec990a85314024a0751342aa79c265c0b475fd5cb8841560663";
+              sha256_unsigned = "854420f633a7eec990a85314024a0751342aa79c265c0b475fd5cb8841560663";
+              type = "tftp";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g450h-squashfs-sysupgrade.bin";
+              sha256 = "46efbfb2ab64af93ec259bdf1731351304e4b5fe7ae8c4df42bdfae8df246d35";
+              sha256_unsigned = "c8367e1c338932d89b8bf28be7e26f18b9150afdef801bfaa5deff5c7d1dfdf3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-buffalo_wzr-hp-g450h-initramfs-kernel.bin";
+              sha256 = "2e67efb64e9d84838b3bf224fa8ba3660f4c4ae717b0d2ccfccfb74c102ebee8";
+              sha256_unsigned = "2e67efb64e9d84838b3bf224fa8ba3660f4c4ae717b0d2ccfccfb74c102ebee8";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wzr-hp-g450h"
+            "wzr-hp-g450h"
+          ];
+          titles = [
+            {
+              model = "WZR-HP-G450H/WZR-450HP";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        comfast_cf-e110n-v2 = {
+          device_packages = [
+            "rssileds"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e110n-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e110n-v2-initramfs-kernel.bin";
+              sha256 = "eb7edb1e09b6ac993e0d4f39159820f3e5cb8e3ea6f23d80b0bc65c79c4b7726";
+              sha256_unsigned = "eb7edb1e09b6ac993e0d4f39159820f3e5cb8e3ea6f23d80b0bc65c79c4b7726";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e110n-v2-squashfs-sysupgrade.bin";
+              sha256 = "8d3d5fcd048fb2afe88b57d36321327ddf26ed195dc443ea9b42bb4444b40b77";
+              sha256_unsigned = "f3f404763235b5a533c21050a73767f03aae2c97145534900b5b1d4d5fb51eba";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e110n-v2"
+          ];
+          titles = [
+            {
+              model = "CF-E110N";
+              variant = "v2";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e120a-v3 = {
+          device_packages = [
+            "rssileds"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e120a-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e120a-v3-initramfs-kernel.bin";
+              sha256 = "dba34238dc1fbfb2f34c2eea5d1bc13839a9cc87fa26f9c6c52ad7bc1efa36cc";
+              sha256_unsigned = "dba34238dc1fbfb2f34c2eea5d1bc13839a9cc87fa26f9c6c52ad7bc1efa36cc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e120a-v3-squashfs-sysupgrade.bin";
+              sha256 = "1539be89c2720db3c6b0a4ed3dccefbf01809c528f4f88234a568454c3ea2061";
+              sha256_unsigned = "4bbb63b292efd8136a87c1ffe9f17fb8ec76bc235519922b6b89c77d7bf6a265";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e120a-v3"
+          ];
+          titles = [
+            {
+              model = "CF-E120A";
+              variant = "v3";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e130n-v2 = {
+          device_packages = [
+            "rssileds"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e130n-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e130n-v2-initramfs-kernel.bin";
+              sha256 = "6247855406978c37c8408808e3cd7b21bcbf3c8c91b9e4e31a0a63ea364b4473";
+              sha256_unsigned = "6247855406978c37c8408808e3cd7b21bcbf3c8c91b9e4e31a0a63ea364b4473";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e130n-v2-squashfs-sysupgrade.bin";
+              sha256 = "ee2f67d5893e93ecb5ec03374b9ce4314fc9b71d7154937b90c286ff835fe81d";
+              sha256_unsigned = "6f60fce530d9a5c09bfb18306a8d48430f0f8dfb5e07d3627e8673dc9ff968b7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e130n-v2"
+          ];
+          titles = [
+            {
+              model = "CF-E130N";
+              variant = "v2";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e313ac = {
+          device_packages = [
+            "rssileds"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9888-ct"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e313ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e313ac-squashfs-sysupgrade.bin";
+              sha256 = "a66ebc8bda954d7afb508f6fe8800a477c8528ce883ce8670119c5c88469bec6";
+              sha256_unsigned = "4f655bc356708c8722a2c641431c096838cb8e15f3e7f4948604aa8347790c52";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e313ac-initramfs-kernel.bin";
+              sha256 = "a991c5bd97036895d5feb91935fd1ed5c18bdac9e8051e0780e3f20e4385e495";
+              sha256_unsigned = "a991c5bd97036895d5feb91935fd1ed5c18bdac9e8051e0780e3f20e4385e495";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e313ac"
+          ];
+          titles = [
+            {
+              model = "CF-E313AC";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e314n-v2 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e314n-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e314n-v2-squashfs-sysupgrade.bin";
+              sha256 = "8846195f55374d28aab1038bd8a5302bd9b1bbf1b09e48d3ecbe409b5ee465f5";
+              sha256_unsigned = "859f963462974e016f572461a2b9e567df66c459a0f77111e936dd6e857364e8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e314n-v2-initramfs-kernel.bin";
+              sha256 = "100a8f7cd301e1f1bdbc44f3692e0a13d5fa99afd33d435cba26d546660fa742";
+              sha256_unsigned = "100a8f7cd301e1f1bdbc44f3692e0a13d5fa99afd33d435cba26d546660fa742";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e314n-v2"
+          ];
+          titles = [
+            {
+              model = "CF-E314N";
+              variant = "v2";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e375ac = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e375ac";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e375ac-initramfs-kernel.bin";
+              sha256 = "b7baa54467f1959f489c9192618a54f3b59762f95f278325d89e014c94cb282e";
+              sha256_unsigned = "b7baa54467f1959f489c9192618a54f3b59762f95f278325d89e014c94cb282e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e375ac-squashfs-sysupgrade.bin";
+              sha256 = "36ccb3027d685f210a740a2c3ee2cc0c226532a30e87446435f4721c7a3b81ce";
+              sha256_unsigned = "d9dc4dccc3e267cbfa7719ca71b74ea25b64fb5d499d1238ae8fccc3d6dcab46";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e375ac"
+          ];
+          titles = [
+            {
+              model = "CF-E375AC";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e5 = {
+          device_packages = [
+            "rssileds"
+            "kmod-usb2"
+            "kmod-usb-net-qmi-wwan"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e5";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e5-initramfs-kernel.bin";
+              sha256 = "560c1d8604b8085947c2bd913d7491ae3c2ed8a207920e46c484f7337bec8fc6";
+              sha256_unsigned = "560c1d8604b8085947c2bd913d7491ae3c2ed8a207920e46c484f7337bec8fc6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e5-squashfs-sysupgrade.bin";
+              sha256 = "bdfca351a69c96fabcf39534ea00211cdcb6f8b38b7913870f7992a551877ebc";
+              sha256_unsigned = "37aa477f2a40b4d5c56bf939d49503a019fc5404fb2dc487799ec6e2016589ef";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e5"
+          ];
+          titles = [
+            {
+              model = "CF-E5/E7";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-e560ac = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-e560ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e560ac-squashfs-sysupgrade.bin";
+              sha256 = "1bf93c298da9975323f52eeee0c5296a62777425b23789030b826abae7c55019";
+              sha256_unsigned = "de2bb65213f86e8ac6742ac6285937fe0578d1187b060e86805dac8880ebfe7e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-e560ac-initramfs-kernel.bin";
+              sha256 = "147858024b2b24438ecf94d9f5632f1a3c47dc1b0749fcd09bb6e0018e3a3794";
+              sha256_unsigned = "147858024b2b24438ecf94d9f5632f1a3c47dc1b0749fcd09bb6e0018e3a3794";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e560ac"
+          ];
+          titles = [
+            {
+              model = "CF-E560AC";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-ew72 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+            "-uboot-envtools"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-ew72";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-ew72-initramfs-kernel.bin";
+              sha256 = "698bae7e9bfdb07f3f9966e9cad850c30c80f3ed95419e7aa2a91ddf210f89a0";
+              sha256_unsigned = "698bae7e9bfdb07f3f9966e9cad850c30c80f3ed95419e7aa2a91ddf210f89a0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-ew72-squashfs-sysupgrade.bin";
+              sha256 = "78072e0d734abba2659797f02d395fd478f617a1ac71e90e5e91889ea404016c";
+              sha256_unsigned = "d96dc084a17afa7e1f6d766f0ae49541c24a2314de9d41a527921908186d768f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-ew72"
+          ];
+          titles = [
+            {
+              model = "CF-EW72";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-wr650ac-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-wr650ac-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-wr650ac-v1-initramfs-kernel.bin";
+              sha256 = "036a015257394a512bffb44dab42d3a81de015e50d875861249be9854d3b80d8";
+              sha256_unsigned = "036a015257394a512bffb44dab42d3a81de015e50d875861249be9854d3b80d8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-wr650ac-v1-squashfs-sysupgrade.bin";
+              sha256 = "5a524341eae0eaaa4b90c1b89d6b8b7a862b4bf016015fecbcc18ac20e8289cc";
+              sha256_unsigned = "181493a120fe6a77b01493813cd61b31149af55580063461e556291d8005c6ea";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-wr650ac-v1"
+          ];
+          titles = [
+            {
+              model = "CF-WR650AC";
+              variant = "v1";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-wr650ac-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-wr650ac-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-wr650ac-v2-squashfs-sysupgrade.bin";
+              sha256 = "2933d1629e8b6d8e75febaf119a8f6aff44db0d5ea47feca2e9fe62ed0b5c7a1";
+              sha256_unsigned = "168fe1cec4b166e23d47e6ff5b6099250a43f71dacad761a0828180bcfa1df90";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-wr650ac-v2-initramfs-kernel.bin";
+              sha256 = "78c83e229154937556a06882014362fccb480604d6c559f64ac52f83dd3958f0";
+              sha256_unsigned = "78c83e229154937556a06882014362fccb480604d6c559f64ac52f83dd3958f0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-wr650ac-v2"
+          ];
+          titles = [
+            {
+              model = "CF-WR650AC";
+              variant = "v2";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        comfast_cf-wr752ac-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-comfast_cf-wr752ac-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-wr752ac-v1-squashfs-sysupgrade.bin";
+              sha256 = "1746e5f8bae04f92c99cdcda0c66c35f3d5cda86ffa7dd8f20fac6e5280e94a2";
+              sha256_unsigned = "fae716977fd1730a703996f48cd774ae62445815d3f2aca8d55d2bba89aafbb3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-comfast_cf-wr752ac-v1-initramfs-kernel.bin";
+              sha256 = "9c6df3e621c744521f42e9b68ab03457cee3c4d2399e6828686707cc559ae74d";
+              sha256_unsigned = "9c6df3e621c744521f42e9b68ab03457cee3c4d2399e6828686707cc559ae74d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-wr752ac-v1"
+          ];
+          titles = [
+            {
+              model = "CF-WR752AC";
+              variant = "v1";
+              vendor = "COMFAST";
+            }
+          ];
+        };
+        compex_wpj344-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-compex_wpj344-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj344-16m-squashfs-cpximg-6a08.bin";
+              sha256 = "ff5eaccb10ea9c8c058fcf03ddac1a28294517d5597ea4aa94bebec4b0e2ebeb";
+              sha256_unsigned = "ff5eaccb10ea9c8c058fcf03ddac1a28294517d5597ea4aa94bebec4b0e2ebeb";
+              type = "cpximg-6a08";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj344-16m-initramfs-kernel.bin";
+              sha256 = "3a370bd06e757ac4ff3c35132b866ea7c0cddf858ef3eb399e9ae7a43bff340b";
+              sha256_unsigned = "3a370bd06e757ac4ff3c35132b866ea7c0cddf858ef3eb399e9ae7a43bff340b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj344-16m-squashfs-sysupgrade.bin";
+              sha256 = "36170ee69057159c74442c7d107b012a8701edb81862d9df0c6cb397fa58f6fb";
+              sha256_unsigned = "3623b123976b03c6f3c5374218c6fafc218bf5b446ef37c47fa81c87dd2f6bcd";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "compex,wpj344-16m"
+            "wpj344"
+          ];
+          titles = [
+            {
+              model = "WPJ344";
+              variant = "16M";
+              vendor = "Compex";
+            }
+          ];
+        };
+        compex_wpj531-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m-initramfs-kernel.bin";
+              sha256 = "eac45a024792de46154982b9d3a650b1d59faee72031804dbe49a84cfe646601";
+              sha256_unsigned = "eac45a024792de46154982b9d3a650b1d59faee72031804dbe49a84cfe646601";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m-squashfs-cpximg-7a03.bin";
+              sha256 = "2e698856e0f61bfe7894aaf9240357e8a08e60b2741332d38047feea52525684";
+              sha256_unsigned = "2e698856e0f61bfe7894aaf9240357e8a08e60b2741332d38047feea52525684";
+              type = "cpximg-7a03";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m-squashfs-cpximg-7a04.bin";
+              sha256 = "b24e538df46a5fbfe3a9e3374f6dff0297697fcae053f23b62a5865c60c7b5f8";
+              sha256_unsigned = "b24e538df46a5fbfe3a9e3374f6dff0297697fcae053f23b62a5865c60c7b5f8";
+              type = "cpximg-7a04";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m-squashfs-sysupgrade.bin";
+              sha256 = "7367295b640004372d2b2a206490aa0ca6c563ebd69affa2ab2900e3066a3e87";
+              sha256_unsigned = "77a5d8fb35f1d4090c797244f09a58db9fccc7cddf448321d4093a83e591d9e0";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m-squashfs-cpximg-7a06.bin";
+              sha256 = "b24e538df46a5fbfe3a9e3374f6dff0297697fcae053f23b62a5865c60c7b5f8";
+              sha256_unsigned = "b24e538df46a5fbfe3a9e3374f6dff0297697fcae053f23b62a5865c60c7b5f8";
+              type = "cpximg-7a06";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj531-16m-squashfs-cpximg-7a07.bin";
+              sha256 = "b24e538df46a5fbfe3a9e3374f6dff0297697fcae053f23b62a5865c60c7b5f8";
+              sha256_unsigned = "b24e538df46a5fbfe3a9e3374f6dff0297697fcae053f23b62a5865c60c7b5f8";
+              type = "cpximg-7a07";
+            }
+          ];
+          supported_devices = [
+            "compex,wpj531-16m"
+            "wpj531"
+          ];
+          titles = [
+            {
+              model = "WPJ531";
+              variant = "16M";
+              vendor = "Compex";
+            }
+          ];
+        };
+        compex_wpj558-16m = {
+          device_packages = [
+            "kmod-gpio-beeper"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-compex_wpj558-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj558-16m-initramfs-kernel.bin";
+              sha256 = "a4e8dd2c3495cf757c77fe1a29173d11cd16bbd100a6f4e69a36475e2f90cf5c";
+              sha256_unsigned = "a4e8dd2c3495cf757c77fe1a29173d11cd16bbd100a6f4e69a36475e2f90cf5c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj558-16m-squashfs-cpximg-6a07.bin";
+              sha256 = "8f66fb8ef53d22314efeeda6fda5ab0814408b5459fea470130eda7b108cbb4e";
+              sha256_unsigned = "8f66fb8ef53d22314efeeda6fda5ab0814408b5459fea470130eda7b108cbb4e";
+              type = "cpximg-6a07";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj558-16m-squashfs-sysupgrade.bin";
+              sha256 = "2620157e4d2f4805d9bee5bf41d47c743b21418767572185c51b19326f526ac1";
+              sha256_unsigned = "0bb95bd0488ed90ab129b897d3673041be11d1d55fb270810ba7bd391a119a6f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "compex,wpj558-16m"
+            "wpj558"
+          ];
+          titles = [
+            {
+              model = "WPJ558";
+              variant = "16M";
+              vendor = "Compex";
+            }
+          ];
+        };
+        compex_wpj563 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-compex_wpj563";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj563-squashfs-sysupgrade.bin";
+              sha256 = "eab68589058cf34aa4148068b171c60f887302fcf7fe92fa3852213a8379ffd8";
+              sha256_unsigned = "9e70cdf2a5418f183cf82ff949791380728a14bead40bcc17920e25d475b6c67";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj563-initramfs-kernel.bin";
+              sha256 = "a981185957211d65d4244c9597936d5eaf324d9b9805a2670caf89a505a63338";
+              sha256_unsigned = "a981185957211d65d4244c9597936d5eaf324d9b9805a2670caf89a505a63338";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-compex_wpj563-squashfs-cpximg-7a02.bin";
+              sha256 = "b7775280fc39f1170a7c5a76fbec82a1cfceb351817a13c6abeff11f0aaac669";
+              sha256_unsigned = "b7775280fc39f1170a7c5a76fbec82a1cfceb351817a13c6abeff11f0aaac669";
+              type = "cpximg-7a02";
+            }
+          ];
+          supported_devices = [
+            "compex,wpj563"
+            "wpj563"
+          ];
+          titles = [
+            {
+              model = "WPJ563";
+              vendor = "Compex";
+            }
+          ];
+        };
+        devolo_dlan-pro-1200plus-ac = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dlan-pro-1200plus-ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dlan-pro-1200plus-ac-squashfs-sysupgrade.bin";
+              sha256 = "01a7b6d65979982837e514f3fab5edfd3bed3d3f9cfa70a298d6c5a4f879c2c2";
+              sha256_unsigned = "d1837c14b43b8846591612629f393ab74295b6ae9565ba70518a602d835824bc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dlan-pro-1200plus-ac-initramfs-kernel.bin";
+              sha256 = "c2566414291fda0c4db875aa12c05e6d477472c69adbd289128b508fd24abd4b";
+              sha256_unsigned = "c2566414291fda0c4db875aa12c05e6d477472c69adbd289128b508fd24abd4b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "devolo,dlan-pro-1200plus-ac"
+          ];
+          titles = [
+            {
+              model = "dLAN pro 1200+ WiFi ac";
+              vendor = "Devolo";
+            }
+          ];
+        };
+        devolo_dvl1200e = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dvl1200e";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1200e-squashfs-sysupgrade.bin";
+              sha256 = "e6a5abb05907c3e4ba10dc8035c049f4bcaa797f0a5a8703df7991f3e611452b";
+              sha256_unsigned = "eea70bfdcb2b625fefc38492c2f28d7778c263813742a92f38efbf782c7d5ec6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1200e-initramfs-kernel.bin";
+              sha256 = "e90b9c43d42f311b7444be55848b4f1f99fee607fd2ea91958570c1f27ecebf4";
+              sha256_unsigned = "e90b9c43d42f311b7444be55848b4f1f99fee607fd2ea91958570c1f27ecebf4";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "devolo,dvl1200e"
+          ];
+          titles = [
+            {
+              model = "WiFi pro 1200e";
+              vendor = "devolo";
+            }
+          ];
+        };
+        devolo_dvl1200i = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dvl1200i";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1200i-initramfs-kernel.bin";
+              sha256 = "8164b27b3209f2fea5e73c1af5fbbe068f163120c3121611c22e3052d37b9835";
+              sha256_unsigned = "8164b27b3209f2fea5e73c1af5fbbe068f163120c3121611c22e3052d37b9835";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1200i-squashfs-sysupgrade.bin";
+              sha256 = "c37a481cc750861e90488e0e9bfc074a796aedba92364e5b3a7a184ba7b857e0";
+              sha256_unsigned = "06c996c76acfb95e6cce7c7a795d44389650fa27e2c64edf8922b1c2cc256273";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "devolo,dvl1200i"
+          ];
+          titles = [
+            {
+              model = "WiFi pro 1200i";
+              vendor = "devolo";
+            }
+          ];
+        };
+        devolo_dvl1750c = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dvl1750c";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750c-squashfs-sysupgrade.bin";
+              sha256 = "c00cbfb2a7db87b4326cc4da4b8c5f1dbb21a0ecd8e4ca529eb335666583dd04";
+              sha256_unsigned = "208673124158d7e61887abaa657df114297bc05629a1dc079150329c6ef8fdee";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750c-initramfs-kernel.bin";
+              sha256 = "bebd7fa6ead0f52c0455e7afe8578f42ba5b910e54abe7f2d1b6d9cf6f7b4d72";
+              sha256_unsigned = "bebd7fa6ead0f52c0455e7afe8578f42ba5b910e54abe7f2d1b6d9cf6f7b4d72";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "devolo,dvl1750c"
+          ];
+          titles = [
+            {
+              model = "WiFi pro 1750c";
+              vendor = "devolo";
+            }
+          ];
+        };
+        devolo_dvl1750e = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dvl1750e";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750e-initramfs-kernel.bin";
+              sha256 = "ac4c25c87a9bcd2aa1347db93a0f2c9a5aa86421dfe04b5cbc2c4e6c904e0b72";
+              sha256_unsigned = "ac4c25c87a9bcd2aa1347db93a0f2c9a5aa86421dfe04b5cbc2c4e6c904e0b72";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750e-squashfs-sysupgrade.bin";
+              sha256 = "270b9fa8ab9b4bb39e00d7720293dd482457db82027157780fbe4c518e453826";
+              sha256_unsigned = "b472972068a0dda7b6570ec4a686074ef0d5ce3a8acccf210e21ce40fbb5f9fd";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "devolo,dvl1750e"
+          ];
+          titles = [
+            {
+              model = "WiFi pro 1750e";
+              vendor = "devolo";
+            }
+          ];
+        };
+        devolo_dvl1750i = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dvl1750i";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750i-initramfs-kernel.bin";
+              sha256 = "9d914570189c2a1570a994bb64dab87c8eb8a1828bfcc7ef963d46491d3bce91";
+              sha256_unsigned = "9d914570189c2a1570a994bb64dab87c8eb8a1828bfcc7ef963d46491d3bce91";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750i-squashfs-sysupgrade.bin";
+              sha256 = "076947a6c88fed86885e05e7b805cf1516d03b4b4b92343ea67b976c64f3c0c4";
+              sha256_unsigned = "61dc9687322922b70bc7b83f3d146604e317a7680937ff7485f8ef3d7e756a18";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "devolo,dvl1750i"
+          ];
+          titles = [
+            {
+              model = "WiFi pro 1750i";
+              vendor = "devolo";
+            }
+          ];
+        };
+        devolo_dvl1750x = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_dvl1750x";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750x-squashfs-sysupgrade.bin";
+              sha256 = "d685b448e3c9abfc66cbef8421783ede184ea58598a7a0fff6cf7cb29fdc44cd";
+              sha256_unsigned = "ae7021b022421ee2502d7e4f45462eb0bf5532955446373f8b487b03fee2d382";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_dvl1750x-initramfs-kernel.bin";
+              sha256 = "0346e9916771a7ddb8ac158ee9d98e0f8d5ea24fc76544b6eda65ab41060ed8f";
+              sha256_unsigned = "0346e9916771a7ddb8ac158ee9d98e0f8d5ea24fc76544b6eda65ab41060ed8f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "devolo,dvl1750x"
+          ];
+          titles = [
+            {
+              model = "WiFi pro 1750x";
+              vendor = "devolo";
+            }
+          ];
+        };
+        devolo_magic-2-wifi = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-devolo_magic-2-wifi";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_magic-2-wifi-initramfs-kernel.bin";
+              sha256 = "a94295dc654a0b2ad9f9d9aa00cccf75b09429042f7bfed2bd623b31c130d08b";
+              sha256_unsigned = "a94295dc654a0b2ad9f9d9aa00cccf75b09429042f7bfed2bd623b31c130d08b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-devolo_magic-2-wifi-squashfs-sysupgrade.bin";
+              sha256 = "d757861e4eb3d33929a2eb7f444d86a92521f7b3a416c1389e9d3e254fb6524a";
+              sha256_unsigned = "38bbb2f73843d64d5f73732a4ed37bd1eaae2522f82f9da15be75329ccaa260f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "devolo,magic-2-wifi"
+          ];
+          titles = [
+            {
+              model = "Magic 2 WiFi";
+              vendor = "Devolo";
+            }
+          ];
+        };
+        dlink_dap-1330-a1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-1330-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-1330-a1-initramfs-kernel.bin";
+              sha256 = "288cd115a40ca16e5b9ad44c138d46bce9eca6e063dd9465ec28a099d00e4799";
+              sha256_unsigned = "288cd115a40ca16e5b9ad44c138d46bce9eca6e063dd9465ec28a099d00e4799";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-1330-a1-squashfs-factory.bin";
+              sha256 = "71a0320e3176d5bb67625973d2027d3c122fe9e862c8ff8902ded7c5802b3585";
+              sha256_unsigned = "71a0320e3176d5bb67625973d2027d3c122fe9e862c8ff8902ded7c5802b3585";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-1330-a1-squashfs-sysupgrade.bin";
+              sha256 = "8ff379ec109be20da2c41e27f73c2911ec0a49fa6aad317993c84aaeecc44e7e";
+              sha256_unsigned = "1d190faa694934fdd46cb72071f4068983f3c82002ab6600451b623f178645ef";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-1330-a1"
+            "dap-1330-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-1330";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-1365-a1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-1365-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-1365-a1-squashfs-sysupgrade.bin";
+              sha256 = "bcc620abee7be715a84197d7b93515cd9b92d8d43e0348a33b4189e01176a7f8";
+              sha256_unsigned = "13e3072456c5ec58e80e7e455887f8be59cebeebc9c512107018093b4fa24d78";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-1365-a1-initramfs-kernel.bin";
+              sha256 = "ae3dd7a1963941bbab666cf402bdb3f2fc1814f12a656981d401f873d0a7a8ee";
+              sha256_unsigned = "ae3dd7a1963941bbab666cf402bdb3f2fc1814f12a656981d401f873d0a7a8ee";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-1365-a1-squashfs-factory.bin";
+              sha256 = "f4e68f581b0bf2f0a3ffe42005c55447d347f974629ead9d7d983ee60daf2dd5";
+              sha256_unsigned = "f4e68f581b0bf2f0a3ffe42005c55447d347f974629ead9d7d983ee60daf2dd5";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-1365-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-1365";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-2230-a1 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-2230-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2230-a1-initramfs-kernel.bin";
+              sha256 = "fcc989968cd67f56ffcdbaac173ab87bf073337699ab1c4e14ed3925f1084d0c";
+              sha256_unsigned = "fcc989968cd67f56ffcdbaac173ab87bf073337699ab1c4e14ed3925f1084d0c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2230-a1-squashfs-sysupgrade.bin";
+              sha256 = "a882db619e74b01af30c28393c6d5566b781f81464fec1d1898a5da4bb08d93b";
+              sha256_unsigned = "b7f5ca88434a02c16ff8e4c41fef6fb9cd8588067141b9b839333d5eabd345ff";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2230-a1-squashfs-factory.img";
+              sha256 = "950c0122579e8ad5ce2f600aaa70d3b6ebe8e0f5806fc158a43646ad0b398a32";
+              sha256_unsigned = "950c0122579e8ad5ce2f600aaa70d3b6ebe8e0f5806fc158a43646ad0b398a32";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-2230-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-2230";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-2660-a1 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-2660-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2660-a1-squashfs-factory.img";
+              sha256 = "5f4a31a4bc2d01094b12d90a4fcaed554f300c4333185cc4f946059cabf88a96";
+              sha256_unsigned = "5f4a31a4bc2d01094b12d90a4fcaed554f300c4333185cc4f946059cabf88a96";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2660-a1-squashfs-sysupgrade.bin";
+              sha256 = "6a0b727d2d0931db4cfea83a2282dbaee750a3203219ff0cb1c23b31ba47f238";
+              sha256_unsigned = "02c6921fcd9e907395c19b2a1893771a4e44cf12705cb13bb5fc703ec1a37e14";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2660-a1-initramfs-kernel.bin";
+              sha256 = "90f43ccc4fa1bd971aca2a5a1a95a1d0edbbb74cb82a5df35e180103ad6d1359";
+              sha256_unsigned = "90f43ccc4fa1bd971aca2a5a1a95a1d0edbbb74cb82a5df35e180103ad6d1359";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-2660-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-2660";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-2680-a1 = {
+          device_packages = [
+            "ath10k-firmware-qca9984-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-2680-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2680-a1-initramfs-kernel.bin";
+              sha256 = "ec22f2308f8c47c94a377ae42710e335dfaf4d5ed87115fafbf102bb43278244";
+              sha256_unsigned = "ec22f2308f8c47c94a377ae42710e335dfaf4d5ed87115fafbf102bb43278244";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2680-a1-squashfs-factory.img";
+              sha256 = "fbde9ef0c3ed29d079b6040d41d6c2806e88b5814e43e07a905155fd8bb53ece";
+              sha256_unsigned = "fbde9ef0c3ed29d079b6040d41d6c2806e88b5814e43e07a905155fd8bb53ece";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2680-a1-squashfs-sysupgrade.bin";
+              sha256 = "b8fa1461e08109b6760bbbdecb4a405de9ada610f0212f5250bf3ea1eff056ef";
+              sha256_unsigned = "7eb921c9d6940919efbe2ab17cc65a83fe7f84a63d52e9e864d769fc2453385c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-2680-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-2680";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-2695-a1 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-2695-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2695-a1-squashfs-factory.img";
+              sha256 = "66aa5d0404d979e3685217635bd107f7697c6ffa34d83994ed0cd1e148d3b1b3";
+              sha256_unsigned = "66aa5d0404d979e3685217635bd107f7697c6ffa34d83994ed0cd1e148d3b1b3";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2695-a1-squashfs-sysupgrade.bin";
+              sha256 = "1d3dd9ac190c48d06147e0c89b0a9539bb1294cf5d023148d607094c03b5d098";
+              sha256_unsigned = "ebdbe8210758f5d7d8669f8bb294e36d7852a6e46ff3854c21bd0a5ef270198a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-2695-a1-initramfs-kernel.bin";
+              sha256 = "2a63afcc6b0442520f396d10f80b0e6c7ec17dd2c6ab0a80b123336f76cda71b";
+              sha256_unsigned = "2a63afcc6b0442520f396d10f80b0e6c7ec17dd2c6ab0a80b123336f76cda71b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-2695-a1"
+            "dap-2695-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-2695";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-3320-a1 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-3320-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-3320-a1-squashfs-sysupgrade.bin";
+              sha256 = "fbb4d9ec39ababd5de639758fccf333fb91e8bd82c7554f17759a4781ab34b8d";
+              sha256_unsigned = "368948852867703e1e4a90e3e6bfa38d832a43ac467b443d0e8b41ab3a7e04a3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-3320-a1-squashfs-factory.img";
+              sha256 = "a0035342cde15881ea0e9cf892ed900218ec5e4f46ba51f4af2539947d25b784";
+              sha256_unsigned = "a0035342cde15881ea0e9cf892ed900218ec5e4f46ba51f4af2539947d25b784";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-3320-a1-initramfs-kernel.bin";
+              sha256 = "5e1f20d69274fb0780807be49721c27af8f3d0aea77ec47c95302bbcce1378c9";
+              sha256_unsigned = "5e1f20d69274fb0780807be49721c27af8f3d0aea77ec47c95302bbcce1378c9";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-3320-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-3320";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-3662-a1 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dap-3662-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-3662-a1-squashfs-sysupgrade.bin";
+              sha256 = "61f8607df0e07bbef463f3a4e39f2fe471e9943eebad1b03b5424571bfe7b80c";
+              sha256_unsigned = "9a34b4f6f491a7aa25add6642f4a1d37a675f71aa115022e3719ee81793c234f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-3662-a1-squashfs-factory.img";
+              sha256 = "d219caa90bc3e46b748f0f51f27a6e7e422278d03820d77e5327d0d0d6b6ad2e";
+              sha256_unsigned = "d219caa90bc3e46b748f0f51f27a6e7e422278d03820d77e5327d0d0d6b6ad2e";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dap-3662-a1-initramfs-kernel.bin";
+              sha256 = "106649b29cfa2fe922d2050c7cd929d3f698f56bcab707f67a9c2dcbe9b1a689";
+              sha256_unsigned = "106649b29cfa2fe922d2050c7cd929d3f698f56bcab707f67a9c2dcbe9b1a689";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-3662-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-3662";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dch-g020-a1 = {
+          device_packages = [
+            "kmod-gpio-pca953x"
+            "kmod-i2c-gpio"
+            "kmod-usb2"
+            "kmod-usb-acm"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dch-g020-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dch-g020-a1-squashfs-factory.bin";
+              sha256 = "6b0bbe02e014685b9c0a605c0b3b053ca022ca78d77d4bfad5ec01acb30adb6b";
+              sha256_unsigned = "6b0bbe02e014685b9c0a605c0b3b053ca022ca78d77d4bfad5ec01acb30adb6b";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dch-g020-a1-squashfs-sysupgrade.bin";
+              sha256 = "402d540c494093cb0d31a4ea34a80691d572606f263641ecc773cf45b1f9bcdb";
+              sha256_unsigned = "1c0fb2eb94afd126b4929560ad20ed2b767a3f252b9fbfa1df25e75e8dea4f99";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dch-g020-a1-initramfs-kernel.bin";
+              sha256 = "5900b8c5add2130cd3a3da4e1194d0190c5f2151f79350082458dcbaf53799ad";
+              sha256_unsigned = "5900b8c5add2130cd3a3da4e1194d0190c5f2151f79350082458dcbaf53799ad";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dch-g020-a1"
+          ];
+          titles = [
+            {
+              model = "DCH-G020";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-505 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-505";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-505-initramfs-kernel.bin";
+              sha256 = "181034c3fb31a7d17551fbfcca16f65ae48746dc772e611f8378843f41c1170f";
+              sha256_unsigned = "181034c3fb31a7d17551fbfcca16f65ae48746dc772e611f8378843f41c1170f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-505-squashfs-sysupgrade.bin";
+              sha256 = "8eb19c6b213c6d2589d673beebce5a6a716fe7d94e06e23c54176e715941745c";
+              sha256_unsigned = "e32d4da557fec1bbce093b152fd4887d6aae94c0473e80cdca02a4f4d46ace76";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-505"
+            "dir-505-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-505";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-825-b1 = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-825-b1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-825-b1-initramfs-kernel.bin";
+              sha256 = "3050a05045b5935e1016e2b725804e5e51201443c2cf4c5fd5379986e3045dd3";
+              sha256_unsigned = "3050a05045b5935e1016e2b725804e5e51201443c2cf4c5fd5379986e3045dd3";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-825-b1-squashfs-factory.bin";
+              sha256 = "76d26679b1c5dac4338052442d4042e6686f68f4990e7a964e917649080e123c";
+              sha256_unsigned = "76d26679b1c5dac4338052442d4042e6686f68f4990e7a964e917649080e123c";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-825-b1-squashfs-sysupgrade.bin";
+              sha256 = "43220645ee8358a4bc683b0abfa0d3a2377b48432ddf637ec1cb52c3fbeedf5e";
+              sha256_unsigned = "fc35d4ea3ce4ee57d6b953f8dedc429c16b634387e4a369649ba6f045ac07f79";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-825-b1"
+          ];
+          titles = [
+            {
+              model = "DIR-825";
+              variant = "B1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-825-c1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-825-c1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-825-c1-initramfs-kernel.bin";
+              sha256 = "6537df0b6f094b645d55eee33e634451ac7c3ea8bef55ec392cd6aba9973593e";
+              sha256_unsigned = "6537df0b6f094b645d55eee33e634451ac7c3ea8bef55ec392cd6aba9973593e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-825-c1-squashfs-sysupgrade.bin";
+              sha256 = "796fb35f703f434e4f2a16f57570a45e6641b1795641266ad65a2a8b10098c2c";
+              sha256_unsigned = "856cfe0bb3751d0fa3771002175344c1d0351054c8be70bc5a268a82e244b13e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-825-c1-squashfs-factory.bin";
+              sha256 = "4512f6d7c719221511359eeb6d2942d62e50905338bd4ceda30a1a40171d0fe5";
+              sha256_unsigned = "4512f6d7c719221511359eeb6d2942d62e50905338bd4ceda30a1a40171d0fe5";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-825-c1"
+            "dir-825-c1"
+          ];
+          titles = [
+            {
+              model = "DIR-825";
+              variant = "C1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-835-a1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-835-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-835-a1-initramfs-kernel.bin";
+              sha256 = "c9f67086df8c089fdaf0a7ba91237b0a066ef1cdc704a1a2d3f2ab965a5a60c1";
+              sha256_unsigned = "c9f67086df8c089fdaf0a7ba91237b0a066ef1cdc704a1a2d3f2ab965a5a60c1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-835-a1-squashfs-factory.bin";
+              sha256 = "90de60acc2371ff813e48df7137119adb3f8b4eb5ca27b2c28b0cffe25f638d5";
+              sha256_unsigned = "90de60acc2371ff813e48df7137119adb3f8b4eb5ca27b2c28b0cffe25f638d5";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-835-a1-squashfs-sysupgrade.bin";
+              sha256 = "b7a5866630bc83030e5fcce8eeab86007d7c61797336f852331b2abaf312fb7b";
+              sha256_unsigned = "36b85c450e73330fb7e00293648dd22073ece03ae299a10d71a058f248b733e0";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-835-a1"
+            "dir-835-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-835";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-842-c1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c1-squashfs-sysupgrade.bin";
+              sha256 = "01816f43ea3ab7b37be2bcf84010fdb8417e1ee8d1dcba4409d8fd2d26c73ed5";
+              sha256_unsigned = "cee585969551aa5ff841918ac24474425a2cb71e73eb7c8df565862ab8cfd786";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c1-squashfs-factory.bin";
+              sha256 = "a6373164d4eb8924ca8dc8b5ee810c51379b093a135ab054cf1b834172e5d438";
+              sha256_unsigned = "a6373164d4eb8924ca8dc8b5ee810c51379b093a135ab054cf1b834172e5d438";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c1-initramfs-kernel.bin";
+              sha256 = "54467390019155e09abc3b633eb65bffc14dd153768bd355ef1e5709c2347706";
+              sha256_unsigned = "54467390019155e09abc3b633eb65bffc14dd153768bd355ef1e5709c2347706";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-842-c1"
+          ];
+          titles = [
+            {
+              model = "DIR-842";
+              variant = "C1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-842-c2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c2-squashfs-factory.bin";
+              sha256 = "9db02264b2367a0c51db6fe9c4fabba6a9231fbc951fe883ccdc8bc517dbee60";
+              sha256_unsigned = "9db02264b2367a0c51db6fe9c4fabba6a9231fbc951fe883ccdc8bc517dbee60";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c2-squashfs-sysupgrade.bin";
+              sha256 = "0c1f795c52773acdb94200946ac0ba74e79db6ff4e0148d07a565228cceb4600";
+              sha256_unsigned = "b65d591db20bcd6c52dffb60a6a5724fb83a9c46e7bac7d0f2953d684e355cd2";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c2-initramfs-kernel.bin";
+              sha256 = "21e6508c92312a4add77d45c64a75f43a6c9bc89efecf8f191aab5a0413e2ed1";
+              sha256_unsigned = "21e6508c92312a4add77d45c64a75f43a6c9bc89efecf8f191aab5a0413e2ed1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-842-c2"
+          ];
+          titles = [
+            {
+              model = "DIR-842";
+              variant = "C2";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-842-c3 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c3-squashfs-sysupgrade.bin";
+              sha256 = "c6915893c9632f59d13f3c8b913d62d31d0a8ce4ff840411baa2b8c92a21db26";
+              sha256_unsigned = "bf99106da564ca85ea8ffaa0faf39a8f5dc6498cfb6574629dce7a7a2e14461b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c3-squashfs-factory.bin";
+              sha256 = "696d99a63ad737cb649d71003a500ad70ca941afe28bf59fa422e1d9cfdd1214";
+              sha256_unsigned = "696d99a63ad737cb649d71003a500ad70ca941afe28bf59fa422e1d9cfdd1214";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-842-c3-initramfs-kernel.bin";
+              sha256 = "12ac6355d6d8452d7943919023da1b809873f7719345fc1073d822dc15dc3f4b";
+              sha256_unsigned = "12ac6355d6d8452d7943919023da1b809873f7719345fc1073d822dc15dc3f4b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-842-c3"
+          ];
+          titles = [
+            {
+              model = "DIR-842";
+              variant = "C3";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-859-a1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-dlink_dir-859-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-859-a1-initramfs-kernel.bin";
+              sha256 = "ea4ec56df870737ccd360a225b1d8167680ad61a627c74e98a478eafa267be63";
+              sha256_unsigned = "ea4ec56df870737ccd360a225b1d8167680ad61a627c74e98a478eafa267be63";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-859-a1-squashfs-factory.bin";
+              sha256 = "39d16a4ec7416ee7d91b2aa1a44b4d78e602afcfbe91d4b4bca564dfdfa76c6c";
+              sha256_unsigned = "39d16a4ec7416ee7d91b2aa1a44b4d78e602afcfbe91d4b4bca564dfdfa76c6c";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-dlink_dir-859-a1-squashfs-sysupgrade.bin";
+              sha256 = "b477b1a14d700530472a0eea28aac80133a3cc230d1ddaa81d80348b52630aeb";
+              sha256_unsigned = "7138d0aa7a4c05d0b957eb7fe65d5994728bc7c790674eccae3f10ca36c9dcf8";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-859-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-859";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        elecom_wrc-1750ghbk2-i = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-elecom_wrc-1750ghbk2-i";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-elecom_wrc-1750ghbk2-i-squashfs-sysupgrade.bin";
+              sha256 = "2116b69270bae27498c74f45069dc003db6e3c8b0a44ff83e0ef69fdf9e8773c";
+              sha256_unsigned = "50aae57506ef517d683549c20e805567306cd8a3f95517c89b8f10c2991cc060";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-elecom_wrc-1750ghbk2-i-initramfs-kernel.bin";
+              sha256 = "06255f805628d2a4c5de487916ba478afd2594884808b0d8f0ade30753a905b1";
+              sha256_unsigned = "06255f805628d2a4c5de487916ba478afd2594884808b0d8f0ade30753a905b1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1750ghbk2-i"
+          ];
+          titles = [
+            {
+              model = "WRC-1750GHBK2-I/C";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-300ghbk2-i = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-elecom_wrc-300ghbk2-i";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-elecom_wrc-300ghbk2-i-squashfs-sysupgrade.bin";
+              sha256 = "de1c69ad28e13c375b3d1ef2b142a39a09fb3fa18b9b58a419987c3280b87161";
+              sha256_unsigned = "7e3c10b854e8447eec4f7118a7c7c97d4a125713f6da76025e8ab06fa8313267";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-elecom_wrc-300ghbk2-i-initramfs-kernel.bin";
+              sha256 = "c2abdca483156b5f1535ee85b4c8fe37aec8f15bca78e324fde99463fd59eba6";
+              sha256_unsigned = "c2abdca483156b5f1535ee85b4c8fe37aec8f15bca78e324fde99463fd59eba6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-300ghbk2-i"
+          ];
+          titles = [
+            {
+              model = "WRC-300GHBK2-I";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        embeddedwireless_balin = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-embeddedwireless_balin";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-embeddedwireless_balin-initramfs-kernel.bin";
+              sha256 = "cf13a36eb72d179bb87751d66b198274c80708b6394b6f9f700455b2261dce5f";
+              sha256_unsigned = "cf13a36eb72d179bb87751d66b198274c80708b6394b6f9f700455b2261dce5f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-embeddedwireless_balin-squashfs-sysupgrade.bin";
+              sha256 = "3d6e55f0203e355ce3f13dc39d1900193819e35988d4fa7788e0d81772ff13c0";
+              sha256_unsigned = "861bfbeb802ea15558f812996ccdbea83a7464d6650722e600ce983541660a53";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "embeddedwireless,balin"
+          ];
+          titles = [
+            {
+              model = "Balin";
+              vendor = "Embedded Wireless";
+            }
+          ];
+        };
+        embeddedwireless_dorin = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-embeddedwireless_dorin";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-embeddedwireless_dorin-squashfs-sysupgrade.bin";
+              sha256 = "09fc94a8e009177b32377a80c9ff793df71d101e0dd76dc4263f100eaecec2c0";
+              sha256_unsigned = "c17e3b302331544ca3bbde7052f2b4403c1cfcfb00e5c16e09e258e730896660";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-embeddedwireless_dorin-initramfs-kernel.bin";
+              sha256 = "4d7e53ceb2224ee5d1fe7017f45ac4402763bb78f13baec74fdf2972dbcc4a36";
+              sha256_unsigned = "4d7e53ceb2224ee5d1fe7017f45ac4402763bb78f13baec74fdf2972dbcc4a36";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "embeddedwireless,dorin"
+          ];
+          titles = [
+            {
+              model = "Dorin";
+              vendor = "Embedded Wireless";
+            }
+          ];
+        };
+        engenius_eap1200h = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_eap1200h";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap1200h-initramfs-kernel.bin";
+              sha256 = "8844374520a5ef3c40fd3ebc9bba34c207cc8ccfe6349a3886af2c6fc184ff37";
+              sha256_unsigned = "8844374520a5ef3c40fd3ebc9bba34c207cc8ccfe6349a3886af2c6fc184ff37";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap1200h-squashfs-sysupgrade.bin";
+              sha256 = "ccf26bbed0ef1223a8f9debf45dfcae7b0fb899863f059754e2e29f17737d354";
+              sha256_unsigned = "ca12db24527876b277758bf5340a4ddc0fc44a6777e980dd98793d1b23a49599";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap1200h-squashfs-factory.bin";
+              sha256 = "330d3780c878e1088485f379c1e51639f406a9954a001a915a48ba39f775aa0f";
+              sha256_unsigned = "330d3780c878e1088485f379c1e51639f406a9954a001a915a48ba39f775aa0f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "engenius,eap1200h"
+          ];
+          titles = [
+            {
+              model = "EAP1200H";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_eap300-v2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_eap300-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap300-v2-initramfs-kernel.bin";
+              sha256 = "5bc6de4c52a6d88b0ea32d9d461cf3d667c2cdcf8ae660e461d5a07899aa9f37";
+              sha256_unsigned = "5bc6de4c52a6d88b0ea32d9d461cf3d667c2cdcf8ae660e461d5a07899aa9f37";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap300-v2-squashfs-factory.bin";
+              sha256 = "2c5717cc3858ea752db6104a13f6429759ecad71601a9765e19e8153407b695d";
+              sha256_unsigned = "2c5717cc3858ea752db6104a13f6429759ecad71601a9765e19e8153407b695d";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap300-v2-squashfs-sysupgrade.bin";
+              sha256 = "ecc8cce24faa28d35c282a327131ce413740c9db22bc51893c62ea2b5164e7c1";
+              sha256_unsigned = "3abd7ad2ad9a7e508e8f70f9dcd559f7bad7250b188dbb1c1fccc2698e715ef3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "engenius,eap300-v2"
+          ];
+          titles = [
+            {
+              model = "EAP300";
+              variant = "v2";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_eap600 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_eap600";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap600-initramfs-kernel.bin";
+              sha256 = "faa2771d6b918059981df8a1f234eb09740ea03f8bfd9350ffb13c8623d20e8a";
+              sha256_unsigned = "faa2771d6b918059981df8a1f234eb09740ea03f8bfd9350ffb13c8623d20e8a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap600-squashfs-factory.bin";
+              sha256 = "0f439af54f81448a03fe765f7c0c3eadec4ab0b200c151da90f8212e800b9b74";
+              sha256_unsigned = "0f439af54f81448a03fe765f7c0c3eadec4ab0b200c151da90f8212e800b9b74";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_eap600-squashfs-sysupgrade.bin";
+              sha256 = "002d91e4cad13b7bb479a0e221bf74775d316ec9f8b792e390d99db33be0f2bc";
+              sha256_unsigned = "3b3dc404b0ffd2db02c4927a5fadd8dfb299f551bd547db9ae4c2fe2b6c34db2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "engenius,eap600"
+          ];
+          titles = [
+            {
+              model = "EAP600";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_ecb1200 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_ecb1200";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb1200-squashfs-factory.bin";
+              sha256 = "fd7e9f1dbc20cb77be05079e08855bb0b63aa01c56d85fdbb706574e7901f045";
+              sha256_unsigned = "fd7e9f1dbc20cb77be05079e08855bb0b63aa01c56d85fdbb706574e7901f045";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb1200-squashfs-sysupgrade.bin";
+              sha256 = "89c44c3586bf0b367c1707671aace987b783773238fa427fceea4da61a2e894a";
+              sha256_unsigned = "904b5ba0a37d7e29a788ef982fcf2c93577997739c4e94c334e1e4da002eb2b8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb1200-initramfs-kernel.bin";
+              sha256 = "d623998c3c4a85178e1435b51c813e0e912cc182c0f4863ae219897fb498697e";
+              sha256_unsigned = "d623998c3c4a85178e1435b51c813e0e912cc182c0f4863ae219897fb498697e";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "engenius,ecb1200"
+          ];
+          titles = [
+            {
+              model = "ECB1200";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_ecb1750 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_ecb1750";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb1750-squashfs-sysupgrade.bin";
+              sha256 = "0770ec4d72507e1ea51245c141b52923d78189864c35ac13514f5c2c30d74e90";
+              sha256_unsigned = "2e8f3c8b164409a97fdbae6a8f80d13e621a2f70772c72d4ef9a92085460cfa9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb1750-initramfs-kernel.bin";
+              sha256 = "378ea74b0359ede659833134d5062f79dfe9f117c254ae9fea382dab3c25b48c";
+              sha256_unsigned = "378ea74b0359ede659833134d5062f79dfe9f117c254ae9fea382dab3c25b48c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb1750-squashfs-factory.bin";
+              sha256 = "ff3d7ee376c5ef621c5e606d23c6c3cd96256a585ce45f850df10789c844d90e";
+              sha256_unsigned = "ff3d7ee376c5ef621c5e606d23c6c3cd96256a585ce45f850df10789c844d90e";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "engenius,ecb1750"
+          ];
+          titles = [
+            {
+              model = "ECB1750";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_ecb600 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_ecb600";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb600-squashfs-sysupgrade.bin";
+              sha256 = "4d541f467883de7a986fe47d705d1d3a973cafb2f3d8176f85042ee5a599ed99";
+              sha256_unsigned = "fa5612e96cc3443d9d1438e0f1829ce4a465de50139dd3447f321ef8fafb1d25";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb600-squashfs-factory.bin";
+              sha256 = "ec281aac3408d02cac1deac5adf83d05e828a3cd0ea77faccc18d3858e772c61";
+              sha256_unsigned = "ec281aac3408d02cac1deac5adf83d05e828a3cd0ea77faccc18d3858e772c61";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ecb600-initramfs-kernel.bin";
+              sha256 = "22f9aa0b8ea4d6858eb4992eb05d3f6331f66fe5b645d5cdef17a4d056e22d3a";
+              sha256_unsigned = "22f9aa0b8ea4d6858eb4992eb05d3f6331f66fe5b645d5cdef17a4d056e22d3a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "engenius,ecb600"
+          ];
+          titles = [
+            {
+              model = "ECB600";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_ens202ext-v1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_ens202ext-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ens202ext-v1-initramfs-kernel.bin";
+              sha256 = "b95ce5438229e33bb445c34ee7dab337534f9f5f7d2a4c9ae7c8e03ec098eec8";
+              sha256_unsigned = "b95ce5438229e33bb445c34ee7dab337534f9f5f7d2a4c9ae7c8e03ec098eec8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ens202ext-v1-squashfs-factory.bin";
+              sha256 = "ed8e778626940b1696a0dca6680715bf80ffa437bee7354723ef015f7855c5df";
+              sha256_unsigned = "ed8e778626940b1696a0dca6680715bf80ffa437bee7354723ef015f7855c5df";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ens202ext-v1-squashfs-sysupgrade.bin";
+              sha256 = "2bdf25c071e24333e6e4a613c6d6fa100def3bbff0c44bed330e264dc6203535";
+              sha256_unsigned = "57b45c50b0b092d016bf33d6c7e6bc864894edd4ecfaf1a57b66341775c6a8b5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "engenius,ens202ext-v1"
+          ];
+          titles = [
+            {
+              model = "ENS202EXT";
+              variant = "v1";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_enstationac-v1 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_enstationac-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_enstationac-v1-squashfs-sysupgrade.bin";
+              sha256 = "244b82bef7c3220ecce3200ffd21b4967b1bb6be5d45029f2ea64e81e2f93951";
+              sha256_unsigned = "d190fdf992a41cfaa8c3a5136704e9c9979ccf0a4374e418a3e05de35fc39078";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_enstationac-v1-squashfs-factory.bin";
+              sha256 = "e4375edae1da4c9eae848135d1bfcf1e40b583f3b9cad3a1528e94292de1c5d5";
+              sha256_unsigned = "e4375edae1da4c9eae848135d1bfcf1e40b583f3b9cad3a1528e94292de1c5d5";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_enstationac-v1-initramfs-kernel.bin";
+              sha256 = "ba4c311fe134d41b388af5d341fa21e2308ff8d11b28689c7e467d17956f7b02";
+              sha256_unsigned = "ba4c311fe134d41b388af5d341fa21e2308ff8d11b28689c7e467d17956f7b02";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "engenius,enstationac-v1"
+          ];
+          titles = [
+            {
+              model = "EnStationAC";
+              variant = "v1";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_epg5000 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_epg5000";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_epg5000-squashfs-sysupgrade.bin";
+              sha256 = "7142e2482bccc63b948168d5df35208066ca0501e23905aaa436c7d233a6b25d";
+              sha256_unsigned = "713fd062bbc72263fb8bda5547052bcd2886a320681c03116671a3d0744b01fa";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_epg5000-initramfs-kernel.bin";
+              sha256 = "ebcacb4d23c7da5769b16dd59c2506c48a2741dc5a993be964f5aa4f618618df";
+              sha256_unsigned = "ebcacb4d23c7da5769b16dd59c2506c48a2741dc5a993be964f5aa4f618618df";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_epg5000-squashfs-factory.dlf";
+              sha256 = "d05647a43639abce3db04981f88a2338158bc67b6693216f926b92f4fd27012f";
+              sha256_unsigned = "d05647a43639abce3db04981f88a2338158bc67b6693216f926b92f4fd27012f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "engenius,epg5000"
+            "epg5000"
+          ];
+          titles = [
+            {
+              model = "EPG5000";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        engenius_ews511ap = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-engenius_ews511ap";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ews511ap-initramfs-kernel.bin";
+              sha256 = "1c3a5e49202e10c4cc0a68b35d2e5bf1329bbf3e3d675e501ee7f3931d3af66a";
+              sha256_unsigned = "1c3a5e49202e10c4cc0a68b35d2e5bf1329bbf3e3d675e501ee7f3931d3af66a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-engenius_ews511ap-squashfs-sysupgrade.bin";
+              sha256 = "900a0e56f44133e039cc9ec3b42376c1867427311f5ad8aa6c953c3683433338";
+              sha256_unsigned = "a700c6c754a005534caea2246e591d990d371c8b3fe4196f165373582887c9e0";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "engenius,ews511ap"
+          ];
+          titles = [
+            {
+              model = "EWS511AP";
+              vendor = "EnGenius";
+            }
+          ];
+        };
+        enterasys_ws-ap3705i = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-enterasys_ws-ap3705i";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-enterasys_ws-ap3705i-initramfs-kernel.bin";
+              sha256 = "39ec026a79a277df93070238a543613124e4c7ac75e3aab904c04e296509450f";
+              sha256_unsigned = "39ec026a79a277df93070238a543613124e4c7ac75e3aab904c04e296509450f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-enterasys_ws-ap3705i-squashfs-sysupgrade.bin";
+              sha256 = "5cedd01447c856fdf2137e5a4f2304b4176042004f887f0f477c24e41dad0b2a";
+              sha256_unsigned = "31c90d72e94dd64ef5534c4c28e7a7cd3011dad72c919913ade42ac35a61f017";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "enterasys,ws-ap3705i"
+          ];
+          titles = [
+            {
+              model = "WS-AP3705i";
+              vendor = "Enterasys";
+            }
+          ];
+        };
+        etactica_eg200 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-ledtrig-oneshot"
+            "kmod-usb-serial-ftdi"
+            "kmod-usb-storage"
+            "kmod-fs-ext4"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-etactica_eg200";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-etactica_eg200-initramfs-kernel.bin";
+              sha256 = "4227f9e078f8b642e75b8f95ff435a467a79177696590dabe431fd8c80739853";
+              sha256_unsigned = "4227f9e078f8b642e75b8f95ff435a467a79177696590dabe431fd8c80739853";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-etactica_eg200-squashfs-sysupgrade.bin";
+              sha256 = "0ffb73bfaffd0f2f0d886b278b188590e0588e4ab042334ac9181de5ff411586";
+              sha256_unsigned = "1e2a8bf2d58edb8d2ee2870006d62f3060bf1abe3b282b6e8bb823af106b911e";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "etactica,eg200"
+            "rme-eg200"
+          ];
+          titles = [
+            {
+              model = "EG200";
+              vendor = "eTactica";
+            }
+          ];
+        };
+        extreme-networks_ws-ap3805i = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-extreme-networks_ws-ap3805i";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-extreme-networks_ws-ap3805i-squashfs-sysupgrade.bin";
+              sha256 = "c6d6f868d065b4d0450ad097b2fe4b5e508703814cfb855e3ed06b0ec62322ab";
+              sha256_unsigned = "906bcb6bfebcefefea64bce8d5356bb75320861e6a8f52b520f59f98a031113d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-extreme-networks_ws-ap3805i-initramfs-kernel.bin";
+              sha256 = "bdee441aca27db46851ca26c6813b73d3c42dd7ff9712c5d1599df9a44012f60";
+              sha256_unsigned = "bdee441aca27db46851ca26c6813b73d3c42dd7ff9712c5d1599df9a44012f60";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "extreme-networks,ws-ap3805i"
+          ];
+          titles = [
+            {
+              model = "WS-AP3805i";
+              vendor = "Extreme Networks";
+            }
+          ];
+        };
+        glinet_6408 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_6408";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_6408-initramfs-kernel.bin";
+              sha256 = "7824f12bd9584eae448ab0ae7054ced89f7198f7b8d521025cbda2d5eef1204d";
+              sha256_unsigned = "7824f12bd9584eae448ab0ae7054ced89f7198f7b8d521025cbda2d5eef1204d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_6408-squashfs-sysupgrade.bin";
+              sha256 = "a1a2fc6a0d219fa9ba39230bbf140400656cd2c87f763db9174a1192005eefb8";
+              sha256_unsigned = "7d94787323b29b2022634e41ed1f03ba67b280016a8e35de9aa29cb86d51b191";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "glinet,6408"
+            "gl-inet"
+          ];
+          titles = [
+            {
+              model = "6408";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_6416 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_6416";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_6416-initramfs-kernel.bin";
+              sha256 = "9a602ff880047e435b333dd539b89d93615fdb48479fa9ad9c4dfaae07b47f53";
+              sha256_unsigned = "9a602ff880047e435b333dd539b89d93615fdb48479fa9ad9c4dfaae07b47f53";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_6416-squashfs-sysupgrade.bin";
+              sha256 = "3819a13a4a8d8dc75692497785ee91e4f58a9b10f43a1312daa9bb50f2506099";
+              sha256_unsigned = "2962f0083187016112a4101c0988a3e5bdc1fa41f41f93754af0d24ae2d02c10";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "glinet,6416"
+            "gl-inet"
+          ];
+          titles = [
+            {
+              model = "6416";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_gl-ar150 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-ar150";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar150-initramfs-kernel.bin";
+              sha256 = "6b36d314687568c76650b49b749226c5ca477228d3a43bb07813db543d32982a";
+              sha256_unsigned = "6b36d314687568c76650b49b749226c5ca477228d3a43bb07813db543d32982a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar150-squashfs-sysupgrade.bin";
+              sha256 = "2015a7fa76c3ae41fee4dc8a45280fa0dc086b2915dc12e9630c92b666e03a3f";
+              sha256_unsigned = "33b1e0d980ec34006294c959f23fab7937eefbdab193a1c16234e95ed80d68d2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-ar150"
+            "gl-ar150"
+          ];
+          titles = [
+            {
+              model = "GL-AR150";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_gl-ar300m-lite = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-ar300m-lite";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar300m-lite-initramfs-kernel.bin";
+              sha256 = "180b049067bb8a30ddc0715b6b477321c74a6f512c5d2914af23daebf7878d33";
+              sha256_unsigned = "180b049067bb8a30ddc0715b6b477321c74a6f512c5d2914af23daebf7878d33";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar300m-lite-squashfs-sysupgrade.bin";
+              sha256 = "cbfb96626213c320f617b15810e188d073e0d6dc142bab7a3674e32985981cdd";
+              sha256_unsigned = "61aea6d9aa11d387f49d6aa2357b0417791ffebbfe82249ee00ccb3b2ec31489";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-ar300m-lite"
+            "gl-ar300m"
+          ];
+          titles = [
+            {
+              model = "GL-AR300M";
+              variant = "Lite";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_gl-ar300m16 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-ar300m16";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar300m16-squashfs-sysupgrade.bin";
+              sha256 = "86cfd29c0ec32057e900c1097afd0a8f036101082ce4a3e710a791938df987a2";
+              sha256_unsigned = "f3c984651febd068960338c51140daee785c62d93759834de7093bec7964cdfe";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar300m16-initramfs-kernel.bin";
+              sha256 = "6b994000109ca1f1e9111a2e096a6dcc11cf0c30311bed0976cdaa7292821f78";
+              sha256_unsigned = "6b994000109ca1f1e9111a2e096a6dcc11cf0c30311bed0976cdaa7292821f78";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-ar300m16"
+            "gl-ar300m"
+          ];
+          titles = [
+            {
+              model = "GL-AR300M16";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_gl-ar750 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-ar750";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar750-initramfs-kernel.bin";
+              sha256 = "3945b762e5ffae63517e9c6c0368029c51ad01dbb476080e7cb779816bc2908a";
+              sha256_unsigned = "3945b762e5ffae63517e9c6c0368029c51ad01dbb476080e7cb779816bc2908a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-ar750-squashfs-sysupgrade.bin";
+              sha256 = "2703dd0328dfdd9df1dbf863ab2149c0ee75f7d6bff287ec2eef8de911f66253";
+              sha256_unsigned = "597a804f293b0f6abdcb0489219e17a28503f575140b9bf6633a99aa92dc0b40";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-ar750"
+            "gl-ar750"
+          ];
+          titles = [
+            {
+              model = "GL-AR750";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_gl-mifi = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-mifi";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-mifi-squashfs-sysupgrade.bin";
+              sha256 = "ab960148c7d65dfe1e106adad8db0cf1c947fbb14b80f8be085be41e111a4391";
+              sha256_unsigned = "9ded59c35baedec4144acfcb13818adfb9e02f4f419871427f0ecd6eca427a92";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-mifi-initramfs-kernel.bin";
+              sha256 = "5c93629c31a71f3cb96b4a9a21c3caa9bb497832ff83f8b0167c92ea18e64c9a";
+              sha256_unsigned = "5c93629c31a71f3cb96b4a9a21c3caa9bb497832ff83f8b0167c92ea18e64c9a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-mifi"
+            "gl-mifi"
+          ];
+          titles = [
+            {
+              model = "GL-MiFi";
+              vendor = "GL.iNET";
+            }
+          ];
+        };
+        glinet_gl-usb150 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-usb150";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-usb150-squashfs-sysupgrade.bin";
+              sha256 = "146e3d125a62cb009be8f7d7d02bcd8c9330b999a6f9f9bd3912b70d10210a04";
+              sha256_unsigned = "1e9cb01426c8093bfa81128f5c0a25482228d0a39cf1c8f5c855c9363ff28a8c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-usb150-initramfs-kernel.bin";
+              sha256 = "e71fc5aca34c9723bc6a49e0fe9cd1292cdaca48424d11f0f21e4c1c1a668f80";
+              sha256_unsigned = "e71fc5aca34c9723bc6a49e0fe9cd1292cdaca48424d11f0f21e4c1c1a668f80";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-usb150"
+            "gl-usb150"
+          ];
+          titles = [
+            {
+              model = "GL-USB150";
+              vendor = "GL.iNET";
+            }
+          ];
+        };
+        glinet_gl-x300b = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-x300b";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-x300b-squashfs-sysupgrade.bin";
+              sha256 = "6a13b3786b359020f5c9b9aecfeb3086deccbd15e88eb64a40ec269445a97f20";
+              sha256_unsigned = "0251bf5487c326c4f9beabf16d01b88953864d52598e586157e2f2350f653e23";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-x300b-initramfs-kernel.bin";
+              sha256 = "aeb5f994b9492e9253506a49e0a517a1269773f726686bf6de5af17346981c5c";
+              sha256_unsigned = "aeb5f994b9492e9253506a49e0a517a1269773f726686bf6de5af17346981c5c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-x300b"
+          ];
+          titles = [
+            {
+              model = "GL-X300B";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        glinet_gl-x750 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-glinet_gl-x750";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-x750-squashfs-sysupgrade.bin";
+              sha256 = "6334b1079b3883eddfaf6dcdb335ba607747042c452f9b155ef2d46859c38aa1";
+              sha256_unsigned = "1e1d615d361ee7e973f6f2690ae5802d4d5ece511b6caad3555e5481b4ee3f33";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-glinet_gl-x750-initramfs-kernel.bin";
+              sha256 = "f96d7820f2f6d092418b3ffa76158ecb40dd03cd78abd8cc1a57c697494968a0";
+              sha256_unsigned = "f96d7820f2f6d092418b3ffa76158ecb40dd03cd78abd8cc1a57c697494968a0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-x750"
+          ];
+          titles = [
+            {
+              model = "GL-X750";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        hak5_lan-turtle = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "-iwinfo"
+            "-kmod-ath9k"
+            "-swconfig"
+            "-uboot-envtools"
+            "-wpad-basic-wolfssl"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-hak5_lan-turtle";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-hak5_lan-turtle-initramfs-kernel.bin";
+              sha256 = "97377d8389891e02cd9bdaf18d460163082c512348d6d16f7c72de6ad2501c87";
+              sha256_unsigned = "97377d8389891e02cd9bdaf18d460163082c512348d6d16f7c72de6ad2501c87";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-hak5_lan-turtle-squashfs-sysupgrade.bin";
+              sha256 = "1b06930421559af6afc6b76565d9105426108d8a45a9d77f07e19c273ee65876";
+              sha256_unsigned = "63c75c928160ccb92c8c296906c17e8aa990110ee21e3bcd7be446c1fd79453e";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "hak5,lan-turtle"
+            "lan-turtle"
+          ];
+          titles = [
+            {
+              model = "LAN Turtle";
+              vendor = "Hak5";
+            }
+          ];
+        };
+        hak5_packet-squirrel = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "-iwinfo"
+            "-kmod-ath9k"
+            "-swconfig"
+            "-uboot-envtools"
+            "-wpad-basic-wolfssl"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-hak5_packet-squirrel";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-hak5_packet-squirrel-initramfs-kernel.bin";
+              sha256 = "16acb8febe4d3066c8650531063ccbe24b53caa1e053e308dbd140ec21b59b6f";
+              sha256_unsigned = "16acb8febe4d3066c8650531063ccbe24b53caa1e053e308dbd140ec21b59b6f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-hak5_packet-squirrel-squashfs-sysupgrade.bin";
+              sha256 = "43f3e4cbf9bf0d0a0bf921c74a65125901e92d3153faebc9a4515ef0ede09d62";
+              sha256_unsigned = "0a09e531ee25c3c601ce2c04be133afc0b9396f3240a3ae63feb218bbb10135b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "hak5,packet-squirrel"
+            "packet-squirrel"
+          ];
+          titles = [
+            {
+              model = "Packet Squirrel";
+              vendor = "Hak5";
+            }
+          ];
+        };
+        hak5_wifi-pineapple-nano = {
+          device_packages = [
+            "kmod-ath9k-htc"
+            "kmod-usb-chipidea2"
+            "kmod-usb-storage"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-hak5_wifi-pineapple-nano";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-hak5_wifi-pineapple-nano-squashfs-sysupgrade.bin";
+              sha256 = "94614c4fb13dd15cc72f334e8f3241781b51123af1a63a88c0a76b7baa94b438";
+              sha256_unsigned = "e8b472f99d6c3b218d66bae10dfca1c1d9ec3eda1a1dbe97141e5e56e2f604f2";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-hak5_wifi-pineapple-nano-initramfs-kernel.bin";
+              sha256 = "f70a8d35d8134e0af9158d5ce09f3b4a6a09c4f234a33d4079ecec482325f6fb";
+              sha256_unsigned = "f70a8d35d8134e0af9158d5ce09f3b4a6a09c4f234a33d4079ecec482325f6fb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "hak5,wifi-pineapple-nano"
+            "wifi-pineapple-nano"
+          ];
+          titles = [
+            {
+              model = "WiFi Pineapple NANO";
+              vendor = "Hak5";
+            }
+          ];
+        };
+        iodata_etg3-r = {
+          device_packages = [
+            "-iwinfo"
+            "-kmod-ath9k"
+            "-wpad-basic-wolfssl"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-iodata_etg3-r";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_etg3-r-squashfs-sysupgrade.bin";
+              sha256 = "db3c000cdb56f3aeedf3108ef62cc7e16b613693f38d7cc1ea3fe284d8450f90";
+              sha256_unsigned = "8f18370df9aa9c515a47169315b55e74432f73d5f6d5850e03be7d31b3ec8dab";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_etg3-r-initramfs-kernel.bin";
+              sha256 = "179ca9ad881c8cc85e9987ee747c7afaaf20934937b346554dc75b0e4b886a23";
+              sha256_unsigned = "179ca9ad881c8cc85e9987ee747c7afaaf20934937b346554dc75b0e4b886a23";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iodata,etg3-r"
+          ];
+          titles = [
+            {
+              model = "ETG3-R";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-ac1167dgr = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1167dgr";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1167dgr-initramfs-kernel.bin";
+              sha256 = "8ac230793dfcb589e6344d828b3cb294d22e6a62b2983b03a619846fe5558a79";
+              sha256_unsigned = "8ac230793dfcb589e6344d828b3cb294d22e6a62b2983b03a619846fe5558a79";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1167dgr-squashfs-factory.bin";
+              sha256 = "09e635d70f7602bf91363fbcc5d3498ee2bfb5aba69ba3bde49d2e3581662232";
+              sha256_unsigned = "09e635d70f7602bf91363fbcc5d3498ee2bfb5aba69ba3bde49d2e3581662232";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1167dgr-squashfs-sysupgrade.bin";
+              sha256 = "79d08ba752efcbdcc527c146b24c96e27c7590d1212e63c952e2ac76a993327d";
+              sha256_unsigned = "c0d56a5aa9c7dce23f72fb473dd18ddbd244cfc091dc180354772dd10f03614c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ac1167dgr"
+          ];
+          titles = [
+            {
+              model = "WN-AC1167DGR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-ac1600dgr = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr-squashfs-sysupgrade.bin";
+              sha256 = "70a9fe01259deece4035e3ac3d3a49b5f641ffcc0e507788e13c76692aee2db0";
+              sha256_unsigned = "89aadfd6a35be9444dacb84fe3e2dcadff6a6502ee57c6bf408803a04955ff58";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr-squashfs-factory.bin";
+              sha256 = "bafcfbafcf531226e3561c499b40989ad81cbef4dec09a6a6d5d979cd68ea336";
+              sha256_unsigned = "bafcfbafcf531226e3561c499b40989ad81cbef4dec09a6a6d5d979cd68ea336";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr-initramfs-kernel.bin";
+              sha256 = "29d2f6acc9f14d58a4df2266145db7a7ba91efc9b101f83cea50e8906a524e5b";
+              sha256_unsigned = "29d2f6acc9f14d58a4df2266145db7a7ba91efc9b101f83cea50e8906a524e5b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ac1600dgr"
+          ];
+          titles = [
+            {
+              model = "WN-AC1600DGR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-ac1600dgr2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr2-initramfs-kernel.bin";
+              sha256 = "ecbff2291593e2befbc93ba251a4719a5ebecd0914cb70f61598ba496b27e0cd";
+              sha256_unsigned = "ecbff2291593e2befbc93ba251a4719a5ebecd0914cb70f61598ba496b27e0cd";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr2-squashfs-sysupgrade.bin";
+              sha256 = "ac4d573084bf09c55aee327b24c296f7d02f1721cc1a8497e64371ce9c6885f9";
+              sha256_unsigned = "6a99eb74ddb08fc7d1ca7dea7bbd8295bbdd361d3d6f1d5c748d1a6d915a9189";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ac1600dgr2-squashfs-dgr2-dgr3-factory.bin";
+              sha256 = "2e39f7d74e6b68d74c3386a474f6593a21cea7c622fc7c73bc5751ce519a9088";
+              sha256_unsigned = "2e39f7d74e6b68d74c3386a474f6593a21cea7c622fc7c73bc5751ce519a9088";
+              type = "dgr2-dgr3-factory";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ac1600dgr2"
+          ];
+          titles = [
+            {
+              model = "WN-AC1600DGR2/DGR3";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-ag300dgr = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-iodata_wn-ag300dgr";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ag300dgr-squashfs-sysupgrade.bin";
+              sha256 = "c51be1d2683342f1bb76369f8c79ad0bf2541ef0d5806198eafa747c404fcf49";
+              sha256_unsigned = "a282b4d6ffedf9795c82240ba2b63baa6f9c06ee4ec84c0df475daed92739c78";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ag300dgr-initramfs-kernel.bin";
+              sha256 = "34a3a33d3516cb122986637bbc7b85b09573cf22764189e8ae18669919676cb4";
+              sha256_unsigned = "34a3a33d3516cb122986637bbc7b85b09573cf22764189e8ae18669919676cb4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-iodata_wn-ag300dgr-squashfs-factory.bin";
+              sha256 = "09da3105de3244fb0a5e73e70cc643f8e547c49994964b3c2ce2b0012bb50ba2";
+              sha256_unsigned = "09da3105de3244fb0a5e73e70cc643f8e547c49994964b3c2ce2b0012bb50ba2";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ag300dgr"
+          ];
+          titles = [
+            {
+              model = "WN-AG300DGR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        jjplus_ja76pf2 = {
+          device_packages = [
+            "-kmod-ath9k"
+            "-swconfig"
+            "-wpad-basic-wolfssl"
+            "-uboot-envtools"
+            "fconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-jjplus_ja76pf2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-jjplus_ja76pf2-squashfs-sysupgrade.bin";
+              sha256 = "d5b3a30dada2eff29d16f9a34c9378f59fb88f010cd589e7e7bdf5fbc750f784";
+              sha256_unsigned = "b5a78665a420e183945bdeadeb024749710560517c831bef51f6daf455173b2b";
+              type = "sysupgrade";
+            }
+            {
+              name = "openwrt-22.03.7-ath79-generic-jjplus_ja76pf2-loader.bin";
+              sha256 = "f44e3ef22d497a85627ac58a3ed8a650a2d7bf8522a34007adcb9120115a3890";
+              sha256_unsigned = "f44e3ef22d497a85627ac58a3ed8a650a2d7bf8522a34007adcb9120115a3890";
+              type = "loader.bin";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-jjplus_ja76pf2-squashfs-firmware.bin";
+              sha256 = "071fea9cf8ae537cf40964f4dc6fedd14ba254c42a93fdb91de231e74406ea3a";
+              sha256_unsigned = "071fea9cf8ae537cf40964f4dc6fedd14ba254c42a93fdb91de231e74406ea3a";
+              type = "firmware";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-jjplus_ja76pf2-initramfs-kernel.bin";
+              sha256 = "d69afaf199f6e6fde17239caf46f07f3e6cd7cd6ad9fe66f93843f20dbc01008";
+              sha256_unsigned = "d69afaf199f6e6fde17239caf46f07f3e6cd7cd6ad9fe66f93843f20dbc01008";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "jjplus,ja76pf2"
+          ];
+          titles = [
+            {
+              model = "JA76PF2";
+              vendor = "jjPlus";
+            }
+          ];
+        };
+        jjplus_jwap230 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-jjplus_jwap230";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-jjplus_jwap230-squashfs-sysupgrade.bin";
+              sha256 = "6901f949172c2cd3c8271e1b7b941cebae865d5117b11cecb1dfce5db5215a4c";
+              sha256_unsigned = "37a6e4941acf5e395744059ed0239751fd893f0f9da86242a8b3f9fd74d17612";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-jjplus_jwap230-initramfs-kernel.bin";
+              sha256 = "2c2ca6ff7ec3794538001703aa16006e079e8f28a12b66c2ee142cf6a5c49cd5";
+              sha256_unsigned = "2c2ca6ff7ec3794538001703aa16006e079e8f28a12b66c2ee142cf6a5c49cd5";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "jjplus,jwap230"
+          ];
+          titles = [
+            {
+              model = "JWAP230";
+              vendor = "jjPlus";
+            }
+          ];
+        };
+        joyit_jt-or750i = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-joyit_jt-or750i";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-joyit_jt-or750i-initramfs-kernel.bin";
+              sha256 = "83f44a9db6650a31cede548b9a90af4e25c51c5075e811ce638c25e61da51dc7";
+              sha256_unsigned = "83f44a9db6650a31cede548b9a90af4e25c51c5075e811ce638c25e61da51dc7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-joyit_jt-or750i-squashfs-sysupgrade.bin";
+              sha256 = "be2778757eaeb679673125a388a73cec3e58f7906b4ae66c4aa6d1a1e0323ad7";
+              sha256_unsigned = "0051d08a826273da42527f573b2efb347e7d1977980945eebf42b980709d9304";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "joyit,jt-or750i"
+          ];
+          titles = [
+            {
+              model = "JT-OR750i";
+              vendor = "Joy-IT";
+            }
+          ];
+        };
+        letv_lba-047-ch = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-letv_lba-047-ch";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-letv_lba-047-ch-initramfs-kernel.bin";
+              sha256 = "f190140e8a04d23f8c4eb705309f43673c19ffa5778bdf1a718ba9511e0ebfd7";
+              sha256_unsigned = "f190140e8a04d23f8c4eb705309f43673c19ffa5778bdf1a718ba9511e0ebfd7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-letv_lba-047-ch-squashfs-sysupgrade.bin";
+              sha256 = "9f36085b72bcb8c9218fa2f589d69222aec6222f6bb4bb9738053bcf24ad5bab";
+              sha256_unsigned = "5dd2f2dffbbfd2963baf5ddeed3f55305a005bb79b57cca97dacf982f2f9d3f3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-letv_lba-047-ch-squashfs-factory.bin";
+              sha256 = "e92c655cf720c01ebbd21dd774d913682f4b814d9290b923ce6f025285126e74";
+              sha256_unsigned = "e92c655cf720c01ebbd21dd774d913682f4b814d9290b923ce6f025285126e74";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "letv,lba-047-ch"
+          ];
+          titles = [
+            {
+              model = "LBA-047-CH";
+              vendor = "Letv";
+            }
+          ];
+        };
+        librerouter_librerouter-v1 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-librerouter_librerouter-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-librerouter_librerouter-v1-squashfs-sysupgrade.bin";
+              sha256 = "84235fdc759f62027b3ce48d34ee09daee0717f3d4d13e0ebd82a614fc5ce80f";
+              sha256_unsigned = "409cfb8c6ffbed89f048b00914d9828b52d3338d6007149a2969241d411f89fb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-librerouter_librerouter-v1-initramfs-kernel.bin";
+              sha256 = "1019020bc3abfc5604a0bf0d94cfb16d4c660fad5fdb6b1622750ca744666a80";
+              sha256_unsigned = "1019020bc3abfc5604a0bf0d94cfb16d4c660fad5fdb6b1622750ca744666a80";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "librerouter,librerouter-v1"
+          ];
+          titles = [
+            {
+              model = "LibreRouter";
+              variant = "v1";
+              vendor = "Librerouter";
+            }
+          ];
+        };
+        meraki_mr12 = {
+          device_packages = [
+            "kmod-owl-loader"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-meraki_mr12";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-meraki_mr12-initramfs-kernel.bin";
+              sha256 = "e8e35e1ac735949ce42e3ece43b785ebc841524a05ece2da8e8fae5c0d291afc";
+              sha256_unsigned = "e8e35e1ac735949ce42e3ece43b785ebc841524a05ece2da8e8fae5c0d291afc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-meraki_mr12-squashfs-sysupgrade.bin";
+              sha256 = "2e0080ed04cb6d61f06a4e9b28845bc8262f165de615ca6592ee451991d41ccf";
+              sha256_unsigned = "58801da108c4df7d60681232306d6a0ebe6d182afcd10d760e78a66722a771fb";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "meraki,mr12"
+            "mr12"
+          ];
+          titles = [
+            {
+              model = "MR12";
+              vendor = "Meraki";
+            }
+          ];
+        };
+        meraki_mr16 = {
+          device_packages = [
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-meraki_mr16";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-meraki_mr16-initramfs-kernel.bin";
+              sha256 = "cffd1aaa53601f1a8c03d3d7767c92244500490deacacf8cffc3f8bd3b229b06";
+              sha256_unsigned = "cffd1aaa53601f1a8c03d3d7767c92244500490deacacf8cffc3f8bd3b229b06";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-meraki_mr16-squashfs-sysupgrade.bin";
+              sha256 = "b3d448f14ce663947416a4f3c134a551db0c3f3e58161ab594f814b803d81c34";
+              sha256_unsigned = "dfdc786198371c07812be97f0e3b5a67a76980521714db10d2609eff95573279";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "meraki,mr16"
+            "mr16"
+          ];
+          titles = [
+            {
+              model = "MR16";
+              vendor = "Meraki";
+            }
+          ];
+        };
+        mercury_mw4530r-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-mercury_mw4530r-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-mercury_mw4530r-v1-initramfs-kernel.bin";
+              sha256 = "17af37562de39aeb7f29f1f3653ae02051bc9e4716666c1fc0afb2ea09614098";
+              sha256_unsigned = "17af37562de39aeb7f29f1f3653ae02051bc9e4716666c1fc0afb2ea09614098";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-mercury_mw4530r-v1-squashfs-factory.bin";
+              sha256 = "657c7662b80bbb7d4f0cda4c24b7f13d063af1317b22c9a9c16de989e006e828";
+              sha256_unsigned = "657c7662b80bbb7d4f0cda4c24b7f13d063af1317b22c9a9c16de989e006e828";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-mercury_mw4530r-v1-squashfs-sysupgrade.bin";
+              sha256 = "1b3de54ba51cc1e494c77ec70a43402f52b95218d4ad81323689f8304269df76";
+              sha256_unsigned = "e490f02d922941877a740c477c12eb650232fd5e5475ddc59777f787060b2cd3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mercury,mw4530r-v1"
+            "tl-wdr4300"
+          ];
+          titles = [
+            {
+              model = "MW4530R";
+              variant = "v1";
+              vendor = "Mercury";
+            }
+          ];
+        };
+        nec_wf1200cr = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-nec_wf1200cr";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wf1200cr-squashfs-factory.bin";
+              sha256 = "058b242513186093dcacf211d59664e98802457bccf5ecf5c6b644f6214086b0";
+              sha256_unsigned = "058b242513186093dcacf211d59664e98802457bccf5ecf5c6b644f6214086b0";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wf1200cr-squashfs-sysupgrade.bin";
+              sha256 = "e8f7d0fd658f928bca1f73ec6187642d95b38d89199a23f0acd22a65620956b9";
+              sha256_unsigned = "666f1356920e47c47beec1f326c432ca9da55ae0686fdc79d82903f3d0501af1";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wf1200cr-initramfs-kernel.bin";
+              sha256 = "45505f5b1815f6745816f4830609a78d48f8e6078236530bd8f8a762c7893049";
+              sha256_unsigned = "45505f5b1815f6745816f4830609a78d48f8e6078236530bd8f8a762c7893049";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "nec,wf1200cr"
+          ];
+          titles = [
+            {
+              model = "Aterm WF1200CR";
+              vendor = "NEC";
+            }
+          ];
+        };
+        nec_wg1200cr = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-nec_wg1200cr";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wg1200cr-initramfs-kernel.bin";
+              sha256 = "53ab397240a1ec96172b02f7a1132b8cf7e9be8900901185c00b73bd4ab63916";
+              sha256_unsigned = "53ab397240a1ec96172b02f7a1132b8cf7e9be8900901185c00b73bd4ab63916";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wg1200cr-squashfs-factory.bin";
+              sha256 = "43c6720702098aad9a39741ee510e818d569a39baeb58a23c63d9e22aed19f6d";
+              sha256_unsigned = "43c6720702098aad9a39741ee510e818d569a39baeb58a23c63d9e22aed19f6d";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wg1200cr-squashfs-sysupgrade.bin";
+              sha256 = "6444adc3d95d2de839d9696bf11d5fe2f14613ca1b3de8f818c4b31a6df7f672";
+              sha256_unsigned = "a36fbb0628cce570d59d612672f46451bffbd14e59097361306704b11ec69d75";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "nec,wg1200cr"
+          ];
+          titles = [
+            {
+              model = "Aterm WG1200CR";
+              vendor = "NEC";
+            }
+          ];
+        };
+        nec_wg800hp = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9887-ct-full-htt"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-nec_wg800hp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wg800hp-squashfs-factory.bin";
+              sha256 = "14047fcffcc6640930b80fea64789b4ac2dc66b582171a3b1a420d30fb0a0cda";
+              sha256_unsigned = "14047fcffcc6640930b80fea64789b4ac2dc66b582171a3b1a420d30fb0a0cda";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wg800hp-initramfs-kernel.bin";
+              sha256 = "09dd2468b46ad1f9d79ac17cd33f59426ac5d1b7e1fa99c469dc68ef2cee07ad";
+              sha256_unsigned = "09dd2468b46ad1f9d79ac17cd33f59426ac5d1b7e1fa99c469dc68ef2cee07ad";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-nec_wg800hp-squashfs-sysupgrade.bin";
+              sha256 = "2f08d8f2d52ab61995c47eaadb804e56d0dc2dd84a9e67f75b5c93bd94131bb5";
+              sha256_unsigned = "6cbf307354cabde9b7e503625add6002982fb43e44e4c79d113ee0d57f905e62";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "nec,wg800hp"
+          ];
+          titles = [
+            {
+              model = "Aterm WG800HP";
+              vendor = "NEC";
+            }
+          ];
+        };
+        netgear_ex6400 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca99x0-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_ex6400";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex6400-initramfs-kernel.bin";
+              sha256 = "1280c65ecd51d2e066fa4e95f66468e162a624294cbd800df1f7e14573415728";
+              sha256_unsigned = "1280c65ecd51d2e066fa4e95f66468e162a624294cbd800df1f7e14573415728";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex6400-squashfs-factory.img";
+              sha256 = "eb33b21fb116ede0622cf70aa63522340d00c3042c964595cebd9725bd58628e";
+              sha256_unsigned = "eb33b21fb116ede0622cf70aa63522340d00c3042c964595cebd9725bd58628e";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex6400-squashfs-sysupgrade.bin";
+              sha256 = "e844bdec40bbfbbd7ea6e9958e7b21dfa7fe13c5ae227885af571e7bd95d8c32";
+              sha256_unsigned = "522c36d1e9153995c01caf5596e9faef9271e41b7f00c588fdab8419686f6bef";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,ex6400"
+          ];
+          titles = [
+            {
+              model = "EX6400";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_ex7300 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca99x0-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_ex7300";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex7300-squashfs-sysupgrade.bin";
+              sha256 = "84ec7dbcaf2b2a4bec401ad6e120608a1cd0f7927a0292ded388bd52608a6835";
+              sha256_unsigned = "0ab46c738ad8c35a79a998be6261d53e4a3db06ec5d6e03621d7788646a14845";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex7300-initramfs-kernel.bin";
+              sha256 = "d29a682189f88a3be57e52a0a4551020ecc3ef31415cfa4b3bd328d52c150f31";
+              sha256_unsigned = "d29a682189f88a3be57e52a0a4551020ecc3ef31415cfa4b3bd328d52c150f31";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex7300-squashfs-factory.img";
+              sha256 = "dff4bf4cf7c41d241852b847ac7a6209a4becdc583e9a0260c68e1233e2c0d98";
+              sha256_unsigned = "dff4bf4cf7c41d241852b847ac7a6209a4becdc583e9a0260c68e1233e2c0d98";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,ex7300"
+          ];
+          titles = [
+            {
+              model = "EX7300";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_ex7300-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9984-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_ex7300-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex7300-v2-squashfs-sysupgrade.bin";
+              sha256 = "d89ff65240aaf8daee892bbc38b3dbfaee551c077a47147801326cbd11e25d20";
+              sha256_unsigned = "c552e6348be3f82c5bb7924a4817fbed7189645c178d8027e7707d2253a97e0a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex7300-v2-initramfs-kernel.bin";
+              sha256 = "ad5a7cc4b031d55f5a0570ad4557cbdf62423edb079d1052e7aad6c9dd1f4b32";
+              sha256_unsigned = "ad5a7cc4b031d55f5a0570ad4557cbdf62423edb079d1052e7aad6c9dd1f4b32";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_ex7300-v2-squashfs-factory.img";
+              sha256 = "db3c6082be6f5d0248cc186402545dd97b41d33804849d4abe7377110c09d73a";
+              sha256_unsigned = "db3c6082be6f5d0248cc186402545dd97b41d33804849d4abe7377110c09d73a";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,ex7300-v2"
+          ];
+          titles = [
+            {
+              model = "EX7300";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndap360 = {
+          device_packages = [
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndap360";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndap360-initramfs-kernel.bin";
+              sha256 = "3d0818215bc1a6c56a4d66138519e5e18725ed92b9b8e879c89059bc6dcd6229";
+              sha256_unsigned = "3d0818215bc1a6c56a4d66138519e5e18725ed92b9b8e879c89059bc6dcd6229";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndap360-squashfs-sysupgrade.bin";
+              sha256 = "b79e878b43c1787aaa76b2d5e3c5eb3270a71633c240212e5e644c0ca64245ff";
+              sha256_unsigned = "3c76b3379606c8eb8ce7d77fc69426a3008edebf0ae4f8284e2d4810203b2f9d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndap360"
+          ];
+          titles = [
+            {
+              model = "WNDAP360";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndr3700 = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndr3700";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-squashfs-factory.img";
+              sha256 = "5f4b1bdd8c2a2a6f34745101f22224fac1ec34403ba48e8ff06cb3a42b18a32c";
+              sha256_unsigned = "5f4b1bdd8c2a2a6f34745101f22224fac1ec34403ba48e8ff06cb3a42b18a32c";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-squashfs-sysupgrade.bin";
+              sha256 = "5f5036b786da978ab33ac2c17a0beb0674edf978a3e5abc5f5733709d9f5a898";
+              sha256_unsigned = "084bed24d430d80f9917e36387ada37864d4ddab1d6d0e294bf827032b711ce1";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-initramfs-kernel.bin";
+              sha256 = "784fb05d580e51009b2ed786a908ff8c345d7880082885fd00c90617181c59a4";
+              sha256_unsigned = "784fb05d580e51009b2ed786a908ff8c345d7880082885fd00c90617181c59a4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-squashfs-factory-NA.img";
+              sha256 = "a1542804418cda980c012d8ca6195593b3f8b3cd8bc6ddd51507dc5f454f014d";
+              sha256_unsigned = "a1542804418cda980c012d8ca6195593b3f8b3cd8bc6ddd51507dc5f454f014d";
+              type = "factory-NA";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndr3700"
+            "wndr3700"
+          ];
+          titles = [
+            {
+              model = "WNDR3700";
+              variant = "v1";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndr3700-v2 = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-v2-squashfs-sysupgrade.bin";
+              sha256 = "37c32d5ba74d7508c3b74ca7be8fad598a73cc442e5b142070559fbad3fc0d83";
+              sha256_unsigned = "35e95f21963da77c4305832296c3942ee9f803283892d5ad9422d9de9032e533";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-v2-squashfs-factory.img";
+              sha256 = "526ecdcf567faccbae8333f9e3966a48576bfd67395a2814a8a406bec977493b";
+              sha256_unsigned = "526ecdcf567faccbae8333f9e3966a48576bfd67395a2814a8a406bec977493b";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3700-v2-initramfs-kernel.bin";
+              sha256 = "d21cb5c07c3c3582d4022216007c67e3a4480a7007015c4793537b4702e57f82";
+              sha256_unsigned = "d21cb5c07c3c3582d4022216007c67e3a4480a7007015c4793537b4702e57f82";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndr3700-v2"
+            "wndr3700"
+            "netgear,wndr3700v2"
+          ];
+          titles = [
+            {
+              model = "WNDR3700";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndr3800 = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndr3800";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3800-squashfs-sysupgrade.bin";
+              sha256 = "03009eab90d90ccc41d1d64557f99f3c41f27b90e5d4fc9ba18e542fe9893ba7";
+              sha256_unsigned = "cc135c96cb436c838234b1f8f8849032061128947f692d7ee21cc75fbbe8f385";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3800-initramfs-kernel.bin";
+              sha256 = "9433a3ad0e3c0a217e1cdca28e16bed849b8403ea8172a337de345d8cff1b2ff";
+              sha256_unsigned = "9433a3ad0e3c0a217e1cdca28e16bed849b8403ea8172a337de345d8cff1b2ff";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3800-squashfs-factory.img";
+              sha256 = "4508eb5c5fceb4fe33fd33a1785ec340a3c70bd5b1d59512114724f598d3d267";
+              sha256_unsigned = "4508eb5c5fceb4fe33fd33a1785ec340a3c70bd5b1d59512114724f598d3d267";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndr3800"
+            "wndr3700"
+          ];
+          titles = [
+            {
+              model = "WNDR3800";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndr3800ch = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndr3800ch";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3800ch-squashfs-factory.img";
+              sha256 = "38e065e5e3083c98b1e3a2b5f15e7e4112036512f6d71864765bbc08e6525d53";
+              sha256_unsigned = "38e065e5e3083c98b1e3a2b5f15e7e4112036512f6d71864765bbc08e6525d53";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3800ch-initramfs-kernel.bin";
+              sha256 = "06d0dfec006f2c3781939b3333c17b87f62ad8bf57c527bfae2594e9d08e79b0";
+              sha256_unsigned = "06d0dfec006f2c3781939b3333c17b87f62ad8bf57c527bfae2594e9d08e79b0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndr3800ch-squashfs-sysupgrade.bin";
+              sha256 = "64fb3208f7b124d06b493f140f0966965428af383c64212347147cccd0314131";
+              sha256_unsigned = "c3cef9b8b3f86ec8627733658cfab5314302a9ee011c9837f33a864547a7cf28";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndr3800ch"
+            "wndr3700"
+          ];
+          titles = [
+            {
+              model = "WNDR3800CH";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndrmac-v1 = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v1-initramfs-kernel.bin";
+              sha256 = "41ea87c19eaacc1efa264e7c1f51a47afb6aaaa8ec32c13b7e2dcfe64e875f36";
+              sha256_unsigned = "41ea87c19eaacc1efa264e7c1f51a47afb6aaaa8ec32c13b7e2dcfe64e875f36";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v1-squashfs-sysupgrade.bin";
+              sha256 = "1b379039a3900a80e7009f0961e61bd5855c1054388b517d231246874545cec7";
+              sha256_unsigned = "4b915a9fca81af0adfda8b8ca14686d9ced6bf9636c85e277b89211497e61869";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v1-squashfs-factory.img";
+              sha256 = "c02380f90c840889ccfafc26a7f2843718fba647123c120969f2b13e702bca25";
+              sha256_unsigned = "c02380f90c840889ccfafc26a7f2843718fba647123c120969f2b13e702bca25";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndrmac-v1"
+            "wndr3700"
+          ];
+          titles = [
+            {
+              model = "WNDRMAC";
+              variant = "v1";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndrmac-v2 = {
+          device_packages = [
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-leds-reset"
+            "kmod-owl-loader"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v2-squashfs-factory.img";
+              sha256 = "c4b41480fd08c5bda05b7accd8b425bebefb377013d3e3a03e5813600ce54e67";
+              sha256_unsigned = "c4b41480fd08c5bda05b7accd8b425bebefb377013d3e3a03e5813600ce54e67";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v2-initramfs-kernel.bin";
+              sha256 = "52e4d34f7c450852bd8adeaebd7ae9df3b5b9fff6c25c7c4d16a0b97a132d7a5";
+              sha256_unsigned = "52e4d34f7c450852bd8adeaebd7ae9df3b5b9fff6c25c7c4d16a0b97a132d7a5";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wndrmac-v2-squashfs-sysupgrade.bin";
+              sha256 = "33915debf309d4a324f99409e4f6b9eb1e99143a32306ecf21debc6afdb9c97f";
+              sha256_unsigned = "c0fb84a6b9445022a2f9ae2468c9c62ae7103120a1e38dc49ab909ab54e95634";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndrmac-v2"
+            "wndr3700"
+          ];
+          titles = [
+            {
+              model = "WNDRMAC";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wnr2200-16m = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-16m-squashfs-sysupgrade.bin";
+              sha256 = "181774b33029e0c8dcc9eee9e6375e4562bb8df81b17493dad4205efe60c95ee";
+              sha256_unsigned = "3bb1d11370da0882a6aacd78d39ff3e10d90badce99b15760f2686555a288c89";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-16m-squashfs-factory.img";
+              sha256 = "0c052b473efbfc3fb9259a35174f986d3e46489c1d6d8b9002a2f44b4c06f025";
+              sha256_unsigned = "0c052b473efbfc3fb9259a35174f986d3e46489c1d6d8b9002a2f44b4c06f025";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-16m-initramfs-kernel.bin";
+              sha256 = "92df8ee0be508f97c7e6bf12f90c657bb8b6dd75e41f01b297e68481c58ae4ed";
+              sha256_unsigned = "92df8ee0be508f97c7e6bf12f90c657bb8b6dd75e41f01b297e68481c58ae4ed";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,wnr2200-16m"
+          ];
+          titles = [
+            {
+              model = "WNR2200";
+              variant = "16M";
+              vendor = "NETGEAR";
+            }
+            {
+              model = "WNR2200";
+              variant = "CN/RU";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wnr2200-8m = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-8m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-8m-squashfs-factory-NA.img";
+              sha256 = "d9ee8498a65eaa296c5d639fd240cfe8632ed779b45638ad5c886701633c4f1c";
+              sha256_unsigned = "d9ee8498a65eaa296c5d639fd240cfe8632ed779b45638ad5c886701633c4f1c";
+              type = "factory-NA";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-8m-squashfs-factory.img";
+              sha256 = "4b2a27ae66b7c4e80aad9c9abfa2149258e7d6afac06b6671d1c3348dfc48737";
+              sha256_unsigned = "4b2a27ae66b7c4e80aad9c9abfa2149258e7d6afac06b6671d1c3348dfc48737";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-8m-initramfs-kernel.bin";
+              sha256 = "6074261d459d7068747ad95eef9b1243edf81a9d9ba9b6a83692431961684dc7";
+              sha256_unsigned = "6074261d459d7068747ad95eef9b1243edf81a9d9ba9b6a83692431961684dc7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-netgear_wnr2200-8m-squashfs-sysupgrade.bin";
+              sha256 = "365762fdf3f38ec7f437f3fb89a10aa7a8e4c9689d6d8cdc7c9104b8a561a9e0";
+              sha256_unsigned = "d1246b38c57370088468206f4d5919405ba392bf4539b0dbf5a7887dde998aad";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wnr2200-8m"
+            "wnr2200"
+          ];
+          titles = [
+            {
+              model = "WNR2200";
+              variant = "8M";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        ocedo_koala = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ocedo_koala";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ocedo_koala-squashfs-sysupgrade.bin";
+              sha256 = "e5c0d85d7214268a563d3bb6cc78e20424cf951f52da8feea52de73494dce040";
+              sha256_unsigned = "4d4a0c8b96580898cec6beafc12a8da2a93ef7d27d0dd536d7323ae4f82b4e55";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ocedo_koala-initramfs-kernel.bin";
+              sha256 = "d3da3b3a36ba3abab76727024c68ea9f94bf4f4b6307d5bc80d7b93db680a56c";
+              sha256_unsigned = "d3da3b3a36ba3abab76727024c68ea9f94bf4f4b6307d5bc80d7b93db680a56c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ocedo,koala"
+            "koala"
+          ];
+          titles = [
+            {
+              model = "Koala";
+              vendor = "Ocedo";
+            }
+          ];
+        };
+        ocedo_raccoon = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ocedo_raccoon";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ocedo_raccoon-squashfs-sysupgrade.bin";
+              sha256 = "f98a61bb011371cd7597ca58d4a173e1a3f59c664f65502160e4aa94c76a1684";
+              sha256_unsigned = "0b363aa583e5c40cf5528b0f769eb9892a5ad5e60deec0b68592708a31f723cb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ocedo_raccoon-initramfs-kernel.bin";
+              sha256 = "ca18b83f03105b061042c0ca0bc2d7b0ed64720608b239204418a65febd10e0d";
+              sha256_unsigned = "ca18b83f03105b061042c0ca0bc2d7b0ed64720608b239204418a65febd10e0d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ocedo,raccoon"
+          ];
+          titles = [
+            {
+              model = "Raccoon";
+              vendor = "Ocedo";
+            }
+          ];
+        };
+        ocedo_ursus = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ocedo_ursus";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ocedo_ursus-initramfs-kernel.bin";
+              sha256 = "42cde9d4dd2c5058f9d3d360b3370b8e08b9e870e603c4f1882fcddecf443ca7";
+              sha256_unsigned = "42cde9d4dd2c5058f9d3d360b3370b8e08b9e870e603c4f1882fcddecf443ca7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ocedo_ursus-squashfs-sysupgrade.bin";
+              sha256 = "b2a2b12dfeac4ba7a506758edf986be02226106b589329fa6a8d96038517e8b9";
+              sha256_unsigned = "1fae1849e9fd9c254d86441cfd6641039df3b60ca255298381d81b99bf269646";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ocedo,ursus"
+          ];
+          titles = [
+            {
+              model = "Ursus";
+              vendor = "Ocedo";
+            }
+          ];
+        };
+        onion_omega = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-onion_omega";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-onion_omega-squashfs-sysupgrade.bin";
+              sha256 = "b6c2a22475c0fdd377df662cd4cd397fdad464178b725886b51ef2ab638126cd";
+              sha256_unsigned = "d86969b0a54db6f4b448bd4db4747ff1d361aa9a462d14ba20c469672ef0e4d9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-onion_omega-initramfs-kernel.bin";
+              sha256 = "ef25050e9deb27ce5263fce3aee324d5de669bc8dab52874359189414d5dc27b";
+              sha256_unsigned = "ef25050e9deb27ce5263fce3aee324d5de669bc8dab52874359189414d5dc27b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-onion_omega-squashfs-factory.bin";
+              sha256 = "af8df73bde8074e6e6700c0fd816a3bb1ce961a6c1329be059ba6ad59e4feb73";
+              sha256_unsigned = "af8df73bde8074e6e6700c0fd816a3bb1ce961a6c1329be059ba6ad59e4feb73";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "onion,omega"
+            "onion-omega"
+          ];
+          titles = [
+            {
+              model = "Omega";
+              vendor = "Onion";
+            }
+          ];
+        };
+        openmesh_a40 = {
+          device_packages = [
+            "uboot-envtools"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_a40";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_a40-initramfs-kernel.bin";
+              sha256 = "be1c2bd48297d18333f2c7ddfbc0ab1d433c7c44878ea0f9bb98b98633f0e202";
+              sha256_unsigned = "be1c2bd48297d18333f2c7ddfbc0ab1d433c7c44878ea0f9bb98b98633f0e202";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_a40-squashfs-sysupgrade.bin";
+              sha256 = "87c662b4b43e498921ce8d28f0873f82880731db3b12b8de83e441459db04930";
+              sha256_unsigned = "f57e1f782035d1ef60b0aa0f2331c0cf858691a8646c11778eafd9e5f8e73452";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,a40"
+            "a40"
+          ];
+          titles = [
+            {
+              model = "A40";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_a60 = {
+          device_packages = [
+            "uboot-envtools"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_a60";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_a60-squashfs-sysupgrade.bin";
+              sha256 = "d4cfbd5127e8fa4df2b81415709c6da52fcd0085443bbbc35cd977b9daa8ee92";
+              sha256_unsigned = "4d96b3e5b4aeb0bfbc59358cdb3dad45ce777f8f3afb2b1f43143b9d343daf13";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_a60-initramfs-kernel.bin";
+              sha256 = "0ba6c72e558fa868c8789951a91af1355f45462e447d77c440224e68181bb95d";
+              sha256_unsigned = "0ba6c72e558fa868c8789951a91af1355f45462e447d77c440224e68181bb95d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,a60"
+            "a60"
+          ];
+          titles = [
+            {
+              model = "A60";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_mr1750-v1 = {
+          device_packages = [
+            "uboot-envtools"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_mr1750-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr1750-v1-initramfs-kernel.bin";
+              sha256 = "4f928900ecaf619e56032b474dab7b61e0363cfee747987c50b5340425879e55";
+              sha256_unsigned = "4f928900ecaf619e56032b474dab7b61e0363cfee747987c50b5340425879e55";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr1750-v1-squashfs-sysupgrade.bin";
+              sha256 = "7d7527cfde170ea7c4a7e3f0bed536d6eceff11abe6e913d1a08b2069d6ef46a";
+              sha256_unsigned = "33e88786b648536b87a3cdf6922974aff9d263eac3b1a8651584380d7cf1a2a3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,mr1750-v1"
+            "mr1750"
+          ];
+          titles = [
+            {
+              model = "MR1750";
+              variant = "v1";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_mr1750-v2 = {
+          device_packages = [
+            "uboot-envtools"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_mr1750-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr1750-v2-squashfs-sysupgrade.bin";
+              sha256 = "7c1064bcef9107fb9247c3217ab8d3a4f2b1a34671a5312f63e11fed74e58f1c";
+              sha256_unsigned = "28e9ea88524b3d9797b7fdeb8a140d24d8550b963dd8a271aae9e294971a26a9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr1750-v2-initramfs-kernel.bin";
+              sha256 = "409fa187be7a2ed05290a8bfdd2c69aaca2420fa66a8e8e9c07dba38a6fe0cd9";
+              sha256_unsigned = "409fa187be7a2ed05290a8bfdd2c69aaca2420fa66a8e8e9c07dba38a6fe0cd9";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,mr1750-v2"
+            "mr1750v2"
+          ];
+          titles = [
+            {
+              model = "MR1750";
+              variant = "v2";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_mr600-v1 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_mr600-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr600-v1-squashfs-sysupgrade.bin";
+              sha256 = "75c852919ba368f8df9aa57fa5fe47d8c29e3f01cbfb6aa290c4e7050c0ceb72";
+              sha256_unsigned = "5bb7f6f4f9c1eac280052ab444fb97227fece524e53246486ce12493f26db3f3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr600-v1-initramfs-kernel.bin";
+              sha256 = "d0301db9c5aa11ec65137d597171f4b4f8add7eb02d519151846329f23074cc0";
+              sha256_unsigned = "d0301db9c5aa11ec65137d597171f4b4f8add7eb02d519151846329f23074cc0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,mr600-v1"
+            "mr600"
+          ];
+          titles = [
+            {
+              model = "MR600";
+              variant = "v1";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_mr600-v2 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_mr600-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr600-v2-squashfs-sysupgrade.bin";
+              sha256 = "e39bab33ac6dc9c3df9da7f776476ead7da1708bc46c20f1c66acf91ef35c76e";
+              sha256_unsigned = "3ce099e9516346fc65431caba3ab57c0991c0c104a8dc46c55cf0b69c94c39a8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr600-v2-initramfs-kernel.bin";
+              sha256 = "08001d14c03f62732a470ecf142b346d80f98780b99ae25e467553ecb510bdfb";
+              sha256_unsigned = "08001d14c03f62732a470ecf142b346d80f98780b99ae25e467553ecb510bdfb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,mr600-v2"
+            "mr600v2"
+          ];
+          titles = [
+            {
+              model = "MR600";
+              variant = "v2";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_mr900-v1 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_mr900-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr900-v1-initramfs-kernel.bin";
+              sha256 = "e941b58478a0244056a7b4f2b3f3e0a9e006f3e2eef4e2f0359611834e1b4363";
+              sha256_unsigned = "e941b58478a0244056a7b4f2b3f3e0a9e006f3e2eef4e2f0359611834e1b4363";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr900-v1-squashfs-sysupgrade.bin";
+              sha256 = "f27e234ef70f7857cb9e1854c586276f2fbf6dd83980266985def5092d24d32b";
+              sha256_unsigned = "71f7397c6ec0f5f8fa6f06a035bdca30f8abaabb3d71dc6c16d3bcb8ce93156d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,mr900-v1"
+            "mr900"
+          ];
+          titles = [
+            {
+              model = "MR900";
+              variant = "v1";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_mr900-v2 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_mr900-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr900-v2-initramfs-kernel.bin";
+              sha256 = "cff611cf8dccde88890b958ebdb604c1da0235c5b227c442568b80cc3e9a94c0";
+              sha256_unsigned = "cff611cf8dccde88890b958ebdb604c1da0235c5b227c442568b80cc3e9a94c0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_mr900-v2-squashfs-sysupgrade.bin";
+              sha256 = "ead77409745df6a0fd3a1df384ccc0ec20e55024d33be82536dfaa57bae8c723";
+              sha256_unsigned = "07627aacf0822014f84c6837f8f649a952fb7421dacf38fc0f8e45daba44fb05";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,mr900-v2"
+            "mr900v2"
+          ];
+          titles = [
+            {
+              model = "MR900";
+              variant = "v2";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-hs-v1 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v1-initramfs-kernel.bin";
+              sha256 = "3675628fc90e1922a40efea6de51f6e627ff92af7899133de913485696f0cb1e";
+              sha256_unsigned = "3675628fc90e1922a40efea6de51f6e627ff92af7899133de913485696f0cb1e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v1-squashfs-sysupgrade.bin";
+              sha256 = "4c6a7a5ba067165cdf4e07ec3602ee814f2b64bfcbe5035c68ed5ac19dff6d73";
+              sha256_unsigned = "9e5a0b84a20c15643cc9f9497ed4a0641041d6fe7aa94c2d9f8c1ab7da6b8c48";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-hs-v1"
+            "om2p-hs"
+          ];
+          titles = [
+            {
+              model = "OM2P-HS";
+              variant = "v1";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-hs-v2 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v2-initramfs-kernel.bin";
+              sha256 = "4b0c56c11d0093ba275557130d65bae59ec63d41ffae50eee05503f5726b5710";
+              sha256_unsigned = "4b0c56c11d0093ba275557130d65bae59ec63d41ffae50eee05503f5726b5710";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v2-squashfs-sysupgrade.bin";
+              sha256 = "b0ccf5afaf9b2447a987c4b288cadb3e9b7cb1171ed9b9e70c9a6a6aac695612";
+              sha256_unsigned = "e99a2b4db4f6e124f601e4678c39e1228f8ae12a88d9c5aee8ce05b26dc45819";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-hs-v2"
+            "om2p-hsv2"
+          ];
+          titles = [
+            {
+              model = "OM2P-HS";
+              variant = "v2";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-hs-v3 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v3-squashfs-sysupgrade.bin";
+              sha256 = "0643e7d5a70091969df48317898a0502dc1c3112564f32f77c3b7ea7e42fb015";
+              sha256_unsigned = "9251e89b929cf94e6a16059f015690787448641e28ce0817530b0ed487f67021";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v3-initramfs-kernel.bin";
+              sha256 = "a387084bbb7781d13a3ac6069d55f178421ba529ad2a31fb69342cd6ac40ee9f";
+              sha256_unsigned = "a387084bbb7781d13a3ac6069d55f178421ba529ad2a31fb69342cd6ac40ee9f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-hs-v3"
+            "om2p-hsv3"
+          ];
+          titles = [
+            {
+              model = "OM2P-HS";
+              variant = "v3";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-hs-v4 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v4";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v4-initramfs-kernel.bin";
+              sha256 = "020aa4c6c50e2005af0c69f67c6fddf611821678a64a7c6f38d22c18f8c1fe54";
+              sha256_unsigned = "020aa4c6c50e2005af0c69f67c6fddf611821678a64a7c6f38d22c18f8c1fe54";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-hs-v4-squashfs-sysupgrade.bin";
+              sha256 = "b36c29c4934927caff673d8f772b34b76e4bc0660658c9db9513e6bee5a73b9d";
+              sha256_unsigned = "b393f4d0c93ba1b87fc7b9598fc4ba3bd21a8ed8a68fb8a551c816dd6a2fda59";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-hs-v4"
+            "om2p-hsv4"
+          ];
+          titles = [
+            {
+              model = "OM2P-HS";
+              variant = "v4";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-lc = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-lc";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-lc-squashfs-sysupgrade.bin";
+              sha256 = "2f1abc59b80a6348642305e909c32514eee4996b30f55bce086aa144938a0591";
+              sha256_unsigned = "17c6b1c6160db9e8de9fe10a26714ee08929aef1d11ab87516bf85468331d47b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-lc-initramfs-kernel.bin";
+              sha256 = "cf33bf3b3d9d1a69522aecbbcc41fb25e52dd1e4d4697427f99875e1b96d69d4";
+              sha256_unsigned = "cf33bf3b3d9d1a69522aecbbcc41fb25e52dd1e4d4697427f99875e1b96d69d4";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-lc"
+            "om2p-lc"
+          ];
+          titles = [
+            {
+              model = "OM2P-LC";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-v1 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v1-squashfs-sysupgrade.bin";
+              sha256 = "2c02d0d8c56cc80af6e57013159671f1025f0bea35eccf7a1c948415eaf82671";
+              sha256_unsigned = "5fe04da2e1befc7abec69c7fb3f970b08867bcb552524d5a30a9f075230381e4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v1-initramfs-kernel.bin";
+              sha256 = "7ed9562e73ee85b8e02213edbfb268eb4efc517278257eb7a3a5f189da5de536";
+              sha256_unsigned = "7ed9562e73ee85b8e02213edbfb268eb4efc517278257eb7a3a5f189da5de536";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-v1"
+            "om2p"
+          ];
+          titles = [
+            {
+              model = "OM2P";
+              variant = "v1";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-v2 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v2-squashfs-sysupgrade.bin";
+              sha256 = "836d5bc616b5bfab76aaf43f4dee3c81b86e2552f7c8488fc69c9e29092b636c";
+              sha256_unsigned = "164f0ff3a571d4e6febc6154a9cdae5cf3debc7501f5f37372628be11d34b431";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v2-initramfs-kernel.bin";
+              sha256 = "9d83c73139c1ef623af52f6e6dcc0a4971f7ce71dab7b2d9bd11259b91e66b89";
+              sha256_unsigned = "9d83c73139c1ef623af52f6e6dcc0a4971f7ce71dab7b2d9bd11259b91e66b89";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-v2"
+            "om2pv2"
+          ];
+          titles = [
+            {
+              model = "OM2P";
+              variant = "v2";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om2p-v4 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v4";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v4-initramfs-kernel.bin";
+              sha256 = "c1cb935f439c9edbd7a1a11aafd64172156023eb167a9bb5901a6784e3fc8ed6";
+              sha256_unsigned = "c1cb935f439c9edbd7a1a11aafd64172156023eb167a9bb5901a6784e3fc8ed6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om2p-v4-squashfs-sysupgrade.bin";
+              sha256 = "d88767438cc4142ca24c1a4608e8f8bdb99aa397bfb403147939d3405fbc9917";
+              sha256_unsigned = "b8954f267fe40f401bd42c4c275039429da1a7be5307ed8c7d16a3bf85df8712";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om2p-v4"
+            "om2pv4"
+          ];
+          titles = [
+            {
+              model = "OM2P";
+              variant = "v4";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om5p = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om5p";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-squashfs-sysupgrade.bin";
+              sha256 = "264dbbe88d9f6b2fea419bc9569adbfea13fa58e9bbc393d771ae6fde7f042cb";
+              sha256_unsigned = "b719d85add83aead97f70f4012f6857c1093f6046ffdea247a681c3805f14c24";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-initramfs-kernel.bin";
+              sha256 = "f8327c7de5ada182026c7f6c6e34f1692b24b81a884aa6ef76d0ddd920dda169";
+              sha256_unsigned = "f8327c7de5ada182026c7f6c6e34f1692b24b81a884aa6ef76d0ddd920dda169";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om5p"
+            "om5p"
+          ];
+          titles = [
+            {
+              model = "OM5P";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om5p-ac-v1 = {
+          device_packages = [
+            "uboot-envtools"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om5p-ac-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-ac-v1-initramfs-kernel.bin";
+              sha256 = "1c124d489870210e69f9f3e7d2108c4357647b17fd05b373f5e54a94390d82e1";
+              sha256_unsigned = "1c124d489870210e69f9f3e7d2108c4357647b17fd05b373f5e54a94390d82e1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-ac-v1-squashfs-sysupgrade.bin";
+              sha256 = "e8dab5bb4742caca61409d02d342459fc4f10e61de2b54156e6785854fa96475";
+              sha256_unsigned = "81458b4bc6118966b930b4e62841a072105f49662bc6d0b0849bc78463f6b58a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om5p-ac-v1"
+            "om5p-ac"
+          ];
+          titles = [
+            {
+              model = "OM5P-AC";
+              variant = "v1";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om5p-ac-v2 = {
+          device_packages = [
+            "uboot-envtools"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om5p-ac-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-ac-v2-initramfs-kernel.bin";
+              sha256 = "bad4de62b87993528864a07f4e25968943b3c6f05a981128b9f43ced9946e7c5";
+              sha256_unsigned = "bad4de62b87993528864a07f4e25968943b3c6f05a981128b9f43ced9946e7c5";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-ac-v2-squashfs-sysupgrade.bin";
+              sha256 = "7bf3b8847fd0cf7707c5025a9472c13a5c19880505dfd297e16de913b3e6d503";
+              sha256_unsigned = "4185a1f5bb22bb59a30d929f2c38acfe0cdb0d8dc8ccc55222c617aa715d5e80";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om5p-ac-v2"
+            "om5p-acv2"
+          ];
+          titles = [
+            {
+              model = "OM5P-AC";
+              variant = "v2";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        openmesh_om5p-an = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-openmesh_om5p-an";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-an-squashfs-sysupgrade.bin";
+              sha256 = "f4f5276460f91a1f88ad3896db631e25f9c75ef9b779f6e0b63351aef693dc1c";
+              sha256_unsigned = "94be8c9c5ac108f5a25e365e7285045d2561e5d53ed6cd4e59b0f3a6cb18097e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-openmesh_om5p-an-initramfs-kernel.bin";
+              sha256 = "75cab85469cb1dd6d66e49742b357f6a76c81fe27fb4e39b087f1bb309378a4c";
+              sha256_unsigned = "75cab85469cb1dd6d66e49742b357f6a76c81fe27fb4e39b087f1bb309378a4c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "openmesh,om5p-an"
+            "om5p-an"
+          ];
+          titles = [
+            {
+              model = "OM5P-AN";
+              vendor = "OpenMesh";
+            }
+          ];
+        };
+        pcs_cap324 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-pcs_cap324";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pcs_cap324-squashfs-sysupgrade.bin";
+              sha256 = "7cae7d5a8657af906b4bdd69ec3fbe05c5d8be5c4597475a517dac083a83a29e";
+              sha256_unsigned = "f2c4ecedd4968194022d661d2c944ebfc1de5aa4d05caae6177f8c43ca8a3d4d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-pcs_cap324-initramfs-kernel.bin";
+              sha256 = "8bf9012686172ef4a03b40b392f8b5b098d51d8e7ce8117075c21d01e801b34a";
+              sha256_unsigned = "8bf9012686172ef4a03b40b392f8b5b098d51d8e7ce8117075c21d01e801b34a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "pcs,cap324"
+            "cap324"
+          ];
+          titles = [
+            {
+              model = "CAP324";
+              vendor = "PowerCloud Systems";
+            }
+          ];
+        };
+        pcs_cr3000 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-pcs_cr3000";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-pcs_cr3000-initramfs-kernel.bin";
+              sha256 = "c9603dfb0990969ca1b4dcd695cb6d8b6c2edd3526c34438fb15692a1f2ba0b8";
+              sha256_unsigned = "c9603dfb0990969ca1b4dcd695cb6d8b6c2edd3526c34438fb15692a1f2ba0b8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pcs_cr3000-squashfs-sysupgrade.bin";
+              sha256 = "27a302a9fb2ba19af5ce362cdf141804d4dfdea817ab980691f0d68e051c6ed6";
+              sha256_unsigned = "bbce369f27d82599c1c0b9fc1bb68dc3b50d53790b1d95001e03a7cd517cf092";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "pcs,cr3000"
+            "cr3000"
+          ];
+          titles = [
+            {
+              model = "CR3000";
+              vendor = "PowerCloud Systems";
+            }
+          ];
+        };
+        pcs_cr5000 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-pcs_cr5000";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pcs_cr5000-squashfs-sysupgrade.bin";
+              sha256 = "8821c63a4e9efc12364e37d20f21caf0b790edb41e7d54304f2892552ae962e7";
+              sha256_unsigned = "307465a0d8b80a41a97ca1e94e8749d48a43f5b0f2c620eed917580196f1ecbe";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-pcs_cr5000-initramfs-kernel.bin";
+              sha256 = "ef51ba6d5dc06fc9fef3d5e40bcac53969f8c9e1935dd0c2e77a6bbe13b9d46d";
+              sha256_unsigned = "ef51ba6d5dc06fc9fef3d5e40bcac53969f8c9e1935dd0c2e77a6bbe13b9d46d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "pcs,cr5000"
+            "cr5000"
+          ];
+          titles = [
+            {
+              model = "CR5000";
+              vendor = "PowerCloud Systems";
+            }
+          ];
+        };
+        phicomm_k2t = {
+          device_packages = [
+            "kmod-leds-reset"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-phicomm_k2t";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-phicomm_k2t-squashfs-sysupgrade.bin";
+              sha256 = "6a8c3f388ea2a6af2d8d81f5dd8167b3554c49eb8e1406aef638923c85a6387c";
+              sha256_unsigned = "6bd98e0e4336209e5f6287793786083f250260fb015f7c943306281354857433";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-phicomm_k2t-initramfs-kernel.bin";
+              sha256 = "5cdb07da81f69f9e2da641642ebaa59d6ec4782e091f4c47b63382a7f0e77afe";
+              sha256_unsigned = "5cdb07da81f69f9e2da641642ebaa59d6ec4782e091f4c47b63382a7f0e77afe";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "phicomm,k2t"
+          ];
+          titles = [
+            {
+              model = "K2T";
+              vendor = "Phicomm";
+            }
+          ];
+        };
+        pisen_ts-d084 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-pisen_ts-d084";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_ts-d084-initramfs-kernel.bin";
+              sha256 = "2e70f1883914920fc3310ed66d892c2160036664873d89131c6d4a26cd69615a";
+              sha256_unsigned = "2e70f1883914920fc3310ed66d892c2160036664873d89131c6d4a26cd69615a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_ts-d084-squashfs-factory.bin";
+              sha256 = "bc8660d9500832b5557811b18a3a51fb4129522362e27b7e0525661dc6a1e40e";
+              sha256_unsigned = "bc8660d9500832b5557811b18a3a51fb4129522362e27b7e0525661dc6a1e40e";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_ts-d084-squashfs-sysupgrade.bin";
+              sha256 = "d5625a32447a5a5a22f0c4f926bdd453633289f7b7401095429521ccf25bf58b";
+              sha256_unsigned = "171bce141bfcfa83be7297c5987361a7bce9f0a9ead49d077dc24263853ed01b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "pisen,ts-d084"
+          ];
+          titles = [
+            {
+              model = "TS-D084";
+              vendor = "PISEN";
+            }
+          ];
+        };
+        pisen_wmb001n = {
+          device_packages = [
+            "kmod-i2c-gpio"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-pisen_wmb001n";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_wmb001n-squashfs-factory.bin";
+              sha256 = "28a2290122768b5021a805d1ddd4c1a28ca9e8ee791ab660a8870c969ead3bcf";
+              sha256_unsigned = "5a199cb0acaca43dbed6a0523c466bdb8aab60967200cb5e5425138b917cc2f3";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_wmb001n-initramfs-kernel.bin";
+              sha256 = "3fafc8917cf205ed759df3adb4a0c5766b91ec22cf24a9a3bb3638cec232443a";
+              sha256_unsigned = "3fafc8917cf205ed759df3adb4a0c5766b91ec22cf24a9a3bb3638cec232443a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_wmb001n-squashfs-sysupgrade.bin";
+              sha256 = "7702b3ef2069442be07f4ab8f4ec7e80b6a23ba4168453ab56bf77efb598ac84";
+              sha256_unsigned = "5a199cb0acaca43dbed6a0523c466bdb8aab60967200cb5e5425138b917cc2f3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "pisen,wmb001n"
+          ];
+          titles = [
+            {
+              model = "WMB001N";
+              vendor = "PISEN";
+            }
+          ];
+        };
+        pisen_wmm003n = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-pisen_wmm003n";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_wmm003n-squashfs-sysupgrade.bin";
+              sha256 = "8653bbe0f5c39945ab7a79414a526fb8867645f48f15ec61645d96a37995641f";
+              sha256_unsigned = "e73892ac02b633b4a7768b54c5e1b9e359aeb2a7cc8319f62d2c81dcb0a824d9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_wmm003n-squashfs-factory.bin";
+              sha256 = "5ef373e9a0f2c73ee429bec983770079f38287ca1573b8ace2b0b1a2b8dbcbe5";
+              sha256_unsigned = "5ef373e9a0f2c73ee429bec983770079f38287ca1573b8ace2b0b1a2b8dbcbe5";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-pisen_wmm003n-initramfs-kernel.bin";
+              sha256 = "96c1fa36bf8299189de66def32fcfb670868664210f57a349aac0a355e1f2354";
+              sha256_unsigned = "96c1fa36bf8299189de66def32fcfb670868664210f57a349aac0a355e1f2354";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "pisen,wmm003n"
+          ];
+          titles = [
+            {
+              model = "Cloud Easy Power (WMM003N)";
+              vendor = "PISEN";
+            }
+          ];
+        };
+        plasmacloud_pa300 = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300-initramfs-kernel.bin";
+              sha256 = "1a726c9b9c56846ed1dac05039a5fea83ca4609f33f50eb7ba89ae847a40582b";
+              sha256_unsigned = "1a726c9b9c56846ed1dac05039a5fea83ca4609f33f50eb7ba89ae847a40582b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300-squashfs-sysupgrade.bin";
+              sha256 = "75069781f13504f183630f33a91c52145282cdbaaafedd035d3c7184e75fc0d4";
+              sha256_unsigned = "c73dbd85490f292359e6ef5875735f031bc503410029966cb579b25f74944fa6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300-squashfs-factory.bin";
+              sha256 = "e409008ef378e23936db42ef2c067fa147b36871f9c22f254faf66f4dd846ab8";
+              sha256_unsigned = "e409008ef378e23936db42ef2c067fa147b36871f9c22f254faf66f4dd846ab8";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "plasmacloud,pa300"
+          ];
+          titles = [
+            {
+              model = "PA300";
+              vendor = "Plasma Cloud";
+            }
+          ];
+        };
+        plasmacloud_pa300e = {
+          device_packages = [
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300e";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300e-squashfs-factory.bin";
+              sha256 = "ecafa993b498b1e5353b475960a2ee1c9d0f881a74c014fb195e702b2ee4d966";
+              sha256_unsigned = "ecafa993b498b1e5353b475960a2ee1c9d0f881a74c014fb195e702b2ee4d966";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300e-squashfs-sysupgrade.bin";
+              sha256 = "244f5f8d4a7cdca2777c5c3edfee210125b6ed9dddc22705401de0ed222915d9";
+              sha256_unsigned = "6f2189e3accc58207c563e1def99ea9f87cc6c778a152fc1b6cb1b5a96903f37";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-plasmacloud_pa300e-initramfs-kernel.bin";
+              sha256 = "cadf77ba3860b117719a41024379afe6d4240d3e3f922428cde273e9264a090b";
+              sha256_unsigned = "cadf77ba3860b117719a41024379afe6d4240d3e3f922428cde273e9264a090b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "plasmacloud,pa300e"
+          ];
+          titles = [
+            {
+              model = "PA300E";
+              vendor = "Plasma Cloud";
+            }
+          ];
+        };
+        qca_ap143-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qca_ap143-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qca_ap143-16m-squashfs-factory.bin";
+              sha256 = "977306c3a64aaef017a61252dde008214c57a5431ae29e23ddf071df9f4fb4b7";
+              sha256_unsigned = "977306c3a64aaef017a61252dde008214c57a5431ae29e23ddf071df9f4fb4b7";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qca_ap143-16m-squashfs-sysupgrade.bin";
+              sha256 = "9b6cbe96607558bc839fc2468d5e9051a95e218fc2929e33e8bf4e779871872a";
+              sha256_unsigned = "e4bfbafca8ffbfd8c9f821e44fb95bf22627c6131727421fd6f66225f69b27f7";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qca_ap143-16m-initramfs-kernel.bin";
+              sha256 = "ebb9443706ae80b6e1682064588e8500b85b5c420a23d52870be8d5da63f8021";
+              sha256_unsigned = "ebb9443706ae80b6e1682064588e8500b85b5c420a23d52870be8d5da63f8021";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qca,ap143-16m"
+            "ap143"
+          ];
+          titles = [
+            {
+              model = "AP143";
+              variant = "(16M)";
+              vendor = "Qualcomm Atheros";
+            }
+          ];
+        };
+        qca_ap143-8m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qca_ap143-8m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qca_ap143-8m-squashfs-factory.bin";
+              sha256 = "3dfa4971c52aad1a23c607989760529639ef618c460ba5b8fd68b397decdffd8";
+              sha256_unsigned = "3dfa4971c52aad1a23c607989760529639ef618c460ba5b8fd68b397decdffd8";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qca_ap143-8m-initramfs-kernel.bin";
+              sha256 = "771c90995cb6d99e1c23e05af5c0036afc370540ba832bdcd5413514c9d5a7f4";
+              sha256_unsigned = "771c90995cb6d99e1c23e05af5c0036afc370540ba832bdcd5413514c9d5a7f4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qca_ap143-8m-squashfs-sysupgrade.bin";
+              sha256 = "31d58dce6325f4e84d6196979e3991f2e62990e3f6d6ab82ebb0fe8716485d82";
+              sha256_unsigned = "b08de79975bde4c40b4d4e729b163a3b62ced75b42fbf48011abe06a97dbce1b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qca,ap143-8m"
+            "ap143"
+          ];
+          titles = [
+            {
+              model = "AP143";
+              variant = "(8M)";
+              vendor = "Qualcomm Atheros";
+            }
+          ];
+        };
+        qihoo_c301 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qihoo_c301";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qihoo_c301-initramfs-kernel.bin";
+              sha256 = "a7db5b336c9809d8d67a2ae789482eb35e092f8b8651a4f34bdc35d02c83a24d";
+              sha256_unsigned = "a7db5b336c9809d8d67a2ae789482eb35e092f8b8651a4f34bdc35d02c83a24d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qihoo_c301-squashfs-factory.bin";
+              sha256 = "3079c2a8297462381cd9ef1208c31b542f308ceabeb4e6d8d99edc6c0c377ec2";
+              sha256_unsigned = "3079c2a8297462381cd9ef1208c31b542f308ceabeb4e6d8d99edc6c0c377ec2";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qihoo_c301-squashfs-sysupgrade.bin";
+              sha256 = "25992b82ab4fbbf8bbecc0530909b6e0322f8f2227d8410180d77df26af5cc25";
+              sha256_unsigned = "dcceb60ea989b8c00c214b42d6109584513ec0792c76212adcf7b10d4f483965";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qihoo,c301"
+            "qihoo-c301"
+          ];
+          titles = [
+            {
+              model = "C301";
+              vendor = "Qihoo";
+            }
+          ];
+        };
+        qxwlan_e1700ac-v2-16m = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e1700ac-v2-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e1700ac-v2-16m-initramfs-kernel.bin";
+              sha256 = "aceec7778ff7ec235ce6a0996d16a315c8a6e34d0bd59e1df823e26d5250fe58";
+              sha256_unsigned = "aceec7778ff7ec235ce6a0996d16a315c8a6e34d0bd59e1df823e26d5250fe58";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e1700ac-v2-16m-squashfs-sysupgrade.bin";
+              sha256 = "df7ac7a316736bdaa186a22bd78f1c7534961c71d247e4bf558dd041daa700a6";
+              sha256_unsigned = "93c0cd3dfba9cf3eadf9352835e4965fb70637182824ada008651f6baac344f6";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e1700ac-v2-16m"
+            "e1700ac-v2"
+          ];
+          titles = [
+            {
+              model = "E1700AC";
+              variant = "v2 (16M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e1700ac-v2-8m = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e1700ac-v2-8m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e1700ac-v2-8m-squashfs-sysupgrade.bin";
+              sha256 = "d38ecf3cef8f970fcf1fb6ea9682ab7528b7d0a83bb33312fa82081c6fe080b5";
+              sha256_unsigned = "ac96b6ef02236f446bce5d40a777a005f093fbbeaa62583b24e5b5f82f40c386";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e1700ac-v2-8m-initramfs-kernel.bin";
+              sha256 = "5b5276cd22f4b6e40e36e5c2f77dc108d67ec1a80a67edef0c12f6d36d1f0b54";
+              sha256_unsigned = "5b5276cd22f4b6e40e36e5c2f77dc108d67ec1a80a67edef0c12f6d36d1f0b54";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e1700ac-v2-8m"
+            "e1700ac-v2"
+          ];
+          titles = [
+            {
+              model = "E1700AC";
+              variant = "v2 (8M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e558-v2-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e558-v2-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e558-v2-16m-squashfs-sysupgrade.bin";
+              sha256 = "597a9e74d70d2f1d5e795922db867559a34a2fd657f1b785552715216a84c1b1";
+              sha256_unsigned = "c68e59b4aeade5016f4029ca1e9420190b39e9b8f5faffc403ec3d277f041265";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e558-v2-16m-initramfs-kernel.bin";
+              sha256 = "ab9ff0083c616dfd13cf3be2245af2324822436973e79d07d20af78df051b103";
+              sha256_unsigned = "ab9ff0083c616dfd13cf3be2245af2324822436973e79d07d20af78df051b103";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e558-v2-16m"
+            "e558-v2"
+          ];
+          titles = [
+            {
+              model = "E558";
+              variant = "v2 (16M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e558-v2-8m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e558-v2-8m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e558-v2-8m-squashfs-sysupgrade.bin";
+              sha256 = "1052fc01c0d06583aa80f8d236df20710e497578147d0153813f1af5d82f50b8";
+              sha256_unsigned = "dabbe1ea68fd6bcd8f7826eb35ae2ac0a13d39510ad8ba6c7ca6a4f46243c000";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e558-v2-8m-initramfs-kernel.bin";
+              sha256 = "7b0a5100b1a6aefed9a30363b4c6d2815d071b4d388b7f2d7c37acbdfe0da9a6";
+              sha256_unsigned = "7b0a5100b1a6aefed9a30363b4c6d2815d071b4d388b7f2d7c37acbdfe0da9a6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e558-v2-8m"
+            "e558-v2"
+          ];
+          titles = [
+            {
+              model = "E558";
+              variant = "v2 (8M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e600g-v2-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e600g-v2-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600g-v2-16m-squashfs-sysupgrade.bin";
+              sha256 = "694d3ad23e0858027a99a8222d5ec4363ebc0366da9d5332d19a78805c80c453";
+              sha256_unsigned = "a216007ecc2957fca618a2f0810aec83b56cd1b9ba59cd26920066b97a57f8c6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600g-v2-16m-initramfs-kernel.bin";
+              sha256 = "21e0235aa43b220c819cb65af0e237305f6049208248e1ba489aa12e0b3f9710";
+              sha256_unsigned = "21e0235aa43b220c819cb65af0e237305f6049208248e1ba489aa12e0b3f9710";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e600g-v2-16m"
+            "e600g-v2"
+          ];
+          titles = [
+            {
+              model = "E600G";
+              variant = "v2 (16M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e600g-v2-8m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e600g-v2-8m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600g-v2-8m-initramfs-kernel.bin";
+              sha256 = "1c4c2f20bb0a1e679051e4da641da4e8715fd56c15abbb3b16e0ea6db5c18814";
+              sha256_unsigned = "1c4c2f20bb0a1e679051e4da641da4e8715fd56c15abbb3b16e0ea6db5c18814";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600g-v2-8m-squashfs-sysupgrade.bin";
+              sha256 = "3e84a3d519612bead46636cf3a719d888af198726da6e58fc5fb93e006bb1fa3";
+              sha256_unsigned = "99ec93f1ab2f7c4b637c249ac3dbf56e56b49baccbbbab9619f945d17e1efa03";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e600g-v2-8m"
+            "e600g-v2"
+          ];
+          titles = [
+            {
+              model = "E600G";
+              variant = "v2 (8M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e600gac-v2-16m = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e600gac-v2-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600gac-v2-16m-initramfs-kernel.bin";
+              sha256 = "e18e700530bab42cf7591fc1b90bb14a65822565b0f99eea311fe44bb9561749";
+              sha256_unsigned = "e18e700530bab42cf7591fc1b90bb14a65822565b0f99eea311fe44bb9561749";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600gac-v2-16m-squashfs-sysupgrade.bin";
+              sha256 = "02c1bb008f96dc7fb490ebe91a274fe2db27644373034bbe7e8c05c0ce696f07";
+              sha256_unsigned = "d70dfe576fcbb0f4419b7ef82555e4ea1d182110c7644c0d1f08c3a3b2a9163c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e600gac-v2-16m"
+            "e600gac-v2"
+          ];
+          titles = [
+            {
+              model = "E600GAC";
+              variant = "v2 (16M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e600gac-v2-8m = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e600gac-v2-8m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600gac-v2-8m-initramfs-kernel.bin";
+              sha256 = "1b7f27c502638fe1004aabe47ddd4384351895769b068609e50afbd5d2a30c0c";
+              sha256_unsigned = "1b7f27c502638fe1004aabe47ddd4384351895769b068609e50afbd5d2a30c0c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e600gac-v2-8m-squashfs-sysupgrade.bin";
+              sha256 = "9b1672ce0cd28a6f261c67ecc6b68fe0cf38679c556091ed52a019cfcfdaf503";
+              sha256_unsigned = "f3500aad00ab036d064a9926a804b4d4e1fb6935667704e0f2b12c900598ee1f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e600gac-v2-8m"
+            "e600gac-v2"
+          ];
+          titles = [
+            {
+              model = "E600GAC";
+              variant = "v2 (8M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e750a-v4-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e750a-v4-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750a-v4-16m-initramfs-kernel.bin";
+              sha256 = "c90e32e7ee84a4217884834dbde9c9bbe369bff81500f696826e9d744649838e";
+              sha256_unsigned = "c90e32e7ee84a4217884834dbde9c9bbe369bff81500f696826e9d744649838e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750a-v4-16m-squashfs-sysupgrade.bin";
+              sha256 = "abf6780b43020e9f54a89bd45cfa6a44a5d641a294fb059a0ca8aca9bf6209db";
+              sha256_unsigned = "c2e864c095f446937232d58cd7da5c5acadabd313ce169db473186b2c6143d68";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e750a-v4-16m"
+            "e750a-v4"
+          ];
+          titles = [
+            {
+              model = "E750A";
+              variant = "v4 (16M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e750a-v4-8m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e750a-v4-8m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750a-v4-8m-squashfs-sysupgrade.bin";
+              sha256 = "24c74d124523c025b6a426cd69133454a3e6730bcc27bdfb480fcd05e4f565cc";
+              sha256_unsigned = "1a0a95d2b72a29f8a16ee3ffd1dfa638ad4f06ac9d46398496340e5d868afb69";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750a-v4-8m-initramfs-kernel.bin";
+              sha256 = "83027365093d84255bb50cc649fa92c353ae2a67b89f2e9e7bb05f783728379a";
+              sha256_unsigned = "83027365093d84255bb50cc649fa92c353ae2a67b89f2e9e7bb05f783728379a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e750a-v4-8m"
+            "e750a-v4"
+          ];
+          titles = [
+            {
+              model = "E750A";
+              variant = "v4 (8M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e750g-v8-16m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e750g-v8-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750g-v8-16m-initramfs-kernel.bin";
+              sha256 = "bd457afb2fb6e53864d909be53d60ac1f608016623b87bb701887cedde0da75a";
+              sha256_unsigned = "bd457afb2fb6e53864d909be53d60ac1f608016623b87bb701887cedde0da75a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750g-v8-16m-squashfs-sysupgrade.bin";
+              sha256 = "a177d816835fa53a355d74d7515dfd69e42222fad13d843917f6bd48f4742cb8";
+              sha256_unsigned = "39fb5f4bc2050477f7d9f9f1fb0e9cc38367becc749ed22553fc6147db61c2a7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e750g-v8-16m"
+            "e750g-v8"
+          ];
+          titles = [
+            {
+              model = "E750G";
+              variant = "v8 (16M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        qxwlan_e750g-v8-8m = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-qxwlan_e750g-v8-8m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750g-v8-8m-squashfs-sysupgrade.bin";
+              sha256 = "e510313f770500bcea25d4f5dcbe121fb1ca10f8197594a0574281ec778a945f";
+              sha256_unsigned = "3a577f13998e064016fb7ddacd496e68018f69b0c57e72ffd74fb4f0e1d84d9a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-qxwlan_e750g-v8-8m-initramfs-kernel.bin";
+              sha256 = "fc566d9502a77122d99ae6e70eae966d70973a4bd71fc49104267c84b3f71602";
+              sha256_unsigned = "fc566d9502a77122d99ae6e70eae966d70973a4bd71fc49104267c84b3f71602";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "qxwlan,e750g-v8-8m"
+            "e750g-v8"
+          ];
+          titles = [
+            {
+              model = "E750G";
+              variant = "v8 (8M)";
+              vendor = "Qxwlan";
+            }
+          ];
+        };
+        rosinson_wr818 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-rosinson_wr818";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-rosinson_wr818-initramfs-kernel.bin";
+              sha256 = "fea1e668fb1c8940eb349650f0c3cab136ffe599735aa0ef9d3b1e9abf1cb46c";
+              sha256_unsigned = "fea1e668fb1c8940eb349650f0c3cab136ffe599735aa0ef9d3b1e9abf1cb46c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-rosinson_wr818-squashfs-sysupgrade.bin";
+              sha256 = "46653b2897e50113d23bc6c546b5a295641f76d4ed2940ae858acccc69a6a4b1";
+              sha256_unsigned = "5ece41733a82fcc2d598f77734120b73927deeec5c1289a9f40d1a1be595e6d3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "rosinson,wr818"
+          ];
+          titles = [
+            {
+              model = "WR818";
+              vendor = "Rosinson";
+            }
+          ];
+        };
+        ruckus_zf7321 = {
+          device_packages = [
+            "-swconfig"
+            "kmod-usb2"
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ruckus_zf7321";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ruckus_zf7321-squashfs-sysupgrade.bin";
+              sha256 = "2d39688d0bd17d48a0a87cde679a8174ce60de94c161f399b1dec7386fa7585d";
+              sha256_unsigned = "61fcb89ce5b542dbd795ec080e8b4b70bb4d4789e2539a0baecc865573763d25";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ruckus_zf7321-initramfs-kernel.bin";
+              sha256 = "94f50616fdcfed98b746bc33d64ad75154b192371b57e4153bda600c9bf4cfef";
+              sha256_unsigned = "94f50616fdcfed98b746bc33d64ad75154b192371b57e4153bda600c9bf4cfef";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ruckus,zf7321"
+          ];
+          titles = [
+            {
+              model = "ZoneFlex 7321[-U]";
+              vendor = "Ruckus";
+            }
+          ];
+        };
+        ruckus_zf7372 = {
+          device_packages = [
+            "-swconfig"
+            "kmod-usb2"
+            "kmod-usb-chipidea2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ruckus_zf7372";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ruckus_zf7372-initramfs-kernel.bin";
+              sha256 = "af180c3b5445280479e061728ffd201df118d3a8ecd4f2a90d4ae25db1f5193f";
+              sha256_unsigned = "af180c3b5445280479e061728ffd201df118d3a8ecd4f2a90d4ae25db1f5193f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ruckus_zf7372-squashfs-sysupgrade.bin";
+              sha256 = "4d53194a3403d19464b810a7c0a9c640292dfccfcfe82a6b329b8c367194a3a0";
+              sha256_unsigned = "5bf505d4113a869eca965799a4cb56c8dd0c4047aaa7814db0cde854c156b008";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ruckus,zf7372"
+          ];
+          titles = [
+            {
+              model = "ZoneFlex 7352/7372[-E/-U]";
+              vendor = "Ruckus";
+            }
+          ];
+        };
+        samsung_wam250 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-samsung_wam250";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-samsung_wam250-squashfs-sysupgrade.bin";
+              sha256 = "7a99fbaefe3d5adabe9e4eebd03bc28c798b2ef8f32b2faee582b7217a1ad066";
+              sha256_unsigned = "5b9a448136378c2cfc740f37b28e6f52b65a2906a31ecc2c0bac89995d2721db";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-samsung_wam250-initramfs-kernel.bin";
+              sha256 = "a94c1181744d1f8bcb2a3678204bc7d40f82253d023c95859b894467c59f170c";
+              sha256_unsigned = "a94c1181744d1f8bcb2a3678204bc7d40f82253d023c95859b894467c59f170c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "samsung,wam250"
+            "wam250"
+          ];
+          titles = [
+            {
+              model = "WAM250";
+              vendor = "Samsung";
+            }
+          ];
+        };
+        siemens_ws-ap3610 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-siemens_ws-ap3610";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-siemens_ws-ap3610-initramfs-kernel.bin";
+              sha256 = "16e66305455da441f3268adf57596a62b831fc41dcac567d96a64d40d08542f0";
+              sha256_unsigned = "16e66305455da441f3268adf57596a62b831fc41dcac567d96a64d40d08542f0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-siemens_ws-ap3610-squashfs-sysupgrade.bin";
+              sha256 = "62613ff80158429314cfa00254d689b3778e1962855bebdd09182a99c3a3cf13";
+              sha256_unsigned = "2fe8defa7ff95933d4f4c174707f33f3e2abbbe0a56696123a933bb288542b73";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "siemens,ws-ap3610"
+          ];
+          titles = [
+            {
+              model = "WS-AP3610";
+              vendor = "Siemens";
+            }
+          ];
+        };
+        sitecom_wlr-7100 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct-smallbuffers"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-sitecom_wlr-7100";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-sitecom_wlr-7100-initramfs-kernel.bin";
+              sha256 = "814063cec9b5acf20eb5c3b560a3d774786bae357178c1b9d8369d3b41bdb173";
+              sha256_unsigned = "814063cec9b5acf20eb5c3b560a3d774786bae357178c1b9d8369d3b41bdb173";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sitecom_wlr-7100-squashfs-factory.dlf";
+              sha256 = "9be658c5bedefdb360900c2fd7df542e4cd2449ff7ca34eacaae3ac1ca528ab6";
+              sha256_unsigned = "9be658c5bedefdb360900c2fd7df542e4cd2449ff7ca34eacaae3ac1ca528ab6";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sitecom_wlr-7100-squashfs-sysupgrade.bin";
+              sha256 = "b95bd5e02161134aefe0a962769c84cfc72e2d36861a0627188ab291f36055ca";
+              sha256_unsigned = "8ba2602dd13620928f23f0eb11b294fd846bdfec02e386aa66eddbfd1f1ea87b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "sitecom,wlr-7100"
+          ];
+          titles = [
+            {
+              model = "WLR-7100";
+              vendor = "Sitecom";
+            }
+          ];
+        };
+        sitecom_wlr-8100 = {
+          device_packages = [
+            "ath10k-firmware-qca988x-ct"
+            "kmod-ath10k-ct"
+            "kmod-usb2"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-sitecom_wlr-8100";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sitecom_wlr-8100-squashfs-sysupgrade.bin";
+              sha256 = "a358abcdad333ed01f15fd9d8e6441ab8ac0b1502aff0e32de3b39ad3ca17387";
+              sha256_unsigned = "1c1e57e2579e5275cb2471bcccf8f153d1dfdf34fc5d726225b600aaa3c027bd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-sitecom_wlr-8100-initramfs-kernel.bin";
+              sha256 = "9fadb800547a91dd21bb52430596fcb8e1b947e18f77970385d98458d20f569c";
+              sha256_unsigned = "9fadb800547a91dd21bb52430596fcb8e1b947e18f77970385d98458d20f569c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sitecom_wlr-8100-squashfs-factory.dlf";
+              sha256 = "e26a6b3e3ec39544da140f155b405a3760965e1a0622c10d586d115160949d64";
+              sha256_unsigned = "e26a6b3e3ec39544da140f155b405a3760965e1a0622c10d586d115160949d64";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "sitecom,wlr-8100"
+            "wlr8100"
+          ];
+          titles = [
+            {
+              model = "WLR-8100";
+              vendor = "Sitecom";
+            }
+            {
+              model = "X8 AC1750";
+              vendor = "Sitecom";
+            }
+          ];
+        };
+        sophos_ap100 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-sophos_ap100";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap100-initramfs-kernel.bin";
+              sha256 = "7290fe415b209cf13f456dd95ae12a287da0abea717a695012d4d605f4420048";
+              sha256_unsigned = "7290fe415b209cf13f456dd95ae12a287da0abea717a695012d4d605f4420048";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap100-squashfs-sysupgrade.bin";
+              sha256 = "2d1e4c9caf30790abeb651c968153d3518675baf3d76bd4ae994663affbb5733";
+              sha256_unsigned = "28aed0205c427c66c983bbcb52672066204a161e6ed14ccd5fe45d07e16fa928";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "sophos,ap100"
+          ];
+          titles = [
+            {
+              model = "AP100";
+              vendor = "Sophos";
+            }
+          ];
+        };
+        sophos_ap100c = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-sophos_ap100c";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap100c-initramfs-kernel.bin";
+              sha256 = "d0097095b92fbc68f7ffef12248c654ac2eff371dde2830fc20244d276c1af93";
+              sha256_unsigned = "d0097095b92fbc68f7ffef12248c654ac2eff371dde2830fc20244d276c1af93";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap100c-squashfs-sysupgrade.bin";
+              sha256 = "17b360ce510d74f703f7f910ea4aa0a858cbe8711918070915b8cf89d50a6d06";
+              sha256_unsigned = "3432bbff8fd9c45093ec63aa6a6b9ad17636051cee970e37fdb80177e35494b6";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "sophos,ap100c"
+          ];
+          titles = [
+            {
+              model = "AP100C";
+              vendor = "Sophos";
+            }
+          ];
+        };
+        sophos_ap55 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-sophos_ap55";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap55-squashfs-sysupgrade.bin";
+              sha256 = "832c5e75a15150d86b1a65fa78ce5b58162847e9ba91f2818865c8696433158a";
+              sha256_unsigned = "800eb6bc51c1cdac70e96b4a7cb0b8cf22bd3a69e7dfc0c7a7ee18d1b8ff5ba3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap55-initramfs-kernel.bin";
+              sha256 = "3f60c382779aa54adef1b649a3179edea0372d2b16e69b6f6ed264185d7ddfaa";
+              sha256_unsigned = "3f60c382779aa54adef1b649a3179edea0372d2b16e69b6f6ed264185d7ddfaa";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "sophos,ap55"
+          ];
+          titles = [
+            {
+              model = "AP55";
+              vendor = "Sophos";
+            }
+          ];
+        };
+        sophos_ap55c = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-sophos_ap55c";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap55c-initramfs-kernel.bin";
+              sha256 = "5a2b1fd703bdc4b88612c0bbc252bc15d4e8e0e326f447e3514a08679cd39774";
+              sha256_unsigned = "5a2b1fd703bdc4b88612c0bbc252bc15d4e8e0e326f447e3514a08679cd39774";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-sophos_ap55c-squashfs-sysupgrade.bin";
+              sha256 = "a5ad62db1d46d5bc1c3160fe5fe2cf110a02fc745e580fbd79d646e090df0528";
+              sha256_unsigned = "13321b48b286d604c654e54d567e14dfd67c4b1ff02cc8b7b263d18180cd4489";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "sophos,ap55c"
+          ];
+          titles = [
+            {
+              model = "AP55C";
+              vendor = "Sophos";
+            }
+          ];
+        };
+        telco_t1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "uqmi"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-telco_t1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-telco_t1-initramfs-kernel.bin";
+              sha256 = "adfa1268c5460ba1dce75d0684eba978d2fe12500a9b026bde17116a0a6da592";
+              sha256_unsigned = "adfa1268c5460ba1dce75d0684eba978d2fe12500a9b026bde17116a0a6da592";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-telco_t1-squashfs-sysupgrade.bin";
+              sha256 = "31ad9e84a0261487ed6ec1892d22078bc09543a5dca85b32fbb44b8be4529780";
+              sha256_unsigned = "7565aabe33597df62e26cc8530e1aadecce90fea8eaa1632ee301f037e8cfefd";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "telco,t1"
+            "telco_electronics,tel-t1"
+          ];
+          titles = [
+            {
+              model = "T1";
+              vendor = "Telco";
+            }
+          ];
+        };
+        teltonika_rut230-v1 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-usb-acm"
+            "kmod-usb-net-qmi-wwan"
+            "uqmi"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-teltonika_rut230-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut230-v1-initramfs-kernel.bin";
+              sha256 = "3cd2ce7f791a62f4842ea5e7f56222d492b92eb0c5667db8c1533d468d34e049";
+              sha256_unsigned = "3cd2ce7f791a62f4842ea5e7f56222d492b92eb0c5667db8c1533d468d34e049";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut230-v1-squashfs-factory.bin";
+              sha256 = "8231a625d4faabdfe64bb5cce6277435561ba544816570e0a8e18f1b6418fb6d";
+              sha256_unsigned = "8231a625d4faabdfe64bb5cce6277435561ba544816570e0a8e18f1b6418fb6d";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut230-v1-squashfs-sysupgrade.bin";
+              sha256 = "2bcabe824b539ec70e0ed3d9b187dc5d7acc7879193475b00349d79c3bdebc8b";
+              sha256_unsigned = "52f27faf573bf2ff016452f4f30537287ab0f8f84ee661843622ba3e632466e7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "teltonika,rut230-v1"
+          ];
+          titles = [
+            {
+              model = "RUT230";
+              variant = "v1";
+              vendor = "Teltonika";
+            }
+          ];
+        };
+        teltonika_rut955 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-acm"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "kmod-hwmon-mcp3021"
+            "uqmi"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-teltonika_rut955";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut955-squashfs-factory.bin";
+              sha256 = "23fe02a85128078c21aaebc8489788bf66d227bf839b1d902f080b296e86410b";
+              sha256_unsigned = "23fe02a85128078c21aaebc8489788bf66d227bf839b1d902f080b296e86410b";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut955-initramfs-kernel.bin";
+              sha256 = "6655af2b5479976b238d9c9c359086894174b376fab79494a3a6fd561c62ee40";
+              sha256_unsigned = "6655af2b5479976b238d9c9c359086894174b376fab79494a3a6fd561c62ee40";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut955-squashfs-sysupgrade.bin";
+              sha256 = "ea705b621d080dbfa72676c7ab121e460ebd2ac055d1930bcd9506730601e8ca";
+              sha256_unsigned = "7eb6f4d38a66887675f204d04d4ba9e5bd331a86a1a1ebdf74aebe234478318c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "teltonika,rut955"
+          ];
+          titles = [
+            {
+              model = "RUT955";
+              vendor = "Teltonika";
+            }
+          ];
+        };
+        teltonika_rut955-h7v3c0 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-acm"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "kmod-hwmon-mcp3021"
+            "uqmi"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-teltonika_rut955-h7v3c0";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut955-h7v3c0-initramfs-kernel.bin";
+              sha256 = "86b7be821469b1b37507d8b33232843b12ba4ea797cb96b824c25b104c736a1b";
+              sha256_unsigned = "86b7be821469b1b37507d8b33232843b12ba4ea797cb96b824c25b104c736a1b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut955-h7v3c0-squashfs-sysupgrade.bin";
+              sha256 = "17aecda1a7c3aee63a34f25dd7efd080e908db5e298503e27e73bdb3d6c0bfb2";
+              sha256_unsigned = "f34ba9c0d53baef2caf261281c142d9f566cad6352894141aaaad5ccfa56051f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-teltonika_rut955-h7v3c0-squashfs-factory.bin";
+              sha256 = "4e530b427d367d2f8d95f84a071c8fd105aee9c2ab707d51735e58e453e3784c";
+              sha256_unsigned = "4e530b427d367d2f8d95f84a071c8fd105aee9c2ab707d51735e58e453e3784c";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "teltonika,rut955-h7v3c0"
+          ];
+          titles = [
+            {
+              model = "RUT955";
+              variant = "H7V3C0";
+              vendor = "Teltonika";
+            }
+          ];
+        };
+        tplink_archer-a7-v5 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-a7-v5";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-a7-v5-initramfs-kernel.bin";
+              sha256 = "0c54a813580b0e69bd2636d4722c66a5b6683e3a4edf6a60faaa952a44e15a5d";
+              sha256_unsigned = "0c54a813580b0e69bd2636d4722c66a5b6683e3a4edf6a60faaa952a44e15a5d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-a7-v5-squashfs-sysupgrade.bin";
+              sha256 = "ccdc2b60d765575a09b88286bc62fe67728167914dd1ca9aa5440c6c31b5b128";
+              sha256_unsigned = "d8cdc7ef7d61ed1d3e363f03cbe3d555b4317f50820d3b3ef6ca4b65a760addd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-a7-v5-squashfs-factory.bin";
+              sha256 = "c06e9707a61b1903ebc442db3fba9046bf1846fd6eb488052eeb760a4a04f5bc";
+              sha256_unsigned = "c06e9707a61b1903ebc442db3fba9046bf1846fd6eb488052eeb760a4a04f5bc";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-a7-v5"
+          ];
+          titles = [
+            {
+              model = "Archer A7";
+              variant = "v5";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-a9-v6 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9984-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-a9-v6";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-a9-v6-initramfs-kernel.bin";
+              sha256 = "b480c42feb76f2e051b4853fadce69bfb625821ad5d5a37a0d4470ec5b0efe0b";
+              sha256_unsigned = "b480c42feb76f2e051b4853fadce69bfb625821ad5d5a37a0d4470ec5b0efe0b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-a9-v6-squashfs-factory.bin";
+              sha256 = "c094166f71e10c2e5513d54bb506bc80f0977334d8b7b1b5626dba727be7c6c2";
+              sha256_unsigned = "c094166f71e10c2e5513d54bb506bc80f0977334d8b7b1b5626dba727be7c6c2";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-a9-v6-squashfs-sysupgrade.bin";
+              sha256 = "08b5103ff5055caa3ce8609465063304262fb160c72fcee36af1bdde3a682091";
+              sha256_unsigned = "5ca9d7fdcfaa0f7c36623a571d8e094b5bc8d1c96bb2e7b6b4a8b612f239ad11";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-a9-v6"
+          ];
+          titles = [
+            {
+              model = "Archer A9";
+              variant = "v6";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c2-v3 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c2-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c2-v3-squashfs-factory.bin";
+              sha256 = "61c99efbb708e447fbb80b6af29717d57d88737b8640f21fcdec9ffa4ef598a1";
+              sha256_unsigned = "61c99efbb708e447fbb80b6af29717d57d88737b8640f21fcdec9ffa4ef598a1";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c2-v3-squashfs-sysupgrade.bin";
+              sha256 = "73dd4bdcb3837bc087f69908de4bd105dc0f2ef54ef5e03750a06e3c08771676";
+              sha256_unsigned = "6c9769e95a0a1cf973e1bb0c5f3729716b022d319a78ecfca05e1367fa0e4e6a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c2-v3-initramfs-kernel.bin";
+              sha256 = "206b4d0e8cff6e1ab2030e4dc9a92ea3ded14f3e5b6fd300a21a73094938ce27";
+              sha256_unsigned = "206b4d0e8cff6e1ab2030e4dc9a92ea3ded14f3e5b6fd300a21a73094938ce27";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c2-v3"
+          ];
+          titles = [
+            {
+              model = "Archer C2";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c25-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c25-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c25-v1-squashfs-sysupgrade.bin";
+              sha256 = "6e2b219908da758f580c5df8ec8aa21ae6932ef6a45f45d9f68a64cb7a3a62b6";
+              sha256_unsigned = "d4bca7dd5f4b3bc1bfe3c8a1717da0324c6965f20ad72cf6a1921a9d566af287";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c25-v1-initramfs-kernel.bin";
+              sha256 = "21f6385f3e870245385f63731e99a5e4564a019fce657f59fc0a49cefaad3a5d";
+              sha256_unsigned = "21f6385f3e870245385f63731e99a5e4564a019fce657f59fc0a49cefaad3a5d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c25-v1-squashfs-factory.bin";
+              sha256 = "157608c1ecf39a9c5cd4c6d2f5a3eb0eb7757ea1e5760ca104bf67c4b49ae5ed";
+              sha256_unsigned = "157608c1ecf39a9c5cd4c6d2f5a3eb0eb7757ea1e5760ca104bf67c4b49ae5ed";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c25-v1"
+            "archer-c25-v1"
+          ];
+          titles = [
+            {
+              model = "Archer C25";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c5-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c5-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c5-v1-squashfs-factory.bin";
+              sha256 = "9d4ea407f17d8f2ef3fcc2232805fa0acce20aa4cdededcb848ad0616737adfb";
+              sha256_unsigned = "9d4ea407f17d8f2ef3fcc2232805fa0acce20aa4cdededcb848ad0616737adfb";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c5-v1-squashfs-sysupgrade.bin";
+              sha256 = "b8f5b139f7f02f435438c4bf949dc89af96de34d9fdc72cd6f75ec49cb21f11a";
+              sha256_unsigned = "a6b61693a6ab666ec110553c54a7eef3aaf13ee742b23316fde1b7d96bc4ee09";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c5-v1-initramfs-kernel.bin";
+              sha256 = "7df989e5cf6be9ada44dd53e35418556b914a485cfe61a37350e0a71bfd17e11";
+              sha256_unsigned = "7df989e5cf6be9ada44dd53e35418556b914a485cfe61a37350e0a71bfd17e11";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c5-v1"
+            "archer-c5"
+          ];
+          titles = [
+            {
+              model = "Archer C5";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c58-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c58-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c58-v1-squashfs-factory.bin";
+              sha256 = "e895bdfc61dacb8c42c9c26a33200f09f0d4cdb27959aeed9e4cb0fe15dd586b";
+              sha256_unsigned = "e895bdfc61dacb8c42c9c26a33200f09f0d4cdb27959aeed9e4cb0fe15dd586b";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c58-v1-squashfs-sysupgrade.bin";
+              sha256 = "0f13b5642bab48f7e8af13a379e9436a08f2f57d5e54cf65dd3b412d4bae369e";
+              sha256_unsigned = "d60d556a6f277ab35e874dde2cc8f82d45a661c2127f73a61b9d9f2947236719";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c58-v1-initramfs-kernel.bin";
+              sha256 = "c412af904c87a15ccda301deae8e1ca334afd507d57a4a17566936f7236f933b";
+              sha256_unsigned = "c412af904c87a15ccda301deae8e1ca334afd507d57a4a17566936f7236f933b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c58-v1"
+            "archer-c58-v1"
+          ];
+          titles = [
+            {
+              model = "Archer C58";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c59-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v1-squashfs-sysupgrade.bin";
+              sha256 = "ceec05ae9ba5cf7748f8e6075592d538288d1dc3318668aa2b4b967069fea18c";
+              sha256_unsigned = "24c685dec149aed4405636ee5bc1ce2d40f3c7bcbd37b17ac41e2ab90b32cdd9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v1-initramfs-kernel.bin";
+              sha256 = "91212eed08462f3f1adf4e24b604753570653edf0901546582991fdc0318154a";
+              sha256_unsigned = "91212eed08462f3f1adf4e24b604753570653edf0901546582991fdc0318154a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v1-squashfs-factory.bin";
+              sha256 = "8dd9d69f8d0df36acb537e3a01e0ba5c2a491da22bf01349e73b258cb9dee87b";
+              sha256_unsigned = "8dd9d69f8d0df36acb537e3a01e0ba5c2a491da22bf01349e73b258cb9dee87b";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c59-v1"
+            "archer-c59-v1"
+          ];
+          titles = [
+            {
+              model = "Archer C59";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c59-v2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v2-squashfs-sysupgrade.bin";
+              sha256 = "d7d40b34e4fc14123f561510b0d12bcb60a5b04c2f4ba8446a651eef88cb331e";
+              sha256_unsigned = "4c9a8e4bc6894afae1e42eb7b818da370d85d1187d76780fdfff9a53598b8011";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v2-initramfs-kernel.bin";
+              sha256 = "a468252a4485bf3c6ffb53cdf3a90371e57b11b7ca8429606bd4d59f9b1a36a4";
+              sha256_unsigned = "a468252a4485bf3c6ffb53cdf3a90371e57b11b7ca8429606bd4d59f9b1a36a4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c59-v2-squashfs-factory.bin";
+              sha256 = "5ebccbe8772a6fffeee0ac1198958c3b3751e02b655e639d2cd5602a16d0a184";
+              sha256_unsigned = "5ebccbe8772a6fffeee0ac1198958c3b3751e02b655e639d2cd5602a16d0a184";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c59-v2"
+            "archer-c59-v2"
+          ];
+          titles = [
+            {
+              model = "Archer C59";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c6-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-squashfs-sysupgrade.bin";
+              sha256 = "083920978eccad0ecf99928d7e0544ffc50e1f481429a8606205d59440d3cc9e";
+              sha256_unsigned = "6e3dad953247cdf7742d4ed3169030dc0727ec17fe158eee00b10b5c58a7ec88";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-initramfs-kernel.bin";
+              sha256 = "ee7083937a82b416c76c2134aa19f23ce9bafb6612ddfd29534175aebff3a4d8";
+              sha256_unsigned = "ee7083937a82b416c76c2134aa19f23ce9bafb6612ddfd29534175aebff3a4d8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-squashfs-factory.bin";
+              sha256 = "de2813f18f704e0862cd82b1de4e7d8ed711c8cdb6323b94e4eae2e80f768cbe";
+              sha256_unsigned = "de2813f18f704e0862cd82b1de4e7d8ed711c8cdb6323b94e4eae2e80f768cbe";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c6-v2"
+          ];
+          titles = [
+            {
+              model = "Archer C6";
+              variant = "v2 (EU/RU/JP)";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c6-v2-us = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-us";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-us-squashfs-sysupgrade.bin";
+              sha256 = "92cae5c39aadd2003a363a3ebc55594a00d80237ea9d6c62e01cf26723c57368";
+              sha256_unsigned = "8a946be115dde22eada2ca99662a0da7fa879dac197028eb2dc65e2c562384aa";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-us-initramfs-kernel.bin";
+              sha256 = "da78c8e30e8ee6c4d347ba7c0ebb58df217e5ff4a2cf3bd484d14aff56eda195";
+              sha256_unsigned = "da78c8e30e8ee6c4d347ba7c0ebb58df217e5ff4a2cf3bd484d14aff56eda195";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c6-v2-us-squashfs-factory.bin";
+              sha256 = "6f21f8d0743fe6a0dc58795c63e5b92fc11e60130c38d6a308fcb7b1bf090b5d";
+              sha256_unsigned = "6f21f8d0743fe6a0dc58795c63e5b92fc11e60130c38d6a308fcb7b1bf090b5d";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c6-v2-us"
+          ];
+          titles = [
+            {
+              model = "Archer C6";
+              variant = "v2 (US)";
+              vendor = "TP-Link";
+            }
+            {
+              model = "Archer A6";
+              variant = "v2 (US/TW)";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c60-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v1-squashfs-sysupgrade.bin";
+              sha256 = "de2f16eaebcd99989b1795955d898c4f015d2020532e213a80e4ece0f3bac3fd";
+              sha256_unsigned = "76f72215d1d38dcd619e9a31033478fcb82d449f3a39224916248b1c7b972370";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v1-squashfs-factory.bin";
+              sha256 = "49fcd6f18aa0dbe361ffa37ba20ab745b7b26d856c9d5f01b750f281d0146d29";
+              sha256_unsigned = "49fcd6f18aa0dbe361ffa37ba20ab745b7b26d856c9d5f01b750f281d0146d29";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v1-initramfs-kernel.bin";
+              sha256 = "322587315d35e0fd38dac9282ab4139685b037e8fbf8e020014a64cfa9394c4b";
+              sha256_unsigned = "322587315d35e0fd38dac9282ab4139685b037e8fbf8e020014a64cfa9394c4b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c60-v1"
+            "archer-c60-v1"
+          ];
+          titles = [
+            {
+              model = "Archer C60";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c60-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v2-initramfs-kernel.bin";
+              sha256 = "1309c06bcd06bd204b205ff4aea6d131c290c19e26d6cc51b06a5ded0935b63a";
+              sha256_unsigned = "1309c06bcd06bd204b205ff4aea6d131c290c19e26d6cc51b06a5ded0935b63a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v2-squashfs-factory.bin";
+              sha256 = "3e8634a46a2a86f20fb17795a712c4b82565af3f7c203fde09a96ebb14418193";
+              sha256_unsigned = "3e8634a46a2a86f20fb17795a712c4b82565af3f7c203fde09a96ebb14418193";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v2-squashfs-sysupgrade.bin";
+              sha256 = "495fcb46cc2e1a1800f33d78e11ec7ac2af49fb95243033d5b11ca38383c939f";
+              sha256_unsigned = "23900b68011cb7d49c1a9c9bfb75ae4fac358241c3eaf857933a30e42b357b7b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c60-v2"
+            "archer-c60-v2"
+          ];
+          titles = [
+            {
+              model = "Archer C60";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c60-v3 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v3-squashfs-factory.bin";
+              sha256 = "edbd1e8fb3640a1327ed97eada0b4de8fa4c989cf0ffb34efefe47553bb2a606";
+              sha256_unsigned = "edbd1e8fb3640a1327ed97eada0b4de8fa4c989cf0ffb34efefe47553bb2a606";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v3-initramfs-kernel.bin";
+              sha256 = "371fff55b7a091d9f6eb4063a28d7b0892207896e38a99347556d592e465fc38";
+              sha256_unsigned = "371fff55b7a091d9f6eb4063a28d7b0892207896e38a99347556d592e465fc38";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c60-v3-squashfs-sysupgrade.bin";
+              sha256 = "8efa5d67df239037ce3a0db05e8c7c1db43eb4d155691fefaacf06fd816ee5c5";
+              sha256_unsigned = "68f113752255431f7610cfcbe6702fadab0b257f2860b01eea72a436b0d0b14c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c60-v3"
+          ];
+          titles = [
+            {
+              model = "Archer C60";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c7-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v1-squashfs-sysupgrade.bin";
+              sha256 = "c7921845960cb90edf72578cdf15529059a86b82e3802aa85bed28c494afb7b3";
+              sha256_unsigned = "b773a91a13aaca17662d894125744585afe611f6ba156ac634f605723e51f81c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v1-initramfs-kernel.bin";
+              sha256 = "6e09cde485063bdde7aa15d8178d6b9528303de2aa43781b011187745c6cc4e7";
+              sha256_unsigned = "6e09cde485063bdde7aa15d8178d6b9528303de2aa43781b011187745c6cc4e7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v1-squashfs-factory.bin";
+              sha256 = "c8876b5eb0b5b182c861606804b64f5fda34505354665c648d22864ed82f0968";
+              sha256_unsigned = "c8876b5eb0b5b182c861606804b64f5fda34505354665c648d22864ed82f0968";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c7-v1"
+            "archer-c7"
+          ];
+          titles = [
+            {
+              model = "Archer C7";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c7-v2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v2-squashfs-factory.bin";
+              sha256 = "25f78ede5adf779288fac30cea8658b8cc81bd8b9fc04dfd5e31da6fa99789df";
+              sha256_unsigned = "25f78ede5adf779288fac30cea8658b8cc81bd8b9fc04dfd5e31da6fa99789df";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v2-squashfs-sysupgrade.bin";
+              sha256 = "0ca4fe70efe20208bc32b7d636f58226e9f1a872d279dc6a3d05b0f99b677713";
+              sha256_unsigned = "241c43ccfd16272db9d36159b17bdaa07991a1cda1e282fc4f0610cfefeed126";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v2-initramfs-kernel.bin";
+              sha256 = "e26837ff6dec3f61ef583efe4edc5d931ac1df9c9654b01e5b1c44483a693495";
+              sha256_unsigned = "e26837ff6dec3f61ef583efe4edc5d931ac1df9c9654b01e5b1c44483a693495";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v2-squashfs-factory-us.bin";
+              sha256 = "1d57eb7d468fb53acc8b328f2016a190566ca56be3252169c6c51694d001e963";
+              sha256_unsigned = "1d57eb7d468fb53acc8b328f2016a190566ca56be3252169c6c51694d001e963";
+              type = "factory-us";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v2-squashfs-factory-eu.bin";
+              sha256 = "2219a84f5cab279c6e1f1c0811c5100a377f18a3d832e8baf5825084a4ec8e1a";
+              sha256_unsigned = "2219a84f5cab279c6e1f1c0811c5100a377f18a3d832e8baf5825084a4ec8e1a";
+              type = "factory-eu";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c7-v2"
+            "archer-c7"
+          ];
+          titles = [
+            {
+              model = "Archer C7";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c7-v4 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v4";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v4-squashfs-sysupgrade.bin";
+              sha256 = "08f64120cffaef55140b42f0cb024fbafe62bfad3aa80bbf6cef89f289e8eef7";
+              sha256_unsigned = "8b029ccda47415c8dc9cdb5936b202438407a4c85502b0d6bba940a915e3946d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v4-initramfs-kernel.bin";
+              sha256 = "6702194bca342e29d4d56d19d3e5810d170bc36b28396b761a7e0b6b5823f5ca";
+              sha256_unsigned = "6702194bca342e29d4d56d19d3e5810d170bc36b28396b761a7e0b6b5823f5ca";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v4-squashfs-factory.bin";
+              sha256 = "418ce728a9524e5697c32c22af902a529db9d61c5a4e97303b0670b848783710";
+              sha256_unsigned = "418ce728a9524e5697c32c22af902a529db9d61c5a4e97303b0670b848783710";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c7-v4"
+            "archer-c7-v4"
+          ];
+          titles = [
+            {
+              model = "Archer C7";
+              variant = "v4";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c7-v5 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v5-squashfs-sysupgrade.bin";
+              sha256 = "7ebdce0efa1671e32b9ff682122f5b50185864283df973a8d7b13444696ea373";
+              sha256_unsigned = "6c31cf7460040f36389d94328525d3dd4bab2049372f0a729a4b299778a3cfaa";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v5-squashfs-factory.bin";
+              sha256 = "eee62f20e3b155eb4251b99dbdb604c05e88ec6ae0cb82c8e65a5c9185a821ec";
+              sha256_unsigned = "eee62f20e3b155eb4251b99dbdb604c05e88ec6ae0cb82c8e65a5c9185a821ec";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-c7-v5-initramfs-kernel.bin";
+              sha256 = "764827efd79ba871164ef09b3f450fe113473adfedf0a38a639ecb598f3ebc37";
+              sha256_unsigned = "764827efd79ba871164ef09b3f450fe113473adfedf0a38a639ecb598f3ebc37";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c7-v5"
+            "archer-c7-v5"
+          ];
+          titles = [
+            {
+              model = "Archer C7";
+              variant = "v5";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-d50-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-d50-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-d50-v1-squashfs-sysupgrade.bin";
+              sha256 = "3b957db415c7936fe489b906f0e499d2d128ddb9f94e7e9ea00a47e623127200";
+              sha256_unsigned = "41a0e63d5a7cb83f9a4713d0ec011d95693e15e669d0486cd71462b8eda28b68";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-d50-v1-initramfs-kernel.bin";
+              sha256 = "e1f3258e672dc8fc9cefb7ccc9dffe62faa38b43ad718b38e2aaf91744f762a3";
+              sha256_unsigned = "e1f3258e672dc8fc9cefb7ccc9dffe62faa38b43ad718b38e2aaf91744f762a3";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-d50-v1"
+          ];
+          titles = [
+            {
+              model = "Archer D50";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-d7-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-d7-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-d7-v1-initramfs-kernel.bin";
+              sha256 = "ae784a086dff61a7a6124c3475d846441969b9fac58d289fe268268aa4d49a42";
+              sha256_unsigned = "ae784a086dff61a7a6124c3475d846441969b9fac58d289fe268268aa4d49a42";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-d7-v1-squashfs-sysupgrade.bin";
+              sha256 = "0b6bedf4f57287bd763c1dd958b33a48e8d5555f76b6da723ed5d1c8b805bbe6";
+              sha256_unsigned = "b0d31b1de59ec5baba18a4445f65a90234a2c763acf8b9a46a1f5627c4a8eebe";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-d7-v1"
+          ];
+          titles = [
+            {
+              model = "Archer D7";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-d7b-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_archer-d7b-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-d7b-v1-initramfs-kernel.bin";
+              sha256 = "11e4602b52ec7c2757aa31af84676f14d2cba7509d50b18c53cd958a30831dc2";
+              sha256_unsigned = "11e4602b52ec7c2757aa31af84676f14d2cba7509d50b18c53cd958a30831dc2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_archer-d7b-v1-squashfs-sysupgrade.bin";
+              sha256 = "2f961ed79b59174051f7e8124f442b442f8456f2f2bb0900f961b407d13d3360";
+              sha256_unsigned = "6c62c1d4a7b802b413b1c78daea000bf0111768851659379b2869d3bc9d349b5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-d7b-v1"
+          ];
+          titles = [
+            {
+              model = "Archer D7b";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe210-v1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v1-squashfs-factory.bin";
+              sha256 = "755ae8e5b8c164d8b953e9bc84345972375bee3cbb86548e00514f5cc70edfec";
+              sha256_unsigned = "755ae8e5b8c164d8b953e9bc84345972375bee3cbb86548e00514f5cc70edfec";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v1-initramfs-kernel.bin";
+              sha256 = "5351f58494cb02ffe350ca032b4e9c4c83ae887960638e72ef22438eda8547ed";
+              sha256_unsigned = "5351f58494cb02ffe350ca032b4e9c4c83ae887960638e72ef22438eda8547ed";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v1-squashfs-sysupgrade.bin";
+              sha256 = "902746590d1fa71f5408990dd1ef1fb1c7f75629eb07daa801bd16118a83e8fd";
+              sha256_unsigned = "522116ad055ca3b6adb9177227b30ffffac324525e46ae5d38ef1c80e8751960";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe210-v1"
+            "cpe210"
+          ];
+          titles = [
+            {
+              model = "CPE210";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe210-v2 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v2-initramfs-kernel.bin";
+              sha256 = "791d35465214eac519a8ac3a27a92f723351642f97ef42d7758ebd4b4621efad";
+              sha256_unsigned = "791d35465214eac519a8ac3a27a92f723351642f97ef42d7758ebd4b4621efad";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v2-squashfs-sysupgrade.bin";
+              sha256 = "7bd3ee2dac144cfc623ada30098b6f35d11a8e726705c1d64c591c76bbea2f71";
+              sha256_unsigned = "3678e88daf958de7755c223d1bee033750867707bf34fff1c07757fd2ec0fada";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v2-squashfs-factory.bin";
+              sha256 = "02d15ef0553e6c8d8343dc47d4c701f84df203a8b4f867167d08066629bd8627";
+              sha256_unsigned = "02d15ef0553e6c8d8343dc47d4c701f84df203a8b4f867167d08066629bd8627";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe210-v2"
+            "cpe210-v2"
+          ];
+          titles = [
+            {
+              model = "CPE210";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe210-v3 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v3-initramfs-kernel.bin";
+              sha256 = "b832b17bfdf43c25492f3f65b71b74f6295ccba711e97c705c3de451d6892669";
+              sha256_unsigned = "b832b17bfdf43c25492f3f65b71b74f6295ccba711e97c705c3de451d6892669";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v3-squashfs-sysupgrade.bin";
+              sha256 = "7b7b18e2574070b2d667026b714ec1614b5544a476025f53d288f33071094ae8";
+              sha256_unsigned = "beed5d51429510b2ace4f5040cc31ba29eac0d1249ca626f63e958297df19534";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe210-v3-squashfs-factory.bin";
+              sha256 = "7fcbf8897a35a971dad72fbbe9b73d1708347fb995595a4bf5fb71c8778c0181";
+              sha256_unsigned = "7fcbf8897a35a971dad72fbbe9b73d1708347fb995595a4bf5fb71c8778c0181";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe210-v3"
+            "cpe210-v3"
+          ];
+          titles = [
+            {
+              model = "CPE210";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe220-v2 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v2-squashfs-sysupgrade.bin";
+              sha256 = "ef59fcf520d7976cc8b3708f1034ee0beecdad8d3894e85c1bcb5c8a77d4d645";
+              sha256_unsigned = "78782fafb8fcab0ab1061835790f2368a8fb127966d866b0b230ba692272eeb3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v2-squashfs-factory.bin";
+              sha256 = "c3a1dab9839348fc9ed665ad13939aa6814973979c9bf35237a4198a1eff4cee";
+              sha256_unsigned = "c3a1dab9839348fc9ed665ad13939aa6814973979c9bf35237a4198a1eff4cee";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v2-initramfs-kernel.bin";
+              sha256 = "45ee8bb41f0b4f1abe671a7cc4637b298f33b551a966ec2ded96eb2c850278a7";
+              sha256_unsigned = "45ee8bb41f0b4f1abe671a7cc4637b298f33b551a966ec2ded96eb2c850278a7";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe220-v2"
+          ];
+          titles = [
+            {
+              model = "CPE220";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe220-v3 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v3-initramfs-kernel.bin";
+              sha256 = "98b05a830efc6fa16706145ca7b6a44c914b6954511b99a9c42addb95a1d78c9";
+              sha256_unsigned = "98b05a830efc6fa16706145ca7b6a44c914b6954511b99a9c42addb95a1d78c9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v3-squashfs-sysupgrade.bin";
+              sha256 = "2b05d1a8b01187d5a325e31ba8dcad01a67af1053ce8f0a9a07096653113d755";
+              sha256_unsigned = "1cb87e1cf5c331e2dbabd24e682da2dc04106f56df494144755bb62eb4040c44";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe220-v3-squashfs-factory.bin";
+              sha256 = "d18b6c813701c3fd77ae7df56ca6161d938b1e014e345cf93e1b542e7b93a71a";
+              sha256_unsigned = "d18b6c813701c3fd77ae7df56ca6161d938b1e014e345cf93e1b542e7b93a71a";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe220-v3"
+          ];
+          titles = [
+            {
+              model = "CPE220";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe510-v1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v1-initramfs-kernel.bin";
+              sha256 = "6218e52c849dbd2513230faa55833fcb6b59f0214f9905dcbcdbfdb3002f2cf6";
+              sha256_unsigned = "6218e52c849dbd2513230faa55833fcb6b59f0214f9905dcbcdbfdb3002f2cf6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v1-squashfs-factory.bin";
+              sha256 = "e90da92fc2ed849a9771a4319421bbba12c89da432d394beb5aad0595c21ec98";
+              sha256_unsigned = "e90da92fc2ed849a9771a4319421bbba12c89da432d394beb5aad0595c21ec98";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v1-squashfs-sysupgrade.bin";
+              sha256 = "cffb20d7676897a93f4577b15b380c7515cf0fea9189bfc80775104e333087a5";
+              sha256_unsigned = "b5c3427e8083284acf9abb9b5575c97d2287276ac0b7bf659ff7a7243a8cdfb9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe510-v1"
+            "cpe510"
+          ];
+          titles = [
+            {
+              model = "CPE510";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe510-v2 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v2-squashfs-sysupgrade.bin";
+              sha256 = "01394f64862ea597e70a6b9b250612c2576f80ab6278bd88ee4c7917a38fb4b9";
+              sha256_unsigned = "eff6cc65b532301f01572c93cb1e1cd8fb8faf6ae5c840b609df788ac8f6ef04";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v2-squashfs-factory.bin";
+              sha256 = "17f1ebca83865d517feba3ff625a5a212925b30fe03cc8faec4b92d6d119c878";
+              sha256_unsigned = "17f1ebca83865d517feba3ff625a5a212925b30fe03cc8faec4b92d6d119c878";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v2-initramfs-kernel.bin";
+              sha256 = "c2225e6fbe6cc68815e21cf1ad2b2be750067dca41bf1d572c435cc88b4d7e99";
+              sha256_unsigned = "c2225e6fbe6cc68815e21cf1ad2b2be750067dca41bf1d572c435cc88b4d7e99";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe510-v2"
+            "cpe510-v2"
+          ];
+          titles = [
+            {
+              model = "CPE510";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe510-v3 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v3-squashfs-sysupgrade.bin";
+              sha256 = "9783ed2c8e38eda01bf105eb91abec2f8697110c2198c48c7913c3e117edd798";
+              sha256_unsigned = "4396995a821cbf5ff9ad9900aed7046977c95846788cfa1cd00db2097857e13b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v3-squashfs-factory.bin";
+              sha256 = "d35f5e3f18efc64b8618e505a39ef698d1a9b53310bed0d5ac37ff8c58710e79";
+              sha256_unsigned = "d35f5e3f18efc64b8618e505a39ef698d1a9b53310bed0d5ac37ff8c58710e79";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe510-v3-initramfs-kernel.bin";
+              sha256 = "0551ba7e8847df04d5f93edb1817ed16a5bf77f6828a9365e03bcb0c6ee050e7";
+              sha256_unsigned = "0551ba7e8847df04d5f93edb1817ed16a5bf77f6828a9365e03bcb0c6ee050e7";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe510-v3"
+          ];
+          titles = [
+            {
+              model = "CPE510";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe610-v1 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v1-initramfs-kernel.bin";
+              sha256 = "7f15e4519818a7d404f7eed98ab39c329d3d84853d0736febbc36866c4167e2e";
+              sha256_unsigned = "7f15e4519818a7d404f7eed98ab39c329d3d84853d0736febbc36866c4167e2e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v1-squashfs-sysupgrade.bin";
+              sha256 = "0454f8b77adc7161a10ade4d96c59d02acfc25ca0a113d8a7a12a21bf57b2179";
+              sha256_unsigned = "311f98836f492d2dc7af5ceedba074a67f00b59877f48ac4264bcc6b3632325e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v1-squashfs-factory.bin";
+              sha256 = "10c27a29c9469782aff55a2d0098de3c4f1f2daea8054ff432f42bd49a458c59";
+              sha256_unsigned = "10c27a29c9469782aff55a2d0098de3c4f1f2daea8054ff432f42bd49a458c59";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe610-v1"
+          ];
+          titles = [
+            {
+              model = "CPE610";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe610-v2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v2-initramfs-kernel.bin";
+              sha256 = "32fcbac8b2603a467763d351eb2eaec5e1338a7132e68e5c9e4375106f4b43b4";
+              sha256_unsigned = "32fcbac8b2603a467763d351eb2eaec5e1338a7132e68e5c9e4375106f4b43b4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v2-squashfs-factory.bin";
+              sha256 = "8bbb719f344a7fb7f324387cfaf8b427bdef906c7857691fd7dabfad3ef9195e";
+              sha256_unsigned = "8bbb719f344a7fb7f324387cfaf8b427bdef906c7857691fd7dabfad3ef9195e";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe610-v2-squashfs-sysupgrade.bin";
+              sha256 = "ea1bca674c79e8e9cb3cf1f780f9d9c2348e7889ebd143ff83ea2be2d3f454a5";
+              sha256_unsigned = "8e8d9961bce4abdf8a8782b191214d24b304be28a43633b6c3e1f04c04b2aef5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe610-v2"
+          ];
+          titles = [
+            {
+              model = "CPE610";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_cpe710-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_cpe710-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe710-v1-initramfs-kernel.bin";
+              sha256 = "e737d7ab161ef3d67d94c1d8492f25e13a81ddb7bd65f46a9a18ad4abe34a25b";
+              sha256_unsigned = "e737d7ab161ef3d67d94c1d8492f25e13a81ddb7bd65f46a9a18ad4abe34a25b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe710-v1-squashfs-factory.bin";
+              sha256 = "8b37ed3456434601ea2dceb0d9093cb810469796ca84db9b0ee8ea382e93c0dd";
+              sha256_unsigned = "8b37ed3456434601ea2dceb0d9093cb810469796ca84db9b0ee8ea382e93c0dd";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_cpe710-v1-squashfs-sysupgrade.bin";
+              sha256 = "7cf5b4f2a8e4a5ac43c0c70f1f3ac33fe6999bae9a256e571f16dddcbcba4ac7";
+              sha256_unsigned = "c435b98d168a66ff9267e5ff7060bad58577309f327a84e6a835604b0ea98d2c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,cpe710-v1"
+          ];
+          titles = [
+            {
+              model = "CPE710";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_deco-m4r-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_deco-m4r-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_deco-m4r-v1-initramfs-kernel.bin";
+              sha256 = "83b35d555522daf5246aacf443790a5a946c73b1e6da2e6bdefdd464b6540458";
+              sha256_unsigned = "83b35d555522daf5246aacf443790a5a946c73b1e6da2e6bdefdd464b6540458";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_deco-m4r-v1-squashfs-sysupgrade.bin";
+              sha256 = "e21162192330ad9de439fed904adbd6bcd82203fcdbafe545936fd644428fd9f";
+              sha256_unsigned = "fe9dc6666a2e483a8d1a9fa5bd59ba60b32d3acc5d2c6d63c832cc7bf60975fd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_deco-m4r-v1-squashfs-factory.bin";
+              sha256 = "50de3518f8897e3f57a831160f66550c9e4f1c85bbaa89044a0bda869aa3e694";
+              sha256_unsigned = "50de3518f8897e3f57a831160f66550c9e4f1c85bbaa89044a0bda869aa3e694";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,deco-m4r-v1"
+            "deco-m4r-v1"
+          ];
+          titles = [
+            {
+              model = "Deco M4R";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap225-outdoor-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_eap225-outdoor-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-outdoor-v1-squashfs-factory.bin";
+              sha256 = "5b088f5f99e475e709ef2f1c6f7d525655cabba47ff4759031079dba21ff6c06";
+              sha256_unsigned = "5b088f5f99e475e709ef2f1c6f7d525655cabba47ff4759031079dba21ff6c06";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-outdoor-v1-initramfs-kernel.bin";
+              sha256 = "6f68b437f23b1aec7d96f1e2656ea2aeeba9fe0018f4ad4196636f9b37bada43";
+              sha256_unsigned = "6f68b437f23b1aec7d96f1e2656ea2aeeba9fe0018f4ad4196636f9b37bada43";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-outdoor-v1-squashfs-sysupgrade.bin";
+              sha256 = "927342aa342411fd87dcdd64b2f353b7d1204ce5dca0ee40e249a8bae6c03554";
+              sha256_unsigned = "abc263e759a516d482a9c610dde657108f655b2d1a25be186fb51f809a24d967";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap225-outdoor-v1"
+          ];
+          titles = [
+            {
+              model = "EAP225-Outdoor";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap225-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_eap225-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-v1-squashfs-factory.bin";
+              sha256 = "72654a129d05ee077a4c9bbacbd3810848d8327bc5549312fcc4dbe66c953919";
+              sha256_unsigned = "72654a129d05ee077a4c9bbacbd3810848d8327bc5549312fcc4dbe66c953919";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-v1-initramfs-kernel.bin";
+              sha256 = "271eb000cf6fcd1ab9a567b75b0fd9e5f680cb02b35c65bdec31cf93936fcd2d";
+              sha256_unsigned = "271eb000cf6fcd1ab9a567b75b0fd9e5f680cb02b35c65bdec31cf93936fcd2d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-v1-squashfs-sysupgrade.bin";
+              sha256 = "3bc8a08c8cd133b069a10247a3d06736983e104795b9a82a655b6e375d4a5c76";
+              sha256_unsigned = "afea9da9c8c993ba19a1f099036b47086e43003cc6146918dbb13b310341d127";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap225-v1"
+          ];
+          titles = [
+            {
+              model = "EAP225";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap225-v3 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_eap225-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-v3-initramfs-kernel.bin";
+              sha256 = "d427e3870031b559858d1ad32ea57881a47458a77194ec4bada610db7cf50a90";
+              sha256_unsigned = "d427e3870031b559858d1ad32ea57881a47458a77194ec4bada610db7cf50a90";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-v3-squashfs-sysupgrade.bin";
+              sha256 = "6986736f19b37808a52ab52a391080ecb9acf7ae69c4b121ab95b7164de94698";
+              sha256_unsigned = "a7126ba4084f1fe8da9e7ebff5187cefb04c1ba93ae2490dda715119fd298c9a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-v3-squashfs-factory.bin";
+              sha256 = "d387ddb4b204bac1ebda3413fccf2af48bbfeff78f551403469c748718d7935a";
+              sha256_unsigned = "d387ddb4b204bac1ebda3413fccf2af48bbfeff78f551403469c748718d7935a";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap225-v3"
+          ];
+          titles = [
+            {
+              model = "EAP225";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap225-wall-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_eap225-wall-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-wall-v2-initramfs-kernel.bin";
+              sha256 = "83134945e33dce7a6ed53170e73be814ad26e2bea8d75819fa4cf449db1e51c8";
+              sha256_unsigned = "83134945e33dce7a6ed53170e73be814ad26e2bea8d75819fa4cf449db1e51c8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-wall-v2-squashfs-sysupgrade.bin";
+              sha256 = "b1af0821e134dd87722f622cd6e6a5e803ad05297091130ae93aac6244fbbaaa";
+              sha256_unsigned = "e17468338a25dcf9de3667ff2aa5cf6bf9cc1ab08c431f0bafb75380df259847";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap225-wall-v2-squashfs-factory.bin";
+              sha256 = "f0093a4c175f37da616f2a61db435b2b2851e1eb44a11da9364bb1a89819e2ad";
+              sha256_unsigned = "f0093a4c175f37da616f2a61db435b2b2851e1eb44a11da9364bb1a89819e2ad";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap225-wall-v2"
+          ];
+          titles = [
+            {
+              model = "EAP225-Wall";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap245-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_eap245-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap245-v1-initramfs-kernel.bin";
+              sha256 = "2a8acf95bcfda013350e922428f0156f0f8ed7c0daceb740e44384cfb5a6d21b";
+              sha256_unsigned = "2a8acf95bcfda013350e922428f0156f0f8ed7c0daceb740e44384cfb5a6d21b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap245-v1-squashfs-factory.bin";
+              sha256 = "acbbfbd85b5d03574d7d653bf8d01da22215b52021b2ae3a83b2c873a2a8703e";
+              sha256_unsigned = "acbbfbd85b5d03574d7d653bf8d01da22215b52021b2ae3a83b2c873a2a8703e";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap245-v1-squashfs-sysupgrade.bin";
+              sha256 = "8063dda468b636779eda5f2c9fc021801d619e602ca646bb9fcac335139bb811";
+              sha256_unsigned = "ca6e40f48f761d2c4d476214be7f9c429113b0afa832161ec6f939e076920a5a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap245-v1"
+          ];
+          titles = [
+            {
+              model = "EAP245";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap245-v3 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca99x0-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_eap245-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap245-v3-initramfs-kernel.bin";
+              sha256 = "7de896c3538e7295355cde86a87261bb20a968f3d7b9379fc17d95b53578284f";
+              sha256_unsigned = "7de896c3538e7295355cde86a87261bb20a968f3d7b9379fc17d95b53578284f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap245-v3-squashfs-sysupgrade.bin";
+              sha256 = "2f9382c0917b27c659d4c7e3733824530afdf943d6d3adc48dcf2ba1fb22e422";
+              sha256_unsigned = "91a36fcfc09d82eea9f01530b025c7b86d626790802c6bf7c37a2de67135cf3d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_eap245-v3-squashfs-factory.bin";
+              sha256 = "8462e10a54a840a29fdaaf48329083a5381fb8b530bf317d0edf6b99d0a913eb";
+              sha256_unsigned = "8462e10a54a840a29fdaaf48329083a5381fb8b530bf317d0edf6b99d0a913eb";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap245-v3"
+          ];
+          titles = [
+            {
+              model = "EAP245";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re350k-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_re350k-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re350k-v1-squashfs-factory.bin";
+              sha256 = "4d72fdcf269d33c3518e95f65f3646d7c64cdfe635d4fc86a3b3944a3bcd0bc1";
+              sha256_unsigned = "4d72fdcf269d33c3518e95f65f3646d7c64cdfe635d4fc86a3b3944a3bcd0bc1";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re350k-v1-squashfs-sysupgrade.bin";
+              sha256 = "d1f345f828d272ab59092eaa0732a4ee7e026e184fa26040bdd32ce2e27c8ec5";
+              sha256_unsigned = "8bca42266b70529c042be5ab72bacf961cc07b91c186844e2a07d87896edb74a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re350k-v1-initramfs-kernel.bin";
+              sha256 = "9ac262c4e05f49c0ca6b00d6dcfb75a54bb3b9a353ae9ea9cee89fabd033b6b0";
+              sha256_unsigned = "9ac262c4e05f49c0ca6b00d6dcfb75a54bb3b9a353ae9ea9cee89fabd033b6b0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re350k-v1"
+          ];
+          titles = [
+            {
+              model = "RE350K";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re355-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_re355-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re355-v1-initramfs-kernel.bin";
+              sha256 = "0e4afa840a8e3bb70a5904e42f44749c1231b183017c4f00ad5773e126bd67f4";
+              sha256_unsigned = "0e4afa840a8e3bb70a5904e42f44749c1231b183017c4f00ad5773e126bd67f4";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re355-v1"
+            "re355"
+          ];
+          titles = [
+            {
+              model = "RE355";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re450-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_re450-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re450-v1-initramfs-kernel.bin";
+              sha256 = "aa0cc4aa457335dbe4757ae9480097c75a735ab8be9c35df8bfad969f78ba7cc";
+              sha256_unsigned = "aa0cc4aa457335dbe4757ae9480097c75a735ab8be9c35df8bfad969f78ba7cc";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re450-v1"
+            "re450"
+          ];
+          titles = [
+            {
+              model = "RE450";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re450-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_re450-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re450-v2-initramfs-kernel.bin";
+              sha256 = "7ee2227579152c2a55495841e617942133e998888e293bff3d62567b6beb635f";
+              sha256_unsigned = "7ee2227579152c2a55495841e617942133e998888e293bff3d62567b6beb635f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re450-v2"
+          ];
+          titles = [
+            {
+              model = "RE450";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re450-v3 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_re450-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re450-v3-squashfs-sysupgrade.bin";
+              sha256 = "cddd6487669a32bc6db9cc1ff26178410714afe0bbc588871e01de470a1a3400";
+              sha256_unsigned = "594911cfd9daffb5ec41ea92d5722c8e4e37eb778189cfc4e2f9a5e641a5edee";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re450-v3-initramfs-kernel.bin";
+              sha256 = "3d3cfdc9e3a57a5c74df52d40523b1ddd197739d2884d56465d87888ce8008b1";
+              sha256_unsigned = "3d3cfdc9e3a57a5c74df52d40523b1ddd197739d2884d56465d87888ce8008b1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re450-v3-squashfs-factory.bin";
+              sha256 = "32d3fb573b88426a92d4b7a1ad6ed5a375b1add9a932e3f6d6115d0fbf4ca4c8";
+              sha256_unsigned = "32d3fb573b88426a92d4b7a1ad6ed5a375b1add9a932e3f6d6115d0fbf4ca4c8";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,re450-v3"
+          ];
+          titles = [
+            {
+              model = "RE450";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re455-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_re455-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re455-v1-squashfs-factory.bin";
+              sha256 = "297e173f3c4944ab80ecbf4fc142ae1e7fd9776060468f45624e20a255b99d13";
+              sha256_unsigned = "297e173f3c4944ab80ecbf4fc142ae1e7fd9776060468f45624e20a255b99d13";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re455-v1-initramfs-kernel.bin";
+              sha256 = "202ff721c1f938b2b199001f028b1c9a29d0ab38fea5d35f9db47cc32b1f34d8";
+              sha256_unsigned = "202ff721c1f938b2b199001f028b1c9a29d0ab38fea5d35f9db47cc32b1f34d8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_re455-v1-squashfs-sysupgrade.bin";
+              sha256 = "deb4da408d8e8d68e73eb93fc33acc4008306bfd466b9baaaa95fa6303322063";
+              sha256_unsigned = "518167a0072d5336c0eff472d88990672e3f90579642cd04e0d67f59a6011eee";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,re455-v1"
+          ];
+          titles = [
+            {
+              model = "RE455";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-mr6400-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-net-rndis"
+            "kmod-usb-serial-option"
+            "adb-enablemodem"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-mr6400-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-mr6400-v1-squashfs-sysupgrade.bin";
+              sha256 = "3cf55b9741bd27265c2a675927dc998387d832df8fdcbd675d8a58cb14858713";
+              sha256_unsigned = "dc1c8c3a3921a42b29b7696d6045ecc759b9a973a476aca09bbfe714e48a1974";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-mr6400-v1-squashfs-factory.bin";
+              sha256 = "258a9f824e68e6a3ecbbd9ab5947fd1a648d60b45465e1c3c50e0c572c2e39c5";
+              sha256_unsigned = "258a9f824e68e6a3ecbbd9ab5947fd1a648d60b45465e1c3c50e0c572c2e39c5";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-mr6400-v1-initramfs-kernel.bin";
+              sha256 = "62b51545a4d4419f366f78f47ca45506a8fe5e203ec9291429eda371886fd819";
+              sha256_unsigned = "62b51545a4d4419f366f78f47ca45506a8fe5e203ec9291429eda371886fd819";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-mr6400-v1"
+            "tl-mr6400"
+          ];
+          titles = [
+            {
+              model = "TL-MR6400";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wa1201-v2 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wa1201-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wa1201-v2-initramfs-kernel.bin";
+              sha256 = "347c68f4aa28192aee8d1b1e1edb93706893b98a9e42b5a5c01f8764a5e9ea25";
+              sha256_unsigned = "347c68f4aa28192aee8d1b1e1edb93706893b98a9e42b5a5c01f8764a5e9ea25";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wa1201-v2-squashfs-factory.bin";
+              sha256 = "bf98372c89f68bbfa57085b810d41b972d862abffb0b3899dc5c750837d13593";
+              sha256_unsigned = "bf98372c89f68bbfa57085b810d41b972d862abffb0b3899dc5c750837d13593";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wa1201-v2-squashfs-sysupgrade.bin";
+              sha256 = "b8d2aa78bc23532be24624e9a8353f292bcc5f5c50394a8c97d48e646423b476";
+              sha256_unsigned = "4f905d646fba365fda5c3ac1fb43c520c2a3be1c64428407e2634f4464df7f17";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wa1201-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WA1201";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr3500-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3500-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3500-v1-initramfs-kernel.bin";
+              sha256 = "5bccd4d6c92339aa6e51840adaebc327947d785ab9a3a531cf9a00d1a6541989";
+              sha256_unsigned = "5bccd4d6c92339aa6e51840adaebc327947d785ab9a3a531cf9a00d1a6541989";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3500-v1-squashfs-factory.bin";
+              sha256 = "03e3e8d1f88a38b349b913bd6bd67f1751f14402d16d73fa7c8e81cb96a8dda1";
+              sha256_unsigned = "03e3e8d1f88a38b349b913bd6bd67f1751f14402d16d73fa7c8e81cb96a8dda1";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3500-v1-squashfs-sysupgrade.bin";
+              sha256 = "3317e9835aa91ae17b1b4368c65a89fdf7928cece9ce9b8fd33812daf7dc794b";
+              sha256_unsigned = "eeb5ba446a0f246cd70d8ebb76d6abe8ab25f1952596ad48b280fe08836c111f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr3500-v1"
+            "tl-wdr3500"
+          ];
+          titles = [
+            {
+              model = "TL-WDR3500";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr3600-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3600-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3600-v1-squashfs-factory.bin";
+              sha256 = "4ef812b8f54d8a8b6e2123a3c4682636c3e29803a29ec198928fa6ab459b5730";
+              sha256_unsigned = "4ef812b8f54d8a8b6e2123a3c4682636c3e29803a29ec198928fa6ab459b5730";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3600-v1-initramfs-kernel.bin";
+              sha256 = "09bf09f1bf3f99243c599c1c8a23e7a825f0abcc56f6cefb63f64e6a1832cea9";
+              sha256_unsigned = "09bf09f1bf3f99243c599c1c8a23e7a825f0abcc56f6cefb63f64e6a1832cea9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr3600-v1-squashfs-sysupgrade.bin";
+              sha256 = "ebe55ee5d26cbd26a9a789e3626a24a1ea26075ca697b2df65d950ac4c6c3117";
+              sha256_unsigned = "ece76b1773015dca6561699a422e98728f586d20fef4192c85cb06540de52385";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr3600-v1"
+            "tl-wdr4300"
+          ];
+          titles = [
+            {
+              model = "TL-WDR3600";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr4300-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-initramfs-kernel.bin";
+              sha256 = "3d640b1860cd3ef925ce29f5e02600e505951f729d6f64cd22234a9a9076afe9";
+              sha256_unsigned = "3d640b1860cd3ef925ce29f5e02600e505951f729d6f64cd22234a9a9076afe9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-squashfs-factory.bin";
+              sha256 = "8b7f3b630a646c8c279abf5a5f86b7b9cd8b08561c2cd7bffafaf3a684b377db";
+              sha256_unsigned = "8b7f3b630a646c8c279abf5a5f86b7b9cd8b08561c2cd7bffafaf3a684b377db";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-squashfs-sysupgrade.bin";
+              sha256 = "97d2a69be138c79f170340caf93da30c30c9386a42bd41f09844670af5f7fde5";
+              sha256_unsigned = "3c3902f58197ac37376dcf592befc8ec85c6e9d161a7298de993bf24c58d4f5f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr4300-v1"
+            "tl-wdr4300"
+          ];
+          titles = [
+            {
+              model = "TL-WDR4300";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr4300-v1-il = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-il";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-il-squashfs-sysupgrade.bin";
+              sha256 = "663afb450f41e933494824316c42abb4c627ae90f4c775c3aeaa047c8b6b945e";
+              sha256_unsigned = "cfa62d6fa659f4c2931eb67f2548d6959686366dea549c64c60609e037fab76c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-il-squashfs-factory.bin";
+              sha256 = "05e5c8450ab86399fc8b134ea0d25e76e37f6035e3cd75707820af0325307c35";
+              sha256_unsigned = "05e5c8450ab86399fc8b134ea0d25e76e37f6035e3cd75707820af0325307c35";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4300-v1-il-initramfs-kernel.bin";
+              sha256 = "a2513178695a8a59215247ddae4ab5619f9fa9c1d76ac34c6f1aad9d411ad910";
+              sha256_unsigned = "a2513178695a8a59215247ddae4ab5619f9fa9c1d76ac34c6f1aad9d411ad910";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr4300-v1-il"
+            "tl-wdr4300"
+          ];
+          titles = [
+            {
+              model = "TL-WDR4300";
+              variant = "v1 (IL)";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr4310-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4310-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4310-v1-initramfs-kernel.bin";
+              sha256 = "592eadaeed41dae03c32f2bc335a92cbe7c385bbbb1c794313d18ba30e3363c6";
+              sha256_unsigned = "592eadaeed41dae03c32f2bc335a92cbe7c385bbbb1c794313d18ba30e3363c6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4310-v1-squashfs-sysupgrade.bin";
+              sha256 = "4eba811ca5cfd6ce86585a90952b9115440b94f157117392d07289aada41f4b2";
+              sha256_unsigned = "7882bb6dded86594447629344307228bb3b8ec3a849b4887469c4f32d4f0890f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4310-v1-squashfs-factory.bin";
+              sha256 = "80335628b7a1615962af776e0760364bde236d5b997aabed3db82ac05c1dd1ef";
+              sha256_unsigned = "80335628b7a1615962af776e0760364bde236d5b997aabed3db82ac05c1dd1ef";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr4310-v1"
+            "tl-wdr4300"
+          ];
+          titles = [
+            {
+              model = "TL-WDR4310";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr4900-v2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4900-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4900-v2-squashfs-sysupgrade.bin";
+              sha256 = "b3f23bb547b1ffe8f4a79024b09fe2d538a6f4d9f093308e13aa2cc3b773a06f";
+              sha256_unsigned = "b4d079bf0d3d1d56afc0f80d5fb0fd4b6cca47de0bc01af441282945c7f4028e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4900-v2-squashfs-factory.bin";
+              sha256 = "8b6ff07bafde0ace0bcea310ac006e4ef7aec7437a0b79869e23f167967f69f3";
+              sha256_unsigned = "8b6ff07bafde0ace0bcea310ac006e4ef7aec7437a0b79869e23f167967f69f3";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr4900-v2-initramfs-kernel.bin";
+              sha256 = "d70d1897dd6ef0177a030474e4b07b03a4d66babd777419d8f94bcbf4908a305";
+              sha256_unsigned = "d70d1897dd6ef0177a030474e4b07b03a4d66babd777419d8f94bcbf4908a305";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr4900-v2"
+            "tl-wdr4900-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WDR4900";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wdr7500-v3 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr7500-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr7500-v3-squashfs-sysupgrade.bin";
+              sha256 = "a89775e8df8d5273a40283f2dde5023799b7eb51e2ef0d07a13f29fb5e283293";
+              sha256_unsigned = "34565dc719ee376220f70847aa7eff46d5aa3978d25b3dcb291562105e3c6ab8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr7500-v3-initramfs-kernel.bin";
+              sha256 = "0083cb054a25e97702c5f2d22db9b86ec8068fad064ad3e4095c13a74fcd89f8";
+              sha256_unsigned = "0083cb054a25e97702c5f2d22db9b86ec8068fad064ad3e4095c13a74fcd89f8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wdr7500-v3-squashfs-factory.bin";
+              sha256 = "6dbaf76efee88a7e668449e0f3e27809ebfae63624e023cbacffc4c19db9da1f";
+              sha256_unsigned = "6dbaf76efee88a7e668449e0f3e27809ebfae63624e023cbacffc4c19db9da1f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wdr7500-v3"
+            "archer-c7"
+          ];
+          titles = [
+            {
+              model = "TL-WDR7500";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wpa8630-v1 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wpa8630-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wpa8630-v1-squashfs-sysupgrade.bin";
+              sha256 = "3986998736858299efc4affee766c9d7f28c59332ea0a93680a92152291160d9";
+              sha256_unsigned = "d111b5f4ba29ed6280af6cd43a75c476c2aec4dae34b92657cad996324e6f11b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wpa8630-v1-squashfs-factory.bin";
+              sha256 = "59f79550541638f31b08ad4c2b295a9ce69713f7ea8015c3448a2e5daf1e5822";
+              sha256_unsigned = "59f79550541638f31b08ad4c2b295a9ce69713f7ea8015c3448a2e5daf1e5822";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wpa8630-v1-initramfs-kernel.bin";
+              sha256 = "ec3bb43b70b05c5c083753cec47e00c462007e62363883b7744e92a9b75ec80a";
+              sha256_unsigned = "ec3bb43b70b05c5c083753cec47e00c462007e62363883b7744e92a9b75ec80a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wpa8630-v1"
+            "tl-wpa8630"
+          ];
+          titles = [
+            {
+              model = "TL-WPA8630";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr1043n-v5 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043n-v5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043n-v5-squashfs-sysupgrade.bin";
+              sha256 = "febb8347aeb3c37e7990f0ab75183b8395f0d9fdc29b7df203236607b92da556";
+              sha256_unsigned = "d0e87ec64e5b70d5800e8a618bd5ed29a0e79ddb28b64b313339a55a5b4cff1d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043n-v5-initramfs-kernel.bin";
+              sha256 = "9f81a3259f4ab15f31a1d3130f521780970f8f62d7e934f2644233b94e2129fa";
+              sha256_unsigned = "9f81a3259f4ab15f31a1d3130f521780970f8f62d7e934f2644233b94e2129fa";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043n-v5-squashfs-factory.bin";
+              sha256 = "75aee02d43a53243cb7a49854bf13ec34d805bd7922cb68d55feec1fab587a60";
+              sha256_unsigned = "75aee02d43a53243cb7a49854bf13ec34d805bd7922cb68d55feec1fab587a60";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr1043n-v5"
+            "tl-wr1043n-v5"
+          ];
+          titles = [
+            {
+              model = "TL-WR1043N";
+              variant = "v5";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr1043nd-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v1-squashfs-factory.bin";
+              sha256 = "b2fbbcbdb6dc45e37728b76a56c59a56d01918a7229bca72d66706880e6e883a";
+              sha256_unsigned = "b2fbbcbdb6dc45e37728b76a56c59a56d01918a7229bca72d66706880e6e883a";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v1-squashfs-sysupgrade.bin";
+              sha256 = "4f095632e7b511673757e52c0282842ec2675cfcc50752af3f7b9be479dec956";
+              sha256_unsigned = "4a5f81ec44e9af81081de03531b18f8206afcf18a6c414f0a1eea5baeb59bf72";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v1-initramfs-kernel.bin";
+              sha256 = "4356cb6d32fc82c530f8cd805e820021cf8cc3fb79270cf530412ad0a6345404";
+              sha256_unsigned = "4356cb6d32fc82c530f8cd805e820021cf8cc3fb79270cf530412ad0a6345404";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr1043nd-v1"
+            "tl-wr1043nd"
+          ];
+          titles = [
+            {
+              model = "TL-WR1043N/ND";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr1043nd-v2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v2-squashfs-sysupgrade.bin";
+              sha256 = "11a5e44d6efcf2bf8496f320b37ccd88666742d4ba8c2a5749bf2f235a54413f";
+              sha256_unsigned = "f5df4cdf4c25abb0545ddd0106c24618a33d870182c20328738a3212c5b4c32f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v2-squashfs-factory.bin";
+              sha256 = "bf0443259f8ac4eb9882d3d7bba73f3c1d0dccc343f73f7a47b1cc5246b55220";
+              sha256_unsigned = "bf0443259f8ac4eb9882d3d7bba73f3c1d0dccc343f73f7a47b1cc5246b55220";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v2-initramfs-kernel.bin";
+              sha256 = "db97c3bfd8767fb43c9da83b30f08f316afb02cd62113a3660f36340d64711d7";
+              sha256_unsigned = "db97c3bfd8767fb43c9da83b30f08f316afb02cd62113a3660f36340d64711d7";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr1043nd-v2"
+            "tl-wr1043nd-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WR1043N/ND";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr1043nd-v3 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v3-squashfs-sysupgrade.bin";
+              sha256 = "d37c6839efcec9b9ba2a296eaeb415ea27cd55e239dc46433392d234f1445564";
+              sha256_unsigned = "4bc71cbedd336de91f2fc0cb84ee6dae8fce7fe85edd2c76bacbb613e0e1383e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v3-squashfs-factory.bin";
+              sha256 = "106cbddc792aed1fd94c93c4501e6eedef16693018e695c0192845916461503f";
+              sha256_unsigned = "106cbddc792aed1fd94c93c4501e6eedef16693018e695c0192845916461503f";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v3-initramfs-kernel.bin";
+              sha256 = "4a41e77554889c9d77267b3ccb9a41adb933a5270b2092edb9b60d7047c49204";
+              sha256_unsigned = "4a41e77554889c9d77267b3ccb9a41adb933a5270b2092edb9b60d7047c49204";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr1043nd-v3"
+            "tl-wr1043nd-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WR1043N/ND";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr1043nd-v4 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v4";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v4-squashfs-factory.bin";
+              sha256 = "3aca71886dea11de33e336206fbcd84ce115372af977c588062ae43debf74be7";
+              sha256_unsigned = "3aca71886dea11de33e336206fbcd84ce115372af977c588062ae43debf74be7";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v4-squashfs-sysupgrade.bin";
+              sha256 = "a3bff93dfa2451f42bf5b06fa0ed1a6b4911d893e974ff02877647214952db25";
+              sha256_unsigned = "e9d0a4796ca35c8da6e3fe92212ef60f27fec6b8ecc6a629e4273d0b5a1778cd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1043nd-v4-initramfs-kernel.bin";
+              sha256 = "20e34ea72a4340e6106af52495055efe12f0331fb9876ea6d77e39c8c58b5fce";
+              sha256_unsigned = "20e34ea72a4340e6106af52495055efe12f0331fb9876ea6d77e39c8c58b5fce";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr1043nd-v4"
+            "tl-wr1043nd-v4"
+          ];
+          titles = [
+            {
+              model = "TL-WR1043N/ND";
+              variant = "v4";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr1045nd-v2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1045nd-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1045nd-v2-squashfs-sysupgrade.bin";
+              sha256 = "642943a407f6ea6eec1d2eb5938ce69d09faedca8807af387dbd646156d8787e";
+              sha256_unsigned = "e080ab3ad3233d0dad72e8f1101c4ca3d65eb6f062a0e55daa7728642fc073e6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1045nd-v2-squashfs-factory.bin";
+              sha256 = "2ca5b2bcd0edbd9e17b572c1725ffc3226c230fe907429bb6b2683259d156a10";
+              sha256_unsigned = "2ca5b2bcd0edbd9e17b572c1725ffc3226c230fe907429bb6b2683259d156a10";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr1045nd-v2-initramfs-kernel.bin";
+              sha256 = "b0298c7c2f6f158287b436c36200f7d408434c6024b257e2bdc98d27736cf4e9";
+              sha256_unsigned = "b0298c7c2f6f158287b436c36200f7d408434c6024b257e2bdc98d27736cf4e9";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr1045nd-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WR1045ND";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr2543-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr2543-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr2543-v1-initramfs-kernel.bin";
+              sha256 = "02903d8daf270114a2d608ad433e2452c610add476cab9eb9c98b0d412fcf5db";
+              sha256_unsigned = "02903d8daf270114a2d608ad433e2452c610add476cab9eb9c98b0d412fcf5db";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr2543-v1-squashfs-sysupgrade.bin";
+              sha256 = "6d92be7090d70600f708a4963a14aab4890d6445a6d9082afa3a2f72dce8b802";
+              sha256_unsigned = "64aae072d1ea57a2203de0f65b9618e2d51020199abe089731bcaa6e2b2c0281";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr2543-v1-squashfs-factory.bin";
+              sha256 = "6a9970a19a7f731d58aa76737cf7c4d0396e9a4392907263ddc847729797f8e4";
+              sha256_unsigned = "6a9970a19a7f731d58aa76737cf7c4d0396e9a4392907263ddc847729797f8e4";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr2543-v1"
+            "tl-wr2543n"
+          ];
+          titles = [
+            {
+              model = "TL-WR2543N/ND";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr710n-v1 = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v1-squashfs-sysupgrade.bin";
+              sha256 = "2b5abd8562aa330796dabdc492bb9020699759f91de17b9fdaea5eafa552108a";
+              sha256_unsigned = "8b0ed6edef62fdb858e56a85ca3f7b2561396f290faec047b4c36e6bba9b3a1e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v1-initramfs-kernel.bin";
+              sha256 = "2c2120ae82b870b71e442eb15f02722506201a7fa06a5654cceb028d03f388a0";
+              sha256_unsigned = "2c2120ae82b870b71e442eb15f02722506201a7fa06a5654cceb028d03f388a0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v1-squashfs-factory.bin";
+              sha256 = "2b7151d6533c84b3e40c01c4b0d978b0d834378cd54e5a8cdb5eb396314d3251";
+              sha256_unsigned = "2b7151d6533c84b3e40c01c4b0d978b0d834378cd54e5a8cdb5eb396314d3251";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr710n-v1"
+            "tl-wr710n"
+          ];
+          titles = [
+            {
+              model = "TL-WR710N";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        "tplink_tl-wr710n-v2.1" = {
+          device_packages = [
+            "kmod-usb-chipidea2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v2.1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v2.1-squashfs-sysupgrade.bin";
+              sha256 = "3f83cc3f7ca2cafbb9dcee928566dba7dec4fa0aa9ae7cfeddbf97dd5f92b030";
+              sha256_unsigned = "d0bb0988342dcc1a77e0bc2801b2171f835b951907ea9d17d7c58f6227af58de";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v2.1-squashfs-factory.bin";
+              sha256 = "e5451a444121839989fda757ba8651311d494d7f470ca08e3c7aea507b144de7";
+              sha256_unsigned = "e5451a444121839989fda757ba8651311d494d7f470ca08e3c7aea507b144de7";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr710n-v2.1-initramfs-kernel.bin";
+              sha256 = "4e1d063474e44cb62316b0bca0dedb850df706933f1ab5956cc0dd72a451edc0";
+              sha256_unsigned = "4e1d063474e44cb62316b0bca0dedb850df706933f1ab5956cc0dd72a451edc0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr710n-v2.1"
+            "tl-wr710n"
+          ];
+          titles = [
+            {
+              model = "TL-WR710N";
+              variant = "v2.1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr810n-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v1-initramfs-kernel.bin";
+              sha256 = "0bc25bd446dcc4d97e1d70465d506179b6dd10db2f6e9e32773e4c290b675b4c";
+              sha256_unsigned = "0bc25bd446dcc4d97e1d70465d506179b6dd10db2f6e9e32773e4c290b675b4c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v1-squashfs-factory.bin";
+              sha256 = "1c3795fdc43fab286a6d5f4ed1866ea4e3fb189557261ffe064ba9c45c46a158";
+              sha256_unsigned = "1c3795fdc43fab286a6d5f4ed1866ea4e3fb189557261ffe064ba9c45c46a158";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v1-squashfs-sysupgrade.bin";
+              sha256 = "646ef83e29847a62efd392f764b3d262c287488858c13f0b1cb9f4650b204314";
+              sha256_unsigned = "ed4f703592d9ebc6c58b10eae7cc7742a64fd30150936e69580aed3337a13380";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr810n-v1"
+            "tl-wr810n"
+          ];
+          titles = [
+            {
+              model = "TL-WR810N";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr810n-v2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v2-squashfs-factory.bin";
+              sha256 = "137047121744a952773ff0cc3e7cfe7896d1aac1d32d925380a00bdf214c3398";
+              sha256_unsigned = "137047121744a952773ff0cc3e7cfe7896d1aac1d32d925380a00bdf214c3398";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v2-initramfs-kernel.bin";
+              sha256 = "09bca9f8826b5471ee907f40d67e91b30e1920b0baacca3c26f7545848e922d1";
+              sha256_unsigned = "09bca9f8826b5471ee907f40d67e91b30e1920b0baacca3c26f7545848e922d1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr810n-v2-squashfs-sysupgrade.bin";
+              sha256 = "a96f0df9bc6466d7772b1ffa970ec60f8e74dfaa447a3383963a3fc815000b3a";
+              sha256_unsigned = "0e78fe85b21af74de8fbd42664ed81edbeaddb9114b8e9a1e04d99d808232c5f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr810n-v2"
+            "tl-wr810n-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WR810N";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr841hp-v2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v2-squashfs-sysupgrade.bin";
+              sha256 = "2da5d9d001bda529ff6ed96b2a22e55904698109bd70ba190deed84c5c927c0f";
+              sha256_unsigned = "133b31515fdc42c9508ada03bf306f2657d405b24c1e5b4f9f43671968b2eceb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v2-squashfs-factory.bin";
+              sha256 = "9b27836395bcb5ddf6b8c2eb2b068515141452e347c2e60b430d7ac93882e338";
+              sha256_unsigned = "9b27836395bcb5ddf6b8c2eb2b068515141452e347c2e60b430d7ac93882e338";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v2-initramfs-kernel.bin";
+              sha256 = "e03b0d3bdde4369b9be263c467d4d40948504ceaa93ed2e87f0dfb3c14f90ad6";
+              sha256_unsigned = "e03b0d3bdde4369b9be263c467d4d40948504ceaa93ed2e87f0dfb3c14f90ad6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr841hp-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WR841HP";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr841hp-v3 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v3-initramfs-kernel.bin";
+              sha256 = "7159c980f9423e30b8a387625b2d9bc0139d717f4e3363d99e54da29913faaaf";
+              sha256_unsigned = "7159c980f9423e30b8a387625b2d9bc0139d717f4e3363d99e54da29913faaaf";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v3-squashfs-sysupgrade.bin";
+              sha256 = "cab8bb219309a408f5ac8c01ef3a2d0d5eaca0d268edb0b25d19b70085280ee3";
+              sha256_unsigned = "beb8e966c9473c83603562b9a4897d7ca2cd3406e73912a62e37a6d3e90d30fc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr841hp-v3-squashfs-factory.bin";
+              sha256 = "65791e2e7b7d3822f75096573572729c212ea1a91c834de061b45b6cef873f93";
+              sha256_unsigned = "65791e2e7b7d3822f75096573572729c212ea1a91c834de061b45b6cef873f93";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr841hp-v3"
+          ];
+          titles = [
+            {
+              model = "TL-WR841HP";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr842n-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v1-squashfs-factory.bin";
+              sha256 = "a08f795800dbca6782d5567c4033f976bbf885e014c53e5720273b340281c98e";
+              sha256_unsigned = "a08f795800dbca6782d5567c4033f976bbf885e014c53e5720273b340281c98e";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v1-initramfs-kernel.bin";
+              sha256 = "4704efe746cffd27533780c8d1a1040acd8be2efb66145ecf6f7c0bde1e3d9d8";
+              sha256_unsigned = "4704efe746cffd27533780c8d1a1040acd8be2efb66145ecf6f7c0bde1e3d9d8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v1-squashfs-sysupgrade.bin";
+              sha256 = "0756144a9a87012a4df94b29c304c96507dd4c416ddddefa92d700ef4775983a";
+              sha256_unsigned = "3400ec5bc77887162719693a7fd530990679a5602832c8c98840e4604f5d0de3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr842n-v1"
+            "tl-mr3420"
+          ];
+          titles = [
+            {
+              model = "TL-WR842N/ND";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr842n-v2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v2-initramfs-kernel.bin";
+              sha256 = "ddd53e38feb873a9905e613057858c97ee5393c63ddd82f8378eb75f95a1145f";
+              sha256_unsigned = "ddd53e38feb873a9905e613057858c97ee5393c63ddd82f8378eb75f95a1145f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v2-squashfs-factory.bin";
+              sha256 = "23ac0a61aafb083ee46337f27e7193fc15efa2f1c51ecbeb373e7c5b8f80ef7f";
+              sha256_unsigned = "23ac0a61aafb083ee46337f27e7193fc15efa2f1c51ecbeb373e7c5b8f80ef7f";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v2-squashfs-sysupgrade.bin";
+              sha256 = "be95e04035c28e70325d93ab104c6eb22966a0fec18f96f952c429529aff620f";
+              sha256_unsigned = "c273c54001c26384fb97d135ae03f2ba5213b5b6ea9b5769183d4f900331704c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr842n-v2"
+            "tl-wr842n-v2"
+          ];
+          titles = [
+            {
+              model = "TL-WR842N/ND";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr842n-v3 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v3-squashfs-factory.bin";
+              sha256 = "a12a550af3580a06c2f77b84ea1453b8e415dd8e582f6f9d777be78d0529660a";
+              sha256_unsigned = "a12a550af3580a06c2f77b84ea1453b8e415dd8e582f6f9d777be78d0529660a";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v3-initramfs-kernel.bin";
+              sha256 = "91d9b4c2c5928eacc179b5e4b101f67e3c94ef02ef1a9d3d94353ddc6c37145c";
+              sha256_unsigned = "91d9b4c2c5928eacc179b5e4b101f67e3c94ef02ef1a9d3d94353ddc6c37145c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr842n-v3-squashfs-sysupgrade.bin";
+              sha256 = "f5b14f0a450dd3112193edefe634a0cd7a0630b9be89c5e4a50e84351b7f7408";
+              sha256_unsigned = "2ff49bf88ca90cf8b3eb06ee5fb3d95e12c872d921f4580211391524839f253b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr842n-v3"
+            "tl-wr842n-v3"
+          ];
+          titles = [
+            {
+              model = "TL-WR842N";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr902ac-v1 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca9887-ct"
+            "-swconfig"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr902ac-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr902ac-v1-initramfs-kernel.bin";
+              sha256 = "76538c1d87b5d6e5f57fb11c1a2d3b8dea7e0c110f086446f23b5067104fc8e7";
+              sha256_unsigned = "76538c1d87b5d6e5f57fb11c1a2d3b8dea7e0c110f086446f23b5067104fc8e7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr902ac-v1-squashfs-sysupgrade.bin";
+              sha256 = "eeb4dd6da6b70e355eb8f9609f363c60f31775d65c502e9c3d8c14f17d5412a7";
+              sha256_unsigned = "3129c1b7035bd58b0b23a33da92b82377ecfe999c880f78a0c1c378ee00bccb4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr902ac-v1-squashfs-factory.bin";
+              sha256 = "6f472141c6bee6f8525241c34a269ae0a37677ae2c95cde7901f36bb7117baf9";
+              sha256_unsigned = "6f472141c6bee6f8525241c34a269ae0a37677ae2c95cde7901f36bb7117baf9";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr902ac-v1"
+            "tl-wr902ac-v1"
+          ];
+          titles = [
+            {
+              model = "TL-WR902AC";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wr941hp-v1 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_tl-wr941hp-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr941hp-v1-squashfs-sysupgrade.bin";
+              sha256 = "59041ab1ff4035c022bff6fc220141f0faff4fcfa96e71d459c160b7d6560fe5";
+              sha256_unsigned = "d03df240a759daad153c2c5cf5351b6f9f486030f7ba6e4ca57ffa1119b200a9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr941hp-v1-initramfs-kernel.bin";
+              sha256 = "991d7bf4303769cfe32196a887913fefdb005d972eba03046b49e97cbfaa807e";
+              sha256_unsigned = "991d7bf4303769cfe32196a887913fefdb005d972eba03046b49e97cbfaa807e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_tl-wr941hp-v1-squashfs-factory.bin";
+              sha256 = "190955dbb9de8d05c13461d75ef0ce06d3948f58e19e629875ece20316c150a7";
+              sha256_unsigned = "190955dbb9de8d05c13461d75ef0ce06d3948f58e19e629875ece20316c150a7";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wr941hp-v1"
+          ];
+          titles = [
+            {
+              model = "TL-WR941HP";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_wbs210-v1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v1-initramfs-kernel.bin";
+              sha256 = "886cad15e6d26aeb3f7707b63fe9a608a49aca257a53d48d26405c47524c1531";
+              sha256_unsigned = "886cad15e6d26aeb3f7707b63fe9a608a49aca257a53d48d26405c47524c1531";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v1-squashfs-factory.bin";
+              sha256 = "6642d3ba45064d1957778b1fddd4b91791d97c96620b2df73056d7860554b710";
+              sha256_unsigned = "6642d3ba45064d1957778b1fddd4b91791d97c96620b2df73056d7860554b710";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v1-squashfs-sysupgrade.bin";
+              sha256 = "353ff99b7101f396df2ecd2eba1a7c7aad7c4be3a3e4bc7c6c6d61ae2ad029c4";
+              sha256_unsigned = "02a8f35566403a0841cf27aeae657ed97f00154bd02520051720b31e9f258f91";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,wbs210-v1"
+            "wbs210"
+          ];
+          titles = [
+            {
+              model = "WBS210";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_wbs210-v2 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v2-initramfs-kernel.bin";
+              sha256 = "99765cd346ee2a9f48f7bd2aa96b1c8611ff961d7bae81dabd303e0ba3d90fa1";
+              sha256_unsigned = "99765cd346ee2a9f48f7bd2aa96b1c8611ff961d7bae81dabd303e0ba3d90fa1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v2-squashfs-sysupgrade.bin";
+              sha256 = "abaf7080c0bf7419baa4aae74a059d57b5e2dc30c9736024542b8243aff1e802";
+              sha256_unsigned = "1f2132966b666c430332d1aec064cb98e40ecc5a71055f052b0e568cdf047384";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs210-v2-squashfs-factory.bin";
+              sha256 = "8301266f5ad762bbb02d7fa86a8808cb3033144e2c1a87f6f58203330bb92d26";
+              sha256_unsigned = "8301266f5ad762bbb02d7fa86a8808cb3033144e2c1a87f6f58203330bb92d26";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,wbs210-v2"
+          ];
+          titles = [
+            {
+              model = "WBS210";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_wbs510-v1 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v1-squashfs-sysupgrade.bin";
+              sha256 = "c6d07a0e6a6478173c26303125bcc71fa2a1686a31ff6afe90dd117b653fa29a";
+              sha256_unsigned = "86071dcca4c5e33e4deed20f3d1c80372f8a181d3fed191b1c04ce51ff12feec";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v1-initramfs-kernel.bin";
+              sha256 = "8b9e75c75052a707334677915a7b7b85192afe639806b9bd18a606b9e49e6e05";
+              sha256_unsigned = "8b9e75c75052a707334677915a7b7b85192afe639806b9bd18a606b9e49e6e05";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v1-squashfs-factory.bin";
+              sha256 = "09de89d8b964d2c544de75a535ba961aa2afcf474f79664b6c0a5197764e2447";
+              sha256_unsigned = "09de89d8b964d2c544de75a535ba961aa2afcf474f79664b6c0a5197764e2447";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,wbs510-v1"
+            "wbs510"
+          ];
+          titles = [
+            {
+              model = "WBS510";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_wbs510-v2 = {
+          device_packages = [
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v2-squashfs-sysupgrade.bin";
+              sha256 = "dd845e6521044a53ffe27cf08f3656aa633f5f7d266739c82b722fad24aa7b46";
+              sha256_unsigned = "95ac593ec5c79d8f1fe9d10c7edebec3ddb7a94de0e5c1953a5eaa73d2d9f604";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v2-initramfs-kernel.bin";
+              sha256 = "561d3e4a3eddf10244690e98bf2a00a80a2300d9f9e4dad7967c6d028d029911";
+              sha256_unsigned = "561d3e4a3eddf10244690e98bf2a00a80a2300d9f9e4dad7967c6d028d029911";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-tplink_wbs510-v2-squashfs-factory.bin";
+              sha256 = "330d28b66b4560083de50ebd884e9e5a0d9c2e88f0bfec392c409503657e3f4f";
+              sha256_unsigned = "330d28b66b4560083de50ebd884e9e5a0d9c2e88f0bfec392c409503657e3f4f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,wbs510-v2"
+          ];
+          titles = [
+            {
+              model = "WBS510";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        trendnet_tew-673gru = {
+          device_packages = [
+            "-uboot-envtools"
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "kmod-owl-loader"
+            "kmod-switch-rtl8366s"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-trendnet_tew-673gru";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-trendnet_tew-673gru-squashfs-sysupgrade.bin";
+              sha256 = "6f2ddb9b8fbe25cc14887a9ab22ccbf3eba93a7882746b925dd2a08af6336040";
+              sha256_unsigned = "89b9194d3830dda09041ae592a621c755a1076862ab4c9c58d892e9023829a95";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-trendnet_tew-673gru-squashfs-factory.bin";
+              sha256 = "5532ef0b52c41d8ced38b38cd8ad771499101623506e088501fb2aee1f0f1890";
+              sha256_unsigned = "5532ef0b52c41d8ced38b38cd8ad771499101623506e088501fb2aee1f0f1890";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-trendnet_tew-673gru-initramfs-kernel.bin";
+              sha256 = "ef7bc4a6bd9e884d9184a893289a939f72edb0fbd206b36fcf8d9bad81f2d860";
+              sha256_unsigned = "ef7bc4a6bd9e884d9184a893289a939f72edb0fbd206b36fcf8d9bad81f2d860";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "trendnet,tew-673gru"
+          ];
+          titles = [
+            {
+              model = "TEW-673GRU";
+              variant = "v1.0R";
+              vendor = "Trendnet";
+            }
+          ];
+        };
+        trendnet_tew-823dru = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-trendnet_tew-823dru";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-trendnet_tew-823dru-squashfs-sysupgrade.bin";
+              sha256 = "b71030c2100a7ac0de1d13114ba27e584c39c6979afb6c0c5cd7f025df9161fa";
+              sha256_unsigned = "2744641b0a7ac97459e63c84131e53eeaadeeb67cd72cbc801b810fb5d448f02";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-trendnet_tew-823dru-initramfs-kernel.bin";
+              sha256 = "485c494c78b8bc9aeb1cdb2beb13b850554aa741cc1785824e331ab827dada43";
+              sha256_unsigned = "485c494c78b8bc9aeb1cdb2beb13b850554aa741cc1785824e331ab827dada43";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-trendnet_tew-823dru-squashfs-factory.bin";
+              sha256 = "ba3b8333b521f36a6e68aa8824eefd2cd42b7d0272906eff1099597064a77222";
+              sha256_unsigned = "ba3b8333b521f36a6e68aa8824eefd2cd42b7d0272906eff1099597064a77222";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "trendnet,tew-823dru"
+            "tew-823dru"
+          ];
+          titles = [
+            {
+              model = "TEW-823DRU";
+              variant = "v1.0R";
+              vendor = "Trendnet";
+            }
+          ];
+        };
+        ubnt_aircube-ac = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_aircube-ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_aircube-ac-squashfs-factory.bin";
+              sha256 = "43f28b414d115051437704de57aa20ada84b953a1f42de045329624b36498f9d";
+              sha256_unsigned = "43f28b414d115051437704de57aa20ada84b953a1f42de045329624b36498f9d";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_aircube-ac-initramfs-kernel.bin";
+              sha256 = "122682b83190daa60f98f3fdea0c37d4701469d76f53d318182da543f56b69d0";
+              sha256_unsigned = "122682b83190daa60f98f3fdea0c37d4701469d76f53d318182da543f56b69d0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_aircube-ac-squashfs-sysupgrade.bin";
+              sha256 = "36fdf0e7140d8aeea4f10232da8e01c0a4a70c9f37128f27d694428872462264";
+              sha256_unsigned = "9cde4bf037600f82c294bec2c8c4a0c35490beaee7958ef0a191c36f974bb100";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,aircube-ac"
+          ];
+          titles = [
+            {
+              model = "airCube AC";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_aircube-isp = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_aircube-isp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_aircube-isp-squashfs-sysupgrade.bin";
+              sha256 = "b8a71a7b784351627668c8e288b16235b31e0806908318a82f62c743d8723083";
+              sha256_unsigned = "6ac45d6cf11e2b0dd4bdbe4d4ab93873e74434ad5cd952bacd9c13ed44448a39";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_aircube-isp-squashfs-factory.bin";
+              sha256 = "9ed5aa471ac53a0a1c52a15cabfd89b5735da9ea1d4c199d30993590239f1930";
+              sha256_unsigned = "9ed5aa471ac53a0a1c52a15cabfd89b5735da9ea1d4c199d30993590239f1930";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_aircube-isp-initramfs-kernel.bin";
+              sha256 = "c8d6cb72e5f30928c99a5bdbdae6783909b0da066b87817ff4902c3fbef9e628";
+              sha256_unsigned = "c8d6cb72e5f30928c99a5bdbdae6783909b0da066b87817ff4902c3fbef9e628";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,aircube-isp"
+            "ubnt,acb-isp"
+          ];
+          titles = [
+            {
+              model = "airCube ISP";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_bullet-ac = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_bullet-ac";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_bullet-ac-initramfs-kernel.bin";
+              sha256 = "c7e203b3392a699f1c509ae61c3ad8b2c84b6faf84c53a2e70515239261d0814";
+              sha256_unsigned = "c7e203b3392a699f1c509ae61c3ad8b2c84b6faf84c53a2e70515239261d0814";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_bullet-ac-squashfs-sysupgrade.bin";
+              sha256 = "22d33878a1319592b24e53cc6cf036bdf0b41fd074507e37c3208a263021a1cf";
+              sha256_unsigned = "838082a68732b13ead4d20778cea53a07c7a4306878ae0008094b0a294c4c9e2";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_bullet-ac-squashfs-factory.bin";
+              sha256 = "ccab8a9e28c8c6f1fe53d108ae83c6c1d3c703ece8483e16e8380f240598e93f";
+              sha256_unsigned = "ccab8a9e28c8c6f1fe53d108ae83c6c1d3c703ece8483e16e8380f240598e93f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,bullet-ac"
+          ];
+          titles = [
+            {
+              model = "Bullet AC";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_bullet-m-xw = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_bullet-m-xw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_bullet-m-xw-squashfs-sysupgrade.bin";
+              sha256 = "4fc314be59b35ed682d702e5a8d9ce03914825bf7d6b94e410565389067c9962";
+              sha256_unsigned = "d348006865e3c7f12c495b2ef9cd1165b55ccc64ef7ef1b7d1f86caf7d64a37c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_bullet-m-xw-initramfs-kernel.bin";
+              sha256 = "ec02b4a9af78f4f44d41e24e208680000211e0ef06020fd789569ccb37551ba0";
+              sha256_unsigned = "ec02b4a9af78f4f44d41e24e208680000211e0ef06020fd789569ccb37551ba0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_bullet-m-xw-squashfs-factory.bin";
+              sha256 = "c4e3de8782b417819a4d3dd44411d943522fcc480ae00ace8ac1b465ae25058e";
+              sha256_unsigned = "c4e3de8782b417819a4d3dd44411d943522fcc480ae00ace8ac1b465ae25058e";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,bullet-m-xw"
+            "bullet-m-xw"
+          ];
+          titles = [
+            {
+              model = "Bullet M";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+            {
+              model = "Rocket M";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_edgeswitch-5xp = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ohci"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_edgeswitch-5xp";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_edgeswitch-5xp-initramfs-kernel.bin";
+              sha256 = "584606a50597c173410460618c20ae78ef53736a9654f9d59a03625561423a4e";
+              sha256_unsigned = "584606a50597c173410460618c20ae78ef53736a9654f9d59a03625561423a4e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_edgeswitch-5xp-squashfs-sysupgrade.bin";
+              sha256 = "79c58fb340941f5189cd14224147be66b2cd2a48a8ae02b5a5249e0cfbaf12d9";
+              sha256_unsigned = "48f305286674588195afba387feea158a8171c8c99c412ad2431c49c76b47416";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_edgeswitch-5xp-squashfs-factory.bin";
+              sha256 = "4f69206fdc7c76ceca8b5b032d670f799457bc7f1dc7f547cc8e713f305bc09f";
+              sha256_unsigned = "4f69206fdc7c76ceca8b5b032d670f799457bc7f1dc7f547cc8e713f305bc09f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,edgeswitch-5xp"
+          ];
+          titles = [
+            {
+              model = "EdgeSwitch 5XP";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_lap-120 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_lap-120";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_lap-120-squashfs-factory.bin";
+              sha256 = "9540fd4f0990df4d4df64a802d671f4eb049199546a99f3bf2f767632acf28ee";
+              sha256_unsigned = "9540fd4f0990df4d4df64a802d671f4eb049199546a99f3bf2f767632acf28ee";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_lap-120-initramfs-kernel.bin";
+              sha256 = "c91920d17adde8a59adb03e021db5479708a342f4f357f5572bc9cc4daef7a37";
+              sha256_unsigned = "c91920d17adde8a59adb03e021db5479708a342f4f357f5572bc9cc4daef7a37";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_lap-120-squashfs-sysupgrade.bin";
+              sha256 = "0eab96ccefa1721c4a2388f7c43c82f84da825e03f8f2f5683dd94af756d7116";
+              sha256_unsigned = "6796c13efa7c3f6ab7d8985374fc45011d445336fdb671e0231343d02aa6186f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,lap-120"
+          ];
+          titles = [
+            {
+              model = "LiteAP ac (LAP-120)";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_litebeam-ac-gen2 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_litebeam-ac-gen2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_litebeam-ac-gen2-initramfs-kernel.bin";
+              sha256 = "764292c59c0f6dba073df2e106ce9f77652e684214b78bff470d44ea53c91ef2";
+              sha256_unsigned = "764292c59c0f6dba073df2e106ce9f77652e684214b78bff470d44ea53c91ef2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_litebeam-ac-gen2-squashfs-sysupgrade.bin";
+              sha256 = "6edaaab802fd3ce0730b703c82bf2fb8139a2b7c88509c2b6e88d3a6f8796861";
+              sha256_unsigned = "d81bfbcc829507c8b4c7177c0ab6b3817af9c7ce060955693e83f17e6dc3f2f2";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_litebeam-ac-gen2-squashfs-factory.bin";
+              sha256 = "553edf23b4d7898d3a55f460b316085265e1ff901d5ad06fdcf9eb404a6410ea";
+              sha256_unsigned = "553edf23b4d7898d3a55f460b316085265e1ff901d5ad06fdcf9eb404a6410ea";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,litebeam-ac-gen2"
+          ];
+          titles = [
+            {
+              model = "LiteBeam AC";
+              variant = "Gen2";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanobeam-ac = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-squashfs-factory.bin";
+              sha256 = "bff52dd45ed6a367de5b7d0e127eb2b3e05b0b315cd7e219b94f8e2a44de3345";
+              sha256_unsigned = "bff52dd45ed6a367de5b7d0e127eb2b3e05b0b315cd7e219b94f8e2a44de3345";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-squashfs-sysupgrade.bin";
+              sha256 = "8335529e2475b0ac38e9f09dd6e5af4982a7a16c0cef65413f7837ede7e07096";
+              sha256_unsigned = "05720f8e3b5d5e244dda433f39af0f49d19f4cdab7c28ec6df0ddcae5688201e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-initramfs-kernel.bin";
+              sha256 = "e0527ac6d23b41d344bdc47e07335e18ae2dae0233e13b28573005b1a548dfe3";
+              sha256_unsigned = "e0527ac6d23b41d344bdc47e07335e18ae2dae0233e13b28573005b1a548dfe3";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanobeam-ac"
+          ];
+          titles = [
+            {
+              model = "NanoBeam AC";
+              variant = "Gen1";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanobeam-ac-gen2 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-gen2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-gen2-initramfs-kernel.bin";
+              sha256 = "2ba3259e7ca3ea8400ead0c261ac916a4d7e1bddbae86cf6d8e777ad2088a6b4";
+              sha256_unsigned = "2ba3259e7ca3ea8400ead0c261ac916a4d7e1bddbae86cf6d8e777ad2088a6b4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-gen2-squashfs-factory.bin";
+              sha256 = "0c00a678520331d1e1c98d23cd3ca5c35a6d44c68229bdf9b373e2f49f789c66";
+              sha256_unsigned = "0c00a678520331d1e1c98d23cd3ca5c35a6d44c68229bdf9b373e2f49f789c66";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-gen2-squashfs-sysupgrade.bin";
+              sha256 = "a8515937a66adfe62c994e6754aaa7030e0dd328da403ac62a3e1d838298e0a4";
+              sha256_unsigned = "85ba23b1750d1e78832d0fd2701612af7fc4445135b07a93c0fe1f7155553f84";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanobeam-ac-gen2"
+          ];
+          titles = [
+            {
+              model = "NanoBeam AC";
+              variant = "Gen2";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanobeam-ac-xc = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-xc";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-factory.bin";
+              sha256 = "129c0145c4c0d6ab5aa5f5c372f8d0ab60f8ef7ee48c2a9008d4bd8fc9a476a3";
+              sha256_unsigned = "129c0145c4c0d6ab5aa5f5c372f8d0ab60f8ef7ee48c2a9008d4bd8fc9a476a3";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-xc-squashfs-sysupgrade.bin";
+              sha256 = "ce4b6496eee8caf63046f58b304b86c1c73287f046e85e24f417f048cdfacd2f";
+              sha256_unsigned = "e826611a5cff380bd2c6e8fdfdb753eb8802aa8dc9f409b88ec49dff504e7bf7";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-ac-xc-initramfs-kernel.bin";
+              sha256 = "5d070c23045af3e7dc295110818fecbf7644515af9914f7271b944b9df1d8654";
+              sha256_unsigned = "5d070c23045af3e7dc295110818fecbf7644515af9914f7271b944b9df1d8654";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanobeam-ac-xc"
+          ];
+          titles = [
+            {
+              model = "NanoBeam AC";
+              variant = "Gen1 (XC)";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanobeam-m5-xw = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-m5-xw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-m5-xw-squashfs-factory.bin";
+              sha256 = "5db1969e99246f7b665d7854cf36cea93fa4e494b6733c8e6da4abfb79cdc07c";
+              sha256_unsigned = "5db1969e99246f7b665d7854cf36cea93fa4e494b6733c8e6da4abfb79cdc07c";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-m5-xw-initramfs-kernel.bin";
+              sha256 = "eb4c5cb5f7bef5263c5583e45f5c583044ba64a5c88735344ebc8514672c6c42";
+              sha256_unsigned = "eb4c5cb5f7bef5263c5583e45f5c583044ba64a5c88735344ebc8514672c6c42";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanobeam-m5-xw-squashfs-sysupgrade.bin";
+              sha256 = "53d25ec922023c016498a7cdabf9b91fce510462e023cfe0cf61b8f6824e7c1f";
+              sha256_unsigned = "30cdb1e4125f1d7a0f67b14a3bb5a81970a9895cd425e1cdae0e0ea162e77b44";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanobeam-m5-xw"
+            "loco-m-xw"
+          ];
+          titles = [
+            {
+              model = "NanoBeam M5";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanostation-ac = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-initramfs-kernel.bin";
+              sha256 = "c04c6246b555feeafb66465ae2d2f629572347b46be3325b8cd742e2b28ea6a7";
+              sha256_unsigned = "c04c6246b555feeafb66465ae2d2f629572347b46be3325b8cd742e2b28ea6a7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-squashfs-factory.bin";
+              sha256 = "2e75b409b75212deb83d958246dca75eacf145791ee2bffdd19d4de465bb594c";
+              sha256_unsigned = "2e75b409b75212deb83d958246dca75eacf145791ee2bffdd19d4de465bb594c";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-squashfs-sysupgrade.bin";
+              sha256 = "6aec30a925de0ece6285fe283f4f325a4de38d9afb6612ba215edd81a418fa55";
+              sha256_unsigned = "4490ebc690fcbd7ed4130e54437a4ebdc1a683450399ae2a67bb3050c4722b9c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanostation-ac"
+          ];
+          titles = [
+            {
+              model = "Nanostation AC";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanostation-ac-loco = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-loco";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-loco-squashfs-sysupgrade.bin";
+              sha256 = "569ec0fc06ba2cb64b2c9e1a3a1ed9538bb7c382f8d929536819f89b976c57ee";
+              sha256_unsigned = "7501ed09de5e31c615bf1cd6a6186840b1343857687854ceff97ff91f58c8ffe";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-loco-initramfs-kernel.bin";
+              sha256 = "bf2c734ff1a38b64df6317fb57278520717e568dc2acb352a84406df1bf869e7";
+              sha256_unsigned = "bf2c734ff1a38b64df6317fb57278520717e568dc2acb352a84406df1bf869e7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-ac-loco-squashfs-factory.bin";
+              sha256 = "ecd38858bd8e4c19b27f93ad7140c3d07ff1666ec70a9fa44514fe72e3ba2d25";
+              sha256_unsigned = "ecd38858bd8e4c19b27f93ad7140c3d07ff1666ec70a9fa44514fe72e3ba2d25";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanostation-ac-loco"
+          ];
+          titles = [
+            {
+              model = "Nanostation AC loco";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanostation-loco-m-xw = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-loco-m-xw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-factory.bin";
+              sha256 = "101a152d130f426945bf8a604bb26b99f045b95f6f18394f64371d98566b4407";
+              sha256_unsigned = "101a152d130f426945bf8a604bb26b99f045b95f6f18394f64371d98566b4407";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-loco-m-xw-squashfs-sysupgrade.bin";
+              sha256 = "5831609219b59fc0fb6b6833369bbb9b10cd7be6e572c9e0e6ea66dee4712348";
+              sha256_unsigned = "94c9f811e6e1955fbe266a1f37e303244be8a3f45ae32990eb3e3e97faf99cf9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-loco-m-xw-initramfs-kernel.bin";
+              sha256 = "7fd039293ff31cd6588deaf87a156e7101dc7239aa2eaa35d18686854fada741";
+              sha256_unsigned = "7fd039293ff31cd6588deaf87a156e7101dc7239aa2eaa35d18686854fada741";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanostation-loco-m-xw"
+            "loco-m-xw"
+          ];
+          titles = [
+            {
+              model = "Nanostation Loco M";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_nanostation-m-xw = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-m-xw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-m-xw-squashfs-factory.bin";
+              sha256 = "cd3cc9c2bded6c088ea82878635d62b56a5d5a0a53399f5a73cbc4e98065ca37";
+              sha256_unsigned = "cd3cc9c2bded6c088ea82878635d62b56a5d5a0a53399f5a73cbc4e98065ca37";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-m-xw-initramfs-kernel.bin";
+              sha256 = "9e86009fbc967f81dd8df44126fbc0f19d0aa906fab3c0f93f66c12c730ef105";
+              sha256_unsigned = "9e86009fbc967f81dd8df44126fbc0f19d0aa906fab3c0f93f66c12c730ef105";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_nanostation-m-xw-squashfs-sysupgrade.bin";
+              sha256 = "97b4776ecbefdcbc8c82ada5248c8961a68e9efe0986926ccc7e9aaf75dfe250";
+              sha256_unsigned = "8fdd8f3eec5c1bed260dadcf29c89969444442340cb130825f3842efbc98a7c2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,nanostation-m-xw"
+            "nanostation-m-xw"
+          ];
+          titles = [
+            {
+              model = "Nanostation M";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_powerbeam-5ac-500 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-500";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-500-squashfs-factory.bin";
+              sha256 = "5eb28371f7cf3ad421e4d3aaf719585b4cd0de88484607806db01d328c25f28f";
+              sha256_unsigned = "5eb28371f7cf3ad421e4d3aaf719585b4cd0de88484607806db01d328c25f28f";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-500-initramfs-kernel.bin";
+              sha256 = "31ce18612b4df94d4fef727aca6ce313f1da616cb022abc93c4130d3b37bb7d2";
+              sha256_unsigned = "31ce18612b4df94d4fef727aca6ce313f1da616cb022abc93c4130d3b37bb7d2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-500-squashfs-sysupgrade.bin";
+              sha256 = "61bdc9bcf051edbd501400e7478555ab51996363fd64ffe0dd64584fccccae85";
+              sha256_unsigned = "88a53eec627668a86b1719752535785bc2ef9e8090fc677ff1fdb1c92248fffc";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,powerbeam-5ac-500"
+          ];
+          titles = [
+            {
+              model = "PowerBeam 5AC";
+              variant = "500";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_powerbeam-5ac-gen2 = {
+          device_packages = [
+            "kmod-ath10k-ct-smallbuffers"
+            "ath10k-firmware-qca988x-ct"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-gen2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-gen2-initramfs-kernel.bin";
+              sha256 = "26b19f8a9e8a420fe5215ecde23c0e94f5895a7c5b5b476e62ad84d7519fcb8d";
+              sha256_unsigned = "26b19f8a9e8a420fe5215ecde23c0e94f5895a7c5b5b476e62ad84d7519fcb8d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-gen2-squashfs-sysupgrade.bin";
+              sha256 = "adf610d1549fc96d775a4cdab69d7f216534b95494f71bb032f7d28d23bc0708";
+              sha256_unsigned = "96c8e6ecc6d020cce99625492cbeb0e17318a4f4ba0d93139ef48ef831697e43";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-5ac-gen2-squashfs-factory.bin";
+              sha256 = "2d7543649c14bf459a2fdb8cf96efa9d223af5de363a24e7c6b8e24f213f2ca6";
+              sha256_unsigned = "2d7543649c14bf459a2fdb8cf96efa9d223af5de363a24e7c6b8e24f213f2ca6";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,powerbeam-5ac-gen2"
+          ];
+          titles = [
+            {
+              model = "PowerBeam 5AC";
+              variant = "Gen2";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_powerbeam-m2-xw = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m2-xw";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m2-xw-initramfs-kernel.bin";
+              sha256 = "dca8ef113699ff4518dea6b1ee00d54772c660bdc13acfdecf3028731bc89f7c";
+              sha256_unsigned = "dca8ef113699ff4518dea6b1ee00d54772c660bdc13acfdecf3028731bc89f7c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m2-xw-squashfs-factory.bin";
+              sha256 = "18f48e79629709b4190a8ade3537e75fcb00d28196e337db3bac90d3f6026a06";
+              sha256_unsigned = "18f48e79629709b4190a8ade3537e75fcb00d28196e337db3bac90d3f6026a06";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m2-xw-squashfs-sysupgrade.bin";
+              sha256 = "173d4d5a2cf2afb298f7f2db9639a68db11e13ba3c29738e839a6a5096f492ec";
+              sha256_unsigned = "70a80ff0059cb28d37accb5959622d35a66407da8295663691fc2a88540eec3d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,powerbeam-m2-xw"
+            "loco-m-xw"
+          ];
+          titles = [
+            {
+              model = "PowerBeam M2";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_powerbeam-m5-xw = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m5-xw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m5-xw-squashfs-factory.bin";
+              sha256 = "477566937515fa3f548de679a631521668e10d5c8bfb5bd03a8c02d7962c8ec2";
+              sha256_unsigned = "477566937515fa3f548de679a631521668e10d5c8bfb5bd03a8c02d7962c8ec2";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m5-xw-squashfs-sysupgrade.bin";
+              sha256 = "0b2a9021743df86ad0d515e72256d6e7ad8179a5be72547af9b791ed8f58761c";
+              sha256_unsigned = "f13081048575e5998a0885011af6db67843222df2a904fde7c3da49bb8dd213b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_powerbeam-m5-xw-initramfs-kernel.bin";
+              sha256 = "71b7211043be38ff7a1e05ee2610d5dcce130f3884c86ed2f3f31374171163f7";
+              sha256_unsigned = "71b7211043be38ff7a1e05ee2610d5dcce130f3884c86ed2f3f31374171163f7";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,powerbeam-m5-xw"
+            "loco-m-xw"
+          ];
+          titles = [
+            {
+              model = "PowerBeam M5";
+              variant = "XW";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_rocket-5ac-lite = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_rocket-5ac-lite";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_rocket-5ac-lite-initramfs-kernel.bin";
+              sha256 = "8ef039e33fe8b544db1fb664dccb15e180d02ffa59fb8213368b5a9ef822a720";
+              sha256_unsigned = "8ef039e33fe8b544db1fb664dccb15e180d02ffa59fb8213368b5a9ef822a720";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_rocket-5ac-lite-squashfs-sysupgrade.bin";
+              sha256 = "6f559e5e08d9b574b1cf6d0231f31f150f6091635f004ef5402d21323c258f9f";
+              sha256_unsigned = "773483247b825a5e467d54544bc16b66612f55b9fa4d099660b4118c3940bcc6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_rocket-5ac-lite-squashfs-factory.bin";
+              sha256 = "8054837cd161408acf36da6996782bcfff04af80dfe13d0f8310ce896d44d0cf";
+              sha256_unsigned = "8054837cd161408acf36da6996782bcfff04af80dfe13d0f8310ce896d44d0cf";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,rocket-5ac-lite"
+          ];
+          titles = [
+            {
+              model = "Rocket 5AC";
+              variant = "Lite";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_routerstation = {
+          device_packages = [
+            "-kmod-ath9k"
+            "-wpad-basic-wolfssl"
+            "-uboot-envtools"
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "fconfig"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_routerstation";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-squashfs-sysupgrade.bin";
+              sha256 = "4e921cbd10781ed28ba2c48b021f12a80895da27e856c6ab17e574fa703542aa";
+              sha256_unsigned = "43a0c4e6a0c9b1846cb0a4cef113b4fc912e67fc77c7ecc44ff71c29666f5458";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-squashfs-factory.bin";
+              sha256 = "70eff30531a55530cb0dd0240525aca3aacdccd7340c9e8c2e2063fdacf3cd77";
+              sha256_unsigned = "70eff30531a55530cb0dd0240525aca3aacdccd7340c9e8c2e2063fdacf3cd77";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-initramfs-kernel.bin";
+              sha256 = "eda74a78d5f3751d4c94b512d1bb38ef30b325fef984e1dabd5f1ffc0a1b8f9b";
+              sha256_unsigned = "eda74a78d5f3751d4c94b512d1bb38ef30b325fef984e1dabd5f1ffc0a1b8f9b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,routerstation"
+          ];
+          titles = [
+            {
+              model = "RouterStation";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_routerstation-pro = {
+          device_packages = [
+            "-kmod-ath9k"
+            "-wpad-basic-wolfssl"
+            "-uboot-envtools"
+            "kmod-usb-ohci"
+            "kmod-usb2"
+            "fconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-pro";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-pro-initramfs-kernel.bin";
+              sha256 = "5a6af638c373a86f84c6c23bb5dc3d3c6e70e762187ebf8320570e6c42ef16e6";
+              sha256_unsigned = "5a6af638c373a86f84c6c23bb5dc3d3c6e70e762187ebf8320570e6c42ef16e6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-pro-squashfs-factory.bin";
+              sha256 = "7ccddd9455677cb8a2957a50d487ac3958e285f3888d9612d223392dd7e89ba8";
+              sha256_unsigned = "7ccddd9455677cb8a2957a50d487ac3958e285f3888d9612d223392dd7e89ba8";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_routerstation-pro-squashfs-sysupgrade.bin";
+              sha256 = "dc67fc599f05d06fb368e00168d731ea7f89e50e5e640dfd70390ab11db3bc21";
+              sha256_unsigned = "0f44dcfc3f99523e16dce1a86fc43306bbea23ebf72f863fdbf067884e9cb2e5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,routerstation-pro"
+          ];
+          titles = [
+            {
+              model = "RouterStation Pro";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifi = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifi";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-squashfs-sysupgrade.bin";
+              sha256 = "9362fc51cbceb73f0b803430ad58c13948954453239b4fa7148c9536c434128a";
+              sha256_unsigned = "ef72b5abff8c63c8cb019849689688b169e646f43a954a7ea98fbb165327f918";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-initramfs-kernel.bin";
+              sha256 = "8dcaf66f190bcd719417cc4b45f7f9287c9c4dd2705eca63492939344deb644a";
+              sha256_unsigned = "8dcaf66f190bcd719417cc4b45f7f9287c9c4dd2705eca63492939344deb644a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-squashfs-factory.bin";
+              sha256 = "9868ec9349410ba2de1c08fc45acba1b1f868f5a72aa1c082e5b3e9e7685ca3c";
+              sha256_unsigned = "9868ec9349410ba2de1c08fc45acba1b1f868f5a72aa1c082e5b3e9e7685ca3c";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifi"
+            "unifi"
+          ];
+          titles = [
+            {
+              model = "UniFi AP";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifi-ap-outdoor-plus = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-outdoor-plus";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-outdoor-plus-squashfs-sysupgrade.bin";
+              sha256 = "e6193034b2ed18d4041c9561aeea3d41b976fce7c0a847f423456cefc0beb222";
+              sha256_unsigned = "184020c6838d8c0e94ecd27f449999d41c6b48159d9359fcc2fbd85a12a73b57";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-outdoor-plus-initramfs-kernel.bin";
+              sha256 = "f8566f340511a6cd53a99412c04426672715bfb5bc55eff148554d46c762365d";
+              sha256_unsigned = "f8566f340511a6cd53a99412c04426672715bfb5bc55eff148554d46c762365d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-outdoor-plus-squashfs-factory.bin";
+              sha256 = "d8370702b4fd6024e9f98ebb8f13c2f5053e01aaf00472a7439c0630cd56511f";
+              sha256_unsigned = "184020c6838d8c0e94ecd27f449999d41c6b48159d9359fcc2fbd85a12a73b57";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifi-ap-outdoor-plus"
+            "unifi-outdoor-plus"
+          ];
+          titles = [
+            {
+              model = "UniFi AP Outdoor+";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifi-ap-pro = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-pro";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-pro-squashfs-sysupgrade.bin";
+              sha256 = "0c13949f7dbb6a126c2fa8b16e4f27e4041d4e1ea1aa6c6e9ca82305857f9bff";
+              sha256_unsigned = "9eff672819bd9becfa121a5185d00993a744b7499e64bd4a58aef69438d356cb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-pro-initramfs-kernel.bin";
+              sha256 = "35a98e682f503cf469a7e1d65ee0ae5c382fb4df0352ebf60ba6fe5a4e03c4ec";
+              sha256_unsigned = "35a98e682f503cf469a7e1d65ee0ae5c382fb4df0352ebf60ba6fe5a4e03c4ec";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifi-ap-pro-squashfs-factory.bin";
+              sha256 = "62fda6de69b3f78d522e2378497c7d33df822e4cccc753ec75922070638ec2db";
+              sha256_unsigned = "9eff672819bd9becfa121a5185d00993a744b7499e64bd4a58aef69438d356cb";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifi-ap-pro"
+            "uap-pro"
+          ];
+          titles = [
+            {
+              model = "UniFi AP Pro";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifiac-lite = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-lite";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-lite-initramfs-kernel.bin";
+              sha256 = "306492ccaccffaadcb8310efa57b2a2498ef0c479c63b658cc406f7324b74818";
+              sha256_unsigned = "306492ccaccffaadcb8310efa57b2a2498ef0c479c63b658cc406f7324b74818";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-lite-squashfs-sysupgrade.bin";
+              sha256 = "5c26a7d081703758cbde3efa93d37f6168d941aa43b10c9b382cc38119185a1d";
+              sha256_unsigned = "739f2fa31c9707713085f81775c6d485af6fa39a71aa6f3e2aa3349ace24ffb7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifiac-lite"
+            "unifiac-lite"
+          ];
+          titles = [
+            {
+              model = "UniFi AC Lite";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifiac-lr = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-lr";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-lr-squashfs-sysupgrade.bin";
+              sha256 = "0d69f4b90aa934d16355996829d89986475c172a208758e2cc509a0a77525291";
+              sha256_unsigned = "b787678911b729b005ff6bdb3cf38a7488d1a18ec777d95c181aa9f0fea97b7a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-lr-initramfs-kernel.bin";
+              sha256 = "f18417a61643fabee9203763e3d2f50f31ded54f72ab9210c3c3512530f0e22a";
+              sha256_unsigned = "f18417a61643fabee9203763e3d2f50f31ded54f72ab9210c3c3512530f0e22a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifiac-lr"
+            "unifiac-lite"
+            "ubnt,unifiac-lite"
+          ];
+          titles = [
+            {
+              model = "UniFi AC LR";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifiac-mesh = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-mesh";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-mesh-initramfs-kernel.bin";
+              sha256 = "08405ad2ca93cb251062959f9d5d0b1a635eabac57ec0dab051129930587bd38";
+              sha256_unsigned = "08405ad2ca93cb251062959f9d5d0b1a635eabac57ec0dab051129930587bd38";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-mesh-squashfs-sysupgrade.bin";
+              sha256 = "374249c0e2fb8797b02c3ed5a1e2f58413d9909c71ba293fda16efcdfa815d1f";
+              sha256_unsigned = "6268469f05ebb88f6143832d594274bb9430ed8ef08ba942449cc704212ebdfe";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifiac-mesh"
+            "unifiac-lite"
+          ];
+          titles = [
+            {
+              model = "UniFi AC Mesh";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifiac-mesh-pro = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-mesh-pro";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-mesh-pro-initramfs-kernel.bin";
+              sha256 = "48024e4488c47140199d5f4f61bab27bf9c9249be05c7597ae9c7237a314e2bb";
+              sha256_unsigned = "48024e4488c47140199d5f4f61bab27bf9c9249be05c7597ae9c7237a314e2bb";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-mesh-pro-squashfs-sysupgrade.bin";
+              sha256 = "fa97b3ab008fef49ae64f89e00b314e879dd9b19db4ffc03416d1070b27abf2d";
+              sha256_unsigned = "51e043cb99cdeee4566306a0cbfab7bddb895685743bb1b1d9542fe206fba6b8";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifiac-mesh-pro"
+            "unifiac-pro"
+          ];
+          titles = [
+            {
+              model = "UniFi AC Mesh Pro";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifiac-pro = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-pro";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-pro-initramfs-kernel.bin";
+              sha256 = "54e9ac8a2aba0bf352cfd50d645e3b7c70b7063c621654cadcba30f89b5daa0d";
+              sha256_unsigned = "54e9ac8a2aba0bf352cfd50d645e3b7c70b7063c621654cadcba30f89b5daa0d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ubnt_unifiac-pro-squashfs-sysupgrade.bin";
+              sha256 = "60cf1841633599ad15cfb5f9105bde09d3bbab030de9f06b75ea469d5d79cf6e";
+              sha256_unsigned = "01a91067b74c2c40db2edb23a9a0871a683433ee658bb8129c49ce98c8d660cc";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifiac-pro"
+            "unifiac-pro"
+          ];
+          titles = [
+            {
+              model = "UniFi AC Pro";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        wallys_dr531 = {
+          device_packages = [
+            "kmod-usb2"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-wallys_dr531";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-wallys_dr531-initramfs-kernel.bin";
+              sha256 = "13cac427907f4cd62638a94958cc5546d82fcc5c5062a9ff898e8e3618f13afe";
+              sha256_unsigned = "13cac427907f4cd62638a94958cc5546d82fcc5c5062a9ff898e8e3618f13afe";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-wallys_dr531-squashfs-sysupgrade.bin";
+              sha256 = "11f389b95c2a3593bd6a934d695950e236f51b9a252b770af58f3abe7f81c3bb";
+              sha256_unsigned = "e44e3559e47a8ae89a1144c7e0a661c58eeb1b25fafd35aca298f8ccfd1ecd63";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "wallys,dr531"
+            "dr531"
+          ];
+          titles = [
+            {
+              model = "DR531";
+              vendor = "Wallys";
+            }
+          ];
+        };
+        wd_mynet-n600 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-wd_mynet-n600";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-n600-squashfs-sysupgrade.bin";
+              sha256 = "5e749fb4514d3b0892d9feca59b62be4a38c6f06739a45b99d3b0e4321a9f0a3";
+              sha256_unsigned = "d705148eb51b2aa882c3b8e65149eb2291ac00fa50c52fb9583ec292668a6861";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-n600-initramfs-kernel.bin";
+              sha256 = "c6b3bf541dc09a8b05e0ab1b78a0ca121cd0f64e681bfd711f356d0eb46ba498";
+              sha256_unsigned = "c6b3bf541dc09a8b05e0ab1b78a0ca121cd0f64e681bfd711f356d0eb46ba498";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-n600-squashfs-factory.bin";
+              sha256 = "9af7819b463686c1466284c88beb8ce392d99c3a60a5f497710e97df1a13a5a9";
+              sha256_unsigned = "9af7819b463686c1466284c88beb8ce392d99c3a60a5f497710e97df1a13a5a9";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "wd,mynet-n600"
+            "mynet-n600"
+          ];
+          titles = [
+            {
+              model = "My Net N600";
+              vendor = "Western Digital";
+            }
+          ];
+        };
+        wd_mynet-n750 = {
+          device_packages = [
+            "kmod-usb2"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-wd_mynet-n750";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-n750-squashfs-sysupgrade.bin";
+              sha256 = "f08f64e05c931a96df4973d532d3cd4f1afdc56d2e1cb05ee98937446b88d356";
+              sha256_unsigned = "f775708831e7cd13aac56f87c577cb97774c96949359cc843a3d247256dbd304";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-n750-initramfs-kernel.bin";
+              sha256 = "51c161b944934304642afef13d0dab8a35ac44254168a63c12ee7ce268833a2f";
+              sha256_unsigned = "51c161b944934304642afef13d0dab8a35ac44254168a63c12ee7ce268833a2f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-n750-squashfs-factory.bin";
+              sha256 = "6c38bdd49e223e72e4adc501d9748ceb73276528c5547bf46e9491ef8b985f78";
+              sha256_unsigned = "6c38bdd49e223e72e4adc501d9748ceb73276528c5547bf46e9491ef8b985f78";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "wd,mynet-n750"
+            "mynet-n750"
+          ];
+          titles = [
+            {
+              model = "My Net N750";
+              vendor = "Western Digital";
+            }
+          ];
+        };
+        wd_mynet-wifi-rangeextender = {
+          device_packages = [
+            "rssileds"
+            "nvram"
+            "-swconfig"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-wd_mynet-wifi-rangeextender";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-wifi-rangeextender-squashfs-sysupgrade.bin";
+              sha256 = "1235e1a9f7e5c49e6dc5017d64e003a7d4b8d25576e3342130670ce1dd7de8f4";
+              sha256_unsigned = "dbfb80ecbee7e12a3426143075953776a920bacb2aa037658eaf1c9df0c49902";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-wd_mynet-wifi-rangeextender-initramfs-kernel.bin";
+              sha256 = "74336518c412be95e10debe3e32dd5e65d875b3728543e9c6ce66fceaf72cbfe";
+              sha256_unsigned = "74336518c412be95e10debe3e32dd5e65d875b3728543e9c6ce66fceaf72cbfe";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "wd,mynet-wifi-rangeextender"
+            "mynet-rext"
+          ];
+          titles = [
+            {
+              model = "My Net Wi-Fi Range Extender";
+              vendor = "Western Digital";
+            }
+          ];
+        };
+        winchannel_wb2000 = {
+          device_packages = [
+            "kmod-i2c-gpio"
+            "kmod-rtc-ds1307"
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-winchannel_wb2000";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-winchannel_wb2000-initramfs-kernel.bin";
+              sha256 = "d479bd56e5f1b69a257ebe73370158994d5204d9e45abe55fe0b5638a90d43c8";
+              sha256_unsigned = "d479bd56e5f1b69a257ebe73370158994d5204d9e45abe55fe0b5638a90d43c8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-winchannel_wb2000-squashfs-sysupgrade.bin";
+              sha256 = "9fea58fc32bd2325c5c144224db67073d70a5ceca2cd2cded71e28d207844498";
+              sha256_unsigned = "4112a5135d8f7cf53d068ba6455dd6b21d60738280a80336066ac5b8d7c63eb5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "winchannel,wb2000"
+          ];
+          titles = [
+            {
+              model = "WB2000";
+              vendor = "Winchannel";
+            }
+          ];
+        };
+        xiaomi_aiot-ac2350 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9984-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-xiaomi_aiot-ac2350";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-xiaomi_aiot-ac2350-initramfs-kernel.bin";
+              sha256 = "b55b8cfe86739ea9489d71e3f2d526d4c39bf2645c1959f23a89b38f60a89586";
+              sha256_unsigned = "b55b8cfe86739ea9489d71e3f2d526d4c39bf2645c1959f23a89b38f60a89586";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-xiaomi_aiot-ac2350-squashfs-sysupgrade.bin";
+              sha256 = "c8208a4faae6808c4961ad7e77b600390d8b151f5223654ae52217115239920a";
+              sha256_unsigned = "e9d4f357a07306fb52052c40480d72c3f7008cfbe0d0840881f9497a9e960230";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,aiot-ac2350"
+          ];
+          titles = [
+            {
+              model = "AIoT AC2350";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-4q = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-xiaomi_mi-router-4q";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-xiaomi_mi-router-4q-initramfs-kernel.bin";
+              sha256 = "73dc1b4775b6f8dd5a8e465da1e8b5072d2ed1d2fef31e2fd14bd3b30f1ff3ef";
+              sha256_unsigned = "73dc1b4775b6f8dd5a8e465da1e8b5072d2ed1d2fef31e2fd14bd3b30f1ff3ef";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-xiaomi_mi-router-4q-squashfs-sysupgrade.bin";
+              sha256 = "5e96e613d13ef055140f3d12003a6b17f0f2d8f6e96619cfefc6cd1cb512632a";
+              sha256_unsigned = "b456d8665fa3783aadbf45df4afb6742e4760a0a2a1655023ea72fc5f9c13443";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-4q"
+          ];
+          titles = [
+            {
+              model = "Mi Router 4Q";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        yuncore_a770 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9887-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-yuncore_a770";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a770-initramfs-kernel.bin";
+              sha256 = "733eafa2325f52a3e45ae952c916d375cb42d9d1bc1990f53699ba59959d87d0";
+              sha256_unsigned = "733eafa2325f52a3e45ae952c916d375cb42d9d1bc1990f53699ba59959d87d0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a770-squashfs-sysupgrade.bin";
+              sha256 = "aaa16523a7c0b9b09cc9d0891b66fb77d6b60e85b8dbcea55892aa8a3b3de7b9";
+              sha256_unsigned = "947f1d697a70d93095c8792514febd00bb8cf5ecb8cda05bdcdb6db1691f70f9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a770-squashfs-tftp.bin";
+              sha256 = "d62f09bdd241f961fb39e92bb334bb2fead6568348b106e4a620e08dd432e3b4";
+              sha256_unsigned = "947f1d697a70d93095c8792514febd00bb8cf5ecb8cda05bdcdb6db1691f70f9";
+              type = "tftp";
+            }
+          ];
+          supported_devices = [
+            "yuncore,a770"
+          ];
+          titles = [
+            {
+              model = "A770";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_a782 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-yuncore_a782";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a782-squashfs-tftp.bin";
+              sha256 = "b98d673f38c67c084f7ebf5859408f043bfc92c916367d5833018246e25bb874";
+              sha256_unsigned = "5a6da9dceb5eecf7e141b26a77d6aa33286882dd61d8ea1a8ff5c061c44f4618";
+              type = "tftp";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a782-initramfs-kernel.bin";
+              sha256 = "fa77f7b187ccbb7ad4f5222b7c9543fdcf3cbb265a9256b929bb33c719a89fee";
+              sha256_unsigned = "fa77f7b187ccbb7ad4f5222b7c9543fdcf3cbb265a9256b929bb33c719a89fee";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a782-squashfs-sysupgrade.bin";
+              sha256 = "b5caa609572675f6a77e555f18429881b7e9132645517f48345e3e9cd1afad3a";
+              sha256_unsigned = "5a6da9dceb5eecf7e141b26a77d6aa33286882dd61d8ea1a8ff5c061c44f4618";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "yuncore,a782"
+          ];
+          titles = [
+            {
+              model = "A782";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_a930 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-yuncore_a930";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a930-squashfs-tftp.bin";
+              sha256 = "f9c8a078e22fd243e4f86aebc9e6d68c6cc9c4a40359f8e9f7e89c45e0caffe2";
+              sha256_unsigned = "af52264860bcd35f3d21f031220d13facb2437e3fda319526d975330750ad7a2";
+              type = "tftp";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a930-initramfs-kernel.bin";
+              sha256 = "a698458f3db9a5d74e80d0e9fc7a968292b4c7ada9b1a312205bbdf1d6b33a0b";
+              sha256_unsigned = "a698458f3db9a5d74e80d0e9fc7a968292b4c7ada9b1a312205bbdf1d6b33a0b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_a930-squashfs-sysupgrade.bin";
+              sha256 = "3b3f451593502077ce15b27c43d1245305c576953ce9b9856de4cac085ba3a75";
+              sha256_unsigned = "af52264860bcd35f3d21f031220d13facb2437e3fda319526d975330750ad7a2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "yuncore,a930"
+          ];
+          titles = [
+            {
+              model = "A930";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_xd3200 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-yuncore_xd3200";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_xd3200-squashfs-sysupgrade.bin";
+              sha256 = "4d4b6a4ee253982e1f64afd840c7cff43a76317c75bcedd99634f106a3861242";
+              sha256_unsigned = "8fe534fd36390f67d66797a287d332b0740f528b6f2b587fe7822f10bcb4ef67";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_xd3200-initramfs-kernel.bin";
+              sha256 = "127307df3dfbca4e269005813ab2bc275c76b468244d4020487abe5eda8b327e";
+              sha256_unsigned = "127307df3dfbca4e269005813ab2bc275c76b468244d4020487abe5eda8b327e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_xd3200-squashfs-tftp.bin";
+              sha256 = "ba06eb1555ae9d48dfbdad60e31718e384c246ef6c9c2a148afb2c9af1156897";
+              sha256_unsigned = "8fe534fd36390f67d66797a287d332b0740f528b6f2b587fe7822f10bcb4ef67";
+              type = "tftp";
+            }
+          ];
+          supported_devices = [
+            "yuncore,xd3200"
+          ];
+          titles = [
+            {
+              model = "XD3200";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_xd4200 = {
+          device_packages = [
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca9888-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-yuncore_xd4200";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_xd4200-initramfs-kernel.bin";
+              sha256 = "1b3bb3887276a3c9b3c36e1050bc0d0204022cba6818ab6e9aa9f00f13026283";
+              sha256_unsigned = "1b3bb3887276a3c9b3c36e1050bc0d0204022cba6818ab6e9aa9f00f13026283";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_xd4200-squashfs-sysupgrade.bin";
+              sha256 = "4e921447530eef4dadd4ea648ac0194fc84ebf28cca468830a1be76b812b4772";
+              sha256_unsigned = "15e8ab664c57e562a8d142731bfd9ffdcba9de53ce53124aa4ac30c9e4701b21";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-yuncore_xd4200-squashfs-tftp.bin";
+              sha256 = "012451023b0d9405bc8b378a310f1b1969b107403b55ce9e9755932db72a78a1";
+              sha256_unsigned = "15e8ab664c57e562a8d142731bfd9ffdcba9de53ce53124aa4ac30c9e4701b21";
+              type = "tftp";
+            }
+          ];
+          supported_devices = [
+            "yuncore,xd4200"
+          ];
+          titles = [
+            {
+              model = "XD4200";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        zbtlink_zbt-wd323 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-i2c-gpio"
+            "kmod-rtc-pcf8563"
+            "kmod-usb-serial-cp210x"
+            "uqmi"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-zbtlink_zbt-wd323";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-zbtlink_zbt-wd323-initramfs-kernel.bin";
+              sha256 = "c3f253493b5d2cc9346fdfb6942c79bb73153cfce9c0470cb4f1234d1991d29c";
+              sha256_unsigned = "c3f253493b5d2cc9346fdfb6942c79bb73153cfce9c0470cb4f1234d1991d29c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-zbtlink_zbt-wd323-squashfs-sysupgrade.bin";
+              sha256 = "5b961976b09afc8320f8d033bb238fa772e81743443a29225eeef3751566b194";
+              sha256_unsigned = "a9ddb09253086676ffc92a27a28509daa60a2eb79c9e54dc2e924b95fb25a102";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wd323"
+          ];
+          titles = [
+            {
+              model = "WD323";
+              vendor = "ZBT";
+            }
+          ];
+        };
+        ziking_cpe46b = {
+          device_packages = [
+            "kmod-i2c-gpio"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-ziking_cpe46b";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-ziking_cpe46b-squashfs-sysupgrade.bin";
+              sha256 = "765308d9098b2c959ff777c77b5d4edaaddfa8774d0b099000aef97165bc2ef1";
+              sha256_unsigned = "27ce58230f2e5aa1c1df4ed3c84f49ec4f2317ab1736011aea1c4a20f446b48b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-ziking_cpe46b-initramfs-kernel.bin";
+              sha256 = "30d415e46ac026aff2b10060f75b100fcf0e6953bad81f5e266b48e7c0d57bfb";
+              sha256_unsigned = "30d415e46ac026aff2b10060f75b100fcf0e6953bad81f5e266b48e7c0d57bfb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ziking,cpe46b"
+          ];
+          titles = [
+            {
+              model = "CPE46B";
+              vendor = "ZiKing";
+            }
+          ];
+        };
+        zyxel_nbg6616 = {
+          device_packages = [
+            "kmod-usb2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-rtc-pcf8563"
+            "kmod-ath10k-ct"
+            "ath10k-firmware-qca988x-ct"
+          ];
+          image_prefix = "openwrt-22.03.7-ath79-generic-zyxel_nbg6616";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-zyxel_nbg6616-squashfs-factory.bin";
+              sha256 = "0953b7ceb8e4e9e5c10d85eea87eac4ad535f0196f8eb2f9a29fc4bd9392fbc0";
+              sha256_unsigned = "0953b7ceb8e4e9e5c10d85eea87eac4ad535f0196f8eb2f9a29fc4bd9392fbc0";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-22.03.7-ath79-generic-zyxel_nbg6616-initramfs-kernel.bin";
+              sha256 = "0f09ae8f342ff0f84c573c115040b31bd76c3c1b9103b1e5349b431b8e5a2475";
+              sha256_unsigned = "0f09ae8f342ff0f84c573c115040b31bd76c3c1b9103b1e5349b431b8e5a2475";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-ath79-generic-zyxel_nbg6616-squashfs-sysupgrade.bin";
+              sha256 = "9f83d921a115d52461db141ff3d4b8f26932f63ed37574d01502e080ef8753da";
+              sha256_unsigned = "21e59f187f3c6b53a880b683e070b76ec6dacfdc77a8cb4b7bc51884befe7ef1";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zyxel,nbg6616"
+            "nbg6616"
+          ];
+          titles = [
+            {
+              model = "NBG6616";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "ath79/generic";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
     mikrotik = {
       arch_packages = "mips_24kc";
       default_packages = [
@@ -3333,6 +15771,114 @@
     };
   };
   bcm27xx = {
+    bcm2708 = {
+      arch_packages = "arm_arm1176jzf-s_vfp";
+      default_packages = [
+        "base-files"
+        "bcm27xx-gpu-fw"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall4"
+        "fstools"
+        "kmod-fs-vfat"
+        "kmod-nft-offload"
+        "kmod-nls-cp437"
+        "kmod-nls-iso8859-1"
+        "kmod-sound-arm-bcm2835"
+        "kmod-sound-core"
+        "kmod-usb-hid"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "partx-utils"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+      ];
+      metadata_version = 1;
+      profiles = {
+        rpi = {
+          device_packages = [
+            "cypress-firmware-43430-sdio"
+            "cypress-nvram-43430-sdio-rpi-zero-w"
+            "kmod-brcmfmac"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-bcm27xx-bcm2708-rpi";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-bcm27xx-bcm2708-rpi-squashfs-sysupgrade.img.gz";
+              sha256 = "79b40cfce1ad8d13087154f2644e0667c790f062d0f97cc107c706bce8c7e517";
+              sha256_unsigned = "58852e0ae8fd2340db07d5f03c53a3595afb0976a9c67f5dc801335391516ed6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-bcm27xx-bcm2708-rpi-ext4-factory.img.gz";
+              sha256 = "e9814ab29376154cb1793d14cb24f4f80d7d06b4df93837b714b2c68d8da2f8c";
+              sha256_unsigned = "e9814ab29376154cb1793d14cb24f4f80d7d06b4df93837b714b2c68d8da2f8c";
+              type = "factory";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-bcm27xx-bcm2708-rpi-ext4-sysupgrade.img.gz";
+              sha256 = "4345d90f1081452a56771e55c12549146bb8c928e1239fee7eb50bbb43faa7ab";
+              sha256_unsigned = "16036cfd4cd8def719c28acf376e628dbfd97eb365a516ff3a09cfc583f4e6bc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-bcm27xx-bcm2708-rpi-squashfs-factory.img.gz";
+              sha256 = "c49c99efd4e8680f5f58ac4fab5b66b458eea1be06ecafee61b745a55ddbd64a";
+              sha256_unsigned = "c49c99efd4e8680f5f58ac4fab5b66b458eea1be06ecafee61b745a55ddbd64a";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "rpi-b"
+            "rpi-b-plus"
+            "rpi-cm"
+            "rpi-zero"
+            "rpi-zero-w"
+            "raspberrypi,model-b"
+            "raspberrypi,model-b-plus"
+            "raspberrypi,model-b-rev2"
+            "raspberrypi,compute-module"
+            "raspberrypi,compute-module-1"
+            "raspberrypi,model-zero"
+            "raspberrypi,model-zero-w"
+          ];
+          titles = [
+            {
+              model = "B/B+/CM/Zero/ZeroW";
+              vendor = "Raspberry Pi";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "bcm27xx/bcm2708";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
     bcm2709 = {
       arch_packages = "arm_cortex-a7_neon-vfpv4";
       default_packages = [
@@ -3453,6 +15999,117 @@
       };
       source_date_epoch = 1721082354;
       target = "bcm27xx/bcm2709";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
+    bcm2710 = {
+      arch_packages = "aarch64_cortex-a53";
+      default_packages = [
+        "base-files"
+        "bcm27xx-gpu-fw"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall4"
+        "fstools"
+        "kmod-fs-vfat"
+        "kmod-nft-offload"
+        "kmod-nls-cp437"
+        "kmod-nls-iso8859-1"
+        "kmod-sound-arm-bcm2835"
+        "kmod-sound-core"
+        "kmod-usb-hid"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "partx-utils"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+      ];
+      metadata_version = 1;
+      profiles = {
+        rpi-3 = {
+          device_packages = [
+            "cypress-firmware-43430-sdio"
+            "cypress-nvram-43430-sdio-rpi-3b"
+            "cypress-firmware-43455-sdio"
+            "cypress-nvram-43455-sdio-rpi-3b-plus"
+            "kmod-brcmfmac"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-bcm27xx-bcm2710-rpi-3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-bcm27xx-bcm2710-rpi-3-squashfs-factory.img.gz";
+              sha256 = "14936970e87fee2d374081742a5888db0720d34f2651238a08ff1ce63c943ddc";
+              sha256_unsigned = "14936970e87fee2d374081742a5888db0720d34f2651238a08ff1ce63c943ddc";
+              type = "factory";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-bcm27xx-bcm2710-rpi-3-ext4-factory.img.gz";
+              sha256 = "b88088a498226442981012e8b44bfe2f428c0ab36a19bb5191d61443ad0f96cc";
+              sha256_unsigned = "b88088a498226442981012e8b44bfe2f428c0ab36a19bb5191d61443ad0f96cc";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-bcm27xx-bcm2710-rpi-3-squashfs-sysupgrade.img.gz";
+              sha256 = "b3c25b7a412c543872eefe6483822c035abd763cf0643789d739efa54b9041e7";
+              sha256_unsigned = "4435f66fce173c1f11167adb2f92ac95d88bd83cfb4cf5f3fd34cdce21b2e963";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-bcm27xx-bcm2710-rpi-3-ext4-sysupgrade.img.gz";
+              sha256 = "d5cc7e972180b6e121d75c6c0e8ca884d71ad56b579aaf4aa6c9af79ba6ca4b1";
+              sha256_unsigned = "7887f4f9e8d279ea76066c8b3ac7669e2c4ccf492e3c0689aa22615972302f61";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "rpi-3-b"
+            "rpi-3-b-plus"
+            "raspberrypi,2-model-b-rev2"
+            "raspberrypi,3-model-b"
+            "raspberrypi,3-model-b-plus"
+            "raspberrypi,3-compute-module"
+            "raspberrypi,compute-module-3"
+          ];
+          titles = [
+            {
+              model = "3B/3B+/3CM";
+              variant = "(64bit)";
+              vendor = "Raspberry Pi";
+            }
+            {
+              model = "2B-1.2";
+              variant = "(64bit)";
+              vendor = "Raspberry Pi";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "bcm27xx/bcm2710";
       version_code = "r20341-591b7e93d3";
       version_number = "22.03.7";
     };
@@ -11049,7 +23706,170 @@
       version_number = "22.03.7";
     };
   };
-  imx = { };
+  imx = {
+    cortexa9 = {
+      arch_packages = "arm_cortex-a9_neon";
+      default_packages = [
+        "base-files"
+        "blkid"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall4"
+        "fstools"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        solidrun_cubox-i = {
+          device_packages = [
+            "kmod-drm-imx"
+            "kmod-drm-imx-hdmi"
+            "kmod-usb-hid"
+          ];
+          image_prefix = "openwrt-22.03.7-imx-cortexa9-solidrun_cubox-i";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-imx-cortexa9-solidrun_cubox-i-squashfs-combined.bin";
+              sha256 = "549f8fc421d831137f87546d7bc3d4865636ce135890888ab49a24dc9b7100a4";
+              sha256_unsigned = "549f8fc421d831137f87546d7bc3d4865636ce135890888ab49a24dc9b7100a4";
+              type = "combined";
+            }
+          ];
+          supported_devices = [
+            "solidrun,cubox-i"
+          ];
+          titles = [
+            {
+              model = "CuBox-i";
+              vendor = "SolidRun";
+            }
+          ];
+        };
+        toradex_apalis = {
+          device_packages = [
+            "kmod-can"
+            "kmod-can-flexcan"
+            "kmod-can-raw"
+            "kmod-leds-gpio"
+            "kmod-gpio-button-hotplug"
+            "kmod-pps-gpio"
+            "kmod-rtc-ds1307"
+          ];
+          image_prefix = "openwrt-22.03.7-imx-cortexa9-toradex_apalis";
+          images = [
+            {
+              name = "openwrt-22.03.7-imx-cortexa9-toradex_apalis-recovery.scr";
+              sha256 = "69ad20a69846cc63432b8c153ead33c8b23318f03c03df8d4feea28d8f33eaf0";
+              sha256_unsigned = "69ad20a69846cc63432b8c153ead33c8b23318f03c03df8d4feea28d8f33eaf0";
+              type = "recovery.scr";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-imx-cortexa9-toradex_apalis-squashfs.sysupgrade.bin";
+              sha256 = "89a43b8a798a3720f6d3974c6b6a8bcebb7e1d9db34ca056ffb73204894cb573";
+              sha256_unsigned = "b511444f3abea011923c386b30ec3aa6a659bd2376af9158372ba0a7e37895b8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-imx-cortexa9-toradex_apalis-squashfs.combined.bin";
+              sha256 = "279eb6927f9f4c99664166a15d3fbb35b7e546c5133e8fe9fe5aa85d80835b03";
+              sha256_unsigned = "279eb6927f9f4c99664166a15d3fbb35b7e546c5133e8fe9fe5aa85d80835b03";
+              type = "combined";
+            }
+          ];
+          supported_devices = [
+            "apalis,ixora"
+            "apalis,eval"
+          ];
+          titles = [
+            {
+              model = "Apalis family";
+              vendor = "Toradex";
+            }
+          ];
+        };
+        ventana = {
+          device_packages = [
+            "kmod-sky2"
+            "kmod-sound-core"
+            "kmod-sound-soc-imx"
+            "kmod-sound-soc-imx-sgtl5000"
+            "kmod-can"
+            "kmod-can-flexcan"
+            "kmod-can-raw"
+            "kmod-hwmon-gsc"
+            "kmod-leds-gpio"
+            "kmod-pps-gpio"
+            "kobs-ng"
+          ];
+          image_prefix = "openwrt-22.03.7-imx-cortexa9-gateworks_ventana";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-imx-cortexa9-gateworks_ventana-squashfs-bootfs.tar.gz";
+              sha256 = "c9f3f84ac5aae353c82b05f0b27f242fe4029b439e98276a6f2ede1daa6dac96";
+              sha256_unsigned = "c9f3f84ac5aae353c82b05f0b27f242fe4029b439e98276a6f2ede1daa6dac96";
+              type = "bootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-imx-cortexa9-gateworks_ventana-large-squashfs-nand.ubi";
+              sha256 = "df2a357f095727d0cda3c0cc44879f1c845b99d9227084baf9f713032e6eedcc";
+              sha256_unsigned = "df2a357f095727d0cda3c0cc44879f1c845b99d9227084baf9f713032e6eedcc";
+              type = "nand";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-imx-cortexa9-gateworks_ventana-squashfs-nand.ubi";
+              sha256 = "3c7db689fb150002d0be5f7ff43a059647994bb676a2343403e76272fc0bf569";
+              sha256_unsigned = "3c7db689fb150002d0be5f7ff43a059647994bb676a2343403e76272fc0bf569";
+              type = "nand";
+            }
+          ];
+          supported_devices = [
+            "gateworks,ventana"
+          ];
+          titles = [
+            {
+              model = "Ventana family";
+              variant = "normal NAND flash";
+              vendor = "Gateworks";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "imx/cortexa9";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
+  };
   ipq40xx = {
     generic = {
       arch_packages = "arm_cortex-a7_neon-vfpv4";
@@ -20515,6 +33335,7 @@
       version_number = "22.03.7";
     };
   };
+  octeontx = { };
   omap = {
     generic = {
       arch_packages = "arm_cortex-a8_vfpv3";
@@ -38685,6 +51506,1316 @@
     };
   };
   sunxi = {
+    cortexa53 = {
+      arch_packages = "aarch64_cortex-a53";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall4"
+        "fstools"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "partx-utils"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        friendlyarm_nanopi-neo-plus2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-neo-plus2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-neo-plus2-squashfs-sdcard.img.gz";
+              sha256 = "b2e2288f645f7a57aa482fac6fdbf3eea221bb2e90dc0b8c2bdddaf5d0d9da61";
+              sha256_unsigned = "2b8a558cdd5409378579e0e2cf37b773c669a0cd130d7578c1c5576be2167935";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-neo-plus2-ext4-sdcard.img.gz";
+              sha256 = "a1697a69f1b272c4f398b3f55d46198a35151a5a41a78714069a756540497655";
+              sha256_unsigned = "c6689a28cb2253534f279541f50941ca92d8cfe8d1e2a6e92a3cbb73648d7de4";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "nanopi-neo-plus2"
+          ];
+          titles = [
+            {
+              model = "NanoPi NEO Plus2";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_nanopi-neo2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-neo2";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-neo2-ext4-sdcard.img.gz";
+              sha256 = "745e9343113d430d208467a75696751b09d55dad6a3928a9d67ec90af293a388";
+              sha256_unsigned = "804837366652d073fbc70828412687d356d86701a1049254ff34851b6b9cf1b6";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-neo2-squashfs-sdcard.img.gz";
+              sha256 = "cc8b577c6d602c2784e4bade744d43d944d5f4b7424298098a3b5dbac792098e";
+              sha256_unsigned = "11e9a9d02c6081b2f39a3c0c33a111a99272adc190aa30b36047acf3eca0ec63";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "nanopi-neo2"
+          ];
+          titles = [
+            {
+              model = "NanoPi NEO2";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_nanopi-r1s-h5 = {
+          device_packages = [
+            "kmod-gpio-button-hotplug"
+            "kmod-usb-net-rtl8152"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-r1s-h5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-r1s-h5-squashfs-sdcard.img.gz";
+              sha256 = "08b6e7654ff1fd2e444c48e52f9f779b92ebbfc7f8e1a1f57045564b6c1bacbe";
+              sha256_unsigned = "5da57b2904391f0fe5f29fd5199595584ea81e24a0ae14ae7e56364a722a1d84";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-friendlyarm_nanopi-r1s-h5-ext4-sdcard.img.gz";
+              sha256 = "f64275f1631fe89aee87ca827bbfaa1e2a79eb9b88209a4f939f1d7d29431c2c";
+              sha256_unsigned = "fa89e08e22d39d2ecafd597c33d9886c8ae2cffc5c3638086e2456cebd2cf3dd";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "nanopi-r1s-h5"
+          ];
+          titles = [
+            {
+              model = "Nanopi R1S H5";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        libretech_all-h3-cc-h5 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-libretech_all-h3-cc-h5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-libretech_all-h3-cc-h5-squashfs-sdcard.img.gz";
+              sha256 = "60afe15285bc697180d6701111f5c7c584444108c947f6bb25627f1e55ca459a";
+              sha256_unsigned = "19ca9ac2a6cee6e110591e3d2d99b615f01a98cb368ab2f7893c16e1acba4942";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-libretech_all-h3-cc-h5-ext4-sdcard.img.gz";
+              sha256 = "c368cfaa63d22708c7776b7ce5aaa9785c4ad70a15d7f953e108233b77d6e4cd";
+              sha256_unsigned = "461b75d20ca43603fd8a54d21ec83a1361d99aedf78a211dc9bc0ecca0421b93";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "libretech,all-h3-cc-h5"
+          ];
+          titles = [
+            {
+              model = "ALL-H3-CC";
+              variant = "H5";
+              vendor = "Libre Computer";
+            }
+          ];
+        };
+        olimex_a64-olinuxino = {
+          device_packages = [
+            "kmod-rtl8723bs"
+            "rtl8723bu-firmware"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-olimex_a64-olinuxino";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-olimex_a64-olinuxino-ext4-sdcard.img.gz";
+              sha256 = "13fb96e5427059af376874be3e86c22d2d28e91e937a16c3430e57fe02efa082";
+              sha256_unsigned = "a2bd3e731d498c101b6b0684aa601dab29ea62b8f5b4fa5420cdab32ce585043";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-olimex_a64-olinuxino-squashfs-sdcard.img.gz";
+              sha256 = "27219a5899a7737614d6bedd60ef03512373af9416e8eacd13a54c1c22bc2da8";
+              sha256_unsigned = "0e771e4bf683dbc5d51d37696b04d1f8e020e95e03aa222e91e0a9718c59b7ed";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a64-olinuxino"
+          ];
+          titles = [
+            {
+              model = "A64-Olinuxino";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        olimex_a64-olinuxino-emmc = {
+          device_packages = [
+            "kmod-rtl8723bs"
+            "rtl8723bu-firmware"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-olimex_a64-olinuxino-emmc";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-olimex_a64-olinuxino-emmc-ext4-sdcard.img.gz";
+              sha256 = "4388383a1683351c5cce7149b291e9b325e9ed31145a2385ce6b70a2e87e68bb";
+              sha256_unsigned = "b8f92fb133716e7c29b991c5269cc33f6b4aa619b93e409fbd0861828103c8f6";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-olimex_a64-olinuxino-emmc-squashfs-sdcard.img.gz";
+              sha256 = "8dc522cbd8453f8263697bb73816667e780968a57e5962efba5a7cf2e4965e2d";
+              sha256_unsigned = "385cfc83a612218a6fd1a0d39f5c32eb3678fd40b10a116bde519a7b744e7eb8";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a64-olinuxino-emmc"
+          ];
+          titles = [
+            {
+              model = "A64-Olinuxino";
+              variant = "eMMC";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        pine64_pine64-plus = {
+          device_packages = [
+            "kmod-rtl8723bs"
+            "rtl8723bu-firmware"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-pine64_pine64-plus";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-pine64_pine64-plus-ext4-sdcard.img.gz";
+              sha256 = "bf8fb9fcaca38bb092b9a3723e549892270116b806e346f767a459ad18066d68";
+              sha256_unsigned = "834c5a55c4f35bcf304f05d74afb252c649f025ee8cc6e6b1aca93de5c1a36ca";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-pine64_pine64-plus-squashfs-sdcard.img.gz";
+              sha256 = "25089ff0c7e0c98cfff77932bd35d801887cbf32cbd8a9aaa78ef1cb862be03f";
+              sha256_unsigned = "fbc912f2d8f7f6846e6526f39597d151c69f7e7d644f115795d80cdbf6576b46";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "pine64,pine64-plus"
+          ];
+          titles = [
+            {
+              model = "Pine64+";
+              vendor = "Pine64";
+            }
+          ];
+        };
+        pine64_sopine-baseboard = {
+          device_packages = [
+            "kmod-rtl8723bs"
+            "rtl8723bu-firmware"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-pine64_sopine-baseboard";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-pine64_sopine-baseboard-squashfs-sdcard.img.gz";
+              sha256 = "9cd59d82243ed61d7c66af5514e8ede28d061835abcc62ec2cfd33ada692256f";
+              sha256_unsigned = "5c738916ea6b7c46b675e1f6cc6139a1f3b8679f9f222e08251d63a2c0881d4c";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-pine64_sopine-baseboard-ext4-sdcard.img.gz";
+              sha256 = "fdbd64993b85d63ff5f119e53d5aa6618eea0b51e2c9e9cbc968417f19145f5d";
+              sha256_unsigned = "4633f98f607b835bae555a02fb4319b11ed51d8551ebe54b31f21f9a8ac57590";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "pine64,sopine-baseboard"
+          ];
+          titles = [
+            {
+              model = "SoPine";
+              vendor = "Pine64";
+            }
+          ];
+        };
+        xunlong_orangepi-one-plus = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-one-plus";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-one-plus-squashfs-sdcard.img.gz";
+              sha256 = "a069f087b356faad5ab2ed313dcb01182cfab2b8af35d3e41358b2b008f0ad69";
+              sha256_unsigned = "6203aa4bf40e94b57fc3345a52b6de7d70895b65dc77ff3c810870ff110050ce";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-one-plus-ext4-sdcard.img.gz";
+              sha256 = "fc660c058bbc84d546bf1ef6be2d0df1f0bda5eb8e8eeb3ed94cfc7f36a1b28c";
+              sha256_unsigned = "2ab5482da830b7b1b4c7534e7d958d90465632d3ae3b2c45943b826fe6e1fa06";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-one-plus"
+          ];
+          titles = [
+            {
+              model = "Orange Pi One Plus";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-pc2 = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-pc2";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-pc2-ext4-sdcard.img.gz";
+              sha256 = "d1d58651b293d56105f018deb572cf931000a78d38b568962f44d01f52c6b95e";
+              sha256_unsigned = "dac685f42889d0d228a612d7a7576fae113b4a6a532d151aa9acc301f6a9147f";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-pc2-squashfs-sdcard.img.gz";
+              sha256 = "b5439a08fd6fb007f82e65168038982adadf8fe912d2658b05eab12f071c69ff";
+              sha256_unsigned = "339bbb9b175448e1860748de8f3ff232afebd5770db524a63e63f852ee94d110";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-pc2"
+          ];
+          titles = [
+            {
+              model = "Orange Pi PC 2";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-zero-plus = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-zero-plus";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-zero-plus-ext4-sdcard.img.gz";
+              sha256 = "46eda317abf4ed7e9a23c9027a3b697af7ed510103ab08dbf247ca7f1368467f";
+              sha256_unsigned = "ebf608f308b575807603caa69c7efeda8a27bf7369b133e7f6b1d2fb231dd43b";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa53-xunlong_orangepi-zero-plus-squashfs-sdcard.img.gz";
+              sha256 = "70928061a935c3c0a82e048b00020a6d15b25e563608a7ae4aef7546d5ac495a";
+              sha256_unsigned = "5364fbe520c55d2ad1265cfaaafbd9728869a77e9ccdd01631a8c75cd2aec2cb";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-zero-plus"
+          ];
+          titles = [
+            {
+              model = "Orange Pi Zero Plus";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "sunxi/cortexa53";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
+    cortexa7 = {
+      arch_packages = "arm_cortex-a7_neon-vfpv4";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall4"
+        "fstools"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-wolfssl"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "partx-utils"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      metadata_version = 1;
+      profiles = {
+        cubietech_cubieboard2 = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-sun4i-emac"
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-cubietech_cubieboard2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-cubietech_cubieboard2-squashfs-sdcard.img.gz";
+              sha256 = "d0c0d076be3f4f6e26288b5f1cd224cfc1844f1acbb923cf08c8b74d7ef27c34";
+              sha256_unsigned = "544ffadd68a95746261f87a31f09f64403444f8765a20ba9012af8c7257a4138";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-cubietech_cubieboard2-ext4-sdcard.img.gz";
+              sha256 = "64b2f7cfa089af9cd22851dda7a7859891b70dd143bc0891cc04e5a2c08d77ef";
+              sha256_unsigned = "f3ea9bbb29bcb9235d2ba775d49bc0dfacdf85429c2f698ba3dd38eca2aa3692";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "cubietech,cubieboard2"
+          ];
+          titles = [
+            {
+              model = "Cubieboard2";
+              vendor = "Cubietech";
+            }
+          ];
+        };
+        cubietech_cubietruck = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-rtc-sunxi"
+            "kmod-brcmfmac"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-cubietech_cubietruck";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-cubietech_cubietruck-ext4-sdcard.img.gz";
+              sha256 = "5c86018c0ba94d0c5075098fb096e8f3296af9056f20aa3a73531b9cb55f0db2";
+              sha256_unsigned = "722751b88de7cf2c74b3257beff55a5fbb64adc54da118f04a3a5f14281e2f3a";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-cubietech_cubietruck-squashfs-sdcard.img.gz";
+              sha256 = "e833319a065cd44c39a3e2fc8498618338b2cb098bbc26a305cc03ea69c2f85e";
+              sha256_unsigned = "4d40f0d54d60c9e59b353861a2a0778616b688291e6e96268e4797029c92d6cc";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "cubietech,cubietruck"
+          ];
+          titles = [
+            {
+              model = "Cubietruck";
+              vendor = "Cubietech";
+            }
+          ];
+        };
+        friendlyarm_nanopi-m1-plus = {
+          device_packages = [
+            "kmod-leds-gpio"
+            "kmod-brcmfmac"
+            "cypress-firmware-43430-sdio"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-m1-plus";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-m1-plus-squashfs-sdcard.img.gz";
+              sha256 = "b6b35b5059324572ff61f21d1c5a6eddd02525c2e8102b41db2451bc80501256";
+              sha256_unsigned = "a9142d12b2748842fa5f446c989edb398f4dddf2636ca0bf41c8b6d25b0dc55d";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-m1-plus-ext4-sdcard.img.gz";
+              sha256 = "d8a0b31c237ab619101bdb5d9edc797b7c958d271acbfe62ffcaee94879b1730";
+              sha256_unsigned = "7821dcd5389e46f10de5d3b3247d7efe42fc99847c0247c73742bb903ffa4039";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "friendlyarm,nanopi-m1-plus"
+          ];
+          titles = [
+            {
+              model = "NanoPi M1 Plus";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_nanopi-neo = {
+          device_packages = [ ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-neo";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-neo-squashfs-sdcard.img.gz";
+              sha256 = "6ced952c64da8ed827b9101383ccdf2598a2cf2bc2770bfe60fd858abd6f9e76";
+              sha256_unsigned = "8b93a400d98d1fc3f0de9d36b0d608a17b0ec6f9fe95fcfbc73214a28d9b1c65";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-neo-ext4-sdcard.img.gz";
+              sha256 = "fbb8d02b32a95ed5d08abe89f0980de2b51526165ee6579e17577526a80af359";
+              sha256_unsigned = "4a6f42ec77c8bce35c41f41e3f22e149f3414af36c66a484ef8b3ba4550dff71";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "friendlyarm,nanopi-neo"
+          ];
+          titles = [
+            {
+              model = "NanoPi NEO";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_nanopi-neo-air = {
+          device_packages = [
+            "kmod-leds-gpio"
+            "kmod-brcmfmac"
+            "brcmfmac-firmware-43430a0-sdio"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-neo-air";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-neo-air-squashfs-sdcard.img.gz";
+              sha256 = "5cb01dd5d39f0e138ab5f66cb44b526e0d0dd98d2d01cc540b497e15c6d6ff5d";
+              sha256_unsigned = "b89d033a477ffcc1e167c23afecba053e200ca1eb54986a8111c284634bdd145";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-neo-air-ext4-sdcard.img.gz";
+              sha256 = "0f055c81f30cbfc6db3e9eb08ee3536aa616e7bf9d89cd7dec44d7e7ccc76947";
+              sha256_unsigned = "6fc9ce46aaae7e4aeb9bcf358b21ea2f208b4ed2c4868999b595052dbe4f6646";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "friendlyarm,nanopi-neo-air"
+          ];
+          titles = [
+            {
+              model = "NanoPi NEO Air";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_nanopi-r1 = {
+          device_packages = [
+            "kmod-usb-net-rtl8152"
+            "kmod-leds-gpio"
+            "kmod-brcmfmac"
+            "cypress-firmware-43430-sdio"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-r1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-r1-squashfs-sdcard.img.gz";
+              sha256 = "176c8ec13990d15c5b56bab64c1d0cc231a6469113c7129475cbc2ecd8fac7d3";
+              sha256_unsigned = "9584dadd60066db2a335595710767c492ba8eeda266aaf9f2f656087156cbe6c";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_nanopi-r1-ext4-sdcard.img.gz";
+              sha256 = "c91e818361d99a0b714119890e01847f03239cc4b20bc27e10abe46cbb1480bf";
+              sha256_unsigned = "b129c01e551b95a736792791e1b22a0b928e3ac3887bd2721241336baf2df346";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "friendlyarm,nanopi-r1"
+          ];
+          titles = [
+            {
+              model = "NanoPi R1";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        friendlyarm_zeropi = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_zeropi";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_zeropi-ext4-sdcard.img.gz";
+              sha256 = "d6a6c73900fa2db4f7be15069a44a5725a7eaf3bf0d95df666c4157946b57ea2";
+              sha256_unsigned = "2139b709f69af30b4a8056e22da9be5b3e6e51dc147c0677c0bec16206d91ac0";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-friendlyarm_zeropi-squashfs-sdcard.img.gz";
+              sha256 = "22d45d80dc5bbe28c67788533663c6a576da583e3026ed1e2257b0835c89629b";
+              sha256_unsigned = "6848fb4a9a52b08ce0c6bbb32fb5a0213878bea4274a25268b3905ed45fe9c80";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "friendlyarm,zeropi"
+          ];
+          titles = [
+            {
+              model = "ZeroPi";
+              vendor = "FriendlyARM";
+            }
+          ];
+        };
+        lamobo_lamobo-r1 = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-rtl8192cu"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-lamobo_lamobo-r1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-lamobo_lamobo-r1-squashfs-sdcard.img.gz";
+              sha256 = "300123d9cb16225dab46065c7d9182cf9260ec5168ff82b9651067bafae37529";
+              sha256_unsigned = "b12f347da95353997a2547d71340c01f87589e604381f09423cf6903f1df1da4";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-lamobo_lamobo-r1-ext4-sdcard.img.gz";
+              sha256 = "83b4459742abf6e776e8aa003dd8d69f5c1d1d649daaa9318b39b8d27ad3e73b";
+              sha256_unsigned = "a1913a76dcec74600986254b7cb09dac30d19a2ebfa51f6b4a969d56c6d13010";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "lamobo,lamobo-r1"
+          ];
+          titles = [
+            {
+              model = "Lamobo R1";
+              vendor = "Lamobo";
+            }
+            {
+              model = "BPi-R1";
+              vendor = "Bananapi";
+            }
+          ];
+        };
+        lemaker_bananapi = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+            "kmod-ata-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-lemaker_bananapi";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-lemaker_bananapi-squashfs-sdcard.img.gz";
+              sha256 = "bb01a9df2364c7219c258ae369e8c293e1e53a003f4e3646f3a97531336cfbbc";
+              sha256_unsigned = "ac682f737438a38db6b0d19de961dd7b34b4bd0ea994ca175082b501e4702762";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-lemaker_bananapi-ext4-sdcard.img.gz";
+              sha256 = "16566b001a984a3bb8efe7f6ec3454f5a70869db0ecfe8df0511851c36db3623";
+              sha256_unsigned = "47e1d377478d7e4b31ff0188efcd8ecf121e400c47c9dcc846f75cd4a6b82f62";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "lemaker,bananapi"
+          ];
+          titles = [
+            {
+              model = "Banana Pi";
+              vendor = "LeMaker";
+            }
+          ];
+        };
+        lemaker_bananapro = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+            "kmod-ata-sunxi"
+            "kmod-brcmfmac"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-lemaker_bananapro";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-lemaker_bananapro-ext4-sdcard.img.gz";
+              sha256 = "b85d757a82c0b88a99a5fe645c44a658cb8893904dbe6b95f86b42547b7292b6";
+              sha256_unsigned = "6b4b71f99ae0d6a373da5ea6a40e801067655b312003bd8e3f6b3538e4ea9108";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-lemaker_bananapro-squashfs-sdcard.img.gz";
+              sha256 = "dcc0429e477e03bdb027f6f5299f36e8a278c52f23b6d53f4dd43ed43c7862a2";
+              sha256_unsigned = "550b6f1a2e846e4cfc974159cbe29177902c69552cf74c218b9a4f601d0023c3";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "lemaker,bananapro"
+          ];
+          titles = [
+            {
+              model = "Banana Pro";
+              vendor = "LeMaker";
+            }
+          ];
+        };
+        linksprite_pcduino3 = {
+          device_packages = [
+            "kmod-sun4i-emac"
+            "kmod-rtc-sunxi"
+            "kmod-ata-sunxi"
+            "kmod-rtl8xxxu"
+            "rtl8188eu-firmware"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-linksprite_pcduino3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-linksprite_pcduino3-squashfs-sdcard.img.gz";
+              sha256 = "9be4a7ffea71706039e710525a74ba4b320e03927ac0cdd5552ec4b76be43e62";
+              sha256_unsigned = "0449de584ba51c9d244da4a67caa73fd4f19e7bd58102d8a4c586f9734b545fd";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-linksprite_pcduino3-ext4-sdcard.img.gz";
+              sha256 = "78cd1e7d2b87998c89c33273b80dd3c6d92e7cda5a4baafd6ae9cec053fcd7cc";
+              sha256_unsigned = "40f3d5bdfadd107b6f0d61e8ffafdd83b9c25599227819a3bbccf69aeba663a6";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "linksprite,pcduino3"
+          ];
+          titles = [
+            {
+              model = "pcDuino3";
+              vendor = "LinkSprite";
+            }
+          ];
+        };
+        linksprite_pcduino3-nano = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+            "kmod-ata-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-linksprite_pcduino3-nano";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-linksprite_pcduino3-nano-ext4-sdcard.img.gz";
+              sha256 = "a13942f4bc3f7cfed4c5cfef5ece4f811152e163716b938abd63f6fe5ab3ec0d";
+              sha256_unsigned = "61140f0f1a7dcee7a259315c98318cdbfee71558db7804c15f85b258880c9e9a";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-linksprite_pcduino3-nano-squashfs-sdcard.img.gz";
+              sha256 = "87efa674f3ccc2a1da1b3cf3c0e39c30aae4f59d83ee0ac6c4fb4ca445abb6fe";
+              sha256_unsigned = "22ab42c0391bfded3385e621b1c2c6ba7dcaf6b4a5c0429830d9ef84e2ff3104";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "linksprite,pcduino3-nano"
+          ];
+          titles = [
+            {
+              model = "pcDuino3 Nano";
+              vendor = "LinkSprite";
+            }
+          ];
+        };
+        mele_m9 = {
+          device_packages = [
+            "kmod-sun4i-emac"
+            "kmod-rtl8192cu"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-mele_m9";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-mele_m9-ext4-sdcard.img.gz";
+              sha256 = "4bc82621c07beba7dbe41c18a40b77d12e075ecc2cbe0fde65fe83c2c0727790";
+              sha256_unsigned = "e325cbec5c15dcae859d937b760d9d45dda818198f21d1c3d3632df91b451ccb";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-mele_m9-squashfs-sdcard.img.gz";
+              sha256 = "cc6bc08a8528e3afb7637c0475aefeea1c58593bc0fdf83d28f6592de58f1c82";
+              sha256_unsigned = "85c27c62565e8efb4f48e3ff0d12425110ac2d0ab12eba5a5dea816ca3cd2453";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "mele,m9"
+          ];
+          titles = [
+            {
+              model = "M9";
+              vendor = "Mele";
+            }
+          ];
+        };
+        olimex_a20-olinuxino-lime = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime-squashfs-sdcard.img.gz";
+              sha256 = "ea0f9d5ccb53b95988a8f02474f5971f83511885c00866cc6df8d2a45de72776";
+              sha256_unsigned = "433142d6a45c1be74ea96a5cc776bd29d4248389e7f434ee530b553e94e6a363";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime-ext4-sdcard.img.gz";
+              sha256 = "9d2a0bf1b958edbd35e5a8e8f945351081ae8119cb1dc19ba4172ad3e505a1e1";
+              sha256_unsigned = "38318dcf66c36ceb4f72fc428cc283d5c8ce6f860cb7f698cf5c1633db2f8b13";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a20-olinuxino-lime"
+          ];
+          titles = [
+            {
+              model = "A20-OLinuXino-LIME";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        olimex_a20-olinuxino-lime2 = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-rtc-sunxi"
+            "kmod-usb-hid"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime2-squashfs-sdcard.img.gz";
+              sha256 = "7f7dbe84b5df3a6f1a9dceef24235ac7fb4c7b73a3e844d71ef83ed3f579be6e";
+              sha256_unsigned = "e9097742ba9bc77b49c3fb0002a021ba6a5c948502933e71b502b3a366f75612";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime2-ext4-sdcard.img.gz";
+              sha256 = "a803f93532fe0a182c54eb991de40f39b0026e487605893721ca5080bbe06eef";
+              sha256_unsigned = "7b86444d7e8a2ff67e9e4a16edacc2f18cce981a6e4f4fb133f18dce020e2035";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a20-olinuxino-lime2"
+          ];
+          titles = [
+            {
+              model = "A20-OLinuXino-LIME2";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        olimex_a20-olinuxino-lime2-emmc = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-rtc-sunxi"
+            "kmod-usb-hid"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime2-emmc";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime2-emmc-ext4-sdcard.img.gz";
+              sha256 = "1b56b9c9183ddbf3b5186c6b9b5aee0c4f6a43f7474487723f03f789517ef8ba";
+              sha256_unsigned = "58aeca665d983078499ea1ca234a5fb19e0d5ea98f3f83613e1231444d9f6721";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-lime2-emmc-squashfs-sdcard.img.gz";
+              sha256 = "68635445f0db645c6d7f8924e0077a3951308a4d445f0fcd9711aec053795c97";
+              sha256_unsigned = "a88972f69a21f1d23d78163495c98462b004a6fd1e18669b28d452435af9214f";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a20-olinuxino-lime2-emmc"
+          ];
+          titles = [
+            {
+              model = "A20-OLinuXino-LIME2";
+              variant = "eMMC";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        olimex_a20-olinuxino-micro = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-sun4i-emac"
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-micro";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-micro-squashfs-sdcard.img.gz";
+              sha256 = "d5b63c18885d97d86b5b5166aa3d22c9f72567419f594dbd3cd4e5cba426adce";
+              sha256_unsigned = "7b36d7f0b2a63f192884c0a8f953f9be713b046258c644a6ef084a6db45cb001";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-olimex_a20-olinuxino-micro-ext4-sdcard.img.gz";
+              sha256 = "2516f7790aa778a7f508e814efa9f8e814caa4b257ed55a07ee13547b2d4022e";
+              sha256_unsigned = "85c0faf11bbacc1511d1aa0d60089c7c7cfe5e4d6794acf401af975d59ee2c50";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "olimex,a20-olinuxino-micro"
+          ];
+          titles = [
+            {
+              model = "A20-OLinuXino-MICRO";
+              vendor = "Olimex";
+            }
+          ];
+        };
+        sinovoip_bananapi-m2-berry = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-brcmfmac"
+            "cypress-firmware-43430-sdio"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-berry";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-berry-squashfs-sdcard.img.gz";
+              sha256 = "3e63df5dd1afac8d800b42155df307af00613dc4bd00ce015f5a8dd643f251f9";
+              sha256_unsigned = "b8fc75572f5a5888dd7725d7e97ac0f3338524f244d3849c941247acfa2bc8fe";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-berry-ext4-sdcard.img.gz";
+              sha256 = "a7632a4ef50387b809c22337b710ae8459839e7fcb9751e16779072c2c54abfd";
+              sha256_unsigned = "3594b2890fc717065a9bfd00fb9c3c6d4ebe45499741bee8d976f590d2b89e9d";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "lemaker,bananapi-m2-berry"
+          ];
+          titles = [
+            {
+              model = "Banana Pi M2 Berry";
+              vendor = "Sinovoip";
+            }
+          ];
+        };
+        sinovoip_bananapi-m2-plus = {
+          device_packages = [
+            "kmod-leds-gpio"
+            "kmod-brcmfmac"
+            "brcmfmac-firmware-43430a0-sdio"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-plus";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-plus-squashfs-sdcard.img.gz";
+              sha256 = "ba6f12e7ef9a48fff0dcc586bd24480a55a3ec9eebfa83f21a5c79bb016f6255";
+              sha256_unsigned = "97f959a8e9822a2797b9ff18d5f5ea77e3d57848d12634041840a08e66434854";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-plus-ext4-sdcard.img.gz";
+              sha256 = "0b5685793ce089fd64d7e804f4ce457f0ca87f908033aec163073c9bffa38ef0";
+              sha256_unsigned = "64ad2fc2db7d369f67a3959ff6c946d35cf850a32e9061042556ff74343cad84";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "sinovoip,bananapi-m2-plus"
+          ];
+          titles = [
+            {
+              model = "Banana Pi M2+";
+              vendor = "Sinovoip";
+            }
+          ];
+        };
+        sinovoip_bananapi-m2-ultra = {
+          device_packages = [
+            "kmod-ata-sunxi"
+            "kmod-brcmfmac"
+            "brcmfmac-firmware-43430a0-sdio"
+            "wpad-basic-wolfssl"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-ultra";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-ultra-ext4-sdcard.img.gz";
+              sha256 = "57546fb6054b75d382719df48bfb0a6e28d188d19360642cf21aa669efe699be";
+              sha256_unsigned = "11e06bfd258d3a2e26c6d5662d7d71c2a3dda8d49c5f81eb7712b22b5fde93b6";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-sinovoip_bananapi-m2-ultra-squashfs-sdcard.img.gz";
+              sha256 = "3ecbb6f2a346f476fce733ebc4a065a68ee1c4742bec31325a4ffe87c8ef7c5c";
+              sha256_unsigned = "3c64430456beffbbe4da274cf5e34423e2c0e15405abeee6e79e46f94399c488";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "lemaker,bananapi-m2-ultra"
+          ];
+          titles = [
+            {
+              model = "Banana Pi M2 Ultra";
+              vendor = "Sinovoip";
+            }
+          ];
+        };
+        xunlong_orangepi-2 = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-2";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-2-ext4-sdcard.img.gz";
+              sha256 = "d839dfac01f5e889bb33c8ce7ca84a3df88139427b1ffaec9f7fb7248bf756eb";
+              sha256_unsigned = "4985de0a1351cb3a416728efc5dac4a6876847411f7680b10732de0f04c3ca44";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-2-squashfs-sdcard.img.gz";
+              sha256 = "403ef505968a3d5f59a239830617b2ee79d9dc561d1a372d37bbbe3778859c53";
+              sha256_unsigned = "b962fbfcb403ef6cc7bd5c135db81723e6c55bc5f40f54bc93beec91c1208729";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-2"
+          ];
+          titles = [
+            {
+              model = "Orange Pi 2";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-one = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-one";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-one-squashfs-sdcard.img.gz";
+              sha256 = "eaf60132069451be8f0ceb40482f8f37a1380091ca157cb1e65e888a227a1317";
+              sha256_unsigned = "36fd5b0c1d2973e0a450992768dd721d6eefc0620370f84ed24031a26cad1af9";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-one-ext4-sdcard.img.gz";
+              sha256 = "0e768c52f5e24ca72e1de9cee22c8758993c8b9f376fbda9f36eba04791a5b89";
+              sha256_unsigned = "3ed5e53d2415b319bece89757d95efcf7032ad4169f2b0bf27f3d07269eb3625";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-one"
+          ];
+          titles = [
+            {
+              model = "Orange Pi One";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-pc = {
+          device_packages = [
+            "kmod-gpio-button-hotplug"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-pc";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-pc-ext4-sdcard.img.gz";
+              sha256 = "a75502a4597469285c49876f20259cc97c17db0227c2ed560e5e3e9a8433d701";
+              sha256_unsigned = "08cd150bf47c5290e699e56c3b4d605ebaba343d8881ed616246a1e6c1f901ad";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-pc-squashfs-sdcard.img.gz";
+              sha256 = "4ae2865580d8f95cfb82ad05785db717d194834639146da64106d26bdde20cc4";
+              sha256_unsigned = "b6a82de321e9bc6cb9e21276a9ea7aa28838def27fa6cbc68507af1ba8561791";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-pc"
+          ];
+          titles = [
+            {
+              model = "Orange Pi PC";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-pc-plus = {
+          device_packages = [
+            "kmod-gpio-button-hotplug"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-pc-plus";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-pc-plus-ext4-sdcard.img.gz";
+              sha256 = "2aa00e69194c5ecb861014c1f3ae4a41a2822bb2c965ad10b310ae891067866d";
+              sha256_unsigned = "b5c9378365b0b60d6c11f22bf07795211ac2d5af1ed83ee36fa854ae7be5d2f4";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-pc-plus-squashfs-sdcard.img.gz";
+              sha256 = "f9a3c71302980ba31a15e26fea4c7f580fadfb3f529c2f397783f9cf7e8428e1";
+              sha256_unsigned = "5f8090e0e60150d803361bba8b22df62fcdd2d54e30fae882d401f2fba1a46ea";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-pc-plus"
+          ];
+          titles = [
+            {
+              model = "Orange Pi PC Plus";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-plus = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-plus";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-plus-squashfs-sdcard.img.gz";
+              sha256 = "14c0178b3d205e1b9f3549dc6f8f83e57237fced1f46692e62a90b8dc6af0275";
+              sha256_unsigned = "c5928b2a8ea74fc91f6f645a363a4ed278af1b0a704c1e6ae70cf411ec7bc50b";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-plus-ext4-sdcard.img.gz";
+              sha256 = "c9c5a0d16468148c82588bb4b7955a55dab41e524b5fd2800f38462b6b2e08ea";
+              sha256_unsigned = "fc748a0b58c7a935ea04390bf53ace7b3c1f7514687920b13fbefe2d6ae38b40";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-plus"
+          ];
+          titles = [
+            {
+              model = "Orange Pi Plus";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-r1 = {
+          device_packages = [
+            "kmod-usb-net-rtl8152"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-r1";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-r1-ext4-sdcard.img.gz";
+              sha256 = "f10a616007022c7d46b68c0a900df8c543d87a8dccdc2407c66a0b1ff63c7f75";
+              sha256_unsigned = "ae4f5c1865fc308fea067b6e72832f829ef11cca2ddf738325241a75cebb7965";
+              type = "sdcard";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-r1-squashfs-sdcard.img.gz";
+              sha256 = "d2007ceeff767728bc47aba67d5a2e5da42917ae0a876824beaf3e4d3299637f";
+              sha256_unsigned = "b76788f9c18d4c73314397c75bd42688a345d1af8c33c2bf92e360fefd531579";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-r1"
+          ];
+          titles = [
+            {
+              model = "Orange Pi R1";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+        xunlong_orangepi-zero = {
+          device_packages = [
+            "kmod-rtc-sunxi"
+          ];
+          image_prefix = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-zero";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-zero-squashfs-sdcard.img.gz";
+              sha256 = "937f23e3198536ac2ff2364991e169ab71a1e10de08e3c4ed6b25297a8fd0486";
+              sha256_unsigned = "dbdffb067c8aadbdbdfcf1ebc273c818008f7e9bfb5dce52febe8ceeb9adedcf";
+              type = "sdcard";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-22.03.7-sunxi-cortexa7-xunlong_orangepi-zero-ext4-sdcard.img.gz";
+              sha256 = "984440169c2a4f4637c1c0b7fff8ac4a0789cc31ad71c1fab185f0ab5066e1b6";
+              sha256_unsigned = "e1eda2a1b5e262ced0d5186fe449d6f78e5a121ac68f041695462c9b09b05864";
+              type = "sdcard";
+            }
+          ];
+          supported_devices = [
+            "xunlong,orangepi-zero"
+          ];
+          titles = [
+            {
+              model = "Orange Pi Zero";
+              vendor = "Xunlong";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1721082354;
+      target = "sunxi/cortexa7";
+      version_code = "r20341-591b7e93d3";
+      version_number = "22.03.7";
+    };
     cortexa8 = {
       arch_packages = "arm_cortex-a8_vfpv3";
       default_packages = [
