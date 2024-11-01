@@ -12,5 +12,5 @@ jobs:
         steps:
             - uses: flakestry/flakestry-publish@main
               with:
-                version: "${{ github.ref_name }}"
+                version: "v0.0.0"
                 ignoreConflicts: true
