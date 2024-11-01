@@ -10,7 +10,8 @@ jobs:
             id-token: "write"
             contents: "read"
         steps:
-            - uses: flakestry/flakestry-publish@main
+            - uses: flakestry/flakestry-publish@pull/6/head
               with:
-                version: "${{ github.ref_name }}"
+                ref: "${{ github.ref_name }}"
+                version: "v0.0.0"
                 ignoreConflicts: true
