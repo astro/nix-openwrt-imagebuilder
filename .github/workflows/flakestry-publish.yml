@@ -12,5 +12,4 @@ jobs:
         steps:
             - uses: flakestry/flakestry-publish@main
               with:
-                version: "v0.0.0"
                 ignoreConflicts: true
