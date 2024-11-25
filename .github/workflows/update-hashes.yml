@@ -36,7 +36,7 @@ jobs:
       - name: Update latest release
         shell: bash
         run: |
-          nix eval -f generate-latest-release.nix > latest-release.nix
+          nix run .#generate-latest-release
           git add latest-release.nix
           git commit -m "latest-release: update" || true
       - name: Cache OpenWrt profile information
