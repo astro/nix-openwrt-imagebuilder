@@ -1,12 +1,12 @@
-{ self
-, pkgs
+{ pkgs,
+  generate-hashes
 }:
 pkgs.writeShellApplication {
   name = "generate-all-hashes";
   runtimeInputs = [
     pkgs.curl
     pkgs.jq
-    self.packages.${pkgs.system}.generate-hashes
+    generate-hashes
   ];
 
   text = ''
