@@ -59,7 +59,7 @@
         profiles = import ./profiles.nix;
       };
 
-      hydraJobs = builtins.mapAttrs (system: _: { inherit (self.packages.${system}) example-image; }) config.allSystems;
+      hydraJobs = { inherit (self.packages.x86_64-linux) example-image; };
     };
   });
 
