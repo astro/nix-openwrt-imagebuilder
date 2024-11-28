@@ -1,9 +1,9 @@
 { pkgs ? import <nixpkgs> {}
-, profiles ? import ./profiles.nix { inherit pkgs; }
 , build ? import ./builder.nix
 }:
 
 build {
+  inherit pkgs;
   target = "x86";
   variant = "64";
   profile = "generic";
