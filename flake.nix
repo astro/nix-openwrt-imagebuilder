@@ -17,6 +17,7 @@
     perSystem = { pkgs, ... }: rec {
       packages = rec {
         profiles-list = pkgs.callPackage ./profiles-list.nix { };
+        generate-latest-release = pkgs.callPackage ./generate-latest-release.nix { };
         generate-hashes = pkgs.callPackage ./generate-hashes.nix { };
         generate-all-hashes = pkgs.callPackage ./generate-all-hashes.nix { inherit generate-hashes; };
         cached-profiles = pkgs.callPackage ./cached-profiles.nix { };
