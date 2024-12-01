@@ -258,11 +258,11 @@
   targets."mediatek"."filogic".packagesArch = "aarch64_cortex-a53";
   targets."x86"."generic".sha256 = "sha256-P8jxaMJq1hsHjwwOcM81vJzIHnZcyaKDJPh7Sfrw1Rk=";
   targets."x86"."generic".packagesArch = "i386_pentium4";
-  packages."i386_pentium4"."base".sha256 = "sha256-AzcB9ji+8ExceALlwb3D1Co6mu7aaPvjZ7Mi49l4IPw=";
-  packages."i386_pentium4"."luci".sha256 = "sha256-F5rGFIxlzRBeHNABQHOwW3Z1LTYv3L2l/xscNGM+ZZM=";
-  packages."i386_pentium4"."packages".sha256 = "sha256-t5h2c9TMmlX/hPZbNaRwtirIL06bT79MX+zh6kv+QVk=";
-  packages."i386_pentium4"."routing".sha256 = "sha256-h0ro68TVEsh33WL5ueiAZmP7OhMNVq9j2HKbO7NdxAc=";
-  packages."i386_pentium4"."telephony".sha256 = "sha256-0eUUsngIuF1eba0b9ZT19zz9Mz8t8O1Vu9qk2YUVrhM=";
+  packages."i386_pentium4"."base".sha256 = "sha256-xm+MriAdUdoQJZJS+MqEB6NtQf9lJ0lb01PyqiBy2Qo=";
+  packages."i386_pentium4"."luci".sha256 = "sha256-W53bS0ZslLcBqwz2Yy/VN3hqCQM2UO/PJVISqllh38E=";
+  packages."i386_pentium4"."packages".sha256 = "sha256-GXQd5Xo7IH6N75VeKsPHRiZEAWNgj+zT+FGOAqHKcMM=";
+  packages."i386_pentium4"."routing".sha256 = "sha256-AWghoR9XPl0m4sbbcJrn1hipBX+oEX2ZhuT+9sco+MM=";
+  packages."i386_pentium4"."telephony".sha256 = "sha256-M2uIqoIrXYB2krC/YfmSIC15M4N2QzUy95D3SF43Zbc=";
   targets."x86"."64".sha256 = "sha256-99ck8zoNLJqyZzDl9Fdw+6aecm5rNccH7I6EwutZERg=";
   targets."x86"."64".packagesArch = "x86_64";
   packages."x86_64"."base".sha256 = "sha256-hb+wAz/gqbNXj6Gk3+NUvwRV+IrL/A2aUyH4SvQDYV8=";
