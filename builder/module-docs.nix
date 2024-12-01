@@ -1,5 +1,6 @@
 { pkgs, lib, ... }:
 let
+  # Inspired by https://github.com/astro/microvm.nix/blob/e8d5f12b834a59187c7ec147a8952a0567f97939/pkgs/doc.nix
   extraConfig = { lib, ... }: {
     options._module.args = lib.mkOption {
       internal = true; # Hide `_module` from the docs
