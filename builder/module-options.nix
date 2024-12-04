@@ -3,11 +3,17 @@
 let
   latestRelease = import ../latest-release.nix;
 
-  releaseHashes = import ../hashes/${config.release}.nix;
-  hashedTarget = releaseHashes.targets.${config.hardware.target}.${config.hardware.subtarget};
-  hashedFeeds = releaseHashes.packages.${config.hardware.arch};
+  releaseHashesFile = ../hashes/${config.release}.nix;
+  releaseHashes = 
+    if (builtins.pathExists releaseHashesFile)
+    then import releaseHashesFile
+    else builtins.throw "No hashed information found about OpenWRT ${config.release}";
+  hashedTarget = releaseHashes.targets.${config.hardware.target}.${config.hardware.subtarget} or
+    (builtins.throw "No hashed information for OpenWRT ${config.release} found for ${config.hardware.target}/${config.hardware.subtarget}");
+  hashedFeeds = releaseHashes.packages.${config.hardware.arch} or
+    (builtins.throw "No hashed information for OpenWRT ${config.release} about packages found for ${config.hardware.arch} architecture");
 
-  defaultSumsFileSha256 = hashedTarget.sha256;
+  defaultSumsFileHash = hashedTarget.sha256;
 
   # TODO: get rid of `pkgs`
   profiles = import ../profiles.nix { pkgs = null; inherit (config) release; };
@@ -203,9 +209,9 @@ in
       };
     };
 
-    sumsFileSha256 = lib.mkOption {
+    sumsFileHash = lib.mkOption {
       type = lib.types.nonEmptyStr;
-      default = defaultSumsFileSha256;
+      default = defaultSumsFileHash;
       example = "sha256-O/7C9+OlfTx+iSao/GITKgPktk9iqchRTQNNYsLil2g=";
       internal = true;
       description = ''
@@ -213,7 +219,7 @@ in
       '';
     };
 
-    feedsSha256 = lib.mkOption {
+    feedsHash = lib.mkOption {
       type = lib.types.attrsOf lib.types.raw;
       default = hashedFeeds;
       example = lib.options.literalExpression ''

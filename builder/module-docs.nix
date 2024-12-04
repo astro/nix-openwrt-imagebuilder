@@ -8,9 +8,6 @@ let
 
     config._module = {
       check = false; # Don't check for unset variables
-      args = {
-        inherit pkgs lib; # Provide pkgs and lib to modules
-      };
     };
   };
 
