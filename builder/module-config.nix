@@ -23,7 +23,9 @@ let
     let
       package = allPackages.${pname};
     in
-    lib.optional (package.type == "real") ''[ -e "packages/${package.filename}" ] || ln -s ${package.file} "packages/${package.filename}"'';
+    lib.optional (package.type == "real") ''
+      [ -e "packages/${package.filename}" ] || ln -s ${package.file} "packages/${package.filename}"
+    '';
 
   symlinkPackages = pkgs.writeScript "symlink-openwrt-packages" (
     lib.concatLines (
@@ -31,14 +33,16 @@ let
     )
   );
 
-  mkCopyStatement = file: ''(
+  mkCopyStatement = file: ''
+    (
      target_rel=${lib.escapeShellArg file.target}
      target="files/''${target_rel#/}"
      ${lib.optionalString (lib.pathIsRegularFile file.source) ''
-        mkdir -p $(dirname "''${target}")
+        mkdir -p "$(dirname "''${target}")"
      ''}
-     cp --recursive --no-preserve=all "${file.source}" "''${target}"
-    )'';
+     cp -r --no-preserve=all "${file.source}" "''${target}"
+    )
+  '';
 
   copyFiles = pkgs.writeScript "copy-openwrt-files" (
     lib.concatLines (builtins.map mkCopyStatement config.files)
@@ -72,7 +76,7 @@ let
   src =
     let
       inherit (pkgs.stdenv.hostPlatform) uname;
-      imageBuilderPrefix = "openwrt-imagebuilder-${if config.release == "snapshot" then "" else "${config.release}-"}";
+      imageBuilderPrefix = "openwrt-imagebuilder-${lib.optionalString (config.release != "snapshot") "${config.release}-"}";
       baseFileName = "${imageBuilderPrefix}${config.hardware.target}-${config.hardware.subtarget}.${uname.system}-${uname.processor}";
       possibleFileNames = builtins.map (extension: "${baseFileName}${extension}") [ ".tar.zst" ".tar.xz" ];
       matches = builtins.filter (fileName: builtins.hasAttr fileName variantFiles) possibleFileNames;
@@ -83,7 +87,6 @@ let
 in
 {
 
-  ###### implementation
   config = {
     build.out = pkgs.stdenv.mkDerivation ({
       inherit name src;

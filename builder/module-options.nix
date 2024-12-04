@@ -37,7 +37,6 @@ let
   };
 in
 {
-  ###### interface
   # Inspired by https://git.sr.ht/~tomeon/nix-openwrt-imagebuilder-module/tree/6c2a5fc19c5a6fd532b99c69e5b4ce14adfd80fe/item/module.nix
   options = {
     release = lib.mkOption {
