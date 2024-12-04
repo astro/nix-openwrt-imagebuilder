@@ -2,11 +2,12 @@
 let
   inherit (import ../files.nix {
     inherit pkgs;
-    inherit (config) release feedsSha256;
+    inherit (config) release;
     inherit (config.hardware) target;
     variant = config.hardware.subtarget;
     packagesArch = config.hardware.arch;
-    sha256 = config.sumsFileSha256;
+    feedsSha256 = config.feedsHash;
+    sha256 = config.sumsFileHash;
   }) variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
 
 
@@ -83,7 +84,11 @@ let
     in
     if matches != [ ]
     then builtins.getAttr (builtins.elemAt matches 0) variantFiles
-    else throw "No valid image builder found!";
+    else
+      builtins.throw '' 
+        No valid image builder found!
+        Expected filenames: ${lib.concatStringsSep ", " possibleFileNames}
+      '';
 in
 {
 
