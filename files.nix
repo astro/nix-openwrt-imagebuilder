@@ -3,10 +3,13 @@
 , release ? import ./latest-release.nix
 # OpenWRT target
 , target
+# TODO: rename to subtarget
 , variant ? "generic"
 # Checksum of the `sha256sums` file
+# TODO: rename to sha56sumsHash
 , sha256
 # Checksum of a feed's `Packages` file
+# TODO: rename to feedsHash
 , feedsSha256
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? null

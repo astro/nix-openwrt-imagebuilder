@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = inputs@{ flake-parts, systems, ... }: flake-parts.lib.mkFlake { inherit inputs; } ({ config, self, ... }: {
+  outputs = inputs@{ flake-parts, systems, ... }: flake-parts.lib.mkFlake { inherit inputs; } ({ config, self, lib, ... }: {
     systems = import systems;
 
     perSystem = { pkgs, ... }: rec {
@@ -22,9 +22,11 @@
         generate-all-hashes = pkgs.callPackage ./generate-all-hashes.nix { inherit generate-hashes; };
         cached-profiles = pkgs.callPackage ./cached-profiles.nix { };
 
+        module-docs = pkgs.callPackage ./builder/module-docs.nix { };
+
         example-image =
           let
-            image = import ./example.nix rec {
+            image = import ./examples/example.nix rec {
               inherit pkgs;
               profiles = self.lib.profiles {
                 inherit pkgs;
@@ -39,7 +41,7 @@
 
         example-x86-64-image =
           let
-            image = import ./example-x86-64.nix {
+            image = import ./examples/example-x86-64.nix {
               inherit pkgs;
               inherit (self.lib) build;
             };
@@ -48,7 +50,17 @@
           pkgs.runCommand "example-x86-64-image" { } ''
             ln -s ${image} $out
           '';
+
+        example-image-module =
+          let
+            image = pkgs.callPackage ./examples/example-module.nix { inherit (self.lib) build-module; };
+          in
+          # Wrap `image` once to avoid `nix flake show` breaking on IFD
+          pkgs.runCommand "example-image-module" { } ''
+            ln -s ${image} $out
+          '';
       };
+
 
       checks = packages;
     };
@@ -58,6 +70,8 @@
         build = import ./builder.nix;
 
         profiles = import ./profiles.nix;
+
+        build-module = import ./builder/build-module.nix { inherit lib; };
       };
 
       hydraJobs = { inherit (self.packages.x86_64-linux) example-image; };
