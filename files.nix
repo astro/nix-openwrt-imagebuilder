@@ -8,6 +8,8 @@
 , sha256
 # Checksum of a feed's `Packages` file
 , feedsSha256
+# Attrset where key is kmodsTarget and value is checksum of `Packages` file. Required for OpenWRT >=24
+, kmodsSha256 ? {}
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? null
 }:
@@ -87,25 +89,52 @@ let
 
   baseUrl = "https://downloads.openwrt.org";
   releaseUrl = if release == "snapshot" then "${baseUrl}/snapshots" else "${baseUrl}/releases/${release}";
-  variantFiles = fetchSums "${releaseUrl}/targets/${target}/${variant}" sha256;
+  targetVariantUrl = "${releaseUrl}/targets/${target}/${variant}";
+
+  variantFiles = fetchSums targetVariantUrl sha256;
+
+  profiles =
+    if variantFiles ? "profiles.json"
+    then lib.importJSON variantFiles."profiles.json"
+    else null;
+
+  arch =
+    if packagesArch == null
+    then profiles.arch_packages
+    else packagesArch;
+
+  kernelInfo = profiles.linux_kernel or (builtins.throw "No Kernel info found in profiles.json!");
+
+  kmodsTarget = "${kernelInfo.version}-${kernelInfo.release}-${kernelInfo.vermagic}";
+
+  kmodsVirtualFeed = lib.optionalAttrs (release == "snapshot" || lib.versionAtLeast release "24") {
+    "kmods" = kmodsSha256.${kmodsTarget} or (builtins.throw "Failed to resolve Kmods for ${kmodsTarget}");
+  };
+
+  allFeeds = feedsSha256 // kmodsVirtualFeed;
+
+  feedUrl = feed:
+    if (feed == "kmods")
+    then "${targetVariantUrl}/kmods/${kmodsTarget}"
+    else "${releaseUrl}/packages/${arch}/${feed}";
 
   feedsPackagesFile = builtins.mapAttrs (feed: { sha256 }:
     fetchurl {
-      url = "${releaseUrl}/packages/${arch}/${feed}/Packages";
+      url = "${feedUrl feed}/Packages";
       inherit sha256;
     }
-  ) feedsSha256;
+  ) allFeeds;
 
   packagesByFeed = builtins.mapAttrs (feed: packagesFile:
-    parsePackages "${releaseUrl}/packages/${arch}/${feed}" (builtins.readFile packagesFile)
+    parsePackages (feedUrl feed) (builtins.readFile packagesFile)
   ) feedsPackagesFile;
 
   corePackages =
     parsePackages
-      "${releaseUrl}/targets/${target}/${variant}/packages"
+      "${targetVariantUrl}/packages"
       (builtins.readFile variantFiles."packages/Packages");
 
-  realPackages =
+  realPackages = 
     (builtins.foldl' (a: b: a // b) { } (builtins.attrValues packagesByFeed))
     // corePackages;
 
@@ -190,14 +219,6 @@ let
     in
     deps: builtins.attrNames (builtins.foldl' addDep { } (applyMinusDeps deps));
 
-  profiles =
-    if variantFiles ? "profiles.json"
-    then lib.importJSON variantFiles."profiles.json"
-    else null;
-
-  arch = if packagesArch == null
-         then profiles.arch_packages
-         else packagesArch;
 
 in {
   inherit allPackages corePackages packagesByFeed expandDeps variantFiles profiles arch;

@@ -21,6 +21,8 @@
   (
     import ./hashes/${release}.nix
   ).packages.${packagesArch}
+# Attrset where key is kmodsTarget and value is checksum of `Packages` file. Required for OpenWRT >=24
+, kmodsSha256 ? {}
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
 # Include extra files
@@ -36,8 +38,16 @@
 
 let
   inherit (pkgs) lib;
+
+  maybeKmodsSha256 = lib.optionalAttrs (lib.versionAtLeast release "24") (
+    if kmodsSha256 != { }
+    then kmodsSha256
+    else (import ./hashes/${release}.nix).kmods.${target}.${variant} or (builtins.throw "Failed to load Kmods hashes for ${target}/${variant}!")
+  );
+
   inherit (import ./files.nix {
     inherit pkgs release target variant sha256 feedsSha256 packagesArch;
+    kmodsSha256 = maybeKmodsSha256;
   }) variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
 
   requiredPackages = profiles.default_packages or (
@@ -57,6 +67,7 @@ let
     "sha256"
     "packagesArch"
     "feedsSha256"
+    "kmodsSha256"
     "packages"
     "files"
     "disabledServices"
