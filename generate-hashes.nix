@@ -7,6 +7,8 @@ pkgs.writeShellApplication {
     pkgs.nix
   ];
 
+  bashOptions = [ "nounset" "pipefail" ];
+
   text = ''
     RELEASE="''${1:-${import ./latest-release.nix}}"
     FEEDS="base luci packages routing telephony"
