@@ -22,7 +22,7 @@
         generate-all-hashes = pkgs.callPackage ./generate-all-hashes.nix { inherit generate-hashes; };
         cached-profiles = pkgs.callPackage ./cached-profiles.nix { };
 
-        module-docs = pkgs.callPackage ./builder/module-docs.nix { };
+        inherit (pkgs.callPackage ./builder/module-docs.nix { }) modules-docs modules-json;
 
         example-image =
           let
