@@ -1,31 +1,64 @@
 { pkgs, lib, ... }:
 let
-  # Inspired by https://github.com/astro/microvm.nix/blob/e8d5f12b834a59187c7ec147a8952a0567f97939/pkgs/doc.nix
-  extraConfig = { lib, ... }: {
-    options._module.args = lib.mkOption {
-      internal = true; # Hide `_module` from the docs
-    };
+  allModules = [ ./module-options.nix ];
 
-    config._module = {
-      check = false; # Don't check for unset variables
+  mkNixosOptionsDoc = module: pkgs.nixosOptionsDoc {
+    inherit (lib.evalModules {
+      modules = [
+        ({ lib, ... }: {
+          options._module.args = lib.mkOption {
+            internal = true; # Hide `_module` from the docs
+          };
+
+          config._module = {
+            check = false; # Don't check for unset variables
+          };
+        })
+
+        module
+      ];
+    }) options;
+
+    transformOptions = opt: opt // {
+      declarations = builtins.map
+        (path:
+          let
+            root = builtins.toString ../.;
+            relativePath = lib.removePrefix root path;
+          in
+          if lib.hasPrefix root path
+          then {
+            name = "nix-openwrt-imagebuilder${relativePath}";
+            url = "https://github.com/astro/nix-openwrt-imagebuilder/blob/main${relativePath}";
+          }
+          else path
+        )
+        opt.declarations;
     };
   };
 
-  optionsFor = module:
-    (lib.evalModules {
-      modules = [
-        extraConfig
-        module
-      ];
-    }).options;
+  allOptions = builtins.map
+    (path: {
+      name = builtins.replaceStrings [ ".nix" ] [ "" ] (builtins.baseNameOf path);
+      options = mkNixosOptionsDoc path;
+    })
+    allModules;
 
-  makeOptionsDoc = module: (pkgs.nixosOptionsDoc {
-    options = optionsFor module;
-    transformOptions = options: builtins.removeAttrs options [ "declarations" ];
-  }).optionsCommonMark;
+  packages =
+    let
+      mkDocsSymlink = { name, options }: "ln -s ${options.optionsCommonMark} $out/${name}.md";
+
+      mkJSONSymlink = { name, options }: "ln -s ${options.optionsJSON}/share/doc/nixos/options.json $out/${name}.json";
+
+      mkPackage = mkSymlink: suffix: pkgs.runCommand "nix-openwrt-imagebuilder-modules-${suffix}" { } ''
+        mkdir $out
+
+        ${lib.concatLines (builtins.map mkSymlink allOptions)}
+      '';
+    in
+    {
+      modules-docs = mkPackage mkDocsSymlink "docs";
+      modules-json = mkPackage mkJSONSymlink "json";
+    };
 in
-pkgs.runCommand "nix-openwrt-imagebuilder-module-docs" { } ''
-  mkdir $out
-
-  ln -s ${makeOptionsDoc ./module-options.nix} $out/module.md
-''
+packages
