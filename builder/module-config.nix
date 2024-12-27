@@ -7,6 +7,7 @@ let
     variant = config.hardware.subtarget;
     packagesArch = config.hardware.arch;
     feedsSha256 = config.feedsHash;
+    kmodsSha256 = config.kmodsHash;
     sha256 = config.sumsFileHash;
   }) variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
 

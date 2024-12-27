@@ -4,7 +4,7 @@ let
   latestRelease = import ../latest-release.nix;
 
   releaseHashesFile = ../hashes/${config.release}.nix;
-  releaseHashes = 
+  releaseHashes =
     if (builtins.pathExists releaseHashesFile)
     then import releaseHashesFile
     else builtins.throw "No hashed information found about OpenWRT ${config.release}";
@@ -12,6 +12,11 @@ let
     (builtins.throw "No hashed information for OpenWRT ${config.release} found for ${config.hardware.target}/${config.hardware.subtarget}");
   hashedFeeds = releaseHashes.packages.${config.hardware.arch} or
     (builtins.throw "No hashed information for OpenWRT ${config.release} about packages found for ${config.hardware.arch} architecture");
+  kmodsFeeds =
+    if (lib.versionAtLeast config.release "24")
+    then releaseHashes.kmods.${config.hardware.target}.${config.hardware.subtarget} or
+      (builtins.throw "No hashed information for OpenWRT ${config.release} about Kmods found for ${config.hardware.target}/${config.hardware.subtarget}")
+    else { };
 
   defaultSumsFileHash = hashedTarget.sha256;
 
@@ -232,6 +237,25 @@ in
       internal = true;
       description = ''
         A set of "feeds", where each value is a `sha256` sum of `Packages` file.
+      '';
+    };
+
+    kmodsHash = lib.mkOption {
+      type = lib.types.attrsOf lib.types.raw;
+      default = kmodsFeeds;
+      example = lib.options.literalExpression ''
+        {
+          "6.6.67-1-a19d0a45cee591b95352ac365f8a784b".sha256 = "sha256-23n2qV9PDubOeGEf43i29o+qL5B9ZU4wQOYoanfPFSQ=";
+          "6.6.67-1-316f788de839e861f7fea23702a4776b".sha256 = "sha256-cM1S2NLATkxL3TzPzkCD1fEe36xf5C7sF4TPVPDIBGc=";
+        }
+      '';
+      internal = true;
+      description = ''
+        A "feed", where each key is a kernel version and each value is a `sha256` sum of `Packages`.
+        
+        :::{.warning}
+        Must be created per target + subtarget combination.
+        :::
       '';
     };
 
