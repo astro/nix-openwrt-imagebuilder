@@ -115,7 +115,7 @@
   packages."arm_cortex-a7_neon-vfpv4"."packages".sha256 = "";
   packages."arm_cortex-a7_neon-vfpv4"."routing".sha256 = "";
   packages."arm_cortex-a7_neon-vfpv4"."telephony".sha256 = "";
-  targets."tegra"."generic".sha256 = "sha256-thU54tDtPkuOYVUjfPTZR7JmDvS7F727XHIp/EKuDZ8=";
+  targets."tegra"."generic".sha256 = "sha256-x7iygAsbKm0cysKTyjpRwldAjwIgP6n+Fp1Qg5EVywI=";
   kmods."tegra"."generic"."6.6.67-1-71405aaadb50ebbcdfc33074840f91af".sha256 = "";
   targets."tegra"."generic".packagesArch = "arm_cortex-a9_vfpv3-d16";
   packages."arm_cortex-a9_vfpv3-d16"."base".sha256 = "";
@@ -129,7 +129,7 @@
   targets."imx"."cortexa7".sha256 = "sha256-iBngfkzSZitwZhuSDGLoxizeiyUS3G6ugPHpH+YFS+8=";
   kmods."imx"."cortexa7"."6.6.67-1-1eb3cdc17a7d3b71e5a02f07e4bb7685".sha256 = "";
   targets."imx"."cortexa7".packagesArch = "arm_cortex-a7_neon-vfpv4";
-  targets."imx"."cortexa9".sha256 = "sha256-CtVuKSALY0UNO3Jy0kKi9RCQL6h2iWGFdGAhzfBZcLA=";
+  targets."imx"."cortexa9".sha256 = "sha256-hwTrM9Lv4VKBaZj8b7m49Qs7cPbjuOdRQ9gFJNC9dAI=";
   kmods."imx"."cortexa9"."6.6.67-1-f21b30be9b41191e3a8fea091257f34d".sha256 = "";
   targets."imx"."cortexa9".packagesArch = "arm_cortex-a9_neon";
   packages."arm_cortex-a9_neon"."base".sha256 = "";
@@ -137,7 +137,7 @@
   packages."arm_cortex-a9_neon"."packages".sha256 = "";
   packages."arm_cortex-a9_neon"."routing".sha256 = "";
   packages."arm_cortex-a9_neon"."telephony".sha256 = "";
-  targets."ramips"."mt7621".sha256 = "sha256-7LX1UCLw6NOzHsKSy+qi32NFTBi/woDtLeXj/pqMH5s=";
+  targets."ramips"."mt7621".sha256 = "sha256-J99Oc/AjHotJXj/gEHXXHocxo+kBVSt7nU/P0HNOgSw=";
   kmods."ramips"."mt7621"."6.6.67-1-f58a757e20fe0bd89ce969c5b7301fa1".sha256 = "";
   targets."ramips"."mt7621".packagesArch = "mipsel_24kc";
   packages."mipsel_24kc"."base".sha256 = "";
@@ -166,7 +166,7 @@
   targets."ath79"."mikrotik".sha256 = "sha256-LyADp9PfH6OocP1gsW8fcP/2bnvjr/V40Ipb8KazrGY=";
   kmods."ath79"."mikrotik"."6.6.67-1-cd970e397536f1cf6e63ead4c19eec6e".sha256 = "";
   targets."ath79"."mikrotik".packagesArch = "mips_24kc";
-  targets."ath79"."generic".sha256 = "sha256-4brxQvzE+1MwN3LjcqAVNSudXezmi8vLwtp82x0BYC8=";
+  targets."ath79"."generic".sha256 = "sha256-PSo8BT251TGCcE2oE5EN5PQ4HL9YmToHDgoa134pGoo=";
   kmods."ath79"."generic"."6.6.67-1-e7ee63eda86ecc975910436829ebb719".sha256 = "";
   targets."ath79"."generic".packagesArch = "mips_24kc";
   targets."ath79"."tiny".sha256 = "sha256-Tn55jDqm3quSTMdp0Ckf+uaK6zToPuFpAeSkqf5vdVg=";
