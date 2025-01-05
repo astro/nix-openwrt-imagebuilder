@@ -1,0 +1,51 @@
+name: Update module docs
+on:
+  workflow_dispatch: # allows manual triggering
+
+jobs:
+  update-docs:
+    if: github.repository_owner == 'astro'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Nix
+        uses: cachix/install-nix-action@v23
+        with:
+          extra_nix_config: |
+            access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set environment variables
+        shell: bash
+        run: |
+          echo "GIT_AUTHOR_NAME=github-actions[bot]" >> $GITHUB_ENV
+          echo "GIT_AUTHOR_EMAIL=<github-actions[bot]@users.noreply.github.com>" >> $GITHUB_ENV
+          echo "GIT_COMMITTER_NAME=github-actions[bot]" >> $GITHUB_ENV
+          echo "GIT_COMMITTER_EMAIL=<github-actions[bot]@users.noreply.github.com>" >> $GITHUB_ENV
+
+      - name: Update docs
+        shell: bash
+        run: |
+          nix run .#update-module-docs
+
+      - name: Check for changes
+        id: git-check
+        shell: bash
+        run: |
+          git diff --quiet || echo "changes_detected=true" >> $GITHUB_OUTPUT
+
+      - name: Commit changes
+        if: steps.git-check.outputs.changes_detected
+        shell: bash
+        run: |
+          git commit --message "Update module docs" || true
+
+      - name: Push changes
+        if: steps.git-check.outputs.changes_detected
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

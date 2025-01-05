@@ -56,9 +56,22 @@ let
         ${lib.concatLines (builtins.map mkSymlink allOptions)}
       '';
     in
-    {
+    rec {
       modules-docs = mkPackage mkDocsSymlink "docs";
       modules-json = mkPackage mkJSONSymlink "json";
+
+      update-module-docs = pkgs.writeShellApplication {
+        name = "update-module-docs";
+        runtimeInputs = [ pkgs.gitMinimal ];
+        text = ''
+          ROOT=$(git rev-parse --show-toplevel)
+          mkdir -p "$ROOT/docs"
+
+          for file in ${modules-docs}/*.md; do
+            cp --no-preserve=mode,ownership "$file" "$ROOT/docs/"
+          done
+        '';
+      };
     };
 in
 packages
