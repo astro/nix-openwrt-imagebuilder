@@ -30340,6 +30340,761 @@
       version_code = "r28427-6df0e3d02a";
       version_number = "24.10.0";
     };
+    xway = {
+      arch_packages = "mips_24kc";
+      default_packages = [
+        "base-files"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall4"
+        "fstools"
+        "kmod-gpio-button-hotplug"
+        "kmod-leds-gpio"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-mbedtls"
+        "logd"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd-ujail"
+        "swconfig"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      linux_kernel = {
+        release = "1";
+        vermagic = "3c358c689127993985b1c1cfb22b86b5";
+        version = "6.6.73";
+      };
+      metadata_version = 1;
+      profiles = {
+        arcadyan_arv7506pw11 = {
+          device_packages = [
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-b"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-rt2800-pci"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7506pw11";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7506pw11-squashfs-sysupgrade.bin";
+              sha256 = "e9f5d43e1e75f54cfa745301411d214d617eae6a72ec5897ffbcb4ce143d421e";
+              sha256_unsigned = "33bcae39fea236d76dd1ffe4155d82bf3dc8b76d19e512b5732c7b6202991fdf";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7506pw11-initramfs-kernel.bin";
+              sha256 = "7c8d1822d9fc6aebf7e53cd2d7b474108e8eed5de92dab2b25fd7e4c2c7b5aa5";
+              sha256_unsigned = "7c8d1822d9fc6aebf7e53cd2d7b474108e8eed5de92dab2b25fd7e4c2c7b5aa5";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv7506pw11"
+            "ARV7506PW11"
+          ];
+          titles = [
+            {
+              model = "ARV7506PW11";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "IAD 4421";
+              vendor = "Alice/O2";
+            }
+          ];
+        };
+        arcadyan_arv7510pw22 = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-a"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "kmod-rt2800-pci"
+            "wpad-basic-mbedtls"
+            "kmod-usb-uhci"
+            "kmod-usb2"
+            "kmod-usb2-pci"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7510pw22";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7510pw22-initramfs-kernel.bin";
+              sha256 = "9b2d6edb93ca1895d206058d6a6ff78c2cbf50c41ab3685bb348ec5c37c9684d";
+              sha256_unsigned = "9b2d6edb93ca1895d206058d6a6ff78c2cbf50c41ab3685bb348ec5c37c9684d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7510pw22-squashfs-sysupgrade.bin";
+              sha256 = "f26a89f70ba6f3a1457af3a0263ad399ea9ab20d7ad373b586b34899bd991b90";
+              sha256_unsigned = "3462b6f22a2efe40f56e590499389bc5dbefb192cd217027b8dc6f46c8cc208c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv7510pw22"
+            "ARV7510PW22"
+          ];
+          titles = [
+            {
+              model = "ARV7510PW22";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "ARV7510PW22";
+              vendor = "Astoria Networks";
+            }
+          ];
+        };
+        arcadyan_arv7518pw = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-a"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7518pw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7518pw-squashfs-sysupgrade.bin";
+              sha256 = "620171619bd073b45210a55d6ae63ce4ef5db2e073b6c9835e8cd850b1f202f3";
+              sha256_unsigned = "02ac8b6712833968c57471def330f0dc44195db165f0fedb06d490b6cef65ae6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7518pw-initramfs-kernel.bin";
+              sha256 = "62e6d1a9bf3ef5da42c0a6b184a7adfa07e87e16a9759bd426a222bd3c5d949a";
+              sha256_unsigned = "62e6d1a9bf3ef5da42c0a6b184a7adfa07e87e16a9759bd426a222bd3c5d949a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv7518pw"
+            "ARV7518PW"
+          ];
+          titles = [
+            {
+              model = "ARV7518PW";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "ARV7518PW";
+              vendor = "Astoria Networks";
+            }
+          ];
+        };
+        arcadyan_arv7519pw = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-a"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-rt2800-pci"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7519pw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7519pw-squashfs-sysupgrade.bin";
+              sha256 = "3d09147946b2a57011647f3042a76e9c8d969a77b0bb19870a5d68441c4d184a";
+              sha256_unsigned = "f986d3bff01af133d26606015e392dc3a0dfbb19ddd87224f2a87c787ef3ebeb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv7519pw-initramfs-kernel.bin";
+              sha256 = "c6bc2ea0b2294c4b977324bcbb1b9fd751c611163cd359933a511ecbe9317c34";
+              sha256_unsigned = "c6bc2ea0b2294c4b977324bcbb1b9fd751c611163cd359933a511ecbe9317c34";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv7519pw"
+            "ARV7519PW"
+          ];
+          titles = [
+            {
+              model = "ARV7519PW";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "ARV7519PW";
+              vendor = "Astoria Networks";
+            }
+          ];
+        };
+        arcadyan_arv752dpw = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-b"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "kmod-rt2800-pci"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv752dpw";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv752dpw-squashfs-sysupgrade.bin";
+              sha256 = "912da45465706a4e3bdfcc21296c62196d3a21608a926e9e167912353711fcd8";
+              sha256_unsigned = "f5263782641b04780f90d2dae18d0efc379ee7f89a0c7cba4be687568fe7fb99";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv752dpw-initramfs-kernel.bin";
+              sha256 = "38df0e300b6eb2a7c5dcd238990c913a8acc325437754abdb5cce1bdefa10038";
+              sha256_unsigned = "38df0e300b6eb2a7c5dcd238990c913a8acc325437754abdb5cce1bdefa10038";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv752dpw"
+            "ARV752DPW"
+          ];
+          titles = [
+            {
+              model = "ARV752DPW";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Easybox 802";
+              vendor = "Vodafone";
+            }
+          ];
+        };
+        arcadyan_arv752dpw22 = {
+          device_packages = [
+            "kmod-usb2-pci"
+            "kmod-usb-uhci"
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-b"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "kmod-rt2800-pci"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv752dpw22";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv752dpw22-initramfs-kernel.bin";
+              sha256 = "e4ddda5b82dadf1c84ff051954dfb0bee66b2e7b37b4c4067116f14a61b8a6b4";
+              sha256_unsigned = "e4ddda5b82dadf1c84ff051954dfb0bee66b2e7b37b4c4067116f14a61b8a6b4";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv752dpw22"
+            "ARV752DPW22"
+          ];
+          titles = [
+            {
+              model = "ARV752DPW22";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Easybox 803";
+              vendor = "Vodafone";
+            }
+          ];
+        };
+        arcadyan_arv8539pw22 = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-b"
+            "kmod-ltq-atm-danube"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-arcadyan_arv8539pw22";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv8539pw22-initramfs-kernel.bin";
+              sha256 = "0eb5c8b4f2eaf713427c22a6cf634ee68831540b47b44661be507fba053c8b7b";
+              sha256_unsigned = "0eb5c8b4f2eaf713427c22a6cf634ee68831540b47b44661be507fba053c8b7b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-arcadyan_arv8539pw22-squashfs-sysupgrade.bin";
+              sha256 = "787f089e8e3b1fa381be0e9619f918bba3069d9aa7b33aa42c3738fc9ca5e49e";
+              sha256_unsigned = "5c433f3a8c61a8470c644a296aa18669a6ebaf7ba06685592872b4f53617f323";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,arv8539pw22"
+            "ARV8539PW22"
+          ];
+          titles = [
+            {
+              model = "ARV8539PW22";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Speedport W504V Typ A";
+              vendor = "Telekom";
+            }
+          ];
+        };
+        audiocodes_mp-252 = {
+          device_packages = [
+            "kmod-ltq-adsl-danube-mei"
+            "kmod-ltq-adsl-danube"
+            "kmod-ltq-adsl-danube-fw-a"
+            "kmod-ltq-atm-danube"
+            "kmod-ltq-tapi"
+            "kmod-ltq-vmmc"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-usb-dwc2"
+            "kmod-rt2800-pci"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-audiocodes_mp-252";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-audiocodes_mp-252-initramfs-kernel.bin";
+              sha256 = "af8b8292cf824f9e8f67bbe3f65bbcf146f4ee15f0df160096030fa5c57baba1";
+              sha256_unsigned = "af8b8292cf824f9e8f67bbe3f65bbcf146f4ee15f0df160096030fa5c57baba1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-audiocodes_mp-252-squashfs-sysupgrade.bin";
+              sha256 = "12f9944a1af62aa80825fdf2e54542f7e3e1c16471eda3362f9f7f9f880a969a";
+              sha256_unsigned = "57eb7c5f9ad040061f4545b6259f14a2f1cd663b6cf98f71766d9ee087d9d38a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "audiocodes,mp-252"
+            "ACMP252"
+          ];
+          titles = [
+            {
+              model = "MediaPack MP-252";
+              vendor = "AudioCodes";
+            }
+          ];
+        };
+        avm_fritz7312 = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-b"
+            "kmod-ltq-atm-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ltq-deu-ar9"
+            "fritz-tffs"
+            "-swconfig"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-avm_fritz7312";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-avm_fritz7312-squashfs-sysupgrade.bin";
+              sha256 = "0f3b689442cd570c73ef005663c264c3c9bbf5cc845e153ea4bdedda1b6b94bc";
+              sha256_unsigned = "b4e33f326f7308fbfe357e7890fd84d9d354da40547b38d2cdcf7bddfbe878eb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-avm_fritz7312-initramfs-kernel.bin";
+              sha256 = "85ecdb4b35e950a057bc9988dd69b14a54d6ad48eb68dce3db81a0a71c85f59b";
+              sha256_unsigned = "85ecdb4b35e950a057bc9988dd69b14a54d6ad48eb68dce3db81a0a71c85f59b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7312"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7312";
+              vendor = "AVM";
+            }
+          ];
+        };
+        avm_fritz7320 = {
+          device_packages = [
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-b"
+            "kmod-ltq-atm-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ltq-deu-ar9"
+            "kmod-usb-dwc2"
+            "fritz-tffs"
+            "-swconfig"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-avm_fritz7320";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-avm_fritz7320-squashfs-sysupgrade.bin";
+              sha256 = "8ef470ca40017936e74194029fe4799ab4386a8fac5f32910d837e2064f87530";
+              sha256_unsigned = "5381061863ff827588076cc9e6b7c345850f167857683616b36618cabbc89578";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-avm_fritz7320-initramfs-kernel.bin";
+              sha256 = "b69401aff376281c2d4c4713a8a670ef2e028bbd0660176a7f7f57098aab525e";
+              sha256_unsigned = "b69401aff376281c2d4c4713a8a670ef2e028bbd0660176a7f7f57098aab525e";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "avm,fritz7320"
+            "FRITZ7320"
+          ];
+          titles = [
+            {
+              model = "FRITZ!Box 7320";
+              vendor = "AVM";
+            }
+            {
+              model = "HomeServer";
+              vendor = "1&1";
+            }
+            {
+              model = "Fritz!Box 7330";
+              vendor = "AVM";
+            }
+          ];
+        };
+        buffalo_wbmr-hp-g300h-a = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-a"
+            "kmod-ltq-atm-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-buffalo_wbmr-hp-g300h-a";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-buffalo_wbmr-hp-g300h-a-squashfs-sysupgrade.bin";
+              sha256 = "3202481ffc615b521dd8f2773de01f4b0d69adebfaa4b9ac5df8e26ba9bee0da";
+              sha256_unsigned = "9b3193e46724bb7e44d47cca40b84651122ed51ef613756072ff5581607a84f4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-buffalo_wbmr-hp-g300h-a-initramfs-kernel.bin";
+              sha256 = "e1c60a56bef9ff918f415561a60ae6132abbb2f47dea67d72f8b0cc9d4d00e04";
+              sha256_unsigned = "e1c60a56bef9ff918f415561a60ae6132abbb2f47dea67d72f8b0cc9d4d00e04";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "WBMR"
+            "buffalo,wbmr-hp-g300h"
+          ];
+          titles = [
+            {
+              model = "WBMR-HP-G300H";
+              variant = "A";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wbmr-hp-g300h-b = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-b"
+            "kmod-ltq-atm-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-buffalo_wbmr-hp-g300h-b";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-buffalo_wbmr-hp-g300h-b-initramfs-kernel.bin";
+              sha256 = "71d57c39745f29bcc1de9a1057b8b069b08000e4cf307c045be298ec706283e5";
+              sha256_unsigned = "71d57c39745f29bcc1de9a1057b8b069b08000e4cf307c045be298ec706283e5";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-buffalo_wbmr-hp-g300h-b-squashfs-sysupgrade.bin";
+              sha256 = "92e9828e8a0f54f11f934d604c161b1d97ae70dd4b5278c9944410baba040bee";
+              sha256_unsigned = "8b160bf8d6f57aef2aa656ef4431fbbc48cd8d90692c9e384892d4ad0012d690";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "WBMR"
+            "buffalo,wbmr-hp-g300h"
+          ];
+          titles = [
+            {
+              model = "WBMR-HP-G300H";
+              variant = "B";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        netgear_dgn3500 = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-a"
+            "kmod-ltq-atm-ar9"
+            "kmod-ltq-deu-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500-initramfs-kernel.bin";
+              sha256 = "4d11741d06a20707f46fa593d40a72ba0b3c7304e075e27f915ba96c82deb38e";
+              sha256_unsigned = "4d11741d06a20707f46fa593d40a72ba0b3c7304e075e27f915ba96c82deb38e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500-squashfs-sysupgrade.bin";
+              sha256 = "ad62e2854dd8bb19cec0777bc7d1a010ac103c12c9320d1c3bb5716e78eeb5b3";
+              sha256_unsigned = "428da2bcb39a1a8bec1cb6bf25a83c60dbdf7f1e5509731ee347f5cb8c9a3d0d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500-squashfs-sysupgrade-na.bin";
+              sha256 = "d89c568c4682cef60703c17345c2196559b71931b55294beb6dfcdaf05115dcc";
+              sha256_unsigned = "7287d4f3a1fc869a787f32f623b0ca109d0f9e44d66d0a47ed7e436c4a98e9dd";
+              type = "sysupgrade-na";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500-squashfs-factory.img";
+              sha256 = "987687f983645068f126ae41d50412ca6d9a98ef33e0678ac60edd5b9b0c8d0d";
+              sha256_unsigned = "987687f983645068f126ae41d50412ca6d9a98ef33e0678ac60edd5b9b0c8d0d";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500-squashfs-factory-na.img";
+              sha256 = "a0f9594dca3ae481c0d1048367ac07cef18a4df131d48ee08e17b600bc153250";
+              sha256_unsigned = "a0f9594dca3ae481c0d1048367ac07cef18a4df131d48ee08e17b600bc153250";
+              type = "factory-na";
+            }
+          ];
+          supported_devices = [
+            "netgear,dgn3500"
+            "DGN3500"
+          ];
+          titles = [
+            {
+              model = "DGN3500";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_dgn3500b = {
+          device_packages = [
+            "kmod-usb-dwc2"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-ath9k"
+            "kmod-owl-loader"
+            "wpad-basic-mbedtls"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-b"
+            "kmod-ltq-atm-ar9"
+            "kmod-ltq-deu-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoa"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500b";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500b-squashfs-factory.img";
+              sha256 = "dee11bff7efd3cbf5ea7bdc9088289082d3387eb9a7346203c9191934fc7cd75";
+              sha256_unsigned = "dee11bff7efd3cbf5ea7bdc9088289082d3387eb9a7346203c9191934fc7cd75";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500b-initramfs-kernel.bin";
+              sha256 = "e1476f04e2e43451bfc2e9ee39830fb181b56eb419e486c18ec06902a7c3f4a0";
+              sha256_unsigned = "e1476f04e2e43451bfc2e9ee39830fb181b56eb419e486c18ec06902a7c3f4a0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-netgear_dgn3500b-squashfs-sysupgrade.bin";
+              sha256 = "a15863a5521f5f0b92044654b856c0aba35b75f895db5dfa4f58274e0d53c94d";
+              sha256_unsigned = "7d9140ae1325897855567168f815419ddb7b6ce92224061a77a7cbb3db33b74d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,dgn3500b"
+            "DGN3500B"
+          ];
+          titles = [
+            {
+              model = "DGN3500B";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        zyxel_p-2601hn = {
+          device_packages = [
+            "kmod-rt2800-usb"
+            "wpad-basic-mbedtls"
+            "kmod-ltq-adsl-ar9-mei"
+            "kmod-ltq-adsl-ar9"
+            "kmod-ltq-adsl-ar9-fw-b"
+            "kmod-ltq-atm-ar9"
+            "kmod-ltq-deu-ar9"
+            "ltq-adsl-app"
+            "ppp-mod-pppoe"
+            "kmod-usb-dwc2"
+            "iwinfo"
+          ];
+          image_prefix = "openwrt-24.10.0-lantiq-xway-zyxel_p-2601hn";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-24.10.0-lantiq-xway-zyxel_p-2601hn-squashfs-sysupgrade.bin";
+              sha256 = "e7c381fecf947f2e27e9fd9b75266c8b31457c4cfec58d428b7348a4784e24f2";
+              sha256_unsigned = "e39921010e7e4ad0c122ff82e6198fdd6ef2f62386f329dd506973e9b7a484b3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-24.10.0-lantiq-xway-zyxel_p-2601hn-initramfs-kernel.bin";
+              sha256 = "c5f67d645aca5533f72e7fbfb952d0ad94b79a2d42b72420eef2718fb66a7145";
+              sha256_unsigned = "c5f67d645aca5533f72e7fbfb952d0ad94b79a2d42b72420eef2718fb66a7145";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zyxel,p-2601hn"
+            "P2601HNFX"
+          ];
+          titles = [
+            {
+              model = "P-2601HN";
+              variant = "F1/F3";
+              vendor = "Zyxel";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1738624177;
+      target = "lantiq/xway";
+      version_code = "r28427-6df0e3d02a";
+      version_number = "24.10.0";
+    };
   };
   layerscape = {
     armv7 = {
