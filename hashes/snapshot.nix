@@ -93,7 +93,7 @@
   packages."mips64_octeonplus"."routing".sha256 = "";
   packages."mips64_octeonplus"."telephony".sha256 = "";
   targets."malta"."be64".sha256 = "sha256-CfEil5BkcM44EOI+0vbTULtUrXVHak0iApHyq5xZgos=";
-  targets."malta"."le64".sha256 = "sha256-D9fyq31ijQMf6mSAeNdEPsZiXh04o/fL05gjsFZHObE=";
+  targets."malta"."le64".sha256 = "sha256-dzzuXa75JFuAdl+quJC9VMIL2lcvjTMo2zUdhKzAmWw=";
   targets."malta"."be".sha256 = "sha256-2RVNClMqpzuLC9zxnyys+8/PErsstGGLS6+LHqBBfiw=";
   targets."malta"."le".sha256 = "sha256-NKvGRi+mqxpzq/X11vFYrp8IOult243jDNY3EriR2Iw=";
   targets."sifiveu"."generic".sha256 = "sha256-viGtLUQ8Sh40b0S+wooJsCxgjps3j1e8m+pX95lv6E8=";
@@ -194,7 +194,7 @@
   packages."aarch64_cortex-a76"."packages".sha256 = "";
   packages."aarch64_cortex-a76"."routing".sha256 = "";
   packages."aarch64_cortex-a76"."telephony".sha256 = "";
-  targets."bcm27xx"."bcm2709".sha256 = "sha256-42QbpEkF4LqvxIGd+dEbBukogmL60TbZdPNCwYynDZ4=";
+  targets."bcm27xx"."bcm2709".sha256 = "sha256-JjTO7yXL6uz5Pe2RA5gbT5BiyDkiCRSiot8PwpJ59Z4=";
   kmods."bcm27xx"."bcm2709"."6.6.74-1-b7811c705ab46d334ac83cdfc52b7795".sha256 = "";
   targets."bcm27xx"."bcm2709".packagesArch = "arm_cortex-a7_neon-vfpv4";
   targets."bcm27xx"."bcm2708".sha256 = "sha256-F4tutW94gtIEIixSlmiJ5SU1a14tcaGZX4ppMqCTeuI=";
@@ -234,10 +234,10 @@
   targets."bmips"."bcm6328".sha256 = "sha256-JauUlW8xNO1hHMXZk1BSwu6wcW/ZXXYHN00c/CKVmzo=";
   kmods."bmips"."bcm6328"."6.6.74-1-ae854b135b7e97fbb0c791f86892ce1e".sha256 = "";
   targets."bmips"."bcm6328".packagesArch = "mips_mips32";
-  targets."layerscape"."armv7".sha256 = "sha256-vW0O1AQC8UxFJ3J4Lt90Sa1/o97w/ikWx/2hS7869Io=";
+  targets."layerscape"."armv7".sha256 = "sha256-AqlOF54UAwT5l6SdUL/IcmeMlOpmFMY5/2crzo+Zw5Y=";
   kmods."layerscape"."armv7"."6.6.74-1-d17e55241e7fd2e8efa29a7e74f11ea8".sha256 = "";
   targets."layerscape"."armv7".packagesArch = "arm_cortex-a7_neon-vfpv4";
-  targets."layerscape"."armv8_64b".sha256 = "sha256-GBH+I7l4eiZJqkj58EkspJtkkfRixH93J45PuaUgLFo=";
+  targets."layerscape"."armv8_64b".sha256 = "sha256-kRSfwNgT+Dweb0M0B0AV3i/X4Y3SjKug3cVH95mSRnA=";
   kmods."layerscape"."armv8_64b"."6.6.74-1-55e92db533213e3810f2e0aba6e30579".sha256 = "";
   targets."layerscape"."armv8_64b".packagesArch = "aarch64_generic";
   packages."aarch64_generic"."base".sha256 = "";
@@ -298,7 +298,7 @@
   targets."sunxi"."cortexa53".sha256 = "sha256-vpBXzm2MTVM8QOFIKEkIJ8doGN623wg83byadgTBhyQ=";
   kmods."sunxi"."cortexa53"."6.6.74-1-2edba1bc4c8cf2927a97829a055be542".sha256 = "";
   targets."sunxi"."cortexa53".packagesArch = "aarch64_cortex-a53";
-  targets."sunxi"."cortexa7".sha256 = "sha256-DQ83cJghrkxFM+aFjKPJRe52dmvj2LhVrGUqihF6tmc=";
+  targets."sunxi"."cortexa7".sha256 = "sha256-fKikdIr/onhOYPbYGBt0t8bsS2erotmdPXpFaq3YF38=";
   kmods."sunxi"."cortexa7"."6.6.74-1-f6ada41101a396aa72fb505f0896e041".sha256 = "";
   targets."sunxi"."cortexa7".packagesArch = "arm_cortex-a7_neon-vfpv4";
   targets."at91"."sama7".sha256 = "sha256-cf+DUZ5mq8NkhD6Tt9BC++czdTjKj8mVnSt+Cjzj3vY=";
@@ -309,7 +309,7 @@
   packages."arm_cortex-a7_vfpv4"."packages".sha256 = "";
   packages."arm_cortex-a7_vfpv4"."routing".sha256 = "";
   packages."arm_cortex-a7_vfpv4"."telephony".sha256 = "";
-  targets."at91"."sam9x".sha256 = "sha256-c9EcsdBRrqSt1KOUwbLqP7Vuc3A2FjAAWe1kERQ/15s=";
+  targets."at91"."sam9x".sha256 = "sha256-UtIQnRTokYrl1w4QL4QTyRh0OL+WTDsBlAyEz6UBML0=";
   kmods."at91"."sam9x"."6.6.74-1-2911a86988bedceb488e369ab05cb8f3".sha256 = "";
   targets."at91"."sam9x".packagesArch = "arm_arm926ej-s";
   packages."arm_arm926ej-s"."base".sha256 = "";
@@ -325,7 +325,7 @@
   packages."arm_cortex-a5_vfpv4"."packages".sha256 = "";
   packages."arm_cortex-a5_vfpv4"."routing".sha256 = "";
   packages."arm_cortex-a5_vfpv4"."telephony".sha256 = "";
-  targets."starfive"."generic".sha256 = "sha256-2B4bvwi02OESQHDZTsmox4BR2vdhkoXmVQbuAW7KnTg=";
+  targets."starfive"."generic".sha256 = "sha256-1P1zmjavpRJP0rLVqJ6bNFIYHOE2WX/oAHPcsKWdK4Q=";
   kmods."starfive"."generic"."6.6.74-1-86ecd940094c3a46c5f31242eb615926".sha256 = "";
   targets."starfive"."generic".packagesArch = "riscv64_riscv64";
   targets."armsr"."armv8".sha256 = "sha256-kA5vh7w3rGlXQ20yb3RK+JmTLVDZZoFH5AKNH8zfUGk=";
