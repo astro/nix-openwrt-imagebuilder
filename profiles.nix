@@ -24,6 +24,7 @@ in rec {
         )
       ) hashes.targets
     else
+      # TODO: check if file exists first
       import ./cached-profiles/${release}.nix;
 
   # filters hardware profiles from all boards.json files
