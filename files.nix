@@ -1,142 +1,42 @@
-{ pkgs ? import <nixpkgs> {}
-# OpenWRT release
-, release ? import ./latest-release.nix
-# OpenWRT target
-, target
-, variant ? "generic"
-# Checksum of the `sha256sums` file
-, sha256
-# Checksum of a feed's `Packages` file
-, feedsSha256
-# Attrset where key is kmodsTarget and value is checksum of `Packages` file. Required for OpenWRT >=24
-, kmodsSha256 ? {}
-# Manually specify packages' arch for OpenWRT<19 releases without profiles.json
-, packagesArch ? null
+{ lib
+, fetchurl
+, openwrtLib
+# Hashes for release target/variant
+, cache
 # Allows specifying additional packages that are not packaged by openwrt.
 , extraPackages ? {}
 }:
 let
-  inherit (pkgs) lib fetchurl;
+  loadPackages = { baseUrl, packages, ... }:
+    loadPackages' baseUrl packages;
 
-  sanitizeFilename = fileName:
-    builtins.replaceStrings [ "~" ] [ "-" ] (
-      builtins.baseNameOf fileName
-    );
-
-  fetchSums = url: sha256:
-    let
-      sumsFile = fetchurl {
-        url = "${url}/sha256sums";
-        inherit sha256;
+  loadPackages' = baseUrl:
+    lib.mapAttrs (pname: pkg: rec {
+      inherit pname;
+      inherit (pkg) version;
+      name = "${pname}-${version}";
+      filename = pkg.filename or "${name}.${cache.pkgExt}";
+      file = fetchurl {
+        url = baseUrl + filename;
+        inherit (pkg) sha256;
+        name = openwrtLib.sanitizeFilename filename;
       };
+      depends = pkg.depends or [];
+      provides = pkg.provides or [];
+      type = "real";
+    });
 
-      filesSha256 =
-        builtins.foldl' (filesSha256: line:
-          let
-            m = builtins.match "([0-9a-f]+) \\*(.+)" line;
-          in
-            if builtins.isList m && builtins.length m == 2
-            then filesSha256 // {
-              ${builtins.elemAt m 1} = builtins.elemAt m 0;
-            } else filesSha256
-        ) {} (lib.splitString "\n" (builtins.readFile sumsFile));
-
-    in
-      builtins.mapAttrs (file: sha256:
-        fetchurl {
-          url = "${url}/${file}";
-          name = sanitizeFilename file;
-          inherit sha256;
-        }
-      ) filesSha256;
-
-  parsePackages = url: packagesContent:
-    let
-      parsedRaw = map (section:
-        builtins.foldl' (data: line:
-          let
-            m = builtins.match "(.+): (.+)" line;
-          in
-            if builtins.isList m && builtins.length m == 2
-            then data // {
-              ${builtins.elemAt m 0} = builtins.elemAt m 1;
-            } else data
-        ) {} (lib.splitString "\n" section)
-      ) (lib.splitString "\n\n" packagesContent);
-
-      parseDepends = depStr:
-        map (dep: builtins.elemAt (lib.splitString " " dep) 0)
-          (lib.splitString ", " depStr);
-    in
-    builtins.foldl'
-      (variantFiles: parsed:
-        if parsed ? Filename && parsed ? SHA256sum
-        then
-          variantFiles // {
-            ${parsed.Package} = {
-              filename = parsed.Filename;
-              file = fetchurl {
-                url = "${url}/${parsed.Filename}";
-                sha256 = parsed.SHA256sum;
-                name = sanitizeFilename parsed.Filename;
-              };
-              depends = if parsed ? Depends then parseDepends parsed.Depends else [];
-              provides = parsed.Provides or null;
-              type = "real";
-            };
-          }
-        else
-          variantFiles
-      ) {} parsedRaw;
-
-  baseUrl = "https://downloads.openwrt.org";
-  releaseUrl = if release == "snapshot" then "${baseUrl}/snapshots" else "${baseUrl}/releases/${release}";
-  targetVariantUrl = "${releaseUrl}/targets/${target}/${variant}";
-
-  variantFiles = fetchSums targetVariantUrl sha256;
-
-  profiles =
-    if variantFiles ? "profiles.json"
-    then lib.importJSON variantFiles."profiles.json"
-    else null;
-
-  arch =
-    if packagesArch == null
-    then profiles.arch_packages
-    else packagesArch;
-
-  kernelInfo = profiles.linux_kernel or (builtins.throw "No Kernel info found in profiles.json!");
-
-  kmodsTarget = "${kernelInfo.version}-${kernelInfo.release}-${kernelInfo.vermagic}";
-
-  kmodsVirtualFeed = lib.optionalAttrs (release == "snapshot" || lib.versionAtLeast release "24") {
-    "kmods" = kmodsSha256.${kmodsTarget} or (builtins.throw "Failed to resolve Kmods for ${kmodsTarget}");
+  kmodsVirtualFeed = lib.optionalAttrs cache.kmodsSeparate {
+    kmods = cache.kmodPackages;
   };
 
-  allFeeds = feedsSha256 // kmodsVirtualFeed;
+  allFeeds = cache.feeds // kmodsVirtualFeed;
 
-  feedUrl = feed:
-    if (feed == "kmods")
-    then "${targetVariantUrl}/kmods/${kmodsTarget}"
-    else "${releaseUrl}/packages/${arch}/${feed}";
+  packagesByFeed = lib.mapAttrs (feedName: feed: loadPackages feed) allFeeds;
 
-  feedsPackagesFile = builtins.mapAttrs (feed: { sha256 }:
-    fetchurl {
-      url = "${feedUrl feed}/Packages";
-      inherit sha256;
-    }
-  ) allFeeds;
+  corePackages = loadPackages cache.corePackages;
 
-  packagesByFeed = builtins.mapAttrs (feed: packagesFile:
-    parsePackages (feedUrl feed) (builtins.readFile packagesFile)
-  ) feedsPackagesFile;
-
-  corePackages =
-    parsePackages
-      "${targetVariantUrl}/packages"
-      (builtins.readFile variantFiles."packages/Packages");
-
-  realPackages = 
+  realPackages =
     (builtins.foldl' (a: b: a // b) { } (builtins.attrValues packagesByFeed))
     // corePackages;
 
@@ -150,12 +50,11 @@ let
       (packages: pn:
         let
           p = packages.${pn};
-          trimSpaces = builtins.replaceStrings [ " " ] [ "" ];
         in
-        if p.provides or null != null
+        if p.provides or [] != []
         then
           let
-            vp = packages.${p.provides} or {
+            vp = {
               type = "virtual";
               depends = [ ];
             };
@@ -168,7 +67,7 @@ let
                 }
               else
                 packages
-            ) packages (map trimSpaces (lib.splitString "," p.provides))
+            ) packages p.provides
         else
           packages
       )
@@ -178,7 +77,7 @@ let
   # packages which aren't available in feeds but are provided by imagebuilders
   dummyPackages =
     let
-      dummyPackage = { depends = [ ]; provides = null; type = "dummy"; };
+      dummyPackage = { depends = [ ]; provides = []; type = "dummy"; };
     in
     {
       libc = dummyPackage;
@@ -222,5 +121,5 @@ let
 
 
 in {
-  inherit allPackages corePackages packagesByFeed expandDeps variantFiles profiles arch;
+  inherit allPackages corePackages packagesByFeed expandDeps;
 }

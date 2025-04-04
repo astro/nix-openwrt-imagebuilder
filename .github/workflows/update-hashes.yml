@@ -26,27 +26,24 @@ jobs:
           echo "GIT_AUTHOR_EMAIL=<github-actions[bot]@users.noreply.github.com>" >> $GITHUB_ENV
           echo "GIT_COMMITTER_NAME=github-actions[bot]" >> $GITHUB_ENV
           echo "GIT_COMMITTER_EMAIL=<github-actions[bot]@users.noreply.github.com>" >> $GITHUB_ENV
-      - name: Update all hashes
-        shell: bash
-        run: |
-          git rm hashes/*.nix
-          nix run .#generate-all-hashes
-          git add hashes/*.nix
-          git commit -m "hashes: update"
       - name: Update latest release
         shell: bash
         run: |
-          nix run .#generate-latest-release
-          git add latest-release.nix
+          nix run .#list-releases -- -u
+          git add cache
           git commit -m "latest-release: update" || true
+      - name: Update all hashes
+        shell: bash
+        run: |
+          git rm -r hashes || true
+          git rm -r cache || true
+          nix run .#generate-all-hashes -- -ur
+          git add cache
+          git commit -m "hashes: update"
       - name: Cache OpenWrt profile information
         shell: bash
         run: |
-          git rm cached-profiles/*
-          mkdir -p cached-profiles
-          nix build -vL .#cached-profiles
-          cp -L result/*.nix cached-profiles/
-          git add cached-profiles
+          git rm -r cached-profiles || true
           git commit -m "cached-profiles: update" || true
       - name: Push changes
         uses: ad-m/github-push-action@master

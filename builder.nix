@@ -1,26 +1,18 @@
 { pkgs ? import <nixpkgs> {}
+, lib ? pkgs.lib
+, openwrtLib ? import ./openwrt-lib.nix { inherit lib; }
+, stdenv ? pkgs.stdenv
+, fetchurl ? pkgs.fetchurl
+, writeScript ? pkgs.writeScript
 # OpenWRT release
-, release ? import ./latest-release.nix
+, release ? openwrtLib.latestRelease
 # OpenWRT target
 , target
 # Hardware model
 , profile
 , variant ? "generic"
-# Checksum of the `sha256sums` file
-, sha256 ?
-  (
-    import ./hashes/${release}.nix
-  ).targets.${target}.${variant}.sha256
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
-, packagesArch ?
-  (
-    import ./hashes/${release}.nix
-  ).targets.${target}.${variant}.packagesArch
-# Checksum of a feed's `Packages` file
-, feedsSha256 ?
-  (
-    import ./hashes/${release}.nix
-  ).packages.${packagesArch}
+, packagesArch ? throw "packagesArch must be given for OpenWRT<19 releases"
 # Attrset where key is kmodsTarget and value is checksum of `Packages` file. Required for OpenWRT >=24
 , kmodsSha256 ? {}
 # Extra OpenWRT package names (can be prefixed with "-")
@@ -42,37 +34,31 @@
 } @ args:
 
 let
-  inherit (pkgs) lib;
-
-  maybeKmodsSha256 = lib.optionalAttrs (lib.versionAtLeast release "24") (
-    if kmodsSha256 != { }
-    then kmodsSha256
-    else (import ./hashes/${release}.nix).kmods.${target}.${variant} or (builtins.throw "Failed to load Kmods hashes for ${target}/${variant}!")
-  );
-
+  cache = import ./cached-packages.nix { inherit openwrtLib release target variant packagesArch; };
   inherit (import ./files.nix {
-    inherit pkgs release target variant sha256 feedsSha256 packagesArch extraPackages;
-    kmodsSha256 = maybeKmodsSha256;
-  }) variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
+    inherit lib fetchurl openwrtLib cache extraPackages;
+  }) expandDeps corePackages packagesByFeed allPackages;
 
-  requiredPackages = profiles.default_packages or (
+  requiredPackages = cache.profiles.default_packages or (
     builtins.attrNames packagesByFeed.base
     ++ builtins.attrNames corePackages
-  ) ++ profiles.profiles.${profile}.device_packages or []
+  ) ++ cache.profiles.profiles.${profile}.device_packages or []
     ++ packages;
   allRequiredPackages = expandDeps allPackages requiredPackages;
-  imageBuilderPrefix  = "openwrt-imagebuilder-${if release == "snapshot" then "" else "${release}-"}";
 
-  extraArgs = builtins.removeAttrs args [
+  depsArgs = [
     "pkgs"
+    "lib"
+    "openwrtLib"
+    "stdenv"
+    "fetchurl"
+    "writeScript"
+  ];
+  configArgs = [
     "release"
     "target"
     "profile"
     "variant"
-    "sha256"
-    "packagesArch"
-    "feedsSha256"
-    "kmodsSha256"
     "packages"
     "files"
     "disabledServices"
@@ -80,36 +66,49 @@ let
     "extraPackages"
     "rootFsPartSize"
   ];
+  drvArgs = [
+    "passthru"
+  ];
+  extraArgs = builtins.removeAttrs args (depsArgs ++ configArgs ++ drvArgs);
 in
 
-pkgs.stdenv.mkDerivation ({
+stdenv.mkDerivation ({
   name = lib.concatStringsSep "-" ([
     "openwrt" release
   ] ++ lib.optional (extraImageName != null) extraImageName
   ++ [ target variant profile ]);
 
-  src =
-    let
-      inherit (pkgs.stdenv.hostPlatform) uname;
-      baseFileName = "${imageBuilderPrefix}${target}-${variant}.${uname.system}-${uname.processor}";
-      possibleFileNames = builtins.map (extension: "${baseFileName}${extension}") [ ".tar.zst" ".tar.xz" ];
-      matches = builtins.filter (fileName: builtins.hasAttr fileName variantFiles) possibleFileNames;
-    in
-      if matches != []
-      then builtins.getAttr (builtins.elemAt matches 0) variantFiles
-      else throw "No valid image builder found!";
+  src = fetchurl cache.imagebuilder;
 
-  postPatch = ''
+  postPatch = with pkgs; ''
     patchShebangs scripts staging_dir/host/bin target/linux
+
     substituteInPlace rules.mk \
-      --replace-quiet "SHELL:=/usr/bin/env bash" "SHELL:=${pkgs.runtimeShell}" \
-      --replace-quiet "/usr/bin/env true" "${pkgs.coreutils}/bin/true" \
-      --replace-quiet "/usr/bin/env false" "${pkgs.coreutils}/bin/false"
+      --replace-quiet "/usr/bin/env bash" "${runtimeShell}" \
+      --replace-quiet "/usr/bin/env true" "${coreutils}/bin/true" \
+      --replace-quiet "/usr/bin/env false" "${coreutils}/bin/false"
+
+    substituteInPlace Makefile \
+      --replace-quiet '	$(APK) add' '	-$(APK) add'
   '';
 
   configurePhase =
     let
-      installPackages = pkgs.writeScript "install-openwrt-packages" (
+      repositories = lib.concatMapStringsSep "\n"
+        (repo: fetchurl repo.sourceInfo)
+        ([ cache.corePackages cache.kmodPackages ] ++ lib.attrValues cache.feeds);
+
+      installRepositories = if cache.apk
+        then ''
+          cat > repositories <<EOF
+          ${repositories}
+          EOF
+        ''
+        else ''
+          echo "src imagebuilder file:packages" > repositories.conf
+        '';
+
+      installPackages = writeScript "install-openwrt-packages" (
         lib.concatMapStrings (pname:
           let
             package = allPackages.${pname};
@@ -133,8 +132,7 @@ pkgs.stdenv.mkDerivation ({
       runHook preConfigure
 
       ${installPackages}
-
-      echo "src imagebuilder file:packages" > repositories.conf
+      ${installRepositories}
 
       # if the user provided key-build, key-build.pub and key-build.ucert in /run/openwrt use it
       # NOTE: they need to be owned by group nixbld and have permission 440
@@ -223,4 +221,9 @@ pkgs.stdenv.mkDerivation ({
   '';
 
   dontFixup = true;
+
+  passthru = (extraArgs.passthru or {}) // {
+    config = openwrtLib.takeAttrs configArgs args;
+  };
+
 } // extraArgs)
