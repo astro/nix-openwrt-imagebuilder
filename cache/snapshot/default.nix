@@ -1,0 +1,3 @@
+# Hashes for snapshot
+{
+}
