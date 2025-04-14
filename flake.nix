@@ -20,11 +20,7 @@
         overlays = [
           self.overlays.tools
           self.overlays.gen
-          (final: prev: {
-            lib = prev.lib.extend (final: prev: {
-              openwrt = self.lib;
-            });
-          })
+          self.overlays.openwrtLib
         ];
         config = { };
       };
@@ -74,7 +70,7 @@
     };
 
     flake = {
-      lib = import ./openwrt-lib.nix { inherit lib; } // {
+      lib = (import ./openwrt-lib.nix { inherit lib; }).extend (final: prev: {
         build = args@{ ... }: import ./builder.nix ({
           inherit lib;
           openwrtLib = final;
@@ -87,7 +83,7 @@
           src = ./.;
           filter = name: type: lib.hasSuffix ".jq" (toString name);
         };
-      };
+      });
 
       overlays = {
         tools = final: prev: {
@@ -104,6 +100,11 @@
           profiles-list = final.callPackage ./profiles-list.nix {
             inherit (self.lib) releases;
           };
+        };
+        openwrtLib = final: prev: {
+          lib = prev.lib.extend (final: prev: {
+            openwrt = self.lib;
+          });
         };
       };
 
