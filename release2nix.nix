@@ -3,7 +3,7 @@
 , curl
 , jq
 , nix
-, nixpkgs-fmt
+, nixfmt-rfc-style
 , apk-tools
 , jqlibdir
 }:
@@ -14,7 +14,7 @@ writeShellApplication {
     curl
     jq
     nix
-    nixpkgs-fmt
+    nixfmt-rfc-style
     apk-tools
   ];
 

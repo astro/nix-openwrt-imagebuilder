@@ -260,7 +260,7 @@ reformat_nix() {
       mv "$1" "$2"
       shift
   fi
-  nixpkgs-fmt "$1" >& /dev/null || true
+  nixfmt "$1" >& /dev/null || true
   >&2 echo "Wrote $1"
 }
 
