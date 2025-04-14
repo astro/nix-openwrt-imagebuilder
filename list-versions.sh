@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -euo pipefail
 
@@ -54,6 +54,7 @@ DESTDIR=cache
 versions="$DESTDIR/versions.json"
 
 if $update; then
+  mkdir -p "$DESTDIR"
   curl 'https://downloads.openwrt.org/.versions.json' --output "$versions"
   jq -r 'include "lib"; "{", (list_versions[]|"  \(nixify_attrname) = import ./\(.)/default.nix;"), "}"' "$versions" > "$DESTDIR/default.nix"
   jq -r '.stable_version' "$versions" > "$DESTDIR/LATEST_RELEASE"
