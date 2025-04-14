@@ -28,7 +28,7 @@ in rec {
     builtins.concatMap (target:
       map (variant: {
         # match return value
-        inherit pkgs release target variant profile;
+        inherit pkgs lib openwrtLib release target variant profile;
       }) (
         builtins.filter (variant:
           allProfiles.${target}.${variant}.profiles ? ${profile}

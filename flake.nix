@@ -75,8 +75,14 @@
 
     flake = {
       lib = import ./openwrt-lib.nix { inherit lib; } // {
-        build = import ./builder.nix;
-        profiles = import ./profiles.nix;
+        build = args@{ ... }: import ./builder.nix ({
+          inherit lib;
+          openwrtLib = final;
+        } // args);
+        profiles = args@{...}: import ./profiles.nix ({
+          inherit lib;
+          openwrtLib = final;
+        } // args);
         jqlibdir = lib.cleanSourceWith {
           src = ./.;
           filter = name: type: lib.hasSuffix ".jq" (toString name);
