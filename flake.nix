@@ -63,7 +63,7 @@
       devShells.default = pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
           jq
-          nixpkgs-fmt
+          nixfmt-rfc-style
           apk-tools
         ];
       };
