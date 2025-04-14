@@ -1,30 +1,27 @@
 { pkgs ? import <nixpkgs> {}
+, lib ? pkgs.lib
+, openwrtLib ? import ./openwrt-lib.nix { inherit lib; }
 # OpenWRT release
-, release ? import ./latest-release.nix
-}:
+, release ? openwrtLib.latestRelease
+# Manually specify packages' arch for OpenWRT<19 releases without profiles.json
+, packagesArch ? throw "packagesArch must be given for OpenWRT<19 releases"
+} @ args:
 
 let
-  inherit (pkgs) lib;
+  hashes = openwrtLib.getCachedRelease release;
 in rec {
-  hashes = import ./hashes/${release}.nix;
-
   allProfiles =
-    if release == "snapshot"
-    then
-      builtins.mapAttrs (target: variants:
-        lib.filterAttrs (_: profiles:
-          profiles != null
-        ) (
-          builtins.mapAttrs (variant: h:
-            (import ./files.nix {
-              inherit pkgs release target variant;
-              inherit (h) sha256 feedsSha256;
-            }).profiles
-          ) variants
-        )
-      ) hashes.targets
-    else
-      import ./cached-profiles/${release}.nix;
+    builtins.mapAttrs (target: variants:
+      lib.filterAttrs (_: profiles:
+        profiles != null
+      ) (
+        builtins.mapAttrs (variant: h:
+          (import ./cached-packages.nix {
+            inherit openwrtLib release target variant packagesArch;
+          }).profiles
+        ) variants
+      )
+    ) hashes.targets;
 
   # filters hardware profiles from all boards.json files
   identifyProfiles = profile:

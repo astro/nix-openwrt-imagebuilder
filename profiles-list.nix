@@ -1,10 +1,9 @@
 { pkgs ? import <nixpkgs> {}
+, lib ? pkgs.lib
+, releases ? import ./releases.nix { inherit lib; }
 }:
 
 let
-  inherit (pkgs) lib;
-  inherit (import ./releases.nix { inherit pkgs; }) releases;
-
   list = release:
     let
       inherit (import ./profiles.nix {
@@ -33,7 +32,9 @@ pkgs.runCommand "openwrt-profiles" {
   }) releases);
 } ''
   mkdir $out
-  ${lib.concatMapStrings (release: ''
-    ln -s ${list release} $out/${release}.md
-  '') releases}
+  ${lib.concatMapStrings (e: e.value)
+    (lib.filter (e: e.success)
+      (map (release: builtins.tryEval ''
+        ln -s ${list release} $out/${release}.md
+      '') releases))}
 ''

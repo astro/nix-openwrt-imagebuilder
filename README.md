@@ -100,14 +100,14 @@ in
 ## Refreshing hashes
 
 **downloads.openwrt.org** appears to be never at rest. That's why we
-update the [hashes subdirectory](./hashes/) daily with [a Github
+update the [cache subdirectory](./cache/) daily with [a Github
 action.](https://github.com/astro/nix-openwrt-imagebuilder/actions/workflows/update-hashes.yml)
 
 If you still encounter `hash mismatch in fixed-output derivation` in
 between these updates, update them yourself:
 
 ```bash
-nix run .#generate-hashes $(sed -e 's/"//g' latest-release.nix)
+nix run .#release2nix -- $(nix run .#list-versions -- -l)
 ```
 
 If your `flake.nix` has this project in its `inputs`, then you can

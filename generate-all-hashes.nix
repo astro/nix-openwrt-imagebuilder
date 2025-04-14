@@ -1,22 +1,18 @@
-{ pkgs,
-  generate-hashes
+{ writeShellApplication
+, list-versions
+, release2nix
 }:
-pkgs.writeShellApplication {
+writeShellApplication {
   name = "generate-all-hashes";
   runtimeInputs = [
-    pkgs.curl
-    pkgs.jq
-    generate-hashes
+    list-versions
+    release2nix
   ];
 
   text = ''
-    VERSIONS=$(curl -s https://downloads.openwrt.org/.versions.json)
-    readarray -t RELEASES < <(jq -r '.versions_list[]' <<< "''${VERSIONS}")
-    RELEASES+=("snapshot")
-
-    for RELEASE in "''${RELEASES[@]}"; do
-      echo "# Fetching hashes for OpenWrt ''${RELEASE}"
-      generate-hashes "''${RELEASE}"
+    list-versions "$@" | while read -r release; do
+      echo "# Fetching hashes for OpenWrt $release"
+      release2nix "$release"
     done
   '';
 }

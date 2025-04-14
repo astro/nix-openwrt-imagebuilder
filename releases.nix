@@ -1,18 +1,9 @@
-{ pkgs ? import <nixpkgs> {}
+{ lib ? import <nixpkgs/lib>
+, openwrtLib ? import ./openwrt-lib.nix { inherit lib; }
 }:
 
 let
-  inherit (pkgs) lib;
-in {
   # Only OpenWrt >= 19.07.4 contains profiles.json files
-  releases =
-    builtins.filter (release:
-      builtins.compareVersions release "19.07.4" >= 0
-    ) (
-      map (builtins.replaceStrings [ ".nix" ] [ "" ]) (
-        builtins.filter (lib.hasSuffix ".nix") (
-          builtins.attrNames (builtins.readDir ./hashes)
-        )
-      )
-    );
-}
+  hasProfiles = release: openwrtLib.releaseAtLeast release "19.07.4";
+in
+  builtins.filter hasProfiles (builtins.attrNames (import ./cache))
