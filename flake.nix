@@ -18,7 +18,8 @@
       _module.args.pkgs = import inputs.nixpkgs {
         inherit system;
         overlays = [
-          self.overlays.default
+          self.overlays.tools
+          self.overlays.gen
           (final: prev: {
             lib = prev.lib.extend (final: prev: {
               openwrt = self.lib;
@@ -54,6 +55,7 @@
           inherit pkgs;
           inherit (self.lib) build;
         };
+
         example-snapshot-image = import ./example-snapshot.nix {
           inherit pkgs;
           inherit (self.lib) build;
@@ -82,10 +84,6 @@
       };
 
       overlays = {
-        default = lib.composeManyExtensions [
-          self.overlays.tools
-          self.overlays.gen
-        ];
         tools = final: prev: {
           apk-tools = final.callPackage ./apk-tools.nix { };
         };
