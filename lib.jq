@@ -162,17 +162,35 @@ def simplify_profiles:
 # Versions
 
 def parse_release_version:
-  if type == "string" then
+  if . == "snapshot" then
+    [.]
+  elif type == "string" then
     split("-") |
     (.[0] |= (split(".")|map(tonumber))) |
     flatten
   end;
 
 def sort_releases:
-  sort_by(parse_release_version|(.[3] |= (. // "z")));
+  sort_by(parse_release_version|(.[3] |= (. // "z"))) |
+  if $ARGS.named.reverse then reverse end;
 
 def list_versions:
   .versions_list |
-  sort_releases |
   . + ["snapshot"] |
-  if $ARGS.named.reverse then reverse end;
+  sort_releases;
+
+def filter_releases:
+  def exclude_rc_releases:
+    map(select(parse_release_version[3]|not));
+
+  def exclude_old_point_releases:
+    group_by(parse_release_version[:2]) | map(.[-1]);
+
+  def match_prefix($prefix):
+    map(select($prefix == "" or startswith($prefix)));
+
+  $ARGS.named.amount as $amount |
+  if $amount < 2 then exclude_rc_releases end |
+  if $amount < 1 then exclude_old_point_releases end |
+  match_prefix($ARGS.named.prefix // "") |
+  sort_releases;  # sort again because group_by messes up ordering
