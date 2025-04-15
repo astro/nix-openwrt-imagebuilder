@@ -1,5 +1,6 @@
 { lib
 , fetchurl
+, callPackages2nix
 , openwrtLib
 # Hashes for release target/variant
 , cache
@@ -7,8 +8,17 @@
 , extraPackages ? {}
 }:
 let
-  loadPackages = { baseUrl, packages, ... }:
-    loadPackages' baseUrl packages;
+  loadPackages = { baseUrl, sourceInfo, packages ? null, sha256sums, prefix, ... }: let
+    packages' = if packages != null
+                then packages
+                else callPackages2nix {
+                  mode = if cache.apk then "apk" else "opkg";
+                  packages = fetchurl sourceInfo;
+                  sha256sums = fetchurl sha256sums;
+                  inherit prefix;
+                };
+  in
+    loadPackages' baseUrl packages';
 
   loadPackages' = baseUrl:
     lib.mapAttrs (pname: pkg: rec {

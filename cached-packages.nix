@@ -4,11 +4,13 @@
 , variant
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? throw "packagesArch must be given for OpenWRT<19 releases"
+# Users may supply their own fresh hashes
+, cachePath ? openwrtLib.getCachePath release
 }:
 
 let
   raw = let
-    r = openwrtLib.getCachedRelease release;
+    r = openwrtLib.getCachedRelease release cachePath;
     t = r.targets.${target} or (throw "Target \"${target}\" does not exist in release \"${release}\"");
   in
     t.${variant} or (throw "Variant \"${variant}\" does not exist in target \"${target}\" of release \"${release}\"");
@@ -22,7 +24,7 @@ let
   profiles = raw.profiles.extract or null;
 
   feeds = if noProfiles || !(raw ? packagesArch)
-    then import ./cache/packages/${packagesArch}.nix
+    then import (cachePath + "/packages/${packagesArch}.nix")
     else raw.feeds;
 
 in {
@@ -39,12 +41,18 @@ in {
 } // (if kmodsSeparate then {
   kmodPackages = {
     inherit (raw.kmods.${profiles.kmods_target}) baseUrl sourceInfo packages;
+    inherit (raw) sha256sums;
+    prefix = "kmods/${profiles.kmods_target}/";
   };
 } else { }) // {
   corePackages = {
     inherit (raw.corePackages) baseUrl sourceInfo packages;
+    inherit (raw) sha256sums;
+    prefix = "packages/";
   };
-  feeds = builtins.mapAttrs (name: feed: {
+  feeds = builtins.mapAttrs (feedName: feed: {
     inherit (feed) baseUrl sourceInfo packages;
-  }) feeds;
+    inherit (feeds) sha256sums;
+    prefix = "${feedName}/";
+  }) feeds.feeds;
 }

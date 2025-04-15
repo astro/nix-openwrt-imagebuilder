@@ -5,10 +5,12 @@
 , release ? openwrtLib.latestRelease
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? throw "packagesArch must be given for OpenWRT<19 releases"
-} @ args:
+# Users may supply their own fresh hashes
+, cachePath ? openwrtLib.getCachePath release
+}:
 
 let
-  hashes = openwrtLib.getCachedRelease release;
+  hashes = openwrtLib.getCachedRelease release cachePath;
 in rec {
   allProfiles =
     builtins.mapAttrs (target: variants:
@@ -17,7 +19,7 @@ in rec {
       ) (
         builtins.mapAttrs (variant: h:
           (import ./cached-packages.nix {
-            inherit openwrtLib release target variant packagesArch;
+            inherit openwrtLib release target variant packagesArch cachePath;
           }).profiles
         ) variants
       )
@@ -28,7 +30,7 @@ in rec {
     builtins.concatMap (target:
       map (variant: {
         # match return value
-        inherit pkgs lib openwrtLib release target variant profile;
+        inherit pkgs lib openwrtLib release target variant profile cachePath;
       }) (
         builtins.filter (variant:
           allProfiles.${target}.${variant}.profiles ? ${profile}

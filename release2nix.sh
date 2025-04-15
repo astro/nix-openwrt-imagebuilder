@@ -70,13 +70,13 @@ if [[ "${RELEASE}" == "snapshot" || "${RELEASE}" == 25* || "${RELEASE}" == 24* ]
 fi
 readonly KMODS_SEPARATE
 
-APK=false
 PACKAGES_FILENAME=Packages
+PACKAGE_FORMAT=opkg
 if [[ "${RELEASE}" == "snapshot" || "${RELEASE}" == 25* ]]; then
-  APK=true
   PACKAGES_FILENAME=packages.adb
+  PACKAGE_FORMAT=apk
 fi
-readonly APK PACKAGES_FILENAME
+readonly PACKAGES_FILENAME PACKAGE_FORMAT
 
 : "${DESTDIR:=cache/$RELEASE}"
 readonly DESTDIR
@@ -102,7 +102,8 @@ nixify() {
 prefetch_json() {
   url="$1"
   name="${2:-${url##*/}}"
-  ( nix store prefetch-file --json --name "$name" "$url" 2>/dev/null || jq '{errcode:.}' <<< "$?" ) | jq --arg name "$name" --arg url "$url" '.name=$name|.url=$url'
+  #  2>/dev/null
+  ( nix store prefetch-file --json --name "$name" "$url" || jq '{errcode:.}' <<< "$?" ) | jq --arg name "$name" --arg url "$url" '.name=$name|.url=$url'
 }
 
 print_attrset() {
@@ -141,7 +142,7 @@ hash_target() {
     echo ";"
 
     if testjq .storePath <<< "$profiles_sourceInfo"; then
-      local -r profiles=$(jq -r .storePath <<< "$profiles_sourceInfo")
+      local -r profiles=$(jq -r .storePath <<<"$profiles_sourceInfo")
       echo "  profiles.extract = $(jq -r 'include "lib"; simplify_profiles|nixify' < "$profiles");"
 
       if ${KMODS_SEPARATE}; then
@@ -155,7 +156,7 @@ hash_target() {
         echo "  kmods.\"$KMODS_TARGET\" = {"
         echo "    baseUrl = \"${kmods_url}\";"
         echo "    sourceInfo = $(print_sourceInfo "$prefetch");"
-        echo "    packages = $(load_packages "$prefetch" "$sums" "$kmods_prefix");"
+        echo "    packages = $(load_packages "$dir" "kmods.nix" "$prefetch" "$sums" "$kmods_prefix");"
         echo "  };"
       fi
 
@@ -164,7 +165,7 @@ hash_target() {
       echo "  corePackages = {";
       echo "    baseUrl = \"${base_url}/$prefix\";"
       echo "    sourceInfo = $(print_sourceInfo "$prefetch");"
-      echo "    packages = $(load_packages "$prefetch" "$sums" "$prefix");"
+      echo "    packages = $(load_packages "$dir" "packages.nix" "$prefetch" "$sums" "$prefix");"
       echo "  };"
 
       local -r arch=$(jq -r '.arch_packages' < "$profiles")
@@ -172,7 +173,7 @@ hash_target() {
         echo "  packagesArch = \"$arch\";"
         feeds_file=$(generate_hashes_arch "$arch")
         if [ -n "$feeds_file" ]; then
-          echo "  inherit (import ./$(realpath -m --relative-to "$dir" "$feeds_file")) feeds;"
+          echo "  feeds = import ./$(realpath -m --relative-to "$dir" "$feeds_file");"
         fi
       fi
     else
@@ -186,12 +187,12 @@ generate_hashes_arch() {
   local -r arch="$1"
   local -r out="$DESTDIR/packages/$arch.nix"
 
-  if [[ ! -e "$out" || ("$out" -ot "$DESTDIR" && "$QUICK" != true) ]]; then
+  if [[ ! -e "$out" || "$out" -ot "$DESTDIR" ]]; then
     echo "  - feeds for $arch" >&2
     mkdir -p "$(dirname "$out")"
     # shellcheck disable=SC2064
     trap "rm -f $out.tmp" EXIT
-    hash_packages_arch "$arch" > "$out.tmp"
+    hash_packages_arch "$arch" "$DESTDIR/packages" > "$out.tmp"
     reformat_nix "$out.tmp" "$out"
   else
     echo "  - feeds for $arch (already done)" >&2
@@ -201,49 +202,52 @@ generate_hashes_arch() {
 
 hash_packages_arch() {
   local -r arch="$1"
-  local -r arch_url="${RELEASE_URL}/packages/${arch}"
+  local -r dir="$2"
+  local -r arch_url="$RELEASE_URL/packages/$arch"
   local feed prefix prefetch
 
   echo "# $RELEASE package feeds for $arch"
   echo "{"
-  local -r sums=$(prefetch_json "${arch_url}/sha256sums" "${arch}-sha256sums")
+  local -r sums=$(prefetch_json "$arch_url/sha256sums" "$arch-sha256sums")
   echo "  sha256sums = $(print_sourceInfo "$sums");"
   for feed in "${FEEDS[@]}"; do
     echo "    - $feed" >&2
     prefix="$feed/"
     prefetch=$(prefetch_json "$arch_url/$prefix$PACKAGES_FILENAME" "$arch-$feed-$PACKAGES_FILENAME")
-    echo "  feeds.\"${feed}\" = {"
+    echo "  feeds.\"$feed\" = {"
     echo "    baseUrl = \"$arch_url/$prefix\";"
     echo "    sourceInfo = $(print_sourceInfo "$prefetch");"
-    echo "    packages = $(load_packages "$prefetch" "$sums" "$prefix");"
+    echo "    packages = $(load_packages "$dir" "$arch/$feed.nix" "$prefetch" "$sums" "$prefix");"
     echo "  };"
   done
   echo "}"
 }
 
+: "${PACKAGES2NIX:=${0%/*}/packages2nix.sh}"
+readonly PACKAGES2NIX
+
 load_packages() {
-  local -r packages=$(jq -r .storePath <<< "$1")
-  local -r sums="$2"
-  local -r prefix="${3:-}"
-  packages2json "$packages" | sha256_packages "$sums" "$prefix" | nixify
-}
+  local -r dir="$1"
+  local -r filename="$2"
+  local -r out="$dir/$filename"
+  local -r packages_file=$(jq -r .storePath <<< "$3")
+  local -r sums_file=$(jq -r '.storePath // ""' <<< "$4")
+  local -r prefix="${5:-}"
 
-packages2json() {
-  if ${APK}; then
-    apk adbdump --format json "$1" | jq 'include "lib"; apk_load_adbdump'
-  else
-    jq 'include "lib"; opkg_load_packages' --slurp --raw-input "$1"
+  local args=("$PACKAGE_FORMAT" "$packages_file")
+  if [ -n "$sums_file" ]; then
+      args+=("$sums_file" "$prefix")
   fi
-}
 
-sha256_packages() {
-  local -r sums=$(jq -r .storePath <<< "$1")
-  if [ "$sums" != null ]; then
-    jq 'include "lib"; add_sha256sums($sums; $prefix)' --rawfile sums "$sums" --arg prefix "$2"
-  else
-    # non-apk releases will have SHA256sum in the Packages file
-    cat
+  if [ "$QUICK" != true ]; then
+    mkdir -p "$(dirname "$out")"
+    # shellcheck disable=SC2064
+    trap "rm -f $out.tmp" EXIT
+    $PACKAGES2NIX "${args[@]}" > "$out.tmp"
+    reformat_nix "$out.tmp" "$out"
   fi
+
+  printf 'let p = ./%s; in if builtins.pathExists p then import p else null' "$(realpath -m --relative-to="$dir" "$out")"
 }
 
 find_imagebuilder() {
@@ -286,7 +290,7 @@ hash_release() {
 generate_hashes_target() {
   local -r target="$1"
   local -r variant="$2"
-  local -r out="$DESTDIR/targets/$target/$variant.nix"
+  local -r out="$DESTDIR/targets/$target/$variant/default.nix"
   local -r outdir=$(dirname "$out")
 
   if [[ -z "$EXACT_TARGET_VARIANT" || "$target/$variant" = "$EXACT_TARGET_VARIANT" || "$target" = "$EXACT_TARGET_VARIANT" ]]; then
