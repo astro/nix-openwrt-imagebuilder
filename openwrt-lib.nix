@@ -1,13 +1,22 @@
 { lib ? import <nixpkgs/lib> }:
 
 lib.makeExtensible (openwrtLib: {
-  latestReleasePathRel = "cache/LATEST_RELEASE";
+  getCachePath = release: ./cache + "/${release}";
+
+  getCachedRelease = release: cachePath: let
+    releaseCache = cachePath + "/default.nix";
+  in
+    if builtins.pathExists releaseCache
+    then import releaseCache
+    else throw "Release \"${release}\" is not cached here.";
+
   latestRelease = let
-    path = ./. + "/${openwrtLib.latestReleasePathRel}";
+    pathRel = "cache/LATEST_RELEASE";
+    path = ./. + "/${pathRel}";
   in
     if builtins.pathExists path
     then lib.trim (builtins.readFile path)
-    else throw "File ${openwrtLib.latestReleasePathRel} is missing";
+    else throw "File ${pathRel} is missing";
 
   compareReleases = v1: v2:
     if v1 == v2 then 0
@@ -18,13 +27,6 @@ lib.makeExtensible (openwrtLib: {
   releaseAtLeast = v1: v2: !openwrtLib.releaseOlder v1 v2;
 
   releases = import ./releases.nix { inherit lib; };
-
-  getCachedRelease = release: let
-    cachePath = ./cache/${release}/default.nix;
-  in
-    if builtins.pathExists cachePath
-    then import cachePath
-    else throw "Release \"${release}\" is not cached here.";
 
   sanitizeFilename = fileName:
     builtins.replaceStrings [ "~" ] [ "-" ] (

@@ -30,6 +30,7 @@
           list-versions
           generate-latest-release
           release2nix
+          packages2nix
           generate-all-hashes
           cached-profiles
           profiles-list;
@@ -96,6 +97,10 @@
           release2nix = final.callPackage ./release2nix.nix {
             inherit (self.lib) jqlibdir;
           };
+          packages2nix = final.callPackage ./packages2nix.nix {
+            inherit (self.lib) jqlibdir;
+          };
+          callPackages2nix = final.callPackage ./call-packages2nix.nix { };
           generate-all-hashes = final.callPackage ./generate-all-hashes.nix { };
           profiles-list = final.callPackage ./profiles-list.nix {
             inherit (self.lib) releases;

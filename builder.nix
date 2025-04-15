@@ -4,6 +4,7 @@
 , stdenv ? pkgs.stdenv
 , fetchurl ? pkgs.fetchurl
 , writeScript ? pkgs.writeScript
+, callPackages2nix ? pkgs.callPackages2nix
 # OpenWRT release
 , release ? openwrtLib.latestRelease
 # OpenWRT target
@@ -13,6 +14,7 @@
 , variant ? "generic"
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? throw "packagesArch must be given for OpenWRT<19 releases"
+, cachePath ? openwrtLib.getCachePath release
 # Extra OpenWRT packages (can be prefixed with "-")
 , packages ? []
 # Include extra files
@@ -27,9 +29,9 @@
 } @ args:
 
 let
-  cache = import ./cached-packages.nix { inherit openwrtLib release target variant packagesArch; };
+  cache = import ./cached-packages.nix { inherit openwrtLib release target variant packagesArch cachePath; };
   inherit (import ./files.nix {
-    inherit lib fetchurl openwrtLib cache;
+    inherit lib fetchurl callPackages2nix openwrtLib cache;
   }) expandDeps corePackages packagesByFeed allPackages;
 
   requiredPackages = cache.profiles.default_packages or (
@@ -139,7 +141,7 @@ stdenv.mkDerivation ({
     zlib unzip bzip2 zstd
     ncurses which rsync git file getopt wget
     bash perl python311 dtc
-  ] ++ lib.optional (lib.versionOlder release "21" && release != "snapshot") python2;
+  ] ++ lib.optional (openwrtLib.releaseOlder release "21") python2;
 
 
   buildFlags = [

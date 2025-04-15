@@ -4,7 +4,7 @@
 , jq
 , nix
 , nixfmt-rfc-style
-, apk-tools
+, packages2nix
 , jqlibdir
 }:
 
@@ -15,10 +15,9 @@ writeShellApplication {
     jq
     nix
     nixfmt-rfc-style
-    apk-tools
   ];
 
   runtimeEnv.JQLIBS = "-L${jqlibdir}";
-
+  runtimeEnv.PACKAGES2NIX = "${packages2nix}/bin/packages2nix";
   text = lib.readFile ./release2nix.sh;
 }
