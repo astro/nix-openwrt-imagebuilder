@@ -168,9 +168,9 @@ pkgs.stdenv.mkDerivation ({
       };
     in
     ''
-      buildFlagsArray+=(${mkBuildFlagsArray flags}) 
+      buildFlagsArray+=(${mkBuildFlagsArray flags})
     '';
-    
+
   installPhase = ''
     runHook preInstall
 
@@ -187,6 +187,16 @@ pkgs.stdenv.mkDerivation ({
     popd
 
     runHook postInstall
+  '';
+
+  postInstall = ''
+    shopt -s nullglob
+    files=($out/*.bin)
+    if ! (( ''${#files[@]} )); then
+      echo "Build produced no bin file, see above for details"
+      exit 2;
+    fi
+    shopt -u nullglob
   '';
 
   dontFixup = true;
