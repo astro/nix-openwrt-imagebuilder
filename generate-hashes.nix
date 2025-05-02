@@ -31,8 +31,6 @@ pkgs.writeShellApplication {
       TARGET=$1
       VARIANT=$2
 
-      echo "- ''${TARGET}/''${VARIANT}" >&2
-
       BASE_URL="''${RELEASE_URL}/targets/''${TARGET}/''${VARIANT}"
 
       SUMS_HASH=$(nix store prefetch-file --json "''${BASE_URL}/sha256sums" 2>/dev/null | jq -r .hash)
@@ -50,7 +48,6 @@ pkgs.writeShellApplication {
 
             KMODS_TARGET="''${KERNEL_VERSION}-''${KERNEL_RELEASE}-''${KERNEL_VERMAGIC}"
 
-            echo "  - kmods" >&2
             KMODS_HASH=$(nix store prefetch-file --json "''${BASE_URL}/kmods/''${KMODS_TARGET}/Packages" 2>/dev/null | jq -r .hash)
             echo "  kmods.\"''${TARGET}\".\"''${VARIANT}\".\"''${KMODS_TARGET}\".sha256 = \"''${KMODS_HASH}\";"
           fi
@@ -61,7 +58,6 @@ pkgs.writeShellApplication {
 
             if [ -z "''${arches_fetched[$ARCH]:-}" ]; then
               for FEED in ''${FEEDS}; do
-                echo "  - ''${FEED}" >&2
                 PACKAGES_HASH=$(nix store prefetch-file --json "''${RELEASE_URL}/packages/''${ARCH}/''${FEED}/Packages" 2>/dev/null | jq -r .hash)
                 echo "  packages.\"''${ARCH}\".\"''${FEED}\".sha256 = \"''${PACKAGES_HASH}\";"
               done
