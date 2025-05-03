@@ -16,7 +16,9 @@ pkgs.writeShellApplication {
 
     for RELEASE in "''${RELEASES[@]}"; do
       echo "# Fetching hashes for OpenWrt ''${RELEASE}"
-      generate-hashes "''${RELEASE}"
+      generate-hashes "''${RELEASE}" &
     done
+
+    wait
   '';
 }
