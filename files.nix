@@ -12,6 +12,8 @@
 , kmodsSha256 ? {}
 # Manually specify packages' arch for OpenWRT<19 releases without profiles.json
 , packagesArch ? null
+# Allows specifying additional packages that are not packaged by openwrt.
+, extraPackages ? {}
 }:
 let
   inherit (pkgs) lib fetchurl;
@@ -183,8 +185,7 @@ let
       kernel = dummyPackage;
     };
 
-  # all packages, including dummy and virtual
-  allPackages = addVirtual (realPackages // dummyPackages);
+  allPackages = addVirtual (realPackages // dummyPackages // extraPackages);
 
   # remove package names starting with '-' from deps
   #
