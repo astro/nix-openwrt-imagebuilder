@@ -23,8 +23,13 @@
   ).packages.${packagesArch}
 # Attrset where key is kmodsTarget and value is checksum of `Packages` file. Required for OpenWRT >=24
 , kmodsSha256 ? {}
-# Extra OpenWRT packages (can be prefixed with "-")
+# Extra OpenWRT package names (can be prefixed with "-")
 , packages ? []
+# Allows specifying additional packages that are not packaged by openwrt.
+# Note: unlike `packages`, this is not a list of names, it's an attrset of
+# package details. See `parsePackages` in `files.nix` for details on the
+# format.
+, extraPackages ? {}
 # Include extra files
 , files ? null
 # Which services in /etc/init.d/ should be disabled
@@ -46,7 +51,7 @@ let
   );
 
   inherit (import ./files.nix {
-    inherit pkgs release target variant sha256 feedsSha256 packagesArch;
+    inherit pkgs release target variant sha256 feedsSha256 packagesArch extraPackages;
     kmodsSha256 = maybeKmodsSha256;
   }) variantFiles profiles expandDeps corePackages packagesByFeed allPackages;
 
@@ -72,6 +77,7 @@ let
     "files"
     "disabledServices"
     "extraImageName"
+    "extraPackages"
     "rootFsPartSize"
   ];
 in
