@@ -512,6 +512,130 @@
       version_code = "r24232-539228933c";
       version_number = "23.05.6";
     };
+    armv8 = {
+      arch_packages = "aarch64_generic";
+      default_packages = [
+        "base-files"
+        "blkid"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "e2fsprogs"
+        "firewall4"
+        "fstools"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-mbedtls"
+        "logd"
+        "mkf2fs"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      linux_kernel = {
+        release = "1";
+        vermagic = "a52ad993f672923487c240ae1b8db88a";
+        version = "5.15.189";
+      };
+      metadata_version = 1;
+      profiles = {
+        generic = {
+          device_packages = [
+            "kmod-amazon-ena"
+            "kmod-e1000e"
+            "kmod-vmxnet3"
+            "kmod-rtc-rx8025"
+            "kmod-i2c-mux-pca954x"
+            "kmod-gpio-pca953x"
+            "partx-utils"
+            "kmod-wdt-sp805"
+            "kmod-mvneta"
+            "kmod-mvpp2"
+            "kmod-fsl-dpaa1-net"
+            "kmod-fsl-dpaa2-net"
+            "kmod-fsl-enetc-net"
+            "kmod-dwmac-imx"
+            "kmod-fsl-fec"
+            "kmod-thunderx-net"
+            "kmod-dwmac-rockchip"
+            "kmod-dwmac-sun8i"
+            "kmod-phy-aquantia"
+            "kmod-phy-broadcom"
+            "kmod-phy-marvell"
+            "kmod-phy-marvell-10g"
+            "kmod-sfp"
+            "kmod-atlantic"
+            "kmod-bcmgenet"
+            "kmod-octeontx2-net"
+            "kmod-renesas-net-avb"
+            "kmod-phy-realtek"
+            "kmod-phy-smsc"
+          ];
+          image_prefix = "openwrt-23.05.6-armsr-armv8-generic";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-armsr-armv8-generic-squashfs-combined.img.gz";
+              sha256 = "2f70f0294dc9d42f10c963d86de509ab9c597a6b7697e87f615ee7df340764e3";
+              sha256_unsigned = "6d6ad37135c2db632813e5ef1de1ceeec3da2fd516c7a257e51ff031bd8a48af";
+              type = "combined";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.6-armsr-armv8-generic-ext4-combined.img.gz";
+              sha256 = "6de21c62750f12d83049d55605a81473db48fed3a14ef796ce48ca3271bfdf52";
+              sha256_unsigned = "0eb99b9980cd2ce8741895611eefef87af088bf3f04c6b16259a4584b11259ed";
+              type = "combined";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.6-armsr-armv8-generic-ext4-rootfs.img.gz";
+              sha256 = "b5ed1ac919e4096ef7e688734a9f7cfba38ea2b3c6e6a8fc37303c383b7eea18";
+              sha256_unsigned = "b5ed1ac919e4096ef7e688734a9f7cfba38ea2b3c6e6a8fc37303c383b7eea18";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-armsr-armv8-generic-squashfs-rootfs.img.gz";
+              sha256 = "e6ebce5fc2a504c1cbb28eab99765bbb9d02621ff9be9fc2b380acd0cbe833eb";
+              sha256_unsigned = "e6ebce5fc2a504c1cbb28eab99765bbb9d02621ff9be9fc2b380acd0cbe833eb";
+              type = "rootfs";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-armsr-armv8-generic-initramfs-kernel.bin";
+              sha256 = "b48cc21fda36fca0a175bfcc80827e0c8f550335e49fdb46bd7224b075dabee2";
+              sha256_unsigned = "b48cc21fda36fca0a175bfcc80827e0c8f550335e49fdb46bd7224b075dabee2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [ ];
+          titles = [
+            {
+              title = "Generic EFI Boot";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1755196060;
+      target = "armsr/armv8";
+      version_code = "r24232-539228933c";
+      version_number = "23.05.6";
+    };
   };
   at91 = {
     sam9x = {
@@ -23450,6 +23574,320 @@
       version_number = "23.05.6";
     };
   };
+  gemini = {
+    generic = {
+      arch_packages = "arm_fa526";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall4"
+        "fstools"
+        "kmod-gpio-button-hotplug"
+        "kmod-leds-gpio"
+        "kmod-nft-offload"
+        "kmod-usb-fotg210"
+        "kmod-usb-ledtrig-usbport"
+        "libc"
+        "libgcc"
+        "libustream-mbedtls"
+        "logd"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+      ];
+      linux_kernel = {
+        release = "1";
+        vermagic = "2ff75d83e8b205a5d4f3da2ad02ec1d4";
+        version = "5.15.189";
+      };
+      metadata_version = 1;
+      profiles = {
+        dlink_dir-685 = {
+          device_packages = [
+            "block-mount"
+            "fdisk"
+            "lsblk"
+            "mdadm"
+            "kmod-md-mod"
+            "kmod-md-linear"
+            "kmod-md-multipath"
+            "kmod-md-raid0"
+            "kmod-md-raid1"
+            "kmod-md-raid10"
+            "kmod-md-raid456"
+            "kmod-fs-btrfs"
+            "kmod-fs-cifs"
+            "kmod-fs-nfs"
+            "kmod-fs-nfsd"
+            "kmod-fs-ntfs"
+            "kmod-fs-reiserfs"
+            "kmod-fs-vfat"
+            "kmod-nls-utf8"
+            "kmod-usb-storage-extras"
+            "kmod-hwmon-drivetemp"
+            "cfdisk"
+            "e2fsprogs"
+            "badblocks"
+            "partx-utils"
+            "kmod-rt2800-pci"
+          ];
+          image_prefix = "openwrt-23.05.6-gemini-generic-dlink_dir-685";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.6-gemini-generic-dlink_dir-685-ext4-factory.bin";
+              sha256 = "4e4aa1395b74632751b6e356d70c648eaa254725fbee09db731d9be03238b945";
+              sha256_unsigned = "4e4aa1395b74632751b6e356d70c648eaa254725fbee09db731d9be03238b945";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-gemini-generic-dlink_dir-685-squashfs-factory.bin";
+              sha256 = "45b7d495cf2d9a0e83d768f376a068289b26286f07b2b4b76d6e5b398d39dd4c";
+              sha256_unsigned = "45b7d495cf2d9a0e83d768f376a068289b26286f07b2b4b76d6e5b398d39dd4c";
+              type = "factory";
+            }
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.6-gemini-generic-dlink_dir-685-ext4-sysupgrade.bin";
+              sha256 = "e5cfc7f91ce4c48e6173136301a7e20cccabff02a22a14bd15e1553ab49cc235";
+              sha256_unsigned = "a0ecb5d7e6b7ebe9699773532655aa7fc38b1fbd7dcbc5fe21243c79bc248da0";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-gemini-generic-dlink_dir-685-squashfs-sysupgrade.bin";
+              sha256 = "537993efa2c75b70c6ed2c31dd9c89266e6d7772ca34b158ff9e8010b31cc2d9";
+              sha256_unsigned = "8b57a293a390b22396f6ce060b97c47697d04253851c0f59f11680d935dcaa6f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-685"
+          ];
+          titles = [
+            {
+              model = "DIR-685 Xtreme N Storage Router";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dns-313 = {
+          device_packages = [
+            "block-mount"
+            "fdisk"
+            "lsblk"
+            "mdadm"
+            "kmod-md-mod"
+            "kmod-md-linear"
+            "kmod-md-multipath"
+            "kmod-md-raid0"
+            "kmod-md-raid1"
+            "kmod-md-raid10"
+            "kmod-md-raid456"
+            "kmod-fs-btrfs"
+            "kmod-fs-cifs"
+            "kmod-fs-nfs"
+            "kmod-fs-nfsd"
+            "kmod-fs-ntfs"
+            "kmod-fs-reiserfs"
+            "kmod-fs-vfat"
+            "kmod-nls-utf8"
+            "kmod-usb-storage-extras"
+            "kmod-hwmon-drivetemp"
+            "cfdisk"
+            "e2fsprogs"
+            "badblocks"
+            "partx-utils"
+          ];
+          image_prefix = "openwrt-23.05.6-gemini-generic-dlink_dns-313";
+          images = [
+            {
+              filesystem = "ext4";
+              name = "openwrt-23.05.6-gemini-generic-dlink_dns-313-ext4-factory.bin.gz";
+              sha256 = "052be8a76a173224f2e5608049a1cff58c187f625d23b7dbf66012fd5556f0b7";
+              sha256_unsigned = "052be8a76a173224f2e5608049a1cff58c187f625d23b7dbf66012fd5556f0b7";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dns-313"
+          ];
+          titles = [
+            {
+              model = "DNS-313 1-Bay Network Storage Enclosure";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        itian_sq201 = {
+          device_packages = [
+            "block-mount"
+            "fdisk"
+            "lsblk"
+            "mdadm"
+            "kmod-md-mod"
+            "kmod-md-linear"
+            "kmod-md-multipath"
+            "kmod-md-raid0"
+            "kmod-md-raid1"
+            "kmod-md-raid10"
+            "kmod-md-raid456"
+            "kmod-fs-btrfs"
+            "kmod-fs-cifs"
+            "kmod-fs-nfs"
+            "kmod-fs-nfsd"
+            "kmod-fs-ntfs"
+            "kmod-fs-reiserfs"
+            "kmod-fs-vfat"
+            "kmod-nls-utf8"
+            "kmod-usb-storage-extras"
+            "kmod-hwmon-drivetemp"
+            "cfdisk"
+            "e2fsprogs"
+            "badblocks"
+            "partx-utils"
+            "kmod-rt61-pci"
+            "kmod-usb2-pci"
+          ];
+          image_prefix = "openwrt-23.05.6-gemini-generic-itian_sq201";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-gemini-generic-itian_sq201-squashfs-factory.bin";
+              sha256 = "6039eb038b740f283db41da9735e2e3d941573cff06eb6fa35acf5f51fba6a24";
+              sha256_unsigned = "6039eb038b740f283db41da9735e2e3d941573cff06eb6fa35acf5f51fba6a24";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "itian,sq201"
+          ];
+          titles = [
+            {
+              model = "Square One SQ201";
+              vendor = "ITian";
+            }
+          ];
+        };
+        raidsonic_ib-4220-b = {
+          device_packages = [
+            "block-mount"
+            "fdisk"
+            "lsblk"
+            "mdadm"
+            "kmod-md-mod"
+            "kmod-md-linear"
+            "kmod-md-multipath"
+            "kmod-md-raid0"
+            "kmod-md-raid1"
+            "kmod-md-raid10"
+            "kmod-md-raid456"
+            "kmod-fs-btrfs"
+            "kmod-fs-cifs"
+            "kmod-fs-nfs"
+            "kmod-fs-nfsd"
+            "kmod-fs-ntfs"
+            "kmod-fs-reiserfs"
+            "kmod-fs-vfat"
+            "kmod-nls-utf8"
+            "kmod-usb-storage-extras"
+            "kmod-hwmon-drivetemp"
+            "cfdisk"
+            "e2fsprogs"
+            "badblocks"
+            "partx-utils"
+          ];
+          image_prefix = "openwrt-23.05.6-gemini-generic-raidsonic_ib-4220-b";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-gemini-generic-raidsonic_ib-4220-b-squashfs-factory.bin";
+              sha256 = "b26030c5c211bcb6e516ec1e258f56f494425f37cf206c2dd4213a730e49b6d9";
+              sha256_unsigned = "b26030c5c211bcb6e516ec1e258f56f494425f37cf206c2dd4213a730e49b6d9";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "raidsonic,ib-4220-b"
+          ];
+          titles = [
+            {
+              model = "NAS IB-4220-B";
+              vendor = "Raidsonic";
+            }
+          ];
+        };
+        storlink_sl93512r = {
+          device_packages = [
+            "block-mount"
+            "fdisk"
+            "lsblk"
+            "mdadm"
+            "kmod-md-mod"
+            "kmod-md-linear"
+            "kmod-md-multipath"
+            "kmod-md-raid0"
+            "kmod-md-raid1"
+            "kmod-md-raid10"
+            "kmod-md-raid456"
+            "kmod-fs-btrfs"
+            "kmod-fs-cifs"
+            "kmod-fs-nfs"
+            "kmod-fs-nfsd"
+            "kmod-fs-ntfs"
+            "kmod-fs-reiserfs"
+            "kmod-fs-vfat"
+            "kmod-nls-utf8"
+            "kmod-usb-storage-extras"
+            "kmod-hwmon-drivetemp"
+            "cfdisk"
+            "e2fsprogs"
+            "badblocks"
+            "partx-utils"
+          ];
+          image_prefix = "openwrt-23.05.6-gemini-generic-storlink_sl93512r";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-gemini-generic-storlink_sl93512r-squashfs-factory.bin";
+              sha256 = "12218df459f0ec66063f18b177687cd1888ea295cc2aaf78a06f3220522c8fd1";
+              sha256_unsigned = "12218df459f0ec66063f18b177687cd1888ea295cc2aaf78a06f3220522c8fd1";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "storlink,sl93512r"
+          ];
+          titles = [
+            {
+              model = "SL93512r";
+              vendor = "StorLink";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1755196060;
+      target = "gemini/generic";
+      version_code = "r24232-539228933c";
+      version_number = "23.05.6";
+    };
+  };
   imx = {
     cortexa7 = {
       arch_packages = "arm_cortex-a7_neon-vfpv4";
@@ -42763,6 +43201,9207 @@
       };
       source_date_epoch = 1755196060;
       target = "ramips/mt7620";
+      version_code = "r24232-539228933c";
+      version_number = "23.05.6";
+    };
+    mt7621 = {
+      arch_packages = "mipsel_24kc";
+      default_packages = [
+        "base-files"
+        "busybox"
+        "ca-bundle"
+        "dnsmasq"
+        "dropbear"
+        "firewall4"
+        "fstools"
+        "kmod-gpio-button-hotplug"
+        "kmod-leds-gpio"
+        "kmod-nft-offload"
+        "libc"
+        "libgcc"
+        "libustream-mbedtls"
+        "logd"
+        "mtd"
+        "netifd"
+        "nftables"
+        "odhcp6c"
+        "odhcpd-ipv6only"
+        "opkg"
+        "ppp"
+        "ppp-mod-pppoe"
+        "procd"
+        "procd-seccomp"
+        "procd-ujail"
+        "uboot-envtools"
+        "uci"
+        "uclient-fetch"
+        "urandom-seed"
+        "urngd"
+        "wpad-basic-mbedtls"
+      ];
+      linux_kernel = {
+        release = "1";
+        vermagic = "4f2d344a1dace96707d0f22ddf55d176";
+        version = "5.15.189";
+      };
+      metadata_version = 1;
+      profiles = {
+        adslr_g7 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-adslr_g7";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-adslr_g7-initramfs-kernel.bin";
+              sha256 = "7edb3f1b4e4aa4d64aa580afae5b38c487a52e86a640d8c618a068f50879c20f";
+              sha256_unsigned = "7edb3f1b4e4aa4d64aa580afae5b38c487a52e86a640d8c618a068f50879c20f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-adslr_g7-squashfs-sysupgrade.bin";
+              sha256 = "b160d680209e5fbb5839d0d295589eaba187fa5dd9ed89e52fcaf7e568040f41";
+              sha256_unsigned = "575d7857d69f92ff0a137c31b138fdefacf7ce07613fa3b39cdaf5b0409fae57";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "adslr,g7"
+          ];
+          titles = [
+            {
+              model = "G7";
+              vendor = "ADSLR";
+            }
+          ];
+        };
+        afoundry_ew1200 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-mt76x2"
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-afoundry_ew1200";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-afoundry_ew1200-initramfs-kernel.bin";
+              sha256 = "d7cfd6ea0e07795a4203d9f175abaf043a811e7d6f3db32371099f4ddaf3c188";
+              sha256_unsigned = "d7cfd6ea0e07795a4203d9f175abaf043a811e7d6f3db32371099f4ddaf3c188";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-afoundry_ew1200-squashfs-sysupgrade.bin";
+              sha256 = "630dc1ae7ea35bd3af64c3099c5c0a39a29a08b5887c7e48c4f9bf26489ee96a";
+              sha256_unsigned = "42af112c44bf4667251c3586b70a4add6860b3be23903f5994082c035e5db709";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "afoundry,ew1200"
+            "ew1200"
+          ];
+          titles = [
+            {
+              model = "EW1200";
+              vendor = "AFOUNDRY";
+            }
+          ];
+        };
+        alfa-network_ax1800rm = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-alfa-network_ax1800rm";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-alfa-network_ax1800rm-squashfs-recovery.bin";
+              sha256 = "ddaeb1498c625aa39455f2350ea0e2d568b30e821033231795c54641e61bd0a3";
+              sha256_unsigned = "ddaeb1498c625aa39455f2350ea0e2d568b30e821033231795c54641e61bd0a3";
+              type = "recovery";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-alfa-network_ax1800rm-squashfs-sysupgrade.bin";
+              sha256 = "83ad20ccfd36ec804865e39d498658666e0794ad0e01c6c4b81b011556ef578c";
+              sha256_unsigned = "13491417e33933aad3a226a9fbca8b01ec3381d6bed492501a0a63e1879b2117";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-alfa-network_ax1800rm-initramfs-kernel.bin";
+              sha256 = "ba83cb8f10cc00e22120a183cb2bc7ee1a2a7b90e6943f0bf749f1186d74c054";
+              sha256_unsigned = "ba83cb8f10cc00e22120a183cb2bc7ee1a2a7b90e6943f0bf749f1186d74c054";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,ax1800rm"
+          ];
+          titles = [
+            {
+              model = "AX1800RM";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        alfa-network_quad-e4g = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-alfa-network_quad-e4g";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-alfa-network_quad-e4g-squashfs-sysupgrade.bin";
+              sha256 = "d15aaddfb6d316e641b08127c8a89416dbaf1b060f2db8803d182602b218f499";
+              sha256_unsigned = "18ef0277cf9f9f9556d3659cc3eb048f846a8ec10af1319f293b6b30acb84549";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-alfa-network_quad-e4g-initramfs-kernel.bin";
+              sha256 = "e7dd8f9721b19d77f3f4eeb54225adae71bb4df6189177d4fe158dc159e3d5a3";
+              sha256_unsigned = "e7dd8f9721b19d77f3f4eeb54225adae71bb4df6189177d4fe158dc159e3d5a3";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "alfa-network,quad-e4g"
+            "quad-e4g"
+          ];
+          titles = [
+            {
+              model = "Quad-E4G";
+              vendor = "ALFA Network";
+            }
+          ];
+        };
+        ampedwireless_ally-00x19k = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ampedwireless_ally-00x19k";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ampedwireless_ally-00x19k-squashfs-sysupgrade.bin";
+              sha256 = "e24e725500960d51b7e015279f2054c75135060af5c0293b480a258463a7a694";
+              sha256_unsigned = "eb49d8248948572cff66477beab9cc8edad3ede06ba90b46937184c7ac9ae9ca";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ampedwireless_ally-00x19k-initramfs-kernel.bin";
+              sha256 = "200cf6c1cddd32c9376ecd7adb08f44e9c1753691d4d1cdf905ed549c8ef126b";
+              sha256_unsigned = "200cf6c1cddd32c9376ecd7adb08f44e9c1753691d4d1cdf905ed549c8ef126b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ampedwireless,ally-00x19k"
+          ];
+          titles = [
+            {
+              model = "ALLY-00X19K";
+              vendor = "Amped Wireless";
+            }
+          ];
+        };
+        ampedwireless_ally-r1900k = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ampedwireless_ally-r1900k";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ampedwireless_ally-r1900k-initramfs-kernel.bin";
+              sha256 = "0933342b264871409c90fad8d0c06cb797bf448181644df430c8ba39b5d1616b";
+              sha256_unsigned = "0933342b264871409c90fad8d0c06cb797bf448181644df430c8ba39b5d1616b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ampedwireless_ally-r1900k-squashfs-sysupgrade.bin";
+              sha256 = "f61276b23abc905b1d6adb1906ba0356988ec401f17aeaeaae59343a3548d906";
+              sha256_unsigned = "7bcf2c7dcc15acac3bfead98071ee459a99360b5f06b6d3c17704cd3bcadbcff";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ampedwireless,ally-r1900k"
+          ];
+          titles = [
+            {
+              model = "ALLY-R1900K";
+              vendor = "Amped Wireless";
+            }
+          ];
+        };
+        arcadyan_we420223-99 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-arcadyan_we420223-99";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-arcadyan_we420223-99-squashfs-sysupgrade.bin";
+              sha256 = "0156a17fe6b2c6ba4b6811ca7f83cd6906983db082189b694de43ced3b723323";
+              sha256_unsigned = "8a935bd89f88fe234fd6b3e2828d31aef3c70d436e50f77e9b0398245b4a85f6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-arcadyan_we420223-99-squashfs-factory.trx";
+              sha256 = "b03fee7a6e15e023a5514f0ec7c62a0c7a8ff4d7e99374319401bd9081e5a498";
+              sha256_unsigned = "b03fee7a6e15e023a5514f0ec7c62a0c7a8ff4d7e99374319401bd9081e5a498";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-arcadyan_we420223-99-initramfs-kernel.bin";
+              sha256 = "a3081ac5f76dd62e7ffdba0b312aa303570a194d69cf8d2c40128abfc57bcadc";
+              sha256_unsigned = "a3081ac5f76dd62e7ffdba0b312aa303570a194d69cf8d2c40128abfc57bcadc";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "arcadyan,we420223-99"
+          ];
+          titles = [
+            {
+              model = "WE420223-99";
+              vendor = "Arcadyan";
+            }
+            {
+              model = "Experia WiFi";
+              vendor = "KPN";
+            }
+          ];
+        };
+        asiarf_ap7621-001 = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asiarf_ap7621-001";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asiarf_ap7621-001-squashfs-sysupgrade.bin";
+              sha256 = "c19907f4a398a313bbc670d6c94b2837415ef9f1fe3f0a6008c78985b708e39f";
+              sha256_unsigned = "fb8827c9e4666023a418b8c930d70a624a5f165758ca99dccc2a473b9d88be99";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asiarf_ap7621-001-initramfs-kernel.bin";
+              sha256 = "a1f16c59339670078501d04e1946d2d93a509540e40dc8bf30afcc25907182ae";
+              sha256_unsigned = "a1f16c59339670078501d04e1946d2d93a509540e40dc8bf30afcc25907182ae";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "asiarf,ap7621-001"
+          ];
+          titles = [
+            {
+              model = "AP7621-001";
+              vendor = "AsiaRF";
+            }
+          ];
+        };
+        asiarf_ap7621-nv1 = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asiarf_ap7621-nv1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asiarf_ap7621-nv1-initramfs-kernel.bin";
+              sha256 = "e8fe3058ad5775dad5677c339d0120b9fae270ca187813ea16c0351502adf62b";
+              sha256_unsigned = "e8fe3058ad5775dad5677c339d0120b9fae270ca187813ea16c0351502adf62b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asiarf_ap7621-nv1-squashfs-sysupgrade.bin";
+              sha256 = "06d1850615c28667620a7d18b8dda1b38b86a7b8306a2c39ae31ebb5be66f3fe";
+              sha256_unsigned = "1b62cd4a863a1919fad65dd50dcabc04bc15258e7de537e98847328ae92a4120";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "asiarf,ap7621-nv1"
+          ];
+          titles = [
+            {
+              model = "AP7621-NV1";
+              vendor = "AsiaRF";
+            }
+          ];
+        };
+        asus_rp-ac56 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-i2c-ralink"
+            "kmod-sound-mt7620"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac56";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac56-initramfs-kernel.bin";
+              sha256 = "5d5519914f7b5a6fd4d99f1b55e5c385330b3d9203361237f8987707895c7a80";
+              sha256_unsigned = "5d5519914f7b5a6fd4d99f1b55e5c385330b3d9203361237f8987707895c7a80";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac56-squashfs-sysupgrade.bin";
+              sha256 = "c79d1a1538803e2912b1d284ad603459a16d83fc34b55daa6cceea72ed435734";
+              sha256_unsigned = "7cddf9bdbcd64f49ce9a454cb32ffaad41067db4f0ea1759a9dd6277f84c39d8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac56-squashfs-factory.bin";
+              sha256 = "ff9bb39d1e84488cf0fe6010dd74bffc61e6ff86353cc3b2e9db9f98542b941e";
+              sha256_unsigned = "ff9bb39d1e84488cf0fe6010dd74bffc61e6ff86353cc3b2e9db9f98542b941e";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "asus,rp-ac56"
+          ];
+          titles = [
+            {
+              model = "RP-AC56";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rp-ac87 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "rssileds"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac87";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac87-squashfs-sysupgrade.bin";
+              sha256 = "914ecc77faff29054f7ca062e16e7cdd441df2cf03187c8e6eae3938f5525567";
+              sha256_unsigned = "8977b0ae68c2a54bf81086b43a5c8241bea5ec6c7701e961332b287f373b198d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac87-squashfs-factory.bin";
+              sha256 = "60ba5541f5abd923d68ba8cd8c22f25b88f755f05a1d1ee9585f0749b44fd8ce";
+              sha256_unsigned = "60ba5541f5abd923d68ba8cd8c22f25b88f755f05a1d1ee9585f0749b44fd8ce";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rp-ac87-initramfs-kernel.bin";
+              sha256 = "864fc0896863efe827b4936ee656c4dc56c55dc22967f09b5533055d953292a2";
+              sha256_unsigned = "864fc0896863efe827b4936ee656c4dc56c55dc22967f09b5533055d953292a2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "asus,rp-ac87"
+          ];
+          titles = [
+            {
+              model = "RP-AC87";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rt-ac57u-v1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac57u-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac57u-v1-initramfs-kernel.bin";
+              sha256 = "07b8d86ec92923bc27a709b6eaa12a89c3ac8c28d87e2f89eb5d403097de1b2a";
+              sha256_unsigned = "07b8d86ec92923bc27a709b6eaa12a89c3ac8c28d87e2f89eb5d403097de1b2a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac57u-v1-squashfs-sysupgrade.bin";
+              sha256 = "c8aae6b262f9f9c26ede3a6ea376c269b6778fed013c3476bca61857d0578104";
+              sha256_unsigned = "78c4fcebc9e8c2881f19c0af357f809989aa4fff232d7036ba24d4512ffc78e6";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "asus,rt-ac57u-v1"
+            "asus,rt-ac57u"
+          ];
+          titles = [
+            {
+              model = "RT-AC57U";
+              variant = "v1";
+              vendor = "ASUS";
+            }
+            {
+              model = "RT-AC1200GU";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rt-ac65p = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac65p";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac65p-squashfs-factory.bin";
+              sha256 = "83b2ce6c878eb6688e603117986de3e3f9cdff706688fc28ad175a93bdfeba56";
+              sha256_unsigned = "83b2ce6c878eb6688e603117986de3e3f9cdff706688fc28ad175a93bdfeba56";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac65p-initramfs-kernel.bin";
+              sha256 = "8f67bfe30bb66f8ee71fef5a79874615afc7154614826cc36ec04a6c9aefd3ad";
+              sha256_unsigned = "8f67bfe30bb66f8ee71fef5a79874615afc7154614826cc36ec04a6c9aefd3ad";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac65p-squashfs-sysupgrade.bin";
+              sha256 = "c049b2db1a40cb3e268323f46ed12f0cf700b96d1c105b0fb0f2f94cf5bec61e";
+              sha256_unsigned = "8533baf1e36fb7369564e888dcb8b6cf3e458fcbd5602a348facbf17e95ea885";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "asus,rt-ac65p"
+          ];
+          titles = [
+            {
+              model = "RT-AC65P";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rt-ac85p = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac85p";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac85p-initramfs-kernel.bin";
+              sha256 = "695f52c03915e84ea5c2680bb50a341c853ee6c4b4a22f0d84191830f800e294";
+              sha256_unsigned = "695f52c03915e84ea5c2680bb50a341c853ee6c4b4a22f0d84191830f800e294";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac85p-squashfs-sysupgrade.bin";
+              sha256 = "443c53d9f123164e76afa884775ba1bae9144062ee9e286cb43fa5471a1aa295";
+              sha256_unsigned = "83b45cee3b9e97a444ca7858beb0ab29d763888c3aacbda0838af13885f5e153";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ac85p-squashfs-factory.bin";
+              sha256 = "5f0c5455d376e8c3278e0abc5c4943dfc37ef5c3597eb5c43d220d6cbeeb4921";
+              sha256_unsigned = "5f0c5455d376e8c3278e0abc5c4943dfc37ef5c3597eb5c43d220d6cbeeb4921";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "asus,rt-ac85p"
+          ];
+          titles = [
+            {
+              model = "RT-AC85P";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rt-ax53u = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax53u";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax53u-initramfs-kernel.bin";
+              sha256 = "b00030bcea8fcb8590c70ebb70930f02a1981d61ab46aedef64955286badb2e0";
+              sha256_unsigned = "b00030bcea8fcb8590c70ebb70930f02a1981d61ab46aedef64955286badb2e0";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax53u-squashfs-sysupgrade.bin";
+              sha256 = "b59e59db62d0859da8b9860bed5a0dde186b74fbb9ac5f801ac1fdcbe1dac7c3";
+              sha256_unsigned = "8036c169d8512a6fe109ae98ec535c83d9497f324793972b89e20df656d426ed";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax53u-squashfs-factory.bin";
+              sha256 = "1ad56e51abb7db6ad96f68c388213cb87ebd54ca1239af291213ef767301eb7a";
+              sha256_unsigned = "1ad56e51abb7db6ad96f68c388213cb87ebd54ca1239af291213ef767301eb7a";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "asus,rt-ax53u"
+          ];
+          titles = [
+            {
+              model = "RT-AX53U";
+              vendor = "ASUS";
+            }
+            {
+              model = "RT-AX1800U";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rt-ax54 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax54";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax54-initramfs-kernel.bin";
+              sha256 = "7cb88da841b707b3680effa15b3e9d04e47379672e912d37893e86772b88ab93";
+              sha256_unsigned = "7cb88da841b707b3680effa15b3e9d04e47379672e912d37893e86772b88ab93";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax54-squashfs-sysupgrade.bin";
+              sha256 = "a3a775282ed0bba14f29a30014bdfdd8e4ec6d423930defd28440e5d615d0c40";
+              sha256_unsigned = "55e7ecc493bb245190711cb9be4d496e20ec398b36c50e6646cfc566c3bd7815";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-ax54-squashfs-factory.bin";
+              sha256 = "0d541894f9849fe219c38272af5dbf05bc5f01e9c9568be25c27086e0f221e6d";
+              sha256_unsigned = "0d541894f9849fe219c38272af5dbf05bc5f01e9c9568be25c27086e0f221e6d";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "asus,rt-ax54"
+          ];
+          titles = [
+            {
+              model = "RT-AX54";
+              vendor = "ASUS";
+            }
+            {
+              model = "RT-AX54HP";
+              vendor = "ASUS";
+            }
+            {
+              model = "RT-AX1800HP";
+              vendor = "ASUS";
+            }
+            {
+              model = "RT-AX1800S";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        asus_rt-n56u-b1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-asus_rt-n56u-b1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-n56u-b1-squashfs-sysupgrade.bin";
+              sha256 = "a1e8e3e511f96c595bb0c4a3b7560baff8cf9bc04f15e99edac451a56c711874";
+              sha256_unsigned = "889af6010b08824c4eb08f55b355e5f44af15df0fe37e0738fe915c171410dea";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-asus_rt-n56u-b1-initramfs-kernel.bin";
+              sha256 = "1a51babac59f9058491eaa13ed59274ab27692966c860fb447412acae353829c";
+              sha256_unsigned = "1a51babac59f9058491eaa13ed59274ab27692966c860fb447412acae353829c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "asus,rt-n56u-b1"
+          ];
+          titles = [
+            {
+              model = "RT-N56U";
+              variant = "B1";
+              vendor = "ASUS";
+            }
+          ];
+        };
+        beeline_smartbox-flash = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+            "uencrypt-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-flash";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-flash-squashfs-factory.trx";
+              sha256 = "b580c38f2bd959f859dcd5424c76b6ba77e753a43b360d580623f6073d43210c";
+              sha256_unsigned = "b580c38f2bd959f859dcd5424c76b6ba77e753a43b360d580623f6073d43210c";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-flash-squashfs-sysupgrade.bin";
+              sha256 = "43ffb64c47d405163abc7507db96e4fee1757d81824c585a0f055ca6c8f53f85";
+              sha256_unsigned = "b22bb34c602200197dedb192ce9b4e25b62baa59d9400ec949e0f749402840cf";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-flash-initramfs-kernel.bin";
+              sha256 = "39113c5b10d12b66ea2d2b28bbf8d854d34d9610efe10d4c4f6808e50e1b0b29";
+              sha256_unsigned = "39113c5b10d12b66ea2d2b28bbf8d854d34d9610efe10d4c4f6808e50e1b0b29";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "beeline,smartbox-flash"
+          ];
+          titles = [
+            {
+              model = "SmartBox Flash";
+              vendor = "Beeline";
+            }
+          ];
+        };
+        beeline_smartbox-giga = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-giga";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-giga-squashfs-factory.img";
+              sha256 = "b126771a039282a7c4703b3e81bd67717707ef4ea9997ca62f9c409b8084f425";
+              sha256_unsigned = "b126771a039282a7c4703b3e81bd67717707ef4ea9997ca62f9c409b8084f425";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-giga-squashfs-sysupgrade.bin";
+              sha256 = "d3dcb3867dab92b2bc0fc41bc9bd85789012d5aa711abb5dc98bf2fbf3239870";
+              sha256_unsigned = "0d49b2deb84863b2f079e8ca65f8f6181e55118c64a0a451c46e485b87cc1c00";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-giga-initramfs-kernel.bin";
+              sha256 = "206eb231bf0bb2231441f3e6e910651250efdab79a9a00ad6010128250d06255";
+              sha256_unsigned = "206eb231bf0bb2231441f3e6e910651250efdab79a9a00ad6010128250d06255";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "beeline,smartbox-giga"
+          ];
+          titles = [
+            {
+              model = "SmartBox GIGA";
+              vendor = "Beeline";
+            }
+          ];
+        };
+        beeline_smartbox-pro = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-pro";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-pro-squashfs-sysupgrade.bin";
+              sha256 = "893e0b2c807fc66204253f1c9a7c0e0ca566b9d37f52279c27950c20ae1766d3";
+              sha256_unsigned = "34ee82752d6001fd02cc7cc01a5abe6662f61ccd0de6f73421d4d5fcac18a8d0";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-pro-squashfs-factory.img";
+              sha256 = "4389f52acce769303f35133fb9db3d74d0c0fd31c7cb6da129ba7dccb6bcc0a4";
+              sha256_unsigned = "4389f52acce769303f35133fb9db3d74d0c0fd31c7cb6da129ba7dccb6bcc0a4";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-pro-initramfs-kernel.bin";
+              sha256 = "b3c5bb120966e23cd6a89b5648063da845b1b8976eb9f0f3b4851d214badf755";
+              sha256_unsigned = "b3c5bb120966e23cd6a89b5648063da845b1b8976eb9f0f3b4851d214badf755";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "beeline,smartbox-pro"
+          ];
+          titles = [
+            {
+              model = "SmartBox PRO";
+              vendor = "Beeline";
+            }
+            {
+              model = "S1500 AWI";
+              vendor = "Sercomm";
+            }
+          ];
+        };
+        beeline_smartbox-turbo = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-initramfs-kernel.bin";
+              sha256 = "4bdfff7294fdfa23f89641a743e4bd9a26b0bc3078d942fdccd32b943da5dbb9";
+              sha256_unsigned = "4bdfff7294fdfa23f89641a743e4bd9a26b0bc3078d942fdccd32b943da5dbb9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-squashfs-factory.img";
+              sha256 = "de9347766763b8203f862cafb1bc57b067273f080bb8076495d11c9e9eb26011";
+              sha256_unsigned = "de9347766763b8203f862cafb1bc57b067273f080bb8076495d11c9e9eb26011";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-squashfs-sysupgrade.bin";
+              sha256 = "85042b7174f213cebc6d72589881ad7d0a70813be80a6f4b09906bf0116e6885";
+              sha256_unsigned = "5bc91217799c48864c459254ae453b2e1bc61d046b5e393b716402b6ca06b583";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "beeline,smartbox-turbo"
+          ];
+          titles = [
+            {
+              model = "SmartBox TURBO";
+              vendor = "Beeline";
+            }
+          ];
+        };
+        beeline_smartbox-turbo-plus = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-plus";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-plus-initramfs-kernel.bin";
+              sha256 = "1bf5f7117ffa86d6d83f12dfab91c2116d5f9047a5ea2b80211d66d7337d38b9";
+              sha256_unsigned = "1bf5f7117ffa86d6d83f12dfab91c2116d5f9047a5ea2b80211d66d7337d38b9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-plus-squashfs-sysupgrade.bin";
+              sha256 = "8294e7418b0761e3cb4040ce3ee7d333c60e538532e9d1e33c25a1b76443adb7";
+              sha256_unsigned = "a2e4a7cac622e00a99f903bdc32dfc9cc5664c9755789e13e73ade7db586048a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-beeline_smartbox-turbo-plus-squashfs-factory.img";
+              sha256 = "b6f1df62780d4f7ebc253fa8409a66954bfad7e5ebccf71cc420a2352467573f";
+              sha256_unsigned = "b6f1df62780d4f7ebc253fa8409a66954bfad7e5ebccf71cc420a2352467573f";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "beeline,smartbox-turbo-plus"
+          ];
+          titles = [
+            {
+              model = "SmartBox TURBO+";
+              vendor = "Beeline";
+            }
+          ];
+        };
+        belkin_rt1800 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-belkin_rt1800";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-belkin_rt1800-initramfs-kernel.bin";
+              sha256 = "8673625395717d8bd7403386785665f100b3daa943179920fdb17e90ca0785b2";
+              sha256_unsigned = "8673625395717d8bd7403386785665f100b3daa943179920fdb17e90ca0785b2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-belkin_rt1800-squashfs-factory.bin";
+              sha256 = "ed82bd693bd4a3bbff0f6d201101068827da233b591e0913494474aef922fadc";
+              sha256_unsigned = "ed82bd693bd4a3bbff0f6d201101068827da233b591e0913494474aef922fadc";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-belkin_rt1800-squashfs-sysupgrade.bin";
+              sha256 = "f3fc97123a030f981b781219cdb9a02ba40341b253068b302857fd570826f15f";
+              sha256_unsigned = "493ed30c38a68bb1e4b9bec8b4710e180f9f6d07c99d420b8cb96a1254a8a31f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "belkin,rt1800"
+          ];
+          titles = [
+            {
+              model = "RT1800";
+              vendor = "Belkin";
+            }
+          ];
+        };
+        bolt_arion = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-bolt_arion";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-bolt_arion-squashfs-sysupgrade.bin";
+              sha256 = "387129e29840d3485c0d67633bf855597fe1059fc24422072570b3a26d53c632";
+              sha256_unsigned = "7d7515654a5df5bd38adfca1c6b5e62630f49f126e6b13d3565ce5665def23a0";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-bolt_arion-initramfs-kernel.bin";
+              sha256 = "346a518305c8af281d8403815bb75b3a14f18d58d7c13ef60a43ddc2b2e0ad8c";
+              sha256_unsigned = "346a518305c8af281d8403815bb75b3a14f18d58d7c13ef60a43ddc2b2e0ad8c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "bolt,arion"
+          ];
+          titles = [
+            {
+              model = "Arion";
+              vendor = "BOLT";
+            }
+          ];
+        };
+        buffalo_wsr-1166dhp = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-1166dhp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-1166dhp-squashfs-sysupgrade.bin";
+              sha256 = "585be7a39890019d45c271b32bb16caed484d56bf7df17a0da0f0af3959878b6";
+              sha256_unsigned = "b22c5261f572c520d805d7a517283a9c8ad5a5bfca2871f91dda10e22a0642bd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-1166dhp-initramfs-kernel.bin";
+              sha256 = "f24467309bb28a4a00d79dea59895820586c1744e5b3451653fd547066f797d0";
+              sha256_unsigned = "f24467309bb28a4a00d79dea59895820586c1744e5b3451653fd547066f797d0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wsr-1166dhp"
+            "wsr-1166"
+          ];
+          titles = [
+            {
+              model = "WSR-1166DHP";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wsr-2533dhpl = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-2533dhpl";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-2533dhpl-initramfs-kernel.bin";
+              sha256 = "85a8d3870aede2858f3d7414e925f2bdb154d030798ea53fd90197a6b45c0bee";
+              sha256_unsigned = "85a8d3870aede2858f3d7414e925f2bdb154d030798ea53fd90197a6b45c0bee";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-2533dhpl-squashfs-sysupgrade.bin";
+              sha256 = "6c070284b776cb0a2a2034709e286f5e3837f4f1f6ae410794182e68ce6f62e2";
+              sha256_unsigned = "c4a71aa18c1729faf5dcb5085670010971b9ff563a960bf8feecbef46fb41ccb";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wsr-2533dhpl"
+          ];
+          titles = [
+            {
+              model = "WSR-2533DHPL";
+              vendor = "Buffalo";
+            }
+            {
+              model = "WSR-2533DHP";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        buffalo_wsr-600dhp = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-rt2800-pci"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-600dhp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-600dhp-squashfs-sysupgrade.bin";
+              sha256 = "fc8f149e9e970607693bc1eaaf6573edf3eefa311372715666fb28d003f4d001";
+              sha256_unsigned = "aaf7984544528256fd3bacff8b0e7ecdc146ba3f6e5734bc65ecdd6ab0f8f95d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-buffalo_wsr-600dhp-initramfs-kernel.bin";
+              sha256 = "e8a5eb969ea6f1988945a2c85c81c2a328632a2c47a68579b78b98a485ee81a1";
+              sha256_unsigned = "e8a5eb969ea6f1988945a2c85c81c2a328632a2c47a68579b78b98a485ee81a1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "buffalo,wsr-600dhp"
+            "wsr-600"
+          ];
+          titles = [
+            {
+              model = "WSR-600DHP";
+              vendor = "Buffalo";
+            }
+          ];
+        };
+        comfast_cf-e390ax = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-comfast_cf-e390ax";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-comfast_cf-e390ax-squashfs-factory.bin";
+              sha256 = "bd3e2b1cdf082ea8d16d3fe9cdcc6d5747fdc3111dce156474a7d7c9d4f56731";
+              sha256_unsigned = "bd3e2b1cdf082ea8d16d3fe9cdcc6d5747fdc3111dce156474a7d7c9d4f56731";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-comfast_cf-e390ax-initramfs-kernel.bin";
+              sha256 = "031657ba43f5ad763f600ff0544d6d8b10733c2f8e7b65fd6758ffb4d556a704";
+              sha256_unsigned = "031657ba43f5ad763f600ff0544d6d8b10733c2f8e7b65fd6758ffb4d556a704";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-comfast_cf-e390ax-squashfs-sysupgrade.bin";
+              sha256 = "5dbd363e292986c1d51c652ef281e4e002f291b526dfa593409b55c8407632a8";
+              sha256_unsigned = "354d64df5182031345409db733e762bf3ead2426d49cb43d316a571fa876a09a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-e390ax"
+          ];
+          titles = [
+            {
+              model = "CF-E390AX";
+              vendor = "ComFast";
+            }
+          ];
+        };
+        comfast_cf-ew72-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-comfast_cf-ew72-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-comfast_cf-ew72-v2-initramfs-kernel.bin";
+              sha256 = "6b4f054104451ccdbf3430ee6f7470c3febd28fa7bd97f034620ba8233bf766c";
+              sha256_unsigned = "6b4f054104451ccdbf3430ee6f7470c3febd28fa7bd97f034620ba8233bf766c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-comfast_cf-ew72-v2-squashfs-sysupgrade.bin";
+              sha256 = "51e9a1dadd49321a88cc9c2cf3093d1e08bf5957d7be9a7ac620243b9746ddde";
+              sha256_unsigned = "045733d043bd0e5d30ae2848d58607816fd4911d146e52b83a8d12c41643da86";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-comfast_cf-ew72-v2-squashfs-factory.bin";
+              sha256 = "b4f435ae6a5f19ad982f6b03af9bd074499162dbcb9aebef057053c2b86a2ac1";
+              sha256_unsigned = "b4f435ae6a5f19ad982f6b03af9bd074499162dbcb9aebef057053c2b86a2ac1";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "comfast,cf-ew72-v2"
+          ];
+          titles = [
+            {
+              model = "CF-EW72 V2";
+              vendor = "ComFast";
+            }
+          ];
+        };
+        cudy_m1800 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_m1800";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_m1800-squashfs-sysupgrade.bin";
+              sha256 = "f7cb4f1d08ebec617b0c99a348acafa0eaab1fb86b9633a3870b4bc37b5ed146";
+              sha256_unsigned = "0f1d65191fa666c81bfdee30790dfb8fdb5c4281d415c0e413234911278ae736";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_m1800-initramfs-kernel.bin";
+              sha256 = "964963705b9f0f67eb96d02b589d03c9f450e06642ca2a18f32e87e8d9abd43a";
+              sha256_unsigned = "964963705b9f0f67eb96d02b589d03c9f450e06642ca2a18f32e87e8d9abd43a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "cudy,m1800"
+          ];
+          titles = [
+            {
+              model = "M1800";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        cudy_wr1300-v1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v1-squashfs-sysupgrade.bin";
+              sha256 = "d89df278cbb2de7eb9c814f3ab8248f31751537899e9828d7480dc983dda6c2f";
+              sha256_unsigned = "9fac7206ea017b80f233ad2f432c2dd3d5fe95129ba7c12d15dec8da01287229";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v1-initramfs-kernel.bin";
+              sha256 = "da19b8c0f17d6e4d0fbcfc42b82d878906baa5a65f31ce777ca6d999613c684d";
+              sha256_unsigned = "da19b8c0f17d6e4d0fbcfc42b82d878906baa5a65f31ce777ca6d999613c684d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "cudy,wr1300-v1"
+            "cudy,wr1300"
+            "R10"
+          ];
+          titles = [
+            {
+              model = "WR1300";
+              variant = "v1";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        cudy_wr1300-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v2-initramfs-kernel.bin";
+              sha256 = "817bee2c1232145cf73839f415106d238862b1bb9b18a83a4607d8832165a28f";
+              sha256_unsigned = "817bee2c1232145cf73839f415106d238862b1bb9b18a83a4607d8832165a28f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v2-squashfs-sysupgrade.bin";
+              sha256 = "dde371213122bc341c31b237f1c96cd691929b7227a04323107729321ca48c10";
+              sha256_unsigned = "c3c17f1a3f754f6d65e4f8f2e82d0946b23de808be8c7e2bf17b524507adbaf5";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "cudy,wr1300-v2"
+            "cudy,wr1300"
+            "R23"
+          ];
+          titles = [
+            {
+              model = "WR1300";
+              variant = "v2";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        cudy_wr1300-v3 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v3-squashfs-sysupgrade.bin";
+              sha256 = "42c3124f63ea331184fef33cb42850b5c446e2e94277d84a8fc8f879374704b2";
+              sha256_unsigned = "1ae37cc17f1007a8a918f02248e2a93770bba7a4e4c3ce5f435516cc9d55b854";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr1300-v3-initramfs-kernel.bin";
+              sha256 = "6843c30f9c06f61f1ebf93116e0cecb3982c91fce43112ab1523075417503d53";
+              sha256_unsigned = "6843c30f9c06f61f1ebf93116e0cecb3982c91fce43112ab1523075417503d53";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "cudy,wr1300-v3"
+            "cudy,wr1300"
+            "R30"
+          ];
+          titles = [
+            {
+              model = "WR1300";
+              variant = "v3";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        cudy_wr2100 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_wr2100";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr2100-squashfs-sysupgrade.bin";
+              sha256 = "bc13c859ed8c266db4dc7d8e4b55c798075bbcb086167397f1cf500175fd7262";
+              sha256_unsigned = "9bebfbfdb1371d1fb5adeb84aa18a0fb20ee8e485be0a6b6fdfef0ed526d472b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_wr2100-initramfs-kernel.bin";
+              sha256 = "45588dfc7657f43f6fe6aff72519ffc3d596e85c8a047e97962dbd494acd6080";
+              sha256_unsigned = "45588dfc7657f43f6fe6aff72519ffc3d596e85c8a047e97962dbd494acd6080";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "cudy,wr2100"
+          ];
+          titles = [
+            {
+              model = "WR2100";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        cudy_x6-v1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_x6-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_x6-v1-initramfs-kernel.bin";
+              sha256 = "e65bc69b2a158a2b8b244575a7edfb79faec6b504303a13e8a0364f4db82b58a";
+              sha256_unsigned = "e65bc69b2a158a2b8b244575a7edfb79faec6b504303a13e8a0364f4db82b58a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_x6-v1-squashfs-sysupgrade.bin";
+              sha256 = "d081f127a2f2db17535a9f34e000230d7a6b7352b338fc3a1566f99fc4451491";
+              sha256_unsigned = "e5562df4573fa376f558ba08f5373fef739f7dc0fcf22a43cb54cd2cee66f8fe";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "cudy,x6-v1"
+            "cudy,x6"
+            "R13"
+          ];
+          titles = [
+            {
+              model = "X6";
+              variant = "v1";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        cudy_x6-v2 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-cudy_x6-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_x6-v2-squashfs-sysupgrade.bin";
+              sha256 = "ab8841c5e412d552961d2e917a9ecc62cac3905708857eeb65f0ec9c2d1ec37c";
+              sha256_unsigned = "b17d6604899d9394b4734718712a2dfe59bd0bc16aa80c23a0a18832f5eae9d6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-cudy_x6-v2-initramfs-kernel.bin";
+              sha256 = "4ce3465fefa5834c456af64a642e4cb84cbfc6ba23ba55ad4d9353bf653ed572";
+              sha256_unsigned = "4ce3465fefa5834c456af64a642e4cb84cbfc6ba23ba55ad4d9353bf653ed572";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "cudy,x6-v2"
+            "cudy,x6"
+            "R30"
+          ];
+          titles = [
+            {
+              model = "X6";
+              variant = "v2";
+              vendor = "Cudy";
+            }
+          ];
+        };
+        d-team_newifi-d2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-d-team_newifi-d2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin";
+              sha256 = "1d4ee583e3681fbd6edbcd508e194cbd4f70e20bddf219f546e08e7f3885799a";
+              sha256_unsigned = "1d4ee583e3681fbd6edbcd508e194cbd4f70e20bddf219f546e08e7f3885799a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin";
+              sha256 = "db4a024f67e9196cdffd6cde989a43f57fcf38a8fc41ffc917042019918dbd24";
+              sha256_unsigned = "836265c3270969941b0780129beff80822e0b671edbf37b525cd37265d63bb09";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "d-team,newifi-d2"
+          ];
+          titles = [
+            {
+              model = "Newifi D2";
+              vendor = "D-Team";
+            }
+          ];
+        };
+        d-team_pbr-m1 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-d-team_pbr-m1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-d-team_pbr-m1-squashfs-sysupgrade.bin";
+              sha256 = "61cb01483927da8c6ed279c1b24f6d001cdf7a91e37d52bdb1f7f3ab2755afd4";
+              sha256_unsigned = "77e9c0cea8adeb7df468f9c0efa623315d69ab93e83474f6d32fad03c3b872e4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-d-team_pbr-m1-initramfs-kernel.bin";
+              sha256 = "46a0ce40538c85df9843fedece866f73a786008daba2893acf9bf3c4d8c58207";
+              sha256_unsigned = "46a0ce40538c85df9843fedece866f73a786008daba2893acf9bf3c4d8c58207";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "d-team,pbr-m1"
+            "pbr-m1"
+          ];
+          titles = [
+            {
+              model = "PBR-M1";
+              vendor = "PandoraBox";
+            }
+          ];
+        };
+        dlink_covr-x1860-a1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_covr-x1860-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_covr-x1860-a1-initramfs-kernel.bin";
+              sha256 = "e7e09dbe6d3ac9ea5a9d56b30192f4e1bfad2b7b0c47eed5566d82ed7eadd9f4";
+              sha256_unsigned = "e7e09dbe6d3ac9ea5a9d56b30192f4e1bfad2b7b0c47eed5566d82ed7eadd9f4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_covr-x1860-a1-squashfs-recovery.bin";
+              sha256 = "822996f742869a2df8daee1c05d454e1cd3c26defa810be2c60ed49ed40d414f";
+              sha256_unsigned = "822996f742869a2df8daee1c05d454e1cd3c26defa810be2c60ed49ed40d414f";
+              type = "recovery";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_covr-x1860-a1-squashfs-sysupgrade.bin";
+              sha256 = "570876f48313c855ae75d3201c4d594698ddfd804875686d6b715b9a2515d3fc";
+              sha256_unsigned = "4c36a2db2eee1ce8e542ba36d0c173ef6008e872685fd127e0379646e527c795";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_covr-x1860-a1-squashfs-factory.bin";
+              sha256 = "24d6d00d454750dbd78fa878a0476681342c233c9a7eb56f666dcdb92449cfd5";
+              sha256_unsigned = "24d6d00d454750dbd78fa878a0476681342c233c9a7eb56f666dcdb92449cfd5";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,covr-x1860-a1"
+          ];
+          titles = [
+            {
+              model = "COVR-X1860";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-1620-b1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dap-1620-b1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dap-1620-b1-squashfs-factory.bin";
+              sha256 = "18a6bcb363aba29d44ba148d855246f0d20fe8a413e5b113ed8bbb7d152babd6";
+              sha256_unsigned = "18a6bcb363aba29d44ba148d855246f0d20fe8a413e5b113ed8bbb7d152babd6";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dap-1620-b1-initramfs-kernel.bin";
+              sha256 = "7560c43c79e030f44accd27c15fbdab3f258f8e59807d064a92040413db8eed2";
+              sha256_unsigned = "7560c43c79e030f44accd27c15fbdab3f258f8e59807d064a92040413db8eed2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dap-1620-b1-squashfs-sysupgrade.bin";
+              sha256 = "8218e537ab5a6501cdaf287efc326e1c420238a3e4eca214a4ae8a95c4aa5655";
+              sha256_unsigned = "d02a13d4c7055ee364126330cbcd42455d31492b7782ce9898d9d2bc8db4f8aa";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-1620-b1"
+          ];
+          titles = [
+            {
+              model = "DAP-1620";
+              variant = "B1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dap-x1860-a1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "rssileds"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dap-x1860-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dap-x1860-a1-initramfs-kernel.bin";
+              sha256 = "aaa47837a214cc4d63b6811a1723fbdfe1b0d7fd90b640a16cc3ce950a831c2d";
+              sha256_unsigned = "aaa47837a214cc4d63b6811a1723fbdfe1b0d7fd90b640a16cc3ce950a831c2d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dap-x1860-a1-squashfs-factory.bin";
+              sha256 = "06e4274add65872adbd0a757de3c0708709bffcb8746641d4b8fb298c8f2bc0a";
+              sha256_unsigned = "06e4274add65872adbd0a757de3c0708709bffcb8746641d4b8fb298c8f2bc0a";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dap-x1860-a1-squashfs-sysupgrade.bin";
+              sha256 = "1b362a841e6961e69958dea1320cda9ef67ffb9b886ca659966612236a660a9c";
+              sha256_unsigned = "da6a26220db213030bf43d9aec37b11604402068e6648e1219d9be03e947a66b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dap-x1860-a1"
+          ];
+          titles = [
+            {
+              model = "DAP-X1860";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-1935-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1935-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1935-a1-squashfs-sysupgrade.bin";
+              sha256 = "52253d5ac65726c1448ff874b845dedd0529baf9f4f549e91d82f5cddd5d6773";
+              sha256_unsigned = "7a78f39fc912fbeaadeb578700d18b059c48d6ce7c86a031c2d00d2b5b7d9942";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1935-a1-squashfs-factory.bin";
+              sha256 = "e97a6def0dca04454c210403b8aecbd59c4c81c7051989da97fde290677e83d8";
+              sha256_unsigned = "e97a6def0dca04454c210403b8aecbd59c4c81c7051989da97fde290677e83d8";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1935-a1-initramfs-kernel.bin";
+              sha256 = "3e256c5876c465a79b5a428a7f0ab29a721d12d15a92f1c684bb180f84bf8bb8";
+              sha256_unsigned = "3e256c5876c465a79b5a428a7f0ab29a721d12d15a92f1c684bb180f84bf8bb8";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-1935-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-1935";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-1960-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1960-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1960-a1-squashfs-factory.bin";
+              sha256 = "89312babade624e6c4e0a8997438a47954210f1d778126d2f494540e034f87b5";
+              sha256_unsigned = "89312babade624e6c4e0a8997438a47954210f1d778126d2f494540e034f87b5";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1960-a1-squashfs-sysupgrade.bin";
+              sha256 = "c374cc5df336efb75cc399ca89a492a1c7af2cee5f7af971ff5d0d8058178c45";
+              sha256_unsigned = "5b05f8d139bb6feb5f2773077b6f6458e0d2e1b1a7f37eb758e507775afb4f2b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-1960-a1-initramfs-kernel.bin";
+              sha256 = "d68ec4ef34ada5ed51cefe4dfea495396817c614b304566b11f14ddcf3de8ace";
+              sha256_unsigned = "d68ec4ef34ada5ed51cefe4dfea495396817c614b304566b11f14ddcf3de8ace";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-1960-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-1960";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-2640-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2640-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2640-a1-squashfs-sysupgrade.bin";
+              sha256 = "87f435f8da4894c0caf343333b8d5b7192ecff565f7dd7174415158b7c8e9beb";
+              sha256_unsigned = "98a36715ac9478509ca972de6a90ffda6d2775218b32d5e25f9a0d6609613c58";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2640-a1-initramfs-kernel.bin";
+              sha256 = "03e8c3e4c06882c6cabebcddaa5793f242318efd90214a0515366745cfe8cc5c";
+              sha256_unsigned = "03e8c3e4c06882c6cabebcddaa5793f242318efd90214a0515366745cfe8cc5c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2640-a1-squashfs-factory.bin";
+              sha256 = "811bb56d306cd99e094af02eb5312c305b7e49e489d332ed1d15522bf05b43dd";
+              sha256_unsigned = "811bb56d306cd99e094af02eb5312c305b7e49e489d332ed1d15522bf05b43dd";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-2640-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-2640";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-2660-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2660-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2660-a1-squashfs-factory.bin";
+              sha256 = "a82e01371b0d6307c8b731d1f17ab38fc37736a45834587b3f07f07c0671d5b6";
+              sha256_unsigned = "a82e01371b0d6307c8b731d1f17ab38fc37736a45834587b3f07f07c0671d5b6";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2660-a1-initramfs-kernel.bin";
+              sha256 = "0f150bf4f83bb59e27eb0f6bcf6b2db1b766adb1ffcd500156346f4130e73d6f";
+              sha256_unsigned = "0f150bf4f83bb59e27eb0f6bcf6b2db1b766adb1ffcd500156346f4130e73d6f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-2660-a1-squashfs-sysupgrade.bin";
+              sha256 = "b4b08882b9af70343925be5a575e2f2589f68df46b14cfd7757bc3bafee76e8e";
+              sha256_unsigned = "e21864d4fc926d80fd6546ee0b4150cd62289e4e8c165ec024c6d8724e9348f4";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-2660-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-2660";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-3060-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-3060-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-3060-a1-squashfs-sysupgrade.bin";
+              sha256 = "42c18b7f3f380f298d842fd18b2056432abfad1603bef2de2b8ab045ae8fd2b2";
+              sha256_unsigned = "135fc04b01fca77e4e64056eca0f9a0608a23462e22ceab2b1f92fcae2f5af58";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-3060-a1-squashfs-factory.bin";
+              sha256 = "21a5f26f1ea84efbca949a179c0082801c4069d6fb4af39ec62ee39c50a8271a";
+              sha256_unsigned = "21a5f26f1ea84efbca949a179c0082801c4069d6fb4af39ec62ee39c50a8271a";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-3060-a1-initramfs-kernel.bin";
+              sha256 = "d3f91ee249620cf7a415211562b6060263bb5097f55d0484ffe93bf5345cb381";
+              sha256_unsigned = "d3f91ee249620cf7a415211562b6060263bb5097f55d0484ffe93bf5345cb381";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-3060-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-3060";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-853-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a1-squashfs-sysupgrade.bin";
+              sha256 = "9c06760cc321534ccabc2f711d1151356ab59f70cdd2dd8a539f1cd584eb12ec";
+              sha256_unsigned = "5dfe99507bdc56e13afb35248adb0342b226452a466e8db8297b0cbf372d123b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a1-squashfs-factory.bin";
+              sha256 = "beb78f7c8f77860830e9ecefdf6423216f2a768be51bcf7eb3e436cef1f0b256";
+              sha256_unsigned = "beb78f7c8f77860830e9ecefdf6423216f2a768be51bcf7eb3e436cef1f0b256";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a1-initramfs-kernel.bin";
+              sha256 = "10fd306c0f7c0bca1fdf861d22328a3023eea0a3fccdd33712e6bcc970014771";
+              sha256_unsigned = "10fd306c0f7c0bca1fdf861d22328a3023eea0a3fccdd33712e6bcc970014771";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-853-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-853";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-853-a3 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a3-squashfs-factory.bin";
+              sha256 = "b3e41b5a4c2448f09dff6e9ea4c955334c0030578cdc52adf8da71af50434d02";
+              sha256_unsigned = "b3e41b5a4c2448f09dff6e9ea4c955334c0030578cdc52adf8da71af50434d02";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a3-initramfs-kernel.bin";
+              sha256 = "04481876b781c180d36b7ffb8aebb8ceef21379e0b3a5ba921de03fd9d721995";
+              sha256_unsigned = "04481876b781c180d36b7ffb8aebb8ceef21379e0b3a5ba921de03fd9d721995";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-a3-squashfs-sysupgrade.bin";
+              sha256 = "ce52d61e8bb5ae492282627d86f7e3992bbd1299e69d74f14b2b97b04a480ff9";
+              sha256_unsigned = "a07eccb2619ffb82731dbe99754daab0a5b21fbfef158ac6fac1e232d63d7959";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-853-a3"
+          ];
+          titles = [
+            {
+              model = "DIR-853";
+              variant = "A3";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-853-r1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-r1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-r1-initramfs-kernel.bin";
+              sha256 = "e66a9b9bb197e32585d7ca3a20c02b912f68279936739fd9f570a4a29cfbed7d";
+              sha256_unsigned = "e66a9b9bb197e32585d7ca3a20c02b912f68279936739fd9f570a4a29cfbed7d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-853-r1-squashfs-sysupgrade.bin";
+              sha256 = "b276106dd6e2b07ece6ada5fd333f5ad38eaa909a8af05b9820b9a2c27687078";
+              sha256_unsigned = "66bddcc4ecc253bec06d2013ed8b32a188693064e38bbae2a58bfc827d529991";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-853-r1"
+          ];
+          titles = [
+            {
+              model = "DIR-853";
+              variant = "R1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-860l-b1 = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-860l-b1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-860l-b1-initramfs-kernel.bin";
+              sha256 = "ea79c47a41793008b5b43857a4c14cfa685572fd3abb2ce079738de8582bcedc";
+              sha256_unsigned = "ea79c47a41793008b5b43857a4c14cfa685572fd3abb2ce079738de8582bcedc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-860l-b1-squashfs-factory.bin";
+              sha256 = "5afcc7d0d4b92991f40609f18baa5b498b4c095a05add539a155ee4a0910fa06";
+              sha256_unsigned = "5afcc7d0d4b92991f40609f18baa5b498b4c095a05add539a155ee4a0910fa06";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-860l-b1-squashfs-sysupgrade.bin";
+              sha256 = "1ca397980d87c5f1b400a0484493c9bcd94a6be509401d55e41c26ae92202043";
+              sha256_unsigned = "a94ad81354b7486b3471b8a3fbef29b6691ca9a80c03b27127f336ae20f7d451";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-860l-b1"
+            "dir-860l-b1"
+          ];
+          titles = [
+            {
+              model = "DIR-860L";
+              variant = "B1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-867-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-867-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-867-a1-squashfs-sysupgrade.bin";
+              sha256 = "d021c75eb590e8c1a7ac6f587eb8a3eb0faa693594bf0c5d631b00c25d5f9adf";
+              sha256_unsigned = "f1109711d6474a615e2c6e659b171f83df443bb9dd3c7e3f6760d6232df60035";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-867-a1-initramfs-kernel.bin";
+              sha256 = "f04d65f8f17cc253178935c12e9407149379fa8bdd213de1b5384ca8a66adf47";
+              sha256_unsigned = "f04d65f8f17cc253178935c12e9407149379fa8bdd213de1b5384ca8a66adf47";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-867-a1-squashfs-factory.bin";
+              sha256 = "ba07c110e7e77175d0096cd1910de0942ca209e7644c81dc0d749313cd54e89d";
+              sha256_unsigned = "ba07c110e7e77175d0096cd1910de0942ca209e7644c81dc0d749313cd54e89d";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-867-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-867";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-878-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-a1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-a1-initramfs-kernel.bin";
+              sha256 = "4a480f4f13eb4ab0c153070ad75b39f709b61f44e21d496011f6872f117dfc71";
+              sha256_unsigned = "4a480f4f13eb4ab0c153070ad75b39f709b61f44e21d496011f6872f117dfc71";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-a1-squashfs-sysupgrade.bin";
+              sha256 = "f2a211c4d876e5193ca4a44b60189f8644c7254bf05941c25d833f68e9fca7bd";
+              sha256_unsigned = "bd0a68a53c23fbdde0e61dd5d81f46705161a7b8f0f5fb436b852ea46ecac595";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-a1-squashfs-factory.bin";
+              sha256 = "3786ac2047a3a13d2344e95ee1f06628dffb542ef24ef812296cb99f0836f14e";
+              sha256_unsigned = "3786ac2047a3a13d2344e95ee1f06628dffb542ef24ef812296cb99f0836f14e";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-878-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-878";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-878-r1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-r1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-r1-squashfs-factory.bin";
+              sha256 = "86fd0c39280c4075a392c6bb8a5aaebb456cb9e3cac7222a26922bf4c7f6ca99";
+              sha256_unsigned = "86fd0c39280c4075a392c6bb8a5aaebb456cb9e3cac7222a26922bf4c7f6ca99";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-r1-initramfs-kernel.bin";
+              sha256 = "3459dcf14f4f918f30f5565d6a55e5adaf0551c88737ed726872bd81994dac7f";
+              sha256_unsigned = "3459dcf14f4f918f30f5565d6a55e5adaf0551c88737ed726872bd81994dac7f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-878-r1-squashfs-sysupgrade.bin";
+              sha256 = "55cf403e87898f64ad35d9a573e8fa6060c21ba4a54d1525013154a5efc9845f";
+              sha256_unsigned = "b208fae0407674d43e20311feaa46d8006962bdb9f639ed6044ede18c09627bc";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-878-r1"
+          ];
+          titles = [
+            {
+              model = "DIR-878";
+              variant = "R1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-882-a1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-a1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-a1-squashfs-sysupgrade.bin";
+              sha256 = "b68dbd54a06be85ed8f3aeffad0cd5a17f8706869a2a64d772fdf8b2d4bd77c8";
+              sha256_unsigned = "ee7c618083dcb3b7724afc66eaacb488d182a282b52bf213c91f67c01b21d0dc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-a1-squashfs-factory.bin";
+              sha256 = "31870bb7d0f54cf9ef6a3fc12f50cc5cbb1ada24b2a46755c91af31a35b15f29";
+              sha256_unsigned = "31870bb7d0f54cf9ef6a3fc12f50cc5cbb1ada24b2a46755c91af31a35b15f29";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-a1-initramfs-kernel.bin";
+              sha256 = "4a22fd2efff967f3010b70c2e4a32a92a61968c18f40d8b76d5b9c898c4f55eb";
+              sha256_unsigned = "4a22fd2efff967f3010b70c2e4a32a92a61968c18f40d8b76d5b9c898c4f55eb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-882-a1"
+          ];
+          titles = [
+            {
+              model = "DIR-882";
+              variant = "A1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dlink_dir-882-r1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-r1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-r1-squashfs-factory.bin";
+              sha256 = "401e47d36257531fba908f22c248f8552a921873112f132acbe32cd8ade3e212";
+              sha256_unsigned = "401e47d36257531fba908f22c248f8552a921873112f132acbe32cd8ade3e212";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-r1-squashfs-sysupgrade.bin";
+              sha256 = "93770e9e601f7aa82d08563163a10aeca95ffe48e676d09a4dd1a9f81e7e12f5";
+              sha256_unsigned = "7b7ddfbf866ea752829341a10f731ca564e795c7f2bb02ede1c3a1865c03b8f8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dlink_dir-882-r1-initramfs-kernel.bin";
+              sha256 = "0db07c72203df847f72b0587cf60b117c5436a117f7f4b5962741ddc6dad5477";
+              sha256_unsigned = "0db07c72203df847f72b0587cf60b117c5436a117f7f4b5962741ddc6dad5477";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dlink,dir-882-r1"
+          ];
+          titles = [
+            {
+              model = "DIR-882";
+              variant = "R1";
+              vendor = "D-Link";
+            }
+          ];
+        };
+        dual-q_h721 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-dual-q_h721";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dual-q_h721-squashfs-sysupgrade.bin";
+              sha256 = "bffc42d51d755929aeabd906e8885c643c6b83569dd71c1644ddbb948fd5b570";
+              sha256_unsigned = "bf44afd0a0acb5492823f69316375984af0353799539203e47488a8ce5d050cd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-dual-q_h721-initramfs-kernel.bin";
+              sha256 = "a2472b676782e47e3b282cba71410faa5198f0220fd8d177814ebd7f44e03409";
+              sha256_unsigned = "a2472b676782e47e3b282cba71410faa5198f0220fd8d177814ebd7f44e03409";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "dual-q,h721"
+          ];
+          titles = [
+            {
+              model = "H721";
+              vendor = "Dual-Q";
+            }
+          ];
+        };
+        edimax_ra21s = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-edimax_ra21s";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_ra21s-initramfs-kernel.bin";
+              sha256 = "f8644c4cb4f8e95987689370921983043d12b5783deaa88bc928d369fb19356c";
+              sha256_unsigned = "f8644c4cb4f8e95987689370921983043d12b5783deaa88bc928d369fb19356c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_ra21s-squashfs-sysupgrade.bin";
+              sha256 = "d42f2e249e994f3c0172d4a9db4a219368976f28397312518e3a6e362478af3c";
+              sha256_unsigned = "33db9252dbdb93eac056d7f57349d671cc98aa1608f93bc51bc03a0e8236c4cf";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_ra21s-squashfs-factory.bin";
+              sha256 = "1846325e820c2fb5dfe007e1db4de66ef7a17ce0954e521fb4b42cd6d8bc0e3c";
+              sha256_unsigned = "1846325e820c2fb5dfe007e1db4de66ef7a17ce0954e521fb4b42cd6d8bc0e3c";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "edimax,ra21s"
+          ];
+          titles = [
+            {
+              model = "RA21S";
+              vendor = "Edimax";
+            }
+            {
+              model = "Gemini RA21S";
+              vendor = "Edimax";
+            }
+          ];
+        };
+        edimax_re23s = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-edimax_re23s";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_re23s-initramfs-kernel.bin";
+              sha256 = "a1bbafdfa6bfe270a1617fa189f2675b16c73e850022c77f686bb3a884689665";
+              sha256_unsigned = "a1bbafdfa6bfe270a1617fa189f2675b16c73e850022c77f686bb3a884689665";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_re23s-squashfs-factory.bin";
+              sha256 = "49e449513fc5c535e9a57abfbc4397152102d1bbec772b98e5827c0290940f8b";
+              sha256_unsigned = "49e449513fc5c535e9a57abfbc4397152102d1bbec772b98e5827c0290940f8b";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_re23s-squashfs-sysupgrade.bin";
+              sha256 = "9e758c0d879151500f92cb6e56c2cef841150ae6a8ad545a53419c8b012f22cf";
+              sha256_unsigned = "484f4aef9410be9265f0e56eabc8f0434a720087435ce0ba6b0d994f8f8a21a1";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "edimax,re23s"
+          ];
+          titles = [
+            {
+              model = "RE23S";
+              vendor = "Edimax";
+            }
+            {
+              model = "Gemini RE23S";
+              vendor = "Edimax";
+            }
+          ];
+        };
+        edimax_rg21s = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-edimax_rg21s";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_rg21s-squashfs-sysupgrade.bin";
+              sha256 = "a9025ced321c98552fd490d58486944e3c0be3e78fd7d2cf136a00289f4cbcbb";
+              sha256_unsigned = "0ef24f4bcde2c1ec388e2754b592d736ac200dc947b7ecb5ff6b5223c170bd58";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_rg21s-squashfs-factory.bin";
+              sha256 = "f70324a7121adfe4767049d9851dedd6cf2404ef8a81a69961a31c3ed33e3c4e";
+              sha256_unsigned = "f70324a7121adfe4767049d9851dedd6cf2404ef8a81a69961a31c3ed33e3c4e";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-edimax_rg21s-initramfs-kernel.bin";
+              sha256 = "4b9076b63ee60ce87336b5dbc14e107860988987212ef1ed17a5bfff77b72308";
+              sha256_unsigned = "4b9076b63ee60ce87336b5dbc14e107860988987212ef1ed17a5bfff77b72308";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "edimax,rg21s"
+          ];
+          titles = [
+            {
+              model = "Gemini AC2600 RG21S";
+              vendor = "Edimax";
+            }
+          ];
+        };
+        elecom_wrc-1167ghbk2-s = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167ghbk2-s";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167ghbk2-s-squashfs-factory.bin";
+              sha256 = "ea5c442683c334981753678b77ae14419c2b9b9868d15aea0cc916a0235e99a5";
+              sha256_unsigned = "ea5c442683c334981753678b77ae14419c2b9b9868d15aea0cc916a0235e99a5";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167ghbk2-s-initramfs-kernel.bin";
+              sha256 = "c8c22772e24d80b17825ac1402593fb40fa05d322f3ce2c3ef30f9cb6510b775";
+              sha256_unsigned = "c8c22772e24d80b17825ac1402593fb40fa05d322f3ce2c3ef30f9cb6510b775";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167ghbk2-s-squashfs-sysupgrade.bin";
+              sha256 = "30fd6d375360f9318bfe945fabd503eb42a88f1a59a182028bf89e92ec521243";
+              sha256_unsigned = "5229c8eb0b281f6129f4c0f679d14641b014ad2784aa17519d97b12d5fbfbb60";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1167ghbk2-s"
+          ];
+          titles = [
+            {
+              model = "WRC-1167GHBK2-S";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-1167gs2-b = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gs2-b";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gs2-b-squashfs-sysupgrade.bin";
+              sha256 = "d670141be080fcef76d896ef3010381a1a0d3823b505b994b56519446f15d6bf";
+              sha256_unsigned = "1a590e5d7a70e943349d91422fb77a61a81845bbe3b6a404881484580110a079";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gs2-b-initramfs-kernel.bin";
+              sha256 = "010e947e166337033e22c4e23b299c4d8420f21f5ed79c645ba8b1d0078ff99d";
+              sha256_unsigned = "010e947e166337033e22c4e23b299c4d8420f21f5ed79c645ba8b1d0078ff99d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gs2-b-squashfs-factory.bin";
+              sha256 = "61b448213d23cb3226a10755796d2461f017d4b27391654347e0ba5a8facce87";
+              sha256_unsigned = "61b448213d23cb3226a10755796d2461f017d4b27391654347e0ba5a8facce87";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1167gs2-b"
+          ];
+          titles = [
+            {
+              model = "WRC-1167GS2-B";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-1167gst2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gst2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gst2-squashfs-factory.bin";
+              sha256 = "cc28595893adb5934859f1a05e2b83d0e54a46b6a16d7aea194d2d3096ec440c";
+              sha256_unsigned = "cc28595893adb5934859f1a05e2b83d0e54a46b6a16d7aea194d2d3096ec440c";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gst2-squashfs-sysupgrade.bin";
+              sha256 = "369d81f3f8749c7ccd7f692a4b9bda1b8d46c1d3cd3a38bb9892cb7930195081";
+              sha256_unsigned = "7f4e2d1f9ffe746a19fac773dff0dda7c24b3fc2af6dc091921eb2c2da4597e9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1167gst2-initramfs-kernel.bin";
+              sha256 = "459123f791e113ef748e95b91e6d12c18504944e3135cf20a26ae0cc360b594d";
+              sha256_unsigned = "459123f791e113ef748e95b91e6d12c18504944e3135cf20a26ae0cc360b594d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1167gst2"
+          ];
+          titles = [
+            {
+              model = "WRC-1167GST2";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-1750gs = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gs";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gs-squashfs-factory.bin";
+              sha256 = "5548a8b2b7009bc81b05f360585a8f3621bc35f9acece4d98561388e91c23b79";
+              sha256_unsigned = "5548a8b2b7009bc81b05f360585a8f3621bc35f9acece4d98561388e91c23b79";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gs-squashfs-sysupgrade.bin";
+              sha256 = "87eff2a3a0abb5ae16b15b294effc6db411fe00ce39595b750c3463ef7b6d1ec";
+              sha256_unsigned = "16c9af3f2722a077d17c4bc321239c094b216d78e4343f3a8e9eff8dedac433f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gs-initramfs-kernel.bin";
+              sha256 = "5fda73915db814053c8a5efd5ef26f5036b57c05f1693b4ffe453e48042dd1c1";
+              sha256_unsigned = "5fda73915db814053c8a5efd5ef26f5036b57c05f1693b4ffe453e48042dd1c1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1750gs"
+          ];
+          titles = [
+            {
+              model = "WRC-1750GS";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-1750gst2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gst2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gst2-squashfs-sysupgrade.bin";
+              sha256 = "5b514be43e5e741ff8c6caca98f832f391f1446da67d6ace4a808db0cd14205d";
+              sha256_unsigned = "1f87d7c4a274aabcd85fbb4bc6ed72413f26ae6912386d3322a2c28ae249ad96";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gst2-initramfs-kernel.bin";
+              sha256 = "fa6e1e4a20bc41e94eba17fac5deb9f65f8eefd413d06a91162a56ead9a4f1ed";
+              sha256_unsigned = "fa6e1e4a20bc41e94eba17fac5deb9f65f8eefd413d06a91162a56ead9a4f1ed";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gst2-squashfs-factory.bin";
+              sha256 = "fedba90ea22e25f585c065ca5e331f94306d55a930dca1d2b0c6db8e643f27dc";
+              sha256_unsigned = "fedba90ea22e25f585c065ca5e331f94306d55a930dca1d2b0c6db8e643f27dc";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1750gst2"
+          ];
+          titles = [
+            {
+              model = "WRC-1750GST2";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-1750gsv = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gsv";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gsv-squashfs-sysupgrade.bin";
+              sha256 = "bfe3efc11d5486c5c9da2595dd08b383d20dc85e7bcf1bae15ccd6aba3d283db";
+              sha256_unsigned = "53d93cbd41946de115afea3ca1fa655bc68341d64db15470813033d83b11fb50";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gsv-squashfs-factory.bin";
+              sha256 = "4251746639a6cefb797dac0c624becfe6b0d4cb3b52167ff1400b34b56270dfe";
+              sha256_unsigned = "4251746639a6cefb797dac0c624becfe6b0d4cb3b52167ff1400b34b56270dfe";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1750gsv-initramfs-kernel.bin";
+              sha256 = "3f5bc31aba9935cd680ea8e113079d0e62a7028d81bb283a7ae4c11041e6fdde";
+              sha256_unsigned = "3f5bc31aba9935cd680ea8e113079d0e62a7028d81bb283a7ae4c11041e6fdde";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1750gsv"
+          ];
+          titles = [
+            {
+              model = "WRC-1750GSV";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-1900gst = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1900gst";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1900gst-squashfs-sysupgrade.bin";
+              sha256 = "a9858f3dfdb948d4fdcd947a727d9fe625a1ff1859fad8d159610befe7f6f562";
+              sha256_unsigned = "59ff2f13f19e4500ec73b3b4b9ab9406a139c64e1c1a4a3dd285c4cb2bbd61dd";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1900gst-initramfs-kernel.bin";
+              sha256 = "32e0831862b9c105f5f0e5a4a2dee653529d50c13b0c96edcbe041ec6136952e";
+              sha256_unsigned = "32e0831862b9c105f5f0e5a4a2dee653529d50c13b0c96edcbe041ec6136952e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-1900gst-squashfs-factory.bin";
+              sha256 = "efc66bf7d25ad0da9191287d0716a40a826b28b7fc66f3ef9cb9af1b7c45de7e";
+              sha256_unsigned = "efc66bf7d25ad0da9191287d0716a40a826b28b7fc66f3ef9cb9af1b7c45de7e";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-1900gst"
+          ];
+          titles = [
+            {
+              model = "WRC-1900GST";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-2533ghbk-i = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk-i";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk-i-initramfs-kernel.bin";
+              sha256 = "f81627586e270d3c587a9fee835ef88836f51fe6c26e89be283bcd2de2aad117";
+              sha256_unsigned = "f81627586e270d3c587a9fee835ef88836f51fe6c26e89be283bcd2de2aad117";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk-i-squashfs-factory.bin";
+              sha256 = "6e9556f2c41e8e3e3316c946f755aa4363140004d2b9024fa93609b45c3d8f31";
+              sha256_unsigned = "6e9556f2c41e8e3e3316c946f755aa4363140004d2b9024fa93609b45c3d8f31";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk-i-squashfs-sysupgrade.bin";
+              sha256 = "3eeb49801baac0dd2ede7dc496aa0a6391135794a45f92948de49422d2bf85db";
+              sha256_unsigned = "5b918723424d779cdd84e173bf52fe0d1b3297286cc3135b0259346d344e00b1";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-2533ghbk-i"
+          ];
+          titles = [
+            {
+              model = "WRC-2533GHBK-I";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-2533ghbk2-t = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk2-t";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk2-t-squashfs-factory.bin";
+              sha256 = "f473ebad15aaefed4fe52e5b8df89f2f95ac47261cd2c89bb68e362752a37c2e";
+              sha256_unsigned = "f473ebad15aaefed4fe52e5b8df89f2f95ac47261cd2c89bb68e362752a37c2e";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk2-t-initramfs-kernel.bin";
+              sha256 = "9bc182376eb30c81ac1216f62bc17995e18010fa4d17feb3ebf729a6287fd492";
+              sha256_unsigned = "9bc182376eb30c81ac1216f62bc17995e18010fa4d17feb3ebf729a6287fd492";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533ghbk2-t-squashfs-sysupgrade.bin";
+              sha256 = "6659dc24d8f5fef06583f62288014be4aee5a8cfde5a15946af2e26dae15f928";
+              sha256_unsigned = "17b702a56138eb38dcdad742fc73a59e3b76d2949e9c92d11ded6f0f2d2f5eb7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-2533ghbk2-t"
+          ];
+          titles = [
+            {
+              model = "WRC-2533GHBK2-T";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-2533gs2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gs2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gs2-squashfs-factory.bin";
+              sha256 = "653325a684189256c63f7571adab84b5a921ec8ea910f713fec37e3c3dc46187";
+              sha256_unsigned = "653325a684189256c63f7571adab84b5a921ec8ea910f713fec37e3c3dc46187";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gs2-initramfs-kernel.bin";
+              sha256 = "c5350377df5e64dfc81345e338864af616f0b73764fdfa934d4349f18d60ef18";
+              sha256_unsigned = "c5350377df5e64dfc81345e338864af616f0b73764fdfa934d4349f18d60ef18";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gs2-squashfs-sysupgrade.bin";
+              sha256 = "543e6b8bac6a9621ca28e2a621ccf27acd2660e99e6c531e366c061cd38e5f11";
+              sha256_unsigned = "a0696eb4c2309f99eabe1ffc1b606b9bc60f0f2d64e493fa29de01f3c0db7439";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-2533gs2"
+          ];
+          titles = [
+            {
+              model = "WRC-2533GS2";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-2533gst = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst-squashfs-factory.bin";
+              sha256 = "7a10ddd74d9866cce3373c59ecb886ab6d9b307a84fdd6c288d71f842fce3afc";
+              sha256_unsigned = "7a10ddd74d9866cce3373c59ecb886ab6d9b307a84fdd6c288d71f842fce3afc";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst-initramfs-kernel.bin";
+              sha256 = "7aa2c4da7a217470c16695b829435712c1ea9257687714fa3703f6e0f7d54c14";
+              sha256_unsigned = "7aa2c4da7a217470c16695b829435712c1ea9257687714fa3703f6e0f7d54c14";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst-squashfs-sysupgrade.bin";
+              sha256 = "dcd45f7f500964602e56e528f88772ca995c40b57e3edb881f799f18df067dc2";
+              sha256_unsigned = "c39e7ca5fdd535c6a069fddb23b06323bf90b5440b2ffa1a1f2754adf1ef2a90";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-2533gst"
+          ];
+          titles = [
+            {
+              model = "WRC-2533GST";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        elecom_wrc-2533gst2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst2-initramfs-kernel.bin";
+              sha256 = "c27b85c12d1557af91c7612f6cb410690b7ef280ce4434ce42b68ac9d9ccdbcf";
+              sha256_unsigned = "c27b85c12d1557af91c7612f6cb410690b7ef280ce4434ce42b68ac9d9ccdbcf";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst2-squashfs-sysupgrade.bin";
+              sha256 = "be1b89052fdfaa0ed49490eb78fffa314019a5e0f344a942eedfeedbea9815a6";
+              sha256_unsigned = "6bc24b1abebdbd7499eda055f80675138979712ad95c6bba9dbaa7b882daacbe";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-elecom_wrc-2533gst2-squashfs-factory.bin";
+              sha256 = "5ada459358b1769c13b922589068d6726d8b3e1b639b4c9fa45fd8c3c95bf6fd";
+              sha256_unsigned = "5ada459358b1769c13b922589068d6726d8b3e1b639b4c9fa45fd8c3c95bf6fd";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "elecom,wrc-2533gst2"
+          ];
+          titles = [
+            {
+              model = "WRC-2533GST2";
+              vendor = "ELECOM";
+            }
+          ];
+        };
+        etisalat_s3 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-etisalat_s3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-etisalat_s3-squashfs-factory.img";
+              sha256 = "bb542a8e8b77b3b402896f90ec689db2f3bdf9eeff9d8cb95e64f537036a4c5a";
+              sha256_unsigned = "bb542a8e8b77b3b402896f90ec689db2f3bdf9eeff9d8cb95e64f537036a4c5a";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-etisalat_s3-squashfs-sysupgrade.bin";
+              sha256 = "c9d0e9a19bfba440eecf8854c98313be8d7183d7e27b79639f90317e6ef85a0a";
+              sha256_unsigned = "cd39a644668eada98409f23d7c6d77f206df43ce001eb28d66f25c8ca9b41f5f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-etisalat_s3-initramfs-kernel.bin";
+              sha256 = "f497809e10268ec0240a42e29cb687ae5c00e90877d1282b9a5ff5782d8f405d";
+              sha256_unsigned = "f497809e10268ec0240a42e29cb687ae5c00e90877d1282b9a5ff5782d8f405d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "etisalat,s3"
+          ];
+          titles = [
+            {
+              model = "S3";
+              vendor = "Etisalat";
+            }
+          ];
+        };
+        firefly_firewrt = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-firefly_firewrt";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-firefly_firewrt-squashfs-sysupgrade.bin";
+              sha256 = "fa7e0c46929dadb8b759a3301e9a5608e5108ed943d4eaf90277191fd949802e";
+              sha256_unsigned = "b4785473a510e638a0c79b2705a0ec61dd398002cf40acd63601c5b5d9372432";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-firefly_firewrt-initramfs-kernel.bin";
+              sha256 = "14fb16375677539eddb21b63f51dade40f2a8cbca8cc56217455d661abec7a23";
+              sha256_unsigned = "14fb16375677539eddb21b63f51dade40f2a8cbca8cc56217455d661abec7a23";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "firefly,firewrt"
+            "firewrt"
+          ];
+          titles = [
+            {
+              model = "FireWRT";
+              vendor = "Firefly";
+            }
+          ];
+        };
+        gehua_ghl-r-001 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-gehua_ghl-r-001";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-gehua_ghl-r-001-initramfs-kernel.bin";
+              sha256 = "95a042e114085c6601a56958928ad35d7c116a940337f3462f7d5946b9ca685c";
+              sha256_unsigned = "95a042e114085c6601a56958928ad35d7c116a940337f3462f7d5946b9ca685c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-gehua_ghl-r-001-squashfs-sysupgrade.bin";
+              sha256 = "517384224ccaa5e88002cb6d61dd30050afdcaf265e57505509498da987a796f";
+              sha256_unsigned = "4761c5a324699e8debc84c877ddfbf112700ff1724cf219a52b665ee7dffea19";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "gehua,ghl-r-001"
+          ];
+          titles = [
+            {
+              model = "GHL-R-001";
+              vendor = "GeHua";
+            }
+          ];
+        };
+        glinet_gl-mt1300 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-glinet_gl-mt1300";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-glinet_gl-mt1300-initramfs-kernel.bin";
+              sha256 = "2921e6f839c8feb37caf152793185032f9728f93ee259b60ca73365c6b6d42f1";
+              sha256_unsigned = "2921e6f839c8feb37caf152793185032f9728f93ee259b60ca73365c6b6d42f1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-glinet_gl-mt1300-squashfs-sysupgrade.bin";
+              sha256 = "e2804f521a63375dede8b7a3a77ef6043f5bda3b13e3c6d23d8eca772417ce2f";
+              sha256_unsigned = "8ee1b2459807b7ec2a86b0232ff9b44d8d598e5356fd182aac4ccb4f501ebf5a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "glinet,gl-mt1300"
+          ];
+          titles = [
+            {
+              model = "GL-MT1300";
+              vendor = "GL.iNet";
+            }
+          ];
+        };
+        gnubee_gb-pc1 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-usb3"
+            "kmod-sdhci-mt7620"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-gnubee_gb-pc1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-gnubee_gb-pc1-initramfs-kernel.bin";
+              sha256 = "d1d43a4d1b716a3b03f51a796bc5c986a3f7ac8c95eec249afa40593dd0a971e";
+              sha256_unsigned = "d1d43a4d1b716a3b03f51a796bc5c986a3f7ac8c95eec249afa40593dd0a971e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-gnubee_gb-pc1-squashfs-sysupgrade.bin";
+              sha256 = "7e8c6f844bdcc6656691a7681b0fb3a7f2f0a9aac722969cf622be8f84412094";
+              sha256_unsigned = "7489a0c4e070cbbc842686faeebeae77280a317dd51aa9d787d06096ae42fc8f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "gnubee,gb-pc1"
+          ];
+          titles = [
+            {
+              model = "Personal Cloud One";
+              vendor = "GnuBee";
+            }
+          ];
+        };
+        gnubee_gb-pc2 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-usb3"
+            "kmod-sdhci-mt7620"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-gnubee_gb-pc2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-gnubee_gb-pc2-squashfs-sysupgrade.bin";
+              sha256 = "ef4a33946285ded8ae4ce2075b3e40bd79e0453f198849dfcc0b69a8c43300bc";
+              sha256_unsigned = "98978028255fb815b91154a705517323437b76e6971f034a65528490f28c76b5";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-gnubee_gb-pc2-initramfs-kernel.bin";
+              sha256 = "f3ded8a9add70c4eda312678cc87b97d49584b128a4a985f8772646a7725b8f6";
+              sha256_unsigned = "f3ded8a9add70c4eda312678cc87b97d49584b128a4a985f8772646a7725b8f6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "gnubee,gb-pc2"
+          ];
+          titles = [
+            {
+              model = "Personal Cloud Two";
+              vendor = "GnuBee";
+            }
+          ];
+        };
+        h3c_tx1800-plus = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-h3c_tx1800-plus";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-h3c_tx1800-plus-initramfs-kernel.bin";
+              sha256 = "cd9515c2d5945caae4952a907fcbbd12872369d1cb0ee439f3067108959615a1";
+              sha256_unsigned = "cd9515c2d5945caae4952a907fcbbd12872369d1cb0ee439f3067108959615a1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-h3c_tx1800-plus-squashfs-sysupgrade.bin";
+              sha256 = "0464ee10ab945d7f6906ced33bcc1e747b70bf426c10cfbf4c182eb538a2b870";
+              sha256_unsigned = "3abfdf8cee1dfb9b2eb4e30472447a232b81d21cf5630a362bb674f5216b13c7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "h3c,tx1800-plus"
+          ];
+          titles = [
+            {
+              model = "TX1800 Plus";
+              vendor = "H3C";
+            }
+          ];
+        };
+        h3c_tx1801-plus = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-h3c_tx1801-plus";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-h3c_tx1801-plus-initramfs-kernel.bin";
+              sha256 = "ba5b997c61cde8aea4c92a2eb20f1371586f9d60388208a47c8fb381932bb64a";
+              sha256_unsigned = "ba5b997c61cde8aea4c92a2eb20f1371586f9d60388208a47c8fb381932bb64a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-h3c_tx1801-plus-squashfs-sysupgrade.bin";
+              sha256 = "fedb049fffeacfd8b631947da5d387425d692266b610113a0b45eb343cd5a5d6";
+              sha256_unsigned = "d15d347438892cd288d98e6a825f00fc31f73f61a8d00d7707e3930075c532c0";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "h3c,tx1801-plus"
+          ];
+          titles = [
+            {
+              model = "TX1801 Plus";
+              vendor = "H3C";
+            }
+          ];
+        };
+        h3c_tx1806 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-h3c_tx1806";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-h3c_tx1806-squashfs-sysupgrade.bin";
+              sha256 = "7007d30608d9f8b8d755104fbd62f60bcb49bbe8a2870d5ab293a6f42a007c09";
+              sha256_unsigned = "2ec219736b28441f5142b93b2a56170840d3f9a330bf16972bee35d42e8eb777";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-h3c_tx1806-initramfs-kernel.bin";
+              sha256 = "cf8c53cc8d927444d28bb8e255487d18a801b3ce9af04a72d225e8207b4d1196";
+              sha256_unsigned = "cf8c53cc8d927444d28bb8e255487d18a801b3ce9af04a72d225e8207b4d1196";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "h3c,tx1806"
+          ];
+          titles = [
+            {
+              model = "TX1806";
+              vendor = "H3C";
+            }
+          ];
+        };
+        haier_har-20s2u1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-haier_har-20s2u1";
+          images = [
+            {
+              name = "openwrt-23.05.6-ramips-mt7621-haier_har-20s2u1-initramfs-factory.bin";
+              sha256 = "b6b9c64fb09c0ef43e744dafea1bfb605fde11b108a712bb81a200d718f1d197";
+              sha256_unsigned = "b6b9c64fb09c0ef43e744dafea1bfb605fde11b108a712bb81a200d718f1d197";
+              type = "initramfs-factory.bin";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-haier_har-20s2u1-squashfs-sysupgrade.bin";
+              sha256 = "941191cff14fe8c44bf04502fa12fee6144510d74fc6042aef642f5d1a57e32d";
+              sha256_unsigned = "b1abca103632cec7a6a940de5c584e8bf183044d485e8b857f96a61ce5fc421f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-haier_har-20s2u1-initramfs-kernel.bin";
+              sha256 = "7504a93a5c0f121cc8039c5f37c48623f741668bf97a574df34f0fa06e0fa4d0";
+              sha256_unsigned = "7504a93a5c0f121cc8039c5f37c48623f741668bf97a574df34f0fa06e0fa4d0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "haier,har-20s2u1"
+          ];
+          titles = [
+            {
+              model = "HAR-20S2U1";
+              vendor = "Haier";
+            }
+          ];
+        };
+        hanyang_hyc-g920 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt76x2"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-hanyang_hyc-g920";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hanyang_hyc-g920-squashfs-sysupgrade.bin";
+              sha256 = "82d593bba81b72b706f851db8c2446b65684f60d76cfc4adf3b6b7d06be5ca95";
+              sha256_unsigned = "a3921b5e8bf7ed7227177f06e5bc66b77fb510c836f71a9f743c30a762733071";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hanyang_hyc-g920-initramfs-kernel.bin";
+              sha256 = "7f72715c5171ddccf7bee99b7c000eeba00f512362b31a4e41bc1e1e3e27f6a2";
+              sha256_unsigned = "7f72715c5171ddccf7bee99b7c000eeba00f512362b31a4e41bc1e1e3e27f6a2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "hanyang,hyc-g920"
+          ];
+          titles = [
+            {
+              model = "CJ-Hello HYC-G920";
+              vendor = "Hanyang";
+            }
+          ];
+        };
+        hilink_hlk-7621a-evb = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-hilink_hlk-7621a-evb";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hilink_hlk-7621a-evb-initramfs-kernel.bin";
+              sha256 = "f479fa68117a0ddd22e8c6c2a39c2e97332d43224e1b1fb060193d9b40e8ea4a";
+              sha256_unsigned = "f479fa68117a0ddd22e8c6c2a39c2e97332d43224e1b1fb060193d9b40e8ea4a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hilink_hlk-7621a-evb-squashfs-sysupgrade.bin";
+              sha256 = "b34e5c2a408d7bdd1be24936fd6bff9abd20379d6d8af11c643b584c905c53ce";
+              sha256_unsigned = "acaaefac6f25496578f45b30feb10f9e2f9afc5522d711e2fbc43e37442bb244";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "hilink,hlk-7621a-evb"
+          ];
+          titles = [
+            {
+              model = "HLK-7621A evaluation board";
+              vendor = "HiLink";
+            }
+          ];
+        };
+        hiwifi_hc5962 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-hiwifi_hc5962";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hiwifi_hc5962-initramfs-kernel.bin";
+              sha256 = "ee0b93f576bf214cc0622ee5ac924d381224be049884315fd42c2d150ea20092";
+              sha256_unsigned = "ee0b93f576bf214cc0622ee5ac924d381224be049884315fd42c2d150ea20092";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hiwifi_hc5962-squashfs-factory.bin";
+              sha256 = "f367b4b8fecb5314fca537db8b9c684eb38bb56430b4c2b2a456e3c6ecb33145";
+              sha256_unsigned = "f367b4b8fecb5314fca537db8b9c684eb38bb56430b4c2b2a456e3c6ecb33145";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-hiwifi_hc5962-squashfs-sysupgrade.bin";
+              sha256 = "bb137d6da7054797b19eb4df8f80e4c46fc7a4635142aa5a14f8cd3c3ccb90fe";
+              sha256_unsigned = "3b310f1cc02cc9ed5323156356728376ab523b3d4e1177d7fb70c77797a752d8";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "hiwifi,hc5962"
+          ];
+          titles = [
+            {
+              model = "HC5962";
+              vendor = "HiWiFi";
+            }
+          ];
+        };
+        huasifei_ws1208v2 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "kmod-usb-net-cdc-mbim"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-huasifei_ws1208v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-huasifei_ws1208v2-initramfs-kernel.bin";
+              sha256 = "320d08a3f8830c6ae1b7dbfc4dc8176d96f45b27d95015cf60ba5c719ff0b6a9";
+              sha256_unsigned = "320d08a3f8830c6ae1b7dbfc4dc8176d96f45b27d95015cf60ba5c719ff0b6a9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-huasifei_ws1208v2-squashfs-sysupgrade.bin";
+              sha256 = "c16f7f1df8910b503723fa3c7bc4ac2859e586fa3b0a807a80716ddea5874e27";
+              sha256_unsigned = "f8b9a5f879be01d6bf0d90f59b9dbb8141cc71d7aefd8b57028dda903b57ceac";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "huasifei,ws1208v2"
+          ];
+          titles = [
+            {
+              model = "WS1208V2";
+              vendor = "Huasifei";
+            }
+          ];
+        };
+        humax_e10 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-humax_e10";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-humax_e10-initramfs-kernel.bin";
+              sha256 = "f3134c7abe744eb50c943444547d87d250b766baf7933bbf7fd0920cd2c99044";
+              sha256_unsigned = "f3134c7abe744eb50c943444547d87d250b766baf7933bbf7fd0920cd2c99044";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-humax_e10-squashfs-factory.bin";
+              sha256 = "eb6b7182ebdf27e099a095bf1473fcab5b57f9876eb929d8e0bc5a1f12f10bef";
+              sha256_unsigned = "eb6b7182ebdf27e099a095bf1473fcab5b57f9876eb929d8e0bc5a1f12f10bef";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-humax_e10-squashfs-sysupgrade.bin";
+              sha256 = "57f666f6b942aa198f9f85622b41cbb9e4245354069fd00f5db7dc1a5c1eedb1";
+              sha256_unsigned = "bf3025d2d777528539e806aaf698d56b8433efcc109169c80e7d6396a9228b36";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "humax,e10"
+          ];
+          titles = [
+            {
+              model = "E10";
+              vendor = "HUMAX";
+            }
+            {
+              model = "QUANTUM E10";
+              vendor = "HUMAX";
+            }
+          ];
+        };
+        iodata_wn-ax1167gr = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr-initramfs-kernel.bin";
+              sha256 = "132184aeb950a133b32ec40f7ed052ff4ebcf341c93e5c3109337fcbf09349fe";
+              sha256_unsigned = "132184aeb950a133b32ec40f7ed052ff4ebcf341c93e5c3109337fcbf09349fe";
+              type = "kernel";
+            }
+            {
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr-initramfs-factory.bin";
+              sha256 = "658d98355ece346796359920f0b7acad56ee0baa1797aae544ba931ac5b9163e";
+              sha256_unsigned = "658d98355ece346796359920f0b7acad56ee0baa1797aae544ba931ac5b9163e";
+              type = "initramfs-factory.bin";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr-squashfs-sysupgrade.bin";
+              sha256 = "2f90e513543e8af504ece4de5b292a586c886337b95c577c6c0d0f424e8c6f3c";
+              sha256_unsigned = "c5edeb222b21e77a82e75601614d64f81f4ed907384754cf42bba02342e23ed9";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ax1167gr"
+          ];
+          titles = [
+            {
+              model = "WN-AX1167GR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-ax1167gr2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr2-squashfs-sysupgrade.bin";
+              sha256 = "bdb85445708f22b15e671f681813c7b328fa6024a5c41ac5e74a977f357c0b32";
+              sha256_unsigned = "79b6622c45cba68868f4d3f543be72304ecf06716e26ee26398aac319775341d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax1167gr2-initramfs-kernel.bin";
+              sha256 = "c2a535eef3839b2b2ed8fe9fad04894aeec00f7e296f9b1a4c00de8dbf2e49b8";
+              sha256_unsigned = "c2a535eef3839b2b2ed8fe9fad04894aeec00f7e296f9b1a4c00de8dbf2e49b8";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ax1167gr2"
+          ];
+          titles = [
+            {
+              model = "WN-AX1167GR2";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-ax2033gr = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax2033gr";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax2033gr-squashfs-sysupgrade.bin";
+              sha256 = "356cbfba988f253ed1f549a50f070c6239edd7be5f318795444f2097afb68e3a";
+              sha256_unsigned = "608ee74fdbc8dd499165be3f091ac5b3246c4176a15f72de98db3c4bc1603966";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-ax2033gr-initramfs-kernel.bin";
+              sha256 = "b17e6f0709259697f8653a3f6af6fe0be38d3823559249244e9a90d1412c8aea";
+              sha256_unsigned = "b17e6f0709259697f8653a3f6af6fe0be38d3823559249244e9a90d1412c8aea";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-ax2033gr"
+          ];
+          titles = [
+            {
+              model = "WN-AX2033GR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-dx1167r = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx1167r";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx1167r-squashfs-sysupgrade.bin";
+              sha256 = "ef35df0c49bc4ebb540e5e0850f90d885c52567cc31a01ffdf5a2d839ef0baff";
+              sha256_unsigned = "3533746a1e51e4bb07cd56f2a442ecdca7880cb52df3482d0de9ef1accbbe113";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx1167r-initramfs-kernel.bin";
+              sha256 = "35d2bbad0a63341e40bf1c82d07f0cec87bac29e3dc2ad8818c0b1aedbb18412";
+              sha256_unsigned = "35d2bbad0a63341e40bf1c82d07f0cec87bac29e3dc2ad8818c0b1aedbb18412";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-dx1167r"
+          ];
+          titles = [
+            {
+              model = "WN-DX1167R";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-dx1200gr = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx1200gr";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx1200gr-initramfs-kernel.bin";
+              sha256 = "95bf02053d3d9a26f3994a3f4c71f3c38d5617ddcb1716cca644d6b74e3c0efd";
+              sha256_unsigned = "95bf02053d3d9a26f3994a3f4c71f3c38d5617ddcb1716cca644d6b74e3c0efd";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx1200gr-squashfs-sysupgrade.bin";
+              sha256 = "cd76d145b8757b9d34ea99826dcfff0e379a450fdaafefab8ad424b8754e5379";
+              sha256_unsigned = "3b4e3ddd490925dbbabe5f92c39c05fc5a80df39af29bb0f37d88da7f39753f8";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-dx1200gr"
+          ];
+          titles = [
+            {
+              model = "WN-DX1200GR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-dx2033gr = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx2033gr";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx2033gr-squashfs-sysupgrade.bin";
+              sha256 = "03f67fa82273bc47eaa946a24a95dd2c7074365dc067b0321ef724e3c90e80ed";
+              sha256_unsigned = "87556b2b913a4361a359c102d95f44bc031ed4b6842ec232199c48628684ea64";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-dx2033gr-initramfs-kernel.bin";
+              sha256 = "ef84aa43ae541b45bdf27580b4fb4d750503c685b55a06713588ab80a65977c0";
+              sha256_unsigned = "ef84aa43ae541b45bdf27580b4fb4d750503c685b55a06713588ab80a65977c0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-dx2033gr"
+          ];
+          titles = [
+            {
+              model = "WN-DX2033GR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wn-gx300gr = {
+          device_packages = [
+            "kmod-mt7603"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wn-gx300gr";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-gx300gr-initramfs-kernel.bin";
+              sha256 = "3346436ebe5d37292107d9063ca94f780104dfc87c6ec4ff315f59fc3599a204";
+              sha256_unsigned = "3346436ebe5d37292107d9063ca94f780104dfc87c6ec4ff315f59fc3599a204";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wn-gx300gr-squashfs-sysupgrade.bin";
+              sha256 = "ccc15d3cdefab4ed352827b121323de2cd49183bc3346a7faa0a3e5d8fa35fca";
+              sha256_unsigned = "f1ddb7d465373358ace031e808d83d32d442043cc10446faf1eea72fbf751c5e";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iodata,wn-gx300gr"
+          ];
+          titles = [
+            {
+              model = "WN-GX300GR";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iodata_wnpr2600g = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iodata_wnpr2600g";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wnpr2600g-initramfs-kernel.bin";
+              sha256 = "3d6bb43c88a6b1a31c422ab9b672713fc2a8137eabe681d3d0655adaa42f605a";
+              sha256_unsigned = "3d6bb43c88a6b1a31c422ab9b672713fc2a8137eabe681d3d0655adaa42f605a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wnpr2600g-squashfs-factory.bin";
+              sha256 = "1814dc617d8b5705afc6d1736a3d42b1a18c5de02f8a122db77f7fb52e25a3fe";
+              sha256_unsigned = "1814dc617d8b5705afc6d1736a3d42b1a18c5de02f8a122db77f7fb52e25a3fe";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iodata_wnpr2600g-squashfs-sysupgrade.bin";
+              sha256 = "d89cd86a465bc643f611aa4f9ded4dad6e074a8084a46bdd5857fa74336736c3";
+              sha256_unsigned = "deeaa59ae78d0885d9f3913bf53aa16353ef3f94fd145d470ef96877b68f4a2c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iodata,wnpr2600g"
+          ];
+          titles = [
+            {
+              model = "WNPR2600G";
+              vendor = "I-O DATA";
+            }
+          ];
+        };
+        iptime_a3002mesh = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_a3002mesh";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a3002mesh-squashfs-sysupgrade.bin";
+              sha256 = "48f43df382b049a9f3cc00ebb554d4c20363bb69a17119b2526bbf891dff2b03";
+              sha256_unsigned = "eb253c8f8810daf9cf8febc6de359c2f874ab2923544483351149534804b819c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a3002mesh-initramfs-kernel.bin";
+              sha256 = "4324513b48423842b86192575389bdc4b914033b07152dd92d68bf96965da80c";
+              sha256_unsigned = "4324513b48423842b86192575389bdc4b914033b07152dd92d68bf96965da80c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iptime,a3002mesh"
+          ];
+          titles = [
+            {
+              model = "A3002MESH";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_a3004ns-dual = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt76x2"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_a3004ns-dual";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a3004ns-dual-initramfs-kernel.bin";
+              sha256 = "7bec5aa1919ead501ce1148f93e9e3272333099d5b860b9ca200a89f7a34a3ee";
+              sha256_unsigned = "7bec5aa1919ead501ce1148f93e9e3272333099d5b860b9ca200a89f7a34a3ee";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a3004ns-dual-squashfs-sysupgrade.bin";
+              sha256 = "6618034d86147cc6985b0db754a6355a50c2e521b6d6cf4f42fd1e469fab5422";
+              sha256_unsigned = "28691c20c50c2de47da46425838bc3a34f4d80f8618684c147ae6c7da043b48b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iptime,a3004ns-dual"
+          ];
+          titles = [
+            {
+              model = "A3004NS-dual";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_a3004t = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_a3004t";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a3004t-initramfs-kernel.bin";
+              sha256 = "6f08e0c033faf4de96b2dfdf9326e7fc4be060554e77ff34e062e4d6c82407a7";
+              sha256_unsigned = "6f08e0c033faf4de96b2dfdf9326e7fc4be060554e77ff34e062e4d6c82407a7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a3004t-squashfs-sysupgrade.bin";
+              sha256 = "210c6821a78357010b0688700f35ad9a58d9c2576883a470d171f78dfef2fca8";
+              sha256_unsigned = "d824741fa0d682af775e3d677f85dc5018b3f0c6053671b0b5ceab2b09a1ff0a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iptime,a3004t"
+          ];
+          titles = [
+            {
+              model = "A3004T";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_a6004ns-m = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_a6004ns-m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a6004ns-m-initramfs-kernel.bin";
+              sha256 = "bb2809923e799073e61338ba26bd2cce9745da5c6748f468774c12890c923a20";
+              sha256_unsigned = "bb2809923e799073e61338ba26bd2cce9745da5c6748f468774c12890c923a20";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a6004ns-m-squashfs-sysupgrade.bin";
+              sha256 = "c2fb9732387bf557dbce764a3e29226170223d011d3f0ab72b1b5a6756a4c659";
+              sha256_unsigned = "c5c00710e9521424432cf135a569a8877a9b4afde9c9186b809cfb352b22c571";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iptime,a6004ns-m"
+          ];
+          titles = [
+            {
+              model = "A6004NS-M";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_a6ns-m = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_a6ns-m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a6ns-m-squashfs-sysupgrade.bin";
+              sha256 = "e712ee9ccd856b53fdd272442461193fd3237e2f4724a5d1e0998669e013a0f7";
+              sha256_unsigned = "d26947aaeaad801019e35b73d697ed2dda256742ce1df3e42cea4e82116bcee7";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a6ns-m-initramfs-kernel.bin";
+              sha256 = "880993dfebecb2794d2d7d27b10f88cc03a0babe2977585c94693ed33ea71eb1";
+              sha256_unsigned = "880993dfebecb2794d2d7d27b10f88cc03a0babe2977585c94693ed33ea71eb1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "iptime,a6ns-m"
+          ];
+          titles = [
+            {
+              model = "A6ns-M";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_a8004t = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_a8004t";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a8004t-initramfs-kernel.bin";
+              sha256 = "13004fef8a2b6a7de13030902886eb12b882cea0ef1961c41eb3c85ad2a4b6f6";
+              sha256_unsigned = "13004fef8a2b6a7de13030902886eb12b882cea0ef1961c41eb3c85ad2a4b6f6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_a8004t-squashfs-sysupgrade.bin";
+              sha256 = "273136fd8543dfb8ed5e74344dcab0b3b11068e6b2c6bcec9db7ecd4838477dc";
+              sha256_unsigned = "5922c9f13e22fccffbf418a67f1a8b516bd314238bd5ba49a023d6cfcff77963";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iptime,a8004t"
+          ];
+          titles = [
+            {
+              model = "A8004T";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_ax2004m = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_ax2004m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_ax2004m-initramfs-kernel.bin";
+              sha256 = "03446c4a35e89d22b62efa927e34428e96793b28a636bb2932d422b316cbd6b8";
+              sha256_unsigned = "03446c4a35e89d22b62efa927e34428e96793b28a636bb2932d422b316cbd6b8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_ax2004m-squashfs-recovery.bin";
+              sha256 = "7170e8d524d516645f37028e405c92de420ded3f13c5f213c1dfeb7288149232";
+              sha256_unsigned = "7170e8d524d516645f37028e405c92de420ded3f13c5f213c1dfeb7288149232";
+              type = "recovery";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_ax2004m-squashfs-sysupgrade.bin";
+              sha256 = "cd4eef97a33576ee0f263e6fe0c6565a2309a82b4bcbc7b2f478babf152c1021";
+              sha256_unsigned = "5a796ee8a1d5a281aa05c3997309401135130145cda53113c0e69bfcaced0c0d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iptime,ax2004m"
+          ];
+          titles = [
+            {
+              model = "AX2004M";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        iptime_t5004 = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-iptime_t5004";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_t5004-initramfs-kernel.bin";
+              sha256 = "f0e515d14ac93c97052e1192fa47ca98140a8a902fa2a154576ca2a0b073d5d7";
+              sha256_unsigned = "f0e515d14ac93c97052e1192fa47ca98140a8a902fa2a154576ca2a0b073d5d7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-iptime_t5004-squashfs-sysupgrade.bin";
+              sha256 = "1e8fd0751da462fe89a88645e4987d8edf358377c7867409cbb43237875d7640";
+              sha256_unsigned = "508bb504e72a0ef590d8bcacc351bbc16800987c211610dc7b7aa576510171d6";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "iptime,t5004"
+          ];
+          titles = [
+            {
+              model = "T5004";
+              vendor = "ipTIME";
+            }
+          ];
+        };
+        jcg_jhr-ac876m = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-jcg_jhr-ac876m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_jhr-ac876m-initramfs-kernel.bin";
+              sha256 = "69fae3b063aaf697c6dbe8537f85da08e6919ada0d010259bb7091191b21be3b";
+              sha256_unsigned = "69fae3b063aaf697c6dbe8537f85da08e6919ada0d010259bb7091191b21be3b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_jhr-ac876m-squashfs-sysupgrade.bin";
+              sha256 = "c4f747e7afad3ed019c0a6120ce45d18bd4cb2461733379da20c1eee361c7938";
+              sha256_unsigned = "843168dee74206b77cd2e14b54f5311bcbf6d847d403b910da37f419469a4ac9";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_jhr-ac876m-squashfs-factory.bin";
+              sha256 = "4f4e09f922171695c4b2cb2f7370f713710aea8c7e04b9dba3913c2b1dc50722";
+              sha256_unsigned = "4f4e09f922171695c4b2cb2f7370f713710aea8c7e04b9dba3913c2b1dc50722";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "jcg,jhr-ac876m"
+          ];
+          titles = [
+            {
+              model = "JHR-AC876M";
+              vendor = "JCG";
+            }
+          ];
+        };
+        jcg_q20 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-jcg_q20";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_q20-squashfs-factory.bin";
+              sha256 = "38c07e8afd20d6e9a13fb80bf7464cb1aa888d2797ae79f85ff6b4111ac0c780";
+              sha256_unsigned = "38c07e8afd20d6e9a13fb80bf7464cb1aa888d2797ae79f85ff6b4111ac0c780";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_q20-squashfs-sysupgrade.bin";
+              sha256 = "a3e79cd9d5ee5e4a72af9b4dcc23f931483e930bcc6cc49ad828f61302b7460d";
+              sha256_unsigned = "df3e6c983bcd2bb9c061e86b550801f6c571d00e20cbca91611ee8f93a5951d4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_q20-initramfs-kernel.bin";
+              sha256 = "1c2d371310fa2b4192fc4176e8b11ee94aa0a693e1e96eec3ab72065c98663fc";
+              sha256_unsigned = "1c2d371310fa2b4192fc4176e8b11ee94aa0a693e1e96eec3ab72065c98663fc";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "jcg,q20"
+          ];
+          titles = [
+            {
+              model = "Q20";
+              vendor = "JCG";
+            }
+          ];
+        };
+        jcg_y2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-jcg_y2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_y2-squashfs-factory.bin";
+              sha256 = "35250e4835e33b8785caef5c2f4779399fd3abd5e2fdf84f67fabeb69708c4ac";
+              sha256_unsigned = "35250e4835e33b8785caef5c2f4779399fd3abd5e2fdf84f67fabeb69708c4ac";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_y2-squashfs-sysupgrade.bin";
+              sha256 = "4a85097b0df3fafe3b5bd77870546a1f07bd5fc06968668101d2aae41425568a";
+              sha256_unsigned = "882e14596519099ca3a5be828be696568fe1d4f082f642445ac94d81cc32dffc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-jcg_y2-initramfs-kernel.bin";
+              sha256 = "9159dc7d789e2edee939085c16f2327b35cb6d669e7373e0ac15752de477bde6";
+              sha256_unsigned = "9159dc7d789e2edee939085c16f2327b35cb6d669e7373e0ac15752de477bde6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "jcg,y2"
+          ];
+          titles = [
+            {
+              model = "Y2";
+              vendor = "JCG";
+            }
+          ];
+        };
+        keenetic_kn-3010 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-keenetic_kn-3010";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-keenetic_kn-3010-squashfs-factory.bin";
+              sha256 = "48b80213493046a2dee3d1290900088f8a8f73dbaa0259839babb90192007e8b";
+              sha256_unsigned = "48b80213493046a2dee3d1290900088f8a8f73dbaa0259839babb90192007e8b";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-keenetic_kn-3010-initramfs-kernel.bin";
+              sha256 = "7f2d4312f2abf562e85a5036f16ec8e967b9cab6c01b608314ea5bef1f70f184";
+              sha256_unsigned = "7f2d4312f2abf562e85a5036f16ec8e967b9cab6c01b608314ea5bef1f70f184";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-keenetic_kn-3010-squashfs-sysupgrade.bin";
+              sha256 = "fa76c5479ace6e0cab93492771e2eecee5c9f51add72a3a106215469e53983de";
+              sha256_unsigned = "4ed7ba9e43f23117cc348cadfb533a1b3fef0e8251e61c03726888675a57c19a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "keenetic,kn-3010"
+          ];
+          titles = [
+            {
+              model = "KN-3010";
+              vendor = "Keenetic";
+            }
+          ];
+        };
+        lenovo_newifi-d1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-sdhci-mt7620"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-lenovo_newifi-d1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-lenovo_newifi-d1-initramfs-kernel.bin";
+              sha256 = "beab2ee86383389f7bde75951dede872156e8ebdbb48ce7e17ade96fa766cdd8";
+              sha256_unsigned = "beab2ee86383389f7bde75951dede872156e8ebdbb48ce7e17ade96fa766cdd8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-lenovo_newifi-d1-squashfs-sysupgrade.bin";
+              sha256 = "5dac4521c1403e69a8dde06021c5ca8131869f3ed2952bd9dfd3a5f6e7ca5b23";
+              sha256_unsigned = "b0e9831e7d3b790415dc1f2c2ddfc9370cc733af34371238adb1f428439f4417";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "lenovo,newifi-d1"
+            "newifi-d1"
+          ];
+          titles = [
+            {
+              model = "Newifi D1";
+              vendor = "Lenovo";
+            }
+          ];
+        };
+        linksys_e5600 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_e5600";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_e5600-squashfs-sysupgrade.bin";
+              sha256 = "86ff57ff9a5b585b5a03d3e09084d5d2b11f28cd91f59f08a66363159a097c72";
+              sha256_unsigned = "1c49f45d0dff5bb398d23d110b5f7e128fc5224d2e519a91fa75b0ff467a510c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_e5600-initramfs-kernel.bin";
+              sha256 = "b4e7306a688814c771c6d06d3bc0d0c1da9bd37b06b4e7f1308ab9285b417fe5";
+              sha256_unsigned = "b4e7306a688814c771c6d06d3bc0d0c1da9bd37b06b4e7f1308ab9285b417fe5";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_e5600-squashfs-factory.bin";
+              sha256 = "25eec80cbd9876691ae01c61b1dda67dffc8707a950e0f73844637f99febbc45";
+              sha256_unsigned = "25eec80cbd9876691ae01c61b1dda67dffc8707a950e0f73844637f99febbc45";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "linksys,e5600"
+          ];
+          titles = [
+            {
+              model = "E5600";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_e7350 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_e7350";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_e7350-initramfs-kernel.bin";
+              sha256 = "f7814af640f319432b40b7137e810d94cf376fe9f4701f274631ed0069503482";
+              sha256_unsigned = "f7814af640f319432b40b7137e810d94cf376fe9f4701f274631ed0069503482";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_e7350-squashfs-factory.bin";
+              sha256 = "599bf0752ac84014f9d94ecef0ab4359ec37ba2882f57c46330b65143d2d441e";
+              sha256_unsigned = "599bf0752ac84014f9d94ecef0ab4359ec37ba2882f57c46330b65143d2d441e";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_e7350-squashfs-sysupgrade.bin";
+              sha256 = "04b7645981209a00409fc640a18065d077a2dc3619b77349835d085c0f52f114";
+              sha256_unsigned = "c22a9b1199d380030fc70cf400c1883e412f480fa862c0ca799a86fb8ce2aac4";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "linksys,e7350"
+          ];
+          titles = [
+            {
+              model = "E7350";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_ea6350-v4 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+            "kmod-mt7603"
+            "kmod-mt7663-firmware-ap"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_ea6350-v4";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea6350-v4-squashfs-sysupgrade.bin";
+              sha256 = "f185f10d0a56d193a0e62981964c34d05b3ccec2b74c633bd346a4ced0551a20";
+              sha256_unsigned = "b4b5324ca1ec988aada55b8255e6cb5593bbea982300db0b33422806eb2d6300";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea6350-v4-initramfs-kernel.bin";
+              sha256 = "9444e8221f7dc085efbbb93ea200991af08dda214d90e92358e2d1ee8df3dcd6";
+              sha256_unsigned = "9444e8221f7dc085efbbb93ea200991af08dda214d90e92358e2d1ee8df3dcd6";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea6350-v4-squashfs-factory.bin";
+              sha256 = "05f5b4619bf1d9763326b16069f9dc1cc8466afe4fa569ed1b84812d3d6ea832";
+              sha256_unsigned = "05f5b4619bf1d9763326b16069f9dc1cc8466afe4fa569ed1b84812d3d6ea832";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "linksys,ea6350-v4"
+          ];
+          titles = [
+            {
+              model = "EA6350";
+              variant = "v4";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_ea7300-v1 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v1-initramfs-kernel.bin";
+              sha256 = "3b379420582cbc9640dc2b69e6761a392eb459e211e77824db35249da3553170";
+              sha256_unsigned = "3b379420582cbc9640dc2b69e6761a392eb459e211e77824db35249da3553170";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v1-squashfs-sysupgrade.bin";
+              sha256 = "35f73c7c6cf5449c1b45fa7002a39a9c7c5782d0e7f5f1cd8eb5a26e5c8cf33c";
+              sha256_unsigned = "cc16b010677f1e0c3555270c3fa6b1a484d2f919140ba4f014c29ada4468d20d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v1-squashfs-factory.bin";
+              sha256 = "a7bb2fd84d922bd0516a31cac828b77061317eadef020f4be0fed58d0cd2f8db";
+              sha256_unsigned = "a7bb2fd84d922bd0516a31cac828b77061317eadef020f4be0fed58d0cd2f8db";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "linksys,ea7300-v1"
+          ];
+          titles = [
+            {
+              model = "EA7300";
+              variant = "v1";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_ea7300-v2 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+            "kmod-mt7603"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v2-initramfs-kernel.bin";
+              sha256 = "146dd095cbd0331b8c9a202e2990c413114935b370110a56a580fb4b711084fc";
+              sha256_unsigned = "146dd095cbd0331b8c9a202e2990c413114935b370110a56a580fb4b711084fc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v2-squashfs-sysupgrade.bin";
+              sha256 = "9d768b7c11ac991d8688d46f31364b17921a17a2d67853a8f75153d445edf2e2";
+              sha256_unsigned = "89c25355e7003db8cdd04661ac362d28262dfae8e49601da811c9beefc0a3b81";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7300-v2-squashfs-factory.bin";
+              sha256 = "8c6f422ffe7d480a86a22dd69fdc869220078ff4715fa01205988ffe88376680";
+              sha256_unsigned = "8c6f422ffe7d480a86a22dd69fdc869220078ff4715fa01205988ffe88376680";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "linksys,ea7300-v2"
+          ];
+          titles = [
+            {
+              model = "EA7300";
+              variant = "v2";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_ea7500-v2 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_ea7500-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7500-v2-squashfs-factory.bin";
+              sha256 = "ff55c443d5e2046d262bafd6e5c1aebf3e840834810bf0a892298a6f56f52f78";
+              sha256_unsigned = "ff55c443d5e2046d262bafd6e5c1aebf3e840834810bf0a892298a6f56f52f78";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7500-v2-squashfs-sysupgrade.bin";
+              sha256 = "e0ba7d9269cf499f0e0b78847e6309b64ecb24b1157c81315b41a01466759cb3";
+              sha256_unsigned = "1c60527a442618e0b6166353fa7c3980505bc240a3203fc029fbf70327152c6c";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea7500-v2-initramfs-kernel.bin";
+              sha256 = "3593f23e9a35d483d81a48e108234ffe80a05f64699ddf520ec711530c5ea71d";
+              sha256_unsigned = "3593f23e9a35d483d81a48e108234ffe80a05f64699ddf520ec711530c5ea71d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "linksys,ea7500-v2"
+          ];
+          titles = [
+            {
+              model = "EA7500";
+              variant = "v2";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_ea8100-v1 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v1-squashfs-sysupgrade.bin";
+              sha256 = "f1c5f9506ca71b6805ec7400150cb4a1a5856f71d686b9df8b346e96bbb30ac7";
+              sha256_unsigned = "b5164e3005b61d170065a5d59a953fde3c93722dd049dff3f04fd9d7c72fd5cc";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v1-squashfs-factory.bin";
+              sha256 = "4cbaf0c600236312d5344ae062d37dd02261e6b498e2dd8348adea1a866e22f8";
+              sha256_unsigned = "4cbaf0c600236312d5344ae062d37dd02261e6b498e2dd8348adea1a866e22f8";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v1-initramfs-kernel.bin";
+              sha256 = "94d13ecd97fd7d373d0760e1f3c606527d142a41cb363cc1758537ef8dcaabef";
+              sha256_unsigned = "94d13ecd97fd7d373d0760e1f3c606527d142a41cb363cc1758537ef8dcaabef";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "linksys,ea8100-v1"
+          ];
+          titles = [
+            {
+              model = "EA8100";
+              variant = "v1";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_ea8100-v2 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v2-squashfs-factory.bin";
+              sha256 = "4b5368c9c53bb28e4aa70f6e8c1c40c142a652b8b18b0e5e6269bf49712991f4";
+              sha256_unsigned = "4b5368c9c53bb28e4aa70f6e8c1c40c142a652b8b18b0e5e6269bf49712991f4";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v2-squashfs-sysupgrade.bin";
+              sha256 = "bc3c2ef010f95ff54ab5ea721fc2fc6adfe8da4b4dd93ca90f27b996bb9f1bda";
+              sha256_unsigned = "b4727e2adcea8d13650abf1f4e1bb675b24b4f86b2671b10a4b3917f77476df6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_ea8100-v2-initramfs-kernel.bin";
+              sha256 = "fba13f4c36c49700198030ca91964601512dc1c8b586175515efe351096ac2d9";
+              sha256_unsigned = "fba13f4c36c49700198030ca91964601512dc1c8b586175515efe351096ac2d9";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "linksys,ea8100-v2"
+          ];
+          titles = [
+            {
+              model = "EA8100";
+              variant = "v2";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_re6500 = {
+          device_packages = [
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_re6500";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_re6500-squashfs-sysupgrade.bin";
+              sha256 = "9252c1bf127d102adac2979358a6c653202717b7d4ca781b8114fd7fb6fd6c67";
+              sha256_unsigned = "e460b9a71e1e0f087e92eb9f2567f210408ddc73c5e3d513110aca4b60ee8e45";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_re6500-initramfs-kernel.bin";
+              sha256 = "e63d107083eb6d2fb4f8317344a3496ca3c5ce52e7ac53a9cd3b1baa52a372ba";
+              sha256_unsigned = "e63d107083eb6d2fb4f8317344a3496ca3c5ce52e7ac53a9cd3b1baa52a372ba";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "linksys,re6500"
+            "re6500"
+          ];
+          titles = [
+            {
+              model = "RE6500";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        linksys_re7000 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-linksys_re7000";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_re7000-squashfs-sysupgrade.bin";
+              sha256 = "7b8bf51cdcccd997e1c865a6ec5201814b8f79e75b412a850dbaf6c34bea4706";
+              sha256_unsigned = "5b08cd6875bd2bdf831377e3a77a0ea40b795916893af9623b91ab2db183b3e4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-linksys_re7000-initramfs-kernel.bin";
+              sha256 = "cc85261c51bc6b8f9c35a043751bc6f0f41d58bad5256992f5a73a805d06ad44";
+              sha256_unsigned = "cc85261c51bc6b8f9c35a043751bc6f0f41d58bad5256992f5a73a805d06ad44";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "linksys,re7000"
+          ];
+          titles = [
+            {
+              model = "RE7000";
+              vendor = "Linksys";
+            }
+          ];
+        };
+        mediatek_ap-mt7621a-v60 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-sdhci-mt7620"
+            "kmod-sound-mt7620"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mediatek_ap-mt7621a-v60";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mediatek_ap-mt7621a-v60-initramfs-kernel.bin";
+              sha256 = "3a605e86713fe0f43137000206294fb7a00a4b2c7cbd413427b4193ed33878d9";
+              sha256_unsigned = "3a605e86713fe0f43137000206294fb7a00a4b2c7cbd413427b4193ed33878d9";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mediatek_ap-mt7621a-v60-squashfs-sysupgrade.bin";
+              sha256 = "98ab542b7bccd7b65902849c2ede98e3d6de3c1ecef0b90683150e25289d9ceb";
+              sha256_unsigned = "29554acc2c6ad48729455bc0dbfb721816e0ec7f67fb2a3ddc14b0fe51c19259";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mediatek,ap-mt7621a-v60"
+          ];
+          titles = [
+            {
+              model = "AP-MT7621A-V60 EVB";
+              vendor = "Mediatek";
+            }
+          ];
+        };
+        mediatek_mt7621-eval-board = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mediatek_mt7621-eval-board";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mediatek_mt7621-eval-board-squashfs-sysupgrade.bin";
+              sha256 = "3e9fc4b002a1abcdad2dc4df9f06a47e8965d209fd025c409611bd5734e358df";
+              sha256_unsigned = "6e2d92993f29e5f0fd92bc485fbf719e882076f9ee60ae3606547a44d6105542";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mediatek_mt7621-eval-board-initramfs-kernel.bin";
+              sha256 = "1889e1bf756615cd093d561e0ba5711e3a8911dca335913491d22420f0798434";
+              sha256_unsigned = "1889e1bf756615cd093d561e0ba5711e3a8911dca335913491d22420f0798434";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mediatek,mt7621-eval-board"
+            "mt7621"
+          ];
+          titles = [
+            {
+              model = "MT7621 EVB";
+              vendor = "MediaTek";
+            }
+          ];
+        };
+        meig_slt866 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "kmod-usb3"
+            "kmod-usb-net-rndis"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-meig_slt866";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-meig_slt866-initramfs-kernel.bin";
+              sha256 = "27be059cd1501e412ef6a21d8cc69badac0abb52efadcf0f8d787a095aad8e6d";
+              sha256_unsigned = "27be059cd1501e412ef6a21d8cc69badac0abb52efadcf0f8d787a095aad8e6d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-meig_slt866-squashfs-sysupgrade.bin";
+              sha256 = "ca2ff2aa31c166e7c802c04d8701fe779fd944866e1c1c2881952be68f26364a";
+              sha256_unsigned = "8ae6ec4e89355b27f80be86a8fbc3363585de6719f9fcc9b67f7459c57ddffb2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "meig,slt866"
+          ];
+          titles = [
+            {
+              model = "SLT866";
+              vendor = "MeiG";
+            }
+          ];
+        };
+        mercusys_mr70x-v1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mercusys_mr70x-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mercusys_mr70x-v1-squashfs-sysupgrade.bin";
+              sha256 = "c5e4b1f47bd42799455914200ef69ee02197213cc183840851c5ce83856a7b8d";
+              sha256_unsigned = "85e9231dab63c3d90af8d85335dbd890a9a55e55817a409de0ba631049d1d3e5";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mercusys_mr70x-v1-squashfs-factory.bin";
+              sha256 = "7464d7967e868b97d3ac8a5f4a87e37368e6a31f7d096e70b8e5d61dd4605e63";
+              sha256_unsigned = "7464d7967e868b97d3ac8a5f4a87e37368e6a31f7d096e70b8e5d61dd4605e63";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mercusys_mr70x-v1-initramfs-kernel.bin";
+              sha256 = "cc7163439feaf631863a407c02ff742bc1965ebfe18dea12cafb4f82631afaeb";
+              sha256_unsigned = "cc7163439feaf631863a407c02ff742bc1965ebfe18dea12cafb4f82631afaeb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mercusys,mr70x-v1"
+          ];
+          titles = [
+            {
+              model = "MR70X";
+              variant = "v1";
+              vendor = "MERCUSYS";
+            }
+          ];
+        };
+        mikrotik_ltap-2hnd = {
+          device_packages = [
+            "kmod-usb3"
+            "-uboot-envtools"
+            "kmod-ath9k"
+            "kmod-pps-gpio"
+            "rssileds"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mikrotik_ltap-2hnd";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_ltap-2hnd-initramfs-kernel.bin";
+              sha256 = "5787eb0e889e8e5731e97f7244ed7a368880a84428d9fc67f2c6fd0ba4912b3a";
+              sha256_unsigned = "5787eb0e889e8e5731e97f7244ed7a368880a84428d9fc67f2c6fd0ba4912b3a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_ltap-2hnd-squashfs-sysupgrade.bin";
+              sha256 = "45ce59e0002be28b10b36f5be575ebdeb1040ff2a053be0e0ea207c991465677";
+              sha256_unsigned = "742fc60e9cd998b4147ece955480457c8672f9a992b21e8934904e0016feefa1";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,ltap-2hnd"
+          ];
+          titles = [
+            {
+              model = "LtAP-2HnD";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+        mikrotik_routerboard-750gr3 = {
+          device_packages = [
+            "kmod-usb3"
+            "-uboot-envtools"
+            "-wpad-basic-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-750gr3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-750gr3-initramfs-kernel.bin";
+              sha256 = "9fee6f0b277abe726bbb86b51cb1ac85a86b42e151cea94e39bd355cc063cc2a";
+              sha256_unsigned = "9fee6f0b277abe726bbb86b51cb1ac85a86b42e151cea94e39bd355cc063cc2a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-750gr3-squashfs-sysupgrade.bin";
+              sha256 = "38fd2e0de28c3e91f15483cedab038242724f57f85a82196c833e9818fc9fa05";
+              sha256_unsigned = "411626312bbd6621fde173a1091e33ea25e626f27f8a27a68a9ad8ebb6ed9cd3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,routerboard-750gr3"
+            "mikrotik,rb750gr3"
+          ];
+          titles = [
+            {
+              model = "RouterBOARD 750Gr3";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+        mikrotik_routerboard-760igs = {
+          device_packages = [
+            "kmod-usb3"
+            "-uboot-envtools"
+            "kmod-sfp"
+            "-wpad-basic-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-760igs";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin";
+              sha256 = "3803b73244348764e41b57c256b25c3d662d07b80a0e4079f92267617b08b5c9";
+              sha256_unsigned = "c7134edd4cd7119022b54db8e543e8749164a013a43ecad3e7f2ff8a4c05f041";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-760igs-initramfs-kernel.bin";
+              sha256 = "e09ccc15558403aa8ca993a9c76a8cff8c66bd98fe0c9162181b765476768d79";
+              sha256_unsigned = "e09ccc15558403aa8ca993a9c76a8cff8c66bd98fe0c9162181b765476768d79";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,routerboard-760igs"
+          ];
+          titles = [
+            {
+              model = "RouterBOARD 760iGS";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+        mikrotik_routerboard-m11g = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-m11g";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-m11g-squashfs-sysupgrade.bin";
+              sha256 = "9e232ab8c038a530652a121313e31967f7c944f6cd9d5be96ff1faf643e701d2";
+              sha256_unsigned = "2529aaf9d4595106e7ecedce9de93e37fcd9cc64112ae9e306e8914d43441ac4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-m11g-initramfs-kernel.bin";
+              sha256 = "ddf856f26ee1ebc6a92b73e59a8ad993bed2fc0ac1b30b6fca5cb613e9ace371";
+              sha256_unsigned = "ddf856f26ee1ebc6a92b73e59a8ad993bed2fc0ac1b30b6fca5cb613e9ace371";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,routerboard-m11g"
+            "mikrotik,rbm11g"
+          ];
+          titles = [
+            {
+              model = "RouterBOARD M11G";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+        mikrotik_routerboard-m33g = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-m33g";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-m33g-initramfs-kernel.bin";
+              sha256 = "a57887a2bcc50775e9b2a3d13955439cb8fbb5d311c236ab4135aab54b1ea603";
+              sha256_unsigned = "a57887a2bcc50775e9b2a3d13955439cb8fbb5d311c236ab4135aab54b1ea603";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mikrotik_routerboard-m33g-squashfs-sysupgrade.bin";
+              sha256 = "cb9dac97873046cae969a7830814c6bd3a049e0fc8a864012dccbc82c549895a";
+              sha256_unsigned = "761a5ef72d5412c3141f9d5d94d8ec98fe82a97e2fb4387372675db5b014025c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mikrotik,routerboard-m33g"
+            "mikrotik,rbm33g"
+          ];
+          titles = [
+            {
+              model = "RouterBOARD M33G";
+              vendor = "MikroTik";
+            }
+          ];
+        };
+        mqmaker_witi = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-mt76x2"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mqmaker_witi";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mqmaker_witi-squashfs-sysupgrade.bin";
+              sha256 = "747dbbe9f5177a0f4faea7e22cde3b86a459e4c49a108677406f97464e03d55f";
+              sha256_unsigned = "5d06fedea6628f0645dbc4226aa089a37b4b234edf96a6b57ba0d5234352adf6";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mqmaker_witi-initramfs-kernel.bin";
+              sha256 = "4e71874181ad15eab4ec763676329d5418e64472346f9d38169bf188347ec7cb";
+              sha256_unsigned = "4e71874181ad15eab4ec763676329d5418e64472346f9d38169bf188347ec7cb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mqmaker,witi"
+            "witi"
+            "mqmaker,witi-256m"
+            "mqmaker,witi-512m"
+          ];
+          titles = [
+            {
+              model = "WiTi";
+              vendor = "MQmaker";
+            }
+          ];
+        };
+        mtc_wr1201 = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mtc_wr1201";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mtc_wr1201-squashfs-sysupgrade.bin";
+              sha256 = "a488a543e06f2e973e9b236c7906242ff39d520945ad4284feb5fe5459b9eed0";
+              sha256_unsigned = "fdf0508d6c0f3b508c9b5eee6245a16d9a55d64a30123d5efea4289ff7e7b106";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mtc_wr1201-initramfs-kernel.bin";
+              sha256 = "b6ea83abbd5defb6da32aa3b8d7a80f5779f453421e9ade9ce21bc7d3c8e47c4";
+              sha256_unsigned = "b6ea83abbd5defb6da32aa3b8d7a80f5779f453421e9ade9ce21bc7d3c8e47c4";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "mtc,wr1201"
+          ];
+          titles = [
+            {
+              model = "Wireless Router WR1201";
+              vendor = "MTC";
+            }
+          ];
+        };
+        mts_wg430223 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "uencrypt-mbedtls"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-mts_wg430223";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mts_wg430223-squashfs-factory.trx";
+              sha256 = "4d5952569035f15de51c7a4b58e377c6fed98da09e9e7cded5e63dffaa5c62b2";
+              sha256_unsigned = "4d5952569035f15de51c7a4b58e377c6fed98da09e9e7cded5e63dffaa5c62b2";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mts_wg430223-initramfs-kernel.bin";
+              sha256 = "e979a511ab6274b0fa69c82f6f24cf4a8d18e97f72b6a9da3cc94287134a1126";
+              sha256_unsigned = "e979a511ab6274b0fa69c82f6f24cf4a8d18e97f72b6a9da3cc94287134a1126";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-mts_wg430223-squashfs-sysupgrade.bin";
+              sha256 = "a2575535b024dbcd128f465e8c7b939b3533697d56138c371d45a4dd20272e82";
+              sha256_unsigned = "0795ea849343e67eded06837698474d3e0c6825aa1ce22292ae407033aa8c22f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "mts,wg430223"
+          ];
+          titles = [
+            {
+              model = "WG430223";
+              vendor = "MTS";
+            }
+          ];
+        };
+        netgear_eax12 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_eax12";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_eax12-squashfs-factory.img";
+              sha256 = "e1b7f7fba38bfd28afd955127f9f61c625292ff57ca79f5f8a0d98dda3fb5b11";
+              sha256_unsigned = "e1b7f7fba38bfd28afd955127f9f61c625292ff57ca79f5f8a0d98dda3fb5b11";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_eax12-initramfs-kernel.bin";
+              sha256 = "2226eb18157b7e2e6eebb4326d5b8ebf83ead0dba0236674d10f77f957b27139";
+              sha256_unsigned = "2226eb18157b7e2e6eebb4326d5b8ebf83ead0dba0236674d10f77f957b27139";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_eax12-squashfs-sysupgrade.bin";
+              sha256 = "d01517126753c98a892512ac68ce7144608757939214300de1c0b45e49b868ed";
+              sha256_unsigned = "9095263f968aeb575d3a625814af5ee8f7cbbfed61db75469a4dd4064595b738";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,eax12"
+          ];
+          titles = [
+            {
+              model = "EAX12";
+              vendor = "NETGEAR";
+            }
+            {
+              model = "EAX11";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+            {
+              model = "EAX15";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_ex6150 = {
+          device_packages = [
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_ex6150";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_ex6150-initramfs-kernel.bin";
+              sha256 = "5f36a30b4d063f00ebf8a4ecea5da71702da3c0df7da69c21bbd7e25ad694040";
+              sha256_unsigned = "5f36a30b4d063f00ebf8a4ecea5da71702da3c0df7da69c21bbd7e25ad694040";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_ex6150-squashfs-factory.chk";
+              sha256 = "9a1e37fc8d4eb19c8d622f943f8ef9bbbea7a864c1f416a94cd14936447b96db";
+              sha256_unsigned = "9a1e37fc8d4eb19c8d622f943f8ef9bbbea7a864c1f416a94cd14936447b96db";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_ex6150-squashfs-sysupgrade.bin";
+              sha256 = "0b1da963873172d3c56e79776acf5edf5916e8bcfe1b10743eb72353a26451e7";
+              sha256_unsigned = "755de84b46a87c18c342d548642287b57e99c617e59b9f7e14e17861db7e1dd4";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,ex6150"
+          ];
+          titles = [
+            {
+              model = "EX6150";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6220 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt76x2"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6220";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6220-squashfs-kernel.bin";
+              sha256 = "a61a0cffeba47953a3415841871468f8889a6e3b9d9ffa2532cf6ab142cb3b31";
+              sha256_unsigned = "a61a0cffeba47953a3415841871468f8889a6e3b9d9ffa2532cf6ab142cb3b31";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6220-squashfs-rootfs.bin";
+              sha256 = "ee01b6e8158f79b4f0e1f4898c4e76972f54c66dfaee7d3c5b7f5a736662da41";
+              sha256_unsigned = "ee01b6e8158f79b4f0e1f4898c4e76972f54c66dfaee7d3c5b7f5a736662da41";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6220-squashfs-factory.img";
+              sha256 = "ae1e80f328b1168f43559a5e36408a1edc8dc7e1ef0c8dcb2b1aed87ae4b17eb";
+              sha256_unsigned = "ae1e80f328b1168f43559a5e36408a1edc8dc7e1ef0c8dcb2b1aed87ae4b17eb";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6220-squashfs-sysupgrade.bin";
+              sha256 = "11b16e49c4d7503a2c321dabbd05628dfdcee143749ad1829cd23e1f09da6030";
+              sha256_unsigned = "6e7c12ce57e1ac239ff5d0e3a688deb90c5019228cdba06894a7cef6cea07a9b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6220-initramfs-kernel.bin";
+              sha256 = "beef6deceff9115ecfacd90b16d6f02252731c64ee2ff36e688466c4f769b9a2";
+              sha256_unsigned = "beef6deceff9115ecfacd90b16d6f02252731c64ee2ff36e688466c4f769b9a2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6220"
+            "r6220"
+          ];
+          titles = [
+            {
+              model = "R6220";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6260 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6260";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6260-squashfs-factory.img";
+              sha256 = "da98994e3b4acdf2b8beeb1f7120ab05dfc97379902a3950a72ad34ecfa04f09";
+              sha256_unsigned = "da98994e3b4acdf2b8beeb1f7120ab05dfc97379902a3950a72ad34ecfa04f09";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6260-squashfs-sysupgrade.bin";
+              sha256 = "ee58815fc6f6042921156451824227d7e62347f5c9ac2fc866905094363e79ef";
+              sha256_unsigned = "360b07f85ab8c3b44b8f6dfb0bba903448ca89ae6edb923dc39693f827f2546f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6260-initramfs-kernel.bin";
+              sha256 = "5e8aed1b81525f90de7df5875de36e37e6764232baeace6853bf5bd6befe600d";
+              sha256_unsigned = "5e8aed1b81525f90de7df5875de36e37e6764232baeace6853bf5bd6befe600d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6260-squashfs-kernel.bin";
+              sha256 = "fe9217198803ae65c5dac225f9703ea32ae19f49560e8ae0cd491fc1cc0b2305";
+              sha256_unsigned = "fe9217198803ae65c5dac225f9703ea32ae19f49560e8ae0cd491fc1cc0b2305";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6260-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6260"
+          ];
+          titles = [
+            {
+              model = "R6260";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6350 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6350";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6350-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6350-squashfs-sysupgrade.bin";
+              sha256 = "5fe4c137242a5996ac3ad97937d83a04a206c57dd2b0c5935f295df003f806c1";
+              sha256_unsigned = "9ced97fdd689d01b55b48468e605aa1575db0dff47a0058bf46e172f8fcca5fa";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6350-squashfs-factory.img";
+              sha256 = "4be45f7905488f8cc4bda0a2fde918e7cc721e9135c23062e51b11d1b9b6fb00";
+              sha256_unsigned = "4be45f7905488f8cc4bda0a2fde918e7cc721e9135c23062e51b11d1b9b6fb00";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6350-initramfs-kernel.bin";
+              sha256 = "c958122ab311cacf68bd37be0fc6b79fa5ec528bf51e435581e7805d7aebc111";
+              sha256_unsigned = "c958122ab311cacf68bd37be0fc6b79fa5ec528bf51e435581e7805d7aebc111";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6350-squashfs-kernel.bin";
+              sha256 = "b8c177e94649dc87cb0fa13165a389549f7b7894494ffdedee8c60ee979b94da";
+              sha256_unsigned = "b8c177e94649dc87cb0fa13165a389549f7b7894494ffdedee8c60ee979b94da";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6350"
+          ];
+          titles = [
+            {
+              model = "R6350";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6700-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6700-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6700-v2-squashfs-factory.img";
+              sha256 = "cd7624f39592901353c29445d3e3f7bcc1242263bdc35debbd7208c7ecb4c089";
+              sha256_unsigned = "cd7624f39592901353c29445d3e3f7bcc1242263bdc35debbd7208c7ecb4c089";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6700-v2-squashfs-sysupgrade.bin";
+              sha256 = "8e67b8d321fb08cb16a3b975aac88997ae6711af17f4c54a5727b628ae87d1d3";
+              sha256_unsigned = "27bd50952bc9b5316ae6a000efc5baaed461d0541ebb899c3dc00fe35b8aeef1";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6700-v2-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6700-v2-squashfs-kernel.bin";
+              sha256 = "f0655898aba90594e346a3a458ed6dabe26b68a2bf3ccc61c8da6d9311c89937";
+              sha256_unsigned = "f0655898aba90594e346a3a458ed6dabe26b68a2bf3ccc61c8da6d9311c89937";
+              type = "kernel";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6700-v2-initramfs-kernel.bin";
+              sha256 = "715b49bab4561fd830ca6e2a6eba15edc38018c4878c8a9a65cc2661f49cf451";
+              sha256_unsigned = "715b49bab4561fd830ca6e2a6eba15edc38018c4878c8a9a65cc2661f49cf451";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6700-v2"
+          ];
+          titles = [
+            {
+              model = "R6700";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+            {
+              model = "Nighthawk AC2400";
+              variant = "v1";
+              vendor = "NETGEAR";
+            }
+            {
+              model = "Nighthawk AC2100";
+              variant = "v1";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6800 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6800";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6800-squashfs-sysupgrade.bin";
+              sha256 = "a81b61f1f91929844f64bd2789e871d73ab4055ff9b127ce87e7a494969b05d4";
+              sha256_unsigned = "2c136a5be8483e12cc22b83a8d07b37772687ce3b4aeb0b1e120144feb2c6a71";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6800-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6800-initramfs-kernel.bin";
+              sha256 = "7257a6d6ebb52969ec8588d249b069d9a039f843b78ed497596b8033737aa55c";
+              sha256_unsigned = "7257a6d6ebb52969ec8588d249b069d9a039f843b78ed497596b8033737aa55c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6800-squashfs-factory.img";
+              sha256 = "597a2aac229b214f03fa63ab550124a5f5cea354f9d1306d72d8e4bc103b1caf";
+              sha256_unsigned = "597a2aac229b214f03fa63ab550124a5f5cea354f9d1306d72d8e4bc103b1caf";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6800-squashfs-kernel.bin";
+              sha256 = "5f9e985484ee5c087341e58e13bde78d94a2fa4832b3fa57b2d3bd918bf1974a";
+              sha256_unsigned = "5f9e985484ee5c087341e58e13bde78d94a2fa4832b3fa57b2d3bd918bf1974a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6800"
+          ];
+          titles = [
+            {
+              model = "R6800";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6850 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6850";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6850-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6850-squashfs-sysupgrade.bin";
+              sha256 = "ddc11770b245eb0ce742e16440700d271121ae57feb052b0b7594dc2d57a603e";
+              sha256_unsigned = "eed5c37b75c8bac21546307add20c13ba9c4df1af63a7ee47c95f0bf54435d17";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6850-initramfs-kernel.bin";
+              sha256 = "74a42c2cf6b998efcfbada69119855c81be4601a9d0875ab429631dc0a191882";
+              sha256_unsigned = "74a42c2cf6b998efcfbada69119855c81be4601a9d0875ab429631dc0a191882";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6850-squashfs-factory.img";
+              sha256 = "93a13ddf8ed91ad7aea7782364a2b6b1b870e1a1be72ee16e50b325ea1b64620";
+              sha256_unsigned = "93a13ddf8ed91ad7aea7782364a2b6b1b870e1a1be72ee16e50b325ea1b64620";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6850-squashfs-kernel.bin";
+              sha256 = "1acaf5b820516520d9a3e5abe827c4609f97838859bd8dbcba35250adf926d89";
+              sha256_unsigned = "1acaf5b820516520d9a3e5abe827c4609f97838859bd8dbcba35250adf926d89";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6850"
+          ];
+          titles = [
+            {
+              model = "R6850";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r6900-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r6900-v2";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6900-v2-squashfs-sysupgrade.bin";
+              sha256 = "ffb0f8e01ca47e793a3a930c5dec81ca6179e179b1a5d0c9d585946ab2365753";
+              sha256_unsigned = "348dd6a0282ae79c06a687f45b1b2b4fa9e474543b51bd96cfbaf7f90893f709";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6900-v2-initramfs-kernel.bin";
+              sha256 = "a713e4351f8859a2aec4c1d73417c94a2af37de37454df8ebef3d18dfd8a5a2e";
+              sha256_unsigned = "a713e4351f8859a2aec4c1d73417c94a2af37de37454df8ebef3d18dfd8a5a2e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6900-v2-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6900-v2-squashfs-kernel.bin";
+              sha256 = "f63017b519024b9b934dbc32173548a68cb45e39cda1f3f7063199ad4aa79a53";
+              sha256_unsigned = "f63017b519024b9b934dbc32173548a68cb45e39cda1f3f7063199ad4aa79a53";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r6900-v2-squashfs-factory.img";
+              sha256 = "4cf5de3821c13528fb51446660effb1cd9bb1d9858f04f779ad3a4a5f760b1df";
+              sha256_unsigned = "4cf5de3821c13528fb51446660effb1cd9bb1d9858f04f779ad3a4a5f760b1df";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,r6900-v2"
+          ];
+          titles = [
+            {
+              model = "R6900";
+              variant = "v2";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r7200 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r7200";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7200-squashfs-sysupgrade.bin";
+              sha256 = "c019054dcbc3ef5e0ad4e891cee862bd476911620b52f1c75f9dc5b2c80c01d7";
+              sha256_unsigned = "0dce4bfd7e8322e7381bb49b23872d58a1f982d2d36e920748cd0b7d2864e382";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7200-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7200-squashfs-kernel.bin";
+              sha256 = "04aa5053d213b4f2350cd02a66965272e8cf346fbd5ca7f2930742bd82fe313e";
+              sha256_unsigned = "04aa5053d213b4f2350cd02a66965272e8cf346fbd5ca7f2930742bd82fe313e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7200-squashfs-factory.img";
+              sha256 = "1d9c69d18f0da6f49af834f2842b8128a27c6d8705d8928d9f840e53872d511d";
+              sha256_unsigned = "1d9c69d18f0da6f49af834f2842b8128a27c6d8705d8928d9f840e53872d511d";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7200-initramfs-kernel.bin";
+              sha256 = "ae7ebd4acd43a246c325febe8cb3ba7cf52eee91c6afaf630eb56790fd74bcfa";
+              sha256_unsigned = "ae7ebd4acd43a246c325febe8cb3ba7cf52eee91c6afaf630eb56790fd74bcfa";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r7200"
+          ];
+          titles = [
+            {
+              model = "R7200";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_r7450 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_r7450";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7450-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7450-squashfs-kernel.bin";
+              sha256 = "95dcb685eab25f5dc4bb525e1f9a658c13edea45c2f5cecda621341091d25ea3";
+              sha256_unsigned = "95dcb685eab25f5dc4bb525e1f9a658c13edea45c2f5cecda621341091d25ea3";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7450-squashfs-factory.img";
+              sha256 = "1fd4efb3880197bb15711eed826885ce4733fa6c8f8c27e691593e2c1cedfa6f";
+              sha256_unsigned = "1fd4efb3880197bb15711eed826885ce4733fa6c8f8c27e691593e2c1cedfa6f";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7450-squashfs-sysupgrade.bin";
+              sha256 = "7ec79995ebd6a0247291390d358d90ac77815e7d83281d13df8c1eeec93b1ab0";
+              sha256_unsigned = "fc40cbd0c9c26892897ecd7a707f1f7c2e9c6596514cad6d04b562a59a790902";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_r7450-initramfs-kernel.bin";
+              sha256 = "8af1eb7a4ee10d7606e94cfd85abfba29200cda56e19c62cb2bc1c25474a3191";
+              sha256_unsigned = "8af1eb7a4ee10d7606e94cfd85abfba29200cda56e19c62cb2bc1c25474a3191";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "netgear,r7450"
+          ];
+          titles = [
+            {
+              model = "R7450";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wac104 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt76x2"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_wac104";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac104-squashfs-kernel.bin";
+              sha256 = "dd23d231f60d30b1aa95f391be3d34fee90c4707d5ab3a4f9bf42c976de10d0f";
+              sha256_unsigned = "dd23d231f60d30b1aa95f391be3d34fee90c4707d5ab3a4f9bf42c976de10d0f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac104-squashfs-rootfs.bin";
+              sha256 = "ee01b6e8158f79b4f0e1f4898c4e76972f54c66dfaee7d3c5b7f5a736662da41";
+              sha256_unsigned = "ee01b6e8158f79b4f0e1f4898c4e76972f54c66dfaee7d3c5b7f5a736662da41";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac104-squashfs-sysupgrade.bin";
+              sha256 = "6b74ffe3def38568c9f76bff9c62610724bf391010a7ab6a5328af15c9c97a9a";
+              sha256_unsigned = "efaa4b1f5960c6662738f0331c5d5aa9a09ef12621581b8899d4a934e7b9d10d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac104-initramfs-kernel.bin";
+              sha256 = "a1bf2f1f1991738a8860b331fffd79eda2e0e8c7ebd9ba4d553037a8d72f3efc";
+              sha256_unsigned = "a1bf2f1f1991738a8860b331fffd79eda2e0e8c7ebd9ba4d553037a8d72f3efc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac104-squashfs-factory.img";
+              sha256 = "827e1c52396eb793bee3e4309459f7a8d89f6d395111ff7bdf7e52bc2ef0df1e";
+              sha256_unsigned = "827e1c52396eb793bee3e4309459f7a8d89f6d395111ff7bdf7e52bc2ef0df1e";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,wac104"
+          ];
+          titles = [
+            {
+              model = "WAC104";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wac124 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_wac124";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac124-initramfs-kernel.bin";
+              sha256 = "d23d06e19d01e1618515a761492731de89930ec675cacc1bf3c690fa2581c168";
+              sha256_unsigned = "d23d06e19d01e1618515a761492731de89930ec675cacc1bf3c690fa2581c168";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac124-squashfs-rootfs.bin";
+              sha256 = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              sha256_unsigned = "f6dfb079d9ae31dbedfc06ffa3081b506eabf81b51a818e7b1d4156ef9dfa4b9";
+              type = "rootfs";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac124-squashfs-kernel.bin";
+              sha256 = "15e8510418b1634509a04e3a6a51a35151a08da76f4ed6af76a58a2e3827a49d";
+              sha256_unsigned = "15e8510418b1634509a04e3a6a51a35151a08da76f4ed6af76a58a2e3827a49d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac124-squashfs-sysupgrade.bin";
+              sha256 = "685fe1a32b39a093dbfa94a851cd96b1d51814f4e7a919fd934af0a878377cfc";
+              sha256_unsigned = "4adc5858ed22a730c4e5ad072a050b004eed3fb6fc2b494e8a6c413dc969a366";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wac124-squashfs-factory.img";
+              sha256 = "5312d947a6c64afb08dc1af5591a82e8b70c6050b3e08fb5d8c8b5826567e4e0";
+              sha256_unsigned = "5312d947a6c64afb08dc1af5591a82e8b70c6050b3e08fb5d8c8b5826567e4e0";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netgear,wac124"
+          ];
+          titles = [
+            {
+              model = "WAC124";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wax202 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_wax202";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wax202-initramfs-kernel.bin";
+              sha256 = "7d2a4e108fbfb55dc063858ab4ec87eb0ff890e7397371b51756ac9a26cc788a";
+              sha256_unsigned = "7d2a4e108fbfb55dc063858ab4ec87eb0ff890e7397371b51756ac9a26cc788a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wax202-squashfs-factory.img";
+              sha256 = "12b348e8b333db151675d6e370b0c67c3e1889bb910a32e69d5ff23aa52192cc";
+              sha256_unsigned = "12b348e8b333db151675d6e370b0c67c3e1889bb910a32e69d5ff23aa52192cc";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wax202-squashfs-sysupgrade.bin";
+              sha256 = "cd4b180a531c2996696e5200c65c00e622c91f58200543cf480e075b174ff75e";
+              sha256_unsigned = "05c3eb064163d521005184493dd2de505f866115f3248f7555258e512e9d7855";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wax202"
+          ];
+          titles = [
+            {
+              model = "WAX202";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netgear_wndr3700-v5 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netgear_wndr3700-v5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wndr3700-v5-squashfs-factory.img";
+              sha256 = "b3f613441325fecba80afc877dcf12f7d05d69ffa685b056f711b8ad994ca46f";
+              sha256_unsigned = "b3f613441325fecba80afc877dcf12f7d05d69ffa685b056f711b8ad994ca46f";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wndr3700-v5-initramfs-kernel.bin";
+              sha256 = "3ca140b0c62aa983c75378e2a62a5378a620d13d959f5d4b401ec1ff60f7c0e1";
+              sha256_unsigned = "3ca140b0c62aa983c75378e2a62a5378a620d13d959f5d4b401ec1ff60f7c0e1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netgear_wndr3700-v5-squashfs-sysupgrade.bin";
+              sha256 = "6365db28de913a5d3f24599367ccad2c812394767c6e74bd7ccbc41e090a4419";
+              sha256_unsigned = "72484c88f5bfa2986a1c804a1718beb505a173830a073e24bcf8507cde502855";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "netgear,wndr3700-v5"
+            "wndr3700v5"
+          ];
+          titles = [
+            {
+              model = "WNDR3700";
+              variant = "v5";
+              vendor = "NETGEAR";
+            }
+          ];
+        };
+        netis_n6 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netis_n6";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netis_n6-initramfs-kernel.bin";
+              sha256 = "7a981a2654b347cc3c286433f32f308ad880447e1dfe67718c889e20e5f4bf1d";
+              sha256_unsigned = "7a981a2654b347cc3c286433f32f308ad880447e1dfe67718c889e20e5f4bf1d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netis_n6-squashfs-sysupgrade.bin";
+              sha256 = "84171db8d5ce47af428597e8a4e7c301588e68c4c3b74ca150c834d1e3a91be2";
+              sha256_unsigned = "ede4a9f4a0f73d759b4cfd72ac2c1202c08cd30315c75b44942d8d44e33d1249";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netis_n6-squashfs-factory.bin";
+              sha256 = "ffb01ff6332191bf94261e75dda0f141b06f48d1353ebf3bcb2151b0cc4853fb";
+              sha256_unsigned = "ffb01ff6332191bf94261e75dda0f141b06f48d1353ebf3bcb2151b0cc4853fb";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netis,n6"
+          ];
+          titles = [
+            {
+              model = "N6";
+              vendor = "netis";
+            }
+          ];
+        };
+        netis_wf2881 = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-netis_wf2881";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netis_wf2881-initramfs-kernel.bin";
+              sha256 = "bd4fb6e15c39f9857d53c69b49253f6bcbd60afd5f5db45c6be9d3c009f5f7fe";
+              sha256_unsigned = "bd4fb6e15c39f9857d53c69b49253f6bcbd60afd5f5db45c6be9d3c009f5f7fe";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netis_wf2881-squashfs-sysupgrade.bin";
+              sha256 = "91ae0173fd7154e75b3b8e89ec07f36a216c70769881acff35b1d0165a5b0c2b";
+              sha256_unsigned = "2541ee3fc1e94ee22f44d2356af59b6a1284ee92825cf427d1e2572eb0877de2";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-netis_wf2881-squashfs-factory.bin";
+              sha256 = "21e21eab506047b7761ca48fc3d39ab990b95c8b1e4fec561c3f7c60785ab564";
+              sha256_unsigned = "21e21eab506047b7761ca48fc3d39ab990b95c8b1e4fec561c3f7c60785ab564";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "netis,wf2881"
+          ];
+          titles = [
+            {
+              model = "WF2881";
+              vendor = "NETIS";
+            }
+          ];
+        };
+        oraybox_x3a = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-oraybox_x3a";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-oraybox_x3a-initramfs-kernel.bin";
+              sha256 = "d1f7edc2d37e7543353bd767f44dd3035cbbbd1f1d7f22633bd44518a5566abf";
+              sha256_unsigned = "d1f7edc2d37e7543353bd767f44dd3035cbbbd1f1d7f22633bd44518a5566abf";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-oraybox_x3a-squashfs-sysupgrade.bin";
+              sha256 = "926d69c47d31e2c14c9d2af9d6b0189a91b78919e53cfe7b1af553031a687159";
+              sha256_unsigned = "7f9e8184b383e71e3f05c2274e056c79af4644e6844ff29c8402ed5deedbc2cd";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "oraybox,x3a"
+          ];
+          titles = [
+            {
+              model = "X3A";
+              vendor = "OrayBox";
+            }
+          ];
+        };
+        phicomm_k2p = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-phicomm_k2p";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-phicomm_k2p-squashfs-sysupgrade.bin";
+              sha256 = "50cdefa1059075ba59b0771760fd5e3cef13a1cbe2c450c971407fff0e1b5aa0";
+              sha256_unsigned = "f86fbcdfe0c667b22ce97463d0548e9a325886063b90a6298aede9a2ff47295b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-phicomm_k2p-initramfs-kernel.bin";
+              sha256 = "abd9dd622d23958d15f7707355014ebd880a160abf4616a06147c0255ec18a2b";
+              sha256_unsigned = "abd9dd622d23958d15f7707355014ebd880a160abf4616a06147c0255ec18a2b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "phicomm,k2p"
+            "k2p"
+          ];
+          titles = [
+            {
+              model = "K2P";
+              vendor = "Phicomm";
+            }
+            {
+              model = "KE 2P";
+              vendor = "Phicomm";
+            }
+          ];
+        };
+        planex_vr500 = {
+          device_packages = [
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-planex_vr500";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-planex_vr500-initramfs-kernel.bin";
+              sha256 = "e60a007474e9840cd824234c24af6b105c2562222bedf88d81daf5e52ee3a2f3";
+              sha256_unsigned = "e60a007474e9840cd824234c24af6b105c2562222bedf88d81daf5e52ee3a2f3";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-planex_vr500-squashfs-sysupgrade.bin";
+              sha256 = "4823013bcfcf94e27f45c8488e9fa570cb7f04239f3d751cd435575b83bcbd82";
+              sha256_unsigned = "497b7d23f21086c5c044ccfa6300b803c99976a05b7e3f2a2bd01c3695fc6e5c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "planex,vr500"
+            "vr500"
+          ];
+          titles = [
+            {
+              model = "VR500";
+              vendor = "Planex";
+            }
+          ];
+        };
+        raisecom_msg1500-x-00 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-raisecom_msg1500-x-00";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-raisecom_msg1500-x-00-squashfs-sysupgrade.bin";
+              sha256 = "7caa47da73840227ade76562db8b5d015746e7e66c077afda9d7af2b531b2c5c";
+              sha256_unsigned = "c4ff4f8ae7820b473e3458b07619bd53be102cebf48867d6483a075cf8a30373";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-raisecom_msg1500-x-00-initramfs-kernel.bin";
+              sha256 = "8571445f6204ca5cfa702a8a3ae735e0075d9351d47bc6370c86a4f158e58c6c";
+              sha256_unsigned = "8571445f6204ca5cfa702a8a3ae735e0075d9351d47bc6370c86a4f158e58c6c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "raisecom,msg1500-x-00"
+          ];
+          titles = [
+            {
+              model = "MSG1500";
+              variant = "X.00";
+              vendor = "RAISECOM";
+            }
+            {
+              model = "A-040W-Q";
+              vendor = "Nokia";
+            }
+          ];
+        };
+        renkforce_ws-wn530hp3-a = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-renkforce_ws-wn530hp3-a";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-renkforce_ws-wn530hp3-a-squashfs-sysupgrade.bin";
+              sha256 = "9baf26ef259de943a6c94d09f66ab1116cd147b6bd65ad31d4d6100a57af233b";
+              sha256_unsigned = "3c00561fe6e7e98dee9406e3623080328f95780e7ff816ec47fba30561be4d0a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-renkforce_ws-wn530hp3-a-initramfs-kernel.bin";
+              sha256 = "9ea0f6b9a3c5bd434da6daa1f11b2363173f611265894d9b913ebf70ef077061";
+              sha256_unsigned = "9ea0f6b9a3c5bd434da6daa1f11b2363173f611265894d9b913ebf70ef077061";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "renkforce,ws-wn530hp3-a"
+          ];
+          titles = [
+            {
+              model = "WS-WN530HP3-A";
+              vendor = "Renkforce";
+            }
+          ];
+        };
+        rostelecom_rt-fe-1a = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-fe-1a";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-fe-1a-initramfs-kernel.bin";
+              sha256 = "60701f0274eb2446ce78a12110ebf48f103c4fb08a08f8be346362aaeb37b12a";
+              sha256_unsigned = "60701f0274eb2446ce78a12110ebf48f103c4fb08a08f8be346362aaeb37b12a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-fe-1a-squashfs-sysupgrade.bin";
+              sha256 = "ecd45920f92b428d1bd9895fad755f42b0bf644fa5402d7ecaae7d572f78bbf2";
+              sha256_unsigned = "af7e27892d33cfcccb35b04a530c2b9fbd0be05fb1c113bbb0174051ed1d7087";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-fe-1a-squashfs-factory.img";
+              sha256 = "5de1eff9affb8d5f7095f1c29cd690a5d849c6032b0a93d4c1526a22d406ac29";
+              sha256_unsigned = "5de1eff9affb8d5f7095f1c29cd690a5d849c6032b0a93d4c1526a22d406ac29";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "rostelecom,rt-fe-1a"
+          ];
+          titles = [
+            {
+              model = "RT-FE-1A";
+              vendor = "Rostelecom";
+            }
+            {
+              model = "RT-FE-1A";
+              vendor = "Sercomm";
+            }
+          ];
+        };
+        rostelecom_rt-sf-1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-sf-1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-sf-1-initramfs-kernel.bin";
+              sha256 = "4bf3fb9e569a7760eb5b4b1b823e28ed79923d68f038635e50f5089082d19e99";
+              sha256_unsigned = "4bf3fb9e569a7760eb5b4b1b823e28ed79923d68f038635e50f5089082d19e99";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-sf-1-squashfs-sysupgrade.bin";
+              sha256 = "00e2bd405722aea111f2bffdea4741351e14c803012f871049c850e1c7d378ee";
+              sha256_unsigned = "65ed53f600487d5b3a15d0338156cf1a6c7d94fb4d00e3bb85d08c3a59b23682";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-rostelecom_rt-sf-1-squashfs-factory.img";
+              sha256 = "22df6a468085bce70f5e562cff9a71719d7830473319ec7ecaa5f572071096e4";
+              sha256_unsigned = "22df6a468085bce70f5e562cff9a71719d7830473319ec7ecaa5f572071096e4";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "rostelecom,rt-sf-1"
+          ];
+          titles = [
+            {
+              model = "RT-SF-1";
+              vendor = "Rostelecom";
+            }
+          ];
+        };
+        samknows_whitebox-v8 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-samknows_whitebox-v8";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-samknows_whitebox-v8-initramfs-kernel.bin";
+              sha256 = "9335954f6414e7150e439265682c6cf547cf14e9e798037c33f9791822580f42";
+              sha256_unsigned = "9335954f6414e7150e439265682c6cf547cf14e9e798037c33f9791822580f42";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-samknows_whitebox-v8-squashfs-sysupgrade.bin";
+              sha256 = "b590bc1bd070049787626a9b2b97f249cdefc8e9c4c9e6c308957c027703ceb6";
+              sha256_unsigned = "77c645acba5cbe0ccb4f0b1f1f92040e9cacbee6b65825dd34e8dd8f31898dac";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "samknows,whitebox-v8"
+            "sk-wb8"
+          ];
+          titles = [
+            {
+              model = "Whitebox 8";
+              vendor = "SamKnows";
+            }
+          ];
+        };
+        sercomm_na502 = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-mt7603"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-sercomm_na502";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-sercomm_na502-squashfs-sysupgrade.bin";
+              sha256 = "54542f4ba96c01a324645382f2316209481abf4a11a85e004b1eceb4def0a784";
+              sha256_unsigned = "546483cac06180598e06b290ce222065d3d8f82b86ab16a3c435fcd69b861d15";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-sercomm_na502-initramfs-kernel.bin";
+              sha256 = "015e306cb307b55fa2a4e3a0ccfa5efdf950767a546c30b78e4cb93ba395db05";
+              sha256_unsigned = "015e306cb307b55fa2a4e3a0ccfa5efdf950767a546c30b78e4cb93ba395db05";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "sercomm,na502"
+          ];
+          titles = [
+            {
+              model = "NA502";
+              vendor = "SERCOMM";
+            }
+          ];
+        };
+        sercomm_na502s = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-serial"
+            "kmod-usb-serial-xr_usb_serial_common"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-sercomm_na502s";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-sercomm_na502s-initramfs-kernel.bin";
+              sha256 = "8983863c9b2d3614c21848583c51bf97f81827c2e32fd3fdcd3337fecddd0bcc";
+              sha256_unsigned = "8983863c9b2d3614c21848583c51bf97f81827c2e32fd3fdcd3337fecddd0bcc";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-sercomm_na502s-squashfs-sysupgrade.bin";
+              sha256 = "002d1ffe242e06c03d39667b3fa83d7fe8a94912001b1cefdc0fea3828a520fb";
+              sha256_unsigned = "dac68e485ea132291558b79aa90e4700dc3b3fb9f389821e80c4fb2a00526658";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "sercomm,na502s"
+          ];
+          titles = [
+            {
+              model = "NA502S";
+              vendor = "SERCOMM";
+            }
+          ];
+        };
+        sim_simax1800t = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-sim_simax1800t";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-sim_simax1800t-initramfs-kernel.bin";
+              sha256 = "13b2fe1653be37eea0eecd065accf8db671f0249499eb82401b360c0ac4b379e";
+              sha256_unsigned = "13b2fe1653be37eea0eecd065accf8db671f0249499eb82401b360c0ac4b379e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-sim_simax1800t-squashfs-sysupgrade.bin";
+              sha256 = "f3da921db527581e638031404be5cfa348502d3233065834ef81cb935ee68c12";
+              sha256_unsigned = "73e4ade8d7e70bd3314655b51f1c6f18e40a2c138462174e6cb6705ec2e64b3e";
+              type = "sysupgrade";
+            }
+            {
+              name = "openwrt-23.05.6-ramips-mt7621-sim_simax1800t-initramfs-factory.bin";
+              sha256 = "8af2891783ed4f2452eaa131cc9318965a5019c181551cbe12e62a3118e8ad24";
+              sha256_unsigned = "8af2891783ed4f2452eaa131cc9318965a5019c181551cbe12e62a3118e8ad24";
+              type = "initramfs-factory.bin";
+            }
+          ];
+          supported_devices = [
+            "sim,simax1800t"
+          ];
+          titles = [
+            {
+              model = "SIMAX1800T";
+              vendor = "SIM";
+            }
+          ];
+        };
+        snr_snr-cpe-me1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x0e"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me1-initramfs-kernel.bin";
+              sha256 = "392f24f0c7423c515c5391848818f9654b72508f01674842a2b43a5cd34456f8";
+              sha256_unsigned = "392f24f0c7423c515c5391848818f9654b72508f01674842a2b43a5cd34456f8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me1-squashfs-sysupgrade.bin";
+              sha256 = "91dc76e067b6d0d626ede3629a4cb43b4b34d344fb6da696d0d0f2948e05f527";
+              sha256_unsigned = "0f7de914b94af9e31a76f81c7e65344e7240c7123092bb3cee820874eec45684";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "snr,snr-cpe-me1"
+          ];
+          titles = [
+            {
+              model = "SNR-CPE-ME1";
+              vendor = "SNR";
+            }
+          ];
+        };
+        snr_snr-cpe-me2-lite = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me2-lite";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me2-lite-initramfs-kernel.bin";
+              sha256 = "d495a8e8289b373db144fa0e8e57e982fff38a8d3e3c7ab64afb6f116992e3ce";
+              sha256_unsigned = "d495a8e8289b373db144fa0e8e57e982fff38a8d3e3c7ab64afb6f116992e3ce";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me2-lite-squashfs-sysupgrade.bin";
+              sha256 = "9d4b024a4ec321e7123f07568313fa9c45635e43a54892af7eaf9a0c4d500f11";
+              sha256_unsigned = "bf642f14c9aa3df75206f4b185649110d7a0a3d092620c8cbb55f5ca36594a13";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "snr,snr-cpe-me2-lite"
+          ];
+          titles = [
+            {
+              model = "SNR-CPE-ME2-Lite";
+              vendor = "SNR";
+            }
+          ];
+        };
+        snr_snr-cpe-me2-sfp = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-sfp"
+            "kmod-usb-ledtrig-usbport"
+            "uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me2-sfp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me2-sfp-squashfs-sysupgrade.bin";
+              sha256 = "8c064c20910f064bf0b6a042e5f45d2b9574aff9498b7a75dcd88f2a92ad38ab";
+              sha256_unsigned = "c378ea1e4ec624a5bbca75b98da8a76ef323dc3782f7c6f2b95a51af9615134b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-snr_snr-cpe-me2-sfp-initramfs-kernel.bin";
+              sha256 = "b0995f676fab8e971230b224f32213bb2e221fda3b0780da4c8858ab46f7521f";
+              sha256_unsigned = "b0995f676fab8e971230b224f32213bb2e221fda3b0780da4c8858ab46f7521f";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "snr,snr-cpe-me2-sfp"
+          ];
+          titles = [
+            {
+              model = "SNR-CPE-ME2-SFP";
+              vendor = "SNR";
+            }
+          ];
+        };
+        storylink_sap-g3200u3 = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-storylink_sap-g3200u3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-storylink_sap-g3200u3-initramfs-kernel.bin";
+              sha256 = "72c041042065903dc16af2898b97f792a0fd06e8ece323168f08a16eb8a009df";
+              sha256_unsigned = "72c041042065903dc16af2898b97f792a0fd06e8ece323168f08a16eb8a009df";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-storylink_sap-g3200u3-squashfs-sysupgrade.bin";
+              sha256 = "4924820d002db5ff7d723c6bf4d88b8d36eafc0ac67d5a59212c237b2dde5398";
+              sha256_unsigned = "ee0f75feed5d5d719b526febd24be33c790c25f76a2339fa8c25194b2b33470a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "storylink,sap-g3200u3"
+            "sap-g3200u3"
+          ];
+          titles = [
+            {
+              model = "SAP-G3200U3";
+              vendor = "STORYLiNK";
+            }
+          ];
+        };
+        telco-electronics_x1 = {
+          device_packages = [
+            "kmod-usb3"
+            "kmod-mt76"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-telco-electronics_x1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-telco-electronics_x1-squashfs-sysupgrade.bin";
+              sha256 = "cfc93342d29f3f97e053bb4a0c146a8194840dd4f706a0a40b662dd9a6a8b272";
+              sha256_unsigned = "a782e702035cf88e729ce8f16e67f43cef39ca8dc8199c89372f874752f4164f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-telco-electronics_x1-initramfs-kernel.bin";
+              sha256 = "b938bf3d616c9b2463111bd3d8619d07d88f3da47c208598cb6dbe84c13d12b2";
+              sha256_unsigned = "b938bf3d616c9b2463111bd3d8619d07d88f3da47c208598cb6dbe84c13d12b2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "telco-electronics,x1"
+          ];
+          titles = [
+            {
+              model = "X1";
+              vendor = "Telco Electronics";
+            }
+          ];
+        };
+        tenbay_t-mb5eu-v01 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tenbay_t-mb5eu-v01";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tenbay_t-mb5eu-v01-initramfs-kernel.bin";
+              sha256 = "22f1c47ba70195c54753bb7b5b6975da0a3e3071a08cf8d0e032f98644b74257";
+              sha256_unsigned = "22f1c47ba70195c54753bb7b5b6975da0a3e3071a08cf8d0e032f98644b74257";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tenbay_t-mb5eu-v01-squashfs-sysupgrade.bin";
+              sha256 = "5a21e947e3d5e629ff5933c1ee262c7b7f58491477637e03c09122157ad266e4";
+              sha256_unsigned = "8b55fd9f3476c6d07d69aee599e15af17d97a1c463d5f922dd33811fe03bee9a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tenbay,t-mb5eu-v01"
+            "mt7621-dm2-t-mb5eu-v01-nor"
+          ];
+          titles = [
+            {
+              model = "T-MB5EU-V01";
+              vendor = "Tenbay";
+            }
+          ];
+        };
+        thunder_timecloud = {
+          device_packages = [
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-thunder_timecloud";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-thunder_timecloud-squashfs-sysupgrade.bin";
+              sha256 = "bbfad29d600ff5a09f9da2cb43964809eb7207a8c4f6f706cfb3c3849d9bcab8";
+              sha256_unsigned = "02e01b76bfaafb1b22047a197f4d2addfce8d86ae90676671c9ec9d63c7673ba";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-thunder_timecloud-initramfs-kernel.bin";
+              sha256 = "88f6fac517f48f7f2b86e0968ef409a5405eaccb5c7f5dcdd2741ed307c1d245";
+              sha256_unsigned = "88f6fac517f48f7f2b86e0968ef409a5405eaccb5c7f5dcdd2741ed307c1d245";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "thunder,timecloud"
+            "timecloud"
+          ];
+          titles = [
+            {
+              model = "Timecloud";
+              vendor = "Thunder";
+            }
+          ];
+        };
+        totolink_a7000r = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-totolink_a7000r";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-totolink_a7000r-initramfs-kernel.bin";
+              sha256 = "4b80631f31b1311a09ab610c24111d62d3e92db524bff31bfeb53e47e9f8046f";
+              sha256_unsigned = "4b80631f31b1311a09ab610c24111d62d3e92db524bff31bfeb53e47e9f8046f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-totolink_a7000r-squashfs-sysupgrade.bin";
+              sha256 = "5f8ab7601ca8333966a78e9626127a200ca19ef7e616ba6644719b6d02c0c11e";
+              sha256_unsigned = "830131f42e3ab7941e6a660e064d775ccfdaaed4c5022eda1d45ea4238aa31fb";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "totolink,a7000r"
+          ];
+          titles = [
+            {
+              model = "A7000R";
+              vendor = "TOTOLINK";
+            }
+          ];
+        };
+        totolink_x5000r = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-totolink_x5000r";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-totolink_x5000r-initramfs-kernel.bin";
+              sha256 = "693b78a2058349c3fb46c3643f39bbfeeb571df5547108734b5dc26ba67afa56";
+              sha256_unsigned = "693b78a2058349c3fb46c3643f39bbfeeb571df5547108734b5dc26ba67afa56";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-totolink_x5000r-squashfs-sysupgrade.bin";
+              sha256 = "931cb6f8abf00dfbce6678d78acef86d36b707a59de65c0d7b245f440218aee2";
+              sha256_unsigned = "372b665fd6ae44f5ff6f610e5617a6b71188144e6fce1ceb0cf9dac743920870";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "totolink,x5000r"
+          ];
+          titles = [
+            {
+              model = "X5000R";
+              vendor = "TOTOLINK";
+            }
+          ];
+        };
+        tozed_zlt-s12-pro = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "comgt-ncm"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tozed_zlt-s12-pro";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tozed_zlt-s12-pro-squashfs-sysupgrade.bin";
+              sha256 = "e5f8f25910efc757e170737f2c1e7118f8e48d5903ca084a8879cdd7d9841694";
+              sha256_unsigned = "cbce07caa0f0d8e6724520bc1ff2d0475c12713f6db391b101e3a1c2cd7d4a69";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tozed_zlt-s12-pro-initramfs-kernel.bin";
+              sha256 = "35ee33303d9c314210d209ac9b56a69773169426a12d4238e9815278afc900fc";
+              sha256_unsigned = "35ee33303d9c314210d209ac9b56a69773169426a12d4238e9815278afc900fc";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tozed,zlt-s12-pro"
+          ];
+          titles = [
+            {
+              model = "ZLT S12 PRO";
+              vendor = "TOZED";
+            }
+          ];
+        };
+        tplink_archer-a6-v3 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_archer-a6-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-a6-v3-squashfs-sysupgrade.bin";
+              sha256 = "9d65c0eb64fd30ec34176e23d9fd989f7d62a675140ff4b31bfc06f86993a996";
+              sha256_unsigned = "1f4c4ac7dfaf796ad68968c3f2b583e6a6fcd9b588df4ac14a2cef8c10a62b7e";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-a6-v3-initramfs-kernel.bin";
+              sha256 = "22bff8a291c8e14ecc25aee038e248a84422b8917930c86c12c366bf2360b390";
+              sha256_unsigned = "22bff8a291c8e14ecc25aee038e248a84422b8917930c86c12c366bf2360b390";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-a6-v3-squashfs-factory.bin";
+              sha256 = "378e8afa848afbc59a9160266100d26337f609b15c5210b095c1117d12ea3a07";
+              sha256_unsigned = "378e8afa848afbc59a9160266100d26337f609b15c5210b095c1117d12ea3a07";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-a6-v3"
+          ];
+          titles = [
+            {
+              model = "Archer A6";
+              variant = "V3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-ax23-v1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_archer-ax23-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-ax23-v1-initramfs-kernel.bin";
+              sha256 = "91752876892fdf99a7e16f6659db485fefbeb0b9e630d93b68bdb8909e5ee061";
+              sha256_unsigned = "91752876892fdf99a7e16f6659db485fefbeb0b9e630d93b68bdb8909e5ee061";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-ax23-v1-squashfs-factory.bin";
+              sha256 = "0806cdc76a832b98e9bf07cd24431440545eacc0a908044e439185f2862e7d31";
+              sha256_unsigned = "0806cdc76a832b98e9bf07cd24431440545eacc0a908044e439185f2862e7d31";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-ax23-v1-squashfs-sysupgrade.bin";
+              sha256 = "5b51e2a5138ac074c858a32f4e9e6d8859d7bfc4674bb14968c6b30e890dba66";
+              sha256_unsigned = "4e68bd2178a53dd705f5debdb59d0367041a89afaed528c97443a210a3d7cf67";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-ax23-v1"
+          ];
+          titles = [
+            {
+              model = "Archer AX23";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c6-v3 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6-v3";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6-v3-squashfs-sysupgrade.bin";
+              sha256 = "109f932c05c3a0e497f1c96e62c93b0fb4c28ee74a23df52760b33bfd93d049d";
+              sha256_unsigned = "eb400f887fd9821befd6b34e5b2ac9e773e9e3e60d45379e3e0dbd6d9976b36d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6-v3-squashfs-factory.bin";
+              sha256 = "abf4779f3040472febf8285d7a33a6f7b5066e8e6459547ae038fc11fa315d67";
+              sha256_unsigned = "abf4779f3040472febf8285d7a33a6f7b5066e8e6459547ae038fc11fa315d67";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6-v3-initramfs-kernel.bin";
+              sha256 = "8fe562bffac46ca586c03896d9d1f1f23921a85a2e773af24bf1d2a8b07ea3d5";
+              sha256_unsigned = "8fe562bffac46ca586c03896d9d1f1f23921a85a2e773af24bf1d2a8b07ea3d5";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c6-v3"
+          ];
+          titles = [
+            {
+              model = "Archer C6";
+              variant = "V3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_archer-c6u-v1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6u-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6u-v1-initramfs-kernel.bin";
+              sha256 = "567b4a7370d65824327b83d765f97dd3360d0a824fe39f078ec5e5063c80381d";
+              sha256_unsigned = "567b4a7370d65824327b83d765f97dd3360d0a824fe39f078ec5e5063c80381d";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6u-v1-squashfs-factory.bin";
+              sha256 = "d6af5524b0468bf7819253b993737d314fdb064fd693771c9bc52ef0216919f8";
+              sha256_unsigned = "d6af5524b0468bf7819253b993737d314fdb064fd693771c9bc52ef0216919f8";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_archer-c6u-v1-squashfs-sysupgrade.bin";
+              sha256 = "c073861f51a83bed8e913e199ee5ee15aa3db4a6abf4bcac1053e0984b371dbd";
+              sha256_unsigned = "f73d06fab8eebdfba7205cc7467a7d7051238329537cbc4594896ae5dbb10e74";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,archer-c6u-v1"
+          ];
+          titles = [
+            {
+              model = "Archer C6U";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_deco-m4r-v4 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_deco-m4r-v4";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_deco-m4r-v4-squashfs-factory.bin";
+              sha256 = "95685bf8b8f5290548acf83ef9649d4223f151ff4dcf862218ab0a4ec5e1d127";
+              sha256_unsigned = "95685bf8b8f5290548acf83ef9649d4223f151ff4dcf862218ab0a4ec5e1d127";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_deco-m4r-v4-initramfs-kernel.bin";
+              sha256 = "93395310d69d694a032645efa0d263c96255866b0093e7c694b2650584bb12c3";
+              sha256_unsigned = "93395310d69d694a032645efa0d263c96255866b0093e7c694b2650584bb12c3";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_deco-m4r-v4-squashfs-sysupgrade.bin";
+              sha256 = "be3cb60cd0bba89ebf7d2d6f584cea756922bf593d5044a578a6a5f20033cc75";
+              sha256_unsigned = "d57d0aecba0f4e4e0ffea3fb34b22feb76fa92f1440b735ac76ef85fa483bb40";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,deco-m4r-v4"
+          ];
+          titles = [
+            {
+              model = "Deco M4R";
+              variant = "v4";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap235-wall-v1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_eap235-wall-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap235-wall-v1-squashfs-factory.bin";
+              sha256 = "675f2b68cc0d2488dcec473165e4648df9baa956ba6009f30695a83eb80ef301";
+              sha256_unsigned = "675f2b68cc0d2488dcec473165e4648df9baa956ba6009f30695a83eb80ef301";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap235-wall-v1-initramfs-kernel.bin";
+              sha256 = "fb99b3bb164303555ebae1b712d1cf8b11d8d958ac73b0da05d9e637a3845afd";
+              sha256_unsigned = "fb99b3bb164303555ebae1b712d1cf8b11d8d958ac73b0da05d9e637a3845afd";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap235-wall-v1-squashfs-sysupgrade.bin";
+              sha256 = "29fa544f7c27621e0a0abfe47e71bf2218c1ea65026731729d2ec72b497f856b";
+              sha256_unsigned = "42c5c98ef3eb1a7bb67165ac64fb986586205171b28153ec72da098788a9fdd6";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap235-wall-v1"
+          ];
+          titles = [
+            {
+              model = "EAP235-Wall";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap613-v1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_eap613-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap613-v1-initramfs-kernel.bin";
+              sha256 = "77112debf95921fffba26b6943df1834afcf92ce8d94c328d336519c471f8ade";
+              sha256_unsigned = "77112debf95921fffba26b6943df1834afcf92ce8d94c328d336519c471f8ade";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap613-v1-squashfs-factory.bin";
+              sha256 = "770ce6d96dcd96a48169f9c4d90d263efc27916aa6e52fa320b540817b51d940";
+              sha256_unsigned = "770ce6d96dcd96a48169f9c4d90d263efc27916aa6e52fa320b540817b51d940";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap613-v1-squashfs-sysupgrade.bin";
+              sha256 = "01c8295676275e5bcb2d80418dc471fd3e0d50991de71bbba36510fb50eb7ac3";
+              sha256_unsigned = "30ef2c13bafe33bb1ff9de6c651cb49c2c4361db282227cb2b63557839d14991";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap613-v1"
+          ];
+          titles = [
+            {
+              model = "EAP613";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_eap615-wall-v1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_eap615-wall-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap615-wall-v1-squashfs-factory.bin";
+              sha256 = "907d95db59fb03892556722d6eff4451772e96c90800df292ce291fa772b8e37";
+              sha256_unsigned = "907d95db59fb03892556722d6eff4451772e96c90800df292ce291fa772b8e37";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap615-wall-v1-initramfs-kernel.bin";
+              sha256 = "09676e8788f330af30d7140b31a8d4511b96bde62398f72639fd4f774d08586b";
+              sha256_unsigned = "09676e8788f330af30d7140b31a8d4511b96bde62398f72639fd4f774d08586b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_eap615-wall-v1-squashfs-sysupgrade.bin";
+              sha256 = "7e82a3a7df4617c6051758dfef7e4675e3a962c90fdc161f3684ad83e6c7a1cd";
+              sha256_unsigned = "eba1db0948f65064107718240ca04a6c9c9f3e843914da2d05de958089955f16";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,eap615-wall-v1"
+          ];
+          titles = [
+            {
+              model = "EAP615-Wall";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_ec330-g5u-v1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_ec330-g5u-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_ec330-g5u-v1-initramfs-kernel.bin";
+              sha256 = "eef5603acedbd99a6d1ef0a23a0eff42e0bae33cf1112023b668ada55d527d99";
+              sha256_unsigned = "eef5603acedbd99a6d1ef0a23a0eff42e0bae33cf1112023b668ada55d527d99";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_ec330-g5u-v1-squashfs-factory.bin";
+              sha256 = "0e0596b9c9c570b7255f45bd00ccbcdf9c9c15f88f84ae3d9d3f8fa9fa24e185";
+              sha256_unsigned = "0e0596b9c9c570b7255f45bd00ccbcdf9c9c15f88f84ae3d9d3f8fa9fa24e185";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_ec330-g5u-v1-squashfs-sysupgrade.bin";
+              sha256 = "35dae5fcbd379a3381a9048250ab7fd1f1c0fb51ec3141051f720283759cacf6";
+              sha256_unsigned = "2e0c49e52036ef5484e8bcdf49b970ea1fd3b4ac7911951e760a5774bc368aed";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,ec330-g5u-v1"
+          ];
+          titles = [
+            {
+              model = "EC330-G5u";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+            {
+              model = "Archer C9ERT";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_er605-v2 = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_er605-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_er605-v2-initramfs-kernel.bin";
+              sha256 = "b79b9defdda148378ff5ad1e3075f5ec29b62668cc788dd957a40cf1cd003e3e";
+              sha256_unsigned = "b79b9defdda148378ff5ad1e3075f5ec29b62668cc788dd957a40cf1cd003e3e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_er605-v2-squashfs-sysupgrade.bin";
+              sha256 = "5b4c728ac2d980dc767ef567a122e4c63d4f0d0350040ec1ce3542913dd2c18a";
+              sha256_unsigned = "ceabef82923c0ff41f5c5fb3448c8e4f440875d870b4e15dd9afd42fab676f20";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,er605-v2"
+          ];
+          titles = [
+            {
+              model = "ER605";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_ex220-v1 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_ex220-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_ex220-v1-initramfs-kernel.bin";
+              sha256 = "4994c48c6e402164fa86f1b933ae19037a0435834006d5dd366d27c36529404b";
+              sha256_unsigned = "4994c48c6e402164fa86f1b933ae19037a0435834006d5dd366d27c36529404b";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_ex220-v1-squashfs-sysupgrade.bin";
+              sha256 = "118910dd091b0b5a381ebec7e53d821b9f69a3db6102fe689c36b75aa4d2dc1b";
+              sha256_unsigned = "b11f82f6dc7df0c35e4d0faf71818bcaaaf562db51a121db130577bc10f37b8a";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "tplink,ex220-v1"
+          ];
+          titles = [
+            {
+              model = "EX220";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_mr600-v2-eu = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb-net-qmi-wwan"
+            "uqmi"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_mr600-v2-eu";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_mr600-v2-eu-squashfs-factory.bin";
+              sha256 = "1e61c9b97e07e61ab14e172cbc6cf1105921285c452f738c6f74af51109a4a01";
+              sha256_unsigned = "1e61c9b97e07e61ab14e172cbc6cf1105921285c452f738c6f74af51109a4a01";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_mr600-v2-eu-squashfs-sysupgrade.bin";
+              sha256 = "efde631d7864f90251095ad6fa597b09299c992d75428bbc839aa8e97511366d";
+              sha256_unsigned = "a3291e3ab7c46ed80db743f31f4cd49c52ec28acd06f2a4fa1bdf4e18819e565";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_mr600-v2-eu-initramfs-kernel.bin";
+              sha256 = "c3f5194609496ddb635047b719c7a706651843fbe620e8e834c064d8450bfc69";
+              sha256_unsigned = "c3f5194609496ddb635047b719c7a706651843fbe620e8e834c064d8450bfc69";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,mr600-v2-eu"
+          ];
+          titles = [
+            {
+              model = "MR600";
+              variant = "v2 (EU)";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re350-v1 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_re350-v1";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re350-v1-initramfs-kernel.bin";
+              sha256 = "9296f33908f4bd7845e765fd71fe1a6694cd06a19e75bbd32f8fad268cf9cb83";
+              sha256_unsigned = "9296f33908f4bd7845e765fd71fe1a6694cd06a19e75bbd32f8fad268cf9cb83";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re350-v1"
+            "re350-v1"
+          ];
+          titles = [
+            {
+              model = "RE350";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re500-v1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_re500-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re500-v1-squashfs-factory.bin";
+              sha256 = "da38dc79ebf6492127f48bbb15c153d252b3fe729ee34d56cf30a0b6fc2aacc3";
+              sha256_unsigned = "da38dc79ebf6492127f48bbb15c153d252b3fe729ee34d56cf30a0b6fc2aacc3";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re500-v1-squashfs-sysupgrade.bin";
+              sha256 = "f7eecace336c5b91b4732cd2aaf110256ea52393f023934df07d8f02b658e11d";
+              sha256_unsigned = "6f311cb830d6f9140454c2e3bba13921046c59da34a38f8bb0f00a64fc674640";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re500-v1-initramfs-kernel.bin";
+              sha256 = "252b56ba186e0d96d971f4bc8137ec1421916a07742807e58a793c9856c56dd6";
+              sha256_unsigned = "252b56ba186e0d96d971f4bc8137ec1421916a07742807e58a793c9856c56dd6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re500-v1"
+          ];
+          titles = [
+            {
+              model = "RE500";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re650-v1 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v1-squashfs-factory.bin";
+              sha256 = "9283f86b0f1cbcff1c53bd4bbefcca355fb59247a3e1e090d23d0a8f11c6f71e";
+              sha256_unsigned = "9283f86b0f1cbcff1c53bd4bbefcca355fb59247a3e1e090d23d0a8f11c6f71e";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v1-squashfs-sysupgrade.bin";
+              sha256 = "b571f4185dc95febc76cb39415134bf77fb5517fa16f497cff857a85870a9bd7";
+              sha256_unsigned = "dba3b44b77c9466e0915e47f31c44ffc7eee642d6a8988822a92fb065ea61a93";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v1-initramfs-kernel.bin";
+              sha256 = "61688ff1215f80bd9ac93e70d565327024b961c7ced3d65496fb472cd67175b1";
+              sha256_unsigned = "61688ff1215f80bd9ac93e70d565327024b961c7ced3d65496fb472cd67175b1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "tplink,re650-v1"
+          ];
+          titles = [
+            {
+              model = "RE650";
+              variant = "v1";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_re650-v2 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v2-initramfs-kernel.bin";
+              sha256 = "59bc78c605f74d94386d8ca0037aeb2cd76b90f9d4970b25a0d466e8a5562247";
+              sha256_unsigned = "59bc78c605f74d94386d8ca0037aeb2cd76b90f9d4970b25a0d466e8a5562247";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v2-squashfs-sysupgrade.bin";
+              sha256 = "2112057072634d68185d58e8dd9cc7289692e421cbd3cc6feea3a54205f5c342";
+              sha256_unsigned = "de9738f69dcf677b30854e21998cbcc159e58236b6a4a5a8e1164993593b711f";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_re650-v2-squashfs-factory.bin";
+              sha256 = "79d8abb7103f860a1507f3c05adc405745d589ac8f42dde0e1af374146c49d56";
+              sha256_unsigned = "79d8abb7103f860a1507f3c05adc405745d589ac8f42dde0e1af374146c49d56";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,re650-v2"
+          ];
+          titles = [
+            {
+              model = "RE650";
+              variant = "v2";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        tplink_tl-wpa8631p-v3 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-tplink_tl-wpa8631p-v3";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_tl-wpa8631p-v3-initramfs-kernel.bin";
+              sha256 = "4f5be473a24fc6fb3d0cfe3abc14941ed0f0a5eb12d676f38803508fd5ad138e";
+              sha256_unsigned = "4f5be473a24fc6fb3d0cfe3abc14941ed0f0a5eb12d676f38803508fd5ad138e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_tl-wpa8631p-v3-squashfs-sysupgrade.bin";
+              sha256 = "6d296382b1201ef310f16744f74ffd4ebc63788f120e0b238487333793bb6c20";
+              sha256_unsigned = "828763265166e49cf72b73316d99dd41d6e68421b9c96dc1eba8681b412fa055";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-tplink_tl-wpa8631p-v3-squashfs-factory.bin";
+              sha256 = "7155c51cf574b7983c3270cbf4d84bb9d8bcd12e125a76385ff516a90c5e543c";
+              sha256_unsigned = "7155c51cf574b7983c3270cbf4d84bb9d8bcd12e125a76385ff516a90c5e543c";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "tplink,tl-wpa8631p-v3"
+          ];
+          titles = [
+            {
+              model = "TL-WPA8631P";
+              variant = "v3";
+              vendor = "TP-Link";
+            }
+          ];
+        };
+        ubnt_edgerouter-x = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ubnt_edgerouter-x";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_edgerouter-x-squashfs-sysupgrade.bin";
+              sha256 = "1153fadca7fecb0d36fe1ea9dc1d54541b6a6302f693319f02db5d7462f01c96";
+              sha256_unsigned = "e41a158db20f09e4ea2c5fed6876544d2338be023f90e7d0e3d3116abb47810a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_edgerouter-x-initramfs-kernel.bin";
+              sha256 = "188b9adefeb4e9cc83b69d8b15d987cfa87c5cf513d25efc5ddc352d90a50524";
+              sha256_unsigned = "188b9adefeb4e9cc83b69d8b15d987cfa87c5cf513d25efc5ddc352d90a50524";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,edgerouter-x"
+            "ubnt-erx"
+            "ubiquiti,edgerouterx"
+          ];
+          titles = [
+            {
+              model = "EdgeRouter X";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_edgerouter-x-sfp = {
+          device_packages = [
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+            "kmod-i2c-algo-pca"
+            "kmod-gpio-pca953x"
+            "kmod-sfp"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ubnt_edgerouter-x-sfp";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_edgerouter-x-sfp-squashfs-sysupgrade.bin";
+              sha256 = "33f6958e7c10bb7edb8c4d90784ca2caa230c1012b66e389d35f1c03b89eacf5";
+              sha256_unsigned = "41d1ce82c2f4a993c8f2a2610870e2c6fb314c88af6455aa98d1f04c18cc25ef";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_edgerouter-x-sfp-initramfs-kernel.bin";
+              sha256 = "e38a3d50826bdbb7a335f4752dcd6d4f6e8da5e2ee712c1d68b16a053370c422";
+              sha256_unsigned = "e38a3d50826bdbb7a335f4752dcd6d4f6e8da5e2ee712c1d68b16a053370c422";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "ubnt,edgerouter-x-sfp"
+            "ubnt-erx-sfp"
+            "ubiquiti,edgerouterx-sfp"
+          ];
+          titles = [
+            {
+              model = "EdgeRouter X SFP";
+              vendor = "Ubiquiti";
+            }
+            {
+              model = "EdgePoint R6";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifi-6-lite = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-6-lite";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-6-lite-initramfs-kernel.bin";
+              sha256 = "6218a6e04cdd4b91775df72eed6a75d7d1a9324c09a8e863dbfa1f934b7d0c89";
+              sha256_unsigned = "6218a6e04cdd4b91775df72eed6a75d7d1a9324c09a8e863dbfa1f934b7d0c89";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-6-lite-squashfs-sysupgrade.bin";
+              sha256 = "d835aff26b749273a4e03bac4de3ad2878f5081ccc0f30593c63c219aa86b8eb";
+              sha256_unsigned = "8374acf5ee0748da047379a600c71ae5b623f71129649672a98af531e1ab7f74";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifi-6-lite"
+          ];
+          titles = [
+            {
+              model = "UniFi U6 Lite";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifi-flexhd = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "kmod-leds-ubnt-ledbar"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-flexhd";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-flexhd-initramfs-kernel.bin";
+              sha256 = "3516ccb82f9efa9fca0350aac63b06597307f45a2caea049f0ffdfaede44e13f";
+              sha256_unsigned = "3516ccb82f9efa9fca0350aac63b06597307f45a2caea049f0ffdfaede44e13f";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-flexhd-squashfs-sysupgrade.bin";
+              sha256 = "7fe6ca03fdfbbca44f60745f5353107119b90f12418d49b2ee869c490dc58fe0";
+              sha256_unsigned = "d4d1ef99cd68583705c727e6a0a8bef10e7f62b9ed19bd2ca55c89446daeca0d";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifi-flexhd"
+          ];
+          titles = [
+            {
+              model = "UniFi FlexHD";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_unifi-nanohd = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-nanohd";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-nanohd-initramfs-kernel.bin";
+              sha256 = "19d574bfb25d809e27287d723f86f0279b57311f24d8eb599df111582bb0bb81";
+              sha256_unsigned = "19d574bfb25d809e27287d723f86f0279b57311f24d8eb599df111582bb0bb81";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_unifi-nanohd-squashfs-sysupgrade.bin";
+              sha256 = "2ed2a7d8568fc22feaa43b5ced8a733d55701d866d82722cf1d968b984849a58";
+              sha256_unsigned = "87474e73fd33b0ce0efd5a2c226ea6c533ed69bffe7a30392dfaf58f1d66f062";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,unifi-nanohd"
+          ];
+          titles = [
+            {
+              model = "UniFi nanoHD";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        ubnt_usw-flex = {
+          device_packages = [
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-ubnt_usw-flex";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_usw-flex-initramfs-kernel.bin";
+              sha256 = "38f03b9d0ee1df08b03f56cc4344d427da59aaad4b5f2b88c2c3b9d0fe513e12";
+              sha256_unsigned = "38f03b9d0ee1df08b03f56cc4344d427da59aaad4b5f2b88c2c3b9d0fe513e12";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-ubnt_usw-flex-squashfs-sysupgrade.bin";
+              sha256 = "72b58236454966f6733a660f5378d548a73d74e3cfe9ad01493408d134b9f026";
+              sha256_unsigned = "72ca48e1cd0c19c436945b4cdeee78dba4b146ff4ae0476f46c45fa15a51501e";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "ubnt,usw-flex"
+          ];
+          titles = [
+            {
+              model = "UniFi Switch Flex";
+              vendor = "Ubiquiti";
+            }
+          ];
+        };
+        unielec_u7621-01-16m = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-01-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-01-16m-initramfs-kernel.bin";
+              sha256 = "61bd9a3c685a0584317a456638cb9ae4df061780264a75a3ae9645220a855b1a";
+              sha256_unsigned = "61bd9a3c685a0584317a456638cb9ae4df061780264a75a3ae9645220a855b1a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-01-16m-squashfs-sysupgrade.bin";
+              sha256 = "c79101fa96eb034ac3e6e14e107e61f7c6936a36d3d04689016e65d021a97d6e";
+              sha256_unsigned = "226b67c8b0c814ea33a8b851c1a65733c422f59049724c8e4045ac5f15cd3e7c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "unielec,u7621-01-16m"
+          ];
+          titles = [
+            {
+              model = "U7621-01";
+              variant = "16M";
+              vendor = "UniElec";
+            }
+          ];
+        };
+        unielec_u7621-06-16m = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-16m-squashfs-sysupgrade.bin";
+              sha256 = "6330cae1862154047c3374e6880b26a9efa64497c8a56fbeafb98a14120c9a49";
+              sha256_unsigned = "c4884e012f418ba8e8ac00ce576d35b462c09f3ac8ac2035562b6ae05f4edcd4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-16m-initramfs-kernel.bin";
+              sha256 = "92ec45522b06614805562870579e51c7e568ca2ea43ad3b57298ad4f996767c0";
+              sha256_unsigned = "92ec45522b06614805562870579e51c7e568ca2ea43ad3b57298ad4f996767c0";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "unielec,u7621-06-16m"
+            "u7621-06-256M-16M"
+            "unielec,u7621-06-256m-16m"
+          ];
+          titles = [
+            {
+              model = "U7621-06";
+              variant = "16M";
+              vendor = "UniElec";
+            }
+          ];
+        };
+        unielec_u7621-06-32m = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-32m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-32m-initramfs-kernel.bin";
+              sha256 = "b42f8d794b37841f6baeab246507b77d80eba2bb0e7ff30848eec7c35c0428fd";
+              sha256_unsigned = "b42f8d794b37841f6baeab246507b77d80eba2bb0e7ff30848eec7c35c0428fd";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-32m-squashfs-sysupgrade.bin";
+              sha256 = "b821a435032d23fb5a05c025f0a2946b788a19f7924818e81c1c6d026829d5f8";
+              sha256_unsigned = "ecbc83c581f61f752b3d0eae44c8b9dde39c4f9c861e31d72a2b3b53e7915de2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "unielec,u7621-06-32m"
+            "unielec,u7621-06-32m"
+          ];
+          titles = [
+            {
+              model = "U7621-06";
+              variant = "32M";
+              vendor = "UniElec";
+            }
+          ];
+        };
+        unielec_u7621-06-64m = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-64m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-64m-initramfs-kernel.bin";
+              sha256 = "22f00af80a2205ea004dbb370c63246907bfa45b73c222e7f94a94f9f737a176";
+              sha256_unsigned = "22f00af80a2205ea004dbb370c63246907bfa45b73c222e7f94a94f9f737a176";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-unielec_u7621-06-64m-squashfs-sysupgrade.bin";
+              sha256 = "9b2bffc52eb5bdbde8e14aa20e365ab3aa8c7d2f5582e2d6cafafa2765c3e3bb";
+              sha256_unsigned = "11dbcebae78d52e51603d260de032cc6121225a354021f524ddc867330177443";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "unielec,u7621-06-64m"
+            "unielec,u7621-06-512m-64m"
+          ];
+          titles = [
+            {
+              model = "U7621-06";
+              variant = "64M";
+              vendor = "UniElec";
+            }
+          ];
+        };
+        wavlink_wl-wn531a6 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-wavlink_wl-wn531a6";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wavlink_wl-wn531a6-initramfs-kernel.bin";
+              sha256 = "ab9945e1753dcbda370625fd4890abdd2200ffd8ff7cbdd1037196571edf1c4c";
+              sha256_unsigned = "ab9945e1753dcbda370625fd4890abdd2200ffd8ff7cbdd1037196571edf1c4c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wavlink_wl-wn531a6-squashfs-sysupgrade.bin";
+              sha256 = "6de6ba550fe1ecd05a8f902665d7fa8f8e7ce10665bab63c64b8564902923d6a";
+              sha256_unsigned = "4fe7a1bb8ae94165aa4e52db6b316bea7560032c4acc4b8f8014e0f77f7c97d1";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "wavlink,wl-wn531a6"
+          ];
+          titles = [
+            {
+              model = "WL-WN531A6";
+              vendor = "Wavlink";
+            }
+          ];
+        };
+        wavlink_wl-wn533a8 = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-wavlink_wl-wn533a8";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wavlink_wl-wn533a8-initramfs-WN533A8-kernel.bin";
+              sha256 = "7cbf5cc33a7e7016947596a99e2918a54eb1902bc3f49a8438d532a93a3a9caf";
+              sha256_unsigned = "7cbf5cc33a7e7016947596a99e2918a54eb1902bc3f49a8438d532a93a3a9caf";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wavlink_wl-wn533a8-squashfs-sysupgrade.bin";
+              sha256 = "eed66f97868045eaf9acc2b9e7152019831989030af0233fa20e0d04d634d38d";
+              sha256_unsigned = "be72238d55f5ad6ccf130abdbf6e83b7969e6ecf3c4837ccb6792161204f52b8";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "wavlink,wl-wn533a8"
+          ];
+          titles = [
+            {
+              model = "WL-WN533A8";
+              vendor = "Wavlink";
+            }
+          ];
+        };
+        wavlink_ws-wn572hp3-4g = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb3"
+            "kmod-usb-net-rndis"
+            "comgt-ncm"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-wavlink_ws-wn572hp3-4g";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wavlink_ws-wn572hp3-4g-squashfs-sysupgrade.bin";
+              sha256 = "406cdd3be7499bea8a922bb4a1c2e4b571c8a242245185db0287b3e3ced55d51";
+              sha256_unsigned = "efa54f8d4312f6faaad51e4fc1ef1b39eef272a7cc218b04a9d5e5576fcc2972";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wavlink_ws-wn572hp3-4g-initramfs-kernel.bin";
+              sha256 = "6941585173072db4c3c2c6534766edd10d19049dc79672737fbe3259950c38f2";
+              sha256_unsigned = "6941585173072db4c3c2c6534766edd10d19049dc79672737fbe3259950c38f2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "wavlink,ws-wn572hp3-4g"
+          ];
+          titles = [
+            {
+              model = "WS-WN572HP3";
+              variant = "4G";
+              vendor = "Wavlink";
+            }
+          ];
+        };
+        wevo_11acnas = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-wevo_11acnas";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wevo_11acnas-squashfs-sysupgrade.bin";
+              sha256 = "2d6eba45d815e051ef16b627225294868893b6fed23047944e0dd6139b4177ef";
+              sha256_unsigned = "628136c250fe989dd31beac907e8baa7138af2caf7ecdaa4a12cb035eb2fd04d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wevo_11acnas-initramfs-kernel.bin";
+              sha256 = "dd14f5df3f210da982e5afd7f7eadd41a6b0056b15b2df547492133c1787e97a";
+              sha256_unsigned = "dd14f5df3f210da982e5afd7f7eadd41a6b0056b15b2df547492133c1787e97a";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "wevo,11acnas"
+            "11acnas"
+          ];
+          titles = [
+            {
+              model = "11AC NAS Router";
+              vendor = "WeVO";
+            }
+          ];
+        };
+        wevo_w2914ns-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-wevo_w2914ns-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wevo_w2914ns-v2-initramfs-kernel.bin";
+              sha256 = "deef61d1ec9ec155315e3a66d6861a7a6a040a2802c87f22b81b65aa84c3dd33";
+              sha256_unsigned = "deef61d1ec9ec155315e3a66d6861a7a6a040a2802c87f22b81b65aa84c3dd33";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wevo_w2914ns-v2-squashfs-sysupgrade.bin";
+              sha256 = "b8f37410bb30b1161e5c612a76ad44cbb8929ac217d65aa7289c2cc48fe3b840";
+              sha256_unsigned = "64ae79ea77e1fe7cf5e95edabb05c46019c4c8c30b4be8e875a0d8909016bb63";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "wevo,w2914ns-v2"
+            "w2914nsv2"
+          ];
+          titles = [
+            {
+              model = "W2914NS";
+              variant = "v2";
+              vendor = "WeVO";
+            }
+          ];
+        };
+        wifire_s1500-nbn = {
+          device_packages = [
+            "kmod-mt76x2"
+            "kmod-usb3"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-wifire_s1500-nbn";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wifire_s1500-nbn-squashfs-sysupgrade.bin";
+              sha256 = "0e71f0902b8ae25f41a491bbc3583816d84e3f865dddf986b84b16c45ec94066";
+              sha256_unsigned = "57425e701924e973ce94f7c6b6934b266da0cab98711283166493d3ff0922441";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wifire_s1500-nbn-initramfs-kernel.bin";
+              sha256 = "a9185a612546b2803d3c8eee3a14e51e268fa53308a91149baf5b8fe1d39addb";
+              sha256_unsigned = "a9185a612546b2803d3c8eee3a14e51e268fa53308a91149baf5b8fe1d39addb";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-wifire_s1500-nbn-squashfs-factory.img";
+              sha256 = "393b8489ebb17a720619b9b403e9b041db4b7cf4be31cca1773533e016a9cb6a";
+              sha256_unsigned = "393b8489ebb17a720619b9b403e9b041db4b7cf4be31cca1773533e016a9cb6a";
+              type = "factory";
+            }
+          ];
+          supported_devices = [
+            "wifire,s1500-nbn"
+          ];
+          titles = [
+            {
+              model = "S1500.NBN";
+              vendor = "WiFire";
+            }
+            {
+              model = "S1500 BUC";
+              vendor = "Sercomm";
+            }
+          ];
+        };
+        winstars_ws-wn583a6 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-winstars_ws-wn583a6";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-winstars_ws-wn583a6-squashfs-sysupgrade.bin";
+              sha256 = "e6f1077bff2146952bcfcd70ca813f119e52e94811288a1c3e50b7232708c7d5";
+              sha256_unsigned = "04ec0ad8091a3e53b1a033e4e924b9316868e97d288109755b079297067334a4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-winstars_ws-wn583a6-initramfs-WN583A6-kernel.bin";
+              sha256 = "f5c28b4b884881f1cbb7f203129bda916dc4e4272f6356b8384016a1323f4b61";
+              sha256_unsigned = "f5c28b4b884881f1cbb7f203129bda916dc4e4272f6356b8384016a1323f4b61";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "winstars,ws-wn583a6"
+          ];
+          titles = [
+            {
+              model = "WS-WN583A6";
+              vendor = "Winstars";
+            }
+            {
+              model = "AC2100";
+              vendor = "Gemeita";
+            }
+          ];
+        };
+        xiaomi_mi-router-3-pro = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3-pro";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3-pro-squashfs-sysupgrade.bin";
+              sha256 = "b0e25fcbbb8e00266dfb674fe2b8c0819f6f1100fa2119a8702b7d777a4e8214";
+              sha256_unsigned = "c02f830273c29e8618f33d539e54aac3b91574f9d13f14fec1ce8db51c53f2de";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3-pro-squashfs-factory.bin";
+              sha256 = "81d18cfa16a5b802579b38b945636950202080bfeceaf63a3c330a2cc540d3c3";
+              sha256_unsigned = "81d18cfa16a5b802579b38b945636950202080bfeceaf63a3c330a2cc540d3c3";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3-pro-initramfs-kernel.bin";
+              sha256 = "1eda02532a9ff6e87c439f3afb9f88f27697f7d288ac03c49096940f8b7a88f6";
+              sha256_unsigned = "1eda02532a9ff6e87c439f3afb9f88f27697f7d288ac03c49096940f8b7a88f6";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-3-pro"
+            "xiaomi,mir3p"
+          ];
+          titles = [
+            {
+              model = "Mi Router 3 Pro";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-3g = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-squashfs-kernel1.bin";
+              sha256 = "58bc8092c356203bb21c8d1b5a4436c9d7e2b1a2f344bf5896dd66b4d5dce198";
+              sha256_unsigned = "58bc8092c356203bb21c8d1b5a4436c9d7e2b1a2f344bf5896dd66b4d5dce198";
+              type = "kernel1";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-squashfs-rootfs0.bin";
+              sha256 = "ee01b6e8158f79b4f0e1f4898c4e76972f54c66dfaee7d3c5b7f5a736662da41";
+              sha256_unsigned = "ee01b6e8158f79b4f0e1f4898c4e76972f54c66dfaee7d3c5b7f5a736662da41";
+              type = "rootfs0";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-initramfs-kernel.bin";
+              sha256 = "2b670fa0fa0306bd724e91ebb4062c75ad2a96fcdcec466853a6c6d8b1fc093c";
+              sha256_unsigned = "2b670fa0fa0306bd724e91ebb4062c75ad2a96fcdcec466853a6c6d8b1fc093c";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-squashfs-sysupgrade.bin";
+              sha256 = "b310f1a2cf71242c10703c0e341ef10acdcc8f85823dbbf9dfc0214dd1166286";
+              sha256_unsigned = "7401d86b15db4cdfa839affeece13dd0e385e1f58ecd2ec3b5e629e02902cf5f";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-3g"
+            "R3G"
+            "mir3g"
+            "xiaomi,mir3g"
+          ];
+          titles = [
+            {
+              model = "Mi Router 3G";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-3g-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-v2-initramfs-kernel.bin";
+              sha256 = "2c7174c93214f6025564685c95655f6181385c6342f6e52c9471d0536250c3e8";
+              sha256_unsigned = "2c7174c93214f6025564685c95655f6181385c6342f6e52c9471d0536250c3e8";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-3g-v2-squashfs-sysupgrade.bin";
+              sha256 = "7ac23304501d59d5f32599b8012d146ec970d2f50d356800e788face93ff9061";
+              sha256_unsigned = "bc65ba7987c822c4895b544a492575edf23102e16d891ac8619c4fc0b23b09e3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-3g-v2"
+            "xiaomi,mir3g-v2"
+          ];
+          titles = [
+            {
+              model = "Mi Router 3G";
+              variant = "v2";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-4 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4-initramfs-kernel.bin";
+              sha256 = "8285dd3f01c4736ddff5ad60b1a1347db8027346477f950b4f49bf93e613dbe1";
+              sha256_unsigned = "8285dd3f01c4736ddff5ad60b1a1347db8027346477f950b4f49bf93e613dbe1";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4-squashfs-kernel1.bin";
+              sha256 = "0e0fdd81dc786e8b1e0bc41b66b2d5b550a37f4b3ee0b5c812e61d176497983d";
+              sha256_unsigned = "0e0fdd81dc786e8b1e0bc41b66b2d5b550a37f4b3ee0b5c812e61d176497983d";
+              type = "kernel1";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4-squashfs-sysupgrade.bin";
+              sha256 = "c9813501b043022b105d7431f64fb97d90216a67989f8086b86ba94a3537d11f";
+              sha256_unsigned = "b5358b95209bd5633c30e4b9d123015f8d6fd6772b4ab3a74d0da9a1bdd94b7d";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4-squashfs-rootfs0.bin";
+              sha256 = "d91be70660364fd107ce9a55218e7cb3e0294f5d42f1235621e5c1cd698a343b";
+              sha256_unsigned = "d91be70660364fd107ce9a55218e7cb3e0294f5d42f1235621e5c1cd698a343b";
+              type = "rootfs0";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-4"
+          ];
+          titles = [
+            {
+              model = "Mi Router 4";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-4a-gigabit = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4a-gigabit";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4a-gigabit-initramfs-kernel.bin";
+              sha256 = "7e4db6363a784f19bfa1d17e3fe9150babf5e5b825bdc0dd9218f4c415a6b925";
+              sha256_unsigned = "7e4db6363a784f19bfa1d17e3fe9150babf5e5b825bdc0dd9218f4c415a6b925";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4a-gigabit-squashfs-sysupgrade.bin";
+              sha256 = "bcdad4055c9bc4588faab8f94ccffe50c9640b0c5dfa6bb458e5407d15196f07";
+              sha256_unsigned = "5c5010922aec60f8d1b224c757059f4f03741159513a670398baba2d4d675b24";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-4a-gigabit"
+          ];
+          titles = [
+            {
+              model = "Mi Router 4A";
+              variant = "Gigabit Edition";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-4a-gigabit-v2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-initramfs-kernel.bin";
+              sha256 = "61920cdf67a3ef2e67abbef574b4ab87a03e07d755eb2383998abd867e21c031";
+              sha256_unsigned = "61920cdf67a3ef2e67abbef574b4ab87a03e07d755eb2383998abd867e21c031";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-4a-gigabit-v2-squashfs-sysupgrade.bin";
+              sha256 = "d1bbbc980e772fa22a099975ce2ade58693f0cddcb80be6e87c80abf5f22b37f";
+              sha256_unsigned = "ccf0478a55e4dae716b183ea1ba311206efc2c30a223769f8b705d5ad8e210de";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-4a-gigabit-v2"
+          ];
+          titles = [
+            {
+              model = "Mi Router 4A";
+              variant = "Gigabit Edition v2";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-ac2100 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-ac2100";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-rootfs0.bin";
+              sha256 = "785f9ca40824ac89db5d7144c76db619866abd3698e34e532a844a20046575a9";
+              sha256_unsigned = "785f9ca40824ac89db5d7144c76db619866abd3698e34e532a844a20046575a9";
+              type = "rootfs0";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-sysupgrade.bin";
+              sha256 = "807c8245bfb9d17bc386a21a042b79e5331728105aad0def6236ba0e0eaee365";
+              sha256_unsigned = "335dc7924d2234c504816f5bc81b512b555578111a057d0770daa6f9c9a6cd65";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-ac2100-squashfs-kernel1.bin";
+              sha256 = "f2e6762111948856e1b9f87f4b0d1f39133fbc7d9e1c46f50cf8bc56d759095b";
+              sha256_unsigned = "f2e6762111948856e1b9f87f4b0d1f39133fbc7d9e1c46f50cf8bc56d759095b";
+              type = "kernel1";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-ac2100-initramfs-kernel.bin";
+              sha256 = "5875b6ef25d1104bb12a41a95011fd8b97f8f6e5560d3d6f15554363ef0dabdb";
+              sha256_unsigned = "5875b6ef25d1104bb12a41a95011fd8b97f8f6e5560d3d6f15554363ef0dabdb";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-ac2100"
+          ];
+          titles = [
+            {
+              model = "Mi Router AC2100";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-cr6606 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6606";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6606-squashfs-firmware.bin";
+              sha256 = "42b951e344d0d5f558f3a74e367366e7cfeefe45eb19be3bddfe9fde78989624";
+              sha256_unsigned = "42b951e344d0d5f558f3a74e367366e7cfeefe45eb19be3bddfe9fde78989624";
+              type = "firmware";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6606-squashfs-sysupgrade.bin";
+              sha256 = "b34c091f9e7a20c836cdf6616fa76b13d7465e607f5b2c233c77e12aac8d214a";
+              sha256_unsigned = "e31815fb6613a47b9943b9b063463177b7150b9cc47c565e8988ef0e9a16c4a5";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6606-initramfs-kernel.bin";
+              sha256 = "01ef3a78d6ee3ec958b598c7577da6e93014830ba2cb679f9fc1321d0538882c";
+              sha256_unsigned = "01ef3a78d6ee3ec958b598c7577da6e93014830ba2cb679f9fc1321d0538882c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-cr6606"
+          ];
+          titles = [
+            {
+              model = "Mi Router CR6606";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-cr6608 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6608";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6608-squashfs-sysupgrade.bin";
+              sha256 = "6ab46c17166db9cd880e3cf66f7105398a4f331c19f8bbfdec209353d303950e";
+              sha256_unsigned = "d06411f11f8694e0102905865bbd7a4381f6f6633500aaa568f53986d3b4e6ee";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6608-initramfs-kernel.bin";
+              sha256 = "a64a98263036bf9b7cea8796dcc0e62dcd0fe7b21fe59a59176cc5b62ef3589e";
+              sha256_unsigned = "a64a98263036bf9b7cea8796dcc0e62dcd0fe7b21fe59a59176cc5b62ef3589e";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6608-squashfs-firmware.bin";
+              sha256 = "349c530342f9120626334ab2e38304c45e8a65fb2f0fe3dd6116e23ef9ca665d";
+              sha256_unsigned = "349c530342f9120626334ab2e38304c45e8a65fb2f0fe3dd6116e23ef9ca665d";
+              type = "firmware";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-cr6608"
+          ];
+          titles = [
+            {
+              model = "Mi Router CR6608";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_mi-router-cr6609 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6609";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6609-squashfs-sysupgrade.bin";
+              sha256 = "4a8b8b1114b3cde851c326f738bb7e5e7366f9ed97cf4050fee963efc2921583";
+              sha256_unsigned = "e03b28a55c17ff15da5c3e3d1cca350908b141b0c4aad46eced954239b50ea32";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6609-initramfs-kernel.bin";
+              sha256 = "972ab2859c87b4e5a04318fe10acb8e6ebd1a0975308160718f06e469afea7df";
+              sha256_unsigned = "972ab2859c87b4e5a04318fe10acb8e6ebd1a0975308160718f06e469afea7df";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_mi-router-cr6609-squashfs-firmware.bin";
+              sha256 = "f6dc3a930dcde3b673f71f0db255e9945a385f97a4a35c338532f22a576f761f";
+              sha256_unsigned = "f6dc3a930dcde3b673f71f0db255e9945a385f97a4a35c338532f22a576f761f";
+              type = "firmware";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,mi-router-cr6609"
+          ];
+          titles = [
+            {
+              model = "Mi Router CR6609";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaomi_redmi-router-ac2100 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7615-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaomi_redmi-router-ac2100";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_redmi-router-ac2100-squashfs-kernel1.bin";
+              sha256 = "d498871206038e4eb2dfb503404103ed93edc27c16a617abc039ee69a43db77b";
+              sha256_unsigned = "d498871206038e4eb2dfb503404103ed93edc27c16a617abc039ee69a43db77b";
+              type = "kernel1";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_redmi-router-ac2100-initramfs-kernel.bin";
+              sha256 = "0cf1d8611a6ef0ae91f0089f79521e07103de8bd51a934dde6f13986f02056f7";
+              sha256_unsigned = "0cf1d8611a6ef0ae91f0089f79521e07103de8bd51a934dde6f13986f02056f7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_redmi-router-ac2100-squashfs-sysupgrade.bin";
+              sha256 = "8fabf867df9837c7f59199ec6b16b58161ed954dda606d7c5fe246e67e9a88ff";
+              sha256_unsigned = "b2a5ad6ae090c817735faeb0987d55f1931b6ddae9cbe862ff5fd75c1a34ad36";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaomi_redmi-router-ac2100-squashfs-rootfs0.bin";
+              sha256 = "a475edd89850f93046cf1f60ff0ec3b73395714e25a99b2af5b2c5252ce18a1b";
+              sha256_unsigned = "a475edd89850f93046cf1f60ff0ec3b73395714e25a99b2af5b2c5252ce18a1b";
+              type = "rootfs0";
+            }
+          ];
+          supported_devices = [
+            "xiaomi,redmi-router-ac2100"
+          ];
+          titles = [
+            {
+              model = "Redmi Router AC2100";
+              vendor = "Xiaomi";
+            }
+          ];
+        };
+        xiaoyu_xy-c5 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xiaoyu_xy-c5";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaoyu_xy-c5-squashfs-sysupgrade.bin";
+              sha256 = "c6bab8abf8c20c118bc87c83e56f41f972a0adbf5e612492ca9a5c1ccb11e9b9";
+              sha256_unsigned = "5cc3fca6ed07792674f90e34acb751b201c0e2b31448ef633d3dafb16855841a";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xiaoyu_xy-c5-initramfs-kernel.bin";
+              sha256 = "1eefda3ab5adf5523c5cbb47877cc211cf287bb9e3de87801b5e591b99408c89";
+              sha256_unsigned = "1eefda3ab5adf5523c5cbb47877cc211cf287bb9e3de87801b5e591b99408c89";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "xiaoyu,xy-c5"
+          ];
+          titles = [
+            {
+              model = "XY-C5";
+              vendor = "XiaoYu";
+            }
+          ];
+        };
+        xzwifi_creativebox-v1 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-sdhci-mt7620"
+            "kmod-usb3"
+            "-wpad-basic-mbedtls"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-xzwifi_creativebox-v1";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xzwifi_creativebox-v1-squashfs-sysupgrade.bin";
+              sha256 = "743f02faef6ec8239fea65339c1c214dde330598f203f107b1b9532f13e83ea8";
+              sha256_unsigned = "d8aacb30e4e5e74e484a89cac5a3ef2d831feb84853089319fed18d032ca36a4";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-xzwifi_creativebox-v1-initramfs-kernel.bin";
+              sha256 = "96d6fdefff0a5b55ec267065981051940cd409c58a741921e05e053a624aa7ab";
+              sha256_unsigned = "96d6fdefff0a5b55ec267065981051940cd409c58a741921e05e053a624aa7ab";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "xzwifi,creativebox-v1"
+          ];
+          titles = [
+            {
+              model = "v1";
+              vendor = "CreativeBox";
+            }
+          ];
+        };
+        youhua_wr1200js = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-youhua_wr1200js";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-youhua_wr1200js-initramfs-kernel.bin";
+              sha256 = "1a906fb4f3f0f2e4eff097618c294a620b2fb58a7fb102db82e90221cb74c293";
+              sha256_unsigned = "1a906fb4f3f0f2e4eff097618c294a620b2fb58a7fb102db82e90221cb74c293";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-youhua_wr1200js-squashfs-sysupgrade.bin";
+              sha256 = "9acc7e1984e547292b4abe15fd2f06d82fb601ab1431cf702b069960e8c70645";
+              sha256_unsigned = "c57e8e7869d1bf2dbef49e1703f2cb27953cfd82bd1febb1765808d6486518e2";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "youhua,wr1200js"
+          ];
+          titles = [
+            {
+              model = "WR1200JS";
+              vendor = "YouHua";
+            }
+          ];
+        };
+        youku_yk-l2 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-youku_yk-l2";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-youku_yk-l2-initramfs-kernel.bin";
+              sha256 = "1345943043765c0984ead1f31d830334c99bf833c3878da8ec37c5440c121128";
+              sha256_unsigned = "1345943043765c0984ead1f31d830334c99bf833c3878da8ec37c5440c121128";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-youku_yk-l2-squashfs-sysupgrade.bin";
+              sha256 = "22f08e3b30ab8c23d2cfbb76ad7831754c02de24c8d5d1aab2c868050111502c";
+              sha256_unsigned = "c3d43fd3b7224c06da802bbce5efb482776d74e520d3f52f3ff9bab0c8fa730c";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "youku,yk-l2"
+          ];
+          titles = [
+            {
+              model = "YK-L2";
+              vendor = "Youku";
+            }
+          ];
+        };
+        yuncore_ax820 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-yuncore_ax820";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_ax820-squashfs-sysupgrade.bin";
+              sha256 = "affb46827253f08a869663c74d80e74b5480b540f98aac4f3b8048cf96fb9951";
+              sha256_unsigned = "a025d27bdff7c76d10db1e69eeb3b264ad05a66913757d5b06d2a308a492a75b";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_ax820-initramfs-kernel.bin";
+              sha256 = "64f63da3f71386b88a7e6a5055b358a58ba1ee7108c8d91a684bd7607162d6a3";
+              sha256_unsigned = "64f63da3f71386b88a7e6a5055b358a58ba1ee7108c8d91a684bd7607162d6a3";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "yuncore,ax820"
+          ];
+          titles = [
+            {
+              model = "AX820";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_fap640 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-yuncore_fap640";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_fap640-squashfs-sysupgrade.bin";
+              sha256 = "23dc279c6455ed91eb880049a2520ef516d3530791814633cefd5333cf2054c5";
+              sha256_unsigned = "6e2d0104d82bf417601a0752b2d9b3737a62737ef441a75e933c6f7b134c1944";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_fap640-initramfs-kernel.bin";
+              sha256 = "34297833fdf2ac769f3077d67a00bc3127e991e952c4442f2ffb79a2ee589233";
+              sha256_unsigned = "34297833fdf2ac769f3077d67a00bc3127e991e952c4442f2ffb79a2ee589233";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "yuncore,fap640"
+          ];
+          titles = [
+            {
+              model = "FAP640";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_fap690 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-yuncore_fap690";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_fap690-initramfs-kernel.bin";
+              sha256 = "e04baf2c7642a55a0674f45b613a8b77d1a95362335e0b4d4e144b4a583beb39";
+              sha256_unsigned = "e04baf2c7642a55a0674f45b613a8b77d1a95362335e0b4d4e144b4a583beb39";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_fap690-squashfs-sysupgrade.bin";
+              sha256 = "5a1165f62aac12c05f30af58eaa7722961e38eb7a2e19e387a13f7d33a06268b";
+              sha256_unsigned = "1d28f839c43f814ec5f56d3f868b7b3861c8f72e23773979e30a85328b0dd70b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "yuncore,fap690"
+          ];
+          titles = [
+            {
+              model = "FAP690";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        yuncore_g720 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-yuncore_g720";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_g720-squashfs-sysupgrade.bin";
+              sha256 = "f9ed60e1adf01cd2f81932743e34c99c005b9e7d0460b382fb8a6904f99328ba";
+              sha256_unsigned = "c7c315e6ffc991b92791d7bebe774f2280554361a98f9ecde4083b3e8547f890";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-yuncore_g720-initramfs-kernel.bin";
+              sha256 = "d53149b5abfb2bb385214399a261dd9907ea7f5d4f325d8dfdea399fb8e4865b";
+              sha256_unsigned = "d53149b5abfb2bb385214399a261dd9907ea7f5d4f325d8dfdea399fb8e4865b";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "yuncore,g720"
+            "mt7621-rfb-ax-nor"
+          ];
+          titles = [
+            {
+              model = "G720";
+              vendor = "YunCore";
+            }
+          ];
+        };
+        z-router_zr-2660 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "kmod-usb3"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-z-router_zr-2660";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-z-router_zr-2660-initramfs-kernel.bin";
+              sha256 = "6ee659e7202f7aecd161829398bbdfa228279d724faf32bb2dc4545c348f46a7";
+              sha256_unsigned = "6ee659e7202f7aecd161829398bbdfa228279d724faf32bb2dc4545c348f46a7";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-z-router_zr-2660-squashfs-sysupgrade.bin";
+              sha256 = "579fb05ed2fcc3a368d2228064b9a54492c7d90928b739079788253f1a91445d";
+              sha256_unsigned = "799a5868051ba6e5c319bded0d983cba27607eeeb433b68b44624f29ffe0e7d3";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "z-router,zr-2660"
+          ];
+          titles = [
+            {
+              model = "ZR-2660";
+              vendor = "Z-ROUTER";
+            }
+            {
+              model = "AX1800";
+              vendor = "Routerich";
+            }
+          ];
+        };
+        zbtlink_zbt-we1326 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-sdhci-mt7620"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-we1326";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-we1326-squashfs-sysupgrade.bin";
+              sha256 = "aa2cf7da239b9976d232cfda420e1d010e09198836aedbf4c1a697876d2ce74e";
+              sha256_unsigned = "8096eecb42908a1cc556736180934f046dbbe0e6159f9d8d1b359a827db3a633";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-we1326-initramfs-kernel.bin";
+              sha256 = "ffdda91b7c893d59df2d8078a634f30e2104041e19444374011a31e91621e5f2";
+              sha256_unsigned = "ffdda91b7c893d59df2d8078a634f30e2104041e19444374011a31e91621e5f2";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-we1326"
+            "zbt-we1326"
+          ];
+          titles = [
+            {
+              model = "ZBT-WE1326";
+              vendor = "Zbtlink";
+            }
+            {
+              model = "WF3526-P";
+              vendor = "Wiflyer";
+            }
+          ];
+        };
+        zbtlink_zbt-we3526 = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-we3526";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-we3526-initramfs-kernel.bin";
+              sha256 = "df3be5b88d2608792d8ec3c764def207ea21d8dfc595fdec574ecbdaa6ffa955";
+              sha256_unsigned = "df3be5b88d2608792d8ec3c764def207ea21d8dfc595fdec574ecbdaa6ffa955";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-we3526-squashfs-sysupgrade.bin";
+              sha256 = "f13fbaae2a39796eb31eacdc732918a9cb973d833f834ca2810895d1d7a775b7";
+              sha256_unsigned = "c23d40db30563d3aadd08d7a88adcf6a324582fe0103e368b762097f35a60779";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-we3526"
+          ];
+          titles = [
+            {
+              model = "ZBT-WE3526";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg1602-16m = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-16m-initramfs-kernel.bin";
+              sha256 = "67589ddbda0f680c1be52a6f5cb1e73f7ce0824d39764b5cf168b0dcc5f4a1e4";
+              sha256_unsigned = "67589ddbda0f680c1be52a6f5cb1e73f7ce0824d39764b5cf168b0dcc5f4a1e4";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-16m-squashfs-sysupgrade.bin";
+              sha256 = "4320236c044617b788815585ed4fd24291928c3117619c5d862a032764997025";
+              sha256_unsigned = "d95e623ddd1f9e1a4435eb619345aff813858d027fcc29b246eb90decb0dff72";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg1602-16m"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG1602";
+              variant = "16M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg1602-v04-16m = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-v04-16m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-v04-16m-squashfs-sysupgrade.bin";
+              sha256 = "0168bcdddb4fa60ecc9e61454a619ce29d95d2ed16a201b43f720622672d414d";
+              sha256_unsigned = "6b7f1d6493eac0c0717ff8177d4203c28f8d190d4f80b3f0709906af08fb7698";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-v04-16m-initramfs-kernel.bin";
+              sha256 = "44dae2e6fbb843d0a02beba7343c6073af00406e2ecd1f42fb73160bf8c30a32";
+              sha256_unsigned = "44dae2e6fbb843d0a02beba7343c6073af00406e2ecd1f42fb73160bf8c30a32";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg1602-v04-16m"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG1602-V04";
+              variant = "16M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg1602-v04-32m = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-v04-32m";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-v04-32m-squashfs-sysupgrade.bin";
+              sha256 = "42475b9c08c2211ccd72e2dc8c08e24ba15c45547a5bcdd418874efebda31522";
+              sha256_unsigned = "beff8f58f55d08be9ab42fb8f66a1b07ac5d9765d37e730c543ff226ef9f2ad3";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1602-v04-32m-initramfs-kernel.bin";
+              sha256 = "660c3dd9d0a3780cd50a6118ffa5225db46d372e61e48c26107c615d8ab2246c";
+              sha256_unsigned = "660c3dd9d0a3780cd50a6118ffa5225db46d372e61e48c26107c615d8ab2246c";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg1602-v04-32m"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG1602-V04";
+              variant = "32M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg1608-16m = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1608-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1608-16m-initramfs-kernel.bin";
+              sha256 = "7ced93a98e2710825ce2426f3a6212c97cc6c3d4abaeaf6fefa33bc71ea88093";
+              sha256_unsigned = "7ced93a98e2710825ce2426f3a6212c97cc6c3d4abaeaf6fefa33bc71ea88093";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1608-16m-squashfs-sysupgrade.bin";
+              sha256 = "723f947ba125fb654061d81f22f16b3b59cec5ccb6ccf20b7f76be92e2068618";
+              sha256_unsigned = "5dc83e5b99a7fec7148a3170cfbacf31d1a820c9b24d295478e6c47f0808f9de";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg1608-16m"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG1608";
+              variant = "16M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg1608-32m = {
+          device_packages = [
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt7615e"
+            "kmod-mt7663-firmware-ap"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1608-32m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1608-32m-initramfs-kernel.bin";
+              sha256 = "a4259811516b2592c84bb1b0d167f32a02cbd29d3aeb143eb3f27260bc6213b2";
+              sha256_unsigned = "a4259811516b2592c84bb1b0d167f32a02cbd29d3aeb143eb3f27260bc6213b2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg1608-32m-squashfs-sysupgrade.bin";
+              sha256 = "738b8831cefc4ea58c9287da8ba9143dbc9237f7f6d266ff836e2e9f37793e79";
+              sha256_unsigned = "92659225ccd16c9496f48db3b141f532d71d459b2d979b35e6e782dcdc8bb397";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg1608-32m"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG1608";
+              variant = "32M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg2626 = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg2626";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg2626-squashfs-sysupgrade.bin";
+              sha256 = "12205695e70bc3b13d7169acc930db99dbb7488061d1d5c9d928c87f02b1cf5e";
+              sha256_unsigned = "d3410806a5e0a4745e5c790e6c565cb9ed253c44f795726bf303a7fdf2e540e8";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg2626-initramfs-kernel.bin";
+              sha256 = "b026683d04c1e7ce5c14722a30858a9800bc5880978f60d49fc1dbda8be842bf";
+              sha256_unsigned = "b026683d04c1e7ce5c14722a30858a9800bc5880978f60d49fc1dbda8be842bf";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg2626"
+            "zbt-wg2626"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG2626";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg3526-16m = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg3526-16m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg3526-16m-initramfs-kernel.bin";
+              sha256 = "e112967c345d33983bf43dcbcf433175e8d28e7987a6496906361691642a7acb";
+              sha256_unsigned = "e112967c345d33983bf43dcbcf433175e8d28e7987a6496906361691642a7acb";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg3526-16m-squashfs-sysupgrade.bin";
+              sha256 = "1f3c5c052e91b9f16cfa6cb21e3cb754838ee70b095b89eb4a0bba521370f1e8";
+              sha256_unsigned = "83b452e1bbeb3c33a1a0ebad90eee7d3568f3f03aa85a43fb0e4a6722ac2f081";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg3526-16m"
+            "zbt-wg3526"
+            "zbt-wg3526-16M"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG3526";
+              variant = "16M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zbtlink_zbt-wg3526-32m = {
+          device_packages = [
+            "kmod-ata-ahci"
+            "kmod-sdhci-mt7620"
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg3526-32m";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg3526-32m-initramfs-kernel.bin";
+              sha256 = "d5fa24c6b71e2309149da9ac12e3bb3a840d1c30065cb9177df95d1b1f623d21";
+              sha256_unsigned = "d5fa24c6b71e2309149da9ac12e3bb3a840d1c30065cb9177df95d1b1f623d21";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zbtlink_zbt-wg3526-32m-squashfs-sysupgrade.bin";
+              sha256 = "55116d2dd1501bfe5ddb8155ebe569ea5e63a682b6bc68f00d1ce5f7f5b3e4b9";
+              sha256_unsigned = "fb75a9fb95f8c74c8bb31fa25cdf82b143d842d96002917af5153121611368a7";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zbtlink,zbt-wg3526-32m"
+            "ac1200pro"
+            "zbt-wg3526-32M"
+          ];
+          titles = [
+            {
+              model = "ZBT-WG3526";
+              variant = "32M";
+              vendor = "Zbtlink";
+            }
+          ];
+        };
+        zio_freezio = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt76x2"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zio_freezio";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zio_freezio-squashfs-sysupgrade.bin";
+              sha256 = "c4f3dcbcfb1ebf584fb33ad7f37261017e58481992aac117daa1015869ade715";
+              sha256_unsigned = "8ef993f1c38853c0b07a78fa58f8d4ac3ffc3f51a31557b88b47dcb8f991ad75";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zio_freezio-initramfs-kernel.bin";
+              sha256 = "885ce86d808786ce6ad705908faa3bc548ac02f808462fc6dee411d5bbb40e87";
+              sha256_unsigned = "885ce86d808786ce6ad705908faa3bc548ac02f808462fc6dee411d5bbb40e87";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zio,freezio"
+          ];
+          titles = [
+            {
+              model = "FREEZIO";
+              vendor = "ZIO";
+            }
+          ];
+        };
+        zyxel_lte3301-plus = {
+          device_packages = [
+            "kmod-mt7615-firmware"
+            "kmod-usb3"
+            "kmod-usb-ledtrig-usbport"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "uqmi"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zyxel_lte3301-plus";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_lte3301-plus-initramfs-recovery.bin";
+              sha256 = "d68b7e7abacbf0c32b30c37728dd08f0fd31239249e024a82d285b1a1b614df2";
+              sha256_unsigned = "d68b7e7abacbf0c32b30c37728dd08f0fd31239249e024a82d285b1a1b614df2";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_lte3301-plus-squashfs-sysupgrade.bin";
+              sha256 = "eae45aff98a4aea927e5f51b322c916358555a27fa55b83e224e85dfd4b4db89";
+              sha256_unsigned = "6cf54d0245a883a39e3922767b22ee126ed97c5f1a0580365ec335195d8a6b3b";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zyxel,lte3301-plus"
+          ];
+          titles = [
+            {
+              model = "LTE3301-PLUS";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+        zyxel_nr7101 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-usb3"
+            "kmod-usb-net-qmi-wwan"
+            "kmod-usb-serial-option"
+            "uqmi"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zyxel_nr7101";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nr7101-initramfs-recovery.bin";
+              sha256 = "4cd71c02e7e0380f3518abd58c88c5142109d065f0b05899afd9780e2b5ad72a";
+              sha256_unsigned = "4cd71c02e7e0380f3518abd58c88c5142109d065f0b05899afd9780e2b5ad72a";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nr7101-squashfs-sysupgrade.bin";
+              sha256 = "69b87f151f5d5bcaf54d46810c2016e62f70001ee2325fb6d679ccc5c37b33d9";
+              sha256_unsigned = "faa28db1879a528e1527dd5775a38032b3d0628ab7965a91f732176ed31ab766";
+              type = "sysupgrade";
+            }
+          ];
+          supported_devices = [
+            "zyxel,nr7101"
+          ];
+          titles = [
+            {
+              model = "NR7101";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+        zyxel_nwa50ax = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "zyxel-bootconfig"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa50ax";
+          images = [
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa50ax-initramfs-kernel.bin";
+              sha256 = "052bce652f17b16c0d31673a3307daf15378fc3c1f62747028530bcb010fc000";
+              sha256_unsigned = "052bce652f17b16c0d31673a3307daf15378fc3c1f62747028530bcb010fc000";
+              type = "kernel";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa50ax-squashfs-sysupgrade.bin";
+              sha256 = "01ac310a97f96f6b4508f39b882e33e9e9d060ba7588be494530639bb1b047ee";
+              sha256_unsigned = "c77e7e8267ab830759d04c6902f91ffe29300928f5b429cdbdb99744d1cfd9fb";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa50ax-squashfs-factory.bin";
+              sha256 = "4048e685874d4fbe562e38415770d195d3f4ac3ab7714db42e55466eb2c5db05";
+              sha256_unsigned = "4048e685874d4fbe562e38415770d195d3f4ac3ab7714db42e55466eb2c5db05";
+              type = "factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa50ax-squashfs-ramboot-factory.bin";
+              sha256 = "fbb7923ac0473782b9820fefc4963effafa014557f2da16ac1107eb11eee19b4";
+              sha256_unsigned = "fbb7923ac0473782b9820fefc4963effafa014557f2da16ac1107eb11eee19b4";
+              type = "ramboot-factory";
+            }
+          ];
+          supported_devices = [
+            "zyxel,nwa50ax"
+          ];
+          titles = [
+            {
+              model = "NWA50AX";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+        zyxel_nwa55axe = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+            "zyxel-bootconfig"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa55axe";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa55axe-squashfs-ramboot-factory.bin";
+              sha256 = "d490a695362c242235dd6362c63a8898978b13d12e95f060ac0873566f54463f";
+              sha256_unsigned = "d490a695362c242235dd6362c63a8898978b13d12e95f060ac0873566f54463f";
+              type = "ramboot-factory";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa55axe-squashfs-sysupgrade.bin";
+              sha256 = "eeb15640be052c0bf2c81bab161dc7cdec1eb3246d9f1aefb334298c4ef7ea8d";
+              sha256_unsigned = "e9ca25687cd5437645526215200df2ee8e9bd7ce752b3e9adce785689efd04e7";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa55axe-squashfs-factory.bin";
+              sha256 = "891ec12a38fcc11cd45bda2ab775b4d4b82560e35fe0e6ca0a436082e3f5840b";
+              sha256_unsigned = "891ec12a38fcc11cd45bda2ab775b4d4b82560e35fe0e6ca0a436082e3f5840b";
+              type = "factory";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_nwa55axe-initramfs-kernel.bin";
+              sha256 = "e7b79828e4868f0f4c9741dd63baa7b3f01142f4249d47b881ae8d7ccc5cc282";
+              sha256_unsigned = "e7b79828e4868f0f4c9741dd63baa7b3f01142f4249d47b881ae8d7ccc5cc282";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zyxel,nwa55axe"
+          ];
+          titles = [
+            {
+              model = "NWA55AXE";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+        zyxel_wap6805 = {
+          device_packages = [
+            "kmod-mt7603"
+            "kmod-mt7621-qtn-rgmii"
+            "-uboot-envtools"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zyxel_wap6805";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_wap6805-squashfs-sysupgrade.bin";
+              sha256 = "86b1548a2d3b4375d0f15ef437ee93d84fb660d1f483d2f7adb9d02b8c3d691d";
+              sha256_unsigned = "a49981b0dff715bdf3e18c06a94a113942b8f5c936a35c1e76acc74b9f6c37c1";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_wap6805-initramfs-kernel.bin";
+              sha256 = "24cb296779da0d03636d09c683091f7b21ed9ffe2f26d6b4f3d1531fd9c1490d";
+              sha256_unsigned = "24cb296779da0d03636d09c683091f7b21ed9ffe2f26d6b4f3d1531fd9c1490d";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zyxel,wap6805"
+          ];
+          titles = [
+            {
+              model = "WAP6805";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+        zyxel_wsm20 = {
+          device_packages = [
+            "kmod-mt7915-firmware"
+          ];
+          image_prefix = "openwrt-23.05.6-ramips-mt7621-zyxel_wsm20";
+          images = [
+            {
+              filesystem = "squashfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_wsm20-squashfs-sysupgrade.bin";
+              sha256 = "a45e295a530586f0ce0a3a6123cfa9756f6d8a5b5f105a816094f97fd5d7ac6d";
+              sha256_unsigned = "51e9748483b38985791d670ef616f8454034cbd3df9cd6c23e8e4cfcf2fd2502";
+              type = "sysupgrade";
+            }
+            {
+              filesystem = "initramfs";
+              name = "openwrt-23.05.6-ramips-mt7621-zyxel_wsm20-initramfs-kernel.bin";
+              sha256 = "ad4c7aef2adc86b0a1f9af1854a05bd5af1e609ef7e77ae2b85198b00306eaf1";
+              sha256_unsigned = "ad4c7aef2adc86b0a1f9af1854a05bd5af1e609ef7e77ae2b85198b00306eaf1";
+              type = "kernel";
+            }
+          ];
+          supported_devices = [
+            "zyxel,wsm20"
+          ];
+          titles = [
+            {
+              model = "WSM20";
+              vendor = "ZyXEL";
+            }
+          ];
+        };
+      };
+      source_date_epoch = 1755196060;
+      target = "ramips/mt7621";
       version_code = "r24232-539228933c";
       version_number = "23.05.6";
     };
