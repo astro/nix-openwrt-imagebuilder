@@ -161,7 +161,7 @@
   targets."ath79"."mikrotik".sha256 = "sha256-SeKe+umw0fBjyZmmVvh4Z2qkkpnHupE1klq02cGeH4o=";
   kmods."ath79"."mikrotik"."6.6.100-1-1e8f491fc5dde26e743c9814659971ad".sha256 = "";
   targets."ath79"."mikrotik".packagesArch = "mips_24kc";
-  targets."ath79"."generic".sha256 = "sha256-G9FdKkeqxi8R2jf06ttKh45N57gYGFan1sNdRVSu0+E=";
+  targets."ath79"."generic".sha256 = "sha256-fwEazb4mC8LJ3bu+Txor6XTqXUEc9gMp/B47f+2gyDQ=";
   kmods."ath79"."generic"."6.6.100-1-4058c9de2c6c14ee40cc505eac85bd7a".sha256 = "";
   targets."ath79"."generic".packagesArch = "mips_24kc";
   targets."ath79"."tiny".sha256 = "sha256-eORYJHYGM04TLkzn6Jbqc7cMONObOoUCKPmRR4l/wrA=";
