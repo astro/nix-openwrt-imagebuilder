@@ -58,7 +58,13 @@ in
 
 ## Usage with Nix Flakes
 
-```nix
+### Using build module (recommended)
+
+nix-openwrt-imagebuilder exposes a builder module that leverages [nixpkgs' module system](https://nixos.org/manual/nixpkgs/stable/#module-system) to provide easy to use, self-documenting interface with strict option definitions, type-checks.
+
+See documentation for all available options in [docs](docs/).
+
+```nix 
 {
   inputs = {
     openwrt-imagebuilder.url = "github:astro/nix-openwrt-imagebuilder";
@@ -67,35 +73,89 @@ in
     packages.x86_64-linux.my-router =
       let
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-        profiles = openwrt-imagebuilder.lib.profiles { inherit pkgs; };
-
-        config = profiles.identifyProfile "avm_fritz7412" // {
-          # add package to include in the image, ie. packages that you don't
-          # want to install manually later
-          packages = [ "tcpdump" ];
-
-          disabledServices = [ "dnsmasq" ];
-
-          # include files in the images.
-          # to set UCI configuration, create a uci-defauts scripts as per
-          # official OpenWRT ImageBuilder recommendation.
-          files = pkgs.runCommand "image-files" {} ''
-            mkdir -p $out/etc/uci-defaults
-            cat > $out/etc/uci-defaults/99-custom <<EOF
-            uci -q batch << EOI
-            set system.@system[0].hostname='testap'
-            commit
-            EOI
-            EOF
-          '';
-        };
-
       in
-        openwrt-imagebuilder.lib.build config;
+      openwrt-imagebuilder.lib.build-module {
+        inherit pkgs;
+        modules = [
+          {
+            release = "23.05.5";
+            hardware = {
+              profile = "tplink_archer-c7-v2";
+            };
+            packages = {
+              include = [
+                "tcpdump"
+                "vxlan"
+                "kmod-vxlan"
+              ];
+            };
+            files = [
+              {
+                source = pkgs.writeText "uci-defaults-99-custom" ''
+                  uci -q batch << EOI
+                  set system.@system[0].hostname='testap'
+                  commit
+                  EOI
+                '';
+                target = "/etc/uci-defaults/99-custom";
+              }
+            ];
+          }
+        ];
+      };
   };
 }
+
 ```
+
+### Using builder function (deprecated)
+
+This is a deprecated approach and eventually will be removed. 
+
+<details>
+
+  <summary>Code</summary>
+
+  ```nix
+  {
+    inputs = {
+      openwrt-imagebuilder.url = "github:astro/nix-openwrt-imagebuilder";
+    };
+    outputs = { self, nixpkgs, openwrt-imagebuilder }: {
+      packages.x86_64-linux.my-router =
+        let
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+          profiles = openwrt-imagebuilder.lib.profiles { inherit pkgs; };
+
+          config = profiles.identifyProfile "avm_fritz7412" // {
+            # add package to include in the image, ie. packages that you don't
+            # want to install manually later
+            packages = [ "tcpdump" ];
+
+            disabledServices = [ "dnsmasq" ];
+
+            # include files in the images.
+            # to set UCI configuration, create a uci-defauts scripts as per
+            # official OpenWRT ImageBuilder recommendation.
+            files = pkgs.runCommand "image-files" {} ''
+              mkdir -p $out/etc/uci-defaults
+              cat > $out/etc/uci-defaults/99-custom <<EOF
+              uci -q batch << EOI
+              set system.@system[0].hostname='testap'
+              commit
+              EOI
+              EOF
+            '';
+          };
+
+        in
+          openwrt-imagebuilder.lib.build config;
+    };
+  }
+  ```
+
+</details>
 
 ## Refreshing hashes
 
