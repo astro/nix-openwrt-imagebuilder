@@ -100,7 +100,7 @@ pkgs.stdenv.mkDerivation ({
       else throw "No valid image builder found!";
 
   postPatch = with pkgs; ''
-    patchShebangs scripts staging_dir/host/bin
+    patchShebangs scripts staging_dir/host/bin target/linux
     substituteInPlace rules.mk \
       --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}" \
       --replace "/usr/bin/env true" "${coreutils}/bin/true" \
