@@ -26,9 +26,9 @@
   targets."realtek"."rtl839x".packagesArch = "mips_24kc";
   packages."mips_24kc"."base".sha256 = "sha256-yTesj4rTcLwHHPCy6I1/218sPf67W8fbgGWKHSkUY04=";
   packages."mips_24kc"."luci".sha256 = "sha256-smr80ARA7q5+YTbiOwxq0nPP2H79rXmeCP15eAkOaVQ=";
-  packages."mips_24kc"."packages".sha256 = "sha256-2tr6OweKKlzYGZIiRzekqiJ7JxAH5VqjnQ6U7JtVTo8=";
-  packages."mips_24kc"."routing".sha256 = "sha256-7tOxHZlOfiYSzsk/jDXPIbpx//mT+za/VIb2XsK2fXM=";
-  packages."mips_24kc"."telephony".sha256 = "sha256-z1NMRRI+ZOxz2UmBgTvVro4kvyeMNhdwR5jy70V+bAE=";
+  packages."mips_24kc"."packages".sha256 = "sha256-2sj6PaUU0ipHEno0gca220hgnNRWCu7pofG//5aiJ6g=";
+  packages."mips_24kc"."routing".sha256 = "sha256-EmiSmX3iUyuHRIP0TDNMmSNJVhm7Vle1eUtS1POXieU=";
+  packages."mips_24kc"."telephony".sha256 = "sha256-IUe4UMZ/jHuzlZSxHTsjjRlWN4NHV0ggVi/DUGVhE0o=";
   targets."realtek"."rtl930x".sha256 = "sha256-7dKVJeztHrimHbCoOVEvOHBOXX1koLjljYTH9TiTlaQ=";
   targets."realtek"."rtl930x".packagesArch = "mips_24kc";
   targets."realtek"."rtl931x".sha256 = "sha256-uRXbC5/guGux02Hh9vYWQaIiJdCpJXD1P0nnZsoTibU=";
@@ -69,8 +69,8 @@
   targets."pistachio"."generic".packagesArch = "mipsel_24kc_24kf";
   packages."mipsel_24kc_24kf"."base".sha256 = "sha256-rFxCTPGIb/34AMuEPXJgCTLwl0C4WDShlm4uiHwBA+8=";
   packages."mipsel_24kc_24kf"."luci".sha256 = "sha256-2Qto/eJbfbz5okBXOHAg3v4WM9pv7Xc6ASmpWRPkmVk=";
-  packages."mipsel_24kc_24kf"."packages".sha256 = "sha256-wyapWQj+7keH71JshBk619YTnwJ3W7aXH/+94/15nmQ=";
-  packages."mipsel_24kc_24kf"."routing".sha256 = "sha256-k5uEFocyMK8/wiJNwbRocVik4ZY8XB01/ASU45XYAJY=";
+  packages."mipsel_24kc_24kf"."packages".sha256 = "sha256-DV+3DmIZPAfiuDH0WomC4E3htFVfZJZKD13sAN6EBvE=";
+  packages."mipsel_24kc_24kf"."routing".sha256 = "sha256-FMKfz8XLib3wQ/UoYitxO146tgrua5R86yboTVOtsHw=";
   packages."mipsel_24kc_24kf"."telephony".sha256 = "sha256-rF6jOeWVwj8wft655Z9pLVwEQ4zbtXPmN89z2i5NGJs=";
   targets."tegra"."generic".sha256 = "sha256-2XR53lmRKbiPiBuUPZjBWTKzIETwpfilVRpQjWTVnvg=";
   targets."tegra"."generic".packagesArch = "arm_cortex-a9_vfpv3-d16";
