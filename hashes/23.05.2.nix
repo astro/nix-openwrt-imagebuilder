@@ -3,9 +3,9 @@
   targets."kirkwood"."generic".packagesArch = "arm_xscale";
   packages."arm_xscale"."base".sha256 = "sha256-1C9Lv/YY09FFEhqbycqFjWDMQI9TAJV6ky0YKj05uPg=";
   packages."arm_xscale"."luci".sha256 = "sha256-mjR2Kh2TCiqqVK5rDSN+qNYmatjL2fKuY/pZtb9aiWY=";
-  packages."arm_xscale"."packages".sha256 = "sha256-tSMtnzmvsGZusaPZnOdHXcctSVnAtfhqVJQfJnvzZr8=";
-  packages."arm_xscale"."routing".sha256 = "sha256-7uujyg5HsbIRGgEzf88wehydZZTTsdVfUJhm577bE24=";
-  packages."arm_xscale"."telephony".sha256 = "sha256-ZDo9YQhK41rFbMxjZpFXw8rWKhSQQLuddpMIr9a/Cqo=";
+  packages."arm_xscale"."packages".sha256 = "sha256-uu+a8ZqZX99NVjTdEFUKPcavtFsKmuVcs3GAWisMesY=";
+  packages."arm_xscale"."routing".sha256 = "sha256-KUhLnWgh4xaoyFLtxuln+8i0xj5Oe46ve7QfW3e5mCQ=";
+  packages."arm_xscale"."telephony".sha256 = "sha256-6wB26ehcQdPUmDO6x6bxiBtqra/hk47Xb4brWcK6Muk=";
   targets."apm821xx"."sata".sha256 = "sha256-eiVrtrHNFfMJt4+qF6SCBpilQmnDJT/60aF3OjChz7M=";
   targets."apm821xx"."sata".packagesArch = "powerpc_464fp";
   packages."powerpc_464fp"."base".sha256 = "sha256-Cmm7QRfXFPAaS2WCwf4eZENvGENyQ3BEXt3SuviECno=";
