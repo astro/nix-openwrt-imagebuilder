@@ -7,12 +7,6 @@
   packages."mips_mips32"."routing".sha256 = "sha256-8bBh0JJuYU7eURVp5DW5c3wPLIcOACpYaculNBQJMcQ=";
   packages."mips_mips32"."telephony".sha256 = "sha256-WnuKqVQYflWVBKqaXgPGMHIvQmz6BGHEqe1gXkf18H0=";
   targets."archs38"."generic".sha256 = "sha256-UNGzA98ixEYSmA8QcoMwRGXN9tJKijBCrRhapuyg2Z8=";
-  targets."archs38"."generic".packagesArch = "arc_archs";
-  packages."arc_archs"."base".sha256 = "sha256-7qJkkeaBJn8humHskRbVukqyPuKK/exh28vEjF8MzkY=";
-  packages."arc_archs"."luci".sha256 = "sha256-nYev2rJ+paqjed+GsGK/fZ9pDWVndIhWjcbW8wo8LpU=";
-  packages."arc_archs"."packages".sha256 = "sha256-uHHRg0HhfkLTdEni8w8umf5Wv/HUUVXt3tV/bylDkGU=";
-  packages."arc_archs"."routing".sha256 = "sha256-b1mifYSGAPgO2q5H/uQ+LIpsNmNJbh1735FG2gzHcdw=";
-  packages."arc_archs"."telephony".sha256 = "sha256-cGgQzLXa0VACTidkdroIydRRmWdaRHV/sxft0/HP97U=";
   targets."kirkwood"."generic".sha256 = "sha256-Yj0gCqELqmy2j/RfSm1Fl/LUKzwjilv6nJdlxz8AvKo=";
   targets."kirkwood"."generic".packagesArch = "arm_xscale";
   packages."arm_xscale"."base".sha256 = "sha256-94I1Ik1Fv4qBBBzdGt7ViVjm6P4B3+xjY7v0ERmsMSQ=";
