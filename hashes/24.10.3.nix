@@ -203,7 +203,7 @@
   packages."arm_arm1176jzf-s_vfp"."base".sha256 = "sha256-oPtOJgbF+yJf1ZOp9IjRESEMHKhqPoh58LGFClYa8sM=";
   packages."arm_arm1176jzf-s_vfp"."luci".sha256 = "sha256-hb/cVzo1SBrDZ231hJiTVHdhv1wPD9OJyqHC8INL/fs=";
   packages."arm_arm1176jzf-s_vfp"."packages".sha256 = "sha256-+yV0AblRl6qhmncZqW4WsKM3Ga5hjXGf8U3pPegfcns=";
-  packages."arm_arm1176jzf-s_vfp"."routing".sha256 = "sha256-FO1QyzrZ/Q6qDGVpU6w089GTqcdSYhiqc2yAM3N1DMA=";
+  packages."arm_arm1176jzf-s_vfp"."routing".sha256 = "sha256-Ho/AlhEMrDzskmRC3+0A3Z2ucBkN3kTcoN8NyDdAVS0=";
   packages."arm_arm1176jzf-s_vfp"."telephony".sha256 = "sha256-d7hCJNmKWWvDlipJR/YUnWKzEj9q20WBq0tEAodrP9E=";
   targets."qualcommax"."ipq807x".sha256 = "sha256-ofsZUg4KKaJbNwkMS9jsMz1I1MCI2YAlk+hfBlD77yI=";
   kmods."qualcommax"."ipq807x"."6.6.104-1-8af96624c277fe1e57ffca5737140929".sha256 = "sha256-JVpxhH1qKfQeTXpZoo0SNvMg4H5+ThN+9SxOcXesnVw=";
