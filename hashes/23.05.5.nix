@@ -19,9 +19,9 @@
   targets."realtek"."rtl838x".packagesArch = "mips_4kec";
   packages."mips_4kec"."base".sha256 = "sha256-yTr2PmsUw8y3u/ZkUl7TfzbvP/PXVXzlSPsBfJOhGc4=";
   packages."mips_4kec"."luci".sha256 = "sha256-ogNVBkDgvn9+lh5rfpwx7yLRz9tS8K3wFUqHJkVzOYY=";
-  packages."mips_4kec"."packages".sha256 = "sha256-YOrGNxlNvys6YLunskP/osciAndgPc4ybgMw9gTvK0E=";
-  packages."mips_4kec"."routing".sha256 = "sha256-3SJAH2m6tJlKJUbjMXRrppCmWai/LnfJOWHSESr2dKg=";
-  packages."mips_4kec"."telephony".sha256 = "sha256-CVWImQdt88RMpTIjkF4+nKNrQUBp2cK7VU/28G1bskQ=";
+  packages."mips_4kec"."packages".sha256 = "sha256-rKjSdp9BtPZTw8xwzIPTDqkaBq0fM8vwfGHyyzgIaxs=";
+  packages."mips_4kec"."routing".sha256 = "sha256-g2kO32FxiK/XGtJ3KwJy4Vbnx2jw8RC28v9yF1QbkXc=";
+  packages."mips_4kec"."telephony".sha256 = "sha256-MUCT3uyOhChrE4QnnyHBnXkzQW5Uhor021kSH0SH1og=";
   targets."realtek"."rtl839x".sha256 = "sha256-d5TsFtdOrwKniSzERXgPw5yuBR0UaAONlV50Wt2E3pc=";
   targets."realtek"."rtl839x".packagesArch = "mips_24kc";
   packages."mips_24kc"."base".sha256 = "sha256-IdulsHEtDfOrlazckygAZoO6DzHvjstxUSSf9NB1QPc=";
@@ -205,9 +205,9 @@
   targets."at91"."sama7".packagesArch = "arm_cortex-a7_vfpv4";
   packages."arm_cortex-a7_vfpv4"."base".sha256 = "sha256-6nTp1Tb8jBHBVCwUBt3me3UKzDV6+943U3IpfCojkj0=";
   packages."arm_cortex-a7_vfpv4"."luci".sha256 = "sha256-5ZOqsNXxOLUHA01rHADC3nxC+bT0RPnIaIgPLJ3yJUM=";
-  packages."arm_cortex-a7_vfpv4"."packages".sha256 = "sha256-y2tjvE4E7NHAaR+EBguuawoS6dzTWAuMxvKl9tkGGW0=";
-  packages."arm_cortex-a7_vfpv4"."routing".sha256 = "sha256-aJtvtMOfaGeakIz7qfq1BT7qUAB8uGJ9r/gOz1ixH5I=";
-  packages."arm_cortex-a7_vfpv4"."telephony".sha256 = "sha256-13Yg5rUf93rOR5WALGraOQSaKulAsx5ZTZgEJSBaACM=";
+  packages."arm_cortex-a7_vfpv4"."packages".sha256 = "sha256-Hz+mW9vDxah5FdE67XtOWK6F00PiMOID3MfJBvZE7/0=";
+  packages."arm_cortex-a7_vfpv4"."routing".sha256 = "sha256-FQXQRKQsFaovKJhzohP6yeNOJYOFVuCjJerFL3QkblI=";
+  packages."arm_cortex-a7_vfpv4"."telephony".sha256 = "sha256-BAuIGnc7m3510YAuXQcZI/hFufbxoP/WliDKXUzTapU=";
   targets."at91"."sam9x".sha256 = "sha256-hSF3pMStciAoLbN2NxttcngBU+fz2QgVDtazJvi/bAc=";
   targets."at91"."sam9x".packagesArch = "arm_arm926ej-s";
   packages."arm_arm926ej-s"."base".sha256 = "sha256-qGop+j8/7sAir6/1qDxeJIpqL2n45ZWUc4eq3dfYYWY=";
