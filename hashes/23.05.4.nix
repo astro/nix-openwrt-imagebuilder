@@ -97,9 +97,9 @@
   targets."ramips"."mt7621".packagesArch = "mipsel_24kc";
   packages."mipsel_24kc"."base".sha256 = "sha256-Vc3zO+CixwHMwiU4lgYoqwy/jdZyVKYGiEwBfaGpvVw=";
   packages."mipsel_24kc"."luci".sha256 = "sha256-pdsPWsLeTEWJrp5lda+se8wAxfUmnneqNLC5JKZYeNg=";
-  packages."mipsel_24kc"."packages".sha256 = "sha256-RkW9paCHUoBRF+lvZqPNypaVV+hzJ7Mlpy5L0pEClCM=";
-  packages."mipsel_24kc"."routing".sha256 = "sha256-e28oEgffrCHppVf62YHvzNZ5oklLaQ1vyYsH0m6IBzE=";
-  packages."mipsel_24kc"."telephony".sha256 = "sha256-BeBNK+k1tqC8c7i4r9E715NNmI5wW+YsvY7M1fXpyHg=";
+  packages."mipsel_24kc"."packages".sha256 = "sha256-C1TF1o5EaIuVl6Ef+iqukbqya0zj8Zg8MOHnFN++LNk=";
+  packages."mipsel_24kc"."routing".sha256 = "sha256-SYuVwOgUAZ+9YUr5KMWVkYsMVmnLD2qZa5vpW5mMw3k=";
+  packages."mipsel_24kc"."telephony".sha256 = "sha256-HP1vCYY58cyh3cU12vlc3Hb/V2cfPEocNGBS6G2PPNA=";
   targets."ramips"."rt3883".sha256 = "sha256-Os+eW/w78SLF6IhMTLGmBei9S/SMVMxuyt6JgWn1R68=";
   targets."ramips"."rt3883".packagesArch = "mipsel_74kc";
   packages."mipsel_74kc"."base".sha256 = "sha256-zC8jg2Izv6eLPy2i2uv0lwZEE770oH9DMP5gqv4zQGU=";
@@ -171,9 +171,9 @@
   targets."bcm47xx"."generic".packagesArch = "mipsel_mips32";
   packages."mipsel_mips32"."base".sha256 = "sha256-5QvNZy++IKxMYqOUxlTdg9IGZ//5NsWKu+zfsqYMqyo=";
   packages."mipsel_mips32"."luci".sha256 = "sha256-D/TGGOb97GgBXsJRQ5F+0HjFzLGBZsoEsKt55GwkhJs=";
-  packages."mipsel_mips32"."packages".sha256 = "sha256-CIK2fGoGfT5ekhxDIdZeOG8TT67QmtnyLgsLTZAKNFI=";
-  packages."mipsel_mips32"."routing".sha256 = "sha256-canimset7fpXzGkNroCez/dmaAHpKbMzwsq2WO2qOnI=";
-  packages."mipsel_mips32"."telephony".sha256 = "sha256-pjMU0q91hv0wQevgn1tnC+Nm9/MHbDhKJClukwElu0c=";
+  packages."mipsel_mips32"."packages".sha256 = "sha256-Z/tvUXibBrf3zV1sC6h9AyLuGJn3+i8WZEkNFqCN784=";
+  packages."mipsel_mips32"."routing".sha256 = "sha256-9yMCnaKIwgPKNIuqjuLOhMFAhMcZDYL9+44rKKJb3/U=";
+  packages."mipsel_mips32"."telephony".sha256 = "sha256-3JKM3dc6Cc/t+SZHaW/Ym6AB0itcEXOPDcPk2E6QmJo=";
   targets."bcm47xx"."legacy".sha256 = "sha256-67hCypsyiK+9yMTpX/xplKD6TYQmaDBfRJ0PQnQklns=";
   targets."bcm47xx"."legacy".packagesArch = "mipsel_mips32";
   targets."bcm47xx"."mips74k".sha256 = "sha256-VV1EThAhZQjT9LyIZVn6e5IezZsFK9xOHiut7Dxj1Rg=";
