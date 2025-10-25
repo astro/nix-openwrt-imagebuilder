@@ -249,9 +249,9 @@
   targets."mediatek"."mt7629".packagesArch = "arm_cortex-a7";
   packages."arm_cortex-a7"."base".sha256 = "sha256-GQJ6mGTH3+qnsmhWO1FndjoHrmMHk+2Ekfg3K7k3d2M=";
   packages."arm_cortex-a7"."luci".sha256 = "sha256-us+98GEjBrZPW0KcTq202N9ffLrEnmGuiIxomE7ee2I=";
-  packages."arm_cortex-a7"."packages".sha256 = "sha256-09DI1+6vhVhBcFcsOvym7XH9YHsGdUD32gLzrf1pCrE=";
-  packages."arm_cortex-a7"."routing".sha256 = "sha256-N4TMIsL6J7Y5hsinem/NezFF1fnB74YBKoZVf5cRTJQ=";
-  packages."arm_cortex-a7"."telephony".sha256 = "sha256-mm2AoUKXMDyL6QtjgUSJdtdKyHBJ4bt+hGHvfkilcmE=";
+  packages."arm_cortex-a7"."packages".sha256 = "sha256-ZCHW0h9jYFCWJmCszNzb23C+jaDdBCHqHINi6exqSLU=";
+  packages."arm_cortex-a7"."routing".sha256 = "sha256-Rjt+d7Sy6A0clFreVCBChz04q0HfwcmQ04FE0wsLnqw=";
+  packages."arm_cortex-a7"."telephony".sha256 = "sha256-x/2VY9htsFDcz83iJ05NRXbBQMsrQSU++s7P9zXSUu8=";
   targets."mediatek"."mt7622".sha256 = "sha256-Pa4mONq7pJ+hEo/zP/jxelN5UyIuBfGZvdK9ST/58fc=";
   targets."mediatek"."mt7622".packagesArch = "aarch64_cortex-a53";
   targets."mediatek"."filogic".sha256 = "sha256-cGH7m21UNsuaimxmd9BBprLziao/7VUwGrKsUCHMAHI=";
@@ -289,9 +289,9 @@
   targets."oxnas"."ox820".packagesArch = "arm_mpcore";
   packages."arm_mpcore"."base".sha256 = "sha256-mOuID2A25+5EqxDLvx05D0HO2X1fzYB2sR5Bin+jMNE=";
   packages."arm_mpcore"."luci".sha256 = "sha256-p8iYPEeCIq7c/KvGqgXE9y/86A5aeA4pku3a17US3L0=";
-  packages."arm_mpcore"."packages".sha256 = "sha256-+Y9lRAAm/UV4Wv6ItlcvEWWnzA7hYJFG0IWzCsSUR1s=";
-  packages."arm_mpcore"."routing".sha256 = "sha256-UYxwvos1a0bRzxL9naUWQOnpJGS3JJo1Q1TdaMQ6lPk=";
-  packages."arm_mpcore"."telephony".sha256 = "sha256-YZWC1x4eYL6qVMD+5gkNfu1Mi9YwvzldRulI/WSIGTI=";
+  packages."arm_mpcore"."packages".sha256 = "sha256-W8av+9bjO4NbPJmiFuR6W47pCFCVWm+Z1HfN9pM7u5U=";
+  packages."arm_mpcore"."routing".sha256 = "sha256-KpEj2E2KhPD0gl86RKRFGIM1LFR6Zkj7UdJsQlDTtKE=";
+  packages."arm_mpcore"."telephony".sha256 = "sha256-WLERLEFWPNIKaOyKnfospDQ6gTRdaS4y1qkKMw50vEk=";
   targets."gemini"."generic".sha256 = "sha256-60aLkH3snIFO1A4j/fOv7c/IX7lBwKg2iJEuXZqYYc0=";
   targets."gemini"."generic".packagesArch = "arm_fa526";
   packages."arm_fa526"."base".sha256 = "sha256-iyYQ7ZFxWOdQVFsdQL8GTWgoU9DOjtiTNVj8TOggHLg=";
