@@ -99,12 +99,12 @@ pkgs.stdenv.mkDerivation ({
       then builtins.getAttr (builtins.elemAt matches 0) variantFiles
       else throw "No valid image builder found!";
 
-  postPatch = with pkgs; ''
+  postPatch = ''
     patchShebangs scripts staging_dir/host/bin target/linux
     substituteInPlace rules.mk \
-      --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}" \
-      --replace "/usr/bin/env true" "${coreutils}/bin/true" \
-      --replace "/usr/bin/env false" "${coreutils}/bin/false"
+      --replace "SHELL:=/usr/bin/env bash" "SHELL:=${pkgs.runtimeShell}" \
+      --replace "/usr/bin/env true" "${pkgs.coreutils}/bin/true" \
+      --replace "/usr/bin/env false" "${pkgs.coreutils}/bin/false"
   '';
 
   configurePhase =
