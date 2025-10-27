@@ -102,9 +102,9 @@ pkgs.stdenv.mkDerivation ({
   postPatch = ''
     patchShebangs scripts staging_dir/host/bin target/linux
     substituteInPlace rules.mk \
-      --replace "SHELL:=/usr/bin/env bash" "SHELL:=${pkgs.runtimeShell}" \
-      --replace "/usr/bin/env true" "${pkgs.coreutils}/bin/true" \
-      --replace "/usr/bin/env false" "${pkgs.coreutils}/bin/false"
+      --replace-quiet "SHELL:=/usr/bin/env bash" "SHELL:=${pkgs.runtimeShell}" \
+      --replace-quiet "/usr/bin/env true" "${pkgs.coreutils}/bin/true" \
+      --replace-quiet "/usr/bin/env false" "${pkgs.coreutils}/bin/false"
   '';
 
   configurePhase =
