@@ -116,7 +116,17 @@ pkgs.stdenv.mkDerivation ({
           in
             lib.optionalString
               (package.type == "real")
-              "[ -e packages/${package.filename} ] || ln -s ${package.file} packages/${package.filename}\n"
+              ''
+                if [ ! -e packages/${package.filename} ]; then
+                  # check if the ipk file exists as the Makefiles throw all kinds of weird errors when the symlink target is broken
+                  if [ -e ${package.file} ]; then
+                    ln -s ${package.file} packages/${package.filename}
+                  else
+                    echo "Could not find packages/${package.filename} or ${package.file}"
+                    exit 5
+                  fi
+                fi
+              ''
         ) allRequiredPackages
       );
     in ''
