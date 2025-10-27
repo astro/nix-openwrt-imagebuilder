@@ -161,7 +161,6 @@ pkgs.stdenv.mkDerivation ({
     bash perl python311 dtc
   ] ++ lib.optional (lib.versionOlder release "21" && release != "snapshot") python2;
 
-
   buildFlags = [
     ".DEFAULT_GOAL=image"
   ];
@@ -186,6 +185,14 @@ pkgs.stdenv.mkDerivation ({
     ''
       buildFlagsArray+=(${mkBuildFlagsArray flags})
     '';
+
+  postBuild = ''
+    bin_files=(build_dir/target-*/linux-*/tmp/openwrt-*.*)
+    if [[ ! -f ''${bin_files[0]} ]]; then
+      echo "No squashfs or bin file produced at all, see above for errors, aborting"
+      exit 5
+    fi
+  '';
 
   installPhase = ''
     runHook preInstall
