@@ -99,12 +99,12 @@ pkgs.stdenv.mkDerivation ({
       then builtins.getAttr (builtins.elemAt matches 0) variantFiles
       else throw "No valid image builder found!";
 
-  postPatch = with pkgs; ''
+  postPatch = ''
     patchShebangs scripts staging_dir/host/bin target/linux
     substituteInPlace rules.mk \
-      --replace "SHELL:=/usr/bin/env bash" "SHELL:=${runtimeShell}" \
-      --replace "/usr/bin/env true" "${coreutils}/bin/true" \
-      --replace "/usr/bin/env false" "${coreutils}/bin/false"
+      --replace-quiet "SHELL:=/usr/bin/env bash" "SHELL:=${pkgs.runtimeShell}" \
+      --replace-quiet "/usr/bin/env true" "${pkgs.coreutils}/bin/true" \
+      --replace-quiet "/usr/bin/env false" "${pkgs.coreutils}/bin/false"
   '';
 
   configurePhase =
@@ -161,7 +161,6 @@ pkgs.stdenv.mkDerivation ({
     bash perl python311 dtc
   ] ++ lib.optional (lib.versionOlder release "21" && release != "snapshot") python2;
 
-
   buildFlags = [
     ".DEFAULT_GOAL=image"
   ];
@@ -187,6 +186,14 @@ pkgs.stdenv.mkDerivation ({
       buildFlagsArray+=(${mkBuildFlagsArray flags})
     '';
 
+  postBuild = ''
+    bin_files=(build_dir/target-*/linux-*/tmp/openwrt-*.*)
+    if [[ ! -f ''${bin_files[0]} ]]; then
+      echo "No squashfs or bin file produced at all, see above for errors, aborting"
+      exit 5
+    fi
+  '';
+
   installPhase = ''
     runHook preInstall
 
@@ -207,7 +214,7 @@ pkgs.stdenv.mkDerivation ({
 
   postInstall = ''
     shopt -s nullglob
-    files=($out/*.bin)
+    files=($out/openwrt-*-squashfs-sysupgrade.*)
     if ! (( ''${#files[@]} )); then
       echo "Build produced no bin file, see above for details"
       exit 2;
