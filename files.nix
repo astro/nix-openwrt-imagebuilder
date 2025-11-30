@@ -3,10 +3,13 @@
 , release ? import ./latest-release.nix
 # OpenWRT target
 , target
+# TODO: rename to subtarget
 , variant ? "generic"
 # Checksum of the `sha256sums` file
+# TODO: rename to sha56sumsHash
 , sha256
 # Checksum of a feed's `Packages` file
+# TODO: rename to feedsHash
 , feedsSha256
 # Attrset where key is kmodsTarget and value is checksum of `Packages` file. Required for OpenWRT >=24
 , kmodsSha256 ? {}
