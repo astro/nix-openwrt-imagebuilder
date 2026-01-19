@@ -28,12 +28,9 @@
       packages = {
         inherit (pkgs)
           list-versions
-          generate-latest-release
           release2nix
           packages2nix
-          generate-all-hashes
-          cached-profiles
-          profiles-list;
+          generate-all-hashes;
 
         example-image = import ./example.nix rec {
           inherit pkgs;
