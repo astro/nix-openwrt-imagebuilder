@@ -10,7 +10,19 @@
 }:
 
 let
+  # Workaround for direct calls without the pkgs overlay from flake.nix.
+  pkgs' =
+    if pkgs ? packages2nix && pkgs ? callPackages2nix
+    then pkgs
+    else pkgs.extend (final: prev: {
+      packages2nix = final.callPackage ./packages2nix.nix {
+        jqlibdir = ./.;
+      };
+      callPackages2nix = final.callPackage ./call-packages2nix.nix { };
+    });
+
   hashes = openwrtLib.getCachedRelease release cachePath;
+
 in rec {
   allProfiles =
     builtins.mapAttrs (target: variants:
@@ -30,7 +42,8 @@ in rec {
     builtins.concatMap (target:
       map (variant: {
         # match return value
-        inherit pkgs lib openwrtLib release target variant profile cachePath;
+        inherit lib openwrtLib release target variant profile cachePath;
+        pkgs = pkgs';
       }) (
         builtins.filter (variant:
           allProfiles.${target}.${variant}.profiles ? ${profile}

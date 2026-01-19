@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> {}
-, profiles ? import ./profiles.nix { inherit pkgs; }
+, profiles ? import ./profiles.nix { inherit pkgs; release= "24.10.0"; }
 , build ? import ./builder.nix
 }:
 build (
