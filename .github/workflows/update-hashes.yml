@@ -40,11 +40,6 @@ jobs:
           nix run .#generate-all-hashes -- -ur
           git add cache
           git commit -m "hashes: update"
-      - name: Cache OpenWrt profile information
-        shell: bash
-        run: |
-          git rm -r cached-profiles || true
-          git commit -m "cached-profiles: update" || true
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
