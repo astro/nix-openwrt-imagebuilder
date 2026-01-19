@@ -12,9 +12,7 @@ writeShellApplication {
   text = ''
     list-versions "$@" | while read -r release; do
       echo "# Fetching hashes for OpenWrt $release"
-      release2nix -Q "$release" &
+      release2nix -Q "$release"
     done
-
-    wait
   '';
 }
