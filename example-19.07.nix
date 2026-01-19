@@ -11,7 +11,6 @@ build {
     "tcpdump"
     "vxlan" "kmod-vxlan"
     "-kmod-pppoa"
-    "collectd" "collectd-mod-iwinfo" "collectd-mod-ping"
   ];
   files = pkgs.runCommand "image-files" {} ''
     mkdir -p $out/etc/uci-defaults
