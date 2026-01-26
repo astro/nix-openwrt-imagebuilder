@@ -35,7 +35,6 @@ jobs:
       - name: Update all hashes
         shell: bash
         run: |
-          git rm -r hashes || true
           git rm -r cache || true
           nix run .#generate-all-hashes -- -ur
           git add cache
