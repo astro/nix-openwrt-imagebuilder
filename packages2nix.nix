@@ -2,7 +2,7 @@
 , writeShellApplication
 , jq
 , apk-tools
-, jqlibdir
+, jqlibdir ? ./.
 }:
 
 writeShellApplication {
