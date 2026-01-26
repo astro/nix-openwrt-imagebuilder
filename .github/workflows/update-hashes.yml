@@ -37,7 +37,7 @@ jobs:
         run: |
           git rm -r cache || true
           git checkout HEAD cache/{LATEST_RELEASE,versions.json}
-          nix run .#generate-all-hashes -- -ur
+          nix run .#generate-all-hashes
           git add cache
           git commit -m "hashes: update"
       - name: Push changes
