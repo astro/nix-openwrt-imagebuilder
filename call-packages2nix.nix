@@ -1,6 +1,6 @@
-{ lib
+{ callPackage
 , runCommand
-, packages2nix
+, packages2nix ? callPackage ./packages2nix.nix { }
 }:
 
 { mode, packages, sha256sums, prefix }: let

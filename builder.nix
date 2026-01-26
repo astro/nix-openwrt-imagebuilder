@@ -4,7 +4,7 @@
 , stdenv ? pkgs.stdenv
 , fetchurl ? pkgs.fetchurl
 , writeScript ? pkgs.writeScript
-, callPackages2nix ? pkgs.callPackages2nix
+, callPackages2nix ? pkgs.callPackage ./call-packages2nix.nix { }
 # OpenWRT release
 , release ? openwrtLib.latestRelease
 # OpenWRT target

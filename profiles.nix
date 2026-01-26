@@ -15,9 +15,7 @@ let
     if pkgs ? packages2nix && pkgs ? callPackages2nix
     then pkgs
     else pkgs.extend (final: prev: {
-      packages2nix = final.callPackage ./packages2nix.nix {
-        jqlibdir = ./.;
-      };
+      packages2nix = final.callPackage ./packages2nix.nix { };
       callPackages2nix = final.callPackage ./call-packages2nix.nix { };
     });
 
