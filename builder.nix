@@ -212,9 +212,10 @@ stdenv.mkDerivation ({
 
   postInstall = ''
     shopt -s nullglob
-    files=($out/openwrt-*-squashfs-sysupgrade.*)
+    files=($out/openwrt-*-squashfs-sysupgrade.* $out/openwrt-*.img.gz)
     if ! (( ''${#files[@]} )); then
       echo "Build produced no bin file, see above for details"
+      ls -l $out/
       exit 2;
     fi
     shopt -u nullglob
