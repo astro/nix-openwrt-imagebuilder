@@ -145,6 +145,10 @@ stdenv.mkDerivation ({
     '' + lib.optionalString (files != null) ''
       # copy files to avoid making etc read-only
       cp -r --no-preserve=all ${files} files
+      if [[ -d files/var || -f files/var ]]; then
+        echo "Creating /var via files is known to cause boot problems and hence forbidden."
+        exit 2
+      fi
     '' + lib.optionalString (lib.versionOlder release "19" && release != "snapshot") ''
       # Hack around broken check for gcc
       touch staging_dir/host/.prereq-build
