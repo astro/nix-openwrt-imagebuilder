@@ -1,7 +1,7 @@
 # 24.10.5 package feeds for mips_4kec
 {
   sha256sums = {
-    hash = "sha256-EJRpfjo5N2/7OSCTMiRJX20oRIAtcD2114W+oxVrkHY=";
+    hash = "sha256-DVIKoJiWnoL/pU+pCRoTHT+Sa0WUCh1DgHpZ96CsB9M=";
     name = "mips_4kec-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/packages/";
     sourceInfo = {
-      hash = "sha256-Tzico+o4PSFjN8zgDSHjCisdmgiOg+vgWczKndxT890=";
+      hash = "sha256-hC79BjJbk4yz8sOiU9W76kd+2l8tUokiL2P3VwZSYPg=";
       name = "mips_4kec-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/routing/";
     sourceInfo = {
-      hash = "sha256-/H1IJMj9sF4hNAPUEBSfY7uFuwvcnUqN27XdkI/IIv8=";
+      hash = "sha256-L6fpunV/dNPXvBco8sQiRBAaN2ootfmhTNXKKEP6Ifw=";
       name = "mips_4kec-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/telephony/";
     sourceInfo = {
-      hash = "sha256-sWuL9Y/VVy85dCsd/a2iUlb0hqOjWwWoWLIV081Idgk=";
+      hash = "sha256-5S0sC4Dlc5WdRSgt2U7V6KmWxWceIyn3CbrO//lO4dM=";
       name = "mips_4kec-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.5/packages/mips_4kec/telephony/Packages";
     };
