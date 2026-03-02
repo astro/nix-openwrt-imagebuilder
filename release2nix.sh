@@ -255,8 +255,8 @@ find_imagebuilder() {
 }
 
 list_targets() {
-  curl -s "${RELEASE_URL}/targets/?json-targets" | \
-    jq -r '.[]|select(startswith(".")|not)'
+  curl -fsS "${RELEASE_URL}/.targets.json" | \
+    jq -r '.|keys|.[]|select(startswith(".")|not)'
 }
 
 reformat_nix() {
