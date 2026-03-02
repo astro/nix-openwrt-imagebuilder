@@ -45,11 +45,6 @@
           inherit (self.lib) build;
         };
 
-        example-1907-image = import ./example-19.07.nix {
-          inherit pkgs;
-          inherit (self.lib) build;
-        };
-
         example-snapshot-image = import ./example-snapshot.nix {
           inherit pkgs;
           inherit (self.lib) build;
