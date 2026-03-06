@@ -3,7 +3,7 @@
 , curl
 , jq
 , nix
-, nixfmt-rfc-style
+, nixfmt
 , packages2nix
 , jqlibdir
 }:
@@ -14,7 +14,7 @@ writeShellApplication {
     curl
     jq
     nix
-    nixfmt-rfc-style
+    nixfmt
   ];
 
   runtimeEnv.JQLIBS = "-L${jqlibdir}";
