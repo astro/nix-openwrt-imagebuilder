@@ -18,7 +18,6 @@
       _module.args.pkgs = import inputs.nixpkgs {
         inherit system;
         overlays = [
-          self.overlays.tools
           self.overlays.gen
           self.overlays.openwrtLib
         ];
@@ -79,9 +78,6 @@
       });
 
       overlays = {
-        tools = final: prev: {
-          apk-tools = final.callPackage ./apk-tools.nix { };
-        };
         gen = final: prev: {
           list-versions = final.callPackage ./list-versions.nix {
             inherit (self.lib) jqlibdir;
