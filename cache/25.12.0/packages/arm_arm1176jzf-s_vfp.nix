@@ -1,14 +1,14 @@
 # 25.12.0 package feeds for arm_arm1176jzf-s_vfp
 {
   sha256sums = {
-    hash = "sha256-QdNVKSSSQt4/+bd2SkPoV0QkBAS9i6uh5JJOwJaNDzk=";
+    hash = "sha256-Smn6mxGUkvo7yJtjkSt/h0lG2i+i8UdvV72VtVY5PX4=";
     name = "arm_arm1176jzf-s_vfp-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/base/";
     sourceInfo = {
-      hash = "sha256-WVsPAre6V+REfPuV1WD/JC7xeVXlMKlZhM9NXAzolXQ=";
+      hash = "sha256-7+3drOY2G2KqguMePBxLOjMb857AXEg+KI3fBCF5uzo=";
       name = "arm_arm1176jzf-s_vfp-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/luci/";
     sourceInfo = {
-      hash = "sha256-zbv0thbPxmknzpNtmVGu/UaDmRkBjd1qE+uk6VfPVA4=";
+      hash = "sha256-vuvRtqlOSASVmwsUd246kRZUiwfwr+Te6qG7eUL3Cz0=";
       name = "arm_arm1176jzf-s_vfp-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/packages/";
     sourceInfo = {
-      hash = "sha256-LrN8LgPT6oSxCxNx3DdncOvH6jdIECseGeliFusnKNA=";
+      hash = "sha256-Y42YkpQsWgh6nECeyMBNaVfn0ZMi7Dvjj8fAJgfdMKg=";
       name = "arm_arm1176jzf-s_vfp-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/routing/";
     sourceInfo = {
-      hash = "sha256-HC/k5Mo/cORm4fQCagb789VfU9Xd1NMEOXyyxkjPYGw=";
+      hash = "sha256-Al/9KdZyxiikD7rDpH6FU8018lWZl0bAAP55RDvS4Ms=";
       name = "arm_arm1176jzf-s_vfp-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/telephony/";
     sourceInfo = {
-      hash = "sha256-rIFHTGmgJZQ2kmQW9O0ZLjCprPnYlsElWDpTi0aTp2s=";
+      hash = "sha256-MiEr0AGGqcNWaYGQVyIMTKB6tGucHLZkFgXUzRzs+PQ=";
       name = "arm_arm1176jzf-s_vfp-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.0/packages/arm_arm1176jzf-s_vfp/telephony/packages.adb";
     };

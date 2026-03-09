@@ -1,7 +1,7 @@
 # 24.10.5 package feeds for x86_64
 {
   sha256sums = {
-    hash = "sha256-KAzF4hqNckSnRxzrhELxD887eKEY6YvKM6wzCYV+dDg=";
+    hash = "sha256-x0M8TO093D6iG+qa+UREnhH92CAK6U4gdJogUH6TXuY=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/luci/";
     sourceInfo = {
-      hash = "sha256-eNqPQ8InF8cJ9OyBjvoAB52wafYdAeADQgc8Yfo3Izg=";
+      hash = "sha256-mzMtbxyxfdxxyrK3xFw0HP+3hW4dxhHmcVUo9/KwxRY=";
       name = "x86_64-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/packages/";
     sourceInfo = {
-      hash = "sha256-ja6KC6Vlf7CCqqrUB8Vhwnw7VFvGln9YsvND8vGqjZo=";
+      hash = "sha256-kyY1YS/wZZMtnzrYeeg59hxK9+XiXKHhgM9gibkYOLQ=";
       name = "x86_64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/packages/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/telephony/";
     sourceInfo = {
-      hash = "sha256-kmGj97ftxQv4N+NaHXaZaAWXtlRhYCdDQCfTU5gsj5A=";
+      hash = "sha256-PXxdGf1tr5WV1+gCw8p3LTr7mymDz5lPCefLLauNb7M=";
       name = "x86_64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.5/packages/x86_64/telephony/Packages";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/";
   sha256sums = {
-    hash = "sha256-4bw5FjVNE57BsU5Hc+DK7i09I8xgX62SojNiRQAdMO4=";
+    hash = "sha256-4xwkWq1gso4O8oMjw7rXPxZNclE9xVlRAcLNGOPLZFM=";
     name = "ipq40xx_chromium-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ce3831245de930194859134e38ebe2db7714cd051a29e92bbe731b98a5af3101";
+    sha256 = "ff42e74e536f8f5814a71870da1ddf2b21609e700893f0cda5b1d643d3425324";
     filename = "openwrt-imagebuilder-ipq40xx-chromium.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-QsAjVe8CLC5Y3lWkSNPHn48cuHx0wSvbVTWqtC4vxmo=";
+    hash = "sha256-rr6CecUul0wIBx/nKcrCf+Evf9ccom2173cvIyOqfHc=";
     name = "ipq40xx_chromium-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a7_neon-vfpv4";
     linux_kernel = {
       release = "1";
-      vermagic = "9b0ee3f043eba0b4a43632d5f4cbd354";
+      vermagic = "55d5fc5744f4b7d90f96014ec5062b3f";
       version = "6.12.74";
     };
     default_packages = [
@@ -58,7 +58,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.12.74-1-9b0ee3f043eba0b4a43632d5f4cbd354";
+    kmods_target = "6.12.74-1-55d5fc5744f4b7d90f96014ec5062b3f";
     profiles = {
       google_wifi = {
         device_packages = [
@@ -73,12 +73,12 @@
       };
     };
   };
-  kmods."6.12.74-1-9b0ee3f043eba0b4a43632d5f4cbd354" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/kmods/6.12.74-1-9b0ee3f043eba0b4a43632d5f4cbd354/";
+  kmods."6.12.74-1-55d5fc5744f4b7d90f96014ec5062b3f" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/kmods/6.12.74-1-55d5fc5744f4b7d90f96014ec5062b3f/";
     sourceInfo = {
-      hash = "sha256-EdpZQflO38zysRraJhYtJV6oriqc3sAr6fUnlTX+BIQ=";
+      hash = "sha256-zFJDJ/IZ540IHx6XauTWQGtN8rMVPu1FA1hKMY++ZXE=";
       name = "kmods-ipq40xx_chromium-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/kmods/6.12.74-1-9b0ee3f043eba0b4a43632d5f4cbd354/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/kmods/6.12.74-1-55d5fc5744f4b7d90f96014ec5062b3f/packages.adb";
     };
     packages =
       let
@@ -89,7 +89,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/packages/";
     sourceInfo = {
-      hash = "sha256-IeRNeGtERnU3yrugamgQvY8IwBKcyo6bo6FAnTOcMJs=";
+      hash = "sha256-80Ldb8M4fBPHIWRijFZ+F+qtM80k7xjM1cO3xviS3MA=";
       name = "ipq40xx_chromium-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/chromium/packages/packages.adb";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/";
   sha256sums = {
-    hash = "sha256-8BqgAyQ/jlGKqqH4GFqiXl1chpPBnAdBY3e0vOd7W0w=";
+    hash = "sha256-I1mzC9j0bo51LB5H8PKCBdhddSROSqyZtcw+lEkGK1o=";
     name = "stm32_stm32mp1-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/sha256sums";
   };
   imagebuilder = {
-    sha256 = "61b8320e261efe96c529bdeac2f4e0faa258c898e6b39d052979b64f176d0a21";
+    sha256 = "759d7d8eae6be2abeec62f7bb20535b063b36579abcfc2e49264b31b6f6c0132";
     filename = "openwrt-imagebuilder-stm32-stm32mp1.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-GBcthooPlAseP08HvyUsTZk8epWUJBB8ii9xnY4bKUw=";
+    hash = "sha256-XXLmxvrqnn4XvetidEY7uvINu2lWymnLRpLy4eXIXGg=";
     name = "stm32_stm32mp1-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a7_neon-vfpv4";
     linux_kernel = {
       release = "1";
-      vermagic = "b8184604cbaaae229e185c87cce09592";
+      vermagic = "bfb7fee5867282bfa8e5ed058f5bd2e4";
       version = "6.12.74";
     };
     default_packages = [
@@ -50,7 +50,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.74-1-b8184604cbaaae229e185c87cce09592";
+    kmods_target = "6.12.74-1-bfb7fee5867282bfa8e5ed058f5bd2e4";
     profiles = {
       stm32mp135f-dk = {
         device_packages = [
@@ -93,12 +93,12 @@
       };
     };
   };
-  kmods."6.12.74-1-b8184604cbaaae229e185c87cce09592" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/kmods/6.12.74-1-b8184604cbaaae229e185c87cce09592/";
+  kmods."6.12.74-1-bfb7fee5867282bfa8e5ed058f5bd2e4" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/kmods/6.12.74-1-bfb7fee5867282bfa8e5ed058f5bd2e4/";
     sourceInfo = {
-      hash = "sha256-EVUWJmX7BT0/RIPZESKvDBjQvmvS/vGSBXW6XoO6tac=";
+      hash = "sha256-nvH/5jiL7Z5f5RR+sYDgpslZGLUpiUSpVmLA1JLNsfQ=";
       name = "kmods-stm32_stm32mp1-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/kmods/6.12.74-1-b8184604cbaaae229e185c87cce09592/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/kmods/6.12.74-1-bfb7fee5867282bfa8e5ed058f5bd2e4/packages.adb";
     };
     packages =
       let
@@ -109,7 +109,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/packages/";
     sourceInfo = {
-      hash = "sha256-nfa9NiLKMIb4UEpcEpvZhUvyy4vRqZPdr9112/f+oG4=";
+      hash = "sha256-YXD6hSPSKzaCTOPoUp9wVedcIE7tf4wK0Vs2psaws3c=";
       name = "stm32_stm32mp1-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/packages/packages.adb";
     };
