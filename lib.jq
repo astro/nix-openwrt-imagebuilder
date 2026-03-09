@@ -176,6 +176,8 @@ def sort_releases:
 
 def list_versions:
   .versions_list |
+  # Releases before 22 don't have `.targets.json` needed by `release2nix.sh`
+  map(select(parse_release_version[0] >= 22)) |
   . + ["snapshot"] |
   sort_releases;
 
