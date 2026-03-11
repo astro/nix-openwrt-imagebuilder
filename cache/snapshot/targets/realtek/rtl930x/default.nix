@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/";
   sha256sums = {
-    hash = "sha256-4oHvx+QWbVOcUy5BTk5NT7gsvsBD58yH+5gEXTRv4MY=";
+    hash = "sha256-1oi1SrVzpDzzvNJi94zVn2D285khW+5ZUrW96E40BrM=";
     name = "realtek_rtl930x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a5e15ca58cbcd05beccb10306362b602278bc399bc78a8180f1fe1444fa152df";
+    sha256 = "a50f85b855cc0445d8a88899f79e84f71cecdf36981a88c47902fbaaeafa5011";
     filename = "openwrt-imagebuilder-realtek-rtl930x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-eF2WJ9RF9gPV2As/Rpx/bVwVhm0Wbc0C6Imh3HV/tg4=";
+    hash = "sha256-nvDN6fYHKeWH543W42tD9fmnFPPiUfi/HBzv+gJpMbc=";
     name = "realtek_rtl930x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mips_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "094f6d46dad35072a55bec2979226c32";
+      vermagic = "94eadea56e073620c4a0b5d3c1ca01fd";
       version = "6.12.74";
     };
     default_packages = [
@@ -45,7 +45,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.74-1-094f6d46dad35072a55bec2979226c32";
+    kmods_target = "6.12.74-1-94eadea56e073620c4a0b5d3c1ca01fd";
     profiles = {
       hasivo_s1100w-8xgt-se = {
         device_packages = [ ];
@@ -103,12 +103,12 @@
       };
     };
   };
-  kmods."6.12.74-1-094f6d46dad35072a55bec2979226c32" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.12.74-1-094f6d46dad35072a55bec2979226c32/";
+  kmods."6.12.74-1-94eadea56e073620c4a0b5d3c1ca01fd" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.12.74-1-94eadea56e073620c4a0b5d3c1ca01fd/";
     sourceInfo = {
-      hash = "sha256-WnBlEYCNIkKA68k3CHCqAXfUEzX1nq2nqMFAi01zQUA=";
+      hash = "sha256-tmoC8ufvG0AFwKocD+l3k208kR8AF38msic4zUoZGrw=";
       name = "kmods-realtek_rtl930x-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.12.74-1-094f6d46dad35072a55bec2979226c32/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.12.74-1-94eadea56e073620c4a0b5d3c1ca01fd/packages.adb";
     };
     packages =
       let
@@ -119,7 +119,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/packages/";
     sourceInfo = {
-      hash = "sha256-Ro1dmVFjPdogDUaihf9jff7lb8QM5MX8d/80huS57Zs=";
+      hash = "sha256-KT+S2jmf3UMwv5R9oGiBcdQ6DBOwbx9nYKU392YTEZc=";
       name = "realtek_rtl930x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/packages/packages.adb";
     };
