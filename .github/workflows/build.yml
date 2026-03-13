@@ -26,8 +26,8 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: example-19.07.nix
-        # NIXPKGS_ALLOW_INSECURE for python2
-        run: NIXPKGS_ALLOW_INSECURE=1 nix-build example-19.07.nix
+      
+        run: NIXPKGS_ALLOW_INSECURE=1 nix-build example-snapshot.nix
 
   example-x86-64:
     name: Build example-x86-64.nix
@@ -38,5 +38,4 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: example-x86-64.nix
-        # NIXPKGS_ALLOW_INSECURE for python2
         run: nix-build example-x86-64.nix
