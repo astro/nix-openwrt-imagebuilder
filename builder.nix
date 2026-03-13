@@ -53,6 +53,7 @@ let
     "stdenv"
     "fetchurl"
     "writeScript"
+    "cachePath"
   ];
   configArgs = [
     "release"
