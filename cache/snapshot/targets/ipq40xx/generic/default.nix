@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/";
   sha256sums = {
-    hash = "sha256-QfNc+5TnxecWwsMl2IRn7nV6Sse/9VTglKwI31uj3jg=";
+    hash = "sha256-qd7K5L8MNjWZgq7tTm/Qnqi8AlL7d9TXnxkMo1XiHZA=";
     name = "ipq40xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "882b3d0444da699fc5cdbe10cfc90f6b0e130c8afa709c1316cfca3cb2f30727";
+    sha256 = "8784a91eb47df06cf4d5a4e335391723ae3f222fc45c78d9ca378daecfe541a5";
     filename = "openwrt-imagebuilder-ipq40xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-hU05rysJ624o1s57raqXo6JYDgY3Qkw7oUB8sOaTcLQ=";
+    hash = "sha256-FLwgnizW2z86xMLb/h2uv9Xa4hxb9oSmbNsmpr9FTpk=";
     name = "ipq40xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/profiles.json";
   };
@@ -146,6 +146,9 @@
           "kmod-hwmon-ina2xx"
           "kmod-rtc-pcf2127"
         ];
+      };
+      devolo_magic-2-wifi-next = {
+        device_packages = [ ];
       };
       dlink_dap-2610 = {
         device_packages = [ ];
@@ -483,7 +486,7 @@
   kmods."6.12.74-1-3978c5fcb2d1bf729555dfb1dba35bbb" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.12.74-1-3978c5fcb2d1bf729555dfb1dba35bbb/";
     sourceInfo = {
-      hash = "sha256-1TFFphCr4Avh/SunVGAGULDCPJ5pb54VB0sQcR0W/6k=";
+      hash = "sha256-sg9+h1v7ujLlmpkd5G8l6t5XWjKaTiXHaQk3Av5SX3o=";
       name = "kmods-ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.12.74-1-3978c5fcb2d1bf729555dfb1dba35bbb/packages.adb";
     };
@@ -496,7 +499,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-pBcgsqi8uqWcmotTIO4HP8vrEHqYvnpolGtearkDRLk=";
+      hash = "sha256-ApSyOpeMLZg4Bb6+l0TLfDHtaJj2UuBVZccWnDUaFJw=";
       name = "ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/packages.adb";
     };
