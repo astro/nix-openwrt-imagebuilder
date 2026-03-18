@@ -63,21 +63,20 @@ let
         in
         if p.provides or [] != []
         then
-          let
-            vp = {
-              type = "virtual";
-              depends = [ ];
-            };
-          in
-            builtins.foldl' (packages: provide:
-              if ! packages ? ${provide}
-              then
-                packages // {
-                  ${provide} = vp // { depends = vp.depends ++ [ pn ]; };
-                }
-              else
-                packages
-            ) packages p.provides
+          builtins.foldl' (packages: provide:
+            let
+              vp = packages.${provide} or {
+                type = "virtual";
+                depends = [ ];
+              };
+            in
+            if vp.type == "virtual" then
+              packages // {
+                ${provide} = vp // { depends = vp.depends ++ [ pn ]; };
+              }
+            else
+              packages
+          ) packages p.provides
         else
           packages
       )
