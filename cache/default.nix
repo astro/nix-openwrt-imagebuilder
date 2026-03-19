@@ -35,11 +35,13 @@
   "24.10.3" = import ./24.10.3/default.nix;
   "24.10.4" = import ./24.10.4/default.nix;
   "24.10.5" = import ./24.10.5/default.nix;
+  "24.10.6" = import ./24.10.6/default.nix;
   "25.12.0-rc1" = import ./25.12.0-rc1/default.nix;
   "25.12.0-rc2" = import ./25.12.0-rc2/default.nix;
   "25.12.0-rc3" = import ./25.12.0-rc3/default.nix;
   "25.12.0-rc4" = import ./25.12.0-rc4/default.nix;
   "25.12.0-rc5" = import ./25.12.0-rc5/default.nix;
   "25.12.0" = import ./25.12.0/default.nix;
+  "25.12.1" = import ./25.12.1/default.nix;
   snapshot = import ./snapshot/default.nix;
 }
