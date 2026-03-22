@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/";
   sha256sums = {
-    hash = "sha256-7HRpzqi700OvEYSh+WoO/yLdNuR6bGQ+zeAzLPxB28o=";
+    hash = "sha256-WKBgZakPraC51tHUrTEfhRg71Nc4kT/mJRUSq9SQ2aU=";
     name = "mpc85xx_p1020-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/sha256sums";
   };
   imagebuilder = {
-    sha256 = "517e4d6d7daf328f5473343877980b9cc558367c3ab6ab2c0868c7fbff5efa19";
+    sha256 = "e5b5043722e6315fc69162c8b21ba1375db3c89d15576f46a8ee7bb2d542682f";
     filename = "openwrt-imagebuilder-mpc85xx-p1020.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-O0NDEPRL8Izjm7B/5oghIlS8xHaH1MTA4KrcPWrO+Tc=";
+    hash = "sha256-51YAdeZpDyPyczNixiuUBduLU73cMAWPufhFQlQUfW0=";
     name = "mpc85xx_p1020-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/profiles.json";
   };
@@ -50,7 +50,6 @@
       "ppp"
       "ppp-mod-pppoe"
       "procd-ujail"
-      "swconfig"
       "uboot-envtools"
       "uci"
       "uclient-fetch"
@@ -86,7 +85,7 @@
   kmods."6.12.74-1-eeb640fd3be8fffde1be17d20a98b198" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/kmods/6.12.74-1-eeb640fd3be8fffde1be17d20a98b198/";
     sourceInfo = {
-      hash = "sha256-5UYkHFZU87kzJx94Y39u4/QDO1XWZFOYx2crddXIqlw=";
+      hash = "sha256-2DU2BlTGxGPjDZxk6WejeIygjL7TSjJ5Vlkul0xdWN0=";
       name = "kmods-mpc85xx_p1020-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/kmods/6.12.74-1-eeb640fd3be8fffde1be17d20a98b198/packages.adb";
     };
@@ -99,7 +98,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/packages/";
     sourceInfo = {
-      hash = "sha256-qyWm8G0Rn15fld3GzZDgU5LggjNlQPnlmKKgnZA8kCs=";
+      hash = "sha256-GMvVQH89oddqrhWRJX6deelRquBpbSWWaW+Sq0mSZu0=";
       name = "mpc85xx_p1020-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1020/packages/packages.adb";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/";
   sha256sums = {
-    hash = "sha256-JKhDBPULW8/hDgbYaNVtKv0mabRpaN0ul6KmPC7YT5E=";
+    hash = "sha256-UqW5396bXuVad0wCqtLL8l8ekWrklp98K/J4NZuIMbw=";
     name = "mpc85xx_p1010-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/sha256sums";
   };
   imagebuilder = {
-    sha256 = "643309f78c3093c2e12cf033b31f69229b52aa6b818e06946a2dd885f85a2fcd";
+    sha256 = "d29b7f8fcf8879307292eb13a1c6b1eaecbc25650462988110120137e3439d92";
     filename = "openwrt-imagebuilder-mpc85xx-p1010.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-K+TeX7JE01IpS325dcDgwpBVTA4y1TGxD7sF4gi41Bs=";
+    hash = "sha256-GYs72jEbOMLuG1w0bPnM31yxdMoZUcN4mTx5lTD5+YU=";
     name = "mpc85xx_p1010-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/profiles.json";
   };
@@ -50,7 +50,6 @@
       "ppp"
       "ppp-mod-pppoe"
       "procd-ujail"
-      "swconfig"
       "uboot-envtools"
       "uci"
       "uclient-fetch"
@@ -89,7 +88,7 @@
   kmods."6.12.74-1-a91f03f5361aad5f1a3c4a9b04a5b77c" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/kmods/6.12.74-1-a91f03f5361aad5f1a3c4a9b04a5b77c/";
     sourceInfo = {
-      hash = "sha256-H6J2cLv+7U6KXHMNf1Pz6WNjK6//7BBHDV+K691SXrU=";
+      hash = "sha256-awkdpZ/ZauEsO0BlN77cpuZ+ZAS5DXWxVcQ8xGhciZY=";
       name = "kmods-mpc85xx_p1010-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/kmods/6.12.74-1-a91f03f5361aad5f1a3c4a9b04a5b77c/packages.adb";
     };
@@ -102,7 +101,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/packages/";
     sourceInfo = {
-      hash = "sha256-CVlo3FkvySAF+qlXTIxKLzCYe9FzlDGd3sH4QnK73Ws=";
+      hash = "sha256-SD6qxHr2xhDmsh4I6PiDpYZhd/8x0Xq4N01ZItmLEzY=";
       name = "mpc85xx_p1010-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p1010/packages/packages.adb";
     };

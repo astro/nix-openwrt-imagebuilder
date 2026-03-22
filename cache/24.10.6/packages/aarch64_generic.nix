@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for aarch64_generic
 {
   sha256sums = {
-    hash = "sha256-wf5iWNxQGsz4uACqiIQKWDdQU3AmexqUPaWnvDIAr2o=";
+    hash = "sha256-qcVLGxS9Guv2d+93lq7Wd6RajdU6dRK2GfOyI6NsgxM=";
     name = "aarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/luci/";
     sourceInfo = {
-      hash = "sha256-eQMo4GplOWM+ua8nuuChirV0VtFuIhTlUjLjqf98Fv4=";
+      hash = "sha256-h+Yd2+T/Nsa8MjDY7Tr88y6sKKTyJj7F668UYgcRiTQ=";
       name = "aarch64_generic-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-RRkiitDrY89CsXKgQdrtZL/62x1I5hk5mRRE3AA1Q+g=";
+      hash = "sha256-PbyUrDCc7pySMR2O8CaX3U6SIZGasZyXhmocHqi2b0M=";
       name = "aarch64_generic-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/packages/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-8t+JGMlFdYALQaYIuqDBsT8RIbbqw3FLLxTbp7ddhE4=";
+      hash = "sha256-sQOusT4i6Co5p/untc8Bx+h4m2lz6ShHwKE5Y4sv5ew=";
       name = "aarch64_generic-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_generic/telephony/Packages";
     };

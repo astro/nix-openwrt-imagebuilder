@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/";
   sha256sums = {
-    hash = "sha256-sM228NYBc0bQC/f2w1qCSzlmwnjtUwpU2a3RaNiTV1g=";
+    hash = "sha256-i9r11R5bETcbE5QYOb0g6VZMv23wo+FW6mAI/6gbNQY=";
     name = "sunxi_cortexa7-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/sha256sums";
   };
   imagebuilder = {
-    sha256 = "bc955a6310d171ced192980646ee171bd16da790d08020d1f5e93c9d9c52feeb";
+    sha256 = "f3a4e0c9893e71f2937ad94a7300c0984d4a56f3ec8b7997ec469e588945e83c";
     filename = "openwrt-imagebuilder-sunxi-cortexa7.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-Kebi7ZDOGZVQSXJ5ortNiGjzl9jGkNgS4zhOd6XkIo0=";
+    hash = "sha256-F2O8/dKaojbnpeXDr3MJq10ZcWBAgqvykzzuU3XOa0U=";
     name = "sunxi_cortexa7-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/profiles.json";
   };
@@ -179,6 +179,9 @@
           "kmod-rtc-sunxi"
         ];
       };
+      pine64_pinecube = {
+        device_packages = [ ];
+      };
       roofull_beelink-x2 = {
         device_packages = [
           "kmod-leds-gpio"
@@ -256,7 +259,7 @@
   kmods."6.12.74-1-9ea1e648e2a9daffe79eba8ef2654547" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/kmods/6.12.74-1-9ea1e648e2a9daffe79eba8ef2654547/";
     sourceInfo = {
-      hash = "sha256-NUhlYxfJ9w21wmBlTQEm4bdHU+vKPKTy0/DQZumSV2U=";
+      hash = "sha256-lzGcU2akaCvnQn83a2s2nuTZ9KU45i9HhT4zlJdWc6g=";
       name = "kmods-sunxi_cortexa7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/kmods/6.12.74-1-9ea1e648e2a9daffe79eba8ef2654547/packages.adb";
     };
@@ -269,7 +272,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/packages/";
     sourceInfo = {
-      hash = "sha256-RyuoxzEjneNbLJ0jLQAaHVPu9Yap+e6U734TFi5WVmw=";
+      hash = "sha256-bAsF3xUEuT3L/UbBOHpUmEOxRCHhR4pkdMKvx7FnUAE=";
       name = "sunxi_cortexa7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa7/packages/packages.adb";
     };
