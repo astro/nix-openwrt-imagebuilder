@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/";
   sha256sums = {
-    hash = "sha256-S6VSagX37jQIXZBiqDD5GddmGx47bM89bJocJO/Q4mg=";
+    hash = "sha256-cFuzsqz4qGtnl3xTK2ki/XA13j180FPE2ZrMNHY4hDs=";
     name = "realtek_rtl838x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "f5a7894c20538d4861baf6fa0f9e23f121019284efa2f4a00c897684c82f3ef5";
+    sha256 = "8a8ecc7b0298b0d01d2d77885e2b82af1e15ea47ac151d53fe1fd7395eb7443e";
     filename = "openwrt-imagebuilder-realtek-rtl838x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-0S8ORnrPKimNmEnCBSQYKa3nQJVGA+r0kERwsXR1mwA=";
+    hash = "sha256-wYT3mHJeUCzc3jtaRjYZGoNtPvvi4hR3WlDGXUoIUM0=";
     name = "realtek_rtl838x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/profiles.json";
   };
@@ -202,7 +202,7 @@
   kmods."6.12.77-1-14ed5cfc93a5b050a32f0be0bca9f904" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.12.77-1-14ed5cfc93a5b050a32f0be0bca9f904/";
     sourceInfo = {
-      hash = "sha256-7gajoFlYUJyBHQW890ww7egFHYW4/Vnn9j0/OZjCZmg=";
+      hash = "sha256-/zW6lSS/NFjLgOyk8tN7vP+l4B2pXvn2xQYMElS2GOo=";
       name = "kmods-realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.12.77-1-14ed5cfc93a5b050a32f0be0bca9f904/packages.adb";
     };
@@ -215,7 +215,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/";
     sourceInfo = {
-      hash = "sha256-uQJQhiZSdsppt/TCNKbV8lXISdqj6USW3GrBf4GeWyo=";
+      hash = "sha256-qE3hekKCVNgfgEamjbUR9Vr5C35WL67+se7ovh9PbjA=";
       name = "realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/packages.adb";
     };
