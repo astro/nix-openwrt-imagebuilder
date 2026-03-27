@@ -43,5 +43,6 @@
   "25.12.0-rc5" = import ./25.12.0-rc5/default.nix;
   "25.12.0" = import ./25.12.0/default.nix;
   "25.12.1" = import ./25.12.1/default.nix;
+  "25.12.2" = import ./25.12.2/default.nix;
   snapshot = import ./snapshot/default.nix;
 }
