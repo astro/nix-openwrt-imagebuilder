@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for powerpc_8548
 {
   sha256sums = {
-    hash = "sha256-fi/E/UiV/+IXr8zC3dT3MiTyJVCtvlHFViblwsKjkn4=";
+    hash = "sha256-WUEumhUcNljCW4qfeDdQgbWsDApudAkaLJwI2CU1RMU=";
     name = "powerpc_8548-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/packages/";
     sourceInfo = {
-      hash = "sha256-uIQUsPsfSweH5kIW7GpcB2yOMcF1B2MVCwfu4TtVWfs=";
+      hash = "sha256-1plb71t86cpE+cugKULujuDZENWz2MhFmh/rsZC9wR4=";
       name = "powerpc_8548-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/routing/";
     sourceInfo = {
-      hash = "sha256-RN3qhUw6XrhcvuPmNTyfR/LgTqa7hVkO0wJSWvTtVAU=";
+      hash = "sha256-oWynXCqeP8anOmK8/dNGzVF1R4PzanzFODDBHAdYCiA=";
       name = "powerpc_8548-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/telephony/";
     sourceInfo = {
-      hash = "sha256-TomHBVYqoyb2IMfDykgSHI5QVhguh67NQx1h8qlJIVk=";
+      hash = "sha256-seQbinYQvEltdMq6+IkE3QDEUl26FV9tKFEgWLcHcBw=";
       name = "powerpc_8548-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/telephony/Packages";
     };

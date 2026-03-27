@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/";
   sha256sums = {
-    hash = "sha256-iT/12271ytzbCm56JhioEmq2MqMrkFR7Ov3RbmGL5cI=";
+    hash = "sha256-UI/oBGlJ4+PmfS2j3oDC9biVvlrULqXtbffRLCrmeNg=";
     name = "ipq806x_chromium-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/sha256sums";
   };
   imagebuilder = {
-    sha256 = "235943d3ea1c8e5222f6709ee1ed60db1db69622289f7be599dad23a843e53a6";
+    sha256 = "261347780c5e4d13fa282b08e0ce3804bb4070a47f579b88e0b1b97982c4c299";
     filename = "openwrt-imagebuilder-ipq806x-chromium.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-3LlmPt05SxxaFfHceRh/3oN2QGM872XZUMZlA/e0ljk=";
+    hash = "sha256-y1BuqbsPs4SrpFMo7Ufu8XZbUBXTJZxDETb9slTTCGo=";
     name = "ipq806x_chromium-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/profiles.json";
   };
@@ -102,7 +102,7 @@
   kmods."6.12.77-1-7ecf944ffc9feece86ffc5d37eeec767" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/kmods/6.12.77-1-7ecf944ffc9feece86ffc5d37eeec767/";
     sourceInfo = {
-      hash = "sha256-IlhZXEaTum0D0MFRj65CaG7S8ymMv59ZnXnZVKcYGZQ=";
+      hash = "sha256-LeVSfkvFW6jOWkJ+LvV6xk2qFPL3rHsj5rYZt6R5wg0=";
       name = "kmods-ipq806x_chromium-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/kmods/6.12.77-1-7ecf944ffc9feece86ffc5d37eeec767/packages.adb";
     };
@@ -115,7 +115,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/packages/";
     sourceInfo = {
-      hash = "sha256-gkNj/+vKMVvsXfSiQW/4cbSh/XgyEJBVPakkuzGUu90=";
+      hash = "sha256-NsJBbInXrSqgXmhKvIbllxJgqTw0unK8s8brBxvmGhY=";
       name = "ipq806x_chromium-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/packages/packages.adb";
     };
