@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for arm_cortex-a5_vfpv4
 {
   sha256sums = {
-    hash = "sha256-6VwB01VrlZc5kU19S+FkqRJt6Z/Un3Nf8Va/IQOh4Ec=";
+    hash = "sha256-8ClM385/au8Um0F5kgXGomKiAdXg3/6ZPp3AynPYYUk=";
     name = "arm_cortex-a5_vfpv4-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/luci/";
     sourceInfo = {
-      hash = "sha256-RIlkxY8q191jd0TBgh5lPSKi36fmmoS/PoJw5qZvOls=";
+      hash = "sha256-UUP+yDCARFz2kAe5GlRnrkbT7tunSYICoGgMXYvYFdc=";
       name = "arm_cortex-a5_vfpv4-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/packages/";
     sourceInfo = {
-      hash = "sha256-U+mmR+nSctmMwdXZ32WSfg5uT1P5IwmuVPGtapmo2y4=";
+      hash = "sha256-GQRBOUC6qRk+kuddxSvYyJmvqoYgnsTXhZ+YuZe08PM=";
       name = "arm_cortex-a5_vfpv4-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/routing/";
     sourceInfo = {
-      hash = "sha256-HESKot4mIzg2DN+cSauDjdyimEPb3QGgwo4CfAeqeDo=";
+      hash = "sha256-73piCtnhf0eFFnKkeJCFyVNap42AyCjcqbL1ujDF0lc=";
       name = "arm_cortex-a5_vfpv4-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/telephony/";
     sourceInfo = {
-      hash = "sha256-SHX76zaavp8oLW8tmYtIupMQbsaeA64002Jvbh7sWDA=";
+      hash = "sha256-gxbyOT+D7rxwGqOGfma4o2Pje5mTfW0u/A02lNrpIQ4=";
       name = "arm_cortex-a5_vfpv4-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a5_vfpv4/telephony/Packages";
     };
