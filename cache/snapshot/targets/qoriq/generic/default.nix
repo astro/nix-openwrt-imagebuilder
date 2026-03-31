@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/";
   sha256sums = {
-    hash = "sha256-JNA1s4RR4MYgnS37iQ8446LdSpVy8gY0SGNN2VJ5SCc=";
+    hash = "sha256-Fd126q0Us07ySS0kvvktnCf/17RsxkKbUZJJ4qEldEs=";
     name = "qoriq_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "7da49f97f4131e4e276399eb2779aa1d6a3fa3a5c6fbbacfd54d12a756c3c241";
+    sha256 = "1b26767c36f653d4ef30e2cf00e1962f96c79254ba87df5072a8880beff7c3e1";
     filename = "openwrt-imagebuilder-qoriq-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-5z+yod5ozdCvtvQJlbioytjdMQefHAKUZk12KgBf6rE=";
+    hash = "sha256-diR5mJsBalGpDfS3pfKMLpmu4MIxpEe5dFLO2CRThzQ=";
     name = "qoriq_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/profiles.json";
   };
@@ -20,7 +20,7 @@
     linux_kernel = {
       release = "1";
       vermagic = "318b62bb8088850b7f637a0b579872c6";
-      version = "6.12.77";
+      version = "6.12.79";
     };
     default_packages = [
       "apk-mbedtls"
@@ -51,7 +51,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.77-1-318b62bb8088850b7f637a0b579872c6";
+    kmods_target = "6.12.79-1-318b62bb8088850b7f637a0b579872c6";
     profiles = {
       fsl_T4240RDB = {
         device_packages = [
@@ -76,12 +76,12 @@
       };
     };
   };
-  kmods."6.12.77-1-318b62bb8088850b7f637a0b579872c6" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/kmods/6.12.77-1-318b62bb8088850b7f637a0b579872c6/";
+  kmods."6.12.79-1-318b62bb8088850b7f637a0b579872c6" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/kmods/6.12.79-1-318b62bb8088850b7f637a0b579872c6/";
     sourceInfo = {
-      hash = "sha256-nRlAUDHuSi4agOC9KNTO0HfsP0rt+fgPe7bbV0ymEcE=";
+      hash = "sha256-SWs0aDqvwRFCzYmUyNtGZLORL3rG+0o20FEjl1rB7HA=";
       name = "kmods-qoriq_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/kmods/6.12.77-1-318b62bb8088850b7f637a0b579872c6/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/kmods/6.12.79-1-318b62bb8088850b7f637a0b579872c6/packages.adb";
     };
     packages =
       let
@@ -92,7 +92,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/packages/";
     sourceInfo = {
-      hash = "sha256-4kp0IUYEJsVVeRi+DijN9/DNzj0T1nhDm3VMH3ZWgLg=";
+      hash = "sha256-Yc8ku3fvalJYLHqXzJRsprO3LLZ6AKTE5FZUwuDk/0g=";
       name = "qoriq_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/packages/packages.adb";
     };
