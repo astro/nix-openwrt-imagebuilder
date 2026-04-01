@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/";
   sha256sums = {
-    hash = "sha256-3h1CXg+7vbGuQYvhDQHStnQ3C7nI8DhpF6EDcAkEang=";
+    hash = "sha256-9B6j97KOvnsowSAt9gg7nKPBkbjEhKn3ZaKJ5pI4rFg=";
     name = "realtek_rtl930x_nand-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a7e2324578c39411faf6b22892d877375a32002741bd488587a56f94f1323ad0";
+    sha256 = "469199f3229f2926637ed301049b6c9fbb0f1e3de86e8066ba950ef4b993bfd2";
     filename = "openwrt-imagebuilder-realtek-rtl930x_nand.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-yQqQr4vkjxpf1Vypb1vNNLGsNk4XGAVPjm4VJ7gEQGY=";
+    hash = "sha256-3cQdGJ9qVA238BIQOVU+UsSbH1UpnVd/FzyA36AlGNY=";
     name = "realtek_rtl930x_nand-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/profiles.json";
   };
@@ -55,7 +55,7 @@
   kmods."6.12.79-1-8bba02d3b10723da1e3f16d1340f937a" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/kmods/6.12.79-1-8bba02d3b10723da1e3f16d1340f937a/";
     sourceInfo = {
-      hash = "sha256-Cj371no+mDqg9GAqnc+3POLbqOB9MN6kb69TylXJck4=";
+      hash = "sha256-c/7JKahjg6kqywZ2q1jTyd5fAriz1bkavN5jibfSYuE=";
       name = "kmods-realtek_rtl930x_nand-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/kmods/6.12.79-1-8bba02d3b10723da1e3f16d1340f937a/packages.adb";
     };
@@ -68,7 +68,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/packages/";
     sourceInfo = {
-      hash = "sha256-heB8VEQ5ytDkrHmRRSTYTDaG1P1SsRIyl8xSfee7uws=";
+      hash = "sha256-9q2SnIHevS7yfdiVQUPV8zpZKLS2KSw6ao858/hGIFg=";
       name = "realtek_rtl930x_nand-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x_nand/packages/packages.adb";
     };
