@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-FYnG47G6NsglXXzxAjK2WXWoLUqxUTbBSpxW/YrnVZo=";
+    hash = "sha256-9rFSC5xpjMn4qhSe/n2DlBCm3WjwKV8hcnjfjTlkL64=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "1d69b38dea5c684c9f6c6a30d8d1aeef792070ef34926779c6cc045023475ac2";
+    sha256 = "b200d64f8a654a0d6de281256fcc9e5ccb22c28e93450cf3b01f4c2ce43c1448";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-AMWkL5OhQeXVGnD+xKwKlEGZcXudgplHf6NARW6p72A=";
+    hash = "sha256-1tZnpIO9pTDEOGZI9vWwiTRkKyDYB1A47llk+vVBGVM=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -1041,7 +1041,7 @@
         ];
       };
       netgear_wndap360 = {
-        device_packages = [ ];
+        device_packages = [ "kmod-owl-loader" ];
       };
       netgear_wndr3700 = {
         device_packages = [
@@ -2255,7 +2255,7 @@
   kmods."6.12.79-1-71b11cb52b21fa852076c3b718a495e1" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.79-1-71b11cb52b21fa852076c3b718a495e1/";
     sourceInfo = {
-      hash = "sha256-KCkwSysJ5dO7Wc6Y2iO0mUeNPHBj4vKF3BbpI3wVRCE=";
+      hash = "sha256-fjaJzdDuVdMWxDzfk2jF9X06a+/FSntBASmCCdFIKCs=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.79-1-71b11cb52b21fa852076c3b718a495e1/packages.adb";
     };
@@ -2268,7 +2268,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-vboSuVrqnNXWNG+GkaVrVVgBQpnmSfas+DTQHzRdkkg=";
+      hash = "sha256-S9X0SgvPdzGVQ4LUoBV06EROBO+ihHffdrB/I5i1kAk=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };

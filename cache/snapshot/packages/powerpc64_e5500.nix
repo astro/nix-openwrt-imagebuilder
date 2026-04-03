@@ -1,14 +1,14 @@
 # snapshot package feeds for powerpc64_e5500
 {
   sha256sums = {
-    hash = "sha256-yEAwzB1sZutw6OEyOx24Ayej8lnZQk4yXxOe1tC95K4=";
+    hash = "sha256-6KQUTM9Uib9g+2UYUK+btyqs7PO9l39bcIpyRb8DU3g=";
     name = "powerpc64_e5500-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/base/";
     sourceInfo = {
-      hash = "sha256-4BkzIdoTjbLPOX9rRE1t62k4BQf5tA1EILOue8TCT5Q=";
+      hash = "sha256-+rdKfZPdaJ+/D5DNT50jIc9rIrrYHfIthdb8gUUwd3M=";
       name = "powerpc64_e5500-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/luci/";
     sourceInfo = {
-      hash = "sha256-jc4NqgWYtXf7DVq3PrnxPb7q+dXgCxuxOCZbgt2yhVI=";
+      hash = "sha256-KFREc2FDhf/njHmQ+1dLtOy+KANNeMFht5pROSZ98V4=";
       name = "powerpc64_e5500-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/packages/";
     sourceInfo = {
-      hash = "sha256-cHR9txadQZja53eQhIqHT2N2W0G+dab6w5xaPjM9fUc=";
+      hash = "sha256-Ndyf/9kFx3qCNb4mYOl+bvriQgFniAvGNrninYure60=";
       name = "powerpc64_e5500-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/routing/";
     sourceInfo = {
-      hash = "sha256-6GL8RZQyFw28kCLNbGF3uVWgM3zM3xoebcKTfT2zT50=";
+      hash = "sha256-/lTlUfATKTub32kblrUqB51S6my9/Uaa4RdIuHqPFEg=";
       name = "powerpc64_e5500-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/telephony/";
     sourceInfo = {
-      hash = "sha256-XWEPIERmcTm9gHiefpE6T8enaYPSXF0KRl+5o2buPD8=";
+      hash = "sha256-vWrQBqWOighfs4TyA4V3RQA2+l3O5RyKAE8dgp3XAxs=";
       name = "powerpc64_e5500-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc64_e5500/telephony/packages.adb";
     };
