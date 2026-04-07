@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/";
   sha256sums = {
-    hash = "sha256-rkW+PH+oqdoiqmCebNXntjP95uTa/MZ624g/wi4BddQ=";
+    hash = "sha256-Yv2dqYm2S5dzHOdlmMHWVuV/pFAJT1lotBa0RSlmthI=";
     name = "armsr_armv7-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/sha256sums";
   };
   imagebuilder = {
-    sha256 = "84f42688df64349d066289698a999e36070247afd4ee93202edde5a3f3bfc4ae";
+    sha256 = "eb04b268d48b5979cd428bcc17daa0a1e4cc53541118354e324022c4254043db";
     filename = "openwrt-imagebuilder-armsr-armv7.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-VnHIi9jcs/udwGi3QuueWcM6WITBE+gkpS31Za+fRAA=";
+    hash = "sha256-lRpJFy+IjjzNoNWsnWnEh8wWg1kqMinzPPRL7wET9z8=";
     name = "armsr_armv7-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/profiles.json";
   };
@@ -91,7 +91,7 @@
   kmods."6.12.80-1-28142db4f54c5c5e165897a76f447fd3" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/kmods/6.12.80-1-28142db4f54c5c5e165897a76f447fd3/";
     sourceInfo = {
-      hash = "sha256-YvfKdkodpPqcNgOzZehU7h42xe8E0uSSnbfbhwF0PtM=";
+      hash = "sha256-2ESLMLOZLhW8MhGM0WVxgBm90b8AQc4ZTY1MBX5NZCA=";
       name = "kmods-armsr_armv7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/kmods/6.12.80-1-28142db4f54c5c5e165897a76f447fd3/packages.adb";
     };
@@ -104,7 +104,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/packages/";
     sourceInfo = {
-      hash = "sha256-gN+Y+JqZdpgK37eyYMThAmEef4DZ0KwdU7kiJatXzzI=";
+      hash = "sha256-bMps6NPHTV1ZV4ekZhhafE+A3WsS9SV/iU/Rz1UVe9M=";
       name = "armsr_armv7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/armsr/armv7/packages/packages.adb";
     };
