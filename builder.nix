@@ -228,7 +228,7 @@ stdenv.mkDerivation ({
 
   dontFixup = true;
 
-  passthru = (extraArgs.passthru or {}) // {
+  passthru = (args.passthru or {}) // {
     config = openwrtLib.takeAttrs configArgs args;
   };
 
