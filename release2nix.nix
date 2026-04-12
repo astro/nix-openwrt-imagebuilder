@@ -17,7 +17,9 @@ writeShellApplication {
     nixfmt
   ];
 
-  runtimeEnv.JQLIBS = "-L${jqlibdir}";
-  runtimeEnv.PACKAGES2NIX = "${packages2nix}/bin/packages2nix";
+  runtimeEnv = {
+    JQLIBS = "-L${jqlibdir}";
+    PACKAGES2NIX = "${packages2nix}/bin/packages2nix";
+  };
   text = lib.readFile ./release2nix.sh;
 }
