@@ -1,14 +1,14 @@
 # 24.10.6 package feeds for mips_4kec
 {
   sha256sums = {
-    hash = "sha256-FG6SAbTxrI676ztNSiL6fXaWyfMiUfnUni0wLyrlIDI=";
+    hash = "sha256-JVo+cs8YvrkC6MtAMzfBqUx03B5fiMvxzv89CzrFDWw=";
     name = "mips_4kec-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/base/";
     sourceInfo = {
-      hash = "sha256-tNUAqrArEI+AH+cV/QTpUWGNMtVr05XDMN6nsoKhhaU=";
+      hash = "sha256-Ew/BtHrt13kGwLWOCg9qh3RnC9Cu3AvwIROkUM/o2EE=";
       name = "mips_4kec-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/packages/";
     sourceInfo = {
-      hash = "sha256-0tVyUsif+QRH8vI7vmM+le+yeK+jtnn1fV45cQRiVbc=";
+      hash = "sha256-tif4ipJeF99WUNWSriiak6knxtfLqVvDosLvl8gtwtA=";
       name = "mips_4kec-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/routing/";
     sourceInfo = {
-      hash = "sha256-pWSHsb7kfp57dF+DDpBLM9uQeTamuxDgflC68KICed8=";
+      hash = "sha256-vAFp7f1m/09Uqd1ZM2OPCaUGjSWZtPF03+6QpCEpYAc=";
       name = "mips_4kec-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/telephony/";
     sourceInfo = {
-      hash = "sha256-UXx4H1Jz7+ZOJxllii+GDVh2H1OifBH3SK8rpcINh98=";
+      hash = "sha256-HbXeWZ7LGjmAoSfAYWNRX5Jzsy+vO+VWO7p1gC9PqHM=";
       name = "mips_4kec-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_4kec/telephony/Packages";
     };

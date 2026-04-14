@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/";
   sha256sums = {
-    hash = "sha256-RgGu9ATRKdK+lxZt7YShy+5qi3pjf0fK5t65Dm2iOxQ=";
+    hash = "sha256-PlXheZfC2ZwhDQEfknUMDZ43CVYhzV9uDTuSzMj07YI=";
     name = "ramips_mt76x8-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/sha256sums";
   };
   imagebuilder = {
-    sha256 = "72686c5ddc2db654522109770acb6223d03e49b93cdd342f9c97c1943c6caf9d";
+    sha256 = "9d3b271662e8676bb4295ec85d9d9aab38395676291614894ec51f0b8a1d0292";
     filename = "openwrt-imagebuilder-ramips-mt76x8.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-3UK5lZO7Mb9tkcUK093e5mowgATqFz4Wsj5RZQGv+5k=";
+    hash = "sha256-anJjG6aEZ2h7ImqHorYQ73rKc1ouKi8bS7ngOOgtSdY=";
     name = "ramips_mt76x8-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mipsel_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "8deacf657d4589d7389fce0e006b2284";
+      vermagic = "d0efa0281b31d41ef06631b6834c34a2";
       version = "6.12.80";
     };
     default_packages = [
@@ -52,7 +52,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.12.80-1-8deacf657d4589d7389fce0e006b2284";
+    kmods_target = "6.12.80-1-d0efa0281b31d41ef06631b6834c34a2";
     profiles = {
       "7links_wlr-1230" = {
         device_packages = [
@@ -268,6 +268,9 @@
       };
       keenetic_kn-1221 = {
         device_packages = [ "kmod-usb2" ];
+      };
+      keenetic_kn-1510 = {
+        device_packages = [ "kmod-mt76x0e" ];
       };
       keenetic_kn-1613 = {
         device_packages = [
@@ -772,12 +775,12 @@
       };
     };
   };
-  kmods."6.12.80-1-8deacf657d4589d7389fce0e006b2284" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.12.80-1-8deacf657d4589d7389fce0e006b2284/";
+  kmods."6.12.80-1-d0efa0281b31d41ef06631b6834c34a2" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.12.80-1-d0efa0281b31d41ef06631b6834c34a2/";
     sourceInfo = {
-      hash = "sha256-bAj97sBlnc2YqZc2VP90JZhDDeq4T17+9Y5Q/CA930M=";
+      hash = "sha256-1tS+OSNJOnV4/QBSFF2akmcUr+UyElt5JgHH1yK+aYI=";
       name = "kmods-ramips_mt76x8-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.12.80-1-8deacf657d4589d7389fce0e006b2284/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.12.80-1-d0efa0281b31d41ef06631b6834c34a2/packages.adb";
     };
     packages =
       let
@@ -788,7 +791,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/packages/";
     sourceInfo = {
-      hash = "sha256-HuVeiZJnjyNBHDSZC+pjyvSNYe1XuUYBU9gyOPNq+Ao=";
+      hash = "sha256-rsr01Z8ahFC8024RmTGfj9NtUAhmzotzh8WMsyLC9Ls=";
       name = "ramips_mt76x8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/packages/packages.adb";
     };

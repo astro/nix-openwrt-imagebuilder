@@ -1,14 +1,14 @@
 # 25.12.2 package feeds for arm_xscale
 {
   sha256sums = {
-    hash = "sha256-t3bczD1gJi6eoapPZGwf0OuxqqBqGI0WTJRNabkp6C8=";
+    hash = "sha256-gvk38B4FTQn/qUfIdcQI8FttQJ7vGAlxc8aLE3baj1E=";
     name = "arm_xscale-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/base/";
     sourceInfo = {
-      hash = "sha256-VVIyC9FHxiCuih7bZ0ZD1IIWKJVDaMfj5OxvAnEl8Cc=";
+      hash = "sha256-vBAdaxCE4hNkFxc6luh0MtLO2eXIY5+Ydn6Mp/GLYUI=";
       name = "arm_xscale-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/luci/";
     sourceInfo = {
-      hash = "sha256-IKNCwdXCAIvY3D+eIfij6zDXdfTRTf81ZYf68k3Dz3c=";
+      hash = "sha256-CdnMO7cWoQOeCEHNK5+Wo+Mjf0znbJbs3v4g0CeMzt4=";
       name = "arm_xscale-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/packages/";
     sourceInfo = {
-      hash = "sha256-3D70Zo4GiLawFz0ZUWAqN1+fzeRj+RtXBnbsbXnLovk=";
+      hash = "sha256-CsDcz8cOir2K1K7DRV5QqaXliz+vrybiTpUMnL23SDY=";
       name = "arm_xscale-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/routing/";
     sourceInfo = {
-      hash = "sha256-m5DzRH3XceDMW09TLVleprNjpQ+8bJsH52mpqYdQykw=";
+      hash = "sha256-UPR5gi7WMYiT20KuO77CHtmMjb8Ilc3Bub2+iMb6L/Y=";
       name = "arm_xscale-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/telephony/";
     sourceInfo = {
-      hash = "sha256-oBze0QrMUItzwq3srm6UQsP4PI9oAIEdC49+LQ19JD0=";
+      hash = "sha256-HO2ypF/28UW+KlSSjm67sWne2cDdy97GcZJMOClHhjc=";
       name = "arm_xscale-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/arm_xscale/telephony/packages.adb";
     };
