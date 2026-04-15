@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/";
   sha256sums = {
-    hash = "sha256-MMV6AXBGmKMaquyNgMw+j00RZx6Ymk9kIWfQGlCjVb4=";
+    hash = "sha256-IYCYqBsH0et3CEJ7FBEv5FTDrx5mPGyeVHNPgUMSuTU=";
     name = "mvebu_cortexa9-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/sha256sums";
   };
   imagebuilder = {
-    sha256 = "02e22cc04d690f0dbc056b2c9340275b93289fac221c4d65cccf2c6fb5362c66";
+    sha256 = "522f07fa55fc729ceea0435b2667176e1b610f07c9403fd7518d7e0b106a4a18";
     filename = "openwrt-imagebuilder-mvebu-cortexa9.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-24mAO9Z6ruEHaxd4l50vtFzfVdKme0RgYK725dCm4F4=";
+    hash = "sha256-fzayKXndFpQX7bp3p6vnRNwiPakyUXoASQKMr414r3U=";
     name = "mvebu_cortexa9-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/profiles.json";
   };
@@ -270,6 +270,7 @@
           "mkf2fs"
           "e2fsprogs"
           "partx-utils"
+          "kmod-dsa-mv88e6xxx"
         ];
       };
       solidrun_clearfog-pro-a1 = {
@@ -277,6 +278,7 @@
           "mkf2fs"
           "e2fsprogs"
           "partx-utils"
+          "kmod-dsa-mv88e6xxx"
         ];
       };
       synology_ds213j = {
@@ -326,7 +328,7 @@
   kmods."6.12.80-1-72b5bbaeb90d934b44ea5e7bb5bc1635" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/kmods/6.12.80-1-72b5bbaeb90d934b44ea5e7bb5bc1635/";
     sourceInfo = {
-      hash = "sha256-jIvHP+lZ4Qmtn0D/RX/LVqsg3H0mJ14uZJTx42z2/Yc=";
+      hash = "sha256-erWJH0BTUk0sYDAom3RybKiav8mSVLm1QizFNF7CReM=";
       name = "kmods-mvebu_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/kmods/6.12.80-1-72b5bbaeb90d934b44ea5e7bb5bc1635/packages.adb";
     };
@@ -339,7 +341,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/packages/";
     sourceInfo = {
-      hash = "sha256-dvQWhnRwMVGa35uwdMV5qpf3IgLKtWjkuCtzwwUj7ek=";
+      hash = "sha256-ATY/aDPEqhVYs3T/wIYMPMQzCCDWIPEFK0Wt/MBw5xg=";
       name = "mvebu_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/packages/packages.adb";
     };
