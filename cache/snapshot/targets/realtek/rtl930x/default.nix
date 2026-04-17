@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/";
   sha256sums = {
-    hash = "sha256-oZ/3I7u4oyG8nkHQqIO4m6C0/5lVCz9ch0mxpZw+ZfA=";
+    hash = "sha256-qGu5G/DEOIYOb6zAV9w6LuwtXCiAPLB/p7EyCo044BM=";
     name = "realtek_rtl930x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "e7f44c10c834619ee1e9fd6a0136f765929e74c8b2e57e8eec1e0d2bf764ed3d";
+    sha256 = "1cf0d367ba4d94d75de9827eeda96f49e5d4368da5d477cd9a2715fe006ff789";
     filename = "openwrt-imagebuilder-realtek-rtl930x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-oUNm8cC01NMPW1yfKcXK+i5gOJqE/3xWHgrkeIAe0XI=";
+    hash = "sha256-7L+CbHPhcoeii0rGSoJp6Y+7F8Awkjr3kyejjMLkcRw=";
     name = "realtek_rtl930x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/profiles.json";
   };
@@ -104,12 +104,15 @@
           "kmod-thermal"
         ];
       };
+      zyxel_xmg1915-10e = {
+        device_packages = [ ];
+      };
     };
   };
   kmods."6.18.21-1-715f961856da92edd854040068dbe8ee" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.18.21-1-715f961856da92edd854040068dbe8ee/";
     sourceInfo = {
-      hash = "sha256-3qX3HIxB5wDdyEKCiiKDDw2c3RGcEd63L370x1bxANg=";
+      hash = "sha256-0QI5dBBuj4YXUJMl96zapnRBpJtO7X0Pwwri2FsxKMw=";
       name = "kmods-realtek_rtl930x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.18.21-1-715f961856da92edd854040068dbe8ee/packages.adb";
     };
@@ -122,7 +125,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/packages/";
     sourceInfo = {
-      hash = "sha256-ClWPbFtDccULQOpUTO9rVfGegC0Y4STd2KRnuDlVmsY=";
+      hash = "sha256-8K7sp2GYxFWt1HVS9elYaEuHK1s1lXaVIloe6XfYZsc=";
       name = "realtek_rtl930x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/packages/packages.adb";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/";
   sha256sums = {
-    hash = "sha256-Y2ZOCc3sgt1bxf2Xwz9ojCbSRgGk3Odq6xRM4+Zkt10=";
+    hash = "sha256-OO6BeqTN/1MZchBE3C60xzEBk3vahYiJL/kSbcTHSLE=";
     name = "layerscape_armv8_64b-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ff38b75d0c4fc30d2e432771a927b5a7a9df8d0f53e0925e739166e9778eabe1";
+    sha256 = "839d969fb097abf3d34a9c9a8c253ce9c32603b9feda44d2cf77f4231efbd277";
     filename = "openwrt-imagebuilder-layerscape-armv8_64b.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-ik8zTDRYW2MtDyGEStIjNBrqSV49DkrzKha7kX/KPlI=";
+    hash = "sha256-l39binhqF9BIS7XQ5OyLnOIekYisksoAgEdQ5zwjK74=";
     name = "layerscape_armv8_64b-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/profiles.json";
   };
@@ -153,7 +153,7 @@
       fsl_lx2160a-rdb-sdboot = {
         device_packages = [ "restool" ];
       };
-      ten64-mtd = {
+      traverse_ten64-mtd = {
         device_packages = [
           "uboot-envtools"
           "kmod-rtc-rx8025"
@@ -167,7 +167,7 @@
   kmods."6.12.80-1-3b0733a0999d91ab6aac66bc2d26b068" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/kmods/6.12.80-1-3b0733a0999d91ab6aac66bc2d26b068/";
     sourceInfo = {
-      hash = "sha256-RWk7GDPH0TLAotqRdYqwONgJfR01WWamPcTzqns4wNc=";
+      hash = "sha256-nRZ8q9HCJ+uQ3/jy0GUw8fwwvrwreZ41yy+9Xe+YPsY=";
       name = "kmods-layerscape_armv8_64b-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/kmods/6.12.80-1-3b0733a0999d91ab6aac66bc2d26b068/packages.adb";
     };
@@ -180,7 +180,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/packages/";
     sourceInfo = {
-      hash = "sha256-+nEofvl/tLwanRGfE3yl/yCZ6YBbnkH5WlZMD6G0eP8=";
+      hash = "sha256-S1eIkQhGRM8YlO7ynYsnuHQu2A6V+qYFB6mNKcyNYOc=";
       name = "layerscape_armv8_64b-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/packages/packages.adb";
     };

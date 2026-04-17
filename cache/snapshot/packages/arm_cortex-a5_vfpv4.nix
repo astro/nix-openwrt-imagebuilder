@@ -1,14 +1,14 @@
 # snapshot package feeds for arm_cortex-a5_vfpv4
 {
   sha256sums = {
-    hash = "sha256-Oi80C3tFmXeHFQWwYqfQQjaGdDQwQehDnhL9q6146uU=";
+    hash = "sha256-D7OVcnmNcauDh+/6s1hFlY0HUAM60CRCJdIRifPVkU4=";
     name = "arm_cortex-a5_vfpv4-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/base/";
     sourceInfo = {
-      hash = "sha256-RxbcWr04RuVQlkCMXobBG2HA7Ve57kQPt7T8fm2zIOQ=";
+      hash = "sha256-nfnWu4YmLCU0QtufjFY4VYMHXc1B+XpvWWGAojjfqgA=";
       name = "arm_cortex-a5_vfpv4-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/luci/";
     sourceInfo = {
-      hash = "sha256-yxSIUzit7a2gefkwOU8H/6Fy5Jd8ZXq0Y2ENaUha2eE=";
+      hash = "sha256-CjSCX8gtcVGgFGFeo6QNnDazSSGkOzwdMJNLM/ghons=";
       name = "arm_cortex-a5_vfpv4-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/packages/";
     sourceInfo = {
-      hash = "sha256-KF2napUCjrXNzR2If8o0cnCoGWAlbAGO3IU4+6QvgFo=";
+      hash = "sha256-9HX1KoNGTBTJkWBNo6uwD12Yi2MGe4tvVyRzLbieg30=";
       name = "arm_cortex-a5_vfpv4-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/routing/";
     sourceInfo = {
-      hash = "sha256-fR2TfzoPXCMSgaKjt2vZ1SDm4cdnTiEps3RJEBtmG64=";
+      hash = "sha256-NhKDyfGbBIe2m886XmQt1AVUtOyRbQl5QRaxA5tdv9Y=";
       name = "arm_cortex-a5_vfpv4-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/telephony/";
     sourceInfo = {
-      hash = "sha256-brObxtQvIYzI5r7JGSBpeCz9kvDRcF/BcVh/T1PjnQU=";
+      hash = "sha256-bVr4DoIZ/JQCbzAPWNO2cKXINTuEvbgtyqtScOHbmYI=";
       name = "arm_cortex-a5_vfpv4-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a5_vfpv4/telephony/packages.adb";
     };
