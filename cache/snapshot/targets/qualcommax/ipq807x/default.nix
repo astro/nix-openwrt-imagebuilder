@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/";
   sha256sums = {
-    hash = "sha256-4oT6hS3KDg8keL/4H3dNmyE/71QAeEZTArymXjIwFKI=";
+    hash = "sha256-K8eTmBDcFD57OtJIyvlQ71T13mWkxCUQ6xXQJIUc8I4=";
     name = "qualcommax_ipq807x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "0846d502ab8ab235c7642a9eb13bfd7ee28c08a759799941d22207c590c29777";
+    sha256 = "b12c002c559e869d9152428143ce63e15dddc45e2b0594a094f2c763c1d26b16";
     filename = "openwrt-imagebuilder-qualcommax-ipq807x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-ngvh3K699RkaUOjqkx2mVcS6cZIhaNVxTjbGKcQzybw=";
+    hash = "sha256-viPOfSGGUy2bzWR6CQqoADocEs9qRaigvXF1I26hAic=";
     name = "qualcommax_ipq807x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/profiles.json";
   };
@@ -258,6 +258,7 @@
           "ath11k-firmware-qcn9074"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca9887-ct"
+          "kmod-hwmon-emc2305"
         ];
       };
       yuncore_ax880 = {
@@ -298,7 +299,7 @@
   kmods."6.12.80-1-044bf655d806999739e8539fcbad05cd" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/kmods/6.12.80-1-044bf655d806999739e8539fcbad05cd/";
     sourceInfo = {
-      hash = "sha256-vco4diKzl/0sRsXONfwqIlm+OuJPm9BnqxolSFJUcbo=";
+      hash = "sha256-MhGNBx1WNhO7EuZeG8tMG3sV+I4BvhtjKpTyi16aWd8=";
       name = "kmods-qualcommax_ipq807x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/kmods/6.12.80-1-044bf655d806999739e8539fcbad05cd/packages.adb";
     };
@@ -311,7 +312,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/packages/";
     sourceInfo = {
-      hash = "sha256-xvcHhaUuEJ7yidvCowo49veHRrf51Uq9mj5rljMYTlc=";
+      hash = "sha256-GyaRx89eL003holilbXc04cBiA1FYWEk8mGzqznfTKc=";
       name = "qualcommax_ipq807x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/packages/packages.adb";
     };

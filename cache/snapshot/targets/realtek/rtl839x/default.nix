@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/";
   sha256sums = {
-    hash = "sha256-EWbxXCNtdvsLlHV3fmDedRCSbSAEiHO6te1wi1uMYgs=";
+    hash = "sha256-mn2pU8PhkoRXZ6jktXnlkO6tBqA0FCtfJ7o79LJXYNI=";
     name = "realtek_rtl839x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "fb883fe078836e1d5786438c5f04e54ccbbd6689c6b569c7fa17dc211e68f9a3";
+    sha256 = "b719cd2b7f60c9716af09a2eda6416b7d91cf0cf91d59d809880453dc022fbec";
     filename = "openwrt-imagebuilder-realtek-rtl839x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-JazwH2EpdyACFVzYXnceq8TgNViLALhwgsDL5Tt/wOc=";
+    hash = "sha256-HTkLO2JNwNTFOawjljiCpd1D3TOThQQnw20dxQ/Kuwg=";
     name = "realtek_rtl839x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/profiles.json";
   };
@@ -102,7 +102,7 @@
   kmods."6.18.21-1-34abcadd488f12ffe1e2a1387a9e5c96" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/kmods/6.18.21-1-34abcadd488f12ffe1e2a1387a9e5c96/";
     sourceInfo = {
-      hash = "sha256-sFxz79+20uIQd9iFcZeIlH8SmPPUUUBMMJ9VsnBYc1I=";
+      hash = "sha256-cZmlLFY2XpoSucooYI4nLQodPnVn66MgMz08+IYT2GI=";
       name = "kmods-realtek_rtl839x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/kmods/6.18.21-1-34abcadd488f12ffe1e2a1387a9e5c96/packages.adb";
     };
@@ -115,7 +115,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/packages/";
     sourceInfo = {
-      hash = "sha256-b06c6KgJl90z5w4lRaXlZKesnR6omK7Lj81vAYxSbJw=";
+      hash = "sha256-JyubRlwF2bet65xqYnBhnBrDUIQ7pIos2/DTL/tNchw=";
       name = "realtek_rtl839x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/packages/packages.adb";
     };
