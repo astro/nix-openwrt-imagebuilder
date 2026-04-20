@@ -1,14 +1,14 @@
 # 25.12.2 package feeds for loongarch64_generic
 {
   sha256sums = {
-    hash = "sha256-10c/Qt7+kmzEMgT2BI+iOzNBwRlQvdBbeM0Cf7H1vcE=";
+    hash = "sha256-126QMAkQk7CEumrF02+MrEk1eJ8nJ3ecRTg5u/LAwQM=";
     name = "loongarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/base/";
     sourceInfo = {
-      hash = "sha256-rohzKZjCBGYaDBOgIUZXAdHDWzG5Zjxgq83CcmTzMKo=";
+      hash = "sha256-QzAGJqN4eJg+bLLizm81ea5RVQ8x/sHnwVJOAF2YIFg=";
       name = "loongarch64_generic-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/luci/";
     sourceInfo = {
-      hash = "sha256-UHCYMpB71KElnJPRnbnGl8JigWlw8SnO72Q/2hwzmks=";
+      hash = "sha256-ol6FNQKvM1Ege19KxLkQ+TOoGLuEu7NUnhWesHjPO18=";
       name = "loongarch64_generic-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-p8ycmd1h6Iy4BBPZ7uWHAecG7LBinOD61Wxoye6kLmQ=";
+      hash = "sha256-pPHyD8u6gZKDNffUFf1pJfdEUVA/8f4PAv4aB2+UGao=";
       name = "loongarch64_generic-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/routing/";
     sourceInfo = {
-      hash = "sha256-HsFj76s3NC270bBKF6BOwX8Ax4FFOG7b6h/twr0eqk4=";
+      hash = "sha256-N2/DtuI6ZfAbpUXrgT8wr0IIOn9QRoXDp1uCPUX9bh0=";
       name = "loongarch64_generic-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-R8t9QbAiGu/39wLzJNcr9cd/ofopmZhma8kPwvcP514=";
+      hash = "sha256-BiyCz6oKMfKSOTituxWFHBjuAbksiALecHwdaxTzkTI=";
       name = "loongarch64_generic-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/loongarch64_generic/telephony/packages.adb";
     };
