@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/";
   sha256sums = {
-    hash = "sha256-TGyAYCkD+zu3Dj/GoeGpO6n/sGcL91h5aUSRubRhWxY=";
+    hash = "sha256-RRua4at/nbF8AjtvYhc9nTtnbFhUyDmNEOtWYkLo4AY=";
     name = "kirkwood_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "c9ee180f3c499a96e7b2d8314cf92627beb95355f81842b810f85efd8acceb66";
+    sha256 = "f9d80ebbef1073db18866240c37d5bc8f95c041966ab34b4d8299a54e9ce622e";
     filename = "openwrt-imagebuilder-kirkwood-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-DGAUyDV4t2DPB8nxelafL7q1MHuHtykjUE3Vc2vPlnU=";
+    hash = "sha256-5/x1MRej3rvZQUE5f7N27FndHf/KLfqxGVqFTEOGOC4=";
     name = "kirkwood_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/profiles.json";
   };
@@ -288,7 +288,7 @@
   kmods."6.12.80-1-32f9727b4a5d25cb5a1903ba8bb17d9c" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/kmods/6.12.80-1-32f9727b4a5d25cb5a1903ba8bb17d9c/";
     sourceInfo = {
-      hash = "sha256-puoOveh8sqaNjq2qMUiOaHGPYRqWaMaDsLvuXa8jhYg=";
+      hash = "sha256-NfAbkstcyOErHdjak03oejJhuqbrN4vykLs4nlh2hK0=";
       name = "kmods-kirkwood_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/kmods/6.12.80-1-32f9727b4a5d25cb5a1903ba8bb17d9c/packages.adb";
     };
@@ -301,7 +301,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/packages/";
     sourceInfo = {
-      hash = "sha256-7Fr7ovQlxydUA5fOqEwQRQVH2ZA7uSj8GjC4tkag+Qo=";
+      hash = "sha256-WHgWFW2ZE2VcXefF3YDET53/23YX/evS36BboVh6LHo=";
       name = "kirkwood_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/kirkwood/generic/packages/packages.adb";
     };
