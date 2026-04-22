@@ -1,14 +1,14 @@
 # 25.12.2 package feeds for mips_24kc
 {
   sha256sums = {
-    hash = "sha256-+PNpRVcJCrXDCHrnJoZ8PrSkfEKFx8eXpgQY+f9Onb0=";
+    hash = "sha256-TKVtraCB4ctOcPHxptlHyeRYHf59LJqxomJ2UioYdfg=";
     name = "mips_24kc-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/base/";
     sourceInfo = {
-      hash = "sha256-lput9XtyA9nGMA6NS2qm83JaIA97NntNi9B/MkNoRV8=";
+      hash = "sha256-SWbExgLOcsxetXasTezNuTkFoJRQJm1R0ngGiDKPVc0=";
       name = "mips_24kc-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/luci/";
     sourceInfo = {
-      hash = "sha256-6fSnaPzb8WBkPuy7ypMDiFCvBdWFvZl+DvTsVcPGOP8=";
+      hash = "sha256-106IRVvu0hCmMgoKzrp0v3DO+4/hIRUrP1UoMOum7Zs=";
       name = "mips_24kc-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/packages/";
     sourceInfo = {
-      hash = "sha256-/zn3JGUGWi1OUnpULXwFR8pR3ZU98GmC+9iLHi40oWw=";
+      hash = "sha256-ga3VXJQ+RlggGooBvhqUcJ0urUfZN7nZ0Aq3Hq0Vcss=";
       name = "mips_24kc-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/routing/";
     sourceInfo = {
-      hash = "sha256-J0ca2cv6finRF9ze8OwuwOuin7h2+6sCSEc0A1rpv18=";
+      hash = "sha256-a7h2ktkZSuxFuHtuasPf3sf7opQauC62u49Ep+bemHI=";
       name = "mips_24kc-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/telephony/";
     sourceInfo = {
-      hash = "sha256-bOnwlai1v89ed7+zPG3JfJINoWnNZfvLXWbeG0FgVfk=";
+      hash = "sha256-8QAJ9k5dJ1DmOB8bdnrIzkLBBa4qKr4j/3xlvVTL6sg=";
       name = "mips_24kc-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mips_24kc/telephony/packages.adb";
     };
