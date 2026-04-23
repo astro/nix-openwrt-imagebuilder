@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/";
   sha256sums = {
-    hash = "sha256-ewpIgepe3hbuUDvzQR7K8qEQ0w0mUkYG4bRVIGwyyK8=";
+    hash = "sha256-RtWyZlx7cCf+1Yy5DxVmQ7xo751wZ9tGUseTxpGkd7Y=";
     name = "imx_cortexa9-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/sha256sums";
   };
   imagebuilder = {
-    sha256 = "47b411c67c34d05060701876a7031ca097a6a0f50512b51114778a3cf51267b8";
+    sha256 = "3aee308fb7d6042fc8d6494256f37bdced34faa687eefa19b48209804be36e75";
     filename = "openwrt-imagebuilder-imx-cortexa9.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-DvoagwL5TDVtXM+k7yvapUX5vjFytxhJn9ciUmEnzLQ=";
+    hash = "sha256-1PAMutApl+uMpIscs1MXZvqGiFRcSoMimJxwP6eXzZY=";
     name = "imx_cortexa9-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/profiles.json";
   };
@@ -54,6 +54,38 @@
     ];
     kmods_target = "6.12.80-1-476d6f46836b32432f26cdd1b3d38781";
     profiles = {
+      gateworks_ventana = {
+        device_packages = [
+          "kmod-sky2"
+          "kmod-sound-core"
+          "kmod-sound-soc-imx"
+          "kmod-sound-soc-imx-sgtl5000"
+          "kmod-can"
+          "kmod-can-flexcan"
+          "kmod-can-raw"
+          "kmod-hwmon-gsc"
+          "kmod-leds-gpio"
+          "kmod-pps-gpio"
+          "kobs-ng"
+          "kmod-gpio-button-hotplug"
+        ];
+      };
+      gateworks_ventana-large = {
+        device_packages = [
+          "kmod-sky2"
+          "kmod-sound-core"
+          "kmod-sound-soc-imx"
+          "kmod-sound-soc-imx-sgtl5000"
+          "kmod-can"
+          "kmod-can-flexcan"
+          "kmod-can-raw"
+          "kmod-hwmon-gsc"
+          "kmod-leds-gpio"
+          "kmod-pps-gpio"
+          "kobs-ng"
+          "kmod-gpio-button-hotplug"
+        ];
+      };
       solidrun_cubox-i = {
         device_packages = [
           "kmod-drm-imx"
@@ -72,28 +104,12 @@
           "kmod-rtc-ds1307"
         ];
       };
-      ventana = {
-        device_packages = [
-          "kmod-sky2"
-          "kmod-sound-core"
-          "kmod-sound-soc-imx"
-          "kmod-sound-soc-imx-sgtl5000"
-          "kmod-can"
-          "kmod-can-flexcan"
-          "kmod-can-raw"
-          "kmod-hwmon-gsc"
-          "kmod-leds-gpio"
-          "kmod-pps-gpio"
-          "kobs-ng"
-          "kmod-gpio-button-hotplug"
-        ];
-      };
     };
   };
   kmods."6.12.80-1-476d6f46836b32432f26cdd1b3d38781" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/kmods/6.12.80-1-476d6f46836b32432f26cdd1b3d38781/";
     sourceInfo = {
-      hash = "sha256-MCI8dlm68c8maow3nuc4CBEDrv69yYps0UQgVwilsSE=";
+      hash = "sha256-yw/h5whXI7+yuy7nGtMBimYfAKsIBw7BoNoj+7gY3Gw=";
       name = "kmods-imx_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/kmods/6.12.80-1-476d6f46836b32432f26cdd1b3d38781/packages.adb";
     };
@@ -106,7 +122,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/packages/";
     sourceInfo = {
-      hash = "sha256-zzNwSa7nEslqnJtDvj5btXf96oVXa9K+lcpeJBpefmg=";
+      hash = "sha256-EEEOzzLwncGFYz9rWziCkSYiCBTN9GJc7TpoBBcj9dw=";
       name = "imx_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/packages/packages.adb";
     };

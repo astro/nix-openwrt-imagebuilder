@@ -1,14 +1,14 @@
 # 25.12.2 package feeds for mipsel_74kc
 {
   sha256sums = {
-    hash = "sha256-lpsxC+JwhlVpM0Nuo/Uaxi5AJlDhjfQ2kw0lsGDjNOk=";
+    hash = "sha256-G7IeKDNckYld1o9MPvexjnVyYeX+XshtpNRtb1K8iPE=";
     name = "mipsel_74kc-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/base/";
     sourceInfo = {
-      hash = "sha256-GwU4DEAV7JTSLKfv5rgY0vDbmJPNKPZSL3XGmOR1E/o=";
+      hash = "sha256-pn1TxoP8S12dQ/sZd3l/9BN1d4cfpWoJlNmSmBzhxwI=";
       name = "mipsel_74kc-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/luci/";
     sourceInfo = {
-      hash = "sha256-xKpu9VaZRv43f40Q11O9u3z/uDtmbYP2qmYF4JU99xs=";
+      hash = "sha256-atAlERFT3IEQs6M5eiBnlDAaVS4n9sGT8RSVK7Or33U=";
       name = "mipsel_74kc-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/packages/";
     sourceInfo = {
-      hash = "sha256-iHiBRcmS43n4JBEy9VnbYjc4bZ5ELgYPYD6KxrZCjLc=";
+      hash = "sha256-4ATIdAmIrl09cq0y/OLBwpwJgcp2bF6iqtnSaCUFA0I=";
       name = "mipsel_74kc-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/routing/";
     sourceInfo = {
-      hash = "sha256-IxvVWIIFWU2P9z6HT8KJbSumFvwG87r+uBpfq8LvJpM=";
+      hash = "sha256-7LJ+IL8pKJ5l3AkwKsFxvTnCXBfAsHOCpbt021YgdGg=";
       name = "mipsel_74kc-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/telephony/";
     sourceInfo = {
-      hash = "sha256-HcSPi1Dwbxm0UA+LSOolJnVDV+9EDIVPILeJ4IxLCas=";
+      hash = "sha256-t15sMHAIeoXbNfNoHlEbIVXcgs0MKg0lgOtrxv/+KhU=";
       name = "mipsel_74kc-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.2/packages/mipsel_74kc/telephony/packages.adb";
     };

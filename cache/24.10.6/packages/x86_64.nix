@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for x86_64
 {
   sha256sums = {
-    hash = "sha256-IaN8mgutJC2twbDaHi9n60V/hBEg4lv9bBFjjt9BJa4=";
+    hash = "sha256-JvA5pCzF8l3CYTvlWn7us+hI3T6/OYJPyxIkh/9ivXo=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/luci/";
     sourceInfo = {
-      hash = "sha256-G2gDqqeZEtPpcHuvpiA9efNPBRLhKV77SJLIPLf81bE=";
+      hash = "sha256-G9Ld5g50hdyY8laXvzx4SK6L/r9uw1m8kMUXVjTABUM=";
       name = "x86_64-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/packages/";
     sourceInfo = {
-      hash = "sha256-0r/jUyjB4TXVmhpmzJ53qsKNlsWLxLDFBfsA+0bLUZo=";
+      hash = "sha256-ew6ood+Lb9/ndx2W97v17uUWs3OMiBLSdsqWiXE6ZCw=";
       name = "x86_64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/routing/";
     sourceInfo = {
-      hash = "sha256-LmbqlvDQ8YAu7n6zVKrZ08yz+7cXsnfXmBVposZCoe0=";
+      hash = "sha256-vJkWFuF5QauA3sm9WwNsEI24OF3cwnbcrXAvqXZxLiE=";
       name = "x86_64-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/telephony/";
     sourceInfo = {
-      hash = "sha256-T/QDRgenvnlsV/LpL0KRIpMJozKr0i1SsDz8PTo6XoQ=";
+      hash = "sha256-kk3G3R1AfPOJijJ5p+F6Cm0kpgVBwpaxziPa2GrwWhE=";
       name = "x86_64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/x86_64/telephony/Packages";
     };
