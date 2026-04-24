@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/";
   sha256sums = {
-    hash = "sha256-hyIvJjkN9M57oi6ED6S0xzvsZJWv7eSgKuu8IX8QwMM=";
+    hash = "sha256-RZ2vk2VK+/W4Z6QY/0VHgX1MfDyckT8nXPFqy3aR6IY=";
     name = "airoha_an7581-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/sha256sums";
   };
   imagebuilder = {
-    sha256 = "3647adf15a5c788c2490e3a1bdbe52b040f7dca4604eab97bf4a412f19fa3537";
+    sha256 = "057c71dd997f4163a75f6e8eac66bd6d7cf94280a3d3336f766cbb85ca215a12";
     filename = "openwrt-imagebuilder-airoha-an7581.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-8GKLiHGGloJUcoWNzi1mYtoyO7PNi/PiLlYoyk4e3vo=";
+    hash = "sha256-YgtHixx2Z91NgIX/iBbOzjuASxFYpZJUPShx2UBzhhE=";
     name = "airoha_an7581-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "aarch64_cortex-a53";
     linux_kernel = {
       release = "1";
-      vermagic = "52380b4fcc9ba59dd57c47b8cfdbd68a";
+      vermagic = "d85fea16d1594ef48139ddc15ba0f7f0";
       version = "6.12.80";
     };
     default_packages = [
@@ -52,7 +52,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.80-1-52380b4fcc9ba59dd57c47b8cfdbd68a";
+    kmods_target = "6.12.80-1-d85fea16d1594ef48139ddc15ba0f7f0";
     profiles = {
       airoha_an7581-evb = {
         device_packages = [
@@ -62,8 +62,21 @@
           "kmod-input-gpio-keys-polled"
         ];
       };
-      airoha_an7581-evb-emmc = {
-        device_packages = [ "kmod-i2c-an7581" ];
+      airoha_an7581-evb-emmc-eagle = {
+        device_packages = [
+          "kmod-i2c-an7581"
+          "airoha-en7581-mt7996-npu-firmware"
+          "kmod-mt7996-firmware"
+          "wpad-basic-mbedtls"
+        ];
+      };
+      airoha_an7581-evb-emmc-kite = {
+        device_packages = [
+          "kmod-i2c-an7581"
+          "airoha-en7581-npu-firmware"
+          "kmod-mt7992-firmware"
+          "wpad-basic-mbedtls"
+        ];
       };
       gemtek_w1700k-ubi = {
         device_packages = [
@@ -91,12 +104,12 @@
       };
     };
   };
-  kmods."6.12.80-1-52380b4fcc9ba59dd57c47b8cfdbd68a" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.12.80-1-52380b4fcc9ba59dd57c47b8cfdbd68a/";
+  kmods."6.12.80-1-d85fea16d1594ef48139ddc15ba0f7f0" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.12.80-1-d85fea16d1594ef48139ddc15ba0f7f0/";
     sourceInfo = {
-      hash = "sha256-uXhqvJC0sMMbR3kCaibb73y9KGijtd0zJGe7fKkQCpE=";
+      hash = "sha256-jRZIJiGkOj6GwWGCeP2gRQjFmp2IRRUzDwqaeXLpCi8=";
       name = "kmods-airoha_an7581-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.12.80-1-52380b4fcc9ba59dd57c47b8cfdbd68a/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.12.80-1-d85fea16d1594ef48139ddc15ba0f7f0/packages.adb";
     };
     packages =
       let
@@ -107,7 +120,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/";
     sourceInfo = {
-      hash = "sha256-+3yfCJ92pf/v6wl04cH5ryrIlXwTArLxCaVApDBFsx8=";
+      hash = "sha256-OynefEJtt/67UAyg+FyMaB0aAr7DRB4ZRHv1Bya8lVQ=";
       name = "airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/packages.adb";
     };
