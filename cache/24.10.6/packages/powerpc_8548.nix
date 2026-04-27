@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for powerpc_8548
 {
   sha256sums = {
-    hash = "sha256-ED6nwA28Z4/KGDK8v++yf+XDJxM1D0u/DVDMr7gl/qs=";
+    hash = "sha256-Nb/zYe2uWo29iwp3zJJvV1vaf+LQFTcI06ajHUfJXwI=";
     name = "powerpc_8548-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/luci/";
     sourceInfo = {
-      hash = "sha256-usJHvH8KwHRcnt4hW/2YqZYPc2/dMmBrn3qEqQR5Cz4=";
+      hash = "sha256-kh7wT3My/GFF31vBn5oyzn3mQ/LyrSIjoT+PN6cXGNs=";
       name = "powerpc_8548-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/packages/";
     sourceInfo = {
-      hash = "sha256-+kF/ERbIzZRQB0hJuXHhyN/y+bbBufztO/1KrJwhQfQ=";
+      hash = "sha256-Zv6raqVQrWJ94b/I6gr0D8yeNLwoUzYqcGGA9qzFwBg=";
       name = "powerpc_8548-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/routing/";
     sourceInfo = {
-      hash = "sha256-06ocftokGu4Ejl1wAqxtMWTszRwcBvClyT569pZQPwI=";
+      hash = "sha256-Za1PG4b6Ho5jJ/I/Tmwdd71xTscAIAkWOQe4Ln80E70=";
       name = "powerpc_8548-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/telephony/";
     sourceInfo = {
-      hash = "sha256-RF/JgfM/jYVcqorFdYBXNBoVyYSYK7VznGDMkoHFFF8=";
+      hash = "sha256-IHv5I19GsKgKFqh4Cz5xyUYcvRdP/VzlQdXS3/ChwUs=";
       name = "powerpc_8548-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc_8548/telephony/Packages";
     };
