@@ -1,14 +1,14 @@
 # 24.10.6 package feeds for aarch64_cortex-a53
 {
   sha256sums = {
-    hash = "sha256-x5DiPQ32fc8tV7wMiZo2El8171T07Je1DJHu+7WZc9k=";
+    hash = "sha256-Nno4Q25Y5FwYjss2FIcPHFr7XpWF2hTUtCFlyFg/x4M=";
     name = "aarch64_cortex-a53-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/base/";
     sourceInfo = {
-      hash = "sha256-wpo9o4xZ0frYxKeXsuVI/FudEZ2LQo+1g1UzaN9pUTQ=";
+      hash = "sha256-AJvnU+KuIFonhixarsgvSuUBKgJ9SAEkqavr34AuvyU=";
       name = "aarch64_cortex-a53-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/packages/";
     sourceInfo = {
-      hash = "sha256-UsM3HyufT7UzNRezlNI7IJwqiD+Lwc3GTs67RqzTBp0=";
+      hash = "sha256-qa3wQqxyGScf1lYtGeO8hjtmzMCt+gpz2BHl9Cddhfk=";
       name = "aarch64_cortex-a53-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/routing/";
     sourceInfo = {
-      hash = "sha256-N39v0hdArMV5gl8gdwdDZI51EqcdHQjLz6zWxOxeNG4=";
+      hash = "sha256-ihUaToTf1XSbkDq49NcPHZzoH858dOfF67SmFPynziA=";
       name = "aarch64_cortex-a53-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/telephony/";
     sourceInfo = {
-      hash = "sha256-KzJEjgXI2Wo49KrH3uyvpDTkto4Mf1NYkGhDTJ8CWes=";
+      hash = "sha256-+eq9G2m16VmmUoQ14+jgFhD9KMu3un2XxvRC0ma9jMw=";
       name = "aarch64_cortex-a53-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a53/telephony/Packages";
     };

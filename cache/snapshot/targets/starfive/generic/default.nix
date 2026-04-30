@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/";
   sha256sums = {
-    hash = "sha256-dlJsJT0nZy50TuUIw1ggBH1wAmUKG1/ncbWpToLa/kg=";
+    hash = "sha256-d7jK6zAr+TkJ8bPB/h29kQnkiRKBkj+K+HJ8Op424ck=";
     name = "starfive_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "47817fd028e2713b7b9a8accccd3b87c695a4ae4327d939aed889a9b572c2ab9";
+    sha256 = "8373806addb9f22f1b682a8e320d2a40b94c0f3b9430511190574f62bc0409df";
     filename = "openwrt-imagebuilder-starfive-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-GXRatao+kPh8KWicZ5YFc6zb4ntDZEYGmgVrV5WY/rE=";
+    hash = "sha256-tIAULVrBQjmg7ssemkQGrS/d/r+TsR5ywAmM9NmngII=";
     name = "starfive_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/profiles.json";
   };
@@ -19,8 +19,8 @@
     arch_packages = "riscv64_generic";
     linux_kernel = {
       release = "1";
-      vermagic = "327d1062eb7bc4bd81f075b10f125ea2";
-      version = "6.12.80";
+      vermagic = "56a3f7e3465bf9eb224c424df9ce1365";
+      version = "6.12.84";
     };
     default_packages = [
       "apk-mbedtls"
@@ -48,7 +48,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.80-1-327d1062eb7bc4bd81f075b10f125ea2";
+    kmods_target = "6.12.84-1-56a3f7e3465bf9eb224c424df9ce1365";
     profiles = {
       beaglev-starlight = {
         device_packages = [ ];
@@ -77,12 +77,12 @@
       };
     };
   };
-  kmods."6.12.80-1-327d1062eb7bc4bd81f075b10f125ea2" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/kmods/6.12.80-1-327d1062eb7bc4bd81f075b10f125ea2/";
+  kmods."6.12.84-1-56a3f7e3465bf9eb224c424df9ce1365" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/kmods/6.12.84-1-56a3f7e3465bf9eb224c424df9ce1365/";
     sourceInfo = {
-      hash = "sha256-bjtXKoz6Mu9WGHCL96Vb3fnK4VsEhrotb34/OgDN870=";
+      hash = "sha256-jlPpcs22FCDmyj9eESu5PJMBeBv7FKEqzC0zSP+3Z5U=";
       name = "kmods-starfive_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/kmods/6.12.80-1-327d1062eb7bc4bd81f075b10f125ea2/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/kmods/6.12.84-1-56a3f7e3465bf9eb224c424df9ce1365/packages.adb";
     };
     packages =
       let
@@ -93,7 +93,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/packages/";
     sourceInfo = {
-      hash = "sha256-S5rZmT+nbbpItlzSnT0HkkxGZafafTXyYaWt/JTZ/Eo=";
+      hash = "sha256-MUdug8DSNltdbfAGZKHgIFbC7ionTT/08hO39TuwU+I=";
       name = "starfive_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/starfive/generic/packages/packages.adb";
     };

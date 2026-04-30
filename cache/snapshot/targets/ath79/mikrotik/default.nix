@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/";
   sha256sums = {
-    hash = "sha256-SI74v9rDcRdbO1a79bQvVYamBgYXIXf0UHubjFxl2hI=";
+    hash = "sha256-2bC/fKCd3ZOEM8Y9fvoTZ7C17Ehp158D2TVTcTVaJ94=";
     name = "ath79_mikrotik-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/sha256sums";
   };
   imagebuilder = {
-    sha256 = "08163cbf8cf0c39260ac65911f297ebbec40f7926c8ee0f675ca44744a1ee851";
+    sha256 = "c01c1720e169573e55c3d429becd1f43c6e6a36be6d6926f7903aebff6c3bfbc";
     filename = "openwrt-imagebuilder-ath79-mikrotik.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-fmlxanPMnMGtfgwAFJu+vl0kaMWxTFHwSXMTW3WmPp4=";
+    hash = "sha256-Qwm4XbdLvEbD8Z31B8rPWZ2HRz+ydQkx6S2deIvVJ80=";
     name = "ath79_mikrotik-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mips_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "093fd466b9576d1c9d10dbc10b9287b6";
+      vermagic = "0a459158070cf752a048d2e8983a2b3d";
       version = "6.12.80";
     };
     default_packages = [
@@ -55,7 +55,7 @@
       "wpad-basic-mbedtls"
       "yafut"
     ];
-    kmods_target = "6.12.80-1-093fd466b9576d1c9d10dbc10b9287b6";
+    kmods_target = "6.12.80-1-0a459158070cf752a048d2e8983a2b3d";
     profiles = {
       mikrotik_routerboard-2011uias-2hnd = {
         device_packages = [
@@ -207,12 +207,12 @@
       };
     };
   };
-  kmods."6.12.80-1-093fd466b9576d1c9d10dbc10b9287b6" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/kmods/6.12.80-1-093fd466b9576d1c9d10dbc10b9287b6/";
+  kmods."6.12.80-1-0a459158070cf752a048d2e8983a2b3d" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/kmods/6.12.80-1-0a459158070cf752a048d2e8983a2b3d/";
     sourceInfo = {
-      hash = "sha256-XRCX/aWbahWXYN29djAKwUY5UfwidbJ9g32meryrS4s=";
+      hash = "sha256-ptUQPSZDPuR3bd1coEwg+U1mKnIoA/RaCvTLt6WJwZ0=";
       name = "kmods-ath79_mikrotik-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/kmods/6.12.80-1-093fd466b9576d1c9d10dbc10b9287b6/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/kmods/6.12.80-1-0a459158070cf752a048d2e8983a2b3d/packages.adb";
     };
     packages =
       let
@@ -223,7 +223,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/packages/";
     sourceInfo = {
-      hash = "sha256-cbMrFRUlkUQo+pvpsqMLVEbkPOnBoTKjDUH01hSuHs8=";
+      hash = "sha256-zxNleZN+3xcwY8GGiM1Qw8/jvBcmPbcog/vs5OZFsy0=";
       name = "ath79_mikrotik-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/packages/packages.adb";
     };
