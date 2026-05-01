@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/";
   sha256sums = {
-    hash = "sha256-Pb8MKcC4vHoyuTutIAWSWZpnjCxJNFE7AqP55tHjeRo=";
+    hash = "sha256-8BRDgSK6OXjeecoQFTTdIG0dtg88nj3p4aJlqBBMJvY=";
     name = "apm821xx_sata-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/sha256sums";
   };
   imagebuilder = {
-    sha256 = "4cda85d29dd7a02c268aed4e95df5ca7247be833daee662bed9e03d06070b661";
+    sha256 = "17f54fa49f9c299ea93a6d2b1ae735cc39bd811e27ed04777fe781d5444a2720";
     filename = "openwrt-imagebuilder-apm821xx-sata.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-lqnR/pr26mAP4n/XNl5FRM8FgIV4CsVY+XyDPiNNBsI=";
+    hash = "sha256-01IikRGofC7LzKHMViiPOQr86RCmmlYAZbWEiW9/9XY=";
     name = "apm821xx_sata-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/profiles.json";
   };
@@ -20,7 +20,7 @@
     linux_kernel = {
       release = "1";
       vermagic = "0120ce70367fc4313353f7d898ce5ed7";
-      version = "6.12.80";
+      version = "6.12.84";
     };
     default_packages = [
       "apk-mbedtls"
@@ -58,7 +58,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.80-1-0120ce70367fc4313353f7d898ce5ed7";
+    kmods_target = "6.12.84-1-0120ce70367fc4313353f7d898ce5ed7";
     profiles = {
       wd_mybooklive = {
         device_packages = [
@@ -72,12 +72,12 @@
       };
     };
   };
-  kmods."6.12.80-1-0120ce70367fc4313353f7d898ce5ed7" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/kmods/6.12.80-1-0120ce70367fc4313353f7d898ce5ed7/";
+  kmods."6.12.84-1-0120ce70367fc4313353f7d898ce5ed7" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/kmods/6.12.84-1-0120ce70367fc4313353f7d898ce5ed7/";
     sourceInfo = {
-      hash = "sha256-Z+1A2e7pfhM69Y34FZgleMbf0yt2D0zZ3lyn6I7p8VE=";
+      hash = "sha256-H01KfULSrFCR0n3JmTT6YH/Fb5aZ+KBpqvlgoVMDUmY=";
       name = "kmods-apm821xx_sata-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/kmods/6.12.80-1-0120ce70367fc4313353f7d898ce5ed7/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/kmods/6.12.84-1-0120ce70367fc4313353f7d898ce5ed7/packages.adb";
     };
     packages =
       let
@@ -88,7 +88,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/packages/";
     sourceInfo = {
-      hash = "sha256-h1wayIURZO8OSUv1uy9mcEcbUDY6Q2/bSq7LtuMOVp4=";
+      hash = "sha256-1tN3c5zcjVFO+Wwk11AABwUfzXgfPul3XI77iGPqDdo=";
       name = "apm821xx_sata-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/sata/packages/packages.adb";
     };
