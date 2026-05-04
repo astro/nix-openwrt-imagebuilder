@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/";
   sha256sums = {
-    hash = "sha256-1N5TQDnlHa0Vyk4HzujG4MACjABHvrfCYR4/oOJh1jk=";
+    hash = "sha256-CJh/6KbobQ09/mxEIalrgyn+Vf7twMos8h5FLRM3toM=";
     name = "ipq40xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ea9f9dbb7f86b7ab438e10e248123b09d040f778eb296e713bf9d28a22d5627e";
+    sha256 = "2ff3bbf742a51cfcbfd3c7daa62c4403e4b0b1917adc264a4218634c0a6d6904";
     filename = "openwrt-imagebuilder-ipq40xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-odwJslesw50KVouYCiFFSoxyYN9J4xQgDV+JKjCEXBk=";
+    hash = "sha256-VwldC1et1DWC1xVD5bemViE7U0k2ecAgBP1heBkx780=";
     name = "ipq40xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/profiles.json";
   };
@@ -495,7 +495,7 @@
   kmods."6.12.85-1-4f1979f6fa4fca5d4a909aa41b600230" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.12.85-1-4f1979f6fa4fca5d4a909aa41b600230/";
     sourceInfo = {
-      hash = "sha256-U2M09GlAbgsy2mKvIrUtwyIUHVwIhEAYMnMVvqHTKIs=";
+      hash = "sha256-nbKBxYkFLq2EE8uHkKwkvoPeTOF+PldquV8xC1eavLU=";
       name = "kmods-ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.12.85-1-4f1979f6fa4fca5d4a909aa41b600230/packages.adb";
     };
@@ -508,7 +508,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-QEqxC00njJ47vnzNU4TUoXzowadYOyIbOsMCycd0XRo=";
+      hash = "sha256-BxRinPHAyP+DxnIWEZnawzUrl3VFpvEqlU8P/JbzF6A=";
       name = "ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/packages.adb";
     };
