@@ -58,8 +58,8 @@ in rec {
       else if matches == []
       then throw "No match for OpenWRT profile ${profile}"
       else builtins.trace ''
-        ${builtins.length matches} matches for OpenWRT profile ${profile}
-        ${lib.concatMapStrings ({ target, variant }: ''
+        ${toString (builtins.length matches)} matches for OpenWRT profile ${profile}
+        ${lib.concatMapStrings ({ target, variant, ... }: ''
         - ${target}/${variant}
         '') matches}
         Using first.
