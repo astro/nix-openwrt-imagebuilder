@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/";
   sha256sums = {
-    hash = "sha256-nKeWwFsVFGwqUV4+/rnWm/EBGfS+K6UoVd4CV8niEUI=";
+    hash = "sha256-lxYLO88gPUvcEnWwdAuRbkIRncQ9729+UPAgGYhNEpY=";
     name = "ath79_tiny-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ac38b2bed1e6527835408515980ec738b72a3e8dffaf7134459e22fe5b524bc1";
+    sha256 = "5b2e752bffacf120731a9e66659dbefd1d8651e54be268bbe8219f622d0c42d1";
     filename = "openwrt-imagebuilder-ath79-tiny.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-OotWYKjPrtkjKV2CJ0RKtwld9n94Fy59nhW/HirvOFE=";
+    hash = "sha256-srXK8T6Rm3cQjcdIq8w3MaiuwCC4Ejv8yYXnue/c1Wg=";
     name = "ath79_tiny-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/profiles.json";
   };
@@ -112,6 +112,13 @@
           "-uboot-envtools"
         ];
       };
+      sitecom_wlr-7100 = {
+        device_packages = [
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct-smallbuffers"
+          "kmod-usb2"
+        ];
+      };
       tplink_re355-v1 = {
         device_packages = [
           "kmod-ath10k-ct-smallbuffers"
@@ -135,7 +142,7 @@
   kmods."6.12.85-1-8b60873a082dd7e7964115ec30285364" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/kmods/6.12.85-1-8b60873a082dd7e7964115ec30285364/";
     sourceInfo = {
-      hash = "sha256-k6ZX8WoBR702EUMbNAi5hL/5GvsAXR7Tk+XQ358s3xo=";
+      hash = "sha256-NmluYaPwoD2KDN3uOsjlDFYkWd4WfkZ74a7nILds5ww=";
       name = "kmods-ath79_tiny-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/kmods/6.12.85-1-8b60873a082dd7e7964115ec30285364/packages.adb";
     };
@@ -148,7 +155,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/packages/";
     sourceInfo = {
-      hash = "sha256-l9oEYmllCKth8SaiWhebWpafTFiFGi3FCZNZGXIYyt8=";
+      hash = "sha256-RM+kFcHbiHCFZUJ2RzWRNrxxUzDvlCmqJwjuQE9urEs=";
       name = "ath79_tiny-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/packages/packages.adb";
     };

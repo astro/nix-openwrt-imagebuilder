@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-J4ZqkRqBUrCbcrwM6TcQFHhAzvrLH8dkXOOpSxpksDM=";
+    hash = "sha256-EebUPkxaoUA8/Q5oF9Hx3Z3fmCwNgf6iFFgLlPQufUc=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "0951953419581640896ec6797f20491ceb179c25da6a04586117928ed4c9731a";
+    sha256 = "b68dad18c7e9cefba9fc8252c0da1295607fccd44e2d1715477674ea1a11070c";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-6mcsKr4Tmve3XyvLWdLWx15AuyhtYrau4Cmio9LaVqk=";
+    hash = "sha256-DWLpVBMtA3Z4v4jd9w7p6GGgtxpE5aajjNcbfRZadhE=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -1373,13 +1373,6 @@
       siemens_ws-ap3610 = {
         device_packages = [ ];
       };
-      sitecom_wlr-7100 = {
-        device_packages = [
-          "ath10k-firmware-qca988x-ct"
-          "kmod-ath10k-ct-smallbuffers"
-          "kmod-usb2"
-        ];
-      };
       sitecom_wlr-8100 = {
         device_packages = [
           "ath10k-firmware-qca988x-ct"
@@ -1710,6 +1703,7 @@
         device_packages = [
           "kmod-ath10k-ct"
           "ath10k-firmware-qca9888-ct"
+          "ipq-wifi-tplink_eap225-wall-v2"
         ];
       };
       tplink_eap245-v1 = {
@@ -2255,7 +2249,7 @@
   kmods."6.12.85-1-1125d8492bf662c5ef16a1b5747f83d1" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.85-1-1125d8492bf662c5ef16a1b5747f83d1/";
     sourceInfo = {
-      hash = "sha256-UwHXArCdna9mqaps27Ysn+nqdkvlnMxJrFGpX/NasNk=";
+      hash = "sha256-GunH+mldHinVOq80M1O2J25DqfRxE+qaYw9eyx+Czvs=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.85-1-1125d8492bf662c5ef16a1b5747f83d1/packages.adb";
     };
@@ -2268,7 +2262,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-27eNuSTgL5YNvaiFvzf7JXuvQqgnjioY2nFNV5H2yco=";
+      hash = "sha256-WIa8yb6G3kPNIe5zR7jFiJwHNLeXLA2xMKWnBdxTq0M=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
