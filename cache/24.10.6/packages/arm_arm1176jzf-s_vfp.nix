@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for arm_arm1176jzf-s_vfp
 {
   sha256sums = {
-    hash = "sha256-6Bvx+wPtXM+DV9aSWizKneI9nw8nbsiCjukxoNM67lY=";
+    hash = "sha256-WmlGrUTtzli4mnQemmb7FgAF5XB2YVKXwNeRTptr9qs=";
     name = "arm_arm1176jzf-s_vfp-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/luci/";
     sourceInfo = {
-      hash = "sha256-ycgCEfGxELPp284N1k0zgxuByiw8IscK1hsgFEtiRZw=";
+      hash = "sha256-YCLL1KkY12bs/noWXZWcXGokFyfAC3t/38StDA9v8YY=";
       name = "arm_arm1176jzf-s_vfp-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/packages/";
     sourceInfo = {
-      hash = "sha256-B6h7kkfPXm+6qNPlup95im3NWTZefvSbkfwrpJhQvnk=";
+      hash = "sha256-xow7eQWMYvS0IbvLg7MPawFztC5M8fLC3JyxOmccTwQ=";
       name = "arm_arm1176jzf-s_vfp-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/routing/";
     sourceInfo = {
-      hash = "sha256-sYHRo+YtxnKWRzeDuqYXWN0JmE8StmsLtLK+kNiyw6Q=";
+      hash = "sha256-mQlgdWSzMNEVGkBZJXuXVbQyHhF1tQcRm5VSGy5zXAI=";
       name = "arm_arm1176jzf-s_vfp-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/telephony/";
     sourceInfo = {
-      hash = "sha256-5dAA4/oXZaN674z2EPXAb2WvUdbm2brvTHDccfAj4Fs=";
+      hash = "sha256-5ZpRHFkO/H54IIPIw1IKIBZ4sNTyGXJ1ohlITuv192c=";
       name = "arm_arm1176jzf-s_vfp-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm1176jzf-s_vfp/telephony/Packages";
     };

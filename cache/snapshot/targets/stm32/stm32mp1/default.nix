@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/";
   sha256sums = {
-    hash = "sha256-zBgUUOM4fT1rZoc3F8H6hNw70zvBJs3wUjRlOzW3xHE=";
+    hash = "sha256-6OwhIUPzNtI/47CKieomx0IjCE0coK4XNGHz1ePKMVQ=";
     name = "stm32_stm32mp1-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/sha256sums";
   };
   imagebuilder = {
-    sha256 = "90234a2562de46519dfbdc2aea1315d8e3a6de3a666738df60d68c84e3eefc9c";
+    sha256 = "f2b709b0cfd07a84b14f0ca2e335cacf86fa5eaad229244dcb2e8fb5a92ab161";
     filename = "openwrt-imagebuilder-stm32-stm32mp1.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-WBX9K2kxuC43GIzPnw3sONM4E9OM9fQltOai/iIal78=";
+    hash = "sha256-QKO+qcbGAvK61Smp1gpnfH8Z2af4qmMiN2EnT/v9gfg=";
     name = "stm32_stm32mp1-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/profiles.json";
   };
@@ -96,7 +96,7 @@
   kmods."6.12.85-1-01d7e0eff12acca667f43ac9d94fd9ca" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/kmods/6.12.85-1-01d7e0eff12acca667f43ac9d94fd9ca/";
     sourceInfo = {
-      hash = "sha256-C07JRdscLqK/Rrddf7TFrd4CzyA8BlbHc/6/jH8h3pE=";
+      hash = "sha256-Y+o4Vy7b/X1JcVGxlJmRuhTlB9MErncNXNcK0uvLk3U=";
       name = "kmods-stm32_stm32mp1-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/kmods/6.12.85-1-01d7e0eff12acca667f43ac9d94fd9ca/packages.adb";
     };
@@ -109,7 +109,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/packages/";
     sourceInfo = {
-      hash = "sha256-bRBTCLyNNOYrZnEb3AqOU9FINVajaUQSv0S5st6TnbE=";
+      hash = "sha256-X4hfYeHOdEOLrpAL6laVLHhE+Z55rGiYdhKFJa2UHmc=";
       name = "stm32_stm32mp1-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/stm32/stm32mp1/packages/packages.adb";
     };
