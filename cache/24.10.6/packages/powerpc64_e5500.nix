@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for powerpc64_e5500
 {
   sha256sums = {
-    hash = "sha256-3FzzwLKG7gaDiAf5+iAGvG1h9iHxbsN6NtNqyEWUNaM=";
+    hash = "sha256-qVkl6AheNCKiftioRhwjukI3dJfFFVzjPx4ySMl1tLU=";
     name = "powerpc64_e5500-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/luci/";
     sourceInfo = {
-      hash = "sha256-v3fi0CEyiOxpnsT01tO37VBulIshKCA9E+W4WIV6z/o=";
+      hash = "sha256-hbYzFnqkcL5Csy/IfhHcgI5lNpgWu2L6mbmqtcB0hDI=";
       name = "powerpc64_e5500-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/packages/";
     sourceInfo = {
-      hash = "sha256-eKDhzfT/xYDo228vH/wAnY2UXg6GLdAWB6ULCa6hHI8=";
+      hash = "sha256-57cUhLGPTo3D43CRAyu64XkGqVPKKkONgVVdor3VieU=";
       name = "powerpc64_e5500-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/routing/";
     sourceInfo = {
-      hash = "sha256-YtTd9xt9XDa4SR9Gk9YbnfOUex4U+LejGOwoMWUkuUs=";
+      hash = "sha256-+Kl46CD31RQAwCva8E5AchSG0RZx88xCJwG/F5FcpBI=";
       name = "powerpc64_e5500-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/telephony/";
     sourceInfo = {
-      hash = "sha256-IfGx70Gf172d93cTr2q2bdmaWMLewAcizlXbrAzcc14=";
+      hash = "sha256-dIF9ZQVm8ZU0ic3HPKBWohwBsDmtdoz6khad5i4WgzU=";
       name = "powerpc64_e5500-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/powerpc64_e5500/telephony/Packages";
     };
