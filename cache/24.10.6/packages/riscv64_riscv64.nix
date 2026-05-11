@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for riscv64_riscv64
 {
   sha256sums = {
-    hash = "sha256-6A/LB/HxUFuObrdsjkUDruCiIWE8mhPNGhf8JtTcNH0=";
+    hash = "sha256-AclqrgqVT6Z/RsySK/NIeyCLQQA5f4h2haKp8KphfvM=";
     name = "riscv64_riscv64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/luci/";
     sourceInfo = {
-      hash = "sha256-irsI8qXBekebR/Q02iFUTI5t/Y/vu2Khftkq60Cfm5M=";
+      hash = "sha256-74hxNFE8qQzY314wixLagUw0Sa4lv428Vz5U9bi9lvs=";
       name = "riscv64_riscv64-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/packages/";
     sourceInfo = {
-      hash = "sha256-SC5EFxfDDb4wG8Z+nHp2lGEB6LZke+iHDth3vgMgsGE=";
+      hash = "sha256-sr4FX25F8GyWP2IKIUBgfkhTma/5q947sWyD1t/qn+k=";
       name = "riscv64_riscv64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/packages/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/telephony/";
     sourceInfo = {
-      hash = "sha256-DDgxHqQ9cJ/65slRwT1oQDXzu33gJDm1srvsZja/EAc=";
+      hash = "sha256-WSVPZE0ZEoQUTLJVS5UFsZUJDYeHWB7CeZthoj0p2Ys=";
       name = "riscv64_riscv64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/riscv64_riscv64/telephony/Packages";
     };

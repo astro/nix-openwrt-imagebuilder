@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/";
   sha256sums = {
-    hash = "sha256-VpxCt/ICrcjwioJ4qpEfG0Tx0uf2cnoe4yRUG4guGxo=";
+    hash = "sha256-TsIhRxppNENfNEozLpnUnyEtZ+VzDLBFz4MkoKG9JqM=";
     name = "ipq806x_chromium-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/sha256sums";
   };
   imagebuilder = {
-    sha256 = "d5695bded1707d4d3ca2456b9854bb8204b92a688248794438b67f67ba8c1116";
+    sha256 = "3fd41e8a9e2359f7f7f4e8768111eb4fe2dce3f9a7805ca053e161ff2283f393";
     filename = "openwrt-imagebuilder-ipq806x-chromium.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-VjiBx7XsglsGg8f2UVOJOJABiSeL30ig4JQr+gy2WGw=";
+    hash = "sha256-qEltmpioJ1Mlh67S0gmT3UceqFo8Y1OSSccWWcGTOPg=";
     name = "ipq806x_chromium-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a15_neon-vfpv4";
     linux_kernel = {
       release = "1";
-      vermagic = "0cbbc25cb50e342ec864b541f74b061e";
+      vermagic = "3bffd78a4030390b6cb14ee0838b9231";
       version = "6.12.87";
     };
     default_packages = [
@@ -61,7 +61,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.12.87-1-0cbbc25cb50e342ec864b541f74b061e";
+    kmods_target = "6.12.87-1-3bffd78a4030390b6cb14ee0838b9231";
     profiles = {
       asus_onhub = {
         device_packages = [
@@ -99,12 +99,12 @@
       };
     };
   };
-  kmods."6.12.87-1-0cbbc25cb50e342ec864b541f74b061e" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/kmods/6.12.87-1-0cbbc25cb50e342ec864b541f74b061e/";
+  kmods."6.12.87-1-3bffd78a4030390b6cb14ee0838b9231" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/kmods/6.12.87-1-3bffd78a4030390b6cb14ee0838b9231/";
     sourceInfo = {
-      hash = "sha256-5MymTYrn/26oXqDJZUfdWJbPFV8Dnu+/uRXrTsJLreM=";
+      hash = "sha256-rW+PcMod17ASYvwidyNMqJjjgNOSJRKwlOKlD+zINiw=";
       name = "kmods-ipq806x_chromium-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/kmods/6.12.87-1-0cbbc25cb50e342ec864b541f74b061e/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/kmods/6.12.87-1-3bffd78a4030390b6cb14ee0838b9231/packages.adb";
     };
     packages =
       let
@@ -115,7 +115,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/packages/";
     sourceInfo = {
-      hash = "sha256-eRXpiSD7YxiTm0VhdLoIBODnw8NbZY0DM5Sq3f1P520=";
+      hash = "sha256-SYJyeMg82Xe3rcPtaasQTLyswjKz98nTbVMalkK3k5c=";
       name = "ipq806x_chromium-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/chromium/packages/packages.adb";
     };
