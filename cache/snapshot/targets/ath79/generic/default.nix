@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-iGLXtNM6hrEu71PCk89dUyQ2iwhA3G+dCHqiV6FY/LY=";
+    hash = "sha256-mHsRAbEcyF9AkubuifyAW2vrcHBhNLy9kd2WIOsq9Nk=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "08b3137face6542773763aa70a935482c1284d6b943572d071a6c04a6634e9b7";
+    sha256 = "74743decede8f2f1de8935d48438abac67b4481f52ab35b4742194a17b0f8f3f";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-vVoVlw6ahextEkKZmAP3OfgfVWiC0vNGdyL1Ewxlla4=";
+    hash = "sha256-qWhsuFUOq4kx9cTtekWUhOi1sTCrAHqhKsdzYel1nJ8=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -1863,16 +1863,6 @@
           "kmod-usb-ledtrig-usbport"
         ];
       };
-      tplink_tl-wr902ac-v1 = {
-        device_packages = [
-          "kmod-usb2"
-          "kmod-usb-ledtrig-usbport"
-          "kmod-ath10k-ct-smallbuffers"
-          "ath10k-firmware-qca9887-ct"
-          "-swconfig"
-          "-uboot-envtools"
-        ];
-      };
       tplink_tl-wr941hp-v1 = {
         device_packages = [ ];
       };
@@ -2249,7 +2239,7 @@
   kmods."6.12.87-1-242a16aeb2a0c92745e1a3ca7782964a" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.87-1-242a16aeb2a0c92745e1a3ca7782964a/";
     sourceInfo = {
-      hash = "sha256-MOcasHRit5UMZztthSnX0HVmnVOl5zfvgJngvfIZyuA=";
+      hash = "sha256-8cM0hpDceTRjbayr0yW8WI1gbliBdvKmCNYIqu2/y8o=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.87-1-242a16aeb2a0c92745e1a3ca7782964a/packages.adb";
     };
@@ -2262,7 +2252,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-VMH5YBXOU68JyM/LVq5d5Utxi/AMjSu0gm43KXkcy6Q=";
+      hash = "sha256-mr/kZCWQyqSze41qkL6EDrKuSz9mv+lui8WrkUYZNvw=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };

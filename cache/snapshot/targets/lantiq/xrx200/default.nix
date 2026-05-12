@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/";
   sha256sums = {
-    hash = "sha256-2haYlVaycxedwE2KIVnfbwS9cBrmGiwDjE49xvQlTV4=";
+    hash = "sha256-Sd4AgQOW7JCv6qxPXNyu9FPLhe00Fd7U04MT/2yOVYI=";
     name = "lantiq_xrx200-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/sha256sums";
   };
   imagebuilder = {
-    sha256 = "c197d65511d11200c358254d4001d841f3ebdff6c61b2fcd78fb3371f5b58972";
+    sha256 = "8ffd136ff83792cd48e1dc2210f81bc0d16fe81282a90aae07c1467d0616f483";
     filename = "openwrt-imagebuilder-lantiq-xrx200.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-I2OKxlZ+ehuJE+gsQPx82MLgr/HEbGc6ZAaUra8pOP0=";
+    hash = "sha256-uaAqBTKLxtKzCUtr2vfwRA6ucPprVwR7nI9bFP0l/2I=";
     name = "lantiq_xrx200-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/profiles.json";
   };
@@ -361,7 +361,7 @@
   kmods."6.12.87-1-852a1dcca152251277299896cea2cd3b" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/kmods/6.12.87-1-852a1dcca152251277299896cea2cd3b/";
     sourceInfo = {
-      hash = "sha256-j7jmRfE/hieenY8PqGXf6haJyF2YBbkJGJvlAgHKlCk=";
+      hash = "sha256-ph9FRBq+S3zHMdJ3diL8Y8MsfRXpYjPFWZlkfsJcekY=";
       name = "kmods-lantiq_xrx200-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/kmods/6.12.87-1-852a1dcca152251277299896cea2cd3b/packages.adb";
     };
@@ -374,7 +374,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/packages/";
     sourceInfo = {
-      hash = "sha256-wVStHm6KqszQbhh21cT/0djqjOtmx20Pss4ZbqUsjYA=";
+      hash = "sha256-VtCvppLpgpKxU9/CSQog2y6dT8LLqSQOKc6rV9z214A=";
       name = "lantiq_xrx200-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xrx200/packages/packages.adb";
     };
