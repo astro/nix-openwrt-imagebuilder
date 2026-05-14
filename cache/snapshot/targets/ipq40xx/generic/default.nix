@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/";
   sha256sums = {
-    hash = "sha256-1LF4VoCnm9itaNUP73K/CHTTerSKIk0AgdH/0IQ5oR8=";
+    hash = "sha256-kfhg92XMyZ6thXd3libWmFgIalmDHWJ/J2ZqWkRzWSU=";
     name = "ipq40xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "e3fee9000a63356c69e86313cb1c9b7c92068b6a752b9922cd7845b928906c4e";
+    sha256 = "10c9563f862ef8213ae3530ce4649121eb570c1ccaa4d25955c6625d099020f2";
     filename = "openwrt-imagebuilder-ipq40xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-H9MtzY1yJePh4NJac3ByHxFq+s8tCDW9BLnSDu6lN6M=";
+    hash = "sha256-eHvEXIzOdL7vbcH2Yzi9gDNT10NkzqacJeZ57loei3M=";
     name = "ipq40xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/profiles.json";
   };
@@ -291,6 +291,14 @@
           "ipq-wifi-meraki_z3"
         ];
       };
+      meraki_z3c = {
+        device_packages = [
+          "kmod-usb-acm"
+          "kmod-usb-net"
+          "kmod-usb-net-cdc-ether"
+          "-ath10k-firmware-qca9887-ct"
+        ];
+      };
       mobipromo_cm520-79f = {
         device_packages = [ "kmod-usb-ledtrig-usbport" ];
       };
@@ -495,7 +503,7 @@
   kmods."6.12.87-1-03abbfc9715a67ff2151bf0e801c4a0f" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.12.87-1-03abbfc9715a67ff2151bf0e801c4a0f/";
     sourceInfo = {
-      hash = "sha256-pTv8EBUePG2LnvM93IX2Pmi/dhlQugwDoKjU5XeyzPA=";
+      hash = "sha256-aKTihEdoiDUVQmY8yEWgjpDwBqufKVH58yKBtVnZ7/A=";
       name = "kmods-ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.12.87-1-03abbfc9715a67ff2151bf0e801c4a0f/packages.adb";
     };
@@ -508,7 +516,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-Td3L6qfJse31rjZSJjbwF0TB5HXdwrXET0fGLFMB8HE=";
+      hash = "sha256-7gIsK8ms5SnzP+h9ymzAN0OwX3Z/iWHrHsDh+XBd/kw=";
       name = "ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/packages.adb";
     };
