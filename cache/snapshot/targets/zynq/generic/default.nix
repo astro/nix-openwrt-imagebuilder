@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/";
   sha256sums = {
-    hash = "sha256-eEoYiYhSIhD/p0cWTKhEcoB4nM3bGPt/z/fP2AxmENc=";
+    hash = "sha256-kB7A+4xD2SWQUriY6m4lY8W+8w/z2B3YZecIWqo1rO4=";
     name = "zynq_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "33f9a14dae510013c82c3c4633e5d80bc75a863aa647753514cdfe668354ac1f";
+    sha256 = "91945c284d12b659b1eac0d049f526e2536b39f8643aebdb96c3eaee7dacd29d";
     filename = "openwrt-imagebuilder-zynq-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-fXANInamr5mbsc6C4NvHhZ1js4dt45t+cvZS2+7wmS4=";
+    hash = "sha256-cOuBrjgEvDtUz68FuywBuM7hvEVtX8JFwKDfkGEAZxs=";
     name = "zynq_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a9_neon";
     linux_kernel = {
       release = "1";
-      vermagic = "45a963b78c5d42c8c95bb5819cc1bbcf";
+      vermagic = "72f141aaae44656d9e92fe2a163d9003";
       version = "6.12.87";
     };
     default_packages = [
@@ -53,7 +53,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.87-1-45a963b78c5d42c8c95bb5819cc1bbcf";
+    kmods_target = "6.12.87-1-72f141aaae44656d9e92fe2a163d9003";
     profiles = {
       avnet_zynq-zed = {
         device_packages = [ ];
@@ -72,12 +72,12 @@
       };
     };
   };
-  kmods."6.12.87-1-45a963b78c5d42c8c95bb5819cc1bbcf" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/kmods/6.12.87-1-45a963b78c5d42c8c95bb5819cc1bbcf/";
+  kmods."6.12.87-1-72f141aaae44656d9e92fe2a163d9003" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/kmods/6.12.87-1-72f141aaae44656d9e92fe2a163d9003/";
     sourceInfo = {
-      hash = "sha256-yWd0SUbNBpallFsjyU4C2blER/Ldd4OTFodatyCKD1c=";
+      hash = "sha256-9Meh4FezxsOcwn2FThbnsJ0TPrgoRZWHopwqwHXc5Ag=";
       name = "kmods-zynq_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/kmods/6.12.87-1-45a963b78c5d42c8c95bb5819cc1bbcf/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/kmods/6.12.87-1-72f141aaae44656d9e92fe2a163d9003/packages.adb";
     };
     packages =
       let
@@ -88,7 +88,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/packages/";
     sourceInfo = {
-      hash = "sha256-420bWF+jsp7pgVwhhj7GrYMbYIQvC66ta2NVCfpjbZ4=";
+      hash = "sha256-X/DO97DE0UnW4R7DkyyJ19ClIrCrRGCX7A+tMEHt9U0=";
       name = "zynq_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/zynq/generic/packages/packages.adb";
     };

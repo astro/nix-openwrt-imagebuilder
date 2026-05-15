@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/";
   sha256sums = {
-    hash = "sha256-mN9oli2C9UV8VFWD80HE8D/z0WyRzFZunBSN5nQJmEY=";
+    hash = "sha256-XNyLW3u6C0ihJ2JYpv+1JQ4pea48oxjE7rXwG/Ntt3w=";
     name = "rockchip_armv8-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/sha256sums";
   };
   imagebuilder = {
-    sha256 = "2efabbae8d6eadddbe9cdf68cd164ca8a5661ad31f198f16387f62c91e99aee3";
+    sha256 = "17c532ad78defb0db68729f5f5aee4bb46d0f704baa66e5eaf3550cae4c2ca36";
     filename = "openwrt-imagebuilder-rockchip-armv8.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-mVyLzoDUzlLQ9a74/6rHu2rbvpnj7CAjCrbVn4nkMnc=";
+    hash = "sha256-3w9BaPT/lkiyCUbI8qf9if4dUETsxvikQxEr8eDbsi4=";
     name = "rockchip_armv8-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "aarch64_generic";
     linux_kernel = {
       release = "1";
-      vermagic = "81f088a024238e0973ea77c2b62a79ca";
+      vermagic = "8e90a0f768a7edfca71e0eed4da7e1f4";
       version = "6.12.87";
     };
     default_packages = [
@@ -53,7 +53,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.87-1-81f088a024238e0973ea77c2b62a79ca";
+    kmods_target = "6.12.87-1-8e90a0f768a7edfca71e0eed4da7e1f4";
     profiles = {
       armsom_sige7 = {
         device_packages = [ "kmod-r8169" ];
@@ -63,13 +63,28 @@
       };
       friendlyarm_nanopc-t4 = {
         device_packages = [
-          "kmod-brcmfmac"
           "brcmfmac-nvram-4356-sdio"
           "cypress-firmware-4356-sdio"
+          "kmod-brcmfmac"
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
         ];
       };
       friendlyarm_nanopc-t6 = {
-        device_packages = [ "kmod-r8169" ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+          "kmod-r8169"
+        ];
+      };
+      friendlyarm_nanopi-m5 = {
+        device_packages = [
+          "blkdiscard"
+          "block-mount"
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+          "kmod-nvme"
+        ];
       };
       friendlyarm_nanopi-r2c = {
         device_packages = [ "kmod-usb-net-rtl8152" ];
@@ -101,10 +116,18 @@
         device_packages = [ "kmod-r8169" ];
       };
       friendlyarm_nanopi-r6c = {
-        device_packages = [ "kmod-r8169" ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+          "kmod-r8169"
+        ];
       };
       friendlyarm_nanopi-r6s = {
-        device_packages = [ "kmod-r8169" ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+          "kmod-r8169"
+        ];
       };
       friendlyarm_nanopi-r76s = {
         device_packages = [
@@ -114,7 +137,11 @@
         ];
       };
       hinlink_h28k = {
-        device_packages = [ "kmod-r8169" ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+          "kmod-r8169"
+        ];
       };
       hinlink_h66k = {
         device_packages = [
@@ -137,6 +164,7 @@
           "blkdiscard"
           "block-mount"
           "kmod-button-hotplug"
+          "kmod-input-adc-keys"
           "kmod-nvme"
           "kmod-r8169"
         ];
@@ -154,7 +182,11 @@
         device_packages = [ ];
       };
       radxa_e20c = {
-        device_packages = [ "kmod-r8169" ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+          "kmod-r8169"
+        ];
       };
       radxa_e25 = {
         device_packages = [
@@ -165,14 +197,22 @@
       radxa_e52c = {
         device_packages = [
           "blkdiscard"
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
           "kmod-r8169"
         ];
       };
       radxa_rock-2a = {
-        device_packages = [ ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+        ];
       };
       radxa_rock-2f = {
-        device_packages = [ ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+        ];
       };
       radxa_rock-3a = {
         device_packages = [
@@ -206,7 +246,9 @@
           "blkdiscard"
           "block-mount"
           "kmod-ata-ahci"
+          "kmod-button-hotplug"
           "kmod-hwmon-pwmfan"
+          "kmod-input-adc-keys"
           "kmod-nvme"
           "kmod-r8169"
           "kmod-rtw89-8852be"
@@ -273,10 +315,15 @@
         device_packages = [ ];
       };
       radxa_rock-pi-e = {
-        device_packages = [ ];
+        device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
+        ];
       };
       radxa_rock-pi-e-v3 = {
         device_packages = [
+          "kmod-button-hotplug"
+          "kmod-input-adc-keys"
           "kmod-rtw88-8723du"
           "kmod-rtw88-8821cu"
           "kmod-usb-net-cdc-ncm"
@@ -315,12 +362,12 @@
       };
     };
   };
-  kmods."6.12.87-1-81f088a024238e0973ea77c2b62a79ca" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/kmods/6.12.87-1-81f088a024238e0973ea77c2b62a79ca/";
+  kmods."6.12.87-1-8e90a0f768a7edfca71e0eed4da7e1f4" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/kmods/6.12.87-1-8e90a0f768a7edfca71e0eed4da7e1f4/";
     sourceInfo = {
-      hash = "sha256-4H+Ov3djfw84dnGlytiPKF4JjFR6OUzWZ7Y4JfFeJFk=";
+      hash = "sha256-BcDwAZkq0+oVc6gpB4cvYk1PrycX6gQPxcV6M2oI4n8=";
       name = "kmods-rockchip_armv8-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/kmods/6.12.87-1-81f088a024238e0973ea77c2b62a79ca/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/kmods/6.12.87-1-8e90a0f768a7edfca71e0eed4da7e1f4/packages.adb";
     };
     packages =
       let
@@ -331,7 +378,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/packages/";
     sourceInfo = {
-      hash = "sha256-QnW+tp9m3NFR/6hb6u2TWJSvZmUPwgcbl2iB6C2DU3I=";
+      hash = "sha256-ny7H44dvJ0eGoQTogM7S32IJzZ1Hrq8ToRDnnUbNr9U=";
       name = "rockchip_armv8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/packages/packages.adb";
     };
