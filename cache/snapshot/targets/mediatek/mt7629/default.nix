@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/";
   sha256sums = {
-    hash = "sha256-cCjiUGNCO/lsJx0eWMypZcrKr8pp5m157EEcT7llsEA=";
+    hash = "sha256-LUJM5krbnvtc55e+9KpWVIUI/0KPQ/JX6bysS+EpdS0=";
     name = "mediatek_mt7629-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/sha256sums";
   };
   imagebuilder = {
-    sha256 = "648f536cbe8e2c48a93bbb940b1c556db81082722b07f09f2bdfc0144aca45d1";
+    sha256 = "607617869fa0a8bfa76494250fe1b6164274be506314b52f1f698716dacaba0b";
     filename = "openwrt-imagebuilder-mediatek-mt7629.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-4YqCqT/X2wDi8JTbL/6r3FIjRbW1fOqJxtH5UBQhbxI=";
+    hash = "sha256-rO4raqJHM9zKED4ds/PHDI4YFqA/nj/Mwfkzv58cdfI=";
     name = "mediatek_mt7629-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a7";
     linux_kernel = {
       release = "1";
-      vermagic = "8439e6b26d1d5b3d64bd641fc657bc03";
+      vermagic = "07b2041522c308306632a4040d99ddc6";
       version = "6.18.31";
     };
     default_packages = [
@@ -50,7 +50,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.31-1-8439e6b26d1d5b3d64bd641fc657bc03";
+    kmods_target = "6.18.31-1-07b2041522c308306632a4040d99ddc6";
     profiles = {
       iptime_a6004mx = {
         device_packages = [
@@ -75,12 +75,12 @@
       };
     };
   };
-  kmods."6.18.31-1-8439e6b26d1d5b3d64bd641fc657bc03" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/kmods/6.18.31-1-8439e6b26d1d5b3d64bd641fc657bc03/";
+  kmods."6.18.31-1-07b2041522c308306632a4040d99ddc6" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/kmods/6.18.31-1-07b2041522c308306632a4040d99ddc6/";
     sourceInfo = {
-      hash = "sha256-DKLllDSTkVwVzrgJ8+a3zNyIcIeUNtF1Qn9+kaJemeg=";
+      hash = "sha256-Fg0WIFMB0JKHKO3HS+XsavPMZnEwXG6CPxGbuA0HRDU=";
       name = "kmods-mediatek_mt7629-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/kmods/6.18.31-1-8439e6b26d1d5b3d64bd641fc657bc03/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/kmods/6.18.31-1-07b2041522c308306632a4040d99ddc6/packages.adb";
     };
     packages =
       let
@@ -91,7 +91,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/packages/";
     sourceInfo = {
-      hash = "sha256-Tj5w5R6cWxexuUdJFHifJr0giovA4zTJ7O9B5pSDydA=";
+      hash = "sha256-lI9grtuXD6ozbIoP22Cxhtu8jZTTNcC9TRujq0XxXNc=";
       name = "mediatek_mt7629-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7629/packages/packages.adb";
     };

@@ -1,14 +1,14 @@
 # 24.10.6 package feeds for mips_24kc
 {
   sha256sums = {
-    hash = "sha256-biGj+AwqqyLGneMYYj1QCCTksWVU7WFgRJJO/0A48jk=";
+    hash = "sha256-EsVCC4QsHPxFTbNllWXoHQaRl2eOvb+kawpLNdv/Rkk=";
     name = "mips_24kc-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/base/";
     sourceInfo = {
-      hash = "sha256-uPOHNyJBuYulsc6eJThZYIT8Ol1pytj2Mbc8/NkJNJ4=";
+      hash = "sha256-BPF/x18H5jZnuAwj8/aN6X0c6NO4fUNWnXX7KJ2Xbds=";
       name = "mips_24kc-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/packages/";
     sourceInfo = {
-      hash = "sha256-lQ4hN9DWX4aYYoZVJhMykF9/Ccadq1Fw1Yk2AiJiYUY=";
+      hash = "sha256-1bcN8STtlE731YWLE+wMDW4oGpIL1USUjMDilPiJ9zQ=";
       name = "mips_24kc-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/routing/";
     sourceInfo = {
-      hash = "sha256-5UsnTD8elrJJk2BEd2bsL3U4EbS/mGLZsv39sXS3Sgw=";
+      hash = "sha256-QWeZJDgHEU73ptQXI5y5PqV7fpfDEGoVuoMQhxv/EcM=";
       name = "mips_24kc-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/telephony/";
     sourceInfo = {
-      hash = "sha256-RpbqX5k5lT8Xzk1vpSjqp4AOHU6uHsTGrR03qWUyu68=";
+      hash = "sha256-Xqo8NkUWhQJITiLhkbxrrx1G5oGJFrYBwKmPDLyqM8g=";
       name = "mips_24kc-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/mips_24kc/telephony/Packages";
     };

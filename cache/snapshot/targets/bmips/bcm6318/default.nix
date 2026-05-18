@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/";
   sha256sums = {
-    hash = "sha256-T+JI4H8840h2yJGjMjwWdW3j0VWSNW3DD1drGteZim0=";
+    hash = "sha256-DhSOgVXfTfpTretWzIgVRYIYFdVlIH/wjPfhOGvZyy4=";
     name = "bmips_bcm6318-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/sha256sums";
   };
   imagebuilder = {
-    sha256 = "da8aa3130ef3dd9b518e7f74d49ef6311551891dd4f38aebb8cad11b4a2826a6";
+    sha256 = "2df0082de642c8a62c02f156d2e57217b7e30fb4b08a3ccfb278f2d6668de711";
     filename = "openwrt-imagebuilder-bmips-bcm6318.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-MHWGLOT1jCa10ErsxLWjplPfOYrYzf7pqnTZZQpOUKM=";
+    hash = "sha256-m/J9ZApEzK+fCP/oEVeqIOtLCYV8HQv9ERVxTdBkddg=";
     name = "bmips_bcm6318-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/profiles.json";
   };
@@ -79,7 +79,7 @@
   kmods."6.12.89-1-0d15a7b0676b73d52190bd1fbbd5b1eb" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/kmods/6.12.89-1-0d15a7b0676b73d52190bd1fbbd5b1eb/";
     sourceInfo = {
-      hash = "sha256-kSNASGyuFPGk2SrNbKWws/KAZZadFfPvq2a5dxncLtw=";
+      hash = "sha256-TG+EMjVRk9Ti8QbZeui6ZoOr78vVr//Ik27O5eAhYEo=";
       name = "kmods-bmips_bcm6318-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/kmods/6.12.89-1-0d15a7b0676b73d52190bd1fbbd5b1eb/packages.adb";
     };
@@ -92,7 +92,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/packages/";
     sourceInfo = {
-      hash = "sha256-R4dcounJyP6gA/IBjyx1IUjh74RlU/dK6BGZLgnWYcA=";
+      hash = "sha256-1ebwHEi+90CUYOwbqB2sOIz9ncBd48jSREDm2QzRDWA=";
       name = "bmips_bcm6318-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6318/packages/packages.adb";
     };
