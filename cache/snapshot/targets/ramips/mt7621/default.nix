@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/";
   sha256sums = {
-    hash = "sha256-BcUelmqLEGhDDytUBMiCzeZzWJIc8PnfVlxtVM2SIQg=";
+    hash = "sha256-at8jQrUV8n9Fkzw1dYcQufLbA6Q1a8Y9MJQYhuU4uQY=";
     name = "ramips_mt7621-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/sha256sums";
   };
   imagebuilder = {
-    sha256 = "fd026f87afb0208fa651221d68278602770ef50aae0fe9b6ab957cf26e6da7b4";
+    sha256 = "af10cf73d35ecf7d962dacc10c003302a0de7f884ca33c6271a3e530540a6a74";
     filename = "openwrt-imagebuilder-ramips-mt7621.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-0A1YbY0VaCFMpTS8tRNQL1i1oGdQWH/+wIjhG5C+8pI=";
+    hash = "sha256-9/zzO+FjEqcfWQyI15dBBhx4NFLuO6FUnet562+SOzs=";
     name = "ramips_mt7621-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/profiles.json";
   };
@@ -1475,6 +1475,42 @@
           "-uboot-envtools"
         ];
       };
+      teltonika_rutm11 = {
+        device_packages = [
+          "kmod-mt7615-firmware"
+          "kmod-usb3"
+          "kmod-usb-serial-option"
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+          "-uboot-envtools"
+          "kmod-usb-net-qmi-wwan"
+          "kmod-usb-net-cdc-mbim"
+        ];
+      };
+      teltonika_rutm30 = {
+        device_packages = [
+          "kmod-mt7615-firmware"
+          "kmod-usb3"
+          "kmod-usb-serial-option"
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+          "-uboot-envtools"
+          "kmod-usb-net-qmi-wwan"
+          "kmod-usb-net-cdc-ncm"
+        ];
+      };
+      teltonika_rutm50 = {
+        device_packages = [
+          "kmod-mt7615-firmware"
+          "kmod-usb3"
+          "kmod-usb-serial-option"
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+          "-uboot-envtools"
+          "kmod-usb-net-qmi-wwan"
+          "kmod-usb-net-cdc-ncm"
+        ];
+      };
       tenbay_t-mb5eu-v01 = {
         device_packages = [
           "kmod-mt7915-firmware"
@@ -2121,7 +2157,7 @@
   kmods."6.18.31-1-9144cae88305dbfe62261278be432c9a" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/kmods/6.18.31-1-9144cae88305dbfe62261278be432c9a/";
     sourceInfo = {
-      hash = "sha256-AnV43OyYKGOfHEJq2TMMjNebZJrJzRiqUjB3L/dTPyo=";
+      hash = "sha256-41OlyLSvh74IRRpWvTK2sREaUUx2N+gfM0iDlcEA++A=";
       name = "kmods-ramips_mt7621-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/kmods/6.18.31-1-9144cae88305dbfe62261278be432c9a/packages.adb";
     };
@@ -2134,7 +2170,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/";
     sourceInfo = {
-      hash = "sha256-Huel/FQ1NT9RPxRcGmUKaTkCxOixTlXggiMhYrpmiZU=";
+      hash = "sha256-9QBRqcuL8CHmk5ax3GERHdO0BVquMep4N9mkEGgtrv8=";
       name = "ramips_mt7621-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/packages.adb";
     };

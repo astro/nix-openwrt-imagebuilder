@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/";
   sha256sums = {
-    hash = "sha256-bBkISpDjnveQV8oRaFr1G17htxyGtk0/ChzNJx/Rivk=";
+    hash = "sha256-6JlweMGqFI8CVa6ES93sOkoOYPYtB2xQ1vnjH2k61+A=";
     name = "mediatek_filogic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "9a9e11d147641b0017b9b7a2b60a98d476d122f4ca71f3b1063f3a3bbab3a927";
+    sha256 = "9893baf7e7957ff222b93a878f7bde253dd79887d5d44e83e4a54ed3d35e148f";
     filename = "openwrt-imagebuilder-mediatek-filogic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-gz2ACUvrW4a5eAXh/g2+IxmiEFUFvb+vaYtH26oFwtU=";
+    hash = "sha256-bXiUixAQJqkc3iKWsX3GO/ai8I//k1nBpaPLmPY+YG4=";
     name = "mediatek_filogic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/profiles.json";
   };
@@ -367,6 +367,13 @@
           "mt7981-wo-firmware"
           "kmod-hwmon-pwmfan"
           "kmod-usb3"
+        ];
+      };
+      comfast_cf-xr186 = {
+        device_packages = [
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
         ];
       };
       confiabits_mt7981 = {
@@ -783,6 +790,15 @@
           "e2fsprogs"
           "f2fsck"
           "mkf2fs"
+        ];
+      };
+      jiorouter_ax6000-jidu6101 = {
+        device_packages = [
+          "kmod-usb3"
+          "kmod-mt7915e"
+          "kmod-mt7916-firmware"
+          "kmod-mt7986-firmware"
+          "mt7986-wo-firmware"
         ];
       };
       kebidumei_ax3000-u22 = {
@@ -1236,6 +1252,13 @@
           "mt7986-wo-firmware"
         ];
       };
+      tplink_f65-v1 = {
+        device_packages = [
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
+        ];
+      };
       tplink_fr365-v1 = {
         device_packages = [
           "fitblk"
@@ -1363,6 +1386,24 @@
           "kmod-mt7915e"
           "kmod-mt7981-firmware"
           "mt7981-wo-firmware"
+        ];
+      };
+      wavlink_wl-wnt100x3 = {
+        device_packages = [
+          "kmod-usb3"
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
+          "kmod-hwmon-pwmfan"
+        ];
+      };
+      wavlink_wl-wnt100x3-ubootmod = {
+        device_packages = [
+          "kmod-usb3"
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
+          "kmod-hwmon-pwmfan"
         ];
       };
       widelantech_wap430x = {
@@ -1523,7 +1564,7 @@
   kmods."6.18.31-1-ae34286ba38999bfe8022b263db0162a" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/kmods/6.18.31-1-ae34286ba38999bfe8022b263db0162a/";
     sourceInfo = {
-      hash = "sha256-vMTYl8rCyAFWYgymZIquzdLYFRhtP46mBmPFO1sa0Cg=";
+      hash = "sha256-tuXyPFRhqh59J/xMLS44gms5cDOmmcH1mIDerB8Gkws=";
       name = "kmods-mediatek_filogic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/kmods/6.18.31-1-ae34286ba38999bfe8022b263db0162a/packages.adb";
     };
@@ -1536,7 +1577,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/packages/";
     sourceInfo = {
-      hash = "sha256-JKTPM9t155KEhwSUjvhMtIZalyb062W05wFodeR8dVY=";
+      hash = "sha256-6t/G4wn/cCtCtgWe8HM/l31hHo2OUY7UaDQYToHWAQk=";
       name = "mediatek_filogic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/packages/packages.adb";
     };
