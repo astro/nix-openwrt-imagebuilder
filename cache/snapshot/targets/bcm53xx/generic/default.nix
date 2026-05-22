@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/";
   sha256sums = {
-    hash = "sha256-Kx7w9XktOa80dwGjjJK3DbICP5MAsnGxmQ9VxQm4Zzw=";
+    hash = "sha256-d6HhE6U2jWKC32mZSQWImKSFC61JB2QLP67FoovkvG8=";
     name = "bcm53xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "b19c6804e47fb3370aeb532f464a0982cfd71cb355306c04c6e2fe30c021f36c";
+    sha256 = "d7bdc4d975972db126df0dab2b8777c687a6ac1560e77e5f1699674dbbcbdf23";
     filename = "openwrt-imagebuilder-bcm53xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-XyL5w0kVmlM95hUL6RXiYq9NwoO5ia3/05pGGQ7ZTao=";
+    hash = "sha256-yg6mxUx3qQAYhYzUM83/ceEdix/ezqIgjuQFaH3Pqug=";
     name = "bcm53xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/profiles.json";
   };
@@ -472,7 +472,7 @@
   kmods."6.12.89-1-c2db99dc6e569793f8ecd262c0eefafc" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/kmods/6.12.89-1-c2db99dc6e569793f8ecd262c0eefafc/";
     sourceInfo = {
-      hash = "sha256-u6mROAePBXYVwveiT1lUJdNRuxaT8bnC1lvIfmLIB9A=";
+      hash = "sha256-8x9DtGzeAKHfkZvaokkyZx0EN/9aokxaxmyS2JoJVhE=";
       name = "kmods-bcm53xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/kmods/6.12.89-1-c2db99dc6e569793f8ecd262c0eefafc/packages.adb";
     };
@@ -485,7 +485,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-XM+s84U45tvcfAUj3MTFHVL/hKLmqLxfT56cUjX7j6o=";
+      hash = "sha256-Q2PGdoBUnHQHZAwyCHg+PMQJHdLp6M0T0uqNPYh8hSI=";
       name = "bcm53xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/packages/packages.adb";
     };
