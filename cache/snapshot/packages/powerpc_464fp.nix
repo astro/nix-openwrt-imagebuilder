@@ -1,14 +1,14 @@
 # snapshot package feeds for powerpc_464fp
 {
   sha256sums = {
-    hash = "sha256-KHKYPfg4PGW1ZuBJomgq0Qa9cqdgoiFz0XVkzOIQUM8=";
+    hash = "sha256-y9O4JXjJ4Wb6NFuIOw9tG39xMztMiTsKke2po2intU8=";
     name = "powerpc_464fp-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/base/";
     sourceInfo = {
-      hash = "sha256-NJa90s7AKBw+9Ccpm1MqmtXPF0F9kWDP9GET9mpIlhE=";
+      hash = "sha256-xAVU9aBfjwbSWM1ZfbYyZPqvfp7+vhsbhIASIk47+GE=";
       name = "powerpc_464fp-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/luci/";
     sourceInfo = {
-      hash = "sha256-ONqX50rDWAUFVo9EZ5pJCSpPsro5NBgzQY/eWdBfvXQ=";
+      hash = "sha256-opb2k7rf8q6xZq04fr30wV88rrsUgprNz7BUqoL7IoA=";
       name = "powerpc_464fp-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/packages/";
     sourceInfo = {
-      hash = "sha256-HqaG6Gt6W5fv3CyOCK/nnqJp6VGQEEHiAPDDeJEfAnM=";
+      hash = "sha256-xFMlJKxT9fQcIbpR7reRHakKo/xLmhi5hrjZparIX5g=";
       name = "powerpc_464fp-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/routing/";
     sourceInfo = {
-      hash = "sha256-7RQcGkI4JulJ44SK9JiHxRY5FTmrDCC8Yq8tDN1PTSI=";
+      hash = "sha256-iBj4r+eX801P1pzNMQFQQbzFjJCWlf6DM8a7UjtDqvc=";
       name = "powerpc_464fp-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/telephony/";
     sourceInfo = {
-      hash = "sha256-VZy3XxeGO2pe++cg+yW/8SaxzjymGGFNvA9Xw3wtgw0=";
+      hash = "sha256-Ah4utz1kXpJt3rES1p+fhF1M3UrVWg3gUMsvFedMO9k=";
       name = "powerpc_464fp-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/powerpc_464fp/telephony/packages.adb";
     };
