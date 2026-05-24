@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for arm_arm926ej-s
 {
   sha256sums = {
-    hash = "sha256-2HNQmpnti0IBAMvR6oSZCFbj5uziRgQdGyN4A0zWL0c=";
+    hash = "sha256-ikPPQOgqAU4XKqSJ1CH7zq/kaBHv8Ba65qXjW6762Ug=";
     name = "arm_arm926ej-s-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/luci/";
     sourceInfo = {
-      hash = "sha256-SIgNffErCm4zOYVT4txk7BcKBnCkpk1Unr3avyk7AlE=";
+      hash = "sha256-O+ArjmBMiIJp5oZTTZlzRbiakym3RR3HHop0no+Knt0=";
       name = "arm_arm926ej-s-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/packages/";
     sourceInfo = {
-      hash = "sha256-VMafiSH/8h/BCJCg1U15Vh3Ssef9HS3v+NmbPgxCdZw=";
+      hash = "sha256-RgZg7gJGSxFkfDeKjQKIfqCeN8zEcb4ZBvM9DNtJ2CU=";
       name = "arm_arm926ej-s-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/routing/";
     sourceInfo = {
-      hash = "sha256-kxosJtHrsap7rz8KWdwgcSEBKtXIoi8Saxw+UeIDgf4=";
+      hash = "sha256-8FRXernExRT3fMqEmo15lADSkfvQ4XUczHbFhdu3dVU=";
       name = "arm_arm926ej-s-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/telephony/";
     sourceInfo = {
-      hash = "sha256-KSC4B7nVZzH6xx9N7RwRgkb/u3HvtqQNCRvfla71GD0=";
+      hash = "sha256-9rvfJz+Ukq4y4kJC/A4IHSu7TquXrvNpLVBhe841yUA=";
       name = "arm_arm926ej-s-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_arm926ej-s/telephony/Packages";
     };

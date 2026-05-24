@@ -1,7 +1,7 @@
 # 24.10.6 package feeds for arm_cortex-a9
 {
   sha256sums = {
-    hash = "sha256-R8rXyBj845Ggf04SO1SXtVYaCR2Iu9xzF+MeuYNP+MM=";
+    hash = "sha256-33HjQoHpqGbkkEEryJvPVw+/kSchUOtXSFTXPaIzmJE=";
     name = "arm_cortex-a9-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/luci/";
     sourceInfo = {
-      hash = "sha256-VNMneko/aF6hpTFBnMTj7cIL9ZmOT6wWiThY6WxIW1U=";
+      hash = "sha256-oJ8fp1AhY78oQ2TyFgHABeY4GZfzQ30HDx6Xhv3UlKY=";
       name = "arm_cortex-a9-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/packages/";
     sourceInfo = {
-      hash = "sha256-9qDEWREqkHrBQvc5xH7VUQX4s7o+v5xBEtTEFxwjEBw=";
+      hash = "sha256-UVB9YcRDmn0naBKAzACRXJ7QXjrhu8s4/+K74/dIpcU=";
       name = "arm_cortex-a9-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/routing/";
     sourceInfo = {
-      hash = "sha256-DhA9Cv7YOI7yuRGm02hFKwZ8BNatxSDsfxw6rRxdY3s=";
+      hash = "sha256-B3LnteQyRvG4w8qaI3/1ElfhVpfqJyXvdoAQQnwYaGw=";
       name = "arm_cortex-a9-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/telephony/";
     sourceInfo = {
-      hash = "sha256-Mab7tlxeeB67dmpGE2SNHhrd1x+sxNmVdpCx7czyXBk=";
+      hash = "sha256-e4tXsBsNGSpqg1jVSHy2wv4XZsXJ0v4LaqeqanVeg8w=";
       name = "arm_cortex-a9-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/arm_cortex-a9/telephony/Packages";
     };
