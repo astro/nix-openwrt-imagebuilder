@@ -1,14 +1,14 @@
 # 24.10.6 package feeds for aarch64_cortex-a76
 {
   sha256sums = {
-    hash = "sha256-xzP2kf6T4NeYC3gVQvUJLyHpFhhdJlRvGuPeH1T26tw=";
+    hash = "sha256-25/FZreQ6jLe9KY0p0RLrmsQqGVGijQg5xmQr3D4ap0=";
     name = "aarch64_cortex-a76-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/base/";
     sourceInfo = {
-      hash = "sha256-8KKRXqKuqH+c7RAyjxbl/FCsbD0GSeOiV3O/9Qd/bEg=";
+      hash = "sha256-pVjc9VCWCN/lCZatmlzyZU8TfKs1CnWF9NY7j6smfg0=";
       name = "aarch64_cortex-a76-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/packages/";
     sourceInfo = {
-      hash = "sha256-alPCg37uVMsdIfHqB8ldmpEoxAoKenLLDJy7H7IG3Os=";
+      hash = "sha256-Oufm3Af6mQQ15ovsKrRNlLCckTf3nYtbAl8VvM/j/WE=";
       name = "aarch64_cortex-a76-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/routing/";
     sourceInfo = {
-      hash = "sha256-tf9vyxe7AsVENJUfV+4i62CMViHB38xsFrIgCDpkxl8=";
+      hash = "sha256-z+8u3h9GI9BlszMWWzBzNaDPd0Lx0QWflXH+Bp5sBVs=";
       name = "aarch64_cortex-a76-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/telephony/";
     sourceInfo = {
-      hash = "sha256-1hsGSGblYFXYZmQvwjL0aRLkm+tIzrLD85aSSvKlaOM=";
+      hash = "sha256-Z1Og8X8gTBGOSgcrcMMxrkvPBIsWEK7Esqo3uYsAdX4=";
       name = "aarch64_cortex-a76-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.6/packages/aarch64_cortex-a76/telephony/Packages";
     };
