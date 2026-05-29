@@ -1,14 +1,14 @@
 # snapshot package feeds for riscv64_generic
 {
   sha256sums = {
-    hash = "sha256-CyXCX1lzJFpFFAGRPiBmGN0vjC/UmqPW8hGCo7xaQZk=";
+    hash = "sha256-IXlRnI3yb0BCsIUVLQz1F3bn/LIXbBDfbDTTazr9lwU=";
     name = "riscv64_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/base/";
     sourceInfo = {
-      hash = "sha256-j3WVEfBtZz07NLmK9/wU7+LAgSlFt3I7IirCvFCN694=";
+      hash = "sha256-p+m9erAt/Xr+QQYdOavfK74bGNmYW9kxTi6nZzoobDY=";
       name = "riscv64_generic-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/luci/";
     sourceInfo = {
-      hash = "sha256-UKvIK0MukbIKCxMc966eYsFtbgq8VkPnjIpMrtmYIuQ=";
+      hash = "sha256-ObpSbu++98Btnc3L+rKfPsmpwRuj0hMfUE2acOdVMjM=";
       name = "riscv64_generic-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-OJHxLFU1ZzJCwyD+SQjzwlqTiZgbXipACdi5xQwaH4k=";
+      hash = "sha256-lVGzYzibP+zJFQtQEMGgGH8m0mnry+t+ye3vS/dmUbc=";
       name = "riscv64_generic-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/routing/";
     sourceInfo = {
-      hash = "sha256-qYVKI09yLQ6t3R15uc66efQS775dnjospaPlK5gZMs4=";
+      hash = "sha256-63wxMqKKIFtNKjjoOOgLMvS4lN0ViOR7RnCLQQUosE8=";
       name = "riscv64_generic-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-4/p9XUXeE8NSk3tpVGTw3+Vmsk2Og3dKppqz5F5+cTU=";
+      hash = "sha256-cvl1+OmcE5r0ewIqtAQrnK76csQwwa8J+mG2YpzYePo=";
       name = "riscv64_generic-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/riscv64_generic/telephony/packages.adb";
     };
