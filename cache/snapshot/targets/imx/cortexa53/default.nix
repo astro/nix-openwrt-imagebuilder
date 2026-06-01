@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/";
   sha256sums = {
-    hash = "sha256-ax7GIhdwHvmp7TB5J+m+HwcWvFSIccO3ZxvEmrPiXhg=";
+    hash = "sha256-iDvejK6LmQ0oinBXHqY2klEqOmL2NeUJljOEb3PjJuo=";
     name = "imx_cortexa53-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/sha256sums";
   };
   imagebuilder = {
-    sha256 = "e653c6ff3e5acc2ec3589568252cdac974299540030b83fb7c9b69029a8fe968";
+    sha256 = "506f33cc9f4f02a04ed40b9dc6485649b0c2ee80037bbccdaab24fd0487d3d59";
     filename = "openwrt-imagebuilder-imx-cortexa53.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-GBqCTdNKJEOtN7c0ZjgVkYEWubG7fP0SykBJr8Xf5WM=";
+    hash = "sha256-d2q6ND96h4+vmUJxwqZCHyz7MS6/z11NhinQ8sUC7L8=";
     name = "imx_cortexa53-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/profiles.json";
   };
@@ -71,12 +71,15 @@
           "kmod-dsa-ksz9477-i2c"
         ];
       };
+      imx8m = {
+        device_packages = [ ];
+      };
     };
   };
   kmods."6.12.91-1-96e358ff6cf0eea909647975573490b1" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/kmods/6.12.91-1-96e358ff6cf0eea909647975573490b1/";
     sourceInfo = {
-      hash = "sha256-YewmtM5WRvENZXuTslNY7Ng+q9FPVMeOtbOTpg2Ou+E=";
+      hash = "sha256-bUaSeHYS/GjYSYMdMEZIWQ1nQwhrI+S/AyggJetYe3U=";
       name = "kmods-imx_cortexa53-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/kmods/6.12.91-1-96e358ff6cf0eea909647975573490b1/packages.adb";
     };
@@ -89,7 +92,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/packages/";
     sourceInfo = {
-      hash = "sha256-lJcqy6zvojiePVOnLe1Mm2HZYn1/Po6igiMXKejefyU=";
+      hash = "sha256-cZo6p8v6RNnM+nYrH2wOxUb9wo5Xvh94k/hQlmd2+J0=";
       name = "imx_cortexa53-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa53/packages/packages.adb";
     };

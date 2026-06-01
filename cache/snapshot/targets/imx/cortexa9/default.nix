@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/";
   sha256sums = {
-    hash = "sha256-Wy+LKlVPo8ty879PM2XzK7G0KuyxEH6j4noRzLa39i4=";
+    hash = "sha256-Di51DhrnNhwccUJgBL9Q5QdTLu3TA7OkOWElwCz4nmc=";
     name = "imx_cortexa9-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/sha256sums";
   };
   imagebuilder = {
-    sha256 = "72f7e66295dbf5440243def3868d48afe2d71d3116dc3c43d346bc7d51bd7b27";
+    sha256 = "01eb5979d451d83cfbbbd751affc1e66db93990963b6323b584720a604b73a3a";
     filename = "openwrt-imagebuilder-imx-cortexa9.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-zJtYd8Ns7Pv4BX+47J8V78cPkQ7KZZCNOaQv6pc08xY=";
+    hash = "sha256-xjuAYcFVB2GCBKfTwvyjXaVa5EG7qtAHLdZScGhBY0Y=";
     name = "imx_cortexa9-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/profiles.json";
   };
@@ -104,12 +104,15 @@
           "kmod-rtc-ds1307"
         ];
       };
+      wandboard_dual = {
+        device_packages = [ ];
+      };
     };
   };
   kmods."6.12.91-1-d7aad8661c23d3462dfae6a242b15272" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/kmods/6.12.91-1-d7aad8661c23d3462dfae6a242b15272/";
     sourceInfo = {
-      hash = "sha256-3bcaMayB0vRcvSDus4nmoQygCtmUmwcp58rj5dunC9A=";
+      hash = "sha256-v1T4PgGQ1TVcrzKuk/QTzpws5b9UdeORQuCBQdSWCPM=";
       name = "kmods-imx_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/kmods/6.12.91-1-d7aad8661c23d3462dfae6a242b15272/packages.adb";
     };
@@ -122,7 +125,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/packages/";
     sourceInfo = {
-      hash = "sha256-+QFfg4z9b/cxKcz5WhJYNNYr+Hw+s8ejmG15VxzK78c=";
+      hash = "sha256-fak8lq9cHdePIqrkmMYlQPs8hcu30/mNJ2xme8AN9eo=";
       name = "imx_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa9/packages/packages.adb";
     };
