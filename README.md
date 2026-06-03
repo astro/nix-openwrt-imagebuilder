@@ -99,7 +99,7 @@ in
 
 ## Refreshing hashes
 
-**downloads.openwrt.org** appears to be never at rest. That's why we
+**downloads.openwrt.org** appears to never be at rest. That's why we
 update the [cache subdirectory](./cache/) daily with [a Github
 action.](https://github.com/astro/nix-openwrt-imagebuilder/actions/workflows/update-hashes.yml)
 
