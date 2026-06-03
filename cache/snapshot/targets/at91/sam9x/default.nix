@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/";
   sha256sums = {
-    hash = "sha256-rSFFOyfGCxxqzmirUk3fyEqye/p3GZwmkTCtiEW2X3Y=";
+    hash = "sha256-HMgNJ08ysEA8v/b+BUmnqswmzqpw3w+HJhV4HmFv2eE=";
     name = "at91_sam9x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "cc683cd29b285a2f2b8cc2037b6f879e4f8380160289eac3965ba894780ac6b3";
+    sha256 = "38dd425ad851abaed0264520359095ab23e0e2b51a2d000e8eb24a06d74a0159";
     filename = "openwrt-imagebuilder-at91-sam9x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-XjncVw/aYdQ8Gm+DSsfUchEmTAlkVK8kSPqQER9zK8M=";
+    hash = "sha256-n+ehuth0ayekquQwMtyXfQRSvcQVgPQ5MYBArGrokq0=";
     name = "at91_sam9x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/profiles.json";
   };
@@ -20,7 +20,7 @@
     linux_kernel = {
       release = "1";
       vermagic = "c116ffcc00fb69eb77b22b2a9cf34b33";
-      version = "6.12.91";
+      version = "6.12.92";
     };
     default_packages = [
       "apk-mbedtls"
@@ -51,7 +51,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.91-1-c116ffcc00fb69eb77b22b2a9cf34b33";
+    kmods_target = "6.12.92-1-c116ffcc00fb69eb77b22b2a9cf34b33";
     profiles = {
       atmel_at91sam9263ek = {
         device_packages = [ ];
@@ -126,12 +126,12 @@
       };
     };
   };
-  kmods."6.12.91-1-c116ffcc00fb69eb77b22b2a9cf34b33" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/kmods/6.12.91-1-c116ffcc00fb69eb77b22b2a9cf34b33/";
+  kmods."6.12.92-1-c116ffcc00fb69eb77b22b2a9cf34b33" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/kmods/6.12.92-1-c116ffcc00fb69eb77b22b2a9cf34b33/";
     sourceInfo = {
-      hash = "sha256-4ejZKyWxhRCjxoKG8VHyLoVb/kDBOUJfuQy6nnNHRrU=";
+      hash = "sha256-POEeyHQeDFRCHSP+FvMc4oXTAl5csV/Ill90Rsys8e8=";
       name = "kmods-at91_sam9x-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/kmods/6.12.91-1-c116ffcc00fb69eb77b22b2a9cf34b33/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/kmods/6.12.92-1-c116ffcc00fb69eb77b22b2a9cf34b33/packages.adb";
     };
     packages =
       let
@@ -142,7 +142,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/packages/";
     sourceInfo = {
-      hash = "sha256-v5oIMruLtasHEPBrwnP6fh7RsDmywrIOY07Z0RM++4w=";
+      hash = "sha256-Y6V7Yg5wShEdCr6YJOo8cYOdfJjH0pPwsg/iQFohETI=";
       name = "at91_sam9x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/at91/sam9x/packages/packages.adb";
     };
