@@ -1,7 +1,7 @@
 # 24.10.7 package feeds for arm_cortex-a15_neon-vfpv4
 {
   sha256sums = {
-    hash = "sha256-KStlVMzP0/lAIPl2Tw5gXdiyo0bHiecMtP1MMbpr20M=";
+    hash = "sha256-dsS33Q9vqwhu9Z4/7XAJnQl6jYAFCqWdmbeli5SHhT0=";
     name = "arm_cortex-a15_neon-vfpv4-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/luci/";
     sourceInfo = {
-      hash = "sha256-laS8oZIrAJIscRiDBYd+a01lYYaM8Yw1979D0K2kS0M=";
+      hash = "sha256-FklK7n96PdDFGPDBuSjqY7j+Dp4/6s47pOJWAxaPIcc=";
       name = "arm_cortex-a15_neon-vfpv4-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/packages/";
     sourceInfo = {
-      hash = "sha256-KMEU85E/OhL1aBhCv3wdhMnCKlxPeBZIzEsR1w92mwc=";
+      hash = "sha256-OMmoH4O8kiWHVhjbswJFPt90jXBxsu4gDo2YU5stGwI=";
       name = "arm_cortex-a15_neon-vfpv4-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/routing/";
     sourceInfo = {
-      hash = "sha256-0t7GcErr22wqMAngfXdSGWzguZ4Frne/BWeL6AdkYHU=";
+      hash = "sha256-4bG3WXWFw0gggGuJqXHy0J9Zi3PVwXLhIH3K5Vquy+Q=";
       name = "arm_cortex-a15_neon-vfpv4-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/telephony/";
     sourceInfo = {
-      hash = "sha256-jdM9hjDlo5BnE5/5ZlBHLTOXOAF5kkEeRyRI+yEn/ew=";
+      hash = "sha256-xWJ4Ijodfzt6uaK0vptQ8SNy66XEWBvoBvlqpnSGhjc=";
       name = "arm_cortex-a15_neon-vfpv4-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a15_neon-vfpv4/telephony/Packages";
     };
