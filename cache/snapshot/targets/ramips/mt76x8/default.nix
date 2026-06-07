@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/";
   sha256sums = {
-    hash = "sha256-YRmz4TVfKrSj0VoyDxdBgKP+sFfbm2ITenmRoUAmJDY=";
+    hash = "sha256-yZ5TrvMnYyWh1oFR4KeeZjup054Vq/vT5NO96RRAbQg=";
     name = "ramips_mt76x8-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/sha256sums";
   };
   imagebuilder = {
-    sha256 = "d148b339473be40d0b7da1a5482a7aae219eb5edbeafa8baa5ee8231849f3b8c";
+    sha256 = "f7bec6ae5aeb8f4e81e95cdde182804f1ff15f90820398376d1f14f1975de820";
     filename = "openwrt-imagebuilder-ramips-mt76x8.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-aOA7KVAEMmxci8gi97UPz//sZ6CZPhbdm8fTl+xJcyE=";
+    hash = "sha256-fYZuAn7pe6Oz57SOPp9ujGDUvO4AiNWiJdy4dfnjsTc=";
     name = "ramips_mt76x8-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/profiles.json";
   };
@@ -757,6 +757,15 @@
       xiaomi_miwifi-nano = {
         device_packages = [ "uboot-envtools" ];
       };
+      yuncore_1200f = {
+        device_packages = [
+          "kmod-mt7615e"
+          "kmod-mt7663-firmware-ap"
+          "-kmod-mt76x2"
+          "-kmod-mt76x2-common"
+          "-kmod-mt76x02-common"
+        ];
+      };
       yuncore_cpe200 = {
         device_packages = [
           "-kmod-mt7603"
@@ -791,7 +800,7 @@
   kmods."6.18.34-1-9137ff467875bbfee6be34faa314bd3e" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.18.34-1-9137ff467875bbfee6be34faa314bd3e/";
     sourceInfo = {
-      hash = "sha256-+sRmWa8EjWBvQlyWZQnPtiMmLQUBuua9/MFCCWVoY/U=";
+      hash = "sha256-MvBnNGdE3z3OwlO5AvRVyF8G2PqvL70HJCfBawt2MxY=";
       name = "kmods-ramips_mt76x8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.18.34-1-9137ff467875bbfee6be34faa314bd3e/packages.adb";
     };
@@ -804,7 +813,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/packages/";
     sourceInfo = {
-      hash = "sha256-f+/hIhe/dE0yJSjb3CWXUwri6uEjFj/KqTt9UV8RNQQ=";
+      hash = "sha256-T80I/FbwYjVvqx97/UkBqg/R5lCgf9HQa6ld1y3NRnc=";
       name = "ramips_mt76x8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/packages/packages.adb";
     };
