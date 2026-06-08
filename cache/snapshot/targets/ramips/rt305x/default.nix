@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/";
   sha256sums = {
-    hash = "sha256-07nvMS5zvOVbNDD08b9Mzk2qiKCSLIfbVOGSBAFIjp4=";
+    hash = "sha256-Tu17qBERSNGc0/kx9x504r7a5nRFlWMQPNZI4TZlMu4=";
     name = "ramips_rt305x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "70984ee5394dc8574f9d28b2b93ef2e71d229c3402a1b1aef9202a200b206566";
+    sha256 = "a43d98d3985ef90b5befeb6e0c641d6d9b7ede4a6d9db058e0bd4edd477bc129";
     filename = "openwrt-imagebuilder-ramips-rt305x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-F8n1nBpt6Gsb2MtZrN2Gd7ouqzN3Nn6IEsl1LSxjaco=";
+    hash = "sha256-cM4yOPKCoBmUtp0AOfr99jCIL57O1o6CqDMkQUA2POk=";
     name = "ramips_rt305x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/profiles.json";
   };
@@ -113,7 +113,7 @@
   kmods."6.18.34-1-4af2420e616567729561075c785818b5" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/kmods/6.18.34-1-4af2420e616567729561075c785818b5/";
     sourceInfo = {
-      hash = "sha256-kC+m64XcpVJ9eRdmtAKafm1v7Axb4MSG0UYpo/q++4Y=";
+      hash = "sha256-8z39teLSXgN5LghBcP3T6KQHUMIzfi4hwF4TidVBJ50=";
       name = "kmods-ramips_rt305x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/kmods/6.18.34-1-4af2420e616567729561075c785818b5/packages.adb";
     };
@@ -126,7 +126,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/packages/";
     sourceInfo = {
-      hash = "sha256-1/Uoy25oI0jDVQZIlDQ7b9wvGkZnG74NOPvEwtsPkOI=";
+      hash = "sha256-rmOkNWhDZlI5+3EXrj5+C4kKQeSoj2uXcbINb8ikeIs=";
       name = "ramips_rt305x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt305x/packages/packages.adb";
     };
