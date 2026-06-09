@@ -1,14 +1,14 @@
 # 24.10.7 package feeds for x86_64
 {
   sha256sums = {
-    hash = "sha256-7e8COacjgj6Jbwd5ahyGcMcjM1hGT57hx2D+QI/qA18=";
+    hash = "sha256-io8g9B/z7gYzbN0LXs3TTNXpadQu5kKCzrlsq6i8I8M=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/base/";
     sourceInfo = {
-      hash = "sha256-VXYLyxBipPexHZAq0RpmsZ/gV52cBaj38a91YS7/bcY=";
+      hash = "sha256-fnRlE4jNXrUmQwIE87dKch8ExTz0pB1CrqxEqs+MdCI=";
       name = "x86_64-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/base/Packages";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/luci/";
     sourceInfo = {
-      hash = "sha256-8Z6VmH0gYFi5hSvXiSMLlFd+QSkOy3l9PJvZLHaCYmM=";
+      hash = "sha256-gvjth5+x/BWif0PsBr9R0HJ9KFiAqLif9/GK6MPTAIU=";
       name = "x86_64-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/packages/";
     sourceInfo = {
-      hash = "sha256-mOFu29h8PsGiqR1pgIlM3AT2pLQv6mCoUTyMLGkQ6B8=";
+      hash = "sha256-dKkPWZIZDt2eT4Qbr8FDycUk7wzynMOhNCNOjV5A/5s=";
       name = "x86_64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/routing/";
     sourceInfo = {
-      hash = "sha256-HBTwXyx28BPGNwDvQppkYJ0fLLMIkshFNahJx5O4h+o=";
+      hash = "sha256-fsyUi1EQOYkZesq1UGwNkbTDrjLWlKL1So9ibsQRvy0=";
       name = "x86_64-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/telephony/";
     sourceInfo = {
-      hash = "sha256-NntX8BXr1tW0LjdnxXfSaqRDuh03Os7JVCIHq07R7gc=";
+      hash = "sha256-+r3erF6zDx/yoRj7QUFGIn09sddpTtIJS4is//ZnzRM=";
       name = "x86_64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/telephony/Packages";
     };
