@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/";
   sha256sums = {
-    hash = "sha256-cbOKPLyR7UXEFYM33hRITl8DFs1mSDEcqp7aARQbW0U=";
+    hash = "sha256-2L16IDCGkEoMggQ3u+Yj3S5lbiIlUOehOsHrnRcIH5U=";
     name = "tegra_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "4964e7319de022d7d05a5ef9b5b6413e00713578bdbaf6c41745f7c38868dbb0";
+    sha256 = "e50772e96179c4aec1d73b3879878e4e2d7b096c98ffd53394bd8587468c0951";
     filename = "openwrt-imagebuilder-tegra-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-6XKCN3bWQKQlJVuCm0wmyuWvRGfPThy2BNPg8QAlUzs=";
+    hash = "sha256-KWBcy2XwG1gfWxDoPExIsP1QehTI21rcxE8M1D4Fgm0=";
     name = "tegra_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a9_vfpv3-d16";
     linux_kernel = {
       release = "1";
-      vermagic = "99e3285abc5532ffc60363ae1a16932b";
+      vermagic = "9395f3706ef56dc6030c9414986f15b2";
       version = "6.12.92";
     };
     default_packages = [
@@ -51,7 +51,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.92-1-99e3285abc5532ffc60363ae1a16932b";
+    kmods_target = "6.12.92-1-9395f3706ef56dc6030c9414986f15b2";
     profiles = {
       compulab_trimslice = {
         device_packages = [
@@ -66,12 +66,12 @@
       };
     };
   };
-  kmods."6.12.92-1-99e3285abc5532ffc60363ae1a16932b" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/kmods/6.12.92-1-99e3285abc5532ffc60363ae1a16932b/";
+  kmods."6.12.92-1-9395f3706ef56dc6030c9414986f15b2" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/kmods/6.12.92-1-9395f3706ef56dc6030c9414986f15b2/";
     sourceInfo = {
-      hash = "sha256-0mw6UGgZ9jC7n1w/n2T9Zr11uEAP/jHSgY+i6xz+2Bw=";
+      hash = "sha256-RpKurJQEfUYYA77A4Jcy+PSZXZ4PiJBpNEsrUULyw9s=";
       name = "kmods-tegra_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/kmods/6.12.92-1-99e3285abc5532ffc60363ae1a16932b/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/kmods/6.12.92-1-9395f3706ef56dc6030c9414986f15b2/packages.adb";
     };
     packages =
       let
@@ -82,7 +82,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/packages/";
     sourceInfo = {
-      hash = "sha256-Hv0MD4hCHGhOb9KBFsgsoQ0869WDaa0GKAEBXWljD+c=";
+      hash = "sha256-qSQfgaUFbPeNqQsHyOW86lhkr1peEjKLOGH3k2RBryM=";
       name = "tegra_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/tegra/generic/packages/packages.adb";
     };
