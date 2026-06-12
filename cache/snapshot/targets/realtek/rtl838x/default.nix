@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/";
   sha256sums = {
-    hash = "sha256-K/PXje4CrkVSbxZiuhGXVaA/HrQmIOlFz/L7rgOacAo=";
+    hash = "sha256-etopFKbai7hkcKGdynhltHmPU5kmPmd3ovlosts3O7E=";
     name = "realtek_rtl838x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "55e8ce37e890e5407c3a5c389ad51ef04be5002f291f537f356e2fb3036ef68c";
+    sha256 = "214da45201bb83e50259d6b0573f53df1a9271993a9fa64b296531a0d8079fcc";
     filename = "openwrt-imagebuilder-realtek-rtl838x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-xE5fGypEg2cTG0sdokyCE6sZZo8Gmo/rz105+7kUBl8=";
+    hash = "sha256-E4Fk3o707HRIIdSXXUyinbLs2K3mwjjs+9gMBi9hunc=";
     name = "realtek_rtl838x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/profiles.json";
   };
@@ -155,6 +155,9 @@
       panasonic_m8eg-pn28080k = {
         device_packages = [ "kmod-i2c-mux-pca954x" ];
       };
+      teltonika_tsw202 = {
+        device_packages = [ ];
+      };
       tplink_sg2008p-v1 = {
         device_packages = [ "kmod-hwmon-tps23861" ];
       };
@@ -205,7 +208,7 @@
   kmods."6.18.34-1-2f0a153930dad662640dc45a7da46c9b" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.34-1-2f0a153930dad662640dc45a7da46c9b/";
     sourceInfo = {
-      hash = "sha256-Js3y6W7c0I/ZRH0mHYdN5v8ai2sOWSghZ3rPY3lGGfk=";
+      hash = "sha256-lxteRYaovCwZDEzD9CLhIZPw1P2jLrN9xCyqtd73jJM=";
       name = "kmods-realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.34-1-2f0a153930dad662640dc45a7da46c9b/packages.adb";
     };
@@ -218,7 +221,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/";
     sourceInfo = {
-      hash = "sha256-WyqIQpQRD0Uy4ZNuSB46LAYmX09H5ERBjvPNgQ+pRyE=";
+      hash = "sha256-DygEjxkL8S6hejPI7NsxVPmxAqD0gsJ7CfBPnEMCSxY=";
       name = "realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/packages.adb";
     };
