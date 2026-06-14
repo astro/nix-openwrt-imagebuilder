@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/";
   sha256sums = {
-    hash = "sha256-r+WY9vYnGjdapESqYSOQBh4ND5N1+GerN9BwoZ7hsUk=";
+    hash = "sha256-ZFG4FA4aD9BTpha14Am5bUlAeU21UKYbmJ69J+ahfjg=";
     name = "sunxi_arm926ejs-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/sha256sums";
   };
   imagebuilder = {
-    sha256 = "bde39fa1c05527b33dc6cf8570a40d1606d297177951fefe4bafddf7852efb8c";
+    sha256 = "5fbe95b2223fbd2c8c18a142f7f4dee4367a9b66c3499004df6b13dabb8d9181";
     filename = "openwrt-imagebuilder-sunxi-arm926ejs.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-WTL+WOeMCa7ib6yce1KbvzU8XLPfSgkqwAMRV2ljHFY=";
+    hash = "sha256-6NmELH/bPP22U6X/B0Jk6BU/8iYg+pBT2LxydulJ1Ms=";
     name = "sunxi_arm926ejs-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/profiles.json";
   };
@@ -65,7 +65,7 @@
   kmods."6.18.35-1-72c39221e8049bb547ae9a4ce056a005" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/kmods/6.18.35-1-72c39221e8049bb547ae9a4ce056a005/";
     sourceInfo = {
-      hash = "sha256-6n6xxwsH1kHjjT3DtebMO6y04V1sX1CCjKhddScxDL4=";
+      hash = "sha256-A6VKLCv5H6AoZhMiQLcnvxqk9eCZSYCHo5dnBucYdvI=";
       name = "kmods-sunxi_arm926ejs-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/kmods/6.18.35-1-72c39221e8049bb547ae9a4ce056a005/packages.adb";
     };
@@ -78,7 +78,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/packages/";
     sourceInfo = {
-      hash = "sha256-iFR/Sn7sM+VhdNtnZCKLqkUUAShwzIkq8c7RiHOBKNs=";
+      hash = "sha256-0Of3viLXXQhJEQXUDZHxcbSdy/WoNEeKRCBtwrUGEXc=";
       name = "sunxi_arm926ejs-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sunxi/arm926ejs/packages/packages.adb";
     };
