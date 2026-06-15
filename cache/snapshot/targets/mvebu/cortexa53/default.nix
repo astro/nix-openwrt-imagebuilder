@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/";
   sha256sums = {
-    hash = "sha256-gELzvDUk9lSbqX530CzT+wKKb3eaMcaGGXELkWusooc=";
+    hash = "sha256-dPJ/8S6GH5l94H53ITJa88q23hYhdDyHhbmYX5u+FTs=";
     name = "mvebu_cortexa53-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/sha256sums";
   };
   imagebuilder = {
-    sha256 = "85954102fb4e28cf466b874a1e6cc3daa24f2d6f7f70ef9050199ac942dc186c";
+    sha256 = "20e338420c649e5f6d78a9dcb551e206b790641bd8aa7f4a1bee1dd2400f98a4";
     filename = "openwrt-imagebuilder-mvebu-cortexa53.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-7wJdwPXcdw3COYZ2rR0Svz3TolhEZ+Wgninzd+iiRbk=";
+    hash = "sha256-UR9rYiEUJQ+VDEsHS3ztRy4K0t9i0+i+MM+BT9S4+8g=";
     name = "mvebu_cortexa53-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/profiles.json";
   };
@@ -19,8 +19,8 @@
     arch_packages = "aarch64_cortex-a53";
     linux_kernel = {
       release = "1";
-      vermagic = "e9f3a80cf2cb9ff956691b453ba9a3e6";
-      version = "6.12.92";
+      vermagic = "29508f99ee28af5b0e7283ac9824ec7a";
+      version = "6.12.93";
     };
     default_packages = [
       "apk-mbedtls"
@@ -54,7 +54,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.92-1-e9f3a80cf2cb9ff956691b453ba9a3e6";
+    kmods_target = "6.12.93-1-29508f99ee28af5b0e7283ac9824ec7a";
     profiles = {
       cznic_turris-mox = {
         device_packages = [
@@ -121,12 +121,12 @@
       };
     };
   };
-  kmods."6.12.92-1-e9f3a80cf2cb9ff956691b453ba9a3e6" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/kmods/6.12.92-1-e9f3a80cf2cb9ff956691b453ba9a3e6/";
+  kmods."6.12.93-1-29508f99ee28af5b0e7283ac9824ec7a" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/kmods/6.12.93-1-29508f99ee28af5b0e7283ac9824ec7a/";
     sourceInfo = {
-      hash = "sha256-BejyGDpWHdFrQGX5GYTvJH7yoNcQEH/LCE0iXEP5YRc=";
+      hash = "sha256-O4BI2cFkZWUzumZYmocvBpU3t72QSXmZXlQE37HLyME=";
       name = "kmods-mvebu_cortexa53-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/kmods/6.12.92-1-e9f3a80cf2cb9ff956691b453ba9a3e6/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/kmods/6.12.93-1-29508f99ee28af5b0e7283ac9824ec7a/packages.adb";
     };
     packages =
       let
@@ -137,7 +137,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/packages/";
     sourceInfo = {
-      hash = "sha256-AGylbVJ0np7ID4XggOfgO826YFt9degV90IpxxpEZOo=";
+      hash = "sha256-grvss71R7MBjc0D1iGV20+/dPHF6BTnQ+MrOZQOQgR8=";
       name = "mvebu_cortexa53-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/packages/packages.adb";
     };
