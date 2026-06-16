@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/";
   sha256sums = {
-    hash = "sha256-OjBtQOnd2cjAtWv89bo1+kYC/YB1qN020a0XJtv1FhY=";
+    hash = "sha256-uD3Tv8u2GSezwAkCpspPMKtggcrQeUEuJj6+Vj+4Bv0=";
     name = "mxs_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "894fc585a33c6f74e7ad7357377ac0589a235e3036b789d4430383e3ce56ba94";
+    sha256 = "c4adb3a94dc0e3dde16734eb15977dffae540b1ddd463675c843842ae03a364a";
     filename = "openwrt-imagebuilder-mxs-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-WUL/YP2g8aV4bfdtSGaueqDyoJbcMtnNmEERQFGdYdY=";
+    hash = "sha256-GEupY1xABaXD04hxJEqpSsIQFB1yCVlGsD1GkRerzZk=";
     name = "mxs_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/profiles.json";
   };
@@ -84,7 +84,7 @@
   kmods."6.18.35-1-821977c7cffc80846311e29cb8f3f843" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/kmods/6.18.35-1-821977c7cffc80846311e29cb8f3f843/";
     sourceInfo = {
-      hash = "sha256-W3IvpKxZV3hXHaSY/8otKH68u/wrwZ0PO8Mad2m4lQk=";
+      hash = "sha256-oQ4Vef3/tDDJSeUvoqL5Z1ZZwhbosY7eDcbIM+IWXvs=";
       name = "kmods-mxs_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/kmods/6.18.35-1-821977c7cffc80846311e29cb8f3f843/packages.adb";
     };
@@ -97,7 +97,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/packages/";
     sourceInfo = {
-      hash = "sha256-QwnC1DwXONF0imdpchSTcem7VGKhlcy9HRjyLpHHFpg=";
+      hash = "sha256-bA5xeYsJ9og5SLbTpw1Cy6iloAxi2kAKfYafSnuncm4=";
       name = "mxs_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mxs/generic/packages/packages.adb";
     };

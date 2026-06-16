@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/";
   sha256sums = {
-    hash = "sha256-V+zZi93lhYl3cqyxN6NX0rwNhewtyP6JRgmbjXjGIWw=";
+    hash = "sha256-hdQyZNw6Qm2CFPzrdezl5tFKuv8vhAuo7dTbECVSaM4=";
     name = "x86_geode-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/sha256sums";
   };
   imagebuilder = {
-    sha256 = "f36a637d1aeea7ace581dad7ab7304d89a2468826e4565d74d9f3c44f10651c7";
+    sha256 = "ea69d676c3198e627173bd7505856399214c27a25cbea87416c16496f0e2976f";
     filename = "openwrt-imagebuilder-x86-geode.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-QPeob5bLhyvfSik7vZT59DtqI9EbF9VeTebflZ/YASo=";
+    hash = "sha256-So4ZbHtOMB4pDejzqZBzBzg22mn88OXvqYmZkf1yOOU=";
     name = "x86_geode-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/profiles.json";
   };
@@ -88,7 +88,7 @@
   kmods."6.18.35-1-3ed500aeba983bc21ed37de332ea4efe" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.35-1-3ed500aeba983bc21ed37de332ea4efe/";
     sourceInfo = {
-      hash = "sha256-WAHztqdDHLt4iIdbbHN2kAwt8xUXj4ET54ak9KGDSqM=";
+      hash = "sha256-dKX5DUcUzkIdc4vwjUClpG4Wf1bCxIzv2y+dNRweXeA=";
       name = "kmods-x86_geode-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.35-1-3ed500aeba983bc21ed37de332ea4efe/packages.adb";
     };
@@ -101,7 +101,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/packages/";
     sourceInfo = {
-      hash = "sha256-SIYoGo1Y/pW27HD8+Vazh/2kVQcxTmTLGnO1XYCbQpc=";
+      hash = "sha256-1wyBiBvT93a9RkgF7sRyMRh6io1zH9/LbVpht7uYnaQ=";
       name = "x86_geode-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/packages/packages.adb";
     };
