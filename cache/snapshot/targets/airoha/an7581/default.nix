@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/";
   sha256sums = {
-    hash = "sha256-QxTD0IairmKMQXYjglYmKwL0orY356gTR3U/k0tPbrs=";
+    hash = "sha256-y/49M+O7lulqPEcgTQi3uDhvsHKZkTtDYTaxvIA32F8=";
     name = "airoha_an7581-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/sha256sums";
   };
   imagebuilder = {
-    sha256 = "34034b3cca5ca7426f5bb170b8b6f6e27df94aabfbee0b06bd2fce5395234a86";
+    sha256 = "e8f295c9f275a355d4185a69a4736d9a769ef80cefa72f2af58b818c693a1ece";
     filename = "openwrt-imagebuilder-airoha-an7581.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-eynZdWAruGb4KWf21VsgFWBIgixe2IXIAcHg85Pi2rs=";
+    hash = "sha256-t8iYZ7qNWk6DvpT87MK+OgEbHxHFLYOVmawXH958MFY=";
     name = "airoha_an7581-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/profiles.json";
   };
@@ -107,7 +107,7 @@
   kmods."6.18.35-1-9d90e18e55e4306f9555e67782b5d581" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.35-1-9d90e18e55e4306f9555e67782b5d581/";
     sourceInfo = {
-      hash = "sha256-u9Pq/I3jwc8h7J086/SEI65SVj6Nu6hpfifiz9bk5WA=";
+      hash = "sha256-Q7/3IU5zS5sxV+cHuBYH8M1mrkpA37PW1w/G013EQ6I=";
       name = "kmods-airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.35-1-9d90e18e55e4306f9555e67782b5d581/packages.adb";
     };
@@ -120,7 +120,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/";
     sourceInfo = {
-      hash = "sha256-NtXbq7LnyKAOkQDuhLb9AW8TBIIBAGWPLRKDejtyorI=";
+      hash = "sha256-mLLxIW3PDnEUcrElaJ7iuD/1OijDsFP811gW15wX/b4=";
       name = "airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/packages.adb";
     };
