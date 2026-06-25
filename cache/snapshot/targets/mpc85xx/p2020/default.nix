@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/";
   sha256sums = {
-    hash = "sha256-JB31YE69hZ63+wYXgWpvjhR7IoKy13G9yAfhjBX2wYg=";
+    hash = "sha256-LB/KieNHXi1Qd7m8cEgCE3W1CuMYXP6bqVLj+pehsAs=";
     name = "mpc85xx_p2020-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/sha256sums";
   };
   imagebuilder = {
-    sha256 = "944269664da38262bb70181762398b3a228ea681f4a776f20689c21d272963e5";
+    sha256 = "900e3154a816ccb45555bbcf4d15329650a6bc79df603f77f1c4ada22470ddef";
     filename = "openwrt-imagebuilder-mpc85xx-p2020.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-poNZBz5Ng1KKqToOKnYrl/s9YdFrRyn5qHanhuhPzds=";
+    hash = "sha256-4dwpb1XPlpxKBpJ6YeTWHCb0jkcHmaFsouRB0KGuV/w=";
     name = "mpc85xx_p2020-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/profiles.json";
   };
@@ -77,7 +77,7 @@
   kmods."6.12.94-1-36a974878a1e95e034b47b3f8c57b415" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/kmods/6.12.94-1-36a974878a1e95e034b47b3f8c57b415/";
     sourceInfo = {
-      hash = "sha256-XZZWCwsa4knDGitg7pqeKprJvuUA9HmNjBMrsm7RH6U=";
+      hash = "sha256-sh6nmC0KvAEfJMHAGjg2Lv+OcA3JLa9V5w66XuZnof0=";
       name = "kmods-mpc85xx_p2020-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/kmods/6.12.94-1-36a974878a1e95e034b47b3f8c57b415/packages.adb";
     };
@@ -90,7 +90,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/packages/";
     sourceInfo = {
-      hash = "sha256-LL8VPSaq6GPnfUO7qaKl9jYjzrH5mIFZybOIxeNcmrw=";
+      hash = "sha256-RfIIU90Cbgu0lheQohv05GnJjuxUEgg2hQ1rtTfU1Q8=";
       name = "mpc85xx_p2020-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mpc85xx/p2020/packages/packages.adb";
     };
