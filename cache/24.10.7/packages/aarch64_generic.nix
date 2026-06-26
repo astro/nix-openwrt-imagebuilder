@@ -1,7 +1,7 @@
 # 24.10.7 package feeds for aarch64_generic
 {
   sha256sums = {
-    hash = "sha256-LqGlDugnnr09W/ucyFufDpsgVTXWkKYVuLOUpNwts9s=";
+    hash = "sha256-dqzfEZeHhOOOW/+NDizbIdj4bnOEu+mZ/2plzDa4wCY=";
     name = "aarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/luci/";
     sourceInfo = {
-      hash = "sha256-m25TYR/naC4GVupQkFzqvT/6O0jeCl4B8giJHPEgnNA=";
+      hash = "sha256-r5UQkRSeXWo3ISOMF3GlRJdthgzUEMCdqDSPOZdFPwM=";
       name = "aarch64_generic-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-QLL6Z3exryUXpUJpL69eJs14Um4BoP4WAjFkYS/uqW0=";
+      hash = "sha256-u2LxSDRr1jKbQmC/P6Vct/hXDVEEhEUkgbYhBIAMXEM=";
       name = "aarch64_generic-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/routing/";
     sourceInfo = {
-      hash = "sha256-N0gN94Osv3cp7oUXeB9DHU1P1tp4c2RuaNkSGcxVBOw=";
+      hash = "sha256-+cDpm3gqVr2DoR+TK+664IDfRPQuyZ0owd3oCgYPbuY=";
       name = "aarch64_generic-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-arCKEhWNequB2udL8RD62atpfJVMQtY/MK5Nf5teUE8=";
+      hash = "sha256-1QkqnCqr4aWivYwh0WCLa4qLmgPDXSVXNXbAgIp6o2o=";
       name = "aarch64_generic-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/aarch64_generic/telephony/Packages";
     };
