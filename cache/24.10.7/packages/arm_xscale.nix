@@ -1,7 +1,7 @@
 # 24.10.7 package feeds for arm_xscale
 {
   sha256sums = {
-    hash = "sha256-Ry/96VS2tmfSajmF2oPu7ARD2KxMmMwvdM0wnxyN/8g=";
+    hash = "sha256-KNP0gXvwymDSe6aNY8Y931IHoTbfgrvQJ04wGTTLIxQ=";
     name = "arm_xscale-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/luci/";
     sourceInfo = {
-      hash = "sha256-Uheyf55Ggjoezgr9D77fRkyAt+cghHOnLpc+oEJ0W7M=";
+      hash = "sha256-BTGU0/baNxJn5d9NP1lFhkTn5DJgdFe5UX53A0QnTE0=";
       name = "arm_xscale-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/packages/";
     sourceInfo = {
-      hash = "sha256-J73sodqNsrATuhqAaRhVHqF2NTMlbWhvm3MO0YtSRkQ=";
+      hash = "sha256-Egi/avQPn40UGP9/Vs1xvgPmF/PUnQd0XMBBDw628IA=";
       name = "arm_xscale-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/routing/";
     sourceInfo = {
-      hash = "sha256-iQTznEMLyhf9CX969CwuKz1DE7EBSyNjPuUNLW78W1E=";
+      hash = "sha256-WAo2QGwgqIdLPnlxgd8swz2BI7TumXl+2qPjFHxSJ7w=";
       name = "arm_xscale-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/telephony/";
     sourceInfo = {
-      hash = "sha256-AoIUauPf+eX65CR7z1YIBKa2/wv0e/AbbavxOTRZD84=";
+      hash = "sha256-HHJ7m32oZ6UNvxB7fmTFUDQQ+wH8sxpXcMNd4IUrUT0=";
       name = "arm_xscale-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_xscale/telephony/Packages";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/";
   sha256sums = {
-    hash = "sha256-nGJ5wHBO/iQjAdrE21miwAYd7+TklI6jAM9z1FcGXOQ=";
+    hash = "sha256-hgyxQ4SofPxgY9yU/HMtZJjfJun3pHBrvqsw2OM4Zuk=";
     name = "bcm47xx_mips74k-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/sha256sums";
   };
   imagebuilder = {
-    sha256 = "5165fcfeb343efbcbbbb5440ac3429b59150ee7e12d362b00c87f2f97d73490c";
+    sha256 = "ddb3a7ee00bf7787788909d2e20bab1be830df8b4f5d60abe64810497056b4fd";
     filename = "openwrt-imagebuilder-bcm47xx-mips74k.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-IdJ+vf85DxBosHJ95oD2cE2VVlRpaLtkml7SNgffN6U=";
+    hash = "sha256-2tt6r6Y2txsbeTnbP0Du3RZGiamjq0UimDD2UZ4YxpQ=";
     name = "bcm47xx_mips74k-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/profiles.json";
   };
@@ -202,7 +202,7 @@
   kmods."6.12.94-1-704626a9118f68d382d3eb56e7b8fa68" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/kmods/6.12.94-1-704626a9118f68d382d3eb56e7b8fa68/";
     sourceInfo = {
-      hash = "sha256-o3M40epqHyX5HD3OxsmAOuX7OFjvBz4XFNyRhvZ2sU0=";
+      hash = "sha256-22WMrI8KCWgQEnny+AYllUasY7Mfiko8n3DPE7+50uw=";
       name = "kmods-bcm47xx_mips74k-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/kmods/6.12.94-1-704626a9118f68d382d3eb56e7b8fa68/packages.adb";
     };
@@ -215,7 +215,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/packages/";
     sourceInfo = {
-      hash = "sha256-pzEWoXfcbxbLUVsbfu0GoUAppfczRJAoCPGvm9Qyu9o=";
+      hash = "sha256-xfnFk9xhwnjZ/YfQqHdAvmSkreZFaNi8gonrT8gJzhM=";
       name = "bcm47xx_mips74k-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/packages/packages.adb";
     };

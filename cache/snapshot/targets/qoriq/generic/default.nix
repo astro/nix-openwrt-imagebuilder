@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/";
   sha256sums = {
-    hash = "sha256-+CYZeypjcZyRVbJTQK77nsIC9VrJG4jcaCiH9sBIupk=";
+    hash = "sha256-fxNqyEdR+UzOok1RynnzeZZOJch6GjBi4YB3jSm2Svw=";
     name = "qoriq_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "8015bcdef84bf38db38b6bcffe1392326122431bcc83316f22a117ee3586f3b5";
+    sha256 = "00b777fe9dd3561f1c332deb90f21675a8bec04cb14c02df282b7a6ee0b144f6";
     filename = "openwrt-imagebuilder-qoriq-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-FpM8pQfdR+uuqxqZlMJXLbJiIiNSbQb0hBml7DEAKMY=";
+    hash = "sha256-qfGIeVnNjZPw7FNiJNetAcZcHz6zUohjO0GwYlnombI=";
     name = "qoriq_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/profiles.json";
   };
@@ -79,7 +79,7 @@
   kmods."6.18.36-1-5a2a867a510ac73631ee6b265ee94457" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/kmods/6.18.36-1-5a2a867a510ac73631ee6b265ee94457/";
     sourceInfo = {
-      hash = "sha256-GSQ0cRwOWha6Ioxup/lItUMJnBHWlnKeRIhmbYJhsNc=";
+      hash = "sha256-gMOgUJWD8m5lOecdXF4+2w5U6u/48phDgBiXjjEGx9k=";
       name = "kmods-qoriq_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/kmods/6.18.36-1-5a2a867a510ac73631ee6b265ee94457/packages.adb";
     };
@@ -92,7 +92,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/packages/";
     sourceInfo = {
-      hash = "sha256-fep5sh0pNqdkrkKvEa2PWzykot9FGbQ3Vq9WcHm0Poo=";
+      hash = "sha256-jjd3/+9qD2x2OC8yzXsbCF7cGq0KPnqcWezvy7Bj8d0=";
       name = "qoriq_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qoriq/generic/packages/packages.adb";
     };
