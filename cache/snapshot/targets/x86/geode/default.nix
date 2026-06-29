@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/";
   sha256sums = {
-    hash = "sha256-XrVxF+oRp9pWf7IWqqQBKrLy6AMct2yvNZnIWfppstg=";
+    hash = "sha256-qQ86+fokfjyYE9KETbN4ZSPj+LQMF5LAm2i7KDAQb2M=";
     name = "x86_geode-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/sha256sums";
   };
   imagebuilder = {
-    sha256 = "eaff8b072da5aa0e2b85f855852873d01eb39d2c4269422fedacc3a2da8dda91";
+    sha256 = "a5900e05b9694d5c0645e23030ec99f679121e608dce5b64a8779a7190169969";
     filename = "openwrt-imagebuilder-x86-geode.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-TJoM6xPFDoYVQEY95/1+jnBbTMTuo3WcSj6gwCb+9Fw=";
+    hash = "sha256-fNsJJDEo875e7M/2qR8IdSXZWtyZhJF3/HScEx3VW08=";
     name = "x86_geode-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/profiles.json";
   };
@@ -20,7 +20,7 @@
     linux_kernel = {
       release = "1";
       vermagic = "3ed500aeba983bc21ed37de332ea4efe";
-      version = "6.18.36";
+      version = "6.18.37";
     };
     default_packages = [
       "apk-mbedtls"
@@ -53,7 +53,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.36-1-3ed500aeba983bc21ed37de332ea4efe";
+    kmods_target = "6.18.37-1-3ed500aeba983bc21ed37de332ea4efe";
     profiles = {
       generic = {
         device_packages = [
@@ -85,12 +85,12 @@
       };
     };
   };
-  kmods."6.18.36-1-3ed500aeba983bc21ed37de332ea4efe" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.36-1-3ed500aeba983bc21ed37de332ea4efe/";
+  kmods."6.18.37-1-3ed500aeba983bc21ed37de332ea4efe" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.37-1-3ed500aeba983bc21ed37de332ea4efe/";
     sourceInfo = {
-      hash = "sha256-DS0fbVlP9RCc1LTysKIL0m7r4bQHLFeJ5zPOgmLnjAU=";
+      hash = "sha256-0LJ534KqVekC5A19XYTGKzWD3MUPWjMP+Tj4eiH+6t0=";
       name = "kmods-x86_geode-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.36-1-3ed500aeba983bc21ed37de332ea4efe/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.37-1-3ed500aeba983bc21ed37de332ea4efe/packages.adb";
     };
     packages =
       let
@@ -101,7 +101,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/packages/";
     sourceInfo = {
-      hash = "sha256-qua2mczyhJFXk0Oi32P4Zm66Kn+2+KzJd5d9o0cExKc=";
+      hash = "sha256-YhdxQtvpjbE2HgCDnhmpDB7Fa6aK6Lu5puG+y+5+1Ik=";
       name = "x86_geode-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/packages/packages.adb";
     };

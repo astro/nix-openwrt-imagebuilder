@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/";
   sha256sums = {
-    hash = "sha256-vTm3Als2Q217/RWMq4bonjxKXjayf1PFbQQDXkp4Rq8=";
+    hash = "sha256-jJVySYtgunJ4AyiBtB005j8pPNkbo+LRTiEUYkeXaGA=";
     name = "airoha_an7581-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a663578fe3ee5ece5e18a179d21a7f1ded6376500857eac5a93ae18f81c3d4bc";
+    sha256 = "e5326533f3770c1b74f6f605954a32f8302f139363fa54f637090234d82fc28d";
     filename = "openwrt-imagebuilder-airoha-an7581.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-yfCSZlu52/lY5URv0iXrKdiAAFMlK1UWGLJWBCUfsVk=";
+    hash = "sha256-MajLO9SGI4AmzufIJ4vp59+mSGdiOKlOY3sh7GNGSAo=";
     name = "airoha_an7581-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/profiles.json";
   };
@@ -19,8 +19,8 @@
     arch_packages = "aarch64_cortex-a53";
     linux_kernel = {
       release = "1";
-      vermagic = "9d90e18e55e4306f9555e67782b5d581";
-      version = "6.18.36";
+      vermagic = "9c685d3adb21749360f8c5f8945488d0";
+      version = "6.18.37";
     };
     default_packages = [
       "airoha-en7581-npu-firmware"
@@ -52,7 +52,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.36-1-9d90e18e55e4306f9555e67782b5d581";
+    kmods_target = "6.18.37-1-9c685d3adb21749360f8c5f8945488d0";
     profiles = {
       airoha_an7581-evb = {
         device_packages = [
@@ -102,14 +102,35 @@
           "kmod-mt7996-firmware"
         ];
       };
+      nokia_xg-040g-md = {
+        device_packages = [
+          "kmod-gpio-button-hotplug"
+          "kmod-leds-gpio"
+          "kmod-phy-airoha-en8811h"
+          "kmod-regulator-userspace-consumer"
+          "kmod-usb-ledtrig-usbport"
+          "kmod-usb3"
+        ];
+      };
+      nokia_xg-040g-md-ubi = {
+        device_packages = [
+          "kmod-gpio-button-hotplug"
+          "kmod-leds-gpio"
+          "kmod-phy-airoha-en8811h"
+          "kmod-regulator-userspace-consumer"
+          "kmod-usb-ledtrig-usbport"
+          "kmod-usb3"
+          "fitblk"
+        ];
+      };
     };
   };
-  kmods."6.18.36-1-9d90e18e55e4306f9555e67782b5d581" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.36-1-9d90e18e55e4306f9555e67782b5d581/";
+  kmods."6.18.37-1-9c685d3adb21749360f8c5f8945488d0" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.37-1-9c685d3adb21749360f8c5f8945488d0/";
     sourceInfo = {
-      hash = "sha256-ggs4aFAqmhy5zrq7d5HVFjtgWKSHk9/Y5RdsDdMP5MM=";
+      hash = "sha256-T7lVIfzh9+Lr3hbhFIuuZhpQOYd+7svRJ8yXKkkrttg=";
       name = "kmods-airoha_an7581-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.36-1-9d90e18e55e4306f9555e67782b5d581/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.37-1-9c685d3adb21749360f8c5f8945488d0/packages.adb";
     };
     packages =
       let
@@ -120,7 +141,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/";
     sourceInfo = {
-      hash = "sha256-UyjeMgwg0D+O0OVia4RJaKxDnYeB6Fd/j0FV5r5yk8s=";
+      hash = "sha256-bZgvdW3AFMXu50Fa+QnzmTB7ef9PUSNosBsTIqF4PUw=";
       name = "airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/packages.adb";
     };
