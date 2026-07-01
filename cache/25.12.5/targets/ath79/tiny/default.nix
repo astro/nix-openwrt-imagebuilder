@@ -1,0 +1,170 @@
+# 25.12.5 ath79/tiny
+{
+  baseUrl = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/";
+  sha256sums = {
+    hash = "sha256-MhEssZvaQDVRUWJe1W/tKBbvGpXY9x/7hA92rw1heHE=";
+    name = "ath79_tiny-sha256sums";
+    url = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/sha256sums";
+  };
+  imagebuilder = {
+    sha256 = "e7c67844d3a2961a6ebf133dbbf7de633ed62cac668d018449d646a092e06e52";
+    filename = "openwrt-imagebuilder-25.12.5-ath79-tiny.Linux-x86_64.tar.zst";
+  };
+  profiles.sourceInfo = {
+    hash = "sha256-g5f46ipqhV8Wz3m/hV/4kRySCft/Ty5ZWxt6VYtUSX8=";
+    name = "ath79_tiny-profiles.json";
+    url = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/profiles.json";
+  };
+  profiles.extract = {
+    arch_packages = "mips_24kc";
+    linux_kernel = {
+      release = "1";
+      vermagic = "2c8b611424468df2261de0ac7e428e25";
+      version = "6.12.94";
+    };
+    default_packages = [
+      "apk-mbedtls"
+      "base-files"
+      "ca-bundle"
+      "dnsmasq"
+      "dropbear"
+      "firewall4"
+      "fstools"
+      "kmod-ath9k"
+      "kmod-gpio-button-hotplug"
+      "kmod-nft-offload"
+      "libc"
+      "libgcc"
+      "libustream-mbedtls"
+      "logd"
+      "mtd"
+      "netifd"
+      "nftables"
+      "odhcp6c"
+      "odhcpd-ipv6only"
+      "ppp"
+      "ppp-mod-pppoe"
+      "swconfig"
+      "uboot-envtools"
+      "uci"
+      "uclient-fetch"
+      "urandom-seed"
+      "urngd"
+      "wpad-basic-mbedtls"
+    ];
+    kmods_target = "6.12.94-1-2c8b611424468df2261de0ac7e428e25";
+    profiles = {
+      dlink_dap-1720-a1 = {
+        device_packages = [
+          "-swconfig"
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct-smallbuffers"
+          "rssileds"
+        ];
+      };
+      dlink_dir-859-a1 = {
+        device_packages = [
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct-smallbuffers"
+        ];
+      };
+      dlink_dir-859-a3 = {
+        device_packages = [
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct-smallbuffers"
+        ];
+      };
+      dlink_dir-869-a1 = {
+        device_packages = [
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct-smallbuffers"
+        ];
+      };
+      nec_wf1200hp = {
+        device_packages = [
+          "kmod-ath10k-ct-smallbuffers"
+          "ath10k-firmware-qca988x-ct"
+          "-uboot-envtools"
+        ];
+      };
+      nec_wf1200hp2 = {
+        device_packages = [
+          "kmod-ath10k-ct-smallbuffers"
+          "ath10k-firmware-qca988x-ct"
+          "-uboot-envtools"
+        ];
+      };
+      nec_wg600hp = {
+        device_packages = [
+          "kmod-usb2"
+          "-uboot-envtools"
+        ];
+      };
+      nec_wr8750n = {
+        device_packages = [
+          "kmod-usb2"
+          "-uboot-envtools"
+        ];
+      };
+      nec_wr9500n = {
+        device_packages = [
+          "kmod-usb2"
+          "-uboot-envtools"
+        ];
+      };
+      sitecom_wlr-7100 = {
+        device_packages = [
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct-smallbuffers"
+          "kmod-usb2"
+        ];
+      };
+      tplink_re355-v1 = {
+        device_packages = [
+          "kmod-ath10k-ct-smallbuffers"
+          "ath10k-firmware-qca988x-ct"
+        ];
+      };
+      tplink_re450-v1 = {
+        device_packages = [
+          "kmod-ath10k-ct-smallbuffers"
+          "ath10k-firmware-qca988x-ct"
+        ];
+      };
+      tplink_re450-v2 = {
+        device_packages = [
+          "kmod-ath10k-ct-smallbuffers"
+          "ath10k-firmware-qca988x-ct"
+        ];
+      };
+    };
+  };
+  kmods."6.12.94-1-2c8b611424468df2261de0ac7e428e25" = {
+    baseUrl = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/kmods/6.12.94-1-2c8b611424468df2261de0ac7e428e25/";
+    sourceInfo = {
+      hash = "sha256-OoMAbwqv5Vt/8/HSjNe6siXbAmENcTET0vjMWjNC1AM=";
+      name = "kmods-ath79_tiny-packages.adb";
+      url = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/kmods/6.12.94-1-2c8b611424468df2261de0ac7e428e25/packages.adb";
+    };
+    packages =
+      let
+        p = ./kmods.nix;
+      in
+      if builtins.pathExists p then import p else null;
+  };
+  corePackages = {
+    baseUrl = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/packages/";
+    sourceInfo = {
+      hash = "sha256-swSYXv7dFG5dVobxih8wJ820baAAKelVkePchtOeZ8I=";
+      name = "ath79_tiny-packages.adb";
+      url = "https://downloads.openwrt.org/releases/25.12.5/targets/ath79/tiny/packages/packages.adb";
+    };
+    packages =
+      let
+        p = ./packages.nix;
+      in
+      if builtins.pathExists p then import p else null;
+  };
+  packagesArch = "mips_24kc";
+  feeds = import ./../../../packages/mips_24kc.nix;
+}

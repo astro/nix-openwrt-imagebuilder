@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/";
   sha256sums = {
-    hash = "sha256-FyYbwUP8KPNcIB/LEEwPYFji3xrMJ5fjnKTNdNNY5Q8=";
+    hash = "sha256-ux+/is1S/aS3F9d4FeQH9bysGrV5R9WUCWWxiyRLBjA=";
     name = "ramips_mt7621-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/sha256sums";
   };
   imagebuilder = {
-    sha256 = "b1f759dc3154925102b3554f223c12b6f95e98c6253e9348db0ea708e096ce39";
+    sha256 = "5b9b6a5f90fb754312a0faa33d0c5434502df7a59b4964163f38cd679018213e";
     filename = "openwrt-imagebuilder-ramips-mt7621.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-ABir/zml/IJgbPfqRhtg6DmRfFAxUCPXvP4yBJwuwH4=";
+    hash = "sha256-34O7KNT125ngduM2hPvrQX9yat3CzDQIIseL3BAJY4g=";
     name = "ramips_mt7621-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/profiles.json";
   };
@@ -2170,7 +2170,7 @@
   kmods."6.18.37-1-f56cca55cf11ca774e0db5bc64254850" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/kmods/6.18.37-1-f56cca55cf11ca774e0db5bc64254850/";
     sourceInfo = {
-      hash = "sha256-B63p6X6pvnSpn8r14SYXgeXmyFYE4C96jvdt+IpaNks=";
+      hash = "sha256-Zj/UlVRRX63HilmxS4/DFtneucISI+w3xKTjqjgJtAo=";
       name = "kmods-ramips_mt7621-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/kmods/6.18.37-1-f56cca55cf11ca774e0db5bc64254850/packages.adb";
     };
@@ -2183,7 +2183,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/";
     sourceInfo = {
-      hash = "sha256-iTix9KcrdaLw7ZagYkVkEO1t3d+owpU+FeKRiuVHwQk=";
+      hash = "sha256-zYqB8ox6H+Itz8J9Ey3cNpdi+nxN13y+ebuSHfd3lrM=";
       name = "ramips_mt7621-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/packages.adb";
     };

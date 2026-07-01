@@ -1,7 +1,7 @@
 # 24.10.7 package feeds for powerpc64_e5500
 {
   sha256sums = {
-    hash = "sha256-GuCPdnoWmSw41ML6ydihAe1xm8Op8Gk6j3Yx9sffl3A=";
+    hash = "sha256-qdAbpamR/b5dWhcbpHxpe5Ku01QyNc1TWnZLe/vkCa8=";
     name = "powerpc64_e5500-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/packages/";
     sourceInfo = {
-      hash = "sha256-2Ko74B9OjjJ+Mj26LdKgutAEpC3rh7OHn7HjHUisgB4=";
+      hash = "sha256-GpvpYxHSuyNor3XMA/8aW8BD0zyiAOIqKW3XfJaBtJ8=";
       name = "powerpc64_e5500-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/routing/";
     sourceInfo = {
-      hash = "sha256-s0zL+svo1FQfBpYQd779pjLAn4ibv6qipNB7hhfnYME=";
+      hash = "sha256-xlOV3FKJ+yujMlalSxY+UBpSlvYN0uPFvWsG4B0riiE=";
       name = "powerpc64_e5500-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/telephony/";
     sourceInfo = {
-      hash = "sha256-HPmqSooopc7SXyqdMvHxErU7iec+iW1ZjQRwpyRW6b8=";
+      hash = "sha256-xTcQAgmmeJTvBZWKCjbH82QRXgqPoMkGlZV864jwqFs=";
       name = "powerpc64_e5500-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/powerpc64_e5500/telephony/Packages";
     };

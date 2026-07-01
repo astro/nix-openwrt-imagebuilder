@@ -1,7 +1,7 @@
 # 24.10.7 package feeds for arm_cortex-a8_vfpv3
 {
   sha256sums = {
-    hash = "sha256-+xC9I4cWFnYyk52TapbZTYky19lJ6WkxMyyc5goeI/o=";
+    hash = "sha256-jDWPTMhtnPXBlnjfwuubZes1PlUrlSMnKxIcuGnkbDE=";
     name = "arm_cortex-a8_vfpv3-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/packages/";
     sourceInfo = {
-      hash = "sha256-/hXLWo2nret0+oUab1Bihrri8vC7hNQSo2MJlDWtthc=";
+      hash = "sha256-sGhmRo4745qI/pLJH0Kwzk599YVNH1J9AozJPg5x2Rg=";
       name = "arm_cortex-a8_vfpv3-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/routing/";
     sourceInfo = {
-      hash = "sha256-/9otkraoWL2uFGNrOPa0R6Hio1fvR2Nv/HWQB5jB6tE=";
+      hash = "sha256-XFf6SIlCaqFy/8szQunKjk2nQgZkc/ywCSTNgRbHNmA=";
       name = "arm_cortex-a8_vfpv3-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/telephony/";
     sourceInfo = {
-      hash = "sha256-43UUWHudH50ekFuEwELIL7Ix8NYevYgAwNY+8mL1ll0=";
+      hash = "sha256-SD+M2X5DhApSIko8F4vNUR0T4CVkNpua9l8hba2hRUE=";
       name = "arm_cortex-a8_vfpv3-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_cortex-a8_vfpv3/telephony/Packages";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/";
   sha256sums = {
-    hash = "sha256-tk+iuCS+nhFwNNlz+rFuejKv9egCZC+Y/G1ETven9tU=";
+    hash = "sha256-1q1uVF5KET9XhN10J/1IVg/R/btG1FbZWl3LiCT6I/E=";
     name = "realtek_rtl930x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "4f079d2e7edc6870c5e50f0831c2b871c0e936ae054cfa454ad0f8fb9ae61a42";
+    sha256 = "87946bb9fd652a402ed3a4f4124a781651c2530966e8fad01a65714c156737a3";
     filename = "openwrt-imagebuilder-realtek-rtl930x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-sddAQg8TUcaiyCf/UOWd7eV/ZbYicTAGvNrYLRRSAMI=";
+    hash = "sha256-AYrHeHmot5hrmdjYT7ZlpWgl9W3OodDggV188w+gJ1k=";
     name = "realtek_rtl930x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/profiles.json";
   };
@@ -53,17 +53,17 @@
       hasivo_f1100w-4sx-4xgt = {
         device_packages = [
           "kmod-phy-realtek"
-          "rtl8261n-firmware"
+          "rtl826x-firmware"
         ];
       };
       hasivo_f1100w-4sx-4xgt-512mb = {
         device_packages = [
           "kmod-phy-realtek"
-          "rtl8261n-firmware"
+          "rtl826x-firmware"
         ];
       };
       hasivo_s1100w-8xgt-se = {
-        device_packages = [ "rtl8264b-firmware" ];
+        device_packages = [ "rtl826x-firmware" ];
       };
       hasivo_s1100wp-8gt-se = {
         device_packages = [ ];
@@ -89,7 +89,7 @@
       sirivision_sr-st3408f = {
         device_packages = [
           "kmod-phy-realtek"
-          "rtl8261n-firmware"
+          "rtl826x-firmware"
         ];
       };
       tplink_tl-st1008f-v2 = {
@@ -105,12 +105,12 @@
         device_packages = [ "kmod-hwmon-lm75" ];
       };
       xikestor_sks8300-12e2t2x = {
-        device_packages = [ "rtl8261n-firmware" ];
+        device_packages = [ "rtl826x-firmware" ];
       };
       xikestor_sks8300-8t = {
         device_packages = [
           "kmod-hwmon-lm75"
-          "rtl8261n-firmware"
+          "rtl826x-firmware"
         ];
       };
       xikestor_sks8300-8x = {
@@ -141,7 +141,7 @@
         device_packages = [
           "kmod-hwmon-gpiofan"
           "kmod-thermal"
-          "rtl8261n-firmware"
+          "rtl826x-firmware"
         ];
       };
       zyxel_xgs1930-28hp = {
@@ -158,7 +158,7 @@
   kmods."6.18.37-1-92d1db356c6ceb287782378d07479bff" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.18.37-1-92d1db356c6ceb287782378d07479bff/";
     sourceInfo = {
-      hash = "sha256-G2EMIgMcEundFVqzLWTSEFnEUINV5GEbg03G8OoOZr4=";
+      hash = "sha256-ZA2ndOl9BfHmFTt99Ut5DiYeJ0vxEH0gkADcWqVAuNU=";
       name = "kmods-realtek_rtl930x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/kmods/6.18.37-1-92d1db356c6ceb287782378d07479bff/packages.adb";
     };
@@ -171,7 +171,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/packages/";
     sourceInfo = {
-      hash = "sha256-P1C8yMi/RZzWQE7P8pCzFrrG4y76KHtgXSVKgnAUHNQ=";
+      hash = "sha256-UMKn7W4/ZajnL2QYxe89TSkkzntzIKue8GTrp+BIHs0=";
       name = "realtek_rtl930x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl930x/packages/packages.adb";
     };
