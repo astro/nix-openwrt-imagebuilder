@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-0BI0jhYzE05IVKdp17AE0thqYppFBrpmXPiNajwGX9E=";
+    hash = "sha256-7JRVLvMt9ibwYztZlb8COOjxKKNl58zbKvN8ADhoVcM=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "72dd3df53c7f97b6662c3d703959c4fbcc53b18b31d5c639db829937c3fea72d";
+    sha256 = "cec63029722f7aa989899464866496a1ba3586bccda7472490517fac5a98bb6f";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-1MPgd/Sy62mHALlEPdl6IeZWp61XzyI6SfAHBm5I+pE=";
+    hash = "sha256-+X3idpnq6frKpAd+yk1UlU1gS1Hod7PL7z+g8u4Eut0=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -2256,7 +2256,7 @@
   kmods."6.12.94-1-a2c29d5fd8339aa64b78625acbdd935c" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.94-1-a2c29d5fd8339aa64b78625acbdd935c/";
     sourceInfo = {
-      hash = "sha256-BEa4N41B3MNcbpe1HRpFmzx4Mj3AUZCRGgykOUDPSBA=";
+      hash = "sha256-hYebOwShg+hB8O/74ZzvlEC4AwYnlxda9pTLcdHUvf8=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.12.94-1-a2c29d5fd8339aa64b78625acbdd935c/packages.adb";
     };
@@ -2269,7 +2269,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-8t31aIApowRyuIYOy4M8otTFSj0KpsQsd9Vhk9c6jNs=";
+      hash = "sha256-uDRvRJtOZ9+rxlHGiMM0A580ySlXoGToI8xWGCmZ9tc=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
