@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/";
   sha256sums = {
-    hash = "sha256-DqLQUJ32ikw83YP+zaBgGzMCYxeHOWgbknq3mMxEOz4=";
+    hash = "sha256-F9AVM2qOlyIts1DDD727pPSA3hvKrSx6JMaI1tcazWs=";
     name = "octeon_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "f929265cf783e3d17aa2369ad5883790b382b8ae9dc7a9c2c456b15ef7796147";
+    sha256 = "901aa5d166eca6288b159979dd1699f98bd75b6678b907acad3845fd6811978d";
     filename = "openwrt-imagebuilder-octeon-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-wmD7CQE+g4lI30ThA1bzJt004Rd11KoaTUXIj8tJn5k=";
+    hash = "sha256-8WVe+WoX1R78uGL4AM+hqir6cNujLBlPQZIS2qENGwg=";
     name = "octeon_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/profiles.json";
   };
@@ -112,7 +112,7 @@
   kmods."6.18.38-1-571c282075658d7fa5720ed46874f493" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/kmods/6.18.38-1-571c282075658d7fa5720ed46874f493/";
     sourceInfo = {
-      hash = "sha256-Ou0x+Qauap7fcE2+fpm4O2dXZAZELBu/8lG4n4pF/zM=";
+      hash = "sha256-UPLMIco3jH4Jxi9EBEe8o4HbvATm9SEC9dSg91EC0WI=";
       name = "kmods-octeon_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/kmods/6.18.38-1-571c282075658d7fa5720ed46874f493/packages.adb";
     };
@@ -125,7 +125,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/packages/";
     sourceInfo = {
-      hash = "sha256-fo1dbN56dH38zlHKo7LAhe0ptrEU4smprTig4ikFg4w=";
+      hash = "sha256-rF7RFTI3fJfoClHoK+rLteSYNmrksUXaA5nOSm3d9q8=";
       name = "octeon_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/octeon/generic/packages/packages.adb";
     };
