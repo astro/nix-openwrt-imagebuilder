@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/";
   sha256sums = {
-    hash = "sha256-VRF7Pr4TFQdC0W7FqUbWM3SIbie/H+5TOQlPYucfcF8=";
+    hash = "sha256-6gqfTc6t5TpWppHAnlbvMLdH/6mQ+6ZcGHpa3A+2/Bg=";
     name = "qualcommax_ipq50xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "6fae8d9b58c9cf0713f525ea53a9cfbb381ec1d8bc725a962ca81f136ab5765f";
+    sha256 = "766ef568a3ae662efa7d210b6af81871007ac8bf7dee8c011fdd2ce9c317ebbd";
     filename = "openwrt-imagebuilder-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-qJSuuWIg0gk0fXqnC/+lKs/5z6CjURtVItbtK+HRGRM=";
+    hash = "sha256-tjiOgC7n6fe+FRP45GXobt2XoBIiicC9pZUnXOTgqQY=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -176,7 +176,7 @@
   kmods."6.12.94-1-decd6bcf8e30eb499d3e541c414d0993" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.12.94-1-decd6bcf8e30eb499d3e541c414d0993/";
     sourceInfo = {
-      hash = "sha256-8qqTs40vPl4oyrh2XqXpO0Gq1DiajM6s+Iq+rwwEA0Y=";
+      hash = "sha256-nFyZbUq2C34gB+jQJYQ5oFQ57dSVzQeNxroFGlkPCbg=";
       name = "kmods-qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.12.94-1-decd6bcf8e30eb499d3e541c414d0993/packages.adb";
     };
@@ -189,7 +189,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/";
     sourceInfo = {
-      hash = "sha256-j3Ry+kdJ78fdj1O/RK1ipkB5FYBhbmUZLa9sKczxmJ0=";
+      hash = "sha256-f011mTjbtfCWWG0k/raddGqiV4f+0X8OfxUhJjvGXgU=";
       name = "qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/packages.adb";
     };

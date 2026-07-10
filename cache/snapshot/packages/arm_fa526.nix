@@ -1,14 +1,14 @@
 # snapshot package feeds for arm_fa526
 {
   sha256sums = {
-    hash = "sha256-bEfblwExOJnWpdZqMuWMO8XO2CsYssRHmw4i9eEGBGo=";
+    hash = "sha256-+47bI2VvRyCBkl5HQ5HjLwbKo2fjmuwCaGA8w1XUHkA=";
     name = "arm_fa526-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/base/";
     sourceInfo = {
-      hash = "sha256-d6KFwOOqxHd7qZjGPTYUmrMvlLBHn/qbZmc/JHzBkb8=";
+      hash = "sha256-OcOrYPPsxaIuWCKRZblhrcLPHQ4GS4kDN8jLUIH0vUw=";
       name = "arm_fa526-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/luci/";
     sourceInfo = {
-      hash = "sha256-rkPE8evBGSAKTPpPXrlUZgn5x5Zh+fOEwib8TXR8Txc=";
+      hash = "sha256-Zfxc6Agt24Ly8edVxj/jjk4NZkJhfVDSwHCSw6hxBSI=";
       name = "arm_fa526-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/packages/";
     sourceInfo = {
-      hash = "sha256-u/gYnRTPmP72n/zGEHdix8nB5vqa3N4lblXaEToDv14=";
+      hash = "sha256-2yyHJN7xkXMjQpZ1heS9LNjY295HWpxfXqw+Mwqk7TY=";
       name = "arm_fa526-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/routing/";
     sourceInfo = {
-      hash = "sha256-WLAq/WbR/IJZxU7FrHsR6/RRN5ciChrP/+IEfraxTPI=";
+      hash = "sha256-6NrYSM9AnuwboZjh+KxDjuwhSEGlrq6ZvJqSnCZNXp0=";
       name = "arm_fa526-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/telephony/";
     sourceInfo = {
-      hash = "sha256-GD5LKYOgC31meIzbb6anl1IehxCCTjR6VlyKuEFXc3E=";
+      hash = "sha256-OnGWU4mlQ4pOshs56qmKZbbMMZ5JqU2uuag90Xajr54=";
       name = "arm_fa526-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_fa526/telephony/packages.adb";
     };
