@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/";
   sha256sums = {
-    hash = "sha256-wU8+Fj6TEwJn6d/CXAxtCiZyMIXbRbADVI8mAgOVWak=";
+    hash = "sha256-wx/0BncC8seWIZTcQmUc2McX1/6oa0tNkwE5eJvcFMc=";
     name = "airoha_an7581-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/sha256sums";
   };
   imagebuilder = {
-    sha256 = "087dbb9ff5471685a390fa753421dcdc749939909afda6ed0303ce5cdba709b4";
+    sha256 = "7ae204107a978b41eea6095032a6d6f19b297054fc12a3142f174b877f1171ca";
     filename = "openwrt-imagebuilder-airoha-an7581.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-pDIU5h4OwNqnScI2TX8XEw8h7woHjHhnLD/hHcKYciI=";
+    hash = "sha256-+3wNATPlWoApY/HvGYuKgw5DSmMPfkLUkafxE96oWrs=";
     name = "airoha_an7581-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/profiles.json";
   };
@@ -100,6 +100,8 @@
           "kmod-sfp"
           "kmod-phy-aeonsemi-as21xxx"
           "kmod-mt7996-firmware"
+          "airoha-en7581-mt7996-npu-firmware"
+          "kmod-usb3"
         ];
       };
       nokia_xg-040g-md = {
@@ -128,7 +130,7 @@
   kmods."6.18.38-1-5cab43117d4ac9e309313ccdeb16ea35" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.38-1-5cab43117d4ac9e309313ccdeb16ea35/";
     sourceInfo = {
-      hash = "sha256-miGmyt9CGNa3JbK4UvwhXKZlw6xhvSQylV2wtx4Ztl4=";
+      hash = "sha256-vW9+F8ekT4DGhhbynk7njrYre7onQSXnzvpJ2ywwM20=";
       name = "kmods-airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.38-1-5cab43117d4ac9e309313ccdeb16ea35/packages.adb";
     };
@@ -141,7 +143,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/";
     sourceInfo = {
-      hash = "sha256-eBiPR8Yn+3Yl8D6+T37F2tqZr5os0PCklOnRiBGY3y8=";
+      hash = "sha256-qqRX21CXQV7HYKdfZwkc7v4U0VnZ0RVjpdDyAFeQF6w=";
       name = "airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/packages.adb";
     };
