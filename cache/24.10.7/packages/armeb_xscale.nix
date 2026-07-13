@@ -1,14 +1,14 @@
 # 24.10.7 package feeds for armeb_xscale
 {
   sha256sums = {
-    hash = "sha256-V9TCQxooUE/fpYYklZ4LgG688SAjnxPuuFffS/t3Khw=";
+    hash = "sha256-2GksPdNFRLCMZFEmZ63wDf10WgBx6QWtuoHN4cvBlSM=";
     name = "armeb_xscale-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/base/";
     sourceInfo = {
-      hash = "sha256-A+Fo8Fq2BKRTh8/B2OpJB3DGRGqmGfUQnt+0uNUhPuU=";
+      hash = "sha256-tigpoj8ff1odMvca1nnAlvDMz+dYOiQcsBlydjc8t8I=";
       name = "armeb_xscale-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/packages/";
     sourceInfo = {
-      hash = "sha256-zvn+64+q7GKzOUG2ja4WxUd11EbQU0VIq8QTn71kHis=";
+      hash = "sha256-r+GJuA/kQg2UzkLqxy2aTbg5+0RdDteD8wyAvcy1zyE=";
       name = "armeb_xscale-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/routing/";
     sourceInfo = {
-      hash = "sha256-rk2xCQGlQKIOqfTiU8nVrePNAAcURjzDkkfm1+tIYmI=";
+      hash = "sha256-5E4y3E+aIfQFR6T3RFln9TbnVw0fqrkczkx6bHF6aWA=";
       name = "armeb_xscale-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/telephony/";
     sourceInfo = {
-      hash = "sha256-cu3nykDrq25Q7LfQgxCivUosym+cbEP6wVQD3D/2vlU=";
+      hash = "sha256-2zBiedzF3t0ees159k0KH2cjbLRCjzvpDejkDZdNy7E=";
       name = "armeb_xscale-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/armeb_xscale/telephony/Packages";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/";
   sha256sums = {
-    hash = "sha256-oGUbZJ43rspjfl1BOcaLLavqIcw+cWPp7fvAMGBYljs=";
+    hash = "sha256-OhHh7zjaW9UtvW3t4fAZNDSIi4E/J51pp0wRqfY1zB0=";
     name = "bcm4908_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "abaf3c7340069191f67038253fb370fceaaf9faa7e8d51135b99d550696905bb";
+    sha256 = "83c850ae91d5d21c2d4ae9a5da0e02f25d32ff94244daa75f258cd77b41a5c56";
     filename = "openwrt-imagebuilder-bcm4908-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-1zGKFItsC3IfxQidwKA99Dc9sgFMswNuDKJxkQ5XDSM=";
+    hash = "sha256-gVF3Pfot4aEwabAY2PsHMwC6ueZvJFHASNpMxLCywuA=";
     name = "bcm4908_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/profiles.json";
   };
@@ -69,7 +69,7 @@
   kmods."6.12.94-1-01f3678e984e3d063fcf41c00e4441d7" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/kmods/6.12.94-1-01f3678e984e3d063fcf41c00e4441d7/";
     sourceInfo = {
-      hash = "sha256-uMlqENxhFb6V0oigs0Zkr+5mNe2A7+bS9gfr0Tnx/ZM=";
+      hash = "sha256-8vngRY4nMhaq9u0oi73kJsuFKhSVjsU28btu/IuJVSc=";
       name = "kmods-bcm4908_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/kmods/6.12.94-1-01f3678e984e3d063fcf41c00e4441d7/packages.adb";
     };
@@ -82,7 +82,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/packages/";
     sourceInfo = {
-      hash = "sha256-xPwcOwhGz4sngsBC7MS+3a+NZENKeRXQFAo6FMEJK7g=";
+      hash = "sha256-ijj3GxU5Z5UR0X2XjoMnRLvOR1sCFtFHEX5t/0ucnT0=";
       name = "bcm4908_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm4908/generic/packages/packages.adb";
     };

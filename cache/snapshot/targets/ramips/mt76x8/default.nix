@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/";
   sha256sums = {
-    hash = "sha256-+D242F8z4d0RZZp4pOKgukgSCn7w9mEmZPyjF5CEfN8=";
+    hash = "sha256-aYuqvAUJDjejgY9H0nmmrEd2jsV9iiPPC6dDYoYUzBE=";
     name = "ramips_mt76x8-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/sha256sums";
   };
   imagebuilder = {
-    sha256 = "da2d898dbab405fc6bb595d7cac5c5e0719cc9b9c9d3e1d7d6e327f502865b27";
+    sha256 = "a317b2a6289aefc0741a86c210a50212b638f64d222a9109298474dc921e8ca4";
     filename = "openwrt-imagebuilder-ramips-mt76x8.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-zX05jpQrrBCS7Z0dFHModtzXVcaE0Lfg0XljVDh54/g=";
+    hash = "sha256-mYP8L7IxxxZ0sELHjuB7DCkeoqIH8FZLgQ1sQ8Gj0Y0=";
     name = "ramips_mt76x8-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/profiles.json";
   };
@@ -121,6 +121,16 @@
       };
       cudy_lt400e-v1 = {
         device_packages = [
+          "kmod-usb2"
+          "kmod-usb-ohci"
+          "kmod-usb-net-cdc-ether"
+          "kmod-usb-serial-option"
+        ];
+      };
+      cudy_lt500-outdoor-v1 = {
+        device_packages = [
+          "kmod-mt7615e"
+          "kmod-mt7663-firmware-ap"
           "kmod-usb2"
           "kmod-usb-ohci"
           "kmod-usb-net-cdc-ether"
@@ -800,7 +810,7 @@
   kmods."6.18.38-1-7dba255a76bb54d8cfabeb4ad0b58260" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.18.38-1-7dba255a76bb54d8cfabeb4ad0b58260/";
     sourceInfo = {
-      hash = "sha256-j7vTgsTwXu4b2MoQNor2YyEKgBvegCmg0Z082uwBP24=";
+      hash = "sha256-gEPDjSJToVQBFAq4wEF17YBCLDh8aXLQrtZ+/LEaaf8=";
       name = "kmods-ramips_mt76x8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/kmods/6.18.38-1-7dba255a76bb54d8cfabeb4ad0b58260/packages.adb";
     };
@@ -813,7 +823,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/packages/";
     sourceInfo = {
-      hash = "sha256-Ed27emP03mAzT0GGGh2Fg6e3iCwYpvcOJYi2iiRpgaA=";
+      hash = "sha256-3xXXX9OR+S5dCKI5O2BYXTnj2ViEKDxDtoP+vFozSEA=";
       name = "ramips_mt76x8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt76x8/packages/packages.adb";
     };
