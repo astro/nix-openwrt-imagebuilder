@@ -1,14 +1,14 @@
 # 24.10.7 package feeds for arm_fa526
 {
   sha256sums = {
-    hash = "sha256-qoYqppYZ9rXHbag6iOvZn/nUw99qrcNUAtHwaS9PTwE=";
+    hash = "sha256-lFARjFZUE5MWNinEqkXjSu3Gn5Z6wH3K+Gy6G7Uofic=";
     name = "arm_fa526-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/base/";
     sourceInfo = {
-      hash = "sha256-wo+NLTFd/R7+VRhSjvcFXxu98Ly6oAaFJvb4/0EvUKw=";
+      hash = "sha256-Lap8SbYtJseGLxL4+UBn4nE4Snnc/CrX1QAlrGojj2M=";
       name = "arm_fa526-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/packages/";
     sourceInfo = {
-      hash = "sha256-9CA27uMOVSUhHb/Z466qVrlgCDYEMWWnpdr9990Wmzw=";
+      hash = "sha256-vwWYOkk4i92jqpixo53J7CWbccw4BAkSSgXo30/x4iA=";
       name = "arm_fa526-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/routing/";
     sourceInfo = {
-      hash = "sha256-J6GuyscUxisP7TJpOjN3gl55hwBGLWjdTVWd9bDcMRA=";
+      hash = "sha256-F987q2kQon4V9c3uDF9SQKjvauhGfMAJ4LhOKzquFG4=";
       name = "arm_fa526-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/telephony/";
     sourceInfo = {
-      hash = "sha256-2QOdUddEh0wa0nVXTIdvTQM9ea+FiRfxGBjQRsBQSa4=";
+      hash = "sha256-VJ0B2B1wfsdkfizmmmubwgZKveu2jUO5Yu98XQhONUY=";
       name = "arm_fa526-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/arm_fa526/telephony/Packages";
     };
