@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/";
   sha256sums = {
-    hash = "sha256-S/ETTyfWcPw27e7nAfLgx246kNYoc5W3e/MmfgNa0Q8=";
+    hash = "sha256-FrTnynMooRb+wtULRnO2kNFx/2WWyzX4478rAhNyS8c=";
     name = "microchipsw_lan969x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ab848ce07d44eb5d4ae94244d3532841db663681851bcd0a3d7223f4785970bb";
+    sha256 = "b1800a771ade12a4705481df09b42485ab90569103fe11a21dbe845fc5560da5";
     filename = "openwrt-imagebuilder-microchipsw-lan969x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-AI+/9uDzOUI46xImUesvm+10geyPE0oBwMhsUlqYcms=";
+    hash = "sha256-C3YxK8dL8lXz61ndjdLwLxqxWCMs12s17rLhdaMlIhk=";
     name = "microchipsw_lan969x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/profiles.json";
   };
@@ -84,7 +84,7 @@
   kmods."6.18.38-1-3a34ac522faf1be612719250880e81c1" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/kmods/6.18.38-1-3a34ac522faf1be612719250880e81c1/";
     sourceInfo = {
-      hash = "sha256-mt+9Z6Idmtv3Sgw0mFzrVfZenhgIbMiSk6Yjs4JEVos=";
+      hash = "sha256-tgyqzLr+9c5Jgzh/Wt3/P8adzlnQoW0gEVH/KjMbACI=";
       name = "kmods-microchipsw_lan969x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/kmods/6.18.38-1-3a34ac522faf1be612719250880e81c1/packages.adb";
     };
@@ -97,7 +97,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/packages/";
     sourceInfo = {
-      hash = "sha256-1aWTcR6Z5mneTRF+lTNSNckv+IVNvvNdG8ywsam9aTE=";
+      hash = "sha256-kLqEHzVMtsrb0zz4hlpfiC9T8F+kCb5qM+gsCDDAtrc=";
       name = "microchipsw_lan969x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/microchipsw/lan969x/packages/packages.adb";
     };
