@@ -1,14 +1,14 @@
 # 24.10.7 package feeds for x86_64
 {
   sha256sums = {
-    hash = "sha256-QK5lSn5S/LZ7lvScgv8o3rGdrLsz/86l+tcOG+HjbBQ=";
+    hash = "sha256-n8Uck8y8oD327T7gM1TuTZ1IscoxfM+sh8tRXHGyY48=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/base/";
     sourceInfo = {
-      hash = "sha256-/vAE7CxS5laKueRi5N5JUK3xbbK53IL2V2zfD3imSgI=";
+      hash = "sha256-qmBwanjEWNxkqo5XpaB52Za7tFYpa99eRb6YMsANuak=";
       name = "x86_64-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/packages/";
     sourceInfo = {
-      hash = "sha256-kiRZJESl6f9QPP9jraypLsL4hB85NcuKlYU53Evkynk=";
+      hash = "sha256-T+M2oYsYTfDW5/1Jt4ZUmEZwJbXMXqmRA4QLBF8W94o=";
       name = "x86_64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/routing/";
     sourceInfo = {
-      hash = "sha256-c7yeuGu8h9IyuFCSeiy8+PtIxJoEyhjFftz7CHS8CUE=";
+      hash = "sha256-Nm0RSMmFZVz9pbCMm6dbEPSR4U0M8MNtkgNWv8o6b3U=";
       name = "x86_64-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/telephony/";
     sourceInfo = {
-      hash = "sha256-EfXdq2l1MWT5OjtnGWhWdKHXluUZCZMFhTe6f4hyQRs=";
+      hash = "sha256-l+UDs66a1iQ81PhjrJGe+J/RupwrJ9Mkn2GcFWAC60M=";
       name = "x86_64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.7/packages/x86_64/telephony/Packages";
     };

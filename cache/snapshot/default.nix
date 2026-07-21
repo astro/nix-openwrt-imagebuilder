@@ -1,6 +1,7 @@
 # Hashes for snapshot
 {
   targets.airoha.an7581 = import ./targets/airoha/an7581/default.nix;
+  targets.airoha.an7583 = import ./targets/airoha/an7583/default.nix;
   targets.apm821xx.nand = import ./targets/apm821xx/nand/default.nix;
   targets.apm821xx.sata = import ./targets/apm821xx/sata/default.nix;
   targets.armsr.armv7 = import ./targets/armsr/armv7/default.nix;
