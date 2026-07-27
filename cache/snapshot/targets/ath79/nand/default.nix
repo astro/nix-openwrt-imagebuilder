@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/";
   sha256sums = {
-    hash = "sha256-5v1AVvcYnCuJad7OqOki/mngCzBMzxW9qBMOWuREyqw=";
+    hash = "sha256-7oUxIYLVSHm2S3AsQpV0FPjKuhr7LZ3Ec30/9cX6Y58=";
     name = "ath79_nand-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/sha256sums";
   };
   imagebuilder = {
-    sha256 = "24ebb55886853737895621bf3c6c2ea34acc063140467206d3ed590c29f0be76";
+    sha256 = "ddba4ad3506ffe47a4a6ef9e6fe3536b7bf3d7ef55d8e86973f6a36e425eac59";
     filename = "openwrt-imagebuilder-ath79-nand.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-v+xbpnWmtPCF777ydYe9P7yyxNEBQ+j5wx29kZHZa5Q=";
+    hash = "sha256-1UksaiZRPNn+r8QdgDtvL2lDikOds/56DK3b2PwBXGk=";
     name = "ath79_nand-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/profiles.json";
   };
@@ -19,8 +19,8 @@
     arch_packages = "mips_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "1bd2537f1823efd0494e0e48845f0a79";
-      version = "6.12.94";
+      vermagic = "12198641624adb9fca523e1cb2c4cb1f";
+      version = "6.18.39";
     };
     default_packages = [
       "apk-mbedtls"
@@ -53,7 +53,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.12.94-1-1bd2537f1823efd0494e0e48845f0a79";
+    kmods_target = "6.18.39-1-12198641624adb9fca523e1cb2c4cb1f";
     profiles = {
       "8dev_rambutan" = {
         device_packages = [ "kmod-usb2" ];
@@ -324,12 +324,12 @@
       };
     };
   };
-  kmods."6.12.94-1-1bd2537f1823efd0494e0e48845f0a79" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/kmods/6.12.94-1-1bd2537f1823efd0494e0e48845f0a79/";
+  kmods."6.18.39-1-12198641624adb9fca523e1cb2c4cb1f" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/kmods/6.18.39-1-12198641624adb9fca523e1cb2c4cb1f/";
     sourceInfo = {
-      hash = "sha256-RpAFEtw0R22xwGPsKUCmYQtAP3A8gm5EssGEMkti/to=";
+      hash = "sha256-zfN4BnLYe/rtgXb2IjtItZpBBftTFz7nkQmdATvRI58=";
       name = "kmods-ath79_nand-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/kmods/6.12.94-1-1bd2537f1823efd0494e0e48845f0a79/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/kmods/6.18.39-1-12198641624adb9fca523e1cb2c4cb1f/packages.adb";
     };
     packages =
       let
@@ -340,7 +340,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/packages/";
     sourceInfo = {
-      hash = "sha256-o+BLE4csVuisFacJ9pEj6TgM+9vM4+ieOPP/XQxC+XY=";
+      hash = "sha256-Gnqh2ArATBzl1lORrV8qwr5Tz8XShzynCJRrZBnPbNw=";
       name = "ath79_nand-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/nand/packages/packages.adb";
     };

@@ -1,14 +1,14 @@
 # 24.10.8 package feeds for mips64_octeonplus
 {
   sha256sums = {
-    hash = "sha256-0X3Xl108stFP3aYjRd5d7h+/qZ925R0a9CKXyBdYw4E=";
+    hash = "sha256-lHZUoMiqf4SpO1VcTy7sZpkUQS+q0/NJCdOkBvMnJ30=";
     name = "mips64_octeonplus-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/base/";
     sourceInfo = {
-      hash = "sha256-X0gFrvFnkNOftn5gSyG42mJVB0HzZaXV3RdGCd1KnDE=";
+      hash = "sha256-ZiAdvEISBrnyHrsAQ44DHAMNB/xKsKwS5UqkAfV18Kw=";
       name = "mips64_octeonplus-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/base/Packages";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/luci/";
     sourceInfo = {
-      hash = "sha256-ydTIMA7WoC5FDuDr7uewBvKQdzBfsMf+LWDaQGWOQNY=";
+      hash = "sha256-RiFWpW5UgmVRpCBi0fRn2MtD1EVxnFzoP8y2DipAMiI=";
       name = "mips64_octeonplus-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/packages/";
     sourceInfo = {
-      hash = "sha256-lfzlJF+I0774HlrejZ+RIbw4p3Nfkvv8/dUFgVgPjAM=";
+      hash = "sha256-nlaZrItFTxFOT/Bi0hKL8dZ2/gaWbjqSZvQotPUd9QQ=";
       name = "mips64_octeonplus-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/routing/";
     sourceInfo = {
-      hash = "sha256-pJ97jz+PvTk4FZ3EMs0qBPqWE9BD0qLshEaNxK9dXuk=";
+      hash = "sha256-t+M+PwM27CTVyo3sKlucL5Mzg0bRQlC2B4YqxPh5ciE=";
       name = "mips64_octeonplus-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/telephony/";
     sourceInfo = {
-      hash = "sha256-I+ew4BouTBkX4WqJAl1BeMUdDf5k/c42ZQJS6GrkB8A=";
+      hash = "sha256-bKDltqL6e/9L/4IgeeUhtCu4OgvXU5oDeMSDjSnbvtI=";
       name = "mips64_octeonplus-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips64_octeonplus/telephony/Packages";
     };
