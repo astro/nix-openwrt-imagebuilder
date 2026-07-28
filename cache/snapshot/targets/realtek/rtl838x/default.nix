@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/";
   sha256sums = {
-    hash = "sha256-BL5rRyl1/Q7jgl8+ifoI13xrsiBggj/hL+5UFXRPlmM=";
+    hash = "sha256-BjuArllSkya8aKgk+dWUK5JNG1XrYKW/iiqt1lFowtI=";
     name = "realtek_rtl838x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "74044a9a6250bbe00bcc4130c71f1ccc724852925a475ed8b5ced1e669c824fc";
+    sha256 = "8aee2dcdacdc358f55f8ba1befd91ff480a5071873a940ef4ea67026294140d8";
     filename = "openwrt-imagebuilder-realtek-rtl838x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-gPIGGH2SpVwY6Re/Nv4mm/9ELF8onMG4nfYZAz0ynCk=";
+    hash = "sha256-VKHlKLFYP2WeKDftqyhLwHBGEd9V4XnadOewi4CBwsI=";
     name = "realtek_rtl838x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/profiles.json";
   };
@@ -212,12 +212,15 @@
       zyxel_gs1900-8hp-b1 = {
         device_packages = [ "kmod-pse-realtek-mcu-uart" ];
       };
+      zyxel_gs1900-8hp-b2 = {
+        device_packages = [ "kmod-pse-realtek-mcu-uart" ];
+      };
     };
   };
   kmods."6.18.39-1-73df3ad1598e50aeb7ec1d29ff5e2c4d" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.39-1-73df3ad1598e50aeb7ec1d29ff5e2c4d/";
     sourceInfo = {
-      hash = "sha256-lHtw41Soe32kCDnyNXaOSHvyFztKPP1KvlMaZIVpwuw=";
+      hash = "sha256-RjS8ShWpvOokBS1q2/eiwmL84V5vvx2H8c8OCHVJBEE=";
       name = "kmods-realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.39-1-73df3ad1598e50aeb7ec1d29ff5e2c4d/packages.adb";
     };
@@ -230,7 +233,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/";
     sourceInfo = {
-      hash = "sha256-mTPzaOgJ4sgiWJKvl3ZmR0YFuUZO30eIDYVvNMuWxwg=";
+      hash = "sha256-uvOA/WNBg4jrxXhVANpB8HK73HxpAPx0BjGHwB+05PU=";
       name = "realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/packages.adb";
     };
