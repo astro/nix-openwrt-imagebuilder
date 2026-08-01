@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/";
   sha256sums = {
-    hash = "sha256-vrx9usqC7Hs/u8py5VUzcaSfPAK1ZA3k3oXVU+zlo3g=";
+    hash = "sha256-RnrZED5vzJlmDFdDeYHsZQPJ+Sg4nnrt938wiZI6sDc=";
     name = "siflower_sf21-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/sha256sums";
   };
   imagebuilder = {
-    sha256 = "7ec0bce3e5b9923431f2f913d1f055160c2243ca5defea249cd4b1b8f99e5e8a";
+    sha256 = "bc1867c3fae623f6384e428af7908c31dabdf071a9891554772f8c42c18a399d";
     filename = "openwrt-imagebuilder-siflower-sf21.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-naq1DMSXHhNOH5TtO2ZbvpcYJBq0ceSSKLkFnyXXHjM=";
+    hash = "sha256-BUjO5xhHvswFE8RFsHs5SBxmNGvo41BmrsPRiwDpUFQ=";
     name = "siflower_sf21-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/profiles.json";
   };
@@ -76,7 +76,7 @@
   kmods."6.12.100-1-f5eba5af0b79f8303d92a7bf6f76f6f2" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/kmods/6.12.100-1-f5eba5af0b79f8303d92a7bf6f76f6f2/";
     sourceInfo = {
-      hash = "sha256-XaPd62wk8Gj8iyIoCNsUlarGGlNsqT+b5f4FWIB8XEg=";
+      hash = "sha256-SeMzaUek9abM3JS51q00gPVrC55AnBLsQE+K8fmATAg=";
       name = "kmods-siflower_sf21-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/kmods/6.12.100-1-f5eba5af0b79f8303d92a7bf6f76f6f2/packages.adb";
     };
@@ -89,7 +89,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/packages/";
     sourceInfo = {
-      hash = "sha256-EIztQzOC0lT/2ccQDmFHrjrK0wWG7015X8BuFskgJvs=";
+      hash = "sha256-5fvmXiaHKVYun6jJmQe55Rng5AwU+yqbmOThFnpmwp0=";
       name = "siflower_sf21-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/siflower/sf21/packages/packages.adb";
     };
