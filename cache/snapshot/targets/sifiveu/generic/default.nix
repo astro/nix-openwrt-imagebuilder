@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/";
   sha256sums = {
-    hash = "sha256-MouH2HCQbMP+hBbKqumhpAZPeqMYDp6I3kZDaJeH3Bg=";
+    hash = "sha256-rVCQFoiYTn8rG0Lv0eDWAOi1p9gVsbDC9H6eLBEgKTw=";
     name = "sifiveu_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "98f625259e37e75a5e612568de31b52622cbe1749a495cc52d21e412983a61d6";
+    sha256 = "56420fe4e8dce6aebcebd1cc3f1282147bbb9ef0d7b35c846bb4e4f22059472b";
     filename = "openwrt-imagebuilder-sifiveu-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-9e7SO+pfl8PmFacZ1+YSRjWi1SwUIlSw1kJymVlmmx0=";
+    hash = "sha256-/n2Kx/CC3FgA6a8LR0AOLAkz41GWE9/BOyQdxjo2c+Q=";
     name = "sifiveu_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/profiles.json";
   };
@@ -64,7 +64,7 @@
   kmods."6.18.41-1-fba4ec5d7fbab058a4fb187131f45128" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/kmods/6.18.41-1-fba4ec5d7fbab058a4fb187131f45128/";
     sourceInfo = {
-      hash = "sha256-uArxMuohmTfXYN9NZpFcazEa7LEiM4PsD1ztO6KNSuQ=";
+      hash = "sha256-1L3fb5/2CMLxCrzSVGFoUadz8ExQn7F3Hbq1poG6/LY=";
       name = "kmods-sifiveu_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/kmods/6.18.41-1-fba4ec5d7fbab058a4fb187131f45128/packages.adb";
     };
@@ -77,7 +77,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/packages/";
     sourceInfo = {
-      hash = "sha256-r8BN6IIZZ6gCLFycyreo/KDgnHjS3VQmoBCwcdR9djo=";
+      hash = "sha256-Eb9GfsM+1tpV5b9miTsyVEo6b3jTLdN9RQWjFKp0TBQ=";
       name = "sifiveu_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/packages/packages.adb";
     };
