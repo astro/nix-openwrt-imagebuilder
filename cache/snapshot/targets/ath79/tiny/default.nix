@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/";
   sha256sums = {
-    hash = "sha256-nvMgUDmp2tc2nTIAJrtsyoi8He/n2JLsr2lkUgZsdRE=";
+    hash = "sha256-Y9RM7JX7Qf+/QSlRh5VV88VYgpUKqNLLTC0SkdDKseQ=";
     name = "ath79_tiny-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/sha256sums";
   };
   imagebuilder = {
-    sha256 = "760014461a5aebb0a4e4e8ea1d2f96b676153c15608b4d6eecf5b00e0f53dd03";
+    sha256 = "cbbf8d56bf1bb485b1938e86c9ee06ac6e9e1eaf97ff3ef89bafb0585b04c5c4";
     filename = "openwrt-imagebuilder-ath79-tiny.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-bGQu5zVw074Tn1Ka5AiYfaAQYsREcpC/4JmrsJXnQ74=";
+    hash = "sha256-ObRQM5Anqiq01Y8dLj/6M+uSoPSWG7gRqnYtDGY2jwo=";
     name = "ath79_tiny-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/profiles.json";
   };
@@ -152,7 +152,7 @@
   kmods."6.18.41-1-aab1202291341d94b1a77c4b9dd55c3a" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/kmods/6.18.41-1-aab1202291341d94b1a77c4b9dd55c3a/";
     sourceInfo = {
-      hash = "sha256-UG2QFvg8et0Z2u909UiKHjwJa143wXZ1UlEN7y0z++c=";
+      hash = "sha256-lxq1E6ky73TZRWXAlZa7HEWfC0JqTlXPu3jNCQ2qZJw=";
       name = "kmods-ath79_tiny-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/kmods/6.18.41-1-aab1202291341d94b1a77c4b9dd55c3a/packages.adb";
     };
@@ -165,7 +165,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/packages/";
     sourceInfo = {
-      hash = "sha256-aBZ0KkWQHXvtRT5NN2LZOAu/spx859CDxrkIQ8WT7iY=";
+      hash = "sha256-xXDUgX7vLqlD416TSCB0C7tgBxbG4NX5A8vXlXPq2uY=";
       name = "ath79_tiny-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/tiny/packages/packages.adb";
     };

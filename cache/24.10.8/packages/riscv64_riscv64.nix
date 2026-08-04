@@ -1,14 +1,14 @@
 # 24.10.8 package feeds for riscv64_riscv64
 {
   sha256sums = {
-    hash = "sha256-AW8Ibyk4/lBYcR+IoS6JqSTfPMuJrPtmDwCosOwZPoI=";
+    hash = "sha256-sIOwP9cSqSwDJDHxVYqQwt+Y8wvof1BcmAxKpe0y31s=";
     name = "riscv64_riscv64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/base/";
     sourceInfo = {
-      hash = "sha256-GZBfD8PFZgMBlpM2rYPXw0kC6pOU4ut45mJePmDGbcI=";
+      hash = "sha256-fIQF46u5cZIdCRBMOEUu0TKPMo0EUbAineKBvaDIEhk=";
       name = "riscv64_riscv64-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/base/Packages";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/luci/";
     sourceInfo = {
-      hash = "sha256-GYymm6KtBh2gd9qRpRap2lZOHyFYGOU08B7p6I7SD0Q=";
+      hash = "sha256-x/1ePl8x28ahBwvFsfWzylCIrlNNtcSHdITs4jYLuVI=";
       name = "riscv64_riscv64-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/packages/";
     sourceInfo = {
-      hash = "sha256-mezYcpV4l5zZ8Vi4gGHD6WaiVd6X+XGTSK565ksb9So=";
+      hash = "sha256-maaB9yHu3E44sGOatV8r9RxRalCMVv6Zbn7+YkgEgug=";
       name = "riscv64_riscv64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/routing/";
     sourceInfo = {
-      hash = "sha256-Ecets1WnQwNwW9j3nLwwgp6GjI6riM26hKKxBRAcYmY=";
+      hash = "sha256-hWhraNWZicl36SJn+H8eZk0qLkbj+r9H2NMU+vhCDR4=";
       name = "riscv64_riscv64-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/telephony/";
     sourceInfo = {
-      hash = "sha256-CtCkMEjO/+9kprU0VKctQjHu2qz7gbxy/01EiRIKqcg=";
+      hash = "sha256-JTMeM9TpbFOYhsxC0fdesWor9/dog4vxyumidvfm6Ic=";
       name = "riscv64_riscv64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/telephony/Packages";
     };
