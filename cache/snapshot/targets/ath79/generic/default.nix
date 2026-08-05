@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-iuhAYSCJbCbLau+mZoSAujUmI9Mm3foXGn72WZqKhck=";
+    hash = "sha256-pK0ncyESVzlOeSNUZw1LxTwLyfBFdhODKxiwMzdLPrg=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "b3cd454e5a2ce48a31f2a594846138f29d2232348d50559c4e0e5ed86f1ed370";
+    sha256 = "9bcf6590f7467c1a90f29e6a5b8a04b8084444ff4d7be92cd728ba46fb4aab36";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-IRNqVThq0zzz+b2rWYPBL2mIh18cfPBFQQYDM4vNhX8=";
+    hash = "sha256-uOMDjzKv5ehFMI9+dfXNpo9SHi91vjMqUr5QMHEoBNY=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -1946,6 +1946,7 @@
           "kmod-usb2"
           "kmod-usb-ohci"
           "kmod-dsa-b53-mdio"
+          "-swconfig"
         ];
       };
       ubnt_lap-120 = {
@@ -2250,7 +2251,7 @@
   kmods."6.18.41-1-46fa0ede64222e2b868fcb099290e390" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.41-1-46fa0ede64222e2b868fcb099290e390/";
     sourceInfo = {
-      hash = "sha256-74QI4Rha9R9dZ6zPyKyC2fpFPbiKAt7U2qSLz3nByYc=";
+      hash = "sha256-wVxAHuHcY7W8Ogadypl8I7J9elZgEX7lp4Ymnw684Ec=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.41-1-46fa0ede64222e2b868fcb099290e390/packages.adb";
     };
@@ -2263,7 +2264,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-Kz5QbmtwqQD/XK1CS8a1xyWOUxfzXEa/x9V24L+bjW8=";
+      hash = "sha256-Woerez27Vyqc/PxjFxYLuEojJcONh0v4vntfp2FrbKc=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
