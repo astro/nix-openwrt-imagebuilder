@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/";
   sha256sums = {
-    hash = "sha256-wQmH5TSvKBJ5dydbVlmQPmo4WBrDLqRDxa2Bg74NnEA=";
+    hash = "sha256-XeTqugOv+fFl9r8OGckNDS+SRbmHdyLGFIU5xWPn1Ck=";
     name = "at91_sama5-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/sha256sums";
   };
   imagebuilder = {
-    sha256 = "d39f87692d98439f8f742ea8ed031e9de17daa0086bec4d083530bce1ac40a87";
+    sha256 = "3ffe126086566bdf3ac9aae02717f558f44370eb0adf274b8b707cd9b744d6a6";
     filename = "openwrt-imagebuilder-at91-sama5.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-WD6Wf5/TWV/DDN3haVkTVQNCwIB9me+ymxYPJ4rr7JE=";
+    hash = "sha256-OwirjAdb0hQyWefMKY+GTVWBKgnOq/Kz98EocrsakZA=";
     name = "at91_sama5-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/profiles.json";
   };
@@ -80,7 +80,7 @@
   kmods."6.12.100-1-eb0e6fc11e12d37ed576eff038c1d3c4" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/kmods/6.12.100-1-eb0e6fc11e12d37ed576eff038c1d3c4/";
     sourceInfo = {
-      hash = "sha256-URvUP9CIq7Q6gSaTugDZx/cQzqunRKBNRMCDJKC9SKg=";
+      hash = "sha256-xpamCRAZh8Vjc4JRbbHcZUJJ5UZmMRR4e6HAB6BnqyE=";
       name = "kmods-at91_sama5-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/kmods/6.12.100-1-eb0e6fc11e12d37ed576eff038c1d3c4/packages.adb";
     };
@@ -93,7 +93,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/packages/";
     sourceInfo = {
-      hash = "sha256-SsOl+Y0T00veWO/P6u7210POhh/3LHkewHYehik5VE8=";
+      hash = "sha256-7GRMmjwbNAKiqJSt38rypbfs8isYVtHyl/1aaMiP8+o=";
       name = "at91_sama5-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/packages/packages.adb";
     };
