@@ -1,14 +1,14 @@
 # 25.12.5 package feeds for mipsel_mips32
 {
   sha256sums = {
-    hash = "sha256-ovnAGHxKhVgbE4Tn6e9G4FQnKrL8AVxG1AnPx4iczj4=";
+    hash = "sha256-xE2LAODJYeDJFw3us31EvgNKUTkorZV8V2X+7Epjsvw=";
     name = "mipsel_mips32-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/base/";
     sourceInfo = {
-      hash = "sha256-gRyLIUXXj4q0rDsILNCbTmXW/4ZcZ8fR1+htnS5J9UM=";
+      hash = "sha256-6lEvzO0mNvDK7zaek7tR5Bap/7gXCyGx7s0KLCAhabY=";
       name = "mipsel_mips32-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/luci/";
     sourceInfo = {
-      hash = "sha256-GYfddbWrXr1Sr8W1AFPtE7BlWUnOWO5Y03ZnBwtTAc4=";
+      hash = "sha256-57aGcNdOBxIDTyVM6tlIckMC/LSjToaN7OFJSXMCIRA=";
       name = "mipsel_mips32-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/packages/";
     sourceInfo = {
-      hash = "sha256-I3ii7ig4OtjeGOLOxXuzbX4ZEIlUQctxo+l6DKYy6kU=";
+      hash = "sha256-zuZjX7JxnHZWa8TXlkodNHS/QMFMwJZe0e78ww7WIMo=";
       name = "mipsel_mips32-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/routing/";
     sourceInfo = {
-      hash = "sha256-6R8mBbnHSYLvo+f9slg/3ytE1qCjCsFA5gYK3CeQbnk=";
+      hash = "sha256-h0lUL4N/d7C2/vYOmTELJ+UMYyixgeHl7zXzDAI2/AU=";
       name = "mipsel_mips32-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/telephony/";
     sourceInfo = {
-      hash = "sha256-cC9/0EZi3dqsGfaRb3oh/m5cKZ01yDhJvt+45yl61UA=";
+      hash = "sha256-CaR6j6khxuBh4jPuC8iIT9rqYu1TGMr2qwQlzJ3qXfI=";
       name = "mipsel_mips32-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/mipsel_mips32/telephony/packages.adb";
     };

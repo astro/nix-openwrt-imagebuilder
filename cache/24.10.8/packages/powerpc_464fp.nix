@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for powerpc_464fp
 {
   sha256sums = {
-    hash = "sha256-t16LuEULOnXk1oxUo1Kr7ofMwc+XaV1ddQgXOCIQhqo=";
+    hash = "sha256-Z8VRTckV+FjRTNu49bIrfqbOzoJsvf7/DEXpXZRUGLk=";
     name = "powerpc_464fp-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/luci/";
     sourceInfo = {
-      hash = "sha256-uAWK+TqarhDRUpPDTzQN6SilOne6rW5KpxFEFG+TCq4=";
+      hash = "sha256-uOVfS8cyIwoIojH0m5k95YwyD+LDaJxjFBYBAMuXtnI=";
       name = "powerpc_464fp-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/packages/";
     sourceInfo = {
-      hash = "sha256-UgfcE7atsmARbyzoAYQ5bVyIAoOlPcKR1FG6HEH58i8=";
+      hash = "sha256-N+BK2VNoWUb26NB+m5KFtP68sANjDYRM8lYlCRRsFEs=";
       name = "powerpc_464fp-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/routing/";
     sourceInfo = {
-      hash = "sha256-cp2BwwfXFnTAtU6/duk0faSi+YBj7P7sVlxyLvxrWgI=";
+      hash = "sha256-Q8lleiOfwN31jxAh6fTsKBenBbtA1LmKwF6xr0zGuYA=";
       name = "powerpc_464fp-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/telephony/";
     sourceInfo = {
-      hash = "sha256-XuhqIOWQ/kvo0M5g8//2q+aWXvG4QNurde96+FgeEx4=";
+      hash = "sha256-RpqW2pqp54oS84SlxQb+4kKsbpesH32CdBF0O9zjeUk=";
       name = "powerpc_464fp-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/powerpc_464fp/telephony/Packages";
     };

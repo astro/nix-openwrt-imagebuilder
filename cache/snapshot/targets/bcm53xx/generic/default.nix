@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/";
   sha256sums = {
-    hash = "sha256-gf4E0reh0gQGc3UV0mJFnE9n0UGpajhWlxsxkIPsjgI=";
+    hash = "sha256-olb065Awme+cTwXc1EXxRjIe8bWd4Y+qxiL9hz5/In4=";
     name = "bcm53xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "c6f5753e94778adaf5628a9b0ef3b6f468f7d347a0c8eda5d23b3119cf004de6";
+    sha256 = "b55e10e181280637b42703c1a448b9479f36a168267fc991619c3bf284d76b0e";
     filename = "openwrt-imagebuilder-bcm53xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-zZyeBzueUFMjuxRJAPvTPXyLKEbxaVZFBMS6C8fmTEQ=";
+    hash = "sha256-VJj2wsIimbejyUgM3Hi1TOO81ACdcTBt7O9mtFt3XUE=";
     name = "bcm53xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/profiles.json";
   };
@@ -271,6 +271,7 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-usb3"
           "kmod-phy-bcm-ns-usb3"
+          "kmod-ledtrig-network"
         ];
       };
       linksys_ea9500 = {
@@ -472,7 +473,7 @@
   kmods."6.12.100-1-d123166b0cd56bb39a4627900994b24e" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/kmods/6.12.100-1-d123166b0cd56bb39a4627900994b24e/";
     sourceInfo = {
-      hash = "sha256-Lje3EqYS3f88wL+FsrEX6cD0jsrSANnUs5IA1yEs5ds=";
+      hash = "sha256-K33D73PMuiqKSTPNb9nLMUy077I1cUCWa9e1IyQ9k8Y=";
       name = "kmods-bcm53xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/kmods/6.12.100-1-d123166b0cd56bb39a4627900994b24e/packages.adb";
     };
@@ -485,7 +486,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-52CBu5XTI2ZkBGUgOh1nJqKZLPbi5h4c1EfgaexWM/M=";
+      hash = "sha256-VkYTAH44D8V+GC/Ut06SI2NFquSZoxuKi/9b1pdeLuU=";
       name = "bcm53xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm53xx/generic/packages/packages.adb";
     };

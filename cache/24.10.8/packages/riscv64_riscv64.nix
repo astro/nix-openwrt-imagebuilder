@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for riscv64_riscv64
 {
   sha256sums = {
-    hash = "sha256-glQRo6E+lpdjIc2AgLSCFbl3bt/Bc40aBiN0Ab++4P4=";
+    hash = "sha256-c16TaaP0Xy+ZuO70xtGc5nmUPkZKoZErJgRHBB21UpE=";
     name = "riscv64_riscv64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/luci/";
     sourceInfo = {
-      hash = "sha256-x/1ePl8x28ahBwvFsfWzylCIrlNNtcSHdITs4jYLuVI=";
+      hash = "sha256-4PpA83KFcREu8XIqutxr4EtkNkhIWqgZHpbyiuuVCCw=";
       name = "riscv64_riscv64-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/packages/";
     sourceInfo = {
-      hash = "sha256-2o5wrROUeAYEjbnPJgcJFYMgBY7BzhMPpP7buiiZwrA=";
+      hash = "sha256-z3dp6FGrFyfGvXxNXB9k3iB+BgCKRtOmedx9acflNB8=";
       name = "riscv64_riscv64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/routing/";
     sourceInfo = {
-      hash = "sha256-hWhraNWZicl36SJn+H8eZk0qLkbj+r9H2NMU+vhCDR4=";
+      hash = "sha256-V98RuzmjST7Ke1Xo1mkKOON/5hUEkfCf1ZX2O9aTDWk=";
       name = "riscv64_riscv64-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/telephony/";
     sourceInfo = {
-      hash = "sha256-32gpcApLsJNYXHcHPReIBrALrykNHuVti4bZ6EHnYXg=";
+      hash = "sha256-Wwtq5w8Su1Y99F+gO1uXbRpRePkHsg7PLkgtllspQtI=";
       name = "riscv64_riscv64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/riscv64_riscv64/telephony/Packages";
     };
