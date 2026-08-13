@@ -1,14 +1,14 @@
 # 24.10.8 package feeds for mips_mips32
 {
   sha256sums = {
-    hash = "sha256-QYD98ukXWGVkV6HMmKJ8a7AW5SuuqgNRmJAhFG4Ejnc=";
+    hash = "sha256-IcUpF6V/HCzXxfWwJ/cp8k5F1RmYb5k8Jm1iTMLWCbI=";
     name = "mips_mips32-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/base/";
     sourceInfo = {
-      hash = "sha256-F8es2Lbq9jQrIM8MbQeNKg9gsh2JpDPkPthO98X1ZQo=";
+      hash = "sha256-HEg7yXMFFZF2zfte2bqz5k5vHv7Xn4+7aN5ppxAPan8=";
       name = "mips_mips32-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/packages/";
     sourceInfo = {
-      hash = "sha256-fAf/9Ftcw1VCkHvIUJSGudPYsa/NM9/HIiplDj5vkNM=";
+      hash = "sha256-demZDv+1IKvHvKP2RhAs7SgoDoD+TcnDy68B4iMuBPY=";
       name = "mips_mips32-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/routing/";
     sourceInfo = {
-      hash = "sha256-RTHU7aJhUpvoZ8eqGBt0oproWEyVxkB+EJGxIgRpmUk=";
+      hash = "sha256-b1kIwt5CBzj7c6UzxAAke4S43I/QMa3mp4miqHi69hQ=";
       name = "mips_mips32-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/telephony/";
     sourceInfo = {
-      hash = "sha256-fuNIi6HrbeqD11pqE+ZRd4zoya7f25FUVnpIYkBbaJM=";
+      hash = "sha256-jy67vzuZ2la7p55M6Vf/+yi0cAQOBPTwv3X1R9YciaU=";
       name = "mips_mips32-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mips_mips32/telephony/Packages";
     };
