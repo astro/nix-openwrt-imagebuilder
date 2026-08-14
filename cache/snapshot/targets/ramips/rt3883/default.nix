@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/";
   sha256sums = {
-    hash = "sha256-1AUNehj4tk/28cclx/gX9SdpXOPcuNCqYBoB4+9FkNY=";
+    hash = "sha256-d5Ciu3KNR2PoQdpNA8ykYA6LshcA9Bkc+/TH2vAQSAM=";
     name = "ramips_rt3883-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/sha256sums";
   };
   imagebuilder = {
-    sha256 = "29db5fc8bd8a597291fac7e11d41d7c8772e8aa3013228852058191c73ade43e";
+    sha256 = "cef5ff3563eb21fee31088fc03be506e34f8ea16f71668e957f3f425e13caa27";
     filename = "openwrt-imagebuilder-ramips-rt3883.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-vdxugbZk7ixTbzXB7S17QdEpaRH6KSgK/yRlh8iaCIM=";
+    hash = "sha256-ZVMJk8xWPoxgjwPbv0FtJSW+B/GwFzP56azbQrouH78=";
     name = "ramips_rt3883-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/profiles.json";
   };
@@ -59,6 +59,13 @@
         device_packages = [
           "kmod-usb-ohci"
           "kmod-usb2"
+        ];
+      };
+      asus_rt-n65u = {
+        device_packages = [
+          "kmod-usb3"
+          "kmod-usb-ledtrig-usbport"
+          "kmod-switch-rtl8367b"
         ];
       };
       belkin_f9k1109v1 = {
@@ -114,7 +121,7 @@
   kmods."6.18.44-1-1bb5f110ba17af0da8677a8eeaf582fc" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/kmods/6.18.44-1-1bb5f110ba17af0da8677a8eeaf582fc/";
     sourceInfo = {
-      hash = "sha256-ye1d0wFOYB9/ncJAsrmnbklVc9fdxWdVHR5p4qEgtNk=";
+      hash = "sha256-YKnW8SwCe+MCQKXrOYiqPA1Ko1NN1/4ynuvkD7YsGuQ=";
       name = "kmods-ramips_rt3883-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/kmods/6.18.44-1-1bb5f110ba17af0da8677a8eeaf582fc/packages.adb";
     };
@@ -127,7 +134,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/packages/";
     sourceInfo = {
-      hash = "sha256-PzhPL+9+ASARcKq2hvmVlzSBv97aI/8cHC6SgEmrXbs=";
+      hash = "sha256-pm4Zu55E99Eytf97GJkdpZidEEbabqaEkL4OawnTfJ8=";
       name = "ramips_rt3883-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/packages/packages.adb";
     };
