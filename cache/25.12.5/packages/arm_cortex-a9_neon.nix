@@ -1,14 +1,14 @@
 # 25.12.5 package feeds for arm_cortex-a9_neon
 {
   sha256sums = {
-    hash = "sha256-bZXMXvAwW9KhHpRk7pcITdBhZog5AEcYqTrVSatbwkc=";
+    hash = "sha256-N9Us/AR/HpHQHq54EagOMWCgkXJK0uuq46udaxnLwng=";
     name = "arm_cortex-a9_neon-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/base/";
     sourceInfo = {
-      hash = "sha256-fLWI47pO5pLWGZZ3myn8D2bC24Sjnix78dnHq5/911w=";
+      hash = "sha256-uNXPnJk9jlIPwpm3wsfqQBFCpjMaIoU+FzpR4/NcXUo=";
       name = "arm_cortex-a9_neon-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/luci/";
     sourceInfo = {
-      hash = "sha256-uUWQ/Z1wE/OIpaobVjj2Yj0Q34sP26asRy7KijoLNI0=";
+      hash = "sha256-2nq2scIW7QFLWFF3XcyVi0lQ4YWGXm3KZLk/d8yN2zE=";
       name = "arm_cortex-a9_neon-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/packages/";
     sourceInfo = {
-      hash = "sha256-q0+93alSVPU8duDGMwjdgleXw6WcnMkXebtwTUjdftw=";
+      hash = "sha256-WQSM0JG0eo5hrxziH0T6uQpoIW6rSfewZ2Qn4IaERwI=";
       name = "arm_cortex-a9_neon-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/routing/";
     sourceInfo = {
-      hash = "sha256-1IbB2l1/FAlZYs5U9BAUz8zn7+HU8jdTYdUF6tnMjj4=";
+      hash = "sha256-g5tYk1y645crp0HPmM285SyIUKzBQ6h6JWy5uMLBbPE=";
       name = "arm_cortex-a9_neon-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/telephony/";
     sourceInfo = {
-      hash = "sha256-EOzGEn2U1ZxXAFi5kTTzTWG+NnsrFi5TdtG6xOStlDg=";
+      hash = "sha256-zDxJDH/SkIZ2itnjUMIcp4e5Ml7uE/E39oeii3RM6P8=";
       name = "arm_cortex-a9_neon-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_cortex-a9_neon/telephony/packages.adb";
     };

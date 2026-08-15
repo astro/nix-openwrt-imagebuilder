@@ -1,14 +1,14 @@
 # 25.12.5 package feeds for arm_fa526
 {
   sha256sums = {
-    hash = "sha256-VoIEpJCyehq6yQ0UqawTExXNrGhW8dMpZer8sgf5CaY=";
+    hash = "sha256-FXqpOwqJDKpJTSLo0zBpzxCx5h1ybGFZW4sw4cUlxSE=";
     name = "arm_fa526-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/base/";
     sourceInfo = {
-      hash = "sha256-+kbr15s48+WdDtXZYbt/gBY787b/k6iObLsIjN7ZxvY=";
+      hash = "sha256-8vTu9I4OVcG20qCTWYC/ZiEmxQfkUUo94JbJUxy0ViM=";
       name = "arm_fa526-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/luci/";
     sourceInfo = {
-      hash = "sha256-qjiN8MXtlhAWTKe3el2RPDj9GsmkJn1S+XfCduFR8zw=";
+      hash = "sha256-JZ/hBbTaAr3CjXYGkEFhiEVd4IP6ycd18RlqBrW9cuE=";
       name = "arm_fa526-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/packages/";
     sourceInfo = {
-      hash = "sha256-H1+P7hVxz54XHP5aNa1a9Mk0sae0iiWX5tngKorCpKc=";
+      hash = "sha256-ZdAJyUfYu9e0wB7k7GtEkM4SQPGfL7U1/FGzEom36nI=";
       name = "arm_fa526-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/routing/";
     sourceInfo = {
-      hash = "sha256-nogfkkqP6kehpcotBpELuIfugXtpB2tY1aNDfHjFW2Y=";
+      hash = "sha256-h+mx9cf8hYH50pCP+niL41LkgDZSXA2CSmC0DHEu2Mo=";
       name = "arm_fa526-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/telephony/";
     sourceInfo = {
-      hash = "sha256-fEP0nBF3l/n0h8w6VWjDHD3nRbNwMP1bZdJquhpG/wE=";
+      hash = "sha256-uYKh3tNxXtg1RyQFC3LcPy6fD/wZmVQVlUJ8dqnfK5I=";
       name = "arm_fa526-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/arm_fa526/telephony/packages.adb";
     };
