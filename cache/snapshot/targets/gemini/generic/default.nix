@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/";
   sha256sums = {
-    hash = "sha256-38IMgIk0WzK2LpA5Kj/SNwR/kY6Dk2XEwdfdAE99GNw=";
+    hash = "sha256-WL4NoHYo5vXerDyu2RBIMhSTSmZONFcOAmXokJjDu9U=";
     name = "gemini_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "861c4c056fa6dfbc49c201c086d908cf4c36dc44e3f86b22cb96f820cb7929ae";
+    sha256 = "b40cba9d97c9d1922eefdf2323b4f6a3c3b6b507cf2e045d2255d6546ddd9949";
     filename = "openwrt-imagebuilder-gemini-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-Rt3GepPVxE1GuIk6jbKd1DbUsATFT1SrLFgbKQilD+4=";
+    hash = "sha256-KZIO7Jz51vWp5jw338M8uGs9F9PXvzvNHzSCl84bCNA=";
     name = "gemini_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_fa526";
     linux_kernel = {
       release = "1";
-      vermagic = "5ed584b670df1c37ab34fd5e0eac43a7";
+      vermagic = "32c239509f1138a4f9a18833bdcfcd5d";
       version = "6.18.44";
     };
     default_packages = [
@@ -52,7 +52,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.44-1-5ed584b670df1c37ab34fd5e0eac43a7";
+    kmods_target = "6.18.44-1-32c239509f1138a4f9a18833bdcfcd5d";
     profiles = {
       dlink_dir-685 = {
         device_packages = [
@@ -258,12 +258,12 @@
       };
     };
   };
-  kmods."6.18.44-1-5ed584b670df1c37ab34fd5e0eac43a7" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/kmods/6.18.44-1-5ed584b670df1c37ab34fd5e0eac43a7/";
+  kmods."6.18.44-1-32c239509f1138a4f9a18833bdcfcd5d" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/kmods/6.18.44-1-32c239509f1138a4f9a18833bdcfcd5d/";
     sourceInfo = {
-      hash = "sha256-zX0PMJtsvj544ovAO9IyHFMbA68I/MdeosT3nXQYgjU=";
+      hash = "sha256-tpgAz1pQWHR9FafbIJ/8smql3yDDykSdeTZfnOVqExc=";
       name = "kmods-gemini_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/kmods/6.18.44-1-5ed584b670df1c37ab34fd5e0eac43a7/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/kmods/6.18.44-1-32c239509f1138a4f9a18833bdcfcd5d/packages.adb";
     };
     packages =
       let
@@ -274,7 +274,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/packages/";
     sourceInfo = {
-      hash = "sha256-namo5uAJ4vClAMeMN3xV8lnDrm2Bqde8fgC5Dv1j3jY=";
+      hash = "sha256-0UcTfda4l1gmjslJfUgZ70ZALv7Eh0bjckN1Ik45kv4=";
       name = "gemini_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/gemini/generic/packages/packages.adb";
     };
