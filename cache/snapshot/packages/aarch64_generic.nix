@@ -1,14 +1,14 @@
 # snapshot package feeds for aarch64_generic
 {
   sha256sums = {
-    hash = "sha256-opNAuuJEiIISpMKCi/MR9Uvs80rxePcPr8+ARhDty68=";
+    hash = "sha256-7+yEq0LAiUDlkygWmEWZpR8UETuxDYshAleth/4N+qQ=";
     name = "aarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/base/";
     sourceInfo = {
-      hash = "sha256-4g6DQtCB4D/06XrQ8Jbe7y9eIsp8mk5co1x8ocrUeWM=";
+      hash = "sha256-zDKKckr419XkgdVpPkoVzz7MlaqB6Vq+Qf5bI+L4yzc=";
       name = "aarch64_generic-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/luci/";
     sourceInfo = {
-      hash = "sha256-8m/Jmkr31rx1RAP0Jfgh1tC+Pkj3ajMN5JuCe3HiqiM=";
+      hash = "sha256-sHPergsitfjIAoPRSRUwDxNAwrzbUCLKZDYz+dHLXTU=";
       name = "aarch64_generic-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-macP8Rj3uy4baAjGHQQOd9ahUUKuT4FaAUwuzO9vM9E=";
+      hash = "sha256-V/zjNHEh6n+rUyljh5GScK/3LXB+PqyAauCBZAMIIlA=";
       name = "aarch64_generic-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/routing/";
     sourceInfo = {
-      hash = "sha256-oKn0YW3DmjqF00lBHrMyl73KV47nrrXEbY31UhKe4qs=";
+      hash = "sha256-FLqfWXctOwDES2bwfas1mJQlHJtEhjvNnhllMR2GUKA=";
       name = "aarch64_generic-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-uMCQGaUMDh3aFHZ/oNSNYXvMGYxpw4vGDYbsfLifQVo=";
+      hash = "sha256-XCF4wm8SEYe0do7mGVfN41LAGngx/+xvL9wUc1yjAxU=";
       name = "aarch64_generic-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_generic/telephony/packages.adb";
     };

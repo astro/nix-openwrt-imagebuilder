@@ -1,14 +1,14 @@
 # snapshot package feeds for mips_24kc
 {
   sha256sums = {
-    hash = "sha256-FmW7h/vPLvbAw09QY/jEz9hqXhiivh+qrzh1audq0/s=";
+    hash = "sha256-oUTpjfqfcxVixlMhsKu9hPwUz7XCnUX8RN9HoGUxTZM=";
     name = "mips_24kc-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/base/";
     sourceInfo = {
-      hash = "sha256-wWQzB9ISY/+6Xxbl+XYtnMSZYuxqrvgweYAnqtovjdM=";
+      hash = "sha256-h/dG6eXxAkdpJOr5xYt8CzAfLsAgPo49o5pzhnvBiq4=";
       name = "mips_24kc-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/luci/";
     sourceInfo = {
-      hash = "sha256-yYCksXRIHw4hPITcoBKKNO0geZYoDQrOavOx5aVh5oU=";
+      hash = "sha256-ngVfdOLmpyA5dr6rMmrUaSSiJmNrtcLWm0tmwcHXGOw=";
       name = "mips_24kc-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/packages/";
     sourceInfo = {
-      hash = "sha256-C/RDg2frHH7aThl9pGM4w4zjirHD/QHK0vV2tEoRJJQ=";
+      hash = "sha256-ON2khQxoFN/13cioD0tYn4kg89emuqQR4Cs0AS8gvEM=";
       name = "mips_24kc-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/routing/";
     sourceInfo = {
-      hash = "sha256-H66/0x/vvrHU60rvc8/H/jnRtzMLHoa3HCopJrx+3go=";
+      hash = "sha256-9Fjz2kKYDfZymhZ0P2GaZEzRlRAx1uYq4tMzyS/VKGM=";
       name = "mips_24kc-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/telephony/";
     sourceInfo = {
-      hash = "sha256-CrWLi0mPbXurkfOdTJs3OLOgQ6YT/hPvwRvyqx0mo/E=";
+      hash = "sha256-UL+HGmyuTR581KUdbCTArktq5kUkXWjzsC7roLNAt+o=";
       name = "mips_24kc-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mips_24kc/telephony/packages.adb";
     };
