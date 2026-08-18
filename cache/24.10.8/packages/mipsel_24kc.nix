@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for mipsel_24kc
 {
   sha256sums = {
-    hash = "sha256-7zbn4c8Ph6GQn2tflUVm4hISM5ihx8GqQZwX9LMx0io=";
+    hash = "sha256-XdSnZ037iaXmdKkfZvcPjoAOOEwu0pPO4fA4i5An87c=";
     name = "mipsel_24kc-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/sha256sums";
   };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/luci/";
     sourceInfo = {
-      hash = "sha256-gTXauDyoW7Q2XYcZKKnFVHHWOBCe70RvjtuSWYgdZ6s=";
+      hash = "sha256-CzxHBolzRuKYe/GDLqrNRfCtG79s+7fTigELS5bjcQw=";
       name = "mipsel_24kc-luci-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/luci/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/packages/";
     sourceInfo = {
-      hash = "sha256-d4NxArdubC0y69pOfRb7Kf/uEEFEdqToTtfXOeuB9C8=";
+      hash = "sha256-aVbZ/HzqTrb5RksnCh7Vn+gzcL7qiWoobctPoVSYDzk=";
       name = "mipsel_24kc-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/routing/";
     sourceInfo = {
-      hash = "sha256-csCVWNk51hJ3J4SjtMKOkuFPcGdktJ4Qe0rkzFDSxXw=";
+      hash = "sha256-SVB3mARuKPVlhTKHh3eUTYme3ef8mOUdpVJcF7lBwFI=";
       name = "mipsel_24kc-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/telephony/";
     sourceInfo = {
-      hash = "sha256-5HSmu/JxP8ld8t1G185h9KwAekoVxjDTmI927PI2bHs=";
+      hash = "sha256-kKKgOOpJEdggIWQXGws2fjMTq0xaH/1d0GQhGKb4EjE=";
       name = "mipsel_24kc-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/mipsel_24kc/telephony/Packages";
     };

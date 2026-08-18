@@ -1,14 +1,14 @@
 # snapshot package feeds for x86_64
 {
   sha256sums = {
-    hash = "sha256-AWmuLb1FFe9ExPJ7Jx0Xz99BALYKZ7jHtXOOHotsgzk=";
+    hash = "sha256-u9Ql3eGQSwWsCo806rGEYupt+El8lnc6EDR//qMAoM0=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/x86_64/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/x86_64/base/";
     sourceInfo = {
-      hash = "sha256-Mc0SMO1d+gHaOXXpo9dmmlg2isvhPLMBzXsTCaWH/Lk=";
+      hash = "sha256-AGa/JrLUcT9WHFF5OSrWluabYW35rJv0YiPR4HVnyqc=";
       name = "x86_64-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/x86_64/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/x86_64/luci/";
     sourceInfo = {
-      hash = "sha256-/qJRvqWzUVi57inO/WLkT2WQsAxqbZtmCYdaymgG4Nk=";
+      hash = "sha256-0uJrfGTruUvMy166fn+keo76SRNq3Wf1MVN/YtCs6LE=";
       name = "x86_64-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/x86_64/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/x86_64/packages/";
     sourceInfo = {
-      hash = "sha256-1U8RcphMzJ7RMvcVlfcX3Bx0RHwI1BwBmOZMm9laJSM=";
+      hash = "sha256-sfoRzIzhUC8oBMsdcusilWQUjGpy2EVjpAOtKkXIYL8=";
       name = "x86_64-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/x86_64/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/x86_64/routing/";
     sourceInfo = {
-      hash = "sha256-DBO99OtI8E5XEphTakoFWaAEk+eq5rJTcv/yCFA/vwM=";
+      hash = "sha256-EK5TkeUMxa+YEu8q8VAV7WfjptcJSdLMvDVaRjCOK3w=";
       name = "x86_64-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/x86_64/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/x86_64/telephony/";
     sourceInfo = {
-      hash = "sha256-0eTXEyK2iAPAAfHtkYq8P208DTxmaNbnAVU1nsbJAt8=";
+      hash = "sha256-xebmObsbeROaVjZV5Z2RjWjWR21pMJFhESNvHHHe678=";
       name = "x86_64-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/x86_64/telephony/packages.adb";
     };
