@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/";
   sha256sums = {
-    hash = "sha256-CNiJUWCqRfiJrHotHbv5LgNDLfzyh2dB0ctTMejlPEs=";
+    hash = "sha256-Y82QYDDB/mr1u1iWDwZs/1C5GLYV3zjROtLta+ZcqYc=";
     name = "pistachio_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "1494f6307e6b0226250b3f85871e081f7b46dd3e16ea4c6045218e426269593c";
+    sha256 = "e677c3eeab05a4cf3393c7e6dca87fb377007543ad3450d7e25b146e9b1fd6e3";
     filename = "openwrt-imagebuilder-pistachio-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-SEUMVZMPOXlbFPaEiq6PO6Ee809qeAJkFh/ks/oC054=";
+    hash = "sha256-vT9TrS6KDVIFbkUKNYd9jYLM3TqWr3N2MSSIksJK2q8=";
     name = "pistachio_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/profiles.json";
   };
@@ -64,7 +64,7 @@
   kmods."6.18.44-1-70f51a7b3f95431186ddf1a1578ccc6e" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/kmods/6.18.44-1-70f51a7b3f95431186ddf1a1578ccc6e/";
     sourceInfo = {
-      hash = "sha256-0HrBjAXFAycUXfl7rHziUZ+75EJoAoI6GNjOWSiTQto=";
+      hash = "sha256-wi3OZuwBPzvOo6nRJoLZiOtxuQKYnGJv6Yndhbs8Zqw=";
       name = "kmods-pistachio_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/kmods/6.18.44-1-70f51a7b3f95431186ddf1a1578ccc6e/packages.adb";
     };
@@ -77,7 +77,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/packages/";
     sourceInfo = {
-      hash = "sha256-wCg0USLmiUy0ZhQyV/Q91YbH9cufhoZtQ5HvdGdcbZY=";
+      hash = "sha256-Scv18RRlgqc5eR+k0lZS8fj6NQ3c7IB77VorbeUi1Jo=";
       name = "pistachio_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/pistachio/generic/packages/packages.adb";
     };
