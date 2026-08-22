@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for arm_xscale
 {
   sha256sums = {
-    hash = "sha256-JJjSxei+1dTcroR0l4xkZfxz0nVqlfJ+k5S2CFhrQ10=";
+    hash = "sha256-Z6YSKRcuC33sz9ARvaSwLu5q0KDdFkxZwmtKSLqMEMU=";
     name = "arm_xscale-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/packages/";
     sourceInfo = {
-      hash = "sha256-3tgG66nsozs4uulJ3m3Bp+7F7PCGRMSXUkaSMDavx8I=";
+      hash = "sha256-H/UeSI0uaBS7YnTdD7PgMhioSEE7kSOTp6C1jsPWDk4=";
       name = "arm_xscale-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/routing/";
     sourceInfo = {
-      hash = "sha256-He9oOZ/m++KsVpKTscjas7u70Zdq0pH4MaBXlv6Q4P8=";
+      hash = "sha256-21BDDGurgvzD/diNzFtCa2xzaQRWnin2IieO706nHnA=";
       name = "arm_xscale-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/telephony/";
     sourceInfo = {
-      hash = "sha256-1NQ+v82lg8Q6LTP+kZimwuH8sRcMim7kHq8CQoUYmVk=";
+      hash = "sha256-ywF1cF+DSdAPzUavhT4Jh8DSgG+Y0hSHug6rJci1gFk=";
       name = "arm_xscale-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_xscale/telephony/Packages";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/";
   sha256sums = {
-    hash = "sha256-FU3ci+TRffG79PT+LzcHpoR9Wa7mSjUNHAQAX9DzNrA=";
+    hash = "sha256-UTjuW4Y8310+G1p1Xa9kUshL9Vkt2rSsUk4UWZ2qPzk=";
     name = "x86_legacy-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/sha256sums";
   };
   imagebuilder = {
-    sha256 = "5c408560d991115ec9a311ca27cd294cc4e160932766bf7a44d834b6ca608fe6";
+    sha256 = "62c89417f54aa1b9a8eb1367bfbbfa5313973359affb4d416312fdcac5045513";
     filename = "openwrt-imagebuilder-x86-legacy.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-51UewCgOMPO3SDasqATEwAUdSAVh1vxFNBG4CZGS47Q=";
+    hash = "sha256-1+r/yjPP3c74DuU1edy38IgpwSVEscJij/mpA4Iwtag=";
     name = "x86_legacy-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/profiles.json";
   };
@@ -78,7 +78,7 @@
   kmods."6.18.44-1-bf77309c2bef1f53d3a6871ae4b665ca" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/kmods/6.18.44-1-bf77309c2bef1f53d3a6871ae4b665ca/";
     sourceInfo = {
-      hash = "sha256-+DrDHtJZ18jcwpgn5HyfY9tlIONR21iMLCMm6/Vny5o=";
+      hash = "sha256-7J0/VjOaSYH1FfNsk5x2FikUze9HMZ84iWyq/sd3CVU=";
       name = "kmods-x86_legacy-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/kmods/6.18.44-1-bf77309c2bef1f53d3a6871ae4b665ca/packages.adb";
     };
@@ -91,7 +91,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/packages/";
     sourceInfo = {
-      hash = "sha256-VoDcTcahjnt2p/43gImfHOZOdZuacMmIX1yq+BNtQmM=";
+      hash = "sha256-xZtzWHGq8UWkMsWc9xyxDEbhZ1p1tPleqHqt/Xu6eEg=";
       name = "x86_legacy-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/legacy/packages/packages.adb";
     };
