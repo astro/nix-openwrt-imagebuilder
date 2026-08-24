@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/";
   sha256sums = {
-    hash = "sha256-KmWflZxOVOp3Do3Wwqv/Y+YlEVx619jNCB4KpV+m9Ok=";
+    hash = "sha256-sgqb1dgicAeJlP8PpJqAByTBLqprlIceFlJ6t/1px9Q=";
     name = "ipq40xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "851fb71d9e8b8e98c66c6dfbae57b5e1a4b7e6d5777e15733ad474d363256ddc";
+    sha256 = "2f1f4c66e21ffb3310a2144bbfbd1a1a468acbd8197844b1e52844d5c9ddb80b";
     filename = "openwrt-imagebuilder-ipq40xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-38z8xg0tFuuZY0lNmjx8eZlpkaNZFflNmcnjtkBogY4=";
+    hash = "sha256-sMrdsMowKGHnrhh8qH8H7LYabPRc3TvtXlPxCv0n9sE=";
     name = "ipq40xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a7_neon-vfpv4";
     linux_kernel = {
       release = "1";
-      vermagic = "ebcf513e937bafdb2033c08fcd947a7c";
+      vermagic = "4dab787e058821fee3b2045afdd958be";
       version = "6.18.44";
     };
     default_packages = [
@@ -58,7 +58,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.18.44-1-ebcf513e937bafdb2033c08fcd947a7c";
+    kmods_target = "6.18.44-1-4dab787e058821fee3b2045afdd958be";
     profiles = {
       "8dev_habanero-dvk" = {
         device_packages = [ ];
@@ -82,12 +82,16 @@
         device_packages = [ "kmod-hwmon-ad7418" ];
       };
       asus_map-ac1300 = {
-        device_packages = [ "kmod-ath3k" ];
+        device_packages = [
+          "kmod-ath3k"
+          "kmod-leds-lp5523"
+        ];
       };
       asus_map-ac2200 = {
         device_packages = [
           "ath10k-firmware-qca9888-ct"
           "kmod-ath3k"
+          "kmod-leds-lp5523"
         ];
       };
       asus_rt-ac42u = {
@@ -134,6 +138,8 @@
       };
       cellc_rtl30vw = {
         device_packages = [
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
           "kmod-usb-net-qmi-wwan"
           "kmod-usb-serial-option"
           "uqmi"
@@ -270,36 +276,69 @@
       };
       meraki_gx20 = {
         device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
           "-ath10k-board-qca4019"
           "-ath10k-firmware-qca9887-ct"
         ];
       };
       meraki_mr20 = {
-        device_packages = [ "ipq-wifi-meraki_underdog" ];
+        device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
+          "-ath10k-firmware-qca9887-ct"
+          "-kmod-leds-lp5562"
+          "ipq-wifi-meraki_underdog"
+        ];
       };
       meraki_mr30h = {
         device_packages = [
           "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
           "ipq-wifi-meraki_mr30h"
         ];
       };
       meraki_mr33 = {
-        device_packages = [ "ath10k-firmware-qca9887-ct" ];
+        device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
+        ];
       };
       meraki_mr70 = {
-        device_packages = [ "ipq-wifi-meraki_underdog" ];
+        device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
+          "-ath10k-firmware-qca9887-ct"
+          "-kmod-leds-lp5562"
+          "ipq-wifi-meraki_underdog"
+        ];
       };
       meraki_mr74 = {
-        device_packages = [ "ath10k-firmware-qca9887-ct" ];
+        device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
+        ];
       };
       meraki_z3 = {
         device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
           "-ath10k-firmware-qca9887-ct"
           "ipq-wifi-meraki_z3"
         ];
       };
       meraki_z3c = {
         device_packages = [
+          "ath10k-firmware-qca9887-ct"
+          "kmod-eeprom-at24"
+          "kmod-leds-lp5562"
           "kmod-usb-acm"
           "kmod-usb-net"
           "kmod-usb-net-cdc-ether"
@@ -307,18 +346,29 @@
         ];
       };
       mobipromo_cm520-79f = {
-        device_packages = [ "kmod-usb-ledtrig-usbport" ];
+        device_packages = [
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+          "kmod-usb-ledtrig-usbport"
+        ];
       };
       netgear_ex6100v2 = {
-        device_packages = [ ];
+        device_packages = [
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+        ];
       };
       netgear_ex6150v2 = {
-        device_packages = [ ];
+        device_packages = [
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+        ];
       };
       netgear_lbr20 = {
         device_packages = [
           "ipq-wifi-netgear_lbr20"
           "ath10k-firmware-qca9888-ct"
+          "kmod-leds-tlc591xx"
           "kmod-usb-net-qmi-wwan"
           "kmod-usb-serial-option"
           "uqmi"
@@ -328,6 +378,7 @@
         device_packages = [
           "ipq-wifi-netgear_rbk20"
           "ath10k-firmware-qca9888-ct"
+          "kmod-leds-tlc591xx"
         ];
       };
       netgear_rbr40 = {
@@ -335,6 +386,7 @@
           "e2fsprogs"
           "kmod-fs-ext4"
           "losetup"
+          "kmod-leds-tlc591xx"
           "ipq-wifi-netgear_rbk40"
           "ath10k-firmware-qca9888-ct"
         ];
@@ -344,6 +396,7 @@
           "e2fsprogs"
           "kmod-fs-ext4"
           "losetup"
+          "kmod-leds-tlc591xx"
           "ath10k-firmware-qca9984-ct"
         ];
       };
@@ -351,6 +404,7 @@
         device_packages = [
           "ipq-wifi-netgear_rbk20"
           "ath10k-firmware-qca9888-ct"
+          "kmod-leds-tlc591xx"
         ];
       };
       netgear_rbs40 = {
@@ -358,6 +412,7 @@
           "e2fsprogs"
           "kmod-fs-ext4"
           "losetup"
+          "kmod-leds-tlc591xx"
           "ipq-wifi-netgear_rbk40"
           "ath10k-firmware-qca9888-ct"
         ];
@@ -367,6 +422,7 @@
           "e2fsprogs"
           "kmod-fs-ext4"
           "losetup"
+          "kmod-leds-tlc591xx"
           "ath10k-firmware-qca9984-ct"
         ];
       };
@@ -375,6 +431,7 @@
           "e2fsprogs"
           "kmod-fs-ext4"
           "losetup"
+          "kmod-leds-tlc591xx"
           "ath10k-firmware-qca9984-ct"
         ];
       };
@@ -383,11 +440,16 @@
           "e2fsprogs"
           "kmod-fs-ext4"
           "losetup"
+          "kmod-leds-tlc591xx"
           "ath10k-firmware-qca9984-ct"
         ];
       };
       netgear_wac510 = {
-        device_packages = [ "uboot-envtools" ];
+        device_packages = [
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
+          "uboot-envtools"
+        ];
       };
       openmesh_a42 = {
         device_packages = [ ];
@@ -426,6 +488,7 @@
         device_packages = [
           "e2fsprogs"
           "kmod-fs-ext4"
+          "kmod-leds-lp5523"
           "uqmi"
         ];
       };
@@ -434,19 +497,33 @@
       };
       teltonika_rutx50 = {
         device_packages = [
+          "kmod-gpio-nxp-74hc164"
+          "kmod-spi-gpio"
           "kmod-usb-net-qmi-wwan"
           "kmod-usb-serial-option"
           "uqmi"
         ];
       };
       tplink_deco-m5-v1 = {
-        device_packages = [ ];
+        device_packages = [ "kmod-leds-lp5521" ];
       };
       tplink_deco-m5-v2 = {
-        device_packages = [ ];
+        device_packages = [ "kmod-leds-lp5521" ];
       };
       tplink_deco-m5-v3 = {
-        device_packages = [ ];
+        device_packages = [ "kmod-leds-lp5521" ];
+      };
+      ubnt_utr = {
+        device_packages = [
+          "ipq-wifi-ubnt_utr"
+          "kmod-i2c-gpio"
+          "kmod-iio-st_accel-i2c"
+          "kmod-drm-panel-mipi-dbi"
+          "kmod-backlight-pwm"
+          "kmod-gpio-pwm"
+          "kmod-btusb"
+          "mipi-dbi-ubnt-utr"
+        ];
       };
       wallys_dr40x9 = {
         device_packages = [ "ipq-wifi-wallys_dr40x9" ];
@@ -510,12 +587,12 @@
       };
     };
   };
-  kmods."6.18.44-1-ebcf513e937bafdb2033c08fcd947a7c" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.44-1-ebcf513e937bafdb2033c08fcd947a7c/";
+  kmods."6.18.44-1-4dab787e058821fee3b2045afdd958be" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.44-1-4dab787e058821fee3b2045afdd958be/";
     sourceInfo = {
-      hash = "sha256-PyAqoGuj7+VHIewH1JmgJRaCz0iT67Mkp1dSIZ7Merk=";
+      hash = "sha256-JkcCPP0dvlDIVuulyH1TEDuLFxV5rcZjqG91MvyqLp0=";
       name = "kmods-ipq40xx_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.44-1-ebcf513e937bafdb2033c08fcd947a7c/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.44-1-4dab787e058821fee3b2045afdd958be/packages.adb";
     };
     packages =
       let
@@ -526,7 +603,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-cgTPReyha6DEubMktAsDGnoDxnSLk9VTz7YXp3PzzKE=";
+      hash = "sha256-/Jq06Rl/dhKJG8EjCA22B1O00CxR4Z3F3i3C+8nxs4M=";
       name = "ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/packages.adb";
     };
