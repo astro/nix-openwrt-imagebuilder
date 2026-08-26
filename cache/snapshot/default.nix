@@ -71,6 +71,7 @@
   targets.qualcommax.ipq50xx = import ./targets/qualcommax/ipq50xx/default.nix;
   targets.qualcommax.ipq60xx = import ./targets/qualcommax/ipq60xx/default.nix;
   targets.qualcommax.ipq807x = import ./targets/qualcommax/ipq807x/default.nix;
+  targets.qualcommbe.ipq95xx = import ./targets/qualcommbe/ipq95xx/default.nix;
   targets.ramips.mt7620 = import ./targets/ramips/mt7620/default.nix;
   targets.ramips.mt7621 = import ./targets/ramips/mt7621/default.nix;
   targets.ramips.mt76x8 = import ./targets/ramips/mt76x8/default.nix;
