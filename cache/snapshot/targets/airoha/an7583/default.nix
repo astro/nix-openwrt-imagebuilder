@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/";
   sha256sums = {
-    hash = "sha256-jCfA1eUQK0KjaU61KKgOj2GcUiae/47OcQL4ex/4kjE=";
+    hash = "sha256-lzTJTVHaTGOtpRCsE9nde/gazLaQYyQ7mPnKxI/P6io=";
     name = "airoha_an7583-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/sha256sums";
   };
   imagebuilder = {
-    sha256 = "448989c8085203331d32668e76a8fc03abeea3fe7c03dfb179194685edeb517c";
+    sha256 = "b66cd51a11112a0068460b022e5b8e9a89bf166a91d754e65519a06e457e79bf";
     filename = "openwrt-imagebuilder-airoha-an7583.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-ebTSw/86yhchawdVOJoYkewvtaxJ6ovbgGzMWv+G8iY=";
+    hash = "sha256-gELOj9RBSEj3jvqb9KVDfDxVyuMk5usEXRymsjcRUXA=";
     name = "airoha_an7583-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/profiles.json";
   };
@@ -58,7 +58,7 @@
     profiles = {
       airoha_an7583-evb = {
         device_packages = [
-          "kmod-phy-aeonsemi-as21xxx"
+          "aeonsemi-as21xxx-firmware"
           "kmod-leds-pwm"
           "kmod-pwm-airoha"
           "kmod-input-gpio-keys-polled"
@@ -87,7 +87,7 @@
   kmods."6.18.44-1-27dfe06dde768ba476309ef74f3f38f7" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/kmods/6.18.44-1-27dfe06dde768ba476309ef74f3f38f7/";
     sourceInfo = {
-      hash = "sha256-CuZLkSaaElr5GhYqznC6R25L0pxWiROUCiooJA4Sp+A=";
+      hash = "sha256-An5TRS3Ou9KttndLU5vBS5+pqfIAY8o2Klo4zBYZB4A=";
       name = "kmods-airoha_an7583-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/kmods/6.18.44-1-27dfe06dde768ba476309ef74f3f38f7/packages.adb";
     };
@@ -100,7 +100,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/packages/";
     sourceInfo = {
-      hash = "sha256-wiZQN/l+JBby8Age4i4w1Nl4ehIdyiB48DH7/QfUbUM=";
+      hash = "sha256-Sn9AyMqP+XhKRvzLc+o1RPG4WdYVdcQIi6fNcgnyPTc=";
       name = "airoha_an7583-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7583/packages/packages.adb";
     };

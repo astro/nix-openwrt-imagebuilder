@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/";
   sha256sums = {
-    hash = "sha256-izRKOOlSy/X4uR9+uPsKANFMQ6DYmXhtvDmilsfW4QM=";
+    hash = "sha256-17X+a8P5lQPtU8uc49T1Nok9M0hbm7bd2KHgUZiS70U=";
     name = "realtek_rtl839x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "f2d1cf1e561092679664e15fc97a67980eb7ea87649cd427d0058275e97c2338";
+    sha256 = "83ad4640ddbb611526933d5e6b182e685f1092a084ac745a6e9fa06d3b2dc6d3";
     filename = "openwrt-imagebuilder-realtek-rtl839x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-axbSrfVIfkzh6LC7sKdvdDnWRtWEDMu8LkGrbet44o0=";
+    hash = "sha256-7WgZrwCoZRptk53RT1VLxOKcYkHycoPmfFwKnGlESOE=";
     name = "realtek_rtl839x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/profiles.json";
   };
@@ -100,6 +100,9 @@
       zyxel_gs1900-48hp-a1 = {
         device_packages = [ "realtek-poe" ];
       };
+      zyxel_gs1920-24-v1 = {
+        device_packages = [ "kmod-hwmon-lm85" ];
+      };
       zyxel_gs1920-24hp-v1 = {
         device_packages = [
           "kmod-hwmon-lm85"
@@ -117,7 +120,7 @@
   kmods."6.18.44-1-eccc3b67684336090f213b22c5192d39" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/kmods/6.18.44-1-eccc3b67684336090f213b22c5192d39/";
     sourceInfo = {
-      hash = "sha256-rcIKcW0rlGd56sH3tUdfFskvvfkbSmYiDVWqUX4rswA=";
+      hash = "sha256-tApXjy/aaVjk1nECE8LFElMpO6zNEJkeoD1V0yHrzLc=";
       name = "kmods-realtek_rtl839x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/kmods/6.18.44-1-eccc3b67684336090f213b22c5192d39/packages.adb";
     };
@@ -130,7 +133,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/packages/";
     sourceInfo = {
-      hash = "sha256-/yUAFtw9xyeRfziGYB0XsOYAXfzr6TsNj6gxsPArABQ=";
+      hash = "sha256-/PTyYssZRQiO6ltTjX5reNnIvAIwFwvfw7tEpTQGNVY=";
       name = "realtek_rtl839x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl839x/packages/packages.adb";
     };
