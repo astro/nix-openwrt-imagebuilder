@@ -1,14 +1,14 @@
 # snapshot package feeds for arm_cortex-a7
 {
   sha256sums = {
-    hash = "sha256-xud5qpsDJMR+qyzE2ZU7UpohEbTiYRvgo21B/4ydjuQ=";
+    hash = "sha256-Bynnur4IBNQNEBmETqyppL/udgbCkaeS15uX5KFYxEE=";
     name = "arm_cortex-a7-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/base/";
     sourceInfo = {
-      hash = "sha256-4EMQx1+yQmR6yIiQsnUpn5X7nJPN3S9AEAbIjpq6U68=";
+      hash = "sha256-uA9e2UIXwHdR6QqOAgstcZwMO26kbOj7ggOn5D+6qtg=";
       name = "arm_cortex-a7-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/luci/";
     sourceInfo = {
-      hash = "sha256-dgtRk2HBcyAWGqmVWS3SjEXlsG00eJiYui7rdmyVdsg=";
+      hash = "sha256-qu+pBqRL+AjxeukgLIa3j3vNOcfy+EbSfwsRE59XBUA=";
       name = "arm_cortex-a7-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/packages/";
     sourceInfo = {
-      hash = "sha256-walrnUEM08XxeJizbNlo2JgxlYfHieGCNi46FFI3R5I=";
+      hash = "sha256-zAOh2JZxP+TJrMrzQSOZCl1VI6AevTJfy4Bf1CFbPSY=";
       name = "arm_cortex-a7-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/routing/";
     sourceInfo = {
-      hash = "sha256-LcVrnDyerrry3Bq5lyALYhl2UuxCOvFSp0nWtAsJYuA=";
+      hash = "sha256-i0RiZGE3gxeJhpun3DLxHhHBfuytHCd2UpwoR0JnW0A=";
       name = "arm_cortex-a7-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/telephony/";
     sourceInfo = {
-      hash = "sha256-uo/aPhcFcD/c3ZZtRwFdwVR+kIu9Q/Odsb+7UVSjjGU=";
+      hash = "sha256-yJl6+1wQN27mccs2AcoKbn/m2U9cwEBh3qUE54PDaIc=";
       name = "arm_cortex-a7-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/arm_cortex-a7/telephony/packages.adb";
     };
