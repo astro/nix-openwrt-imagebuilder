@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/";
   sha256sums = {
-    hash = "sha256-m8qa4iA19UYQAkL78prgLZI3vUFeCPE5QlbSkVjQn78=";
+    hash = "sha256-glTtWbcuI2W34Keu15owFCwOW9tzv4ntwvhfMkd5EY4=";
     name = "mediatek_mt7623-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/sha256sums";
   };
   imagebuilder = {
-    sha256 = "7c5d710908fb0eafe76b61832f2511c88481b059d08838e532acff1821b6d847";
+    sha256 = "d1c329a45057648db758daff154d415069c248617079b9b16416a0474286df17";
     filename = "openwrt-imagebuilder-mediatek-mt7623.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-wiRun5zgMPNTNKl/1ieyiZPy5r9WFofhr8LRHIIgqiU=";
+    hash = "sha256-diL5gNhA5ntAHA/ime7HKlMwLQ8OdHw6Jl+K9HBrUdw=";
     name = "mediatek_mt7623-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/profiles.json";
   };
@@ -97,7 +97,7 @@
   kmods."6.18.44-1-43e4d792faebbcbea23ded0a2c3f2245" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/kmods/6.18.44-1-43e4d792faebbcbea23ded0a2c3f2245/";
     sourceInfo = {
-      hash = "sha256-MVXEFp7X+5ddMrFV4GuFnd5zeGZLojySVviSXM1DOEg=";
+      hash = "sha256-rHlUJN8Dl0K6EJhKzU81FGtTIecvrsp4c4Q/bWMwvVU=";
       name = "kmods-mediatek_mt7623-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/kmods/6.18.44-1-43e4d792faebbcbea23ded0a2c3f2245/packages.adb";
     };
@@ -110,7 +110,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/packages/";
     sourceInfo = {
-      hash = "sha256-CGk47IcmgNBJY5FylwO1wwZ+SoGHWQuaBa9AdMCVuLM=";
+      hash = "sha256-S8scKtuog4qqnayZuZnnpGwqvyS+Zpa2BS9v9SiT9Us=";
       name = "mediatek_mt7623-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/packages/packages.adb";
     };
