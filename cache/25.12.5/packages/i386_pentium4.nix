@@ -1,14 +1,14 @@
 # 25.12.5 package feeds for i386_pentium4
 {
   sha256sums = {
-    hash = "sha256-/tugtxXOA9jQRqNucMysrfCk+mNpiYzvO1nLoxjHNSI=";
+    hash = "sha256-MrnEu3IbPEbq+/+Px56FHRlSXB39Dxc7zlUp1MC2YoE=";
     name = "i386_pentium4-sha256sums";
     url = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/base/";
     sourceInfo = {
-      hash = "sha256-n5CXAH9DTGD1V8GB9e3SnaftGNnQZ6u6HYZQ7dhs07U=";
+      hash = "sha256-GRdnC0oRi7UvNveWZ0c9oCcPsmPjhBXhNVCIfIzadDE=";
       name = "i386_pentium4-base-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/luci/";
     sourceInfo = {
-      hash = "sha256-F6ibX80KzbMD+UH5Oq2+L74pq4XNE3OhGXJs7fW0U+8=";
+      hash = "sha256-EqnytCtnNizv5+27UfaNqohBjLIF75KkKvWKAD2+4kc=";
       name = "i386_pentium4-luci-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/packages/";
     sourceInfo = {
-      hash = "sha256-cGWHSwId1Mdr1iP2TFfWPuQ/rmpcF60F4sMj3a6nfeQ=";
+      hash = "sha256-v1jIsCLxJ8BHGarcel8XL0RUBWTtwtFt2kEsK4g0jsU=";
       name = "i386_pentium4-packages-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/routing/";
     sourceInfo = {
-      hash = "sha256-Ze17J7kG/T+MVarpIIQsxJDLuVPzGIp8pRCm4MCypiE=";
+      hash = "sha256-UyPhovYs0o8FXJmMiqH+PflQ04yQ9z3QNtusCWOu/Fo=";
       name = "i386_pentium4-routing-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/telephony/";
     sourceInfo = {
-      hash = "sha256-8BFAjbmIC9yy6yEaxeDgVOL6mE1fQxJS3aZ2sZTsWDA=";
+      hash = "sha256-4Y6bpWlZjEyeRobLtSm7TpRbOpnGQV9SRQJQ8DD17OU=";
       name = "i386_pentium4-telephony-packages.adb";
       url = "https://downloads.openwrt.org/releases/25.12.5/packages/i386_pentium4/telephony/packages.adb";
     };
