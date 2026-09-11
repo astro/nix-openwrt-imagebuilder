@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-2xIgEBoKlc+W4SUKotsg3vbJe9+RxCJ4Z3rToNkjxm0=";
+    hash = "sha256-3En9kE2lu7i7KBT/+5jmSqsNAdnAXRUecci8gfskQq8=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "0c9a1a98500b15a0f5e8f42eefd708b700619623012f83196926774e177208f2";
+    sha256 = "d937a61b85d358165f34fe2708ef222d56905bd88d597855e5aac4d3d9fc402e";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-W91k8qXNY7aDceTZuI54nO/sx4ALXR/AvEITvf/JKv4=";
+    hash = "sha256-UoHrcW4Du4urUi6L5HfI6/UOatSSnQbI4BpInJuu+Bk=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -1565,6 +1565,7 @@
         device_packages = [
           "kmod-ath10k-ct-smallbuffers"
           "ath10k-firmware-qca9888-ct"
+          "ipq-wifi-tplink_archer-c60-v3"
         ];
       };
       tplink_archer-c7-v1 = {
@@ -2251,7 +2252,7 @@
   kmods."6.18.44-1-131d19028fa37028e24f2304890bef3f" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.44-1-131d19028fa37028e24f2304890bef3f/";
     sourceInfo = {
-      hash = "sha256-xn8dnivZ4FdDkSF5EEZz4Tn7t0JgWb1keURfL8iUBrY=";
+      hash = "sha256-kWeqS8CuNGH9JY2gQbMA7zO5ZUwc6Rc5ixbIYUdfyNQ=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.44-1-131d19028fa37028e24f2304890bef3f/packages.adb";
     };
@@ -2264,7 +2265,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-QcK2SWL/dsS5WBy7vg+SgRORliMzilNWM+2XQdyR2H4=";
+      hash = "sha256-pzZRdfe3o0neCvC0bAadmC8Qg+5K+z/JwXlURCrJzdk=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
