@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for arm_fa526
 {
   sha256sums = {
-    hash = "sha256-mZLKzKT56yJm1zNuD1CyiJYG3nFUWModpg2cpxcKBzQ=";
+    hash = "sha256-99TJxWYzDBudknnE3UDwf/2jUT0c/YU5ojhY6jVfMF0=";
     name = "arm_fa526-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/packages/";
     sourceInfo = {
-      hash = "sha256-k/Wyw5sdZOuMrxR0B7k/hbQv9zlmaIYp1VNVWdX1Tao=";
+      hash = "sha256-YTEt69XVnSqRNI1xBuJT+HHjPmWxTapYzzsSplCzTeU=";
       name = "arm_fa526-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/routing/";
     sourceInfo = {
-      hash = "sha256-f5Ux8b9INgemUsCtoobe3zJ056axAyG+qY/62iEgRE0=";
+      hash = "sha256-Q1+r50jpgHMYwLlWjU4oENtIAfizIlA2e1GI2y7lB6k=";
       name = "arm_fa526-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/telephony/";
     sourceInfo = {
-      hash = "sha256-OHD2arb8oKeYEoAZxXvkwBIStdNMGYD6AFsUe5+pIcQ=";
+      hash = "sha256-7NfGIuPrikezJIhQjky2Mp6cOyHuaCqEyW0+mUIXQBM=";
       name = "arm_fa526-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_fa526/telephony/Packages";
     };
