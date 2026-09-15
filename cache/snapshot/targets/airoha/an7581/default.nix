@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/";
   sha256sums = {
-    hash = "sha256-HIaIVuS92QtlqxIc84PmTm7Ta+s2+fDQaopeazTgj64=";
+    hash = "sha256-UpNCc4+ilvdkpqkhe628M788gCOU0m4DD7EThWDLD3M=";
     name = "airoha_an7581-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/sha256sums";
   };
   imagebuilder = {
-    sha256 = "0e30272b35ee98c424c4ebdbde08121ab3ecbd369568c0da2ad82ea0e32f360a";
+    sha256 = "eb69b90afb00a4b5e4a59772b1d513da9c489dedaca901edcffee8c38ff62f28";
     filename = "openwrt-imagebuilder-airoha-an7581.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-1T4k9EcmWh/5zgrdZfvqPsjHYcUjGf8fmdClwOyXk7g=";
+    hash = "sha256-1Mmh21U5VVQxI3VyHS/fmALHLzjPQtKA++pDQTuChBM=";
     name = "airoha_an7581-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/profiles.json";
   };
@@ -120,12 +120,19 @@
           "fitblk"
         ];
       };
+      quantum_q1000k-ubi = {
+        device_packages = [
+          "fitblk"
+          "nand-utils"
+          "rtl826x-firmware"
+        ];
+      };
     };
   };
   kmods."6.18.44-1-a07881b2999da93f21557ae7fbcd4615" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.44-1-a07881b2999da93f21557ae7fbcd4615/";
     sourceInfo = {
-      hash = "sha256-Qb0AFuPpEbjSsp97wMoRR8USXXx5ODABoKgctrWwaxk=";
+      hash = "sha256-4wZGyb5LpilSbepGKH/vmi289R/OFLdU6Yo4dEtTVaA=";
       name = "kmods-airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.44-1-a07881b2999da93f21557ae7fbcd4615/packages.adb";
     };
@@ -138,7 +145,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/";
     sourceInfo = {
-      hash = "sha256-RNzGoz8a5E3ydV9z+aV/piqMTlCJ6KduxnkI7EcqwuI=";
+      hash = "sha256-tmG3tWrhtCU6h2xsLDY7WUj0NGu+iYhTjLcQRPxWF4k=";
       name = "airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/packages.adb";
     };
