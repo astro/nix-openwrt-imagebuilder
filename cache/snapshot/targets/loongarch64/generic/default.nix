@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/";
   sha256sums = {
-    hash = "sha256-ZN/dzqzXpBborzBJe6h639aYOXAApcFwq+ij7Lm8K9U=";
+    hash = "sha256-ZenRJ8pnG7P191EGmzAzJVRCW6WLXLys19l+uQ7xtNg=";
     name = "loongarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "774d7425ffa262510d398ee6d0d7655163bb7bea61c9519f7bdc544ec3f853f8";
+    sha256 = "e8d4dc4bcac018a1780f4b436605ec533301015fe5a19665127e7a02ad1d73f6";
     filename = "openwrt-imagebuilder-loongarch64-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-95DgbQ+Xa+vEwaYjbMLfD0jlka9JWXydPYO0SzMBIVc=";
+    hash = "sha256-mstaeeS9cR/krlTooVQpHxF+LeDjjjQO5M7VzAfXAzY=";
     name = "loongarch64_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/profiles.json";
   };
@@ -65,7 +65,7 @@
   kmods."6.12.108-1-c4cb395fdf368979e893c6cf59e2a6a8" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/kmods/6.12.108-1-c4cb395fdf368979e893c6cf59e2a6a8/";
     sourceInfo = {
-      hash = "sha256-7HWHhRm92Up2RT44QY13rFpE89SiA1X0AIr6YJMXdsY=";
+      hash = "sha256-fA/RS/ByJuFeHjxYLxuMqnLMfSA9a0o2qSYOgUf2U1I=";
       name = "kmods-loongarch64_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/kmods/6.12.108-1-c4cb395fdf368979e893c6cf59e2a6a8/packages.adb";
     };
@@ -78,7 +78,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/packages/";
     sourceInfo = {
-      hash = "sha256-z03llkx2vhPhLC2IcT4apCr0dzUypsgai0LFuzmsuDA=";
+      hash = "sha256-BKhAqCyZOIBM4OIDKQeXTQnqC0SwmZpPK7i1hx5dJ30=";
       name = "loongarch64_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/packages/packages.adb";
     };
