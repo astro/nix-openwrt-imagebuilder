@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/";
   sha256sums = {
-    hash = "sha256-F2kHMGRN3SyZPAirE5F8ejQ6nUD9+MNTVYP9Vg8OsW0=";
+    hash = "sha256-fY8aKPFatitOY1gci30rZfPpzWoN6ILGVCOl/5piBzE=";
     name = "mediatek_filogic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "1587d54b31c41ba932756ea84d19179b59901d4bd634cdbd3a59cb03a0eeb6b4";
+    sha256 = "232225196a4708ee4f3a2b7170c5a6c8f251730cd541731cf26200472fb39984";
     filename = "openwrt-imagebuilder-mediatek-filogic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-ddWpRprqS6OLPN6NKBMAIgGR5+7opUR26necxXe4thw=";
+    hash = "sha256-A+gE48lR968mLETep6bdvk02VGmGI0gOR+Y3QS/ARs0=";
     name = "mediatek_filogic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/profiles.json";
   };
@@ -1814,7 +1814,7 @@
   kmods."6.18.52-1-ad717000820da8eae7e47e52f580efcb" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/kmods/6.18.52-1-ad717000820da8eae7e47e52f580efcb/";
     sourceInfo = {
-      hash = "sha256-QzHxLWx9AWfDwa4NMJA++KN/80UWlEhTsdgKT4NnY3o=";
+      hash = "sha256-MWfQ8g8R5M8udw7FPDB9VY3qoMGgu4+1aIzGAOVJfdA=";
       name = "kmods-mediatek_filogic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/kmods/6.18.52-1-ad717000820da8eae7e47e52f580efcb/packages.adb";
     };
@@ -1827,7 +1827,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/packages/";
     sourceInfo = {
-      hash = "sha256-bOo5RGakVQ7oWHDUYJECWzGQ3IRHLkzwrUAo8ih/aTA=";
+      hash = "sha256-skPfhd8VV24ViaUINFrIzs7ANHeYUhw4KOsd66yquDo=";
       name = "mediatek_filogic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/packages/packages.adb";
     };

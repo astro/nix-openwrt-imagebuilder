@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/";
   sha256sums = {
-    hash = "sha256-9rjzQw+WbLSPzSaWXXFv4FnXc8UoOpzBhn+zRbbkTHY=";
+    hash = "sha256-UGLlTyA9F5/4qBnKXY91/tdJxXRLGDB1uvWlYy0dJlg=";
     name = "realtek_rtl931x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ac619c430db9ae9cd7284a04a54c88a47d78ef22996dc2a5c3d4d096c6d0b2be";
+    sha256 = "9963121bbdca47eed6664cad3dc99e7137f96ea805126fe3b5672beb6b9231c3";
     filename = "openwrt-imagebuilder-realtek-rtl931x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-0n+WLpiuNi1VcwgEziJLkr4ycHwafHCZaEJ8ma/Fz/E=";
+    hash = "sha256-B3kfCbe0SS/8eLUlPbNjSS4XgjIZkPcOpMd1nmSl3TQ=";
     name = "realtek_rtl931x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/profiles.json";
   };
@@ -80,6 +80,9 @@
           "kmod-pse-realtek-mcu-i2c"
         ];
       };
+      sirivision_sr-st31212f = {
+        device_packages = [ ];
+      };
       ubnt_usw-pro-xg-8-poe = {
         device_packages = [
           "rtl826x-firmware"
@@ -114,7 +117,7 @@
   kmods."6.18.52-1-be878f2f7edbf5f694f4a9989f785332" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.52-1-be878f2f7edbf5f694f4a9989f785332/";
     sourceInfo = {
-      hash = "sha256-tV9yh/eXOhHZBvEtx9Kl0RdQl8VjMmipp5/wj8IB8bE=";
+      hash = "sha256-0Kf2vQxUo4WnXTSaP5wiuJbAoEoDkJrtIocWvhBi+qU=";
       name = "kmods-realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.52-1-be878f2f7edbf5f694f4a9989f785332/packages.adb";
     };
@@ -127,7 +130,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/";
     sourceInfo = {
-      hash = "sha256-W/SOGfs6axBo6mO977WyYK+wBE+M0dUERDmeQW1rb4I=";
+      hash = "sha256-y03BrhYe9kcfNPeVD4+odsqCfK+maBWnh/usn+/KIVM=";
       name = "realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/packages.adb";
     };
