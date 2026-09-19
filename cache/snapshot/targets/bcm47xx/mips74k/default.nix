@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/";
   sha256sums = {
-    hash = "sha256-Udb1LJLvFLoqVo4anL/OLSRCDqPhmYh7wAQ5QDBHcZI=";
+    hash = "sha256-nfBQX36UKn0iCVqUmLlxCQbspePI7CaOrizOrKNrb3s=";
     name = "bcm47xx_mips74k-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ad0389a89e901fa2d5f6a060225538e133f5938c0cb1ea9359d1d1418c89b3e1";
+    sha256 = "5ca3c6fe7743a5856b0c38e650f500dd384ce0a2b36233e678ce4b6193979f6f";
     filename = "openwrt-imagebuilder-bcm47xx-mips74k.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-nbHeISu7K/d7qWQ/RZ6rk2C9Rb8tmtYor+i55Rh3xo0=";
+    hash = "sha256-XpCPLrDh/NQ8X+i1zbM98wBTxCMxOzzrbJrCOKZvXcU=";
     name = "bcm47xx_mips74k-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mipsel_74kc";
     linux_kernel = {
       release = "1";
-      vermagic = "90833f185d2c1343570ad4c318e14638";
+      vermagic = "d8642a48de7a72138dca8623728c7cae";
       version = "6.12.108";
     };
     default_packages = [
@@ -54,7 +54,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.12.108-1-90833f185d2c1343570ad4c318e14638";
+    kmods_target = "6.12.108-1-d8642a48de7a72138dca8623728c7cae";
     profiles = {
       asus_rt-ac53u = {
         device_packages = [
@@ -199,12 +199,12 @@
       };
     };
   };
-  kmods."6.12.108-1-90833f185d2c1343570ad4c318e14638" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/kmods/6.12.108-1-90833f185d2c1343570ad4c318e14638/";
+  kmods."6.12.108-1-d8642a48de7a72138dca8623728c7cae" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/kmods/6.12.108-1-d8642a48de7a72138dca8623728c7cae/";
     sourceInfo = {
-      hash = "sha256-JOaksdEr/OdrtbygwIjrsS1mkj5BbwSbCJFQ7u6MB9M=";
+      hash = "sha256-HL1yTZtvVveDMzdaFRRYAj7aWWbCkCup4jhk/z9hNK8=";
       name = "kmods-bcm47xx_mips74k-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/kmods/6.12.108-1-90833f185d2c1343570ad4c318e14638/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/kmods/6.12.108-1-d8642a48de7a72138dca8623728c7cae/packages.adb";
     };
     packages =
       let
@@ -215,7 +215,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/packages/";
     sourceInfo = {
-      hash = "sha256-q0KlvVY6V1vEhw8FZy4nFEh7eaMBDzZUBjBLu1siGQM=";
+      hash = "sha256-ZRIQspIzgXwr13zRnf2R9lBCiVApDpphCncOXaX7am8=";
       name = "bcm47xx_mips74k-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm47xx/mips74k/packages/packages.adb";
     };

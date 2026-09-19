@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-rFng4rtuDC9uVLaOVFaX9wElpNb3uYUVtICts2Xp+bE=";
+    hash = "sha256-od+ipCKLe/XfVb1xnJYrSEuHfMAYlascjXbuf7G8XmA=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "820b0e09da25c5a6f9147c28bf8d6400403859eabad94db1e4b3faeed84705c0";
+    sha256 = "7be9d811e841e25b2459d036ddc046cf7cbe80e71ee4cfaa140569eddb704c9b";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-PumAe8Qb6uRnhKtVtSCid6Y82NS9650x0ehEvgSxsPo=";
+    hash = "sha256-HdT4sI6yttv9OKo+UAzrE+psydVHAoVrUwL51IT6sAs=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mips_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "9bc35da3771fd21b3d984e0ccd9172c9";
+      vermagic = "49525896d5569a7768749d5ec6cbf8d2";
       version = "6.18.52";
     };
     default_packages = [
@@ -53,7 +53,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.18.52-1-9bc35da3771fd21b3d984e0ccd9172c9";
+    kmods_target = "6.18.52-1-49525896d5569a7768749d5ec6cbf8d2";
     profiles = {
       "8dev_carambola2" = {
         device_packages = [ "kmod-usb-chipidea2" ];
@@ -1508,6 +1508,9 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca988x-ct"
+          "kmod-dsa-qca8k"
+          "kmod-phy-qca83xx"
+          "-swconfig"
         ];
       };
       tplink_archer-c58-v1 = {
@@ -1572,6 +1575,9 @@
         device_packages = [
           "kmod-usb2"
           "kmod-usb-ledtrig-usbport"
+          "kmod-dsa-qca8k"
+          "kmod-phy-qca83xx"
+          "-swconfig"
         ];
       };
       tplink_archer-c7-v2 = {
@@ -1580,6 +1586,9 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca988x-ct"
+          "kmod-dsa-qca8k"
+          "kmod-phy-qca83xx"
+          "-swconfig"
         ];
       };
       tplink_archer-c7-v4 = {
@@ -1814,6 +1823,9 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca988x-ct"
+          "kmod-dsa-qca8k"
+          "kmod-phy-qca83xx"
+          "-swconfig"
         ];
       };
       tplink_tl-wpa8630-v1 = {
@@ -2249,12 +2261,12 @@
       };
     };
   };
-  kmods."6.18.52-1-9bc35da3771fd21b3d984e0ccd9172c9" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-9bc35da3771fd21b3d984e0ccd9172c9/";
+  kmods."6.18.52-1-49525896d5569a7768749d5ec6cbf8d2" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-49525896d5569a7768749d5ec6cbf8d2/";
     sourceInfo = {
-      hash = "sha256-4rjd4LxfNRN+SPUPaDcP5PiW+/AnfYlwtclZMg6nliU=";
+      hash = "sha256-dXF0tD9SYBEHOzqPldipI1131z7773Q+6ROTtI+Pg5Y=";
       name = "kmods-ath79_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-9bc35da3771fd21b3d984e0ccd9172c9/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-49525896d5569a7768749d5ec6cbf8d2/packages.adb";
     };
     packages =
       let
@@ -2265,7 +2277,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-oLfTOmzowP3t2uHPPxgBhRfVAXkBjT/T1U7pRfNmSro=";
+      hash = "sha256-YK7lLlgxXUb60JDaxIH3A43zySgxi32vT8ckVoxWYTE=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
