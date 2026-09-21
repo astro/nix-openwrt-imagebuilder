@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/";
   sha256sums = {
-    hash = "sha256-/lqyHboA7/oZ1OF4NrIpzZERZTirDB6GLe01d+5//14=";
+    hash = "sha256-D1delvjbuncw2bBn25osAfQCEb2yb0DlFsM+7srY+So=";
     name = "layerscape_armv8_64b-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/sha256sums";
   };
   imagebuilder = {
-    sha256 = "d6b56de6361425feed4231ce2a16f9bfe72cb20825ced96937d5596933898112";
+    sha256 = "3da8bcd38012a80aaf776697918dd8aedf26624e126299cef2084d906ba512f7";
     filename = "openwrt-imagebuilder-layerscape-armv8_64b.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-3RaV833RD4XfzkZfpLQFlK5QLA00cMEzQelbshmFy50=";
+    hash = "sha256-TeTZP1iergjGjqRJuq/6+XRyLyZ62EyuRLvvofucMiQ=";
     name = "layerscape_armv8_64b-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/profiles.json";
   };
@@ -167,7 +167,7 @@
   kmods."6.18.52-1-c1db4a2e2f5678b725fab36bde14db3f" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/kmods/6.18.52-1-c1db4a2e2f5678b725fab36bde14db3f/";
     sourceInfo = {
-      hash = "sha256-motr9IJ0Ab1SuJOLmxzPUsqWkSwyYrQoLynW0XjnMJs=";
+      hash = "sha256-F3gi4g1z7VUmMQz+xn4bTB+mZ9qx6PCT4mXZ/0Blqic=";
       name = "kmods-layerscape_armv8_64b-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/kmods/6.18.52-1-c1db4a2e2f5678b725fab36bde14db3f/packages.adb";
     };
@@ -180,7 +180,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/packages/";
     sourceInfo = {
-      hash = "sha256-wqxOFYKINs0L1mdeibLrAW9Nw9GiXXBC58kbXD1rjxI=";
+      hash = "sha256-BDlRJXnQ3M0CuR+v5qkc2uBox/Lqqwjrh94lDHPVBdM=";
       name = "layerscape_armv8_64b-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv8_64b/packages/packages.adb";
     };

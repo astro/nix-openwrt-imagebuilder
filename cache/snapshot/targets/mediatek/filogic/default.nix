@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/";
   sha256sums = {
-    hash = "sha256-f8X3n70BF4tHp3NeHJ5lmx+TjRfvAuKtGcN9MAzy+r4=";
+    hash = "sha256-N7EYkQTIJDkd3U7DgXi6gOWNQBFiT8IRoUWWxXt1/cU=";
     name = "mediatek_filogic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "1241e3703aeb55186f5b725d45da543be0a3fb3b6bf70ff6045648c64a9af16e";
+    sha256 = "f060b1f5e4b314115b2a0d83c5d934c2adbed873a64c25981a884a5e37882eef";
     filename = "openwrt-imagebuilder-mediatek-filogic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-YY/zssV5AMpUjjCu4Jhieug1pV5ajRPnKV9pcxpV/3Q=";
+    hash = "sha256-hGIVtJae5qxpi4a+RUr6OkV+ZkVJv+Qjjiy/6gxonpw=";
     name = "mediatek_filogic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/profiles.json";
   };
@@ -978,6 +978,13 @@
           "rtl826x-firmware"
         ];
       };
+      keenetic_kn-3411 = {
+        device_packages = [
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
+        ];
+      };
       keenetic_kn-3711 = {
         device_packages = [
           "kmod-mt7915e"
@@ -999,6 +1006,13 @@
           "kmod-mt7981-firmware"
           "mt7981-wo-firmware"
           "kmod-phy-airoha-en8811h"
+        ];
+      };
+      keenetic_kn-4410 = {
+        device_packages = [
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
         ];
       };
       konka_komi-a31 = {
@@ -1132,6 +1146,20 @@
           "mt7988-wo-firmware"
           "kmod-phy-realtek"
           "rtl826x-firmware"
+        ];
+      };
+      netcraze_nc-3411 = {
+        device_packages = [
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
+        ];
+      };
+      netcraze_nc-4410 = {
+        device_packages = [
+          "kmod-mt7915e"
+          "kmod-mt7981-firmware"
+          "mt7981-wo-firmware"
         ];
       };
       netgear_eax17 = {
@@ -1825,7 +1853,7 @@
   kmods."6.18.52-1-2375d3e44edb80fb2294f4d34dedb887" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/kmods/6.18.52-1-2375d3e44edb80fb2294f4d34dedb887/";
     sourceInfo = {
-      hash = "sha256-wEqYx+qR0dtF2uRPngwbAvhtoAf+F2Rde7BXhHBlPlM=";
+      hash = "sha256-MU4Uy3pUU+V4A6kMSPDyEzxmLjovkdMjnIS56FOk290=";
       name = "kmods-mediatek_filogic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/kmods/6.18.52-1-2375d3e44edb80fb2294f4d34dedb887/packages.adb";
     };
@@ -1838,7 +1866,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/packages/";
     sourceInfo = {
-      hash = "sha256-GPpot2+ZwWUsWYQdcGf+RCAJSuv4YEXxnbjnqtErs7A=";
+      hash = "sha256-1SAJPmm9o+Pw2Xh1lVKd9FbHwo21gnTplOb5DebPtU4=";
       name = "mediatek_filogic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/filogic/packages/packages.adb";
     };
