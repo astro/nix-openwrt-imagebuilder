@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-udHAd7qT2kQuslz5xTtO/PU5iXXjGQHkg7ZAC8gFAS8=";
+    hash = "sha256-SJ+IcVyJlI+E6UnVI1YMtzvcxYsTs4x5+6Sntd/BaQ0=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "41d47b32197044b3c4f46313dde2455c7c1695ce3c56f2dce08794c29a2b8748";
+    sha256 = "0ef75fdc223d48dfb13260761f4c71bdfd99f60010925babea05261bccfc795d";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-/guqIjTYJT9rHHq+K8yZeZ7zIQXjgcKa4FRO/hdBZB8=";
+    hash = "sha256-AjA3V1pebDC+ee3SmoLk+itzeKTIvYkAJ9418mhHtEU=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mips_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "10bbb657c193f9bc836f9b188ce5bec6";
+      vermagic = "52f8c650c2d33219cfcc9d5affe94194";
       version = "6.18.52";
     };
     default_packages = [
@@ -53,7 +53,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.18.52-1-10bbb657c193f9bc836f9b188ce5bec6";
+    kmods_target = "6.18.52-1-52f8c650c2d33219cfcc9d5affe94194";
     profiles = {
       "8dev_carambola2" = {
         device_packages = [ "kmod-usb-chipidea2" ];
@@ -256,6 +256,7 @@
         device_packages = [
           "fritz-tffs"
           "rssileds"
+          "kmod-phy-intel-xway"
           "-swconfig"
         ];
       };
@@ -1508,9 +1509,6 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca988x-ct"
-          "kmod-dsa-qca8k"
-          "kmod-phy-qca83xx"
-          "-swconfig"
         ];
       };
       tplink_archer-c58-v1 = {
@@ -1575,9 +1573,6 @@
         device_packages = [
           "kmod-usb2"
           "kmod-usb-ledtrig-usbport"
-          "kmod-dsa-qca8k"
-          "kmod-phy-qca83xx"
-          "-swconfig"
         ];
       };
       tplink_archer-c7-v2 = {
@@ -1586,9 +1581,6 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca988x-ct"
-          "kmod-dsa-qca8k"
-          "kmod-phy-qca83xx"
-          "-swconfig"
         ];
       };
       tplink_archer-c7-v4 = {
@@ -1823,9 +1815,6 @@
           "kmod-usb-ledtrig-usbport"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca988x-ct"
-          "kmod-dsa-qca8k"
-          "kmod-phy-qca83xx"
-          "-swconfig"
         ];
       };
       tplink_tl-wpa8630-v1 = {
@@ -2261,12 +2250,12 @@
       };
     };
   };
-  kmods."6.18.52-1-10bbb657c193f9bc836f9b188ce5bec6" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-10bbb657c193f9bc836f9b188ce5bec6/";
+  kmods."6.18.52-1-52f8c650c2d33219cfcc9d5affe94194" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-52f8c650c2d33219cfcc9d5affe94194/";
     sourceInfo = {
-      hash = "sha256-q+Ecq+d87oLbcZlThLr0Qr8wOmwZGSttm/H4PdRh1M4=";
+      hash = "sha256-H6XqBBt4SU72FevXdl+ktWNKl024//UNg9+8r7+NvFE=";
       name = "kmods-ath79_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-10bbb657c193f9bc836f9b188ce5bec6/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.52-1-52f8c650c2d33219cfcc9d5affe94194/packages.adb";
     };
     packages =
       let
@@ -2277,7 +2266,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-fbzQoJhy9jxVWCWTcNsTr10oYXDe++R25R/ZPSt7zJU=";
+      hash = "sha256-e5WiwKXlTjpIRhq+Q2kH05FiI3ajIUIZryuZciIMTuA=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
