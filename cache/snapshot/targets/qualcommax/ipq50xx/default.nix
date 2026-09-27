@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/";
   sha256sums = {
-    hash = "sha256-74ZYBaxSaJ0jE62LdP1hTZw+gzqchl596y6P5ypi4Gk=";
+    hash = "sha256-jsLH1+xF6qIJ6vr9n+9auviOMX7INp5/UM1wsJZPtrI=";
     name = "qualcommax_ipq50xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "7ee41a6461f4b953f5b887cc7c4203fb17c52068b5174be840a97e1011e91e72";
+    sha256 = "6a322be1f762a8ee289e4d07fc865f9c91cb9ed387d764d7ec200ab91a8186e6";
     filename = "openwrt-imagebuilder-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-JKkoORvK9Ri25H3KLLZ4tu3oV5gb80OLB/Rf+eNHt1o=";
+    hash = "sha256-gMQOG3KBFJpmTHKn4ODlbH7iUGmZOLzYTzt7mxU8UhE=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "aarch64_cortex-a53";
     linux_kernel = {
       release = "1";
-      vermagic = "230fbde60b71542f8039b852bffa6db1";
+      vermagic = "c1239498fe55edaca6deb8543fc2c806";
       version = "6.18.52";
     };
     default_packages = [
@@ -59,7 +59,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.18.52-1-230fbde60b71542f8039b852bffa6db1";
+    kmods_target = "6.18.52-1-c1239498fe55edaca6deb8543fc2c806";
     profiles = {
       cmcc_mr3000d-ci = {
         device_packages = [
@@ -68,6 +68,9 @@
         ];
       };
       cmcc_pz-l8 = {
+        device_packages = [ ];
+      };
+      cmcc_rax3000q = {
         device_packages = [ ];
       };
       elecom_wrc-x3000gs2 = {
@@ -140,6 +143,15 @@
           "kmod-usb-ledtrig-usbport"
         ];
       };
+      tplink_eap650-outdoor-v1 = {
+        device_packages = [
+          "ath11k-firmware-ipq5018"
+          "kmod-ath11k-pci"
+          "ath11k-firmware-qcn9074"
+          "ipq-wifi-tplink_eap650-outdoor-v1"
+          "kmod-phy-realtek"
+        ];
+      };
       xiaomi_ax6000 = {
         device_packages = [
           "ath11k-firmware-ipq5018"
@@ -180,12 +192,12 @@
       };
     };
   };
-  kmods."6.18.52-1-230fbde60b71542f8039b852bffa6db1" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.52-1-230fbde60b71542f8039b852bffa6db1/";
+  kmods."6.18.52-1-c1239498fe55edaca6deb8543fc2c806" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.52-1-c1239498fe55edaca6deb8543fc2c806/";
     sourceInfo = {
-      hash = "sha256-pYvRgTQFOi90hGKKidhYyn6z/PpF7Jf/iIeWuSBxWmY=";
+      hash = "sha256-FDte1mHFtNvttKANWCgi2NYe36XQFO4NFog0FKjKw40=";
       name = "kmods-qualcommax_ipq50xx-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.52-1-230fbde60b71542f8039b852bffa6db1/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.52-1-c1239498fe55edaca6deb8543fc2c806/packages.adb";
     };
     packages =
       let
@@ -196,7 +208,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/";
     sourceInfo = {
-      hash = "sha256-OsHmUKdSpQgYN6W3UtocmVorQ2Dfy1ZhBkz4RdRTXH8=";
+      hash = "sha256-8JJ/YzHd0jVIDAGf834xEkD5R2IZSf1VB+3+5Sm6YJo=";
       name = "qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/packages.adb";
     };

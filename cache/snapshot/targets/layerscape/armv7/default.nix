@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/";
   sha256sums = {
-    hash = "sha256-f2Zxa6S4FdURQkeAb9+jdoUPw98m4wXNAjOdxxHeeqs=";
+    hash = "sha256-YFmeNlYDZbO2WxJL42qm2/h0Q0o8aACQpE88grUGqF4=";
     name = "layerscape_armv7-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/sha256sums";
   };
   imagebuilder = {
-    sha256 = "d0c4be6381db19de13946d33e1f29e5cc987a9c2ed70b23bf14b431cbd75b5a5";
+    sha256 = "c802ccead94f64245b91dc49581a99252d869b0263a5fb686a259ca8d1447d16";
     filename = "openwrt-imagebuilder-layerscape-armv7.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-+HAG8RZtnHY3g8NJjzVNn+Pt0vG1XgRstrYTiiyNNGM=";
+    hash = "sha256-cPu7k1fUSarxlDXT3hTeNqnr5ZthV5eZjH2hFruqBWU=";
     name = "layerscape_armv7-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a7_neon-vfpv4";
     linux_kernel = {
       release = "1";
-      vermagic = "00ecb79af40fd37ab76a740bfb1e89a1";
+      vermagic = "26a6cbd25a3301264e46bfb05d5e9087";
       version = "6.18.52";
     };
     default_packages = [
@@ -54,7 +54,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.52-1-00ecb79af40fd37ab76a740bfb1e89a1";
+    kmods_target = "6.18.52-1-26a6cbd25a3301264e46bfb05d5e9087";
     profiles = {
       fsl_ls1021a-iot-sdboot = {
         device_packages = [ ];
@@ -67,12 +67,12 @@
       };
     };
   };
-  kmods."6.18.52-1-00ecb79af40fd37ab76a740bfb1e89a1" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/kmods/6.18.52-1-00ecb79af40fd37ab76a740bfb1e89a1/";
+  kmods."6.18.52-1-26a6cbd25a3301264e46bfb05d5e9087" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/kmods/6.18.52-1-26a6cbd25a3301264e46bfb05d5e9087/";
     sourceInfo = {
-      hash = "sha256-wdb2L51Ap/lw+RLU47UoZemnS5PSvwVZioLnM3mBEeI=";
+      hash = "sha256-tUd/Dt5m/tZkYX0y9g6bgUyuSmzdsoq7SWcxYf2E7D4=";
       name = "kmods-layerscape_armv7-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/kmods/6.18.52-1-00ecb79af40fd37ab76a740bfb1e89a1/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/kmods/6.18.52-1-26a6cbd25a3301264e46bfb05d5e9087/packages.adb";
     };
     packages =
       let
@@ -83,7 +83,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/packages/";
     sourceInfo = {
-      hash = "sha256-PuTibVoaVpj99y5qzX6pa3Yyeo5fJUEzgygwVlSUl7c=";
+      hash = "sha256-AyftKdRf0vHForAtfgmsfhB+IhdGCvlanV44XECGSaU=";
       name = "layerscape_armv7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/layerscape/armv7/packages/packages.adb";
     };
