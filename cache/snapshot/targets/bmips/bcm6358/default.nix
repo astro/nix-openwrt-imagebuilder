@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/";
   sha256sums = {
-    hash = "sha256-xSNPNJ7R9NnR1C9AOOP7yX4WJmmXVcD5PCkFNPrmcqQ=";
+    hash = "sha256-yD2MCGYVkb1eF7EjSTpCpFknAq7QdfdjhivNXXKh3D8=";
     name = "bmips_bcm6358-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ea4ab1a388b0496cedd19d2425c5b09d01f9a841a5fc2ed04a02fc63b5d2841b";
+    sha256 = "54aa3b0421bfb9a3e644eaa0fc374b2c0b1a6f8843c97ed2031a3b122cbaaef0";
     filename = "openwrt-imagebuilder-bmips-bcm6358.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-8XIjotvDjBf6/f6/AsgOphOwDtXitc7dw2QKnw/8XRo=";
+    hash = "sha256-3JirxeQ2t0xLmDg9h4judWtFJQzToN/7946flGQFcKk=";
     name = "bmips_bcm6358-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/profiles.json";
   };
@@ -19,8 +19,8 @@
     arch_packages = "mips_mips32";
     linux_kernel = {
       release = "1";
-      vermagic = "b80592c7b93b44dbbd6147f5695c3717";
-      version = "6.12.108";
+      vermagic = "e575ab9e07af1811924714ace0324b6b";
+      version = "6.18.52";
     };
     default_packages = [
       "apk-mbedtls"
@@ -50,7 +50,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.12.108-1-b80592c7b93b44dbbd6147f5695c3717";
+    kmods_target = "6.18.52-1-e575ab9e07af1811924714ace0324b6b";
     profiles = {
       huawei_hg553 = {
         device_packages = [
@@ -96,12 +96,12 @@
       };
     };
   };
-  kmods."6.12.108-1-b80592c7b93b44dbbd6147f5695c3717" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/kmods/6.12.108-1-b80592c7b93b44dbbd6147f5695c3717/";
+  kmods."6.18.52-1-e575ab9e07af1811924714ace0324b6b" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/kmods/6.18.52-1-e575ab9e07af1811924714ace0324b6b/";
     sourceInfo = {
-      hash = "sha256-OL9tbnLJPaojfyul1aV4alDC0yAf6b/f7USEQR7V218=";
+      hash = "sha256-n91Og/XTtWQCVDo/lcSa9GQUsxZWK5cZWykhGDgZKTM=";
       name = "kmods-bmips_bcm6358-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/kmods/6.12.108-1-b80592c7b93b44dbbd6147f5695c3717/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/kmods/6.18.52-1-e575ab9e07af1811924714ace0324b6b/packages.adb";
     };
     packages =
       let
@@ -112,7 +112,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/packages/";
     sourceInfo = {
-      hash = "sha256-J3Oqcf7cN6fZLrVNKkLOkShro9FtIw0tkgBPpgS4AiA=";
+      hash = "sha256-wI6uQKQBoCllcXPptbOKtLe0Ti+fvPcAffR09SMOPSw=";
       name = "bmips_bcm6358-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bmips/bcm6358/packages/packages.adb";
     };

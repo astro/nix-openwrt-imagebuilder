@@ -1,14 +1,14 @@
 # snapshot package feeds for aarch64_cortex-a53
 {
   sha256sums = {
-    hash = "sha256-CsxJ7ccWntEgS7Kv8VVciQtJvgVmxhCHSz3CJsJvBiM=";
+    hash = "sha256-gmKYd7oWd/s+Hhj0R9i5Il8zG/OeONuwkmq1UMIYn8U=";
     name = "aarch64_cortex-a53-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/base/";
     sourceInfo = {
-      hash = "sha256-uQPPtYAjJ2MuOLO8/swjIlzXlSONM/nOmwBF+3w1Fdg=";
+      hash = "sha256-5UoNbJouNsSXhFqkuft2h5v4qTz0/gS3jldMOnjc+K4=";
       name = "aarch64_cortex-a53-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/luci/";
     sourceInfo = {
-      hash = "sha256-W2bs0z/1kq8D9DvuSAkYvyOj5ek4IRekPg5/O2o/lC0=";
+      hash = "sha256-GffCJ+fum9bR1HyqrKSozVESC3EDyyTMX5i8RRylHHQ=";
       name = "aarch64_cortex-a53-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/packages/";
     sourceInfo = {
-      hash = "sha256-1hpEhcuthP/0MFzjC3s6hI0AQBOapEwaOi2N1hcrtZk=";
+      hash = "sha256-DIDMSwj46F+37B6Jmty6O1G4cu7ZQwfdt3tXeP+K8FM=";
       name = "aarch64_cortex-a53-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/routing/";
     sourceInfo = {
-      hash = "sha256-SBJjJVp/UVxWWihnaHUFbCVSLAca4o4tAwYDpWB3Jog=";
+      hash = "sha256-sf8tiC5p9PSmP/erild45T0rqVbNp0LmJnoxO0vzf/w=";
       name = "aarch64_cortex-a53-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/telephony/";
     sourceInfo = {
-      hash = "sha256-v3sM3NDi6kRZeYrRwZ8Usxr0DccirSnyAlF0VHWN1W8=";
+      hash = "sha256-hDa+/iRjqBH45li6CWmfYXGOgcGLB9VCpmgHtuTTVZk=";
       name = "aarch64_cortex-a53-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a53/telephony/packages.adb";
     };
