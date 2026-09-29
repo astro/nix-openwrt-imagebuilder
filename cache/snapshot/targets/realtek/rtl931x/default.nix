@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/";
   sha256sums = {
-    hash = "sha256-oUcatzLQ1smaPtF0ey5NpgRoAeAzEVLvyG8T3ghOmPE=";
+    hash = "sha256-yOu2HkunyJSKl0YAyPXK20FE32ptAdk0pX/hamo2gtc=";
     name = "realtek_rtl931x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a236f042f720a9cf758a89ca6a75a21c6d8f18077ea1f204a77da1ac804da863";
+    sha256 = "ac791eb90c6e29fa24ff66e052b5f85f752f63690a3f17fbe3a9d8c8740c4546";
     filename = "openwrt-imagebuilder-realtek-rtl931x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-E0z337aNtrOaplRP1xkg8XdaZjtZYY7cbFT8Dgu7L/g=";
+    hash = "sha256-PXT/PLUBqQbeJ8zW4aHwvA87ZqiAAdyUPKgxpD8H3Vk=";
     name = "realtek_rtl931x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/profiles.json";
   };
@@ -83,6 +83,13 @@
       sirivision_sr-st31212f = {
         device_packages = [ ];
       };
+      ubnt_usw-pro-xg-10-poe = {
+        device_packages = [
+          "rtl826x-firmware"
+          "kmod-hwmon-adt7475"
+          "kmod-pse-realtek-mcu-i2c"
+        ];
+      };
       ubnt_usw-pro-xg-8-poe = {
         device_packages = [
           "rtl826x-firmware"
@@ -117,7 +124,7 @@
   kmods."6.18.52-1-0498df4761a0021b1dfd52b752c2b59a" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.52-1-0498df4761a0021b1dfd52b752c2b59a/";
     sourceInfo = {
-      hash = "sha256-mlUjAF374z1lhHggavOT1EwwDWPYMHx6MbO3adv3qP8=";
+      hash = "sha256-e6SHGHXb6w1hC0sqNGhzrxw8/j1Pz55+jQnYFpYNoBY=";
       name = "kmods-realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.52-1-0498df4761a0021b1dfd52b752c2b59a/packages.adb";
     };
@@ -130,7 +137,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/";
     sourceInfo = {
-      hash = "sha256-paSuNuhroXTJ3UB4gf2jycT7g71TF8gn7wl4JbF8X50=";
+      hash = "sha256-xjomXwECPGzL3VljQ51w0JbUj8bvX5Qw9JzRqm1HpzM=";
       name = "realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/packages.adb";
     };
