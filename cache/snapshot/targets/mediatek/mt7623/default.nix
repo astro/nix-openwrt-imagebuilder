@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/";
   sha256sums = {
-    hash = "sha256-f6eGRDwMWA0TCWTgIjv1B3+oMwVMCBajyP1HGfV2T70=";
+    hash = "sha256-us3Y/EMnzDnSB6tVt78bI5vktIHX+ugkHIJMvcdxWNI=";
     name = "mediatek_mt7623-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/sha256sums";
   };
   imagebuilder = {
-    sha256 = "e904157a63426a94d09761a031b1de000c530685fa87c25ff170c44c02cbe422";
+    sha256 = "7ffa2757764c769dcf19909e5d7d2f1a920cce3f155c215847c419d90d2d462e";
     filename = "openwrt-imagebuilder-mediatek-mt7623.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-o0MKortV9W/ZcNq1H+Qbzy1TKa+cQBusDi8UgqYM+V4=";
+    hash = "sha256-zy/sKZPjrksGM3YPqV6EI0OAmwXsBC5Z5cNxRTN+iZY=";
     name = "mediatek_mt7623-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/profiles.json";
   };
@@ -52,6 +52,7 @@
       "uclient-fetch"
       "urandom-seed"
       "urngd"
+      "video-support"
     ];
     kmods_target = "6.18.52-1-9a40ced0c7086922a854bae676af88f2";
     profiles = {
@@ -97,7 +98,7 @@
   kmods."6.18.52-1-9a40ced0c7086922a854bae676af88f2" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/kmods/6.18.52-1-9a40ced0c7086922a854bae676af88f2/";
     sourceInfo = {
-      hash = "sha256-5h1kIT/432OpupG6Zt4pyCBYwyuGUOjX/uIzbfbvyXc=";
+      hash = "sha256-I9K6dcxogBB+NB/yDEqqtns8hgFBgGFMmEaaevPS+8Q=";
       name = "kmods-mediatek_mt7623-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/kmods/6.18.52-1-9a40ced0c7086922a854bae676af88f2/packages.adb";
     };
@@ -110,7 +111,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/packages/";
     sourceInfo = {
-      hash = "sha256-ygw1bMqeYHrRJihFPjydJKFI14nxT2YQeBLJ2s5OQjU=";
+      hash = "sha256-gTyYxuHZyqlpYO77NeHhj6DUNHJuk2qoGYViIatDHjc=";
       name = "mediatek_mt7623-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mediatek/mt7623/packages/packages.adb";
     };

@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/";
   sha256sums = {
-    hash = "sha256-bT0EqurEHBvOO1mlPWuYHxB6FHXKBYLAkb5l5yv/sxQ=";
+    hash = "sha256-0Ai+xXBkE7tG6pIHJiAETfJyQkatVETU9ED435Z0D9Q=";
     name = "at91_sama5-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/sha256sums";
   };
   imagebuilder = {
-    sha256 = "473cc9e8b05b313efea52cab8d0073b32957e647a32ea7a6b25486a773ce13c0";
+    sha256 = "f2ad273b81af789a5bc1f742f77c8f4dab3fedfa2d4f5007a9c5bfbd323d7f77";
     filename = "openwrt-imagebuilder-at91-sama5.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-geZD4KAFt63XgohDvST6b+coQt24fv3/nKCUQROX+HM=";
+    hash = "sha256-7muHEpPZzo40porLGVlh3lC37g96jY8uROsACX48SGc=";
     name = "at91_sama5-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/profiles.json";
   };
@@ -51,6 +51,7 @@
       "uclient-fetch"
       "urandom-seed"
       "urngd"
+      "video-support"
     ];
     kmods_target = "6.12.111-1-dfaf5f94a7b4575020f3f5d872bc16db";
     profiles = {
@@ -80,7 +81,7 @@
   kmods."6.12.111-1-dfaf5f94a7b4575020f3f5d872bc16db" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/kmods/6.12.111-1-dfaf5f94a7b4575020f3f5d872bc16db/";
     sourceInfo = {
-      hash = "sha256-WeDZp6bmMZ2J+JRYGRxdpOJzfA68kPsUDChW8t3Sdas=";
+      hash = "sha256-gBJUfVp+Hfgo6cCLDa2+wjnsS3kwnlE4JSyQ68dT9WY=";
       name = "kmods-at91_sama5-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/kmods/6.12.111-1-dfaf5f94a7b4575020f3f5d872bc16db/packages.adb";
     };
@@ -93,7 +94,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/packages/";
     sourceInfo = {
-      hash = "sha256-L9VYhMtgXgNQryU7Qdrkwm14HotafbOyol/9xPVt5ZQ=";
+      hash = "sha256-Rd1KtiVavYKKhxuxnzpnJL0Jk4iBWaxopEoqyt/7Yxw=";
       name = "at91_sama5-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/at91/sama5/packages/packages.adb";
     };

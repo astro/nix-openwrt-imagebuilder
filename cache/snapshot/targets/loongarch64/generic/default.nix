@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/";
   sha256sums = {
-    hash = "sha256-hGaQm+08IYwWEMq8zAKB2S3l7Z+dJLchBKe+9GFtGYU=";
+    hash = "sha256-IH88UNynYJXTOMzHzoU+1CWbxnO17lM4Eg0Tg1r9Ywo=";
     name = "loongarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "42905c42f688d5e737d7737c28e5dca24c9cf8bef856753c94413e53dc8834cf";
+    sha256 = "b24596670e585fe946297096f6754a31ade40b8dabf026853f6dd4fbc453f21d";
     filename = "openwrt-imagebuilder-loongarch64-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-Lmv53eTdAp7/dNUIkUigmO5DasjRc8fuGHh2Mev5sCg=";
+    hash = "sha256-0XzE2UdAnjaDU0W977/GS8mRdmxjLvsfbUNkIvdDq1k=";
     name = "loongarch64_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/profiles.json";
   };
@@ -51,6 +51,7 @@
       "uclient-fetch"
       "urandom-seed"
       "urngd"
+      "video-support"
     ];
     kmods_target = "6.12.111-1-94fe14b6efe9ab6945dd3ea20c7e1fef";
     profiles = {
@@ -65,7 +66,7 @@
   kmods."6.12.111-1-94fe14b6efe9ab6945dd3ea20c7e1fef" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/kmods/6.12.111-1-94fe14b6efe9ab6945dd3ea20c7e1fef/";
     sourceInfo = {
-      hash = "sha256-bSLLVx06EElfKzrFPPUTBDMaAqxtNITO3OwrFbvRe7E=";
+      hash = "sha256-M7l8Xlty2zbcvCME0Szg58tOkQeBWt+rHznhuEgcGrg=";
       name = "kmods-loongarch64_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/kmods/6.12.111-1-94fe14b6efe9ab6945dd3ea20c7e1fef/packages.adb";
     };
@@ -78,7 +79,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/packages/";
     sourceInfo = {
-      hash = "sha256-O8iWto+l+QPeg1Jtw3asf22as5jdfs7MJzovNtxICxQ=";
+      hash = "sha256-P6+bxXWgeu26vBoCrQtCvBAJfS5vNH9M0mRjZtfHmKQ=";
       name = "loongarch64_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/loongarch64/generic/packages/packages.adb";
     };

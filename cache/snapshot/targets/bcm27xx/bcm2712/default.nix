@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/";
   sha256sums = {
-    hash = "sha256-hTM6JZvxIT1ZaCrjJfKBQ/YFhQXhtABh4IKhpddUgu8=";
+    hash = "sha256-XxyZ2TVNit47IOazVmHT6hp3VRbxXp3mC+TlAo0euD4=";
     name = "bcm27xx_bcm2712-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/sha256sums";
   };
   imagebuilder = {
-    sha256 = "30eeb1b7886a9aacc85f6b4cb774f7af0ffaad1e8b84688f0584b99a4c57d21c";
+    sha256 = "fb1092982c19ef975c51328e60bbd1fe741a2b787d9f66ffd09622ff8f591ba9";
     filename = "openwrt-imagebuilder-bcm27xx-bcm2712.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-LzIUeUcZXAYaTs295UzsLtgtNFVSCwkCVKxh0APs5yk=";
+    hash = "sha256-KwVIo0KKAUltYDC+v2jzIXVO8pGsZ/apOylDCfyBFhY=";
     name = "bcm27xx_bcm2712-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/profiles.json";
   };
@@ -53,6 +53,7 @@
       "uci"
       "uclient-fetch"
       "urandom-seed"
+      "video-support"
     ];
     kmods_target = "6.18.52-1-4fd2cafbcda9bb8089ab6772cf725c37";
     profiles = {
@@ -74,7 +75,7 @@
   kmods."6.18.52-1-4fd2cafbcda9bb8089ab6772cf725c37" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/kmods/6.18.52-1-4fd2cafbcda9bb8089ab6772cf725c37/";
     sourceInfo = {
-      hash = "sha256-imY4Oh7sxrfQMG2LMtwiMMS2h6tnBIluIjGUl+IAkGE=";
+      hash = "sha256-BxFfz258O+1tRxL7hexlgiOTc7SbysTHK9v+d8/K86A=";
       name = "kmods-bcm27xx_bcm2712-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/kmods/6.18.52-1-4fd2cafbcda9bb8089ab6772cf725c37/packages.adb";
     };
@@ -87,7 +88,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/packages/";
     sourceInfo = {
-      hash = "sha256-Xg6IpsXr+tg2aqJ0k/P4MiDFy2CthN6Si8MKiB/ogmY=";
+      hash = "sha256-zZi8I2mWLDSWYkdrUD1JW76rPpe56pc8YYPAqcQB06o=";
       name = "bcm27xx_bcm2712-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/bcm27xx/bcm2712/packages/packages.adb";
     };
