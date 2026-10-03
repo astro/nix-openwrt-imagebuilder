@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/";
   sha256sums = {
-    hash = "sha256-JEFuGnHdy2+W+5AdkXY1E7adA/ZWlQ/XqbJxfK/xj6A=";
+    hash = "sha256-+4gpLDehbIjDgJldRmlvmbo1cArnQ2LcgbPUY/fyJjQ=";
     name = "qualcommax_ipq50xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "f763a52b8f6c95c08f5241f22007a47ba2115c6e0029e14b62050be68e866b53";
+    sha256 = "8f38c079d7250af10445298935e6a2a22959f93baef394ecde561fce1887dfd0";
     filename = "openwrt-imagebuilder-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-G0TX7qCLEEUKW4pA9tz55JhIm/lZo2waNy2PZ8HC0Hg=";
+    hash = "sha256-rCTuglGEmsCTqq83gYxC6qLa259G/0t35GqDOBH753k=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -145,6 +145,9 @@
           "ipq-wifi-linksys_spnmx56"
         ];
       };
+      mercusys_mr80x-v2 = {
+        device_packages = [ "kmod-dsa-rtl8365mb" ];
+      };
       tplink_archer-ax55-v1 = {
         device_packages = [
           "ath11k-firmware-ipq5018-qcn6122"
@@ -205,7 +208,7 @@
   kmods."6.18.54-1-3a140eab74b5db6c2485b0cfb577988f" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.54-1-3a140eab74b5db6c2485b0cfb577988f/";
     sourceInfo = {
-      hash = "sha256-iW9QKD7qr5iOKAH7EcrX/MBL2BCTkJK24wgez8IdmYU=";
+      hash = "sha256-jO3NMqqqBqc7Adb58GCtnnJsXU2WlBICOIExMwplEgw=";
       name = "kmods-qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.54-1-3a140eab74b5db6c2485b0cfb577988f/packages.adb";
     };
@@ -218,7 +221,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/";
     sourceInfo = {
-      hash = "sha256-PiSp6XuRfGjy+SfgwTqKAuG1EBkBKqCUzZ2RcTYZ4Ow=";
+      hash = "sha256-51F78qrQRXUK1eKi2+APyBOHGVLHiE1fmFlEJjvjkVI=";
       name = "qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/packages.adb";
     };
