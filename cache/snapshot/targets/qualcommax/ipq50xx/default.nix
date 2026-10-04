@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/";
   sha256sums = {
-    hash = "sha256-+4gpLDehbIjDgJldRmlvmbo1cArnQ2LcgbPUY/fyJjQ=";
+    hash = "sha256-1Hn2bHmOQ+IPurfz4d4MPP4a7l6w2uKGdfFU9Y3qSt0=";
     name = "qualcommax_ipq50xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "8f38c079d7250af10445298935e6a2a22959f93baef394ecde561fce1887dfd0";
+    sha256 = "3fd732bfc1c2445bfbafdf1b163c20d770476910984725c5f5a339eb6d32c3d5";
     filename = "openwrt-imagebuilder-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-rCTuglGEmsCTqq83gYxC6qLa259G/0t35GqDOBH753k=";
+    hash = "sha256-/g/uMtZII5ClintMpzkYEHoypjtzbBESVfdgG2FV5bg=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -165,6 +165,13 @@
           "kmod-phy-realtek"
         ];
       };
+      tplink_re700x = {
+        device_packages = [
+          "ath11k-firmware-ipq5018-qcn6122"
+          "ipq-wifi-tplink_re700x"
+          "kmod-phy-realtek"
+        ];
+      };
       xiaomi_ax6000 = {
         device_packages = [
           "ath11k-firmware-ipq5018"
@@ -208,7 +215,7 @@
   kmods."6.18.54-1-3a140eab74b5db6c2485b0cfb577988f" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.54-1-3a140eab74b5db6c2485b0cfb577988f/";
     sourceInfo = {
-      hash = "sha256-jO3NMqqqBqc7Adb58GCtnnJsXU2WlBICOIExMwplEgw=";
+      hash = "sha256-xmnSfHOKDC0F4nnCAcXCtOpqW7+DJZdT5C2/oNhN1SM=";
       name = "kmods-qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.54-1-3a140eab74b5db6c2485b0cfb577988f/packages.adb";
     };
@@ -221,7 +228,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/";
     sourceInfo = {
-      hash = "sha256-51F78qrQRXUK1eKi2+APyBOHGVLHiE1fmFlEJjvjkVI=";
+      hash = "sha256-ssjFipCasvywpYGnfVJSp6ZLMvMsTSw5BEcqLHDoFCc=";
       name = "qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/packages.adb";
     };
