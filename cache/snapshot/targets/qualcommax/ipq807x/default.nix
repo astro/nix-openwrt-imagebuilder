@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/";
   sha256sums = {
-    hash = "sha256-3MQFTyS5VEG06rPBBR/qY5x/6YEoJ1g2LTbYbt+2UKY=";
+    hash = "sha256-zHGxKfWXNzrp/FOouGAD5/MihtY5IjJThVKkx0eHGQw=";
     name = "qualcommax_ipq807x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "c427901eab8ffd80107e92f8f87cec0f2b456b1e6ec4b4548558214b1f393373";
+    sha256 = "56112702a407fe15cea8a35346d7ae9380dc067f051353d15b66153cae9cfbda";
     filename = "openwrt-imagebuilder-qualcommax-ipq807x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-JF46ZMfF18BAxWo0ODxTzul3ZDziquWmjMFLjoDAJyc=";
+    hash = "sha256-4ufbnG80e+HlzC453fGMRoRo0+d6n1cXMBrrnuzZLKo=";
     name = "qualcommax_ipq807x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/profiles.json";
   };
@@ -20,7 +20,7 @@
     linux_kernel = {
       release = "1";
       vermagic = "08bc5df70a63e94ddaae6de885084eb2";
-      version = "6.18.54";
+      version = "6.18.55";
     };
     default_packages = [
       "apk-mbedtls"
@@ -60,7 +60,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.18.54-1-08bc5df70a63e94ddaae6de885084eb2";
+    kmods_target = "6.18.55-1-08bc5df70a63e94ddaae6de885084eb2";
     profiles = {
       aliyun_ap8220 = {
         device_packages = [ "ipq-wifi-aliyun_ap8220" ];
@@ -110,40 +110,40 @@
       };
       linksys_mx4200v1 = {
         device_packages = [
-          "kmod-leds-pca963x"
           "ipq-wifi-linksys_mx4200"
           "kmod-hci-uart"
+          "kmod-leds-pca963x"
         ];
       };
       linksys_mx4200v2 = {
         device_packages = [
-          "kmod-leds-pca963x"
           "ipq-wifi-linksys_mx4200"
           "kmod-hci-uart"
+          "kmod-leds-st1202"
         ];
       };
       linksys_mx4300 = {
         device_packages = [
-          "kmod-leds-pca963x"
           "ipq-wifi-linksys_mx4200"
+          "kmod-leds-pca963x"
         ];
       };
       linksys_mx5300 = {
         device_packages = [
-          "kmod-leds-pca963x"
           "kmod-rtc-ds1307"
           "ipq-wifi-linksys_mx5300"
           "kmod-ath10k-ct"
           "ath10k-firmware-qca9984-ct"
+          "kmod-leds-pca963x"
         ];
       };
       linksys_mx8500 = {
         device_packages = [
-          "kmod-leds-pca963x"
           "ipq-wifi-linksys_mx8500"
           "kmod-ath11k-pci"
           "ath11k-firmware-qcn9074"
           "kmod-hci-uart"
+          "kmod-leds-pca963x"
         ];
       };
       netgear_rax120v2 = {
@@ -310,12 +310,12 @@
       };
     };
   };
-  kmods."6.18.54-1-08bc5df70a63e94ddaae6de885084eb2" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/kmods/6.18.54-1-08bc5df70a63e94ddaae6de885084eb2/";
+  kmods."6.18.55-1-08bc5df70a63e94ddaae6de885084eb2" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/kmods/6.18.55-1-08bc5df70a63e94ddaae6de885084eb2/";
     sourceInfo = {
-      hash = "sha256-+hplJSqY6TZRJblfXR8td+uenP6Uky7nivhxTUR7rkM=";
+      hash = "sha256-BESyEcpaeH9/aXkGHwezq8vZbR8NkZSQ5mdk4q7g4jM=";
       name = "kmods-qualcommax_ipq807x-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/kmods/6.18.54-1-08bc5df70a63e94ddaae6de885084eb2/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/kmods/6.18.55-1-08bc5df70a63e94ddaae6de885084eb2/packages.adb";
     };
     packages =
       let
@@ -326,7 +326,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/packages/";
     sourceInfo = {
-      hash = "sha256-z/DhiByod4/FeB+wpDskyLLogupRFpM4rNCmHO6GO4U=";
+      hash = "sha256-k8ppQwqGq0yt23ga9vzGZr1K4OcN2RdFW+llhFiEJZg=";
       name = "qualcommax_ipq807x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq807x/packages/packages.adb";
     };

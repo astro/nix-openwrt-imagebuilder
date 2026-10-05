@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/64/";
   sha256sums = {
-    hash = "sha256-Raanr0LvgYjAo86oiEV9+GSmaTrM09lfPMQcWk19tbA=";
+    hash = "sha256-9Zqxla3QomIqUTIu7JCm0S2CPzKtpFVHCqTv/qybfsQ=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/64/sha256sums";
   };
   imagebuilder = {
-    sha256 = "4e94f7af1a12ed0784d85e0a2e20b271c9370288ed9389fc965fd55420ef8258";
+    sha256 = "33d934643011e88f3da15c5027467be2049153647eff7383185b888e86558034";
     filename = "openwrt-imagebuilder-x86-64.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-npsLfyD1RgkOsNMDHXw/CkOMSLgdNneGheSrhJ4fOo8=";
+    hash = "sha256-y+0iewrbJryx07qGSbWqZXA7USYer+PIOU472zO0bvg=";
     name = "x86_64-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/64/profiles.json";
   };
@@ -20,7 +20,7 @@
     linux_kernel = {
       release = "1";
       vermagic = "d0b7e90eb09c21d99e46e3a687a2a66d";
-      version = "6.18.54";
+      version = "6.18.55";
     };
     default_packages = [
       "apk-mbedtls"
@@ -54,7 +54,7 @@
       "urngd"
       "video-support"
     ];
-    kmods_target = "6.18.54-1-d0b7e90eb09c21d99e46e3a687a2a66d";
+    kmods_target = "6.18.55-1-d0b7e90eb09c21d99e46e3a687a2a66d";
     profiles = {
       generic = {
         device_packages = [
@@ -76,12 +76,12 @@
       };
     };
   };
-  kmods."6.18.54-1-d0b7e90eb09c21d99e46e3a687a2a66d" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/64/kmods/6.18.54-1-d0b7e90eb09c21d99e46e3a687a2a66d/";
+  kmods."6.18.55-1-d0b7e90eb09c21d99e46e3a687a2a66d" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/64/kmods/6.18.55-1-d0b7e90eb09c21d99e46e3a687a2a66d/";
     sourceInfo = {
-      hash = "sha256-Mb/m0CYtsfwJqYeKB2GbpgamsrpONNZtLLHzNyHGYIo=";
+      hash = "sha256-9wzGZcwBOtOLSSqMuqxYissszCe8jFWgFucrarCFoH0=";
       name = "kmods-x86_64-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/x86/64/kmods/6.18.54-1-d0b7e90eb09c21d99e46e3a687a2a66d/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/x86/64/kmods/6.18.55-1-d0b7e90eb09c21d99e46e3a687a2a66d/packages.adb";
     };
     packages =
       let
@@ -92,7 +92,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/64/packages/";
     sourceInfo = {
-      hash = "sha256-R6GgoAVotjzctGtqml09Y9Ahd2jTHGMhs1hXa5N/r4s=";
+      hash = "sha256-I6fw/HLoymCknYO6tyDK2sTA5dYH2H1Qnitqt0Myu9U=";
       name = "x86_64-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/64/packages/packages.adb";
     };

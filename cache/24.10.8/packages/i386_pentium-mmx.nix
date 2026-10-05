@@ -1,14 +1,14 @@
 # 24.10.8 package feeds for i386_pentium-mmx
 {
   sha256sums = {
-    hash = "sha256-x42oF9oposg4Fed3vDT5VYcC0kiSbDjPSNglSU0vrYw=";
+    hash = "sha256-8r/GaDPpThI0bKWXuR38vP1G6Glrj4VNlZn0ZxA5Fy8=";
     name = "i386_pentium-mmx-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/base/";
     sourceInfo = {
-      hash = "sha256-xK8xQ9IrqapvUSmiZxjdVRPaVIzT1ztMGVfpN8QpGj4=";
+      hash = "sha256-T4ALzvoplLcNFI+2UQc+iZ/HhmQM8Fj+kQ+urMEQmSI=";
       name = "i386_pentium-mmx-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/packages/";
     sourceInfo = {
-      hash = "sha256-G5dpa8QQ0Q/Yk4JzFQbmtF5onxju2tFaqU1qdC0U76A=";
+      hash = "sha256-oM3lyvL1QPKVoYxaJ/LAptyaPL/8tIOS6wtEmxWWhnc=";
       name = "i386_pentium-mmx-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/routing/";
     sourceInfo = {
-      hash = "sha256-DQms6et3NIMTVVgHzIbhBOzacgVo+zLilMThdIDC/+o=";
+      hash = "sha256-0xvAvPQdy/NEpCoToMraJVdOXpbMLCSeXcnVy25eFyU=";
       name = "i386_pentium-mmx-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/telephony/";
     sourceInfo = {
-      hash = "sha256-pNAZ54AyGWU6rYUY07192PW7sr7+zUNf6HzxfDkOa80=";
+      hash = "sha256-CSUE7gI46CGSn1OvJvABZp66nFzboD38DqXNHTzt/ZU=";
       name = "i386_pentium-mmx-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium-mmx/telephony/Packages";
     };
