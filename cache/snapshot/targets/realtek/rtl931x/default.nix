@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/";
   sha256sums = {
-    hash = "sha256-ohl/thdCjYmP52Qq0IdAVKP98sb7fNbBKJPEK0gT7wM=";
+    hash = "sha256-Z7w38OjItqhHpki2d4yL9mWIJ6TjWqwIblTG1eNqNIc=";
     name = "realtek_rtl931x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "eebd12bf7ee772a2061cf84ce827d5415b5a8c5d282729b5d10e65d7591cb007";
+    sha256 = "87215e76315f54966e79f0aa4c985ed4abf0992fd51054631d85519ce517f3d9";
     filename = "openwrt-imagebuilder-realtek-rtl931x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-ZBfhWOiyzo/stEftGoOUD+RB6iHZzdgjVDB8/n7dOak=";
+    hash = "sha256-z0auKt3qyvM53z/jeW8Mbr59XOizwN/QSod1XINPhKQ=";
     name = "realtek_rtl931x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/profiles.json";
   };
@@ -124,7 +124,7 @@
   kmods."6.18.55-1-f0bafd5d8d29638a15760dd0274ab2fa" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.55-1-f0bafd5d8d29638a15760dd0274ab2fa/";
     sourceInfo = {
-      hash = "sha256-7t7uzm//ql+xt778QSod7r26TyqVmfBlrw3E6tKCZYY=";
+      hash = "sha256-GvfmHCNBCR+3l46dycWaSh5+56ep1Gq5r7Il0c6rymM=";
       name = "kmods-realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.55-1-f0bafd5d8d29638a15760dd0274ab2fa/packages.adb";
     };
@@ -137,7 +137,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/";
     sourceInfo = {
-      hash = "sha256-JLNMcyquO5yhEAkozXQVcUvW0dcRqPwHtM0uATZkbLk=";
+      hash = "sha256-fQskOSM3TAPg6yZQSD9CY1Z8HgRdgbdP2KkcxXyvc64=";
       name = "realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/packages.adb";
     };

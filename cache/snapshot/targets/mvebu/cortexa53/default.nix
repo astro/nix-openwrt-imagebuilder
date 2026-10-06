@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/";
   sha256sums = {
-    hash = "sha256-T4Y+m5ljoGKNbnKe25Y4fCn5fMmNqXsCBrWwLF09muE=";
+    hash = "sha256-8/HhqmXt9s+6mE8KopZJugmbnr5h2nrxnYt44LXWEJo=";
     name = "mvebu_cortexa53-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/sha256sums";
   };
   imagebuilder = {
-    sha256 = "3d80f1e237e0644ed84831373ded89106a9855f285c087d2343e77cd65adb67a";
+    sha256 = "be0a6481de7b10044cf80d01baabf8551edc6901119ab4a9c7b526322d89a530";
     filename = "openwrt-imagebuilder-mvebu-cortexa53.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-BY9nMtFkpV4rsv4JkWKk0L4aPfzfPbjGXTYjW3ZI12g=";
+    hash = "sha256-JXN8vwylhEtTfJ25KUGJEtSL9pNnIaph9stiUWBHHIM=";
     name = "mvebu_cortexa53-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/profiles.json";
   };
@@ -76,6 +76,7 @@
           "wpad-basic-mbedtls"
           "kmod-mwifiex-sdio"
           "kmod-btmrvl"
+          "kmod-usb-storage-uas"
         ];
       };
       glinet_gl-mv1000 = {
@@ -125,7 +126,7 @@
   kmods."6.18.55-1-73b55398f8fa14e6dd189b7166cc703b" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/kmods/6.18.55-1-73b55398f8fa14e6dd189b7166cc703b/";
     sourceInfo = {
-      hash = "sha256-cCbJkbLIRSVVkzmAqRCPenAeLogV62Fjx/kT7wsJFGE=";
+      hash = "sha256-hR8BRDJ6FGvRBbW2Xh6abTK0bKwzNwN0cu4+zkgBKN0=";
       name = "kmods-mvebu_cortexa53-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/kmods/6.18.55-1-73b55398f8fa14e6dd189b7166cc703b/packages.adb";
     };
@@ -138,7 +139,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/packages/";
     sourceInfo = {
-      hash = "sha256-UUiR/QY0ejSLvtA3l+xNhy8yIYO0QTqpqRr5LbWM5Ow=";
+      hash = "sha256-EgcUOTRwumEMnI34w+ZdQr8clInvH3BmRS3Wr2vKZJ8=";
       name = "mvebu_cortexa53-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa53/packages/packages.adb";
     };

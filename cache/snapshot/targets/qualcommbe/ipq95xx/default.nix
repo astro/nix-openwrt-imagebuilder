@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/";
   sha256sums = {
-    hash = "sha256-2HYzlIXd48X7RBIYtLwXUjqfcg2/bWh83RepuHpr+VE=";
+    hash = "sha256-MjQXCx7/suhguzG+JHnhLxNbpUuAzSD1k3q2fvq7894=";
     name = "qualcommbe_ipq95xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a5aa32da6171c582cb4556e31a48e1c2b4c0d320c7b285b954b6bd927910bbb0";
+    sha256 = "340b11508e75f38d692edd579f7e18bfa826434d9f87885dfd68d93c3e443e9e";
     filename = "openwrt-imagebuilder-qualcommbe-ipq95xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-mofKvGodqtvhQH+8vPWu6EMLNlhohQkvMTlFDMf9L9w=";
+    hash = "sha256-ZKYnxfSljDie8a8cg4iAchs6VF/jJE9rGkGCreYQF6M=";
     name = "qualcommbe_ipq95xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/profiles.json";
   };
@@ -88,6 +88,7 @@
       };
       linksys_ln6001 = {
         device_packages = [
+          "bluetooth-uart"
           "kmod-leds-pwm"
           "kmod-fs-f2fs"
           "mkf2fs"
@@ -102,7 +103,7 @@
   kmods."6.18.55-1-9c15e0d3c07582404e47e8dda2a05acc" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/kmods/6.18.55-1-9c15e0d3c07582404e47e8dda2a05acc/";
     sourceInfo = {
-      hash = "sha256-8U/0O9dxBjI/2gw+w+20YfT5oXk28yoWoGCq8MHJ/A0=";
+      hash = "sha256-aGO02/nqiXf5m29sJHzaSLkc2SPkMWRAC2GQWHUpJhM=";
       name = "kmods-qualcommbe_ipq95xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/kmods/6.18.55-1-9c15e0d3c07582404e47e8dda2a05acc/packages.adb";
     };
@@ -115,7 +116,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/packages/";
     sourceInfo = {
-      hash = "sha256-OSeVkf6bMLvXlSYH3s+seJbbd//6QOst0GO6FZ9rOZ0=";
+      hash = "sha256-1Mgk67WiRhBOKC1uJw1tE0CWaK7GyoubeY3ToDFg/y8=";
       name = "qualcommbe_ipq95xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/packages/packages.adb";
     };
