@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for aarch64_generic
 {
   sha256sums = {
-    hash = "sha256-7kL6KfRGpw11ObHfLTdt4jUPZvrUcLybtrAP9j9Oalc=";
+    hash = "sha256-LI2w19om4k7//zqgQRehfZeN1BY+PNnpOAVlD5HxuGI=";
     name = "aarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-IEim2YkwZX8cHyPgQNh06dv0nwN3OiObxp+Dky0n9zg=";
+      hash = "sha256-bUvsw0A+yP1MLh7geh/BpYXN8jk/PteOtOnJY6RLNFM=";
       name = "aarch64_generic-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/routing/";
     sourceInfo = {
-      hash = "sha256-FWWBvYF39TEx59HtlfMvmp8pukbu7UZVis1tPRWk6+A=";
+      hash = "sha256-pbLxhFjfGXiuk8ccQP13XVJ1R2yeOGSeVGgv5Di/GKk=";
       name = "aarch64_generic-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-4On3DlVvlS1gk85lgs8wuBSaovepwx8bEkGmmjDCUnw=";
+      hash = "sha256-k8CiVivo4W/WlA0xGXYHlgtGAOWRhjrwcTbUFrYqG/0=";
       name = "aarch64_generic-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/aarch64_generic/telephony/Packages";
     };
