@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/omap/generic/";
   sha256sums = {
-    hash = "sha256-cTIfFS7a3pI5tElqf0Csfxk6gq+yGknnqaTYrkwWgDY=";
+    hash = "sha256-R4od1VUvlOafRv7RsGCNnfG09KYfPJQQFeA3J1nYpxE=";
     name = "omap_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/omap/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "bfcf792c9af8ca6f612af6b8af14457a065652696c36f25c0ad6f56911767e09";
+    sha256 = "025789c63e0e8a8f2974edee2df14e1f0d114d00856ef95530967179f437b132";
     filename = "openwrt-imagebuilder-omap-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-9E5QyaXafuwyukVA0etb3zIrjjVWn+z8uulXbIM+h+o=";
+    hash = "sha256-LXBp96O7mFe+ail01DGrVLKFb1vSOqZrljqH2PxZy7E=";
     name = "omap_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/omap/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a8_vfpv3";
     linux_kernel = {
       release = "1";
-      vermagic = "13d3a894b54d58b8cab4569d0b02b645";
+      vermagic = "b6e14042059fb421d9dca73ccd718f4d";
       version = "6.18.55";
     };
     default_packages = [
@@ -51,7 +51,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.55-1-13d3a894b54d58b8cab4569d0b02b645";
+    kmods_target = "6.18.55-1-b6e14042059fb421d9dca73ccd718f4d";
     profiles = {
       ti_am335x-bone-black = {
         device_packages = [ ];
@@ -76,12 +76,12 @@
       };
     };
   };
-  kmods."6.18.55-1-13d3a894b54d58b8cab4569d0b02b645" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/omap/generic/kmods/6.18.55-1-13d3a894b54d58b8cab4569d0b02b645/";
+  kmods."6.18.55-1-b6e14042059fb421d9dca73ccd718f4d" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/omap/generic/kmods/6.18.55-1-b6e14042059fb421d9dca73ccd718f4d/";
     sourceInfo = {
-      hash = "sha256-ffH9US4q0p6CdVtVses3RMxD8Exz7Di4OEDVFIpkqMY=";
+      hash = "sha256-SdN78FkKj9IwiFFkp45al9Eqw3of/hlyorrHQBCfiVM=";
       name = "kmods-omap_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/omap/generic/kmods/6.18.55-1-13d3a894b54d58b8cab4569d0b02b645/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/omap/generic/kmods/6.18.55-1-b6e14042059fb421d9dca73ccd718f4d/packages.adb";
     };
     packages =
       let
@@ -92,7 +92,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/omap/generic/packages/";
     sourceInfo = {
-      hash = "sha256-hnrQ8B3CZSgKFn34LOezltEXMJ/ZZjLxQXetAA+52Ok=";
+      hash = "sha256-JTOsy7zoVMD4QsVaftIdzx04TeVBS51eSCmkIbE2pKw=";
       name = "omap_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/omap/generic/packages/packages.adb";
     };

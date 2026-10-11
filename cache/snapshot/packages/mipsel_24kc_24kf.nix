@@ -1,14 +1,14 @@
 # snapshot package feeds for mipsel_24kc_24kf
 {
   sha256sums = {
-    hash = "sha256-yMkN54jPnMIK4ltmy3pKR3KD1R5vLm9YpSaJcn33Ya4=";
+    hash = "sha256-fAf3RBSRt7vZRH7J3QkjT0jmaTvE8jbeY8f2Ud9ogi8=";
     name = "mipsel_24kc_24kf-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/base/";
     sourceInfo = {
-      hash = "sha256-ddZUZ5YMm+nXu8Bov+G+Z+61jBrBA+g834jFnHsKisk=";
+      hash = "sha256-imCEQatDFAjn/vIWsnnG/cPkyQHQrUiC4+KpmbwJPVw=";
       name = "mipsel_24kc_24kf-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/luci/";
     sourceInfo = {
-      hash = "sha256-dZjy2QaW/0Vjbs3k9z/iOfXSldcQlkIAZwEO200C/6Q=";
+      hash = "sha256-i5T29M4tvxwm6PSNob6EX76/ub31OLQ6I9iwIEULneM=";
       name = "mipsel_24kc_24kf-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/packages/";
     sourceInfo = {
-      hash = "sha256-F6e068kXG0x0wbTCBlHeEaxAVR0DplYvh4I2oTOyPjA=";
+      hash = "sha256-dTToSQ7kUSa2SFJyfejoTnpZB9i2E7ExYYuw54S6Pn0=";
       name = "mipsel_24kc_24kf-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/routing/";
     sourceInfo = {
-      hash = "sha256-77jz1owKARJRcHyyHCPoa/HLZzroqvy4qEyCrc5aZO4=";
+      hash = "sha256-bOi+qoBIKlo3g0Hr7sQBsWZvURUTGcwS0wNh2OeIMfo=";
       name = "mipsel_24kc_24kf-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/telephony/";
     sourceInfo = {
-      hash = "sha256-BkGbS4C3Ilt9EsxixTI7pH9nw0ZeKo9wXAxZ/P6yL34=";
+      hash = "sha256-OZQ0uXWAZxzab6dFqEb7VD5qZbn0Hpc9FhWTpaSu08Y=";
       name = "mipsel_24kc_24kf-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/mipsel_24kc_24kf/telephony/packages.adb";
     };
