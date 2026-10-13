@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/malta/le/";
   sha256sums = {
-    hash = "sha256-Ft1LjmQteVqSbFaMm9WDfVREbRFfYb105BK2dog1JoY=";
+    hash = "sha256-oKAsXGfkSYX6ZmqdLOUKrxJTPYsp3WqwCy+yBcqHJpo=";
     name = "malta_le-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/malta/le/sha256sums";
   };
   imagebuilder = {
-    sha256 = "9595aabfa30cbe6159a8a21a109ff15ef96e281f256e7ba6d5becc35b526c279";
+    sha256 = "8a5614725de65974e28cc1007d9e6f6da4622ffaa2d9a08e8ecdf421060bc0d0";
     filename = "openwrt-imagebuilder-malta-le.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-d0oTrYD+9qzeRbdx5LK6l/22AbbXEJEoct/FFPtFbjI=";
+    hash = "sha256-0sUOpgDpb5tOh6xRHb60EVq6spUGxPtM1fT+gKfD0s8=";
     name = "malta_le-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/malta/le/profiles.json";
   };
@@ -63,7 +63,7 @@
   kmods."6.18.55-1-ac4d4a62de62ba08cae858e190ebcff6" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/malta/le/kmods/6.18.55-1-ac4d4a62de62ba08cae858e190ebcff6/";
     sourceInfo = {
-      hash = "sha256-uds+nN4DLX/f55qt6L99GSH5UjGd39/cY+6UMmSN2tU=";
+      hash = "sha256-dtiXXpPj7tT5y9w18cDt/FDNz4GUo5Z0uqNfAePlJe8=";
       name = "kmods-malta_le-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/malta/le/kmods/6.18.55-1-ac4d4a62de62ba08cae858e190ebcff6/packages.adb";
     };
@@ -76,7 +76,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/malta/le/packages/";
     sourceInfo = {
-      hash = "sha256-sEW8Njtke2ghTGGpXrPYz4KJvnG7lPQrSEfrMX0Kl2Y=";
+      hash = "sha256-UEadvnCBmPhy5fsIQfX9K4t8/WDpcyH8Ahg7xkMxbTQ=";
       name = "malta_le-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/malta/le/packages/packages.adb";
     };

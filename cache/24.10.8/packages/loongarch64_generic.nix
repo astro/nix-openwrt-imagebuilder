@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for loongarch64_generic
 {
   sha256sums = {
-    hash = "sha256-tkzFWQf2g/6lVD8J0d2u8Af+5Q/Rh/G6tgc5pK+Xyk8=";
+    hash = "sha256-9w44N6OTI9MQq3avdGWp1e2uubz5l0D2ALg53yQGhQc=";
     name = "loongarch64_generic-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/loongarch64_generic/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/loongarch64_generic/packages/";
     sourceInfo = {
-      hash = "sha256-MeA6F5EHsge1vMY5eFguDQtkwl4WjhKrDDj9/XvzX48=";
+      hash = "sha256-73bY60FaBY1XXyZQRJ9keQ9D2x3gmyHbfITB9xcwamQ=";
       name = "loongarch64_generic-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/loongarch64_generic/packages/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/loongarch64_generic/telephony/";
     sourceInfo = {
-      hash = "sha256-wmEp1A3JcTZZe4lGRPNWz1WM0vR1OQJ/QZwVCLIAVMw=";
+      hash = "sha256-z1dGEisuOaZRXd+/F8wLwhRay6Ew9oc7GVo7GWr13XE=";
       name = "loongarch64_generic-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/loongarch64_generic/telephony/Packages";
     };
