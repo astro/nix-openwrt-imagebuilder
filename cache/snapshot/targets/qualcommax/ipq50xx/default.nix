@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/";
   sha256sums = {
-    hash = "sha256-YVSL4c7xcn3eSpk8gPBJhMj4CPdJxvEvIUwgdnBHnQc=";
+    hash = "sha256-jy78doIVBT7m9OeX6P4324zNsJ0YJ5frFsK/j/VkeN0=";
     name = "qualcommax_ipq50xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "c18ca176323e6b432026b93ae1283d3f73f79b195f216771209f6bffc4d163cd";
+    sha256 = "1e13ef2f06ec04ccd3a225ea52fe5d2b43d5a468850d250305062155188c4af6";
     filename = "openwrt-imagebuilder-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-GOeYXjco7KepfC2QrFv4SKhnATsqdNJafBR2dN6Wopk=";
+    hash = "sha256-F58ndspXQTfMO8w5dxFuj3bqLexecxbsYojIUUQIpl4=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -108,6 +108,14 @@
           "ipq-wifi-iodata_wn-dax3000gr"
         ];
       };
+      linksys_mr2000 = {
+        device_packages = [
+          "ath11k-firmware-ipq5018-qcn6122"
+          "ipq-wifi-linksys_mr2000"
+          "kmod-usb-storage"
+          "kmod-usb-ledtrig-usbport"
+        ];
+      };
       linksys_mr5500 = {
         device_packages = [
           "ath11k-firmware-ipq5018"
@@ -172,6 +180,12 @@
           "kmod-phy-realtek"
         ];
       };
+      wallys_dr5018s = {
+        device_packages = [
+          "ath11k-firmware-ipq5018-qcn6122"
+          "ipq-wifi-wallys_dr5018s"
+        ];
+      };
       xiaomi_ax6000 = {
         device_packages = [
           "ath11k-firmware-ipq5018"
@@ -215,7 +229,7 @@
   kmods."6.18.55-1-e4bbbc784ca5c912605754e5325636af" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.55-1-e4bbbc784ca5c912605754e5325636af/";
     sourceInfo = {
-      hash = "sha256-jxBcLfjfINLZ+w4e6cwLv80277rJbzFBP1SjnYrfgPo=";
+      hash = "sha256-qsoBx7FRjONfDBVhPwhL2xWJwOjf0Xi8jjD5ki2l4Xw=";
       name = "kmods-qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.55-1-e4bbbc784ca5c912605754e5325636af/packages.adb";
     };
@@ -228,7 +242,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/";
     sourceInfo = {
-      hash = "sha256-tU38we784uDI4g8q6AzPSSxpI1vDkT/JIZT/ctRZk00=";
+      hash = "sha256-zvKtWpS1eL3SxDzWXAKGXYqYr0yArFUTrQhcZsHdv1w=";
       name = "qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/packages.adb";
     };

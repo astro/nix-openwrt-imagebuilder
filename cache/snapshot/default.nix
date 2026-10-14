@@ -83,6 +83,7 @@
   targets.realtek.rtl930x_nand = import ./targets/realtek/rtl930x_nand/default.nix;
   targets.realtek.rtl931x = import ./targets/realtek/rtl931x/default.nix;
   targets.realtek.rtl931x_nand = import ./targets/realtek/rtl931x_nand/default.nix;
+  targets.rockchip.armv7 = import ./targets/rockchip/armv7/default.nix;
   targets.rockchip.armv8 = import ./targets/rockchip/armv8/default.nix;
   targets.sifiveu.generic = import ./targets/sifiveu/generic/default.nix;
   targets.siflower.sf21 = import ./targets/siflower/sf21/default.nix;
