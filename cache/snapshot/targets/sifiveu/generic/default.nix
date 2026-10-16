@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/";
   sha256sums = {
-    hash = "sha256-NnMc2XMlEPl3uOu4VSfwdKRpXJkoc5cQrnUIk8R9nCs=";
+    hash = "sha256-Qs4eFWAty5vQIdWZMkykMHmAatkSrz3XC6dLdaU2hDI=";
     name = "sifiveu_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "08f25e96f1b7ffad7d60d25cbe3ee1b779198b797d88edd46f0f5e6c7898a01f";
+    sha256 = "1c6acfe22d015e97ac4edef3b1e2de6bfaf08b718c07f64e72724fea0cfacb0a";
     filename = "openwrt-imagebuilder-sifiveu-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-VF92CiGF0ROYeEfV9C8MJvwvH3LqRDvZtoliCqucU1c=";
+    hash = "sha256-y3RVUMWpIQPzHIylxnHiuM93G58OTuqaybW96KLtgHI=";
     name = "sifiveu_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/profiles.json";
   };
@@ -40,6 +40,7 @@
       "nftables"
       "odhcp6c"
       "odhcpd-ipv6only"
+      "partx-utils"
       "ppp"
       "ppp-mod-pppoe"
       "procd-ujail"
@@ -64,7 +65,7 @@
   kmods."6.18.55-1-4455ddeef4afd26643238ccb8079f6c3" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/kmods/6.18.55-1-4455ddeef4afd26643238ccb8079f6c3/";
     sourceInfo = {
-      hash = "sha256-+MIoTEtA8FbQeWItadZwafSLIa902h1SGEhSZI1t79o=";
+      hash = "sha256-I8p7caM7H+cQXJlEQ8dMrwbFvuEc+akqKUIYFchq/VY=";
       name = "kmods-sifiveu_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/kmods/6.18.55-1-4455ddeef4afd26643238ccb8079f6c3/packages.adb";
     };
@@ -77,7 +78,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/packages/";
     sourceInfo = {
-      hash = "sha256-iZ7BZyFXmNC9A8Z42mV6uWS7wnpgvdWDjrvBZ6SUC+I=";
+      hash = "sha256-Hjcrn5pm4CmpFMANRiAU4W5fvhByncqjyiTc6BvyGKo=";
       name = "sifiveu_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sifiveu/generic/packages/packages.adb";
     };

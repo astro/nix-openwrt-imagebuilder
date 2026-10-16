@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/";
   sha256sums = {
-    hash = "sha256-MJnLDglNbRXeaesRdwZmlrVibY5SfiJh+XiShTyExs0=";
+    hash = "sha256-1Q0mjc5xPdGZVL3qwVjbFZ1r7/y/tiRSJUxzsnURcNM=";
     name = "apm821xx_nand-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a026c47cdaf769b0e9196120548e08680bf2ae9b132980918b2f222dea8cbcc4";
+    sha256 = "3fc1c55ff28ddec2f281b7f9f74d752b0d6c278d83a103ee9bf92f1efa873c59";
     filename = "openwrt-imagebuilder-apm821xx-nand.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-OxNqkWJ8yuXSMrEQPrDOcPaAru9XCEW+IrSCvH/C0dI=";
+    hash = "sha256-YKWLw7+zb4gNDa+ejxbsFzWE+5RQoyT+TUqjqPvkrF0=";
     name = "apm821xx_nand-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/profiles.json";
   };
@@ -116,7 +116,7 @@
   kmods."6.18.55-1-065d2251e13867e928ec9801287b1fd1" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/kmods/6.18.55-1-065d2251e13867e928ec9801287b1fd1/";
     sourceInfo = {
-      hash = "sha256-wBFVzUrcXyzVNnTmq7WCYhIHy3XsK6+iXWU+Kz7q3sI=";
+      hash = "sha256-bn9lh4LqdlV1QnfeYpdPzq+sqGvbrzhqk5w+Ez88oBI=";
       name = "kmods-apm821xx_nand-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/kmods/6.18.55-1-065d2251e13867e928ec9801287b1fd1/packages.adb";
     };
@@ -129,7 +129,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/packages/";
     sourceInfo = {
-      hash = "sha256-PXeABWRJbO+iMTysigPiT4itvWl2MPAeternHYUN+30=";
+      hash = "sha256-qJQh2p1reH5LhctzOt0cafauOK+uRJrHSgHfALwyXNU=";
       name = "apm821xx_nand-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/apm821xx/nand/packages/packages.adb";
     };

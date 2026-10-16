@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/";
   sha256sums = {
-    hash = "sha256-5bR+FM+Jq/PoDb0zLbadlXfuMIgqZT9nR+/RqeWa5X0=";
+    hash = "sha256-gRxC/pAnwSC4N7hdHJS1ldQ/1ZdOEfzTm+l4CJGd7qk=";
     name = "mvebu_cortexa9-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a17fec7f2bfe62d3b714d691c4db3bf881a52f54e83a28b19aae35c433b64e51";
+    sha256 = "e0c5633a6c641a2f38fea4dc4ff301de986a6d8a8538dcf3fd2c497e921fed8e";
     filename = "openwrt-imagebuilder-mvebu-cortexa9.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-mwh1YM+oA0v+JXhPhuyU5qBO2JaqllDTfxZv1NKMASs=";
+    hash = "sha256-m3nxEG+jmxBh/JTN7KMiI/fp4vLxwHwQbMmzlvoVmO8=";
     name = "mvebu_cortexa9-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/profiles.json";
   };
@@ -41,6 +41,7 @@
       "nftables"
       "odhcp6c"
       "odhcpd-ipv6only"
+      "partx-utils"
       "ppp"
       "ppp-mod-pppoe"
       "procd-ujail"
@@ -333,7 +334,7 @@
   kmods."6.18.55-1-95a2b70cd50db493aee2dde0d432b88d" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/kmods/6.18.55-1-95a2b70cd50db493aee2dde0d432b88d/";
     sourceInfo = {
-      hash = "sha256-cbVDT99EoQwq/Ks2NadNNwczZYioXUmU+5RK9XKiwos=";
+      hash = "sha256-iAh9Pe7Wg4Pbu63I5+azRVtBxnNKJFo0v/zG6uVgrjw=";
       name = "kmods-mvebu_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/kmods/6.18.55-1-95a2b70cd50db493aee2dde0d432b88d/packages.adb";
     };
@@ -346,7 +347,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/packages/";
     sourceInfo = {
-      hash = "sha256-12DeDZtvik90wJQZPURX/FsTfgl8R9as2o7um5nyw04=";
+      hash = "sha256-2g6ymRERJHXGl3wJosRITCCqeNTTklkOXj0UagmSy4A=";
       name = "mvebu_cortexa9-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/mvebu/cortexa9/packages/packages.adb";
     };
