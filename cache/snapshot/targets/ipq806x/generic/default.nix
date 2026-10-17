@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/";
   sha256sums = {
-    hash = "sha256-+8GkAOLKQ92+1nrLOyflBWjXsOflPOYO/xfXzNloNyc=";
+    hash = "sha256-yqyZyKsDPJSRiNy6uJrWHp438U+VPLSj5g7Ah1bEw/4=";
     name = "ipq806x_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "c7ab587818d253a81ebfaafab011354bc83456ccb7905a93c7221c78c7a058b7";
+    sha256 = "2aeda3c9e01b99db96e68f1fd552896b3cd59ca68f1c2c5f935a98a17c6531aa";
     filename = "openwrt-imagebuilder-ipq806x-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-or/rwkF6Rntkg0tjPEQqxsEDBDBEqwrExJPFqHLZtcI=";
+    hash = "sha256-cX42XdZ3W+urhpEemvm+3VRttS0vkXsGgrLndPwHIKI=";
     name = "ipq806x_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/profiles.json";
   };
@@ -248,7 +248,7 @@
   kmods."6.18.55-1-c3f4ad68c59b86d2e82cee64986aa3c5" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/kmods/6.18.55-1-c3f4ad68c59b86d2e82cee64986aa3c5/";
     sourceInfo = {
-      hash = "sha256-NDanQ/+e0nBFA99hq7n3suAPJ5UKr78FACsNwN09frk=";
+      hash = "sha256-Zu9otblBS2HHKxjW71saRFiLX6BVDdlwJu6VnDuVySI=";
       name = "kmods-ipq806x_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/kmods/6.18.55-1-c3f4ad68c59b86d2e82cee64986aa3c5/packages.adb";
     };
@@ -261,7 +261,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/packages/";
     sourceInfo = {
-      hash = "sha256-Cm0QsZPDjahDFSAAFgtBbxyvmg8WClNcUc0R2FsvSn8=";
+      hash = "sha256-bBY0ka8aUFkfeHAzQEoPbBOVXYErJn+GGKcpCmQAkmU=";
       name = "ipq806x_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq806x/generic/packages/packages.adb";
     };
