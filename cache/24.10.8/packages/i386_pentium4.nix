@@ -1,14 +1,14 @@
 # 24.10.8 package feeds for i386_pentium4
 {
   sha256sums = {
-    hash = "sha256-rLfxoz9JVvSxYQy4GIKSOXQupFRxY2pzAB/zqb3wa98=";
+    hash = "sha256-YjToBEI3rmKAh6WBJ1AHnVFElWOoAJIGoZLaIlLO45Y=";
     name = "i386_pentium4-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/base/";
     sourceInfo = {
-      hash = "sha256-jidyTl7Akv8mNgIdGn0ozCK979X4U/4UtH/W/TkujGU=";
+      hash = "sha256-K4wyJDjiBRCooMp5RFrFDlRftOb4SRafdWVU5EBZXPc=";
       name = "i386_pentium4-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/packages/";
     sourceInfo = {
-      hash = "sha256-YNRkYY3jaHs7GCbbaOxB0T1z5hk+NnJw/hivrCdAeBs=";
+      hash = "sha256-ZmEl78NyNQsILOOivh6KhnmXkbhASzxU098+lJScEPI=";
       name = "i386_pentium4-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/routing/";
     sourceInfo = {
-      hash = "sha256-11QZVN19PtTt4skbaaXPfuHFR9ZHG4jwMxLGZA8pyRY=";
+      hash = "sha256-JEgQlfs4RHcrPEPUMCt8kvoZEcJjeksDnFT7pvPfKkc=";
       name = "i386_pentium4-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/telephony/";
     sourceInfo = {
-      hash = "sha256-VkpfL3Yt8+QSAFPOGoSCSnZxL9AYrZbQUVbWuTbJ680=";
+      hash = "sha256-tzrk8RAcEnOeiQvrkBd2+N74lwUnDagLtS21g6vMDjo=";
       name = "i386_pentium4-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/i386_pentium4/telephony/Packages";
     };

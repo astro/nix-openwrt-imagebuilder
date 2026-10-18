@@ -1,14 +1,14 @@
 # snapshot package feeds for aarch64_cortex-a76
 {
   sha256sums = {
-    hash = "sha256-FdpBvoKwhko5gVUyAtD0avZnlbpll1FAgrPYaG8jzTM=";
+    hash = "sha256-ryjxGJatBizQhackl5VOCqO0vCC/QMqn17SVMKFgCc8=";
     name = "aarch64_cortex-a76-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/base/";
     sourceInfo = {
-      hash = "sha256-fMW2XDMpUv3kZVuxCr7w1+7mhNbftci7Fl1ywr0i7m8=";
+      hash = "sha256-bilPqLHBBRxjrMF9LpbZW8Y1Sd51XUw0Dbp1Ejnx+84=";
       name = "aarch64_cortex-a76-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/luci/";
     sourceInfo = {
-      hash = "sha256-kvSDYzWi+TidY+PcplJhdNgIgGSgpEcDsM0Vw3vgr1E=";
+      hash = "sha256-OXgUQosNHawRZ2GAow0JtdaUlkGL6kS54Rj2mbO9eL4=";
       name = "aarch64_cortex-a76-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/packages/";
     sourceInfo = {
-      hash = "sha256-j0End0eVHUmyJhc8wlThoTbmtPtECdKZCMxS8ksyKak=";
+      hash = "sha256-K+P4+/u4bVhzw5kcaSqwT4motjbIOGVH/qY0SfGWwmI=";
       name = "aarch64_cortex-a76-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/routing/";
     sourceInfo = {
-      hash = "sha256-leFvkwhL85bUMrVtZZJRSwOsJNufTLdEMEUQieNv46k=";
+      hash = "sha256-BIut8+0lqy1XWe0WdraBVKEGntjM5BsLSZ2mhSaEGb4=";
       name = "aarch64_cortex-a76-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/telephony/";
     sourceInfo = {
-      hash = "sha256-vj0xYifYjkcirTNpmYCtQw92FepSGzE7QzMSHeY6mRI=";
+      hash = "sha256-wjfawl8XpAGn/zrN3PwKBH4xsLru1oC5bxn5gRFAz/c=";
       name = "aarch64_cortex-a76-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/aarch64_cortex-a76/telephony/packages.adb";
     };
