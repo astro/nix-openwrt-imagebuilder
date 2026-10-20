@@ -42,6 +42,7 @@
   targets.lantiq.xrx200 = import ./targets/lantiq/xrx200/default.nix;
   targets.lantiq.xrx200_legacy = import ./targets/lantiq/xrx200_legacy/default.nix;
   targets.lantiq.xway = import ./targets/lantiq/xway/default.nix;
+  targets.layerscape.armv7 = import ./targets/layerscape/armv7/default.nix;
   targets.layerscape.armv8_64b = import ./targets/layerscape/armv8_64b/default.nix;
   targets.loongarch64.generic = import ./targets/loongarch64/generic/default.nix;
   targets.mediatek.filogic = import ./targets/mediatek/filogic/default.nix;

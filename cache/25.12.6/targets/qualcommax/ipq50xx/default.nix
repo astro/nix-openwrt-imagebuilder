@@ -11,7 +11,7 @@
     filename = "openwrt-imagebuilder-25.12.6-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-HsZl6qWmmDNnJ5wy57+lp+rsZ8fY+PB1za3DbfD+DB0=";
+    hash = "sha256-SmK5s96PKttS7sRfxp9l4+ZSt4nGWlgkUMbfXeE7zlE=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/releases/25.12.6/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -68,51 +68,6 @@
           "ipq-wifi-cmcc_mr3000d-ci"
         ];
       };
-      cmcc_pz-l8 = {
-        device_packages = [ ];
-      };
-      elecom_wrc-x3000gs2 = {
-        device_packages = [
-          "ath11k-firmware-ipq5018-qcn6122"
-          "ipq-wifi-elecom_wrc-x3000gs2"
-        ];
-      };
-      glinet_gl-b3000 = {
-        device_packages = [
-          "ath11k-firmware-ipq5018-qcn6122"
-          "ipq-wifi-glinet_gl-b3000"
-          "dumpimage"
-        ];
-      };
-      iodata_wn-dax3000gr = {
-        device_packages = [
-          "ath11k-firmware-ipq5018-qcn6122"
-          "ipq-wifi-iodata_wn-dax3000gr"
-        ];
-      };
-      linksys_mr5500 = {
-        device_packages = [
-          "ath11k-firmware-ipq5018"
-          "kmod-ath11k-pci"
-          "ath11k-firmware-qcn9074"
-          "ipq-wifi-linksys_mr5500"
-          "kmod-usb-ledtrig-usbport"
-        ];
-      };
-      linksys_mx2000 = {
-        device_packages = [
-          "ath11k-firmware-ipq5018-qcn6122"
-          "ipq-wifi-linksys_mx2000"
-        ];
-      };
-      linksys_mx5500 = {
-        device_packages = [
-          "ath11k-firmware-ipq5018"
-          "kmod-ath11k-pci"
-          "ath11k-firmware-qcn9074"
-          "ipq-wifi-linksys_mx5500"
-        ];
-      };
       linksys_mx6200 = {
         device_packages = [
           "ath11k-firmware-ipq5018-qcn6122"
@@ -127,16 +82,6 @@
           "ipq-wifi-linksys_spnmx56"
         ];
       };
-      xiaomi_ax6000 = {
-        device_packages = [
-          "ath11k-firmware-ipq5018"
-          "kmod-ath11k-pci"
-          "ath11k-firmware-qcn9074"
-          "kmod-ath10k-ct-smallbuffers"
-          "ath10k-firmware-qca9887-ct"
-          "ipq-wifi-xiaomi_ax6000"
-        ];
-      };
       yuncore_ax830 = {
         device_packages = [
           "ath11k-firmware-ipq5018-qcn6122"
@@ -149,12 +94,6 @@
           "kmod-ath11k-pci"
           "ath11k-firmware-qcn9074"
           "ipq-wifi-yuncore_ax850"
-        ];
-      };
-      zyxel_scr50axe = {
-        device_packages = [
-          "ath11k-firmware-ipq5018-qcn6122"
-          "ipq-wifi-zyxel_scr50axe"
         ];
       };
     };

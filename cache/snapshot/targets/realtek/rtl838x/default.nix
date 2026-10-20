@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/";
   sha256sums = {
-    hash = "sha256-CzHCuLPN351/ecYpOL9slwNa5Om2Lg3GwrFV4c/tkVk=";
+    hash = "sha256-4ATCPEY/JI+IS/wWB47fTpdUkTliSy9OTzGnqwirzNY=";
     name = "realtek_rtl838x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "6161f91884336f4deaf50a9e3ab0b8eb1ed7968355fb7c18e332db9309804018";
+    sha256 = "06861f7526686b393bf2d35d203998a051059419a9fd0b988e8e703888a91690";
     filename = "openwrt-imagebuilder-realtek-rtl838x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-xiX+affsFodqaTobbLfwe4fb9lbBtfF7xv0N0tC44sc=";
+    hash = "sha256-iSQdDSNsoVW+dsYHWAsiAaEjhslk1Qq254Pnt1nQga4=";
     name = "realtek_rtl838x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/profiles.json";
   };
@@ -134,6 +134,9 @@
       netgear_gs108t-v3 = {
         device_packages = [ ];
       };
+      netgear_gs110tp-v3 = {
+        device_packages = [ "kmod-pse-realtek-mcu-uart" ];
+      };
       netgear_gs110tpp-v1 = {
         device_packages = [ "kmod-pse-realtek-mcu-uart" ];
       };
@@ -223,7 +226,7 @@
   kmods."6.18.55-1-df1cd4d51cc61b2171f101b5889e7a09" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.55-1-df1cd4d51cc61b2171f101b5889e7a09/";
     sourceInfo = {
-      hash = "sha256-xGukamZ8hareci/o/rZHZWochZvLe40n343EU5kP1co=";
+      hash = "sha256-HzH+2UkjNyVGYAS4boLdN0qhp6eTiGfpixj3qqZFo7k=";
       name = "kmods-realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.55-1-df1cd4d51cc61b2171f101b5889e7a09/packages.adb";
     };
@@ -236,7 +239,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/";
     sourceInfo = {
-      hash = "sha256-fkwphbVCZ4oYYGx9Cy+NiV1kA+oPBsAYBkXXcSMNhpU=";
+      hash = "sha256-Hjjug00fJzVZCAKPMlnkPQbgvi97HjhLm7xhc6Mf3uw=";
       name = "realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/packages.adb";
     };
