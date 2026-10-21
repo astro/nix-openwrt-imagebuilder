@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/";
   sha256sums = {
-    hash = "sha256-wZFAkT1Vk4bsuXrBJt2IyojWNVj2v/zKGJ8OZf/GxTA=";
+    hash = "sha256-1ugBBXV+oKqu/5srT1xGzLRCbvX+q/fG52nPhBmPJXM=";
     name = "rockchip_armv8-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a2fffd000ff9b3b29bfd121887302407fc0ebd13df2a476fd87e555494b2f48b";
+    sha256 = "ab7aa12aee2241d1d6ce805dd8f36e4e822d17df767e39a6c2a912945a4237ff";
     filename = "openwrt-imagebuilder-rockchip-armv8.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-N1+ukE/1dm7Wn/bcQMoNbU4dZ1slG7gSvGWAd8IFZFI=";
+    hash = "sha256-0MBpavwytb1ZtNwkAA4LM8w2Un6nrhEvqjD0qTcK1rs=";
     name = "rockchip_armv8-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/profiles.json";
   };
@@ -374,7 +374,7 @@
   kmods."6.18.55-1-f823cf0e9c9cafba61f853445f50815b" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/kmods/6.18.55-1-f823cf0e9c9cafba61f853445f50815b/";
     sourceInfo = {
-      hash = "sha256-ETxsKkPU+rDnqI1nDYD/XXZjVPXuEYF5R1NmE/2yLzk=";
+      hash = "sha256-CsHqUh4tqDLO2cvGk2Xtk/WcUqDAVVD3EbVMNKcXHq0=";
       name = "kmods-rockchip_armv8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/kmods/6.18.55-1-f823cf0e9c9cafba61f853445f50815b/packages.adb";
     };
@@ -387,7 +387,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/packages/";
     sourceInfo = {
-      hash = "sha256-aZyTMFIZVse9AllVfhyAAG5IsEnpLsc3+X82nKXIhQE=";
+      hash = "sha256-S5rjc1TWDkpiIHzOqxwbYhliKByjS3+mj2ApNCIzke4=";
       name = "rockchip_armv8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/rockchip/armv8/packages/packages.adb";
     };
