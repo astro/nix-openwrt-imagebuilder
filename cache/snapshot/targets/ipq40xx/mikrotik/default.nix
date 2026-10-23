@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/";
   sha256sums = {
-    hash = "sha256-vK3fDXmjM4ctt/mr/BTNbelB89dbz8u6xHqi5pL7AE0=";
+    hash = "sha256-a3ZJW4OM48p0K+AEDL9iFVjnmk/Nq278JqONB7X4w0k=";
     name = "ipq40xx_mikrotik-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/sha256sums";
   };
   imagebuilder = {
-    sha256 = "4244e803407ecf1032920148f7bd1393e119b4c860a134ce15b81e577a91e990";
+    sha256 = "d5ed1df9dc7dda8591586c98b0fc91a13b7e84f8dc4b0ceb0ffa18d386844a1a";
     filename = "openwrt-imagebuilder-ipq40xx-mikrotik.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-X6Nzk7KhGi6kr8n++pHwgrJkqNg07h6TlJre5DRGh2c=";
+    hash = "sha256-q31EgAROn56volY+NHxXuIsDIukrCY/dUYUgJnUevFE=";
     name = "ipq40xx_mikrotik-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/profiles.json";
   };
@@ -120,7 +120,7 @@
   kmods."6.18.55-1-3fc0506118f56b40445010f486fa94f9" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/kmods/6.18.55-1-3fc0506118f56b40445010f486fa94f9/";
     sourceInfo = {
-      hash = "sha256-OI0Mdzdu8WR4gmMIke9zQhW/8m0Bi+U66kcRCbvF8uc=";
+      hash = "sha256-JAfm0ZBCpzH8fKAaRPHsScs1NNUwGJxLPNMtbh6Q/PM=";
       name = "kmods-ipq40xx_mikrotik-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/kmods/6.18.55-1-3fc0506118f56b40445010f486fa94f9/packages.adb";
     };
@@ -133,7 +133,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/packages/";
     sourceInfo = {
-      hash = "sha256-tgNuxgW8NOmTaTqxaXTIRPikxx56YELIWO/0nwrTTtg=";
+      hash = "sha256-6PfbbIJQQl94uojoaSWmKkemR17QHUvrZkTresy+s3w=";
       name = "ipq40xx_mikrotik-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/mikrotik/packages/packages.adb";
     };
