@@ -1,14 +1,14 @@
 # 24.10.8 package feeds for arm_cortex-a8_vfpv3
 {
   sha256sums = {
-    hash = "sha256-JRpBnaeEFFrsHK59V+E6FRIR3GB+g/xIuPKw4h+1RxU=";
+    hash = "sha256-iiZkelkenmki2wMWt7OHrOoWTMdyYgichWWdDKHkVFI=";
     name = "arm_cortex-a8_vfpv3-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/base/";
     sourceInfo = {
-      hash = "sha256-swU4vd397R20yCC2NzjAobs8ch1wzvkmsLFteFjnx/4=";
+      hash = "sha256-vKwQx4mwgGhtGzhXoUjeEo3ShIZPwDz0Uki1Ya77ypg=";
       name = "arm_cortex-a8_vfpv3-base-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/base/Packages";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/packages/";
     sourceInfo = {
-      hash = "sha256-sbCZBeJ6K+hdqaL9ovIjDCsHEcpV3AMoydg/kNJk/Dk=";
+      hash = "sha256-znrrM0mQhr3NODOYR9iij05coPBOKsnnzz7FS8YxEXU=";
       name = "arm_cortex-a8_vfpv3-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/routing/";
     sourceInfo = {
-      hash = "sha256-vCEvoa9m6Fq5D1tyjnVhifcJcpDdmD2YyyXYLVApQfE=";
+      hash = "sha256-sq9ttEHW57WrxFngldT8aL1s0C109T9+DG69RJs90/M=";
       name = "arm_cortex-a8_vfpv3-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/telephony/";
     sourceInfo = {
-      hash = "sha256-auTsSXI/PqNWXSwUXYnh8M0fLMLh/cRceiF1MCJqOPc=";
+      hash = "sha256-I9vXCYbdK/2JkeCB9mVeupeGF4gAOQBxGUco4VY7j+I=";
       name = "arm_cortex-a8_vfpv3-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/arm_cortex-a8_vfpv3/telephony/Packages";
     };
