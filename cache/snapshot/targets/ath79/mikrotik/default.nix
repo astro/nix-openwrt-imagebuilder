@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/";
   sha256sums = {
-    hash = "sha256-tjfOLj4Un6G85kTUUj2fvMlX4LMXqtIb1kzTICfpsMg=";
+    hash = "sha256-9ckusS2SjmBnCG0vIJc3uyKpuraQOqN1vBmOuQ0Rds0=";
     name = "ath79_mikrotik-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/sha256sums";
   };
   imagebuilder = {
-    sha256 = "96874f9e555c2fb52a1da46b55e92b1b9b226f319eeead32bd6a077b1547085d";
+    sha256 = "1e48ad521c756f1224427a0fb2cc6db79f83c408b2f8e1ef8f27a36ca4e26293";
     filename = "openwrt-imagebuilder-ath79-mikrotik.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-X4MXMKPFbb4NNvqLHrVUetlU68Y9YCBYhdp906OAICg=";
+    hash = "sha256-boi3HXb4vCedAbFoGjfocJrnVXl+gTdBRtu+sw/BCkc=";
     name = "ath79_mikrotik-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/profiles.json";
   };
@@ -217,7 +217,7 @@
   kmods."6.18.55-1-91c0340cdde77e72eb193695d0393805" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/kmods/6.18.55-1-91c0340cdde77e72eb193695d0393805/";
     sourceInfo = {
-      hash = "sha256-XelAcb9pGeM4asYMRS0IqjQ+NmhPcONZHZzRIr4iTXc=";
+      hash = "sha256-29FO+gMcUPLqvY9ZfdR9IvByOwFLxoAxCS2JZhAWzPI=";
       name = "kmods-ath79_mikrotik-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/kmods/6.18.55-1-91c0340cdde77e72eb193695d0393805/packages.adb";
     };
@@ -230,7 +230,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/packages/";
     sourceInfo = {
-      hash = "sha256-onDU/WS0MT7msio8zbEUdZf1WEvejV0U+Qhlcdbwzxs=";
+      hash = "sha256-j/VE5UU0wyqOnq8ZfzVN5mvRqE6HdV9J/iYao3pi8G0=";
       name = "ath79_mikrotik-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/mikrotik/packages/packages.adb";
     };
