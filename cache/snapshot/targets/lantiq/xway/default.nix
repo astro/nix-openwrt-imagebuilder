@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/";
   sha256sums = {
-    hash = "sha256-WroqpvnqMn6PGkbl3MzzeOaZyl37JiTH1ZJRTkebjt8=";
+    hash = "sha256-5DNCLf2hZHYE5yY1X0qyUCwiMwyooKPFK80fxclz2XU=";
     name = "lantiq_xway-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/sha256sums";
   };
   imagebuilder = {
-    sha256 = "a7460e67ca369590386d9e446a6e8543b95ba04cbaa8f26dbe6265053211268b";
+    sha256 = "e64d90da0ae189d1053b3d340284861d09acd976f0caff0590a15a8bb8b47712";
     filename = "openwrt-imagebuilder-lantiq-xway.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-CSPy05EyLy9xd3KV9o3xNj9Nzya9Wd6jR0EDJbr6Xh0=";
+    hash = "sha256-NppKJA4qBqrd9kamhv6FpoQpphJ/AAgb/+SgfmLGNRg=";
     name = "lantiq_xway-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/profiles.json";
   };
@@ -290,7 +290,7 @@
   kmods."6.18.55-1-0f383ee998d339c5b197cd0bd38f79fb" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/kmods/6.18.55-1-0f383ee998d339c5b197cd0bd38f79fb/";
     sourceInfo = {
-      hash = "sha256-0aTjhwGvSL7M1DuAOsFULuu0c2ECdPIQu2B9ha3xTF8=";
+      hash = "sha256-QWR2h4Ori5UmJqS43kkjvTMxmsmgd+8m1hYx9x5Wy1E=";
       name = "kmods-lantiq_xway-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/kmods/6.18.55-1-0f383ee998d339c5b197cd0bd38f79fb/packages.adb";
     };
@@ -303,7 +303,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/packages/";
     sourceInfo = {
-      hash = "sha256-HAGBgQTZsNh/9CBrna0ZKTOsImxapb+o+1pmwok5m4A=";
+      hash = "sha256-9R/Ru0kEFhqla+OPeanXccEDgWFLUo2SiAP6Vi1K2o0=";
       name = "lantiq_xway-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/lantiq/xway/packages/packages.adb";
     };
