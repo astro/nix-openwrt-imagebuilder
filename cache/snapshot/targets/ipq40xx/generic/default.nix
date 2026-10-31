@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/";
   sha256sums = {
-    hash = "sha256-oXZdsKQwwTSqZIu2V3YnP/8UGXady2FqtL5WKcRnzks=";
+    hash = "sha256-zIww2pUkrS+ziXE4yzQap7LwN/gGhI3Ng0HQuC4A+vY=";
     name = "ipq40xx_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "38429eda78bb6a7140b0304be99a48cb4b41b5ea736d06f7a992fa0fdbb40b4b";
+    sha256 = "01cb853dd54a9d27290c13a497a3c19add46bce9b8cc51c4a56b1ceb48caf078";
     filename = "openwrt-imagebuilder-ipq40xx-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-Hj05PbWLChuYey0J2AhYqD6TjyNJN/ygZ5tZHXoqeKs=";
+    hash = "sha256-dcFXwCmiC+tKTplbQyuX5jmvo13qyuA1KZqfcPQgSOU=";
     name = "ipq40xx_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a7_neon-vfpv4";
     linux_kernel = {
       release = "1";
-      vermagic = "f52e0b73f4fe63a92c2ade955f826f65";
+      vermagic = "645af37da6eaf40340af734903cbedbe";
       version = "6.18.55";
     };
     default_packages = [
@@ -58,7 +58,7 @@
       "urngd"
       "wpad-basic-mbedtls"
     ];
-    kmods_target = "6.18.55-1-f52e0b73f4fe63a92c2ade955f826f65";
+    kmods_target = "6.18.55-1-645af37da6eaf40340af734903cbedbe";
     profiles = {
       "8dev_habanero-dvk" = {
         device_packages = [ ];
@@ -505,13 +505,22 @@
         ];
       };
       tplink_deco-m5-v1 = {
-        device_packages = [ "kmod-leds-lp5521" ];
+        device_packages = [
+          "ipq-wifi-tplink_deco-m5"
+          "kmod-leds-lp5521"
+        ];
       };
       tplink_deco-m5-v2 = {
-        device_packages = [ "kmod-leds-lp5521" ];
+        device_packages = [
+          "ipq-wifi-tplink_deco-m5"
+          "kmod-leds-lp5521"
+        ];
       };
       tplink_deco-m5-v3 = {
-        device_packages = [ "kmod-leds-lp5521" ];
+        device_packages = [
+          "ipq-wifi-tplink_deco-m5"
+          "kmod-leds-lp5521"
+        ];
       };
       ubnt_utr = {
         device_packages = [
@@ -587,12 +596,12 @@
       };
     };
   };
-  kmods."6.18.55-1-f52e0b73f4fe63a92c2ade955f826f65" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.55-1-f52e0b73f4fe63a92c2ade955f826f65/";
+  kmods."6.18.55-1-645af37da6eaf40340af734903cbedbe" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.55-1-645af37da6eaf40340af734903cbedbe/";
     sourceInfo = {
-      hash = "sha256-CyRXgqTkBtdViLzPqrntgDP+yCJOf8xzi6VGPJOqOaU=";
+      hash = "sha256-XH2Ttu7rSigfBOXNy6gTFXbf1XePsm7+CL/srfVXzMQ=";
       name = "kmods-ipq40xx_generic-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.55-1-f52e0b73f4fe63a92c2ade955f826f65/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/kmods/6.18.55-1-645af37da6eaf40340af734903cbedbe/packages.adb";
     };
     packages =
       let
@@ -603,7 +612,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/";
     sourceInfo = {
-      hash = "sha256-oMJPeYMM7fpSyZs/1dWFPUxxP/6zpFL1lGXzzSldkEU=";
+      hash = "sha256-L5KLoicmfcNTv2/iUCJ40SGBku0EIDRNV2vQFIjPi7A=";
       name = "ipq40xx_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ipq40xx/generic/packages/packages.adb";
     };

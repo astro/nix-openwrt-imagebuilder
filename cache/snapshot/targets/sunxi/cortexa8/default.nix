@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/";
   sha256sums = {
-    hash = "sha256-bYeO4yW9kVitcHui/s1z/4XToi+BlBM+Bz0ZKPwYsRw=";
+    hash = "sha256-01EN+xe4QcdY9TjqfG8LjCyt6IUFWZA5rxsdzBKPRwQ=";
     name = "sunxi_cortexa8-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/sha256sums";
   };
   imagebuilder = {
-    sha256 = "107e1765f77bc626963cbf6ba6c94fef19e96765d5b94f062b1ce28bf22f2484";
+    sha256 = "115871ac0dafcc9e43e901362792606164391989e7cd5f86f2e2acdc61342d11";
     filename = "openwrt-imagebuilder-sunxi-cortexa8.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-L0TVvofkXJUmCFxaOKc4NKayhSrrTaqgrEMReB8bFMs=";
+    hash = "sha256-piv2pgZgThwcHy8SqKbtLzUVjw3uFCpnbV8A0oazjgw=";
     name = "sunxi_cortexa8-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "arm_cortex-a8_vfpv3";
     linux_kernel = {
       release = "1";
-      vermagic = "a61f695b291b34de8e916df2cb68f267";
+      vermagic = "949a133bb68575187eb09c794c62bd32";
       version = "6.18.55";
     };
     default_packages = [
@@ -53,7 +53,7 @@
       "urngd"
       "video-support"
     ];
-    kmods_target = "6.18.55-1-a61f695b291b34de8e916df2cb68f267";
+    kmods_target = "6.18.55-1-949a133bb68575187eb09c794c62bd32";
     profiles = {
       cubietech_a10-cubieboard = {
         device_packages = [
@@ -92,12 +92,12 @@
       };
     };
   };
-  kmods."6.18.55-1-a61f695b291b34de8e916df2cb68f267" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/kmods/6.18.55-1-a61f695b291b34de8e916df2cb68f267/";
+  kmods."6.18.55-1-949a133bb68575187eb09c794c62bd32" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/kmods/6.18.55-1-949a133bb68575187eb09c794c62bd32/";
     sourceInfo = {
-      hash = "sha256-QfDvnu3oapjxCn62HRXPhQZvdQZFO+5wWrQ3JZI78Co=";
+      hash = "sha256-+F4/c7RRl3uvdVmbSt+nSEMk6+uEj0eZ/34c+uvxZ+4=";
       name = "kmods-sunxi_cortexa8-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/kmods/6.18.55-1-a61f695b291b34de8e916df2cb68f267/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/kmods/6.18.55-1-949a133bb68575187eb09c794c62bd32/packages.adb";
     };
     packages =
       let
@@ -108,7 +108,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/packages/";
     sourceInfo = {
-      hash = "sha256-T8aPXrjnSNlJ7P357oitPXS9z4uVZPsPRYR1XjUSh2E=";
+      hash = "sha256-RmpRerwWs+w9lUehtzDdKzOOoNL8Fl+gzDM/gF1muc4=";
       name = "sunxi_cortexa8-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/sunxi/cortexa8/packages/packages.adb";
     };
