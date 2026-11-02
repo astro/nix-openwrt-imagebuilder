@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/";
   sha256sums = {
-    hash = "sha256-DV9NAmrdNl2UWizjZ5h3e6jnOljZxvWTCvSCM7HUnfM=";
+    hash = "sha256-Cf0JVeTAtcnWNpDABfXsx1Mn3OnHRxCYwwsEao5PeTs=";
     name = "qualcommbe_ipq95xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "962874a6ab5c18412fc0cdeaec8ba9c2eb8984d9bc2e38818f64528d84fab5f5";
+    sha256 = "95e65e0d4605244e1ecc674c4e17e07879fb57b0e9d7e2c118c9a080f0824512";
     filename = "openwrt-imagebuilder-qualcommbe-ipq95xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-UcqZSbtEj8qZE2Y+6ZrVF3Z3ELtk8eLZfTKMU/0Jx10=";
+    hash = "sha256-deMFUuebc86QnYo7Woy8YbCkhXOM2NE5ByjxlvedD9o=";
     name = "qualcommbe_ipq95xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/profiles.json";
   };
@@ -81,6 +81,7 @@
           "ipq-wifi-askey_sbe1v1k"
           "kmod-ath12k"
           "kmod-hwmon-pwmfan"
+          "kmod-leds-pwm"
           "kmod-phy-realtek"
           "mkf2fs"
           "rtl826x-firmware"
@@ -103,7 +104,7 @@
   kmods."6.18.60-1-5566333a8fdef2e76d922d45e872854b" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/kmods/6.18.60-1-5566333a8fdef2e76d922d45e872854b/";
     sourceInfo = {
-      hash = "sha256-5MFmJfwErMsTNWnHaBTJanL90NZYsabgRbIUQksoSxg=";
+      hash = "sha256-tzR33HMAVr23Os1x3cZCVtNrwbRq+FagUwoHfoLK3I8=";
       name = "kmods-qualcommbe_ipq95xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/kmods/6.18.60-1-5566333a8fdef2e76d922d45e872854b/packages.adb";
     };
@@ -116,7 +117,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/packages/";
     sourceInfo = {
-      hash = "sha256-qg1eWbYSB3k6HTp5LJXUh2k2DCC9csPXShUUE/cdmpk=";
+      hash = "sha256-5WBWbpi2n9ah1g0HZJdS/S7QCYB5hREwELyedhOGWpA=";
       name = "qualcommbe_ipq95xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommbe/ipq95xx/packages/packages.adb";
     };

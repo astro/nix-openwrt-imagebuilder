@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/";
   sha256sums = {
-    hash = "sha256-sGYNQ0LYPquRYb3xlkGURg57EvTHPYXkBEECDRfar9s=";
+    hash = "sha256-VZX2ZVHeOS/mHP8gRL6NApf0v9GvfKekbg6OKLkDTaE=";
     name = "ramips_mt7621-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/sha256sums";
   };
   imagebuilder = {
-    sha256 = "0054dca28a7c9711fa338db7fb4dab00f98e3f881dafc890b3f2f5df194fb9a0";
+    sha256 = "a479136a02f7b8c9f0ecfa8db3eb98fa085a8a46015d5e9f652839f6e0a5380d";
     filename = "openwrt-imagebuilder-ramips-mt7621.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-G7DIh9kGrOgOiQlql7P9kUG2ALvDUANlBptyovQNxgM=";
+    hash = "sha256-qnGJ2R9skpmWroqJmSqMdWxqB8r/bK/6agmaKds+B3A=";
     name = "ramips_mt7621-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/profiles.json";
   };
@@ -331,6 +331,7 @@
           "kmod-usb-net-cdc-ncm"
           "kmod-usb-serial-option"
           "comgt-ncm"
+          "modemsignal-leds"
           "-uboot-envtools"
         ];
       };
@@ -2216,7 +2217,7 @@
   kmods."6.18.60-1-af8e7ee423a8fb8b40e1a9ccd08a8337" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/kmods/6.18.60-1-af8e7ee423a8fb8b40e1a9ccd08a8337/";
     sourceInfo = {
-      hash = "sha256-yzwNS4ka+LAK1nWawT9YuUjYwRTGiRwN0uF8cQzYxS0=";
+      hash = "sha256-+5s4bh1pHBHhNokuZr0TIzvFJ/58JkQOsw/wq53z38Q=";
       name = "kmods-ramips_mt7621-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/kmods/6.18.60-1-af8e7ee423a8fb8b40e1a9ccd08a8337/packages.adb";
     };
@@ -2229,7 +2230,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/";
     sourceInfo = {
-      hash = "sha256-DkfZNOfr37sfoZ/KzNC0nLBBwyhqsyqYF8OiZo81jnU=";
+      hash = "sha256-HkEhHVI5DhxyFsjTj8oc1CchiDFh/5pgunaMDoeqypA=";
       name = "ramips_mt7621-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/packages/packages.adb";
     };
