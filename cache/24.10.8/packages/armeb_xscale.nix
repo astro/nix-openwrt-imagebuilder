@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for armeb_xscale
 {
   sha256sums = {
-    hash = "sha256-WoHBsK9xuZEGgu124K8W7lDfnEeSv1sWWS4KrwF6G/4=";
+    hash = "sha256-bBh+WjWWR5a82MeHbplydFZrxRXoLgYHUbA2tnptnMA=";
     name = "armeb_xscale-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/packages/";
     sourceInfo = {
-      hash = "sha256-8KIaWJCtIQcGkIuoC0sECTr31pqDkJDw7ojrC6jwVzI=";
+      hash = "sha256-gYErbJQouQB5cHQ9n1Ng6A3xnuAEx7VUgwN862Ouwtg=";
       name = "armeb_xscale-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/routing/";
     sourceInfo = {
-      hash = "sha256-QsF8N8HA5BF5vpeYfrAPddBUD6Z3hzMFWtT/v7UkeTc=";
+      hash = "sha256-rvywQjfXXnvnuOxx5HROrAV3tk56AhWXufFcySERBi4=";
       name = "armeb_xscale-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/telephony/";
     sourceInfo = {
-      hash = "sha256-TsLbE5ZkUsRHNc5/fxkltWC0DB4VP5WX4i9pntbbn80=";
+      hash = "sha256-AtUNnATo9NlVECYmqLQMg+VZbuaiVKFjBASRN/IG+qA=";
       name = "armeb_xscale-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/armeb_xscale/telephony/Packages";
     };
