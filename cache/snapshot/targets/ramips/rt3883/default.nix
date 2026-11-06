@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/";
   sha256sums = {
-    hash = "sha256-+YWvJHDCGSiHj7JAgHuvWe5JrRIIrHM+1bV+xlKGQ2c=";
+    hash = "sha256-xvDsmj5OT1m4s2LvnOe4hI+s2YWZDM0CBOQH+PIpo34=";
     name = "ramips_rt3883-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/sha256sums";
   };
   imagebuilder = {
-    sha256 = "b54ae2277af17c83e92f45ebfc0d4c01e2afcb375846faca2c6f238d737f5183";
+    sha256 = "bca8f38851eca2544b611eecc89707cfd2fdc3eaf4590e1ed7610be232b87237";
     filename = "openwrt-imagebuilder-ramips-rt3883.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-iSS5vGAEsOA5gw5pskTGtp0jERZ1SeF5NK2srNIQxKU=";
+    hash = "sha256-EN1eJDRR6wzikAnD+nXI+hQENpcnmMJmvwHSDfi86lM=";
     name = "ramips_rt3883-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/profiles.json";
   };
@@ -121,7 +121,7 @@
   kmods."6.18.60-1-ea20cf7d2e8cc1a9fea98e6128f0cee5" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/kmods/6.18.60-1-ea20cf7d2e8cc1a9fea98e6128f0cee5/";
     sourceInfo = {
-      hash = "sha256-0kcbayT400k/57+0t8efABHo7go9U0A2j8N7Wn199sU=";
+      hash = "sha256-eTCwHcJ4DU+xhoPacpk1NQMkX2x0xyfsnkCW88r7Qiw=";
       name = "kmods-ramips_rt3883-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/kmods/6.18.60-1-ea20cf7d2e8cc1a9fea98e6128f0cee5/packages.adb";
     };
@@ -134,7 +134,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/packages/";
     sourceInfo = {
-      hash = "sha256-+WVzwAPFVV+SV45ekQEDeJJ4xmmmuA+pl4fKjHeIyZk=";
+      hash = "sha256-hCmgTjczox2F3ZBl7DZXzWnePkUR736q4x4GL78XYyc=";
       name = "ramips_rt3883-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ramips/rt3883/packages/packages.adb";
     };
