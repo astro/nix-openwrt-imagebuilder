@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/";
   sha256sums = {
-    hash = "sha256-g7quaKu3CdpgZHG9ZgHcycUgHI+7WqzK5LzAoGaFm1A=";
+    hash = "sha256-F0D3j1Rx0Ck1n68KqOeO8Dmaahx5EdHy5xoNncrLaG0=";
     name = "realtek_rtl838x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "20af6de4257e6f7acfe93cf5530f4efd6f5a34de25b3fdc167c4a9b96f3ce43b";
+    sha256 = "f79440197484428457863d4ed3e4fdf6ab3d22f049b36d86dcf6707a66670cf0";
     filename = "openwrt-imagebuilder-realtek-rtl838x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-b6/u4Z9Gc5iiS1U9JcUqZqTZQyQuBA0zZRP8BrWqti8=";
+    hash = "sha256-MsEXzKqUvJlhXeU9MX/NusHx/0BaEJoDFGex/QW1LPk=";
     name = "realtek_rtl838x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/profiles.json";
   };
@@ -19,7 +19,7 @@
     arch_packages = "mips_24kc";
     linux_kernel = {
       release = "1";
-      vermagic = "b88f5c6e64ca64d5015abab6f389fd07";
+      vermagic = "303039a56bd13f68124fa0327482d220";
       version = "6.18.60";
     };
     default_packages = [
@@ -45,7 +45,7 @@
       "urandom-seed"
       "urngd"
     ];
-    kmods_target = "6.18.60-1-b88f5c6e64ca64d5015abab6f389fd07";
+    kmods_target = "6.18.60-1-303039a56bd13f68124fa0327482d220";
     profiles = {
       allnet_all-sg8208m = {
         device_packages = [ ];
@@ -223,12 +223,12 @@
       };
     };
   };
-  kmods."6.18.60-1-b88f5c6e64ca64d5015abab6f389fd07" = {
-    baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.60-1-b88f5c6e64ca64d5015abab6f389fd07/";
+  kmods."6.18.60-1-303039a56bd13f68124fa0327482d220" = {
+    baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.60-1-303039a56bd13f68124fa0327482d220/";
     sourceInfo = {
-      hash = "sha256-Xz7rG7vJC+uAMxQSUJW9QovKqHR8q3NVETl79S9kTIw=";
+      hash = "sha256-hMvt0tj35eINKILP8dPE6RMyuVouGZsMr2vntb+0C+8=";
       name = "kmods-realtek_rtl838x-packages.adb";
-      url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.60-1-b88f5c6e64ca64d5015abab6f389fd07/packages.adb";
+      url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/kmods/6.18.60-1-303039a56bd13f68124fa0327482d220/packages.adb";
     };
     packages =
       let
@@ -239,7 +239,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/";
     sourceInfo = {
-      hash = "sha256-P7V8Zf5pFMdgwoOB9dv2qw25WbGv6CEqX4ovRLPmLQw=";
+      hash = "sha256-yYyWFPv/kq1IBPglydGIdbFPk1/b/O6JCvByXnjqcrQ=";
       name = "realtek_rtl838x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl838x/packages/packages.adb";
     };
