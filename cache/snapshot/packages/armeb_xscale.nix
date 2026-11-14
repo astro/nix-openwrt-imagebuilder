@@ -1,14 +1,14 @@
 # snapshot package feeds for armeb_xscale
 {
   sha256sums = {
-    hash = "sha256-iGQx0UyFSvdAO/eWfhkuVFpxUWnk/97qm3hBeIOMogQ=";
+    hash = "sha256-jHKxRVTf3i9FqulUUh8w8WfDtcvkECCYX3i1NbLRi0U=";
     name = "armeb_xscale-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/sha256sums";
   };
   feeds."base" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/base/";
     sourceInfo = {
-      hash = "sha256-VZvi2PP2ORPZwYJMGX4jK1q/mvpwF9dg2SF8u/HfuTk=";
+      hash = "sha256-6zWzKL3IjAu9ZSbGNGCNhb4jIA0dLd6dObxBzzTgbKE=";
       name = "armeb_xscale-base-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/base/packages.adb";
     };
@@ -21,7 +21,7 @@
   feeds."luci" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/luci/";
     sourceInfo = {
-      hash = "sha256-7xTime34HfILXGHOq5KkK0ANuIEN7nO388qtWVp73hA=";
+      hash = "sha256-YPrO+hWOuwpWn5yxHZ1Y9xDDTvKzaCgONoQaaRTG0Fg=";
       name = "armeb_xscale-luci-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/luci/packages.adb";
     };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/packages/";
     sourceInfo = {
-      hash = "sha256-eKYrj2CuoLKXXvpX751wKm668Vd+ROIhMPVG244Ckd8=";
+      hash = "sha256-jzrwDgorkmj9FQLipnJVWMUjilpjSeUEnU9y4LMG+s8=";
       name = "armeb_xscale-packages-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/packages/packages.adb";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/routing/";
     sourceInfo = {
-      hash = "sha256-7lZnbd3dHgefFhET/yyK20M4ss4bXVYj1ZoXVTqbuDs=";
+      hash = "sha256-aPRK/J281QMyJ/xRcRNmLMMHT5HuiBSjc6fyKEvRFw0=";
       name = "armeb_xscale-routing-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/routing/packages.adb";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/telephony/";
     sourceInfo = {
-      hash = "sha256-jtwiW1iC31nZg5rlWwGp/vvLF4rOEGrK47ZzfipYhjw=";
+      hash = "sha256-+eq79E9VJh4bzax5dGnMfVurZSTHJfckBP2iZ1seej4=";
       name = "armeb_xscale-telephony-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/packages/armeb_xscale/telephony/packages.adb";
     };
