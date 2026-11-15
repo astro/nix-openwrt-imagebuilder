@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/";
   sha256sums = {
-    hash = "sha256-VLfNr+nmmRfZGlIAJwwsFAn6KGHByEpLGvDGymiWdvw=";
+    hash = "sha256-GbGH3ijqXlPdpFW2jabWO8MmICP6o5BbqN9W28QUL6c=";
     name = "x86_geode-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/sha256sums";
   };
   imagebuilder = {
-    sha256 = "ff13b1590de6ae304438271d828662174e3afe9a94b08af3d22e2d0ec9e20eb9";
+    sha256 = "131107c029c40c8d99dd99155d2a366c0622d5ccc925fa01a177ac3677b9300f";
     filename = "openwrt-imagebuilder-x86-geode.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-aHQloeYPss3cVJ73U7YQv9l7Domhi59aBNyDnXFtAWQ=";
+    hash = "sha256-FHUTYUA21/yAhwIt47jEwcnTAqel5GkwCnt6u3jWEuw=";
     name = "x86_geode-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/profiles.json";
   };
@@ -71,7 +71,6 @@
           "kmod-crypto-hw-geode"
           "kmod-ledtrig-gpio"
           "br2684ctl"
-          "flashrom"
           "kmod-hwmon-lm90"
           "kmod-mppe"
           "kmod-pppoa"
@@ -82,6 +81,7 @@
           "pppstats"
           "soloscli"
           "tc"
+          "flashrom"
         ];
       };
     };
@@ -89,7 +89,7 @@
   kmods."6.18.60-1-08a2a50a4802134cdfa1bc119fc2d040" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.60-1-08a2a50a4802134cdfa1bc119fc2d040/";
     sourceInfo = {
-      hash = "sha256-2Ot+ahAgb/BpXsH4hLyo87dnQbY1i3sW4dZuy/Dj4Ho=";
+      hash = "sha256-LrgUgUtu5Si1+BAB8cLsWVvPK/8sfpWlDX/3HSH61GE=";
       name = "kmods-x86_geode-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/kmods/6.18.60-1-08a2a50a4802134cdfa1bc119fc2d040/packages.adb";
     };
@@ -102,7 +102,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/x86/geode/packages/";
     sourceInfo = {
-      hash = "sha256-0uI5uPGu7PxuaszH2ixUZz1tKGtIcEhC6yEszdrRJFs=";
+      hash = "sha256-BzfYj7hI70emS/6qMIae76EvN88QRxXWfEFcOZmZj+w=";
       name = "x86_geode-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/x86/geode/packages/packages.adb";
     };
