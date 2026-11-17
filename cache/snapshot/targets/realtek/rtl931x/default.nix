@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/";
   sha256sums = {
-    hash = "sha256-EHrPsQEK0F9mdh2XOxNW53kx4N7lxVId9XVTXhPGYj4=";
+    hash = "sha256-T0lBB90C98ZGZW8VNRC3oMzYojPdiD047S7XCfUfHfI=";
     name = "realtek_rtl931x-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/sha256sums";
   };
   imagebuilder = {
-    sha256 = "e18ba5dea992062c1abe653c606a1cfc371cf8b808de1acd7e568d5e9d43abf4";
+    sha256 = "bfe875258bafc9f99397233548580986de78c7e539c796e27b66c61410616e39";
     filename = "openwrt-imagebuilder-realtek-rtl931x.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-iD2KeH7C9A/wg6oBDcJx84L44s92Z4xY3Xgr3l5Sez0=";
+    hash = "sha256-MtOFBbM3iYgEe/2V1VNAHsu7QZDttC3MjuHbigmTzvQ=";
     name = "realtek_rtl931x-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/profiles.json";
   };
@@ -64,6 +64,9 @@
           "kmod-pse-hasivo-hs104"
           "kmod-mfd-hasivo-stc8"
         ];
+      };
+      hasivo_s5800w-24gt-6s-plus = {
+        device_packages = [ ];
       };
       horaco_zx-swtgw2c48ns = {
         device_packages = [
@@ -146,7 +149,7 @@
   kmods."6.18.60-1-414cdc5308811fd3b1976f603b4bd921" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.60-1-414cdc5308811fd3b1976f603b4bd921/";
     sourceInfo = {
-      hash = "sha256-WFTeWW8uYOBp6rzcxPw6f7efvFSBkv4+cYn45Es48ig=";
+      hash = "sha256-Kv/UM9j1+n7PKGR4RKio6+eU2PkXr0blLc+XdzxY08g=";
       name = "kmods-realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/kmods/6.18.60-1-414cdc5308811fd3b1976f603b4bd921/packages.adb";
     };
@@ -159,7 +162,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/";
     sourceInfo = {
-      hash = "sha256-bwwDXat5jnLdShi/qdzZuuI0j/g/At1OMhUI5t1dn1Y=";
+      hash = "sha256-LviMLFZi9yngaN74mdPg/kscuxzkQqiZvgXd2hlz0dY=";
       name = "realtek_rtl931x-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/realtek/rtl931x/packages/packages.adb";
     };

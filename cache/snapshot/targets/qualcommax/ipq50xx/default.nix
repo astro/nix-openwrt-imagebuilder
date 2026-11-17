@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/";
   sha256sums = {
-    hash = "sha256-5ylAH/RoxC2sIkKzcMkqtrUBHCZJrbLYU3569sbVQZU=";
+    hash = "sha256-q3x+o/1/Pm1X9U3YiIVA2dsymLrrEl2xTauiR2SdkMM=";
     name = "qualcommax_ipq50xx-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/sha256sums";
   };
   imagebuilder = {
-    sha256 = "03da50aafa69f8e0e5d5dc3801d22871f23383b3041bf4f541b2333905af92a2";
+    sha256 = "ca41b862a0215a28f120dd989d49712f992b1b6f3e23e95b63abc4816728e7e8";
     filename = "openwrt-imagebuilder-qualcommax-ipq50xx.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-IAsvZwYD2O+Tcqoqy0CvFgxXFaXin7AL6dOPy+g/kRc=";
+    hash = "sha256-9m33opsm4QSvbuTBj1l1AHnRFnAFMHS1ChXrtHELRFM=";
     name = "qualcommax_ipq50xx-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/profiles.json";
   };
@@ -190,6 +190,16 @@
           "kmod-phy-realtek"
         ];
       };
+      ubnt_unifi-6-pro = {
+        device_packages = [
+          "ath11k-firmware-ipq5018"
+          "kmod-ath11k-pci"
+          "ath11k-firmware-qcn9074"
+          "ipq-wifi-ubnt_unifi-6-pro"
+          "kmod-fs-f2fs"
+          "f2fs-tools"
+        ];
+      };
       wallys_dr5018s = {
         device_packages = [
           "ath11k-firmware-ipq5018-qcn6122"
@@ -260,7 +270,7 @@
   kmods."6.18.60-1-64e63f3da135d1fbf27d01a5c03208f1" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.60-1-64e63f3da135d1fbf27d01a5c03208f1/";
     sourceInfo = {
-      hash = "sha256-JEGsCptHC+mA3Agg4470L6vjmfUEfDJXQL6sbliMu+M=";
+      hash = "sha256-xB32d2oy/xaftwn/OhJC+4a2jkuDfOyyeYVdmVHNhrs=";
       name = "kmods-qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/kmods/6.18.60-1-64e63f3da135d1fbf27d01a5c03208f1/packages.adb";
     };
@@ -273,7 +283,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/";
     sourceInfo = {
-      hash = "sha256-CTJ4EuC9k3e2K8rCshXpGI0DWkA2OZj6Bq45CgwAt7c=";
+      hash = "sha256-bWLx4LaCM7adqwoLz8JwLl+In0DidhVlVAjcSZiW8C8=";
       name = "qualcommax_ipq50xx-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/qualcommax/ipq50xx/packages/packages.adb";
     };
