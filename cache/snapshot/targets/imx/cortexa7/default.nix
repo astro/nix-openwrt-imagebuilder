@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/";
   sha256sums = {
-    hash = "sha256-XcBZlVE2ayTtdRXCMcdS/eTt/jcA/Uqt4dYajxVckic=";
+    hash = "sha256-M/QFfW0Q5R9OkxueCp2yrUEYHEv8sV6fEmUmFo0SWQY=";
     name = "imx_cortexa7-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/sha256sums";
   };
   imagebuilder = {
-    sha256 = "5cc5b457e2386b580a73193ab7d2fbc75a08387d7badeb37b355838cd16afa61";
+    sha256 = "b514bbabd42ee51807d717220455030c9d6f4b959a47777b9d77e079155a2f33";
     filename = "openwrt-imagebuilder-imx-cortexa7.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-br6lPCSNbswHuPsgM0uC9L8EzFx8AXPCJsAZE33UsYI=";
+    hash = "sha256-Z9Q7zgr58nJZr/79a46hEYdSY1G2vPG461uB7BreFvc=";
     name = "imx_cortexa7-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/profiles.json";
   };
@@ -78,7 +78,7 @@
   kmods."6.18.60-1-4920ae5978c9f2502d432d66faae1663" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/kmods/6.18.60-1-4920ae5978c9f2502d432d66faae1663/";
     sourceInfo = {
-      hash = "sha256-mSBXJ0OilwepJ5VSKedi/LjBz+ibQQhKvwplW5znVqk=";
+      hash = "sha256-uAjJxSrzwWQVUg+KxRdbZIhke+AyyfiI5OmKNh9NdGc=";
       name = "kmods-imx_cortexa7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/kmods/6.18.60-1-4920ae5978c9f2502d432d66faae1663/packages.adb";
     };
@@ -91,7 +91,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/packages/";
     sourceInfo = {
-      hash = "sha256-1LFDDXxfO9OqLQ6NbSX2p38Du7C1RbvcHslsvVr1zpA=";
+      hash = "sha256-ttazSh/3gPIYkpJ28C5eNwuiN6aAfK+gQ48Y9iV6Usk=";
       name = "imx_cortexa7-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/imx/cortexa7/packages/packages.adb";
     };
