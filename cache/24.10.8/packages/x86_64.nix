@@ -1,7 +1,7 @@
 # 24.10.8 package feeds for x86_64
 {
   sha256sums = {
-    hash = "sha256-G33Y6Q0Y3dM0RK5bBLPDT03RxqhQRNDa337uGMi7H6c=";
+    hash = "sha256-c4h7Zq+p8pN1Wp+napdpjLIIMtmzbD1XQr04f6br8dU=";
     name = "x86_64-sha256sums";
     url = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/sha256sums";
   };
@@ -34,7 +34,7 @@
   feeds."packages" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/packages/";
     sourceInfo = {
-      hash = "sha256-Qj4rUXXo5FG9lMgFt/0Z7/64hU5PTlIrGkdNavh/b+Y=";
+      hash = "sha256-hYMbm0eruOPjtG+DcNQYotpUii4CA6ofK6Qoso1S93g=";
       name = "x86_64-packages-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/packages/Packages";
     };
@@ -47,7 +47,7 @@
   feeds."routing" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/routing/";
     sourceInfo = {
-      hash = "sha256-19VfcUYbZ3g23RZJyc255ilmJ+kI+xGJrepD+a3q58w=";
+      hash = "sha256-2w+Yda1uGv+Zkbu+s2uaUhA4DW8S7bxj9NGsotXS35k=";
       name = "x86_64-routing-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/routing/Packages";
     };
@@ -60,7 +60,7 @@
   feeds."telephony" = {
     baseUrl = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/telephony/";
     sourceInfo = {
-      hash = "sha256-Iz5HocnWhzShaJxhS4Uqecq9j7x/1UuJD34uPe5BQSc=";
+      hash = "sha256-s6J3MSEsveEUDZT1dxDzOo4BUdhnbI1sdXup5J+rQ7c=";
       name = "x86_64-telephony-Packages";
       url = "https://downloads.openwrt.org/releases/24.10.8/packages/x86_64/telephony/Packages";
     };

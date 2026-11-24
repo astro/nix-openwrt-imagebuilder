@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/";
   sha256sums = {
-    hash = "sha256-edMCkeJ79sRqTGjHnD5y42bIQozEo6F0xgX4nA4hD8U=";
+    hash = "sha256-plFwu7oPpX+Ia11OVBdAEEQ00Lop0lqstV8LHaHs9CQ=";
     name = "airoha_an7581-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/sha256sums";
   };
   imagebuilder = {
-    sha256 = "067bfcb19d09beb4e9c3912f69278473c212c19a07dff9ef1d20ac18cfa0f2ac";
+    sha256 = "1dd7171fc868f34db84e93e8ca17e53373e043fd04c46b703f95c66a2423c4c3";
     filename = "openwrt-imagebuilder-airoha-an7581.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-QMwiw/CypZew6zuqsa8fL/WHHhyA6u7bCvI+5jt7Cj8=";
+    hash = "sha256-bODalvuccYHUV/gc9N1sMBriOhF184rFDSfdQZ3X8Ag=";
     name = "airoha_an7581-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/profiles.json";
   };
@@ -78,6 +78,16 @@
           "rtl8261c-firmware"
         ];
       };
+      gemtek_xr1710g-ubi = {
+        device_packages = [
+          "airoha-en7581-mt7996-npu-firmware"
+          "fitblk"
+          "kmod-hwmon-nct7802"
+          "kmod-mt7996-firmware"
+          "wpad-basic-mbedtls"
+          "rtl826x-firmware"
+        ];
+      };
       nokia_valyrian = {
         device_packages = [
           "kmod-spi-gpio"
@@ -125,7 +135,7 @@
   kmods."6.18.64-1-847be07f7118749047ebf860a0b05de6" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.64-1-847be07f7118749047ebf860a0b05de6/";
     sourceInfo = {
-      hash = "sha256-tT89fnMQy2w2GRhFoTyisSxVCZk8qapAzLWYkXLRhHM=";
+      hash = "sha256-3c0FVcDVZUBgYa19AxXvQj7N7sW2r26nxPBY0x6J8L4=";
       name = "kmods-airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/kmods/6.18.64-1-847be07f7118749047ebf860a0b05de6/packages.adb";
     };
@@ -138,7 +148,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/";
     sourceInfo = {
-      hash = "sha256-RaaH4yizl4YF2OhGc5uIGyRFK/vFcNMh4t7O/KFEvv0=";
+      hash = "sha256-IhyAx1y75F3iXsslkx1+6+iiagSCwi0qLae/bZKO9CA=";
       name = "airoha_an7581-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/airoha/an7581/packages/packages.adb";
     };
