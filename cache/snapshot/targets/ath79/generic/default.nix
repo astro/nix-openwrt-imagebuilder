@@ -2,16 +2,16 @@
 {
   baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/";
   sha256sums = {
-    hash = "sha256-Gdw2FNa/dr38n8iM950vHg2oi9GUEvRdPBktJRNkiXs=";
+    hash = "sha256-EEF4pWy4BSnP1HhTkfR7Y36309fh308CS30gmaaH2ms=";
     name = "ath79_generic-sha256sums";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/sha256sums";
   };
   imagebuilder = {
-    sha256 = "7740b0663d3086fb44a22627453afe1c3a587e49899633aac6777716c484ad38";
+    sha256 = "f413320b5006b3af7fca44a569bdb6952c31f51d48f0e0ca574d68141df08af8";
     filename = "openwrt-imagebuilder-ath79-generic.Linux-x86_64.tar.zst";
   };
   profiles.sourceInfo = {
-    hash = "sha256-nP8FtKKvJBEnJ1P4JrFjqBpMJOYg6oIyCA/jdcYShrY=";
+    hash = "sha256-uUP/qvqZqG+jNl9qMhImgFBRuV+b7eQkyuLAeRMLCVQ=";
     name = "ath79_generic-profiles.json";
     url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/profiles.json";
   };
@@ -640,6 +640,9 @@
           "ath10k-firmware-qca9888-ct"
         ];
       };
+      doodlelabs_smartradio = {
+        device_packages = [ ];
+      };
       dragino_lps8 = {
         device_packages = [
           "kmod-usb-chipidea2"
@@ -807,6 +810,12 @@
         device_packages = [ ];
       };
       fortinet_fap-221-c = {
+        device_packages = [
+          "ath10k-firmware-qca988x-ct"
+          "kmod-ath10k-ct"
+        ];
+      };
+      fortinet_fap-321-c = {
         device_packages = [
           "ath10k-firmware-qca988x-ct"
           "kmod-ath10k-ct"
@@ -2259,7 +2268,7 @@
   kmods."6.18.64-1-96f0d330b3c066660595464bed0fb7b6" = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.64-1-96f0d330b3c066660595464bed0fb7b6/";
     sourceInfo = {
-      hash = "sha256-eAgyRhNtaQn9yeAQFUILf3D8vWDdwcwggrrRiSke2FA=";
+      hash = "sha256-ctKgAIpB3HSG3byhMd3GPFhV0+LFqZI4VTFJgB2qUmg=";
       name = "kmods-ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/kmods/6.18.64-1-96f0d330b3c066660595464bed0fb7b6/packages.adb";
     };
@@ -2272,7 +2281,7 @@
   corePackages = {
     baseUrl = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/";
     sourceInfo = {
-      hash = "sha256-c3Rd2h1CnPQW+f4NsWDBJ0r/2wvbU4TEPfs6Q89PqW8=";
+      hash = "sha256-apZtLQDCrkOSXxfWHK2A2rylboFGODg8SGOeh5pjBr0=";
       name = "ath79_generic-packages.adb";
       url = "https://downloads.openwrt.org/snapshots/targets/ath79/generic/packages/packages.adb";
     };
